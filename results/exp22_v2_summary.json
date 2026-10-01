@@ -1,0 +1,218 @@
+[
+ {
+  "task": "dyck_languages",
+  "label": "state",
+  "drop": 100.0,
+  "retained": 0.0,
+  "n": 1,
+  "full_acc": 14.3
+ },
+ {
+  "task": "tracking_shuffled_objects_seven_objects",
+  "label": "state",
+  "drop": 72.6,
+  "retained": 27.4,
+  "n": 90,
+  "full_acc": 45.5
+ },
+ {
+  "task": "tracking_shuffled_objects_five_objects",
+  "label": "state",
+  "drop": 70.5,
+  "retained": 29.5,
+  "n": 130,
+  "full_acc": 59.1
+ },
+ {
+  "task": "tracking_shuffled_objects_three_objects",
+  "label": "state",
+  "drop": 56.5,
+  "retained": 43.5,
+  "n": 213,
+  "full_acc": 98.6
+ },
+ {
+  "task": "multistep_arithmetic_two",
+  "label": "state",
+  "drop": 42.0,
+  "retained": 58.0,
+  "n": 173,
+  "full_acc": 74.9
+ },
+ {
+  "task": "navigate",
+  "label": "state",
+  "drop": 20.8,
+  "retained": 79.2,
+  "n": 189,
+  "full_acc": 99.5
+ },
+ {
+  "task": "word_sorting",
+  "label": "partial",
+  "drop": 18.3,
+  "retained": 81.7,
+  "n": 60,
+  "full_acc": 96.8
+ },
+ {
+  "task": "logical_deduction_five_objects",
+  "label": "none",
+  "drop": 10.3,
+  "retained": 89.7,
+  "n": 194,
+  "full_acc": 95.1
+ },
+ {
+  "task": "web_of_lies",
+  "label": "none",
+  "drop": 9.4,
+  "retained": 90.6,
+  "n": 212,
+  "full_acc": 100.0
+ },
+ {
+  "task": "logical_deduction_seven_objects",
+  "label": "none",
+  "drop": 8.3,
+  "retained": 91.7,
+  "n": 101,
+  "full_acc": 98.1
+ },
+ {
+  "task": "date_understanding",
+  "label": "partial",
+  "drop": 7.0,
+  "retained": 93.0,
+  "n": 176,
+  "full_acc": 96.2
+ },
+ {
+  "task": "movie_recommendation",
+  "label": "none",
+  "drop": 6.5,
+  "retained": 93.5,
+  "n": 123,
+  "full_acc": 97.6
+ },
+ {
+  "task": "reasoning_about_colored_objects",
+  "label": "partial",
+  "drop": 6.3,
+  "retained": 93.7,
+  "n": 179,
+  "full_acc": 96.8
+ },
+ {
+  "task": "penguins_in_a_table",
+  "label": "partial",
+  "drop": 6.2,
+  "retained": 93.8,
+  "n": 123,
+  "full_acc": 96.9
+ },
+ {
+  "task": "object_counting",
+  "label": "state",
+  "drop": 5.6,
+  "retained": 94.4,
+  "n": 71,
+  "full_acc": 45.2
+ },
+ {
+  "task": "ruin_names",
+  "label": "none",
+  "drop": 5.4,
+  "retained": 94.6,
+  "n": 92,
+  "full_acc": 98.9
+ },
+ {
+  "task": "boolean_expressions",
+  "label": "state",
+  "drop": 5.3,
+  "retained": 94.7,
+  "n": 220,
+  "full_acc": 100.0
+ },
+ {
+  "task": "causal_judgement",
+  "label": "none",
+  "drop": 5.1,
+  "retained": 94.9,
+  "n": 33,
+  "full_acc": 97.1
+ },
+ {
+  "task": "temporal_sequences",
+  "label": "none",
+  "drop": 3.7,
+  "retained": 96.3,
+  "n": 173,
+  "full_acc": 93.5
+ },
+ {
+  "task": "hyperbaton",
+  "label": "none",
+  "drop": 3.4,
+  "retained": 96.6,
+  "n": 185,
+  "full_acc": 93.9
+ },
+ {
+  "task": "disambiguation_qa",
+  "label": "none",
+  "drop": 3.1,
+  "retained": 96.9,
+  "n": 129,
+  "full_acc": 99.2
+ },
+ {
+  "task": "logical_deduction_three_objects",
+  "label": "none",
+  "drop": 1.4,
+  "retained": 98.6,
+  "n": 222,
+  "full_acc": 95.3
+ },
+ {
+  "task": "snarks",
+  "label": "none",
+  "drop": 1.4,
+  "retained": 98.6,
+  "n": 74,
+  "full_acc": 98.7
+ },
+ {
+  "task": "formal_fallacies",
+  "label": "none",
+  "drop": 0.8,
+  "retained": 99.2,
+  "n": 177,
+  "full_acc": 99.4
+ },
+ {
+  "task": "salient_translation_error_detection",
+  "label": "none",
+  "drop": 0.6,
+  "retained": 99.4,
+  "n": 108,
+  "full_acc": 99.1
+ },
+ {
+  "task": "geometric_shapes",
+  "label": "none",
+  "drop": 0.0,
+  "retained": 100.0,
+  "n": 83,
+  "full_acc": 92.2
+ },
+ {
+  "task": "sports_understanding",
+  "label": "none",
+  "drop": 0.0,
+  "retained": 100.0,
+  "n": 109,
+  "full_acc": 100.0
+ }
+]

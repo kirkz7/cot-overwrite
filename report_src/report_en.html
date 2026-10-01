@@ -1,0 +1,434 @@
+<title>Last Word Wins?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one reading column (lab memo); claims first, then evidence figures with data tables, then scope, risks and decisions. */
+:root {
+  --bg: #f5f6f8; --surface: #fdfdfd; --ink: #15181d; --ink-2: #4a515b; --muted: #858b93;
+  --rule: #e1e4e8; --axis: #c3c7cd; --accent: #1f5ea8; --accent-wash: #e8f0fa; --code-bg: #eef1f4;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --neutral-mark: #b9bec5;
+  --good: #0ca30c; --warn: #fab219; --crit: #d03b3b;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111316; --surface: #181b1f; --ink: #eef0f3; --ink-2: #b6bcc4; --muted: #868d96;
+    --rule: #2a2f35; --axis: #3b4148; --accent: #6ea8ee; --accent-wash: #1b2a3d; --code-bg: #1f2328;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --neutral-mark: #5a6068;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111316; --surface: #181b1f; --ink: #eef0f3; --ink-2: #b6bcc4; --muted: #868d96;
+  --rule: #2a2f35; --axis: #3b4148; --accent: #6ea8ee; --accent-wash: #1b2a3d; --code-bg: #1f2328;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --neutral-mark: #5a6068;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
+.page { max-width: 800px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.25; margin: 0; }
+h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.015em; }
+h2 { font-size: 1.35rem; font-weight: 600; margin-top: 8px; }
+h3 { font-size: 1.06rem; font-weight: 600; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.mono { font-family: var(--font-mono); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+header { display: grid; gap: 14px; padding-bottom: 28px; border-bottom: 1px solid var(--rule); }
+.lede { font-size: 1.1rem; color: var(--ink-2); max-width: 38em; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.facts b { color: var(--ink); font-weight: 500; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.88rem; }
+nav.toc a { text-decoration: none; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+nav.toc a:hover { color: var(--accent); border-color: var(--accent); }
+section { display: grid; gap: 18px; padding-block: 36px 8px; }
+.prose { display: grid; gap: 12px; max-width: 40em; }
+.thesis { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 22px; display: grid; gap: 10px; }
+.thesis p { font-size: 1.05rem; }
+.verdict { font-size: 0.95rem; color: var(--ink-2); }
+.claims { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--rule); }
+.claims li { display: grid; grid-template-columns: 9em 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); align-items: start; }
+.claims .what { display: grid; gap: 2px; min-width: 0; font-weight: 500; }
+.claims .what span { color: var(--ink-2); font-size: 0.92rem; font-weight: 400; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 500; white-space: nowrap; padding-top: 3px; }
+.chip::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
+.chip.ok { --c: var(--good); } .chip.part { --c: var(--warn); } .chip.todo { --c: var(--muted); } .chip.risk { --c: var(--crit); }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 18px 14px; display: grid; gap: 12px; min-width: 0; }
+figcaption { display: grid; gap: 4px; }
+figcaption .t { font-weight: 600; font-size: 0.98rem; }
+figcaption .d { font-size: 0.88rem; color: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; flex: none; }
+.legend i.sw { width: 10px; height: 10px; border-radius: 2px; }
+.legend i.ln { width: 16px; height: 2px; border-radius: 1px; }
+.chart { position: relative; width: 100%; min-width: 0; }
+.chart svg { display: block; overflow: visible; }
+.chart text { font-family: var(--font-body); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; width: fit-content; }
+.seg button { font: inherit; font-size: 0.82rem; background: transparent; color: var(--ink-2); border: 0; padding: 4px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 500; }
+details.data summary { cursor: pointer; font-size: 0.82rem; color: var(--muted); width: fit-content; }
+.tablewrap { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; font-size: 0.86rem; width: 100%; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { font-weight: 500; color: var(--ink-2); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--font-mono); font-size: 0.82rem; }
+caption { text-align: left; padding-bottom: 6px; font-size: 0.86rem; color: var(--muted); }
+.exhibit { background: var(--code-bg); border-radius: 8px; padding: 14px 16px; font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.6; overflow-x: auto; color: var(--ink); white-space: pre; }
+.exhibit .hl { color: var(--accent); font-weight: 500; }
+.exhibit .dim { color: var(--muted); }
+.note { font-size: 0.88rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.two > * { min-width: 0; }
+ul.plain { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.decide { display: grid; gap: 10px; counter-reset: q; list-style: none; padding: 0; margin: 0; }
+.decide li { counter-increment: q; display: grid; grid-template-columns: 2em 1fr; gap: 8px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; }
+.decide li::before { content: counter(q); font-family: var(--font-mono); color: var(--accent); font-weight: 500; }
+#tip { position: fixed; z-index: 10; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 10px; font-size: 0.8rem; line-height: 1.5; box-shadow: 0 4px 16px rgba(0,0,0,0.12); max-width: 280px; }
+#tip .tt { color: var(--ink-2); margin-bottom: 4px; }
+#tip .row { display: flex; align-items: center; gap: 8px; }
+#tip .row i { width: 12px; height: 2px; flex: none; border-radius: 1px; }
+#tip .row b { font-family: var(--font-mono); font-weight: 500; min-width: 3.2em; }
+#tip .row span { color: var(--ink-2); }
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 560px) {
+  body { font-size: 15px; }
+  h1 { font-size: 1.8rem; }
+  .claims li { grid-template-columns: 1fr; gap: 4px; }
+  figure { padding: 14px 12px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="page">
+<header>
+  <div class="eyebrow">State overwrites in chain-of-thought · Progress report · 2026-10-01</div>
+  <h1>Last Word Wins?</h1>
+  <p class="lede">When a reasoning trace or a context states several values for the same quantity (overwritten states, self-corrections, competing conclusions), which one does a language model believe? This report summarizes the latest results of 22 experiments, the scope of the findings, and the decisions to discuss next.</p>
+  <div class="facts"><span><b>22</b> experiments</span><span><b>15</b> models · 1.7B–14B</span><span>Qwen3 · OLMo-2 · Phi-4 · R1-Distill</span><span>local RTX 5080 16GB</span></div>
+  <nav class="toc" aria-label="Contents">
+    <a href="#summary">Summary</a><a href="#when">When order matters</a><a href="#cues">Explicit cues lose to position</a><a href="#real">Real reasoning text</a><a href="#scope">Scope</a><a href="#bbh">Across tasks</a><a href="#mech">Mechanism</a><a href="#scale">Scale and training</a><a href="#risks">Risks</a><a href="#next">Next steps</a><a href="#index">Experiment index</a>
+  </nav>
+</header>
+
+<section id="summary">
+  <div class="eyebrow">Summary</div>
+  <div class="thesis">
+    <p>When a language model reads text that states several values for the same quantity, it <b>defaults to the value presented last</b>. For text written in chronological order, including the model's own reasoning, this default is usually right. When the text is not presented in chronological order, the default overrides explicit temporal markers (step numbers, “listed from most recent”), and an explicit retraction (“Wait, that's wrong.”) only partly offsets it. Qwen3-14B can use well-structured step numbers; OLMo-2-13B, at the same scale, still reads mostly by position.</p>
+    <p class="verdict">Where this stands: evidence across two model families and 1.7B–14B supports a paper on position-based reading of state. Whether it is main-conference material depends on two things: whether the effect persists at 32B and 70B, and whether it reproduces in natural non-chronological settings such as agent memory retrieval, newest-first logs and multi-source contexts.</p>
+  </div>
+  <ul class="claims" aria-label="Claims and evidence status">
+    <li><span class="chip ok">Supported</span><div class="what">Order matters only when states are overwritten<span>Replicated in all 15 models on the synthetic task. Across all 27 BBH tasks, shuffling breaks 39% of answers on tasks that track updated state and 4% on the rest.</span></div></li>
+    <li><span class="chip ok">Supported</span><div class="what">Readers go by presentation position, not by which value is newer<span>With an explicit header saying the list runs from most recent to earliest, Qwen3-4B almost never picks the first (actually newest) value: 1% / 0% / 0% at k = 2 / 4 / 8.</span></div></li>
+    <li><span class="chip ok">Largely supported</span><div class="what">Position overrides explicit temporal cues; retractions only partly offset it<span>Qwen3-4B and OLMo-2-7B / 13B reach 0–26% with newest-first order plus step numbers; Qwen3-14B is the exception (about 90%). A retraction weakens the positional advantage (OLMo-13B: 88% → 42%), but no model switches reliably to the unretracted conclusion.</span></div></li>
+    <li><span class="chip ok">Supported</span><div class="what">Reading its own chronological reasoning, the positional default is usually right<span>Re-reading its own BBH reasoning, the model scores 93–100% on most tasks. In 60% of its multiple-choice reasoning the correct option is not the last one mentioned, yet explicit judgments keep accuracy at 97.8%.</span></div></li>
+    <li><span class="chip ok">Supported</span><div class="what">When support is balanced, the later conclusion wins; when it is not, support wins<span>In real reasoning text with two conclusions stated once each, the peak position effect is 27–87 points depending on the reader; each extra restatement of the correct answer cancels much of the positional advantage.</span></div></li>
+    <li><span class="chip part">Preliminary</span><div class="what">Mechanism: late-layer attention heads read stated values with a positional bias<span>Zeroing 32 heads cuts the position effect on real text from 42 to 10 points (32 random heads: 44). The same heads also do the reading itself, so activation patching is needed to separate the two.</span></div></li>
+    <li><span class="chip ok">Two families</span><div class="what">Post-training raises sensitivity to retraction markers only at sufficient scale<span>OLMo-2 7B: 5.6% → 9.1%; 13B: 9.6% → 29.0%; Qwen3-4B: 6.8% → 33.1%.</span></div></li>
+  </ul>
+</section>
+
+<section id="when">
+  <div class="eyebrow">Evidence 1</div>
+  <h2>When order matters: only when states are overwritten</h2>
+  <div class="prose">
+    <p>Synthetic task: a 16-line variable-tracking program in which the queried variable is overwritten k times; the control queries a variable assigned once in the same trace. After the trace is shuffled line by line, once-assigned variables are unaffected, accuracy on overwritten variables falls to chance as k grows, and in 93–99% of cases the model picks <b>the value presented last</b>. The tendency holds up to 64 overwrites (93–99%).</p>
+  </div>
+  <figure>
+    <figcaption><span class="t">Figure 1 · Accuracy after shuffling the reasoning (Qwen3-4B, 200 items per cell)</span><span class="d">x-axis: number of overwrites k of the queried variable. Gray line: chance among the k+1 historical values.</span></figcaption>
+    <div class="legend" id="lg-f1"></div>
+    <div class="chart" id="f1"></div>
+    <details class="data"><summary>Data table</summary><div class="tablewrap" id="tb-f1"></div></details>
+  </figure>
+  <figure>
+    <figcaption><span class="t">Figure 2 · BBH with the model's own reasoning (Qwen3-4B, line-level shuffle × 3 seeds)</span><span class="d">Only items the model answered correctly; the answer sentence is removed before re-reading. In object tracking every swap overwrites state; in logical deduction constraints only accumulate.</span></figcaption>
+    <div class="legend" id="lg-f2"></div>
+    <div class="chart" id="f2"></div>
+    <details class="data"><summary>Data table (with breakdown by number of swaps)</summary><div class="tablewrap" id="tb-f2"></div><div class="tablewrap" id="tb-f2b"></div></details>
+  </figure>
+  <p class="note">Relation to prior work: LCA (2605.26795) and 2605.07307 report that shuffling does not hurt, while 2605.22870 reports collapse on tracking. Whether states are overwritten explains both. 2605.22870 also reports collapse on logical deduction, which we do not observe (different setup: line-level shuffle of the model's own reasoning); the paper needs to address this.</p>
+</section>
+
+<section id="cues">
+  <div class="eyebrow">Evidence 2 · Core</div>
+  <h2>Explicit cues lose to position</h2>
+  <div class="prose">
+    <p>Taking the last value is a sensible default when nothing else is known, so shuffling alone does not show an error. The decisive test is <b>what the model does when explicit information contradicts position</b>.</p>
+  </div>
+  <div class="exhibit" aria-label="Example of an Exp 18 condition"><span class="dim">// Newest-first with a header (one k=4 item, illustrative). True history of e: 32 → 41 → 33 → 31 → 37</span>
+Let me trace the program. <span class="hl">The steps below are listed from the most recent to the earliest.</span>
+y = 42
+n = 60
+<span class="hl">e = 37</span>      <span class="dim">← newest (first e shown)</span>
+e = 31
+…
+e = 41
+…
+<span class="hl">e = 32</span>      <span class="dim">← oldest (last e shown)</span>
+Therefore, the final value of e is <span class="dim">Qwen3-4B in this condition: 72% answer 32, 0% answer 37</span></div>
+  <figure>
+    <figcaption><span class="t">Figure 3 · Accuracy when explicit order cues conflict with position (Exp 18)</span><span class="d">“Conflict” means the newest value is not presented last. 200 items per cell; switch k to see other numbers of overwrites. Qwen3-14B uses step numbers in newest-first lists; OLMo-2-13B at the same scale does not.</span></figcaption>
+    <div class="seg" role="group" aria-label="Number of overwrites k" id="k-seg"><button type="button" data-k="2" aria-pressed="false">k = 2</button><button type="button" data-k="4" aria-pressed="false">k = 4</button><button type="button" data-k="8" aria-pressed="true">k = 8</button></div>
+    <div class="legend" id="lg-f3"></div>
+    <div class="chart" id="f3"></div>
+    <details class="data"><summary>Data table (all models and k)</summary><div class="tablewrap" id="tb-f3"></div></details>
+  </figure>
+  <figure>
+    <figcaption><span class="t">Figure 4 · Retractions in real reasoning text (Exp 19, symmetric control, 10% of the derivation kept)</span><span class="d">4B and 14B are Qwen3; OLMo 13B is OLMo-2-13B-Instruct. Both conclusions are counterfeit wrong answers, A earlier and B later, and the correct answer is absent, so recognizing the answer cannot help. A rational reader should pick A when B is retracted.</span></figcaption>
+    <div class="legend" id="lg-f4"></div>
+    <div class="chart" id="f4"></div>
+    <details class="data"><summary>Data table (all derivation fractions)</summary><div class="tablewrap" id="tb-f4"></div></details>
+  </figure>
+  <div class="prose">
+    <p>The synthetic counterpart (Exp 2): when a wrong value comes last and is followed by “Hmm, that's wrong.”, most models reach only 0.5–10% in the conflict case; the best, Qwen3-14B, reaches 47.5%.</p>
+  </div>
+</section>
+
+<section id="real">
+  <div class="eyebrow">Evidence 3</div>
+  <h2>Real reasoning text: support first, position breaks ties</h2>
+  <div class="prose">
+    <p>In R1 reasoning traces from OpenR1-Math, we take the last paragraph that states the correct answer and copy it with the answer replaced by a nearby wrong number X. Both conclusions appear once, in either order, and derivation paragraphs are progressively removed to measure how much the later position decides the answer.</p>
+  </div>
+  <figure>
+    <figcaption><span class="t">Figure 5 · Position effect versus amount of derivation kept (Exps 13 and 16)</span><span class="d">Position effect = accuracy with the correct conclusion last − accuracy with the wrong conclusion last. 200–400 traces per reader.</span></figcaption>
+    <div class="legend" id="lg-f5"></div>
+    <div class="chart" id="f5"></div>
+    <details class="data"><summary>Data table (all 7 readers)</summary><div class="tablewrap" id="tb-f5"></div></details>
+  </figure>
+  <div class="two">
+    <figure>
+      <figcaption><span class="t">Figure 6a · Restatements versus position (Qwen3-4B)</span><span class="d">Exp 15: one conclusion comes last; the other is restated r extra times earlier. y-axis: share choosing the wrong conclusion X.</span></figcaption>
+      <div class="legend" id="lg-f6a"></div>
+      <div class="chart" id="f6a"></div>
+    </figure>
+    <figure>
+      <figcaption><span class="t">Figure 6b · Restatements versus position (Qwen3-14B)</span><span class="d">Same design. The 14B model weighs restatements more.</span></figcaption>
+      <div class="legend" id="lg-f6b"></div>
+      <div class="chart" id="f6b"></div>
+    </figure>
+  </div>
+  <details class="data"><summary>Figure 6 data table</summary><div class="tablewrap" id="tb-f6"></div></details>
+  <div class="prose">
+    <h3>In complete natural traces, a single edit does not move the answer</h3>
+    <p>In real traces the correct answer is usually checked and restated many times. None of these edits changes the reader's answer much, consistent with support coming first:</p>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Exp</th><th>Edit</th><th class="n">Result</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">4 / 6</td><td>Shuffle the paragraphs of full traces (including self-correcting ones)</td><td class="n">99% correct in the conflict case</td></tr>
+      <tr><td class="mono">11</td><td>Insert “Wait, earlier I got X. That was wrong.” at the start or end</td><td class="n">X chosen 0–0.3%</td></tr>
+      <tr><td class="mono">12</td><td>Counterfeit conclusion appended or replacing the original (answer restated elsewhere)</td><td class="n">X chosen 0–0.8%</td></tr>
+      <tr><td class="mono">21</td><td>Swap two natural conclusions in R1 traces that end wrong</td><td class="n">Final answer kept 88–100%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Exp 17 (answer extractor): when a solution ends with a wrong answer X, Qwen3-4B and Qwen3-14B still report the correct answer 69% and 67.5% of the time, so the extractor is not faithful to the solution. This matters for LLM graders, but answer recognition is a confound and a symmetric design is still needed.</p>
+</section>
+
+<section id="scope">
+  <div class="eyebrow">Scope</div>
+  <h2>The model's own reasoning versus other text it reads</h2>
+  <div class="prose">
+    <p>The failures above occur when text is <b>not presented in chronological order</b>, or when two conclusions have equal support. A model's own reasoning is almost always chronological, so we tested separately how common and how costly position-answer mismatches are in unedited reasoning.</p>
+  </div>
+  <div class="tablewrap"><table>
+    <caption>Qwen3-4B re-reading its own reasoning (BBH, answer sentence removed, no other edits)</caption>
+    <thead><tr><th>Measure</th><th class="n">Value</th></tr></thead>
+    <tbody>
+      <tr><td>Accuracy re-reading in the original order (most tasks)</td><td class="n">93–100%</td></tr>
+      <tr><td>Multiple-choice items whose reasoning discusses ≥2 options</td><td class="n">302</td></tr>
+      <tr><td>…of which the correct option is not the last one mentioned</td><td class="n">60.3%</td></tr>
+      <tr><td>Re-read accuracy: correct option mentioned last / not last</td><td class="n">100% / 97.8%</td></tr>
+      <tr><td>R1 traces ending wrong that first stated the correct answer</td><td class="n">7.6%</td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p>Mismatches between position and answer are common in a model's own reasoning, but explicit judgments (“(B) is correct”) usually resolve them, at a cost of about 2 points. So the claim of this work is not that models misread their own reasoning. It is that <b>when a model reads state updates that are not in chronological order and lack explicit judgments, it takes the value by position.</b></p>
+    <p>Such text is common in deployed systems: agent memory retrieval returns old and new facts ordered by relevance, distinguishable only by timestamps; git logs, email threads and changelogs list the newest entry first; tool outputs, conversation history and other models' reasoning are concatenated, as in CoT monitoring; and long reasoning revises the same quantity many times. The next experiments move to these settings.</p>
+  </div>
+</section>
+
+<section id="bbh">
+  <div class="eyebrow">Evidence 4</div>
+  <h2>Across tasks: all 27 BBH tasks</h2>
+  <div class="prose">
+    <p>On all 27 BBH tasks we shuffled Qwen3-4B's own reasoning line by line (3 seeds per item). We count only items the model answers correctly when re-reading in the original order and measure how many break after shuffling. The task categories were written into the code before the experiment ran.</p>
+    <p>Tasks that require tracking updated state break <b>39%</b> of the time on average (object tracking 57–73%, multi-step arithmetic 42%, navigation 21%); partly related tasks 10%; the rest <b>4%</b> (highest: web of lies 9%; logical deduction 1–10%).</p>
+  </div>
+  <figure id="f7-fig" hidden>
+    <figcaption><span class="t">Figure 7 · Share of answers broken by shuffling, per task (Exp 22, Qwen3-4B)</span><span class="d">Items re-read correctly in the original order only; mean of 3 shuffles. Colors are the categories assigned in advance. Dyck languages had a single usable item and is not shown.</span></figcaption>
+    <div class="legend" id="lg-f7"></div>
+    <div class="chart" id="f7"></div>
+    <details class="data"><summary>Data table</summary><div class="tablewrap" id="tb-f7"></div></details>
+  </figure>
+  <p class="note">Object counting and boolean expressions were labeled state-tracking in advance but break rarely (6% and 5%): the model's reasoning lists items (“I have 1 apple.”) and evaluates sub-expressions one at a time, never overwriting a quantity. What matters is whether the reasoning text actually overwrites state, not the task type.</p>
+</section>
+
+<section id="mech">
+  <div class="eyebrow">Evidence 5</div>
+  <h2>Mechanism: attention heads that read stated values</h2>
+  <div class="prose">
+    <p>On the synthetic task we scored every Qwen3-4B attention head by its attention to the queried variable's values times its preference for the last-presented line. The top heads sit in layers 18–29 (for example, L29H11 puts 81% of its value attention on the last line). Zeroing them:</p>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Heads zeroed</th><th class="n">Synthetic shuffled: accuracy</th><th class="n">Synthetic shuffled: picks last</th><th class="n">Synthetic ordered: accuracy</th><th class="n">Real text: position effect</th></tr></thead>
+    <tbody>
+      <tr><td>None</td><td class="n">19.0</td><td class="n">97.0</td><td class="n">99.5</td><td class="n">41.7</td></tr>
+      <tr><td>Top 16</td><td class="n">24.5</td><td class="n">80.0</td><td class="n">97.0</td><td class="n">—</td></tr>
+      <tr><td>Top 32</td><td class="n">20.5</td><td class="n">68.5</td><td class="n">84.0</td><td class="n">10.3</td></tr>
+      <tr><td>32 random</td><td class="n">18.0</td><td class="n">97.0</td><td class="n">100</td><td class="n">44.3</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">The real-text column is Exp 14 (10% of the derivation kept). The position effect drops mainly because accuracy with the correct conclusion last falls from 91.7% to 56.0%, not because the wrong-conclusion-last case improves. These heads are how the model reads stated values and conclusions, and the reading itself carries the positional bias; with them removed the model does not fall back on the derivation.</p>
+</section>
+
+<section id="scale">
+  <div class="eyebrow">Evidence 6</div>
+  <h2>Scale and training</h2>
+  <figure>
+    <figcaption><span class="t">Figure 8 · Can retraction markers beat position? Base versus post-trained (Exps 2 and 9)</span><span class="d">Accuracy when the wrong value comes last and carries both retraction markers (conflict case). Models of 7B and above run in 4-bit.</span></figcaption>
+    <div class="legend" id="lg-f8"></div>
+    <div class="chart" id="f8"></div>
+    <details class="data"><summary>Data table (all models)</summary><div class="tablewrap" id="tb-f8"></div></details>
+  </figure>
+  <div class="tablewrap"><table>
+    <caption>Key metrics across scale (OLMo columns are Instruct models)</caption>
+    <thead><tr><th>Metric</th><th class="n">Qwen3-4B</th><th class="n">Qwen3-14B</th><th class="n">OLMo-2-7B</th><th class="n">OLMo-2-13B</th></tr></thead>
+    <tbody>
+      <tr><td>Synthetic shuffled, k=8: picks last value %</td><td class="n">98.5</td><td class="n">97.0</td><td class="n">95.5</td><td class="n">95.0</td></tr>
+      <tr><td>Synthetic conflict, both markers: accuracy %</td><td class="n">33.1</td><td class="n">47.5</td><td class="n">9.1</td><td class="n">29.0</td></tr>
+      <tr><td>Newest-first + step numbers, k=8: accuracy %</td><td class="n">5.0</td><td class="n">88.5</td><td class="n">0</td><td class="n">11.5</td></tr>
+      <tr><td>Real, symmetric: later conclusion chosen despite retraction %</td><td class="n">56.5</td><td class="n">45.5</td><td class="n">—</td><td class="n">41.5</td></tr>
+      <tr><td>Real: position effect (10% derivation)</td><td class="n">42.0</td><td class="n">27.0</td><td class="n">85.5</td><td class="n">76.0</td></tr>
+      <tr><td>Real: position effect (100% derivation)</td><td class="n">10.0</td><td class="n">8.0</td><td class="n">72.0</td><td class="n">66.0</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">On real text Qwen3 shows much smaller position effects than non-Qwen readers, possibly because Qwen3 has seen these problems and recognizes the correct answer. With that removed by the symmetric control (Figure 4), the effect is still 60 points for 4B and 40 points for 14B.</p>
+</section>
+
+<section id="risks">
+  <div class="eyebrow">Risks</div>
+  <h2>Main risks and unknowns</h2>
+  <ul class="claims" aria-label="Risks">
+    <li><span class="chip risk">Biggest risk</span><div class="what">The effect weakens with scale<span>Qwen3-14B handles well-structured step numbers and OLMo-2-13B does not, which points to training data or model family rather than scale alone. If 32B and 70B models handle the hard conditions, the claim narrows to small and mid-sized readers.</span></div></li>
+    <li><span class="chip risk">Key</span><div class="what">Reproduction in natural settings<span>The conflicts so far are constructed under control. Reading its own reasoning costs the model little (about 2 points); the effect has to be shown in natural non-chronological settings such as agent memory retrieval and newest-first logs.</span></div></li>
+    <li><span class="chip part">Medium</span><div class="what">Models of 7B and above run in 4-bit<span>Key results need replication in bf16.</span></div></li>
+    <li><span class="chip part">Medium</span><div class="what">Only reading is measured<span>The model reads finished text; whether it reuses retracted values while generating has not been measured.</span></div></li>
+    <li><span class="chip part">Medium</span><div class="what">Logical deduction on BBH disagrees with 2605.22870<span>Shuffle granularity and models must be aligned before comparing.</span></div></li>
+    <li><span class="chip todo">To do</span><div class="what">Literature<span>Test of Time (temporal reasoning, fact order), 2510.22752 (temporal biases in in-context retrieval) and memory benchmarks such as LongMemEval need a close read and a clear distinction.</span></div></li>
+  </ul>
+</section>
+
+<section id="next">
+  <div class="eyebrow">Next steps</div>
+  <h2>Plan and decisions to discuss</h2>
+  <div class="prose">
+    <p><b>1. Natural non-chronological settings</b> (feasible on the RTX 5080):</p>
+    <ul class="plain">
+      <li><b>Agent memory retrieval</b>: on a long-term memory benchmark with knowledge updates, compare retrieved results ordered by relevance (with timestamps) against the same results ordered by time. If relevance order is clearly worse, re-sorting by time is a free fix.</li>
+      <li><b>Newest-first logs</b>: build “what is the current value” questions from real commit histories and changelogs, presented oldest-first and newest-first.</li>
+      <li><b>The model's own long reasoning</b>: measure how often thinking-mode traces revise the same quantity, and whether later steps reuse retracted values.</li>
+    </ul>
+    <p><b>2. Rent a GPU to test scale</b>: one 80GB card (A800 / H800 / H100), about 30–50 hours. First run Exps 18, 19, 13 and 2 on 32B models (Qwen3-32B, OLMo-2-32B), about 10–15 hours, then decide on 70B. Also activation patching, bf16 replication of key results, and the generation-side experiments.</p>
+  </div>
+  <ol class="decide">
+    <li><div><b>Framing</b>: the paper is about language models reading state updates by presentation position, with controlled experiments establishing the phenomenon and mechanism, and memory retrieval and logs showing the impact. Agreed?</div></li>
+    <li><div><b>Compute</b>: whether to rent a GPU, the budget, and whether the lab has cloud credits.</div></li>
+    <li><div><b>Which natural setting first</b>: agent memory retrieval, newest-first logs, CoT monitoring, or the model's own long reasoning.</div></li>
+    <li><div><b>Target venue and timeline</b>.</div></li>
+  </ol>
+</section>
+
+<section id="index">
+  <div class="eyebrow">Appendix</div>
+  <h2>Experiment index</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>#</th><th>Question</th><th>Status</th></tr></thead>
+    <tbody id="exp-index"></tbody>
+  </table></div>
+</section>
+
+<footer>
+  <span>Code and per-experiment logs: <span class="mono">cot-overwrite/</span> (RESULTS.md, LITERATURE.md, PLAN.md).</span>
+  <span>All figures come from local result files; every figure has a data table. 中文版另见同名报告。</span>
+</footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const T = {
+  lineAria: "Line chart", barAria: "Bar chart", hbarAria: "Share of answers broken by shuffling, per task",
+  failRate: "Broken by shuffling", fullAcc: "Original-order accuracy", nIncl: "Items included",
+  f7Head: ["Task", "Category", "Original-order accuracy %", "Still correct after shuffle %", "Broken by shuffle %", "Items"],
+  f7Legend: { state: "Tracks updated state", partial: "Partly", none: "No" },
+  f1Head: "Condition", pickLast: "Overwritten · shuffled · picks last value", ordered: "Overwritten · original order",
+  f2Head: ["Task"], f2bHead: ["Tracking: swaps involving the queried person", "Items", "Original order", "Shuffled"],
+  f3Head: ["Model", "Condition", "k=2", "k=4", "k=8"],
+  f4Head: ["Reader", "Derivation kept", "No marker: A", "No marker: B", "B retracted: A", "B retracted: B", "A retracted: A", "A retracted: B"],
+  f5Head: "Reader", f6Head: ["Condition (y: % choosing the wrong conclusion)", "r=0", "r=1", "r=2", "r=4"],
+  f6Rows: ["4B · correct restated, wrong last", "4B · wrong restated, correct last", "14B · correct restated, wrong last", "14B · wrong restated, correct last"],
+  f8Head: ["Model", "Stage", "Conflict accuracy %"], idxHead: null, sep: ", "
+};
+const DATA = {
+  f1: { x: [0, 1, 2, 4, 8], xLabel: "Overwrites k", yMax: 100, unit: "%",
+    series: [
+      { name: "Overwritten variable · shuffled", c: "--s1", v: [100, 79.5, 39.5, 19.0, 14.0] },
+      { name: "Once-assigned variable · shuffled", c: "--s2", v: [null, 100, 99.5, 100, 99.5] },
+      { name: "Chance (k+1 values)", c: "--neutral-mark", v: [100, 50, 33.3, 20, 11.1], thin: true } ] },
+  f2: { cats: ["Tracking · 3 objects", "Tracking · 5 objects", "Tracking · 7 objects", "Deduction · 5 objects"], yMax: 100, unit: "%",
+    series: [ { name: "Re-read in order", c: "--s1", v: [100, 89.6, 82.9, 89.6] },
+              { name: "Line-level shuffle", c: "--s2", v: [51.3, 29.0, 26.1, 85.3] } ] },
+  f2b: [["1", 94, 87.2, 41.1], ["2", 261, 92.7, 42.4], ["3", 107, 96.3, 28.3], ["4", 20, 95.0, 21.7]],
+  f3: { cats: ["Shuffled · no cue", "Shuffled · step numbers", "Newest-first · header", "Newest-first · step numbers"],
+    byK: {
+      2: [ { name: "Qwen3-4B", c: "--s1", v: [5.5, 25.0, 1.0, 14.0] }, { name: "Qwen3-14B", c: "--s2", v: [24.2, 64.1, 69.0, 90.5] }, { name: "OLMo-2-13B-Instruct", c: "--s3", v: [7.0, 46.1, 19.5, 26.0] } ],
+      4: [ { name: "Qwen3-4B", c: "--s1", v: [1.8, 17.6, 0, 3.0] }, { name: "Qwen3-14B", c: "--s2", v: [3.6, 48.5, 41.0, 87.5] }, { name: "OLMo-2-13B-Instruct", c: "--s3", v: [5.5, 43.6, 7.0, 11.5] } ],
+      8: [ { name: "Qwen3-4B", c: "--s1", v: [0.6, 8.7, 0, 5.0] }, { name: "Qwen3-14B", c: "--s2", v: [1.2, 30.6, 12.0, 88.5] }, { name: "OLMo-2-13B-Instruct", c: "--s3", v: [0.0, 43.9, 6.5, 11.5] } ] },
+    table: [
+      ["Qwen3-4B", "Shuffled · no cue", 5.5, 1.8, 0.6], ["Qwen3-4B", "Shuffled · step numbers", 25.0, 17.6, 8.7], ["Qwen3-4B", "Newest-first · header", 1.0, 0, 0], ["Qwen3-4B", "Newest-first · step numbers", 14.0, 3.0, 5.0],
+      ["Qwen3-14B", "Shuffled · no cue", 24.2, 3.6, 1.2], ["Qwen3-14B", "Shuffled · step numbers", 64.1, 48.5, 30.6], ["Qwen3-14B", "Newest-first · header", 69.0, 41.0, 12.0], ["Qwen3-14B", "Newest-first · step numbers", 90.5, 87.5, 88.5],
+      ["OLMo-2-13B-Instruct", "Shuffled · no cue", 7.0, 5.5, 0.0], ["OLMo-2-13B-Instruct", "Shuffled · step numbers", 46.1, 43.6, 43.9], ["OLMo-2-13B-Instruct", "Newest-first · header", 19.5, 7.0, 6.5], ["OLMo-2-13B-Instruct", "Newest-first · step numbers", 26.0, 11.5, 11.5],
+      ["OLMo-2-7B-Instruct", "Shuffled · no cue", 0.8, 0.6, 1.7], ["OLMo-2-7B-Instruct", "Shuffled · step numbers", 24.2, 21.8, 11.0], ["OLMo-2-7B-Instruct", "Newest-first · header", 0, 0, 0], ["OLMo-2-7B-Instruct", "Newest-first · step numbers", 1.0, 0, 0] ] },
+  f4: { cats: ["4B · no marker", "4B · B retracted", "14B · no marker", "14B · B retracted", "OLMo 13B · no marker", "OLMo 13B · B retracted"], yMax: 100, unit: "%",
+    series: [ { name: "Chose earlier A", c: "--s3", v: [11.4, 19.4, 20.0, 27.5, 7.0, 40.0] },
+              { name: "Chose later B", c: "--s2", v: [71.6, 56.5, 59.5, 45.5, 88.0, 41.5] } ] },
+  f4full: [
+    ["Qwen3-4B", "10%", 11.4, 71.6, 19.4, 56.5, 10.4, 68.6], ["Qwen3-4B", "30%", 12.0, 61.2, 17.1, 50.2, 11.4, 56.5], ["Qwen3-4B", "100%", 18.1, 33.4, 17.4, 29.4, 15.7, 28.1],
+    ["Qwen3-14B", "10%", 20.0, 59.5, 27.5, 45.5, 8.5, 70.5], ["Qwen3-14B", "30%", 17.5, 51.5, 22.5, 37.5, 11.0, 54.0], ["Qwen3-14B", "100%", 17.0, 32.5, 18.0, 27.0, 10.5, 36.0],
+    ["OLMo-2-13B-Instruct", "10%", 7.0, 88.0, 40.0, 41.5, 0.5, 94.0], ["OLMo-2-13B-Instruct", "30%", 3.5, 90.5, 37.0, 43.0, 0.5, 94.0], ["OLMo-2-13B-Instruct", "100%", 4.5, 81.5, 32.5, 41.0, 0.5, 85.0] ],
+  f5: { x: [0, 10, 30, 60, 100], xLabel: "Derivation paragraphs kept (%)", yMax: 100, unit: " pp",
+    series: [
+      { name: "Qwen3-4B", c: "--s1", v: [21.7, 42.0, 32.2, 19.0, 10.0] },
+      { name: "Qwen3-14B", c: "--s2", v: [14.0, 27.0, 24.0, 14.3, 8.0] },
+      { name: "R1-Distill-Qwen-7B", c: "--s3", v: [7.0, 51.5, 61.0, 52.0, 42.5] },
+      { name: "OLMo-2-13B-Instruct", c: "--s4", v: [63.5, 76.0, 76.0, 76.0, 66.0] },
+      { name: "Phi-4-mini", c: "--s5", v: [86.0, 86.5, 86.5, 84.0, 85.5] } ] },
+  f5extra: [ ["Qwen3-8B", 19.5, 44.0, 36.5, 24.5, 17.0], ["OLMo-2-7B-Instruct", 80.0, 85.5, 82.5, 84.5, 72.0] ],
+  f6a: { x: [0, 1, 2, 4], xLabel: "Extra restatements r", yMax: 100, unit: "%",
+    series: [ { name: "Correct restated, wrong conclusion last", c: "--s1", v: [37.3, 19.7, 13.3, 10.7] },
+              { name: "Wrong restated, correct conclusion last", c: "--s2", v: [6.7, 28.0, 37.7, 51.0] } ] },
+  f6b: { x: [0, 1, 2, 4], xLabel: "Extra restatements r", yMax: 100, unit: "%",
+    series: [ { name: "Correct restated, wrong conclusion last", c: "--s1", v: [30.0, 13.0, 7.0, 4.5] },
+              { name: "Wrong restated, correct conclusion last", c: "--s2", v: [7.0, 34.0, 43.0, 57.0] } ] },
+  f8: { cats: ["OLMo-2-7B", "OLMo-2-13B", "Qwen3-4B"], yMax: 100, unit: "%",
+    series: [ { name: "Base", c: "--s1", v: [5.6, 9.6, 6.8] }, { name: "Post-trained", c: "--s2", v: [9.1, 29.0, 33.1] } ] },
+  f8full: [ ["Qwen3-1.7B", "post-trained", 3.3], ["Qwen3-4B-Base", "base", 6.8], ["Qwen3-4B", "post-trained", 33.1], ["Qwen3-8B", "post-trained", 32.3], ["Qwen3-14B", "post-trained", 47.5],
+            ["OLMo-2-7B", "base", 5.6], ["OLMo-2-7B-SFT", "SFT", 6.3], ["OLMo-2-7B-DPO", "DPO", 9.3], ["OLMo-2-7B-Instruct", "RLVR", 9.1],
+            ["OLMo-2-13B", "base", 9.6], ["OLMo-2-13B-Instruct", "post-trained", 29.0], ["Qwen2.5-Math-7B", "base (math pretraining)", 32.3], ["R1-Distill-Qwen-7B", "R1 distillation", 17.7], ["Phi-4-mini", "post-trained", 5.6] ],
+  f7: __F7__,
+  index: [
+    ["1", "Shuffle × overwrites (synthetic)", "Done"], ["2", "Position vs retraction markers (synthetic)", "Done"], ["3", "Cross-model replication", "Done"], ["4", "Paragraph shuffle of real traces", "Done"],
+    ["5", "Natural-language synthetic task", "Done"], ["6", "Early answering + shuffle", "Done"], ["7", "Recency heads + ablation", "Done"], ["8", "Long overwrite chains (k up to 64)", "Done"],
+    ["9", "Post-training lineage + scale", "Done"], ["10", "Read/write asymmetry (generation side)", "Planned"], ["11", "Inserted retraction sentence", "Done"], ["12", "Counterfeit conclusion paragraph", "Done"],
+    ["13", "Competing conclusions, dose-response", "Done"], ["14", "Ablating recency heads (real text)", "Done"], ["15", "Restatement vs position", "Done"], ["16", "More readers for Exp 13", "Done"],
+    ["17", "Answer extractor + mitigation prompt", "Done"], ["18", "Explicit order cues vs position", "Done"], ["19", "Real-text retraction + symmetric control", "Done"], ["20", "BBH tracking vs deduction", "Done"],
+    ["21", "Natural competing conclusions", "Done"], ["22", "All 27 BBH tasks", "Done"] ]
+};
+__CHARTS_JS__
+</script>

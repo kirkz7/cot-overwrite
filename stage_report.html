@@ -1,0 +1,620 @@
+<title>后写者胜？</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+/* Layout: one reading column (lab memo); claims first, then evidence figures with data tables, then scope, risks and decisions. */
+:root {
+  --bg: #f5f6f8; --surface: #fdfdfd; --ink: #15181d; --ink-2: #4a515b; --muted: #858b93;
+  --rule: #e1e4e8; --axis: #c3c7cd; --accent: #1f5ea8; --accent-wash: #e8f0fa; --code-bg: #eef1f4;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --neutral-mark: #b9bec5;
+  --good: #0ca30c; --warn: #fab219; --crit: #d03b3b;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111316; --surface: #181b1f; --ink: #eef0f3; --ink-2: #b6bcc4; --muted: #868d96;
+    --rule: #2a2f35; --axis: #3b4148; --accent: #6ea8ee; --accent-wash: #1b2a3d; --code-bg: #1f2328;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --neutral-mark: #5a6068;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111316; --surface: #181b1f; --ink: #eef0f3; --ink-2: #b6bcc4; --muted: #868d96;
+  --rule: #2a2f35; --axis: #3b4148; --accent: #6ea8ee; --accent-wash: #1b2a3d; --code-bg: #1f2328;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --neutral-mark: #5a6068;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15.5px; line-height: 1.75; }
+.page { max-width: 800px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.3; margin: 0; }
+h1 { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.32rem; font-weight: 700; margin-top: 8px; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.mono { font-family: var(--font-mono); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+header { display: grid; gap: 14px; padding-bottom: 28px; border-bottom: 1px solid var(--rule); }
+.lede { font-size: 1.08rem; color: var(--ink-2); max-width: 40em; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.facts b { color: var(--ink); font-weight: 500; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.86rem; }
+nav.toc a { text-decoration: none; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+nav.toc a:hover { color: var(--accent); border-color: var(--accent); }
+section { display: grid; gap: 18px; padding-block: 36px 8px; }
+.prose { display: grid; gap: 12px; max-width: 42em; }
+.thesis { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 22px; display: grid; gap: 10px; }
+.thesis p { font-size: 1.05rem; }
+.verdict { font-size: 0.95rem; color: var(--ink-2); }
+.claims { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--rule); }
+.claims li { display: grid; grid-template-columns: 7.5em 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); align-items: start; }
+.claims .what { display: grid; gap: 2px; min-width: 0; }
+.claims .what span { color: var(--ink-2); font-size: 0.9rem; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 500; white-space: nowrap; padding-top: 2px; }
+.chip::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
+.chip.ok { --c: var(--good); } .chip.part { --c: var(--warn); } .chip.todo { --c: var(--muted); } .chip.risk { --c: var(--crit); }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 18px 14px; display: grid; gap: 12px; min-width: 0; }
+figcaption { display: grid; gap: 4px; }
+figcaption .t { font-weight: 700; font-size: 0.98rem; }
+figcaption .d { font-size: 0.86rem; color: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; flex: none; }
+.legend i.sw { width: 10px; height: 10px; border-radius: 2px; }
+.legend i.ln { width: 16px; height: 2px; border-radius: 1px; }
+.chart { position: relative; width: 100%; min-width: 0; }
+.chart svg { display: block; overflow: visible; }
+.chart text { font-family: var(--font-body); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; width: fit-content; }
+.seg button { font: inherit; font-size: 0.82rem; background: transparent; color: var(--ink-2); border: 0; padding: 4px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 500; }
+details.data summary { cursor: pointer; font-size: 0.82rem; color: var(--muted); width: fit-content; }
+.tablewrap { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; font-size: 0.84rem; width: 100%; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { font-weight: 500; color: var(--ink-2); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--font-mono); font-size: 0.82rem; }
+caption { text-align: left; padding-bottom: 6px; font-size: 0.86rem; color: var(--muted); }
+.exhibit { background: var(--code-bg); border-radius: 8px; padding: 14px 16px; font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.6; overflow-x: auto; color: var(--ink); white-space: pre; }
+.exhibit .hl { color: var(--accent); font-weight: 500; }
+.exhibit .dim { color: var(--muted); }
+.note { font-size: 0.86rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: 12px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.two > * { min-width: 0; }
+ul.plain { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.decide { display: grid; gap: 10px; counter-reset: q; list-style: none; padding: 0; margin: 0; }
+.decide li { counter-increment: q; display: grid; grid-template-columns: 2em 1fr; gap: 8px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; }
+.decide li::before { content: counter(q); font-family: var(--font-mono); color: var(--accent); font-weight: 500; }
+#tip { position: fixed; z-index: 10; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 10px; font-size: 0.8rem; line-height: 1.5; box-shadow: 0 4px 16px rgba(0,0,0,0.12); max-width: 260px; }
+#tip .tt { color: var(--ink-2); margin-bottom: 4px; }
+#tip .row { display: flex; align-items: center; gap: 8px; }
+#tip .row i { width: 12px; height: 2px; flex: none; border-radius: 1px; }
+#tip .row b { font-family: var(--font-mono); font-weight: 500; min-width: 3.2em; }
+#tip .row span { color: var(--ink-2); }
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 560px) {
+  body { font-size: 15px; }
+  h1 { font-size: 1.7rem; }
+  .claims li { grid-template-columns: 1fr; gap: 4px; }
+  figure { padding: 14px 12px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="page">
+<header>
+  <div class="eyebrow">CoT 状态覆盖研究 · 阶段报告 · 2026-10-01</div>
+  <h1>后写者胜？</h1>
+  <p class="lede">推理过程或上下文里，同一个量出现多个值时（状态被覆盖、自我修正、相互竞争的结论），语言模型采信哪一个？本报告总结 22 组实验的最新结果、结论的适用范围，以及下一步需要讨论的决定。</p>
+  <div class="facts"><span><b>22</b> 组实验</span><span><b>15</b> 个模型 · 1.7B–14B</span><span>Qwen3 · OLMo-2 · Phi-4 · R1-Distill</span><span>本地 RTX 5080 16GB</span></div>
+  <nav class="toc" aria-label="目录">
+    <a href="#summary">结论</a><a href="#when">顺序何时重要</a><a href="#cues">明确线索压不过位置</a><a href="#real">真实推理文本</a><a href="#scope">适用范围</a><a href="#bbh">跨任务</a><a href="#mech">机制</a><a href="#scale">规模与训练</a><a href="#risks">风险</a><a href="#next">下一步</a><a href="#index">实验索引</a>
+  </nav>
+</header>
+
+<section id="summary">
+  <div class="eyebrow">结论</div>
+  <div class="thesis">
+    <p>语言模型读一段文本时，遇到同一个量的多个值，<b>默认采信呈现在最后的那个</b>。对按时间顺序写成的文本（包括模型自己写的推理），这个默认通常是对的。但当文本不按时间顺序呈现时，它会压过明确的时间标记（步骤编号、“从新到旧排列”），也只会被明确的撤回语句（“Wait, that's wrong.”）部分抵消。Qwen3-14B 已能利用结构清晰的时间标记，同等规模的 OLMo-2-13B 仍基本按位置读。</p>
+    <p class="verdict">论文档位：两个模型家族、1.7B–14B 的证据足以支撑一篇关于“按位置读取状态”的论文。能否冲主会取决于两点：32B / 70B 上效应是否仍在；能否在真实的非时间顺序场景（agent 记忆检索、倒序日志、多来源上下文）中复现。</p>
+  </div>
+  <ul class="claims" aria-label="主张与证据状态">
+    <li><span class="chip ok">已证实</span><div class="what">顺序只在状态被覆盖时才重要<span>合成任务 15 个模型全部复现；BBH 全部 27 个任务上，需要维护会被更新的状态的任务打乱后平均失效 39%，不需要的任务只有 4%。</span></div></li>
+    <li><span class="chip ok">已证实</span><div class="what">读者依据呈现位置，而不是语义上的“更新”<span>开头写明“从新到旧排列”，Qwen3-4B 仍几乎从不选第一个（真正最新的）值：k=2/4/8 时 1% / 0% / 0%。</span></div></li>
+    <li><span class="chip ok">基本证实</span><div class="what">位置压过明确的时间信息，撤回只能部分抵消<span>Qwen3-4B、OLMo-2-7B / 13B 在倒序加步骤编号时只有 0–26%；Qwen3-14B 是例外（约 90%）。撤回语句能削弱位置优势（OLMo-13B：88%→42%），但没有模型转而稳定地选未被撤回的结论。</span></div></li>
+    <li><span class="chip ok">已证实</span><div class="what">读模型自己按时间顺序写的推理时，按位置读通常是对的<span>BBH 上重读自己的推理，多数任务 93–100%。选择题推理中 60% 的情况正确选项不是最后被提到的，但明确的语义判断让准确率仍有 97.8%。</span></div></li>
+    <li><span class="chip ok">已证实</span><div class="what">支撑相当时后写的结论胜出，支撑悬殊时支撑胜出<span>真实推理文本中两个结论各出现一次时，位置效应峰值 27–87 个百分点（视读者）；正确答案每多复述一次，就抵消一大块位置优势。</span></div></li>
+    <li><span class="chip part">初步</span><div class="what">机制：一组晚层注意力头读取写下的值，读法带位置偏好<span>置零 32 个头后，真实文本上的位置效应从 42 降到 10 个百分点（随机 32 个：44）；这些头同时负责读取本身，需要 activation patching 进一步区分。</span></div></li>
+    <li><span class="chip ok">两个家族复现</span><div class="what">后训练只在足够规模上提高对撤回标记的敏感度<span>OLMo-2 7B：5.6%→9.1%；13B：9.6%→29.0%；Qwen3-4B：6.8%→33.1%。</span></div></li>
+  </ul>
+</section>
+
+<section id="when">
+  <div class="eyebrow">证据 1</div>
+  <h2>顺序何时重要：只在状态被覆盖时</h2>
+  <div class="prose">
+    <p>合成任务：16 行变量追踪程序，被查询的变量被覆盖 k 次；对照组在同一段推理里查询只赋值一次的变量。把推理过程按行打乱后，只赋值一次的变量几乎不受影响，被覆盖的变量准确率随 k 降到随机猜测水平，而且模型在 93–99% 的情况下选的是<b>排在最后的那个值</b>。覆盖次数增加到 64 次，这一倾向依然保持（93–99%）。</p>
+  </div>
+  <figure>
+    <figcaption><span class="t">图 1 · 打乱推理过程后的准确率（Qwen3-4B，每格 200 题）</span><span class="d">横轴为被查询变量被覆盖的次数 k。灰线为“在 k+1 个历史值中随机猜”的水平。</span></figcaption>
+    <div class="legend" id="lg-f1"></div>
+    <div class="chart" id="f1"></div>
+    <details class="data"><summary>数据表</summary><div class="tablewrap" id="tb-f1"></div></details>
+  </figure>
+  <figure>
+    <figcaption><span class="t">图 2 · BBH 上用模型自己生成的推理过程（Qwen3-4B，行级打乱 × 3 个种子）</span><span class="d">只保留模型答对的题，去掉答案句后重读。物体追踪每一步交换都会覆盖状态；逻辑推理的约束只累积、不覆盖。</span></figcaption>
+    <div class="legend" id="lg-f2"></div>
+    <div class="chart" id="f2"></div>
+    <details class="data"><summary>数据表（含按交换次数分组）</summary><div class="tablewrap" id="tb-f2"></div><div class="tablewrap" id="tb-f2b"></div></details>
+  </figure>
+  <p class="note">与起点文献的关系：LCA（2605.26795）和 2605.07307 报告“打乱不影响”，2605.22870 报告 tracking 任务崩溃，状态是否被覆盖可以同时解释两边。2605.22870 还报告逻辑推理崩溃，我们没有观察到（设置不同：行级打乱、模型自己的推理过程），写作时需要专门讨论。</p>
+</section>
+
+<section id="cues">
+  <div class="eyebrow">证据 2 · 核心</div>
+  <h2>明确的线索压不过位置</h2>
+  <div class="prose">
+    <p>“取最后一个”在没有其他信息时是合理的默认，所以打乱实验本身不能说明模型出错。关键检验是：<b>当明确的信息和位置相矛盾时，模型听谁的</b>。</p>
+  </div>
+  <div class="exhibit" aria-label="实验 18 条件示意"><span class="dim">// 倒序 + 说明（k=4 的一道题，示意）。e 的真实历史：32 → 41 → 33 → 31 → 37</span>
+Let me trace the program. <span class="hl">The steps below are listed from the most recent to the earliest.</span>
+y = 42
+n = 60
+<span class="hl">e = 37</span>      <span class="dim">← 最新（第一个出现的 e）</span>
+e = 31
+…
+e = 41
+…
+<span class="hl">e = 32</span>      <span class="dim">← 最旧（最后一个出现的 e）</span>
+Therefore, the final value of e is <span class="dim">Qwen3-4B 在这种条件下 72% 选 32，0% 选 37</span></div>
+  <figure>
+    <figcaption><span class="t">图 3 · 明确的顺序线索与位置冲突时的准确率（实验 18）</span><span class="d">“冲突”指最新的值没有排在最后。每格 200 题；切换 k 查看不同覆盖次数。Qwen3-14B 能用倒序中的步骤编号，同等规模的 OLMo-2-13B 不能。</span></figcaption>
+    <div class="seg" role="group" aria-label="覆盖次数 k" id="k-seg"><button type="button" data-k="2" aria-pressed="false">k = 2</button><button type="button" data-k="4" aria-pressed="false">k = 4</button><button type="button" data-k="8" aria-pressed="true">k = 8</button></div>
+    <div class="legend" id="lg-f3"></div>
+    <div class="chart" id="f3"></div>
+    <details class="data"><summary>数据表（全部模型与 k）</summary><div class="tablewrap" id="tb-f3"></div></details>
+  </figure>
+  <figure>
+    <figcaption><span class="t">图 4 · 真实推理文本中的撤回（实验 19，对称对照，保留 10% 推导）</span><span class="d">4B、14B 为 Qwen3，OLMo 13B 为 OLMo-2-13B-Instruct。两个结论都是伪造的错误答案 A（在前）和 B（在后），正确答案不在上下文中，排除了模型“认得答案”的影响。理性的读者在 B 被撤回时应该选 A。</span></figcaption>
+    <div class="legend" id="lg-f4"></div>
+    <div class="chart" id="f4"></div>
+    <details class="data"><summary>数据表（全部推导比例）</summary><div class="tablewrap" id="tb-f4"></div></details>
+  </figure>
+  <div class="prose">
+    <p>合成任务上的同类实验（实验 2）：错值排在最后、后面紧跟 “Hmm, that's wrong.” 时，大多数模型在冲突情况下只有 0.5–10% 的准确率，最高的 Qwen3-14B 为 47.5%。</p>
+  </div>
+</section>
+
+<section id="real">
+  <div class="eyebrow">证据 3</div>
+  <h2>真实推理文本：支撑优先，位置决胜</h2>
+  <div class="prose">
+    <p>在 OpenR1-Math 的 R1 推理轨迹中，取最后一段写出正确答案的段落，复制一份并把答案换成相近的错数 X，两段结论各出现一次、调换先后顺序。逐步删掉推导段落，测量“哪个结论写在后面”对答案的影响。</p>
+  </div>
+  <figure>
+    <figcaption><span class="t">图 5 · 位置效应随推导多少的变化（实验 13 / 16）</span><span class="d">位置效应 = 正确结论在后的准确率 − 错误结论在后的准确率。每个读者 200–400 条轨迹。</span></figcaption>
+    <div class="legend" id="lg-f5"></div>
+    <div class="chart" id="f5"></div>
+    <details class="data"><summary>数据表（全部 7 个读者）</summary><div class="tablewrap" id="tb-f5"></div></details>
+  </figure>
+  <div class="two">
+    <figure>
+      <figcaption><span class="t">图 6a · 复述 vs 位置（Qwen3-4B）</span><span class="d">实验 15：一个结论写在最后，另一个结论在前面额外复述 r 次。纵轴为选中错误结论 X 的比例。</span></figcaption>
+      <div class="legend" id="lg-f6a"></div>
+      <div class="chart" id="f6a"></div>
+    </figure>
+    <figure>
+      <figcaption><span class="t">图 6b · 复述 vs 位置（Qwen3-14B）</span><span class="d">同上。14B 对复述更敏感。</span></figcaption>
+      <div class="legend" id="lg-f6b"></div>
+      <div class="chart" id="f6b"></div>
+    </figure>
+  </div>
+  <details class="data"><summary>图 6 数据表</summary><div class="tablewrap" id="tb-f6"></div></details>
+  <div class="prose">
+    <h3>完整的天然轨迹里，单处改动撼动不了答案</h3>
+    <p>真实轨迹中正确答案通常被反复验证、复述。下列改动都几乎不改变读者的答案，与“支撑优先”一致：</p>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>实验</th><th>改动</th><th class="n">结果</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">4 / 6</td><td>按段落打乱完整轨迹（含自我修正的轨迹）</td><td class="n">冲突时 99% 答对</td></tr>
+      <tr><td class="mono">11</td><td>开头或末尾插一句 “Wait, earlier I got X. That was wrong.”</td><td class="n">选 X 0–0.3%</td></tr>
+      <tr><td class="mono">12</td><td>伪结论段放末尾 / 替换原结论段（正确答案仍在别处复述）</td><td class="n">选 X 0–0.8%</td></tr>
+      <tr><td class="mono">21</td><td>R1 答错的轨迹中，调换两段天然结论的顺序</td><td class="n">仍选最终答案 88–100%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">实验 17（答案抽取器）：解答以错误答案 X 结尾时，Qwen3-4B / 14B 仍有 69% / 67.5% 报告正确答案，抽取器“不忠实”于解答本身。这对 LLM 评分器有影响，但受“认得答案”混淆，尚需用对称设计确认。</p>
+</section>
+
+<section id="scope">
+  <div class="eyebrow">适用范围</div>
+  <h2>模型自己写的推理 vs. 它要读的其他文本</h2>
+  <div class="prose">
+    <p>上面的失败都出现在文本<b>没有按时间顺序呈现</b>、或者两个结论支撑相当的时候。模型自己写的推理几乎总是按时间顺序的，所以需要单独检验：在不做任何改动的自然推理里，位置和答案不一致的情况有多常见、代价多大。</p>
+  </div>
+  <div class="tablewrap"><table>
+    <caption>Qwen3-4B 重读自己写的推理（BBH，去掉答案句，不做其他改动）</caption>
+    <thead><tr><th>指标</th><th class="n">数值</th></tr></thead>
+    <tbody>
+      <tr><td>按原顺序重读的准确率（多数任务）</td><td class="n">93–100%</td></tr>
+      <tr><td>选择题推理中讨论了 ≥2 个选项的题</td><td class="n">302</td></tr>
+      <tr><td>其中正确选项不是最后被提到的</td><td class="n">60.3%</td></tr>
+      <tr><td>重读准确率：正确选项最后被提到 / 不是最后</td><td class="n">100% / 97.8%</td></tr>
+      <tr><td>R1 答错轨迹中“先写出正确答案、最后改错”的比例</td><td class="n">7.6%</td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p>结论：模型读自己的推理时，位置和答案不一致的情况很常见，但通常有明确的语义判断（“(B) is correct”）消除歧义，代价只有约 2 个百分点。因此本研究的主张不是“模型读不懂自己的推理”，而是：<b>当模型读取不按时间顺序呈现、又缺少明确语义判断的状态更新时，它会按位置取值。</b></p>
+    <p>这类文本在实际系统中很常见：agent 记忆检索按相关度返回新旧事实，只能靠时间戳区分；git log、邮件线程、更新日志默认从新到旧排列；工具输出、对话历史、其他模型的推理被拼接在一起（例如 CoT 监控）；以及模型在长思考中反复修正同一个量。下一步的实验转向这些场景。</p>
+  </div>
+</section>
+
+<section id="bbh">
+  <div class="eyebrow">证据 4</div>
+  <h2>跨任务：BBH 全部 27 个任务</h2>
+  <div class="prose">
+    <p>在 BBH 全部 27 个任务上，用 Qwen3-4B 自己生成的推理过程做行级打乱（每题 3 个种子）。只统计按原顺序重读能答对的题，看打乱后有多少失效。任务分类在运行实验之前就写进了代码。</p>
+    <p>需要维护会被更新的状态的任务，打乱后平均失效 <b>39%</b>（物体追踪 57–73%，多步算术 42%，导航 21%）；部分相关的任务 10%；不需要的任务 <b>4%</b>（最高的谎言链 9%，逻辑推理 1–10%）。</p>
+  </div>
+  <figure id="f7-fig" hidden>
+    <figcaption><span class="t">图 7 · 打乱后失效的比例，按任务（实验 22，Qwen3-4B）</span><span class="d">只计按原顺序重读能答对的题，3 次打乱取平均。颜色为事先的分类。括号补全只有 1 道可用题，未画出。</span></figcaption>
+    <div class="legend" id="lg-f7"></div>
+    <div class="chart" id="f7"></div>
+    <details class="data"><summary>数据表</summary><div class="tablewrap" id="tb-f7"></div></details>
+  </figure>
+  <p class="note">物体计数和布尔表达式事先被标为“需要维护状态”，但失效很少（6%、5%）：模型写出的推理是逐项列出 “I have 1 apple.” 和逐步求子表达式的值，并没有覆盖同一个量。决定性的是推理文本里是否真的覆盖了状态，而不只是任务类型。</p>
+</section>
+
+<section id="mech">
+  <div class="eyebrow">证据 5</div>
+  <h2>机制：读取写下的值的注意力头</h2>
+  <div class="prose">
+    <p>在合成任务上，按“分给被查询变量数值的注意力 × 偏向最后一行的程度”给 Qwen3-4B 每个注意力头打分，排名靠前的集中在第 18–29 层（例如 L29H11 有 81% 的数值注意力落在最后一行）。把它们置零：</p>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>置零的头</th><th class="n">合成·打乱：准确率</th><th class="n">合成·打乱：选最后</th><th class="n">合成·保序：准确率</th><th class="n">真实文本：位置效应</th></tr></thead>
+    <tbody>
+      <tr><td>无</td><td class="n">19.0</td><td class="n">97.0</td><td class="n">99.5</td><td class="n">41.7</td></tr>
+      <tr><td>排名前 16</td><td class="n">24.5</td><td class="n">80.0</td><td class="n">97.0</td><td class="n">—</td></tr>
+      <tr><td>排名前 32</td><td class="n">20.5</td><td class="n">68.5</td><td class="n">84.0</td><td class="n">10.3</td></tr>
+      <tr><td>随机 32 个</td><td class="n">18.0</td><td class="n">97.0</td><td class="n">100</td><td class="n">44.3</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">真实文本一栏来自实验 14（保留 10% 推导）。位置效应下降主要是因为“正确结论在后”时的准确率从 91.7% 降到 56.0%，而不是“错误结论在后”时变好。这组头就是读取写下的值和结论的机制，读法本身带位置偏好；关掉后模型并不会改用推导来判断。</p>
+</section>
+
+<section id="scale">
+  <div class="eyebrow">证据 6</div>
+  <h2>规模与训练</h2>
+  <figure>
+    <figcaption><span class="t">图 8 · 修正标记能否压过位置：base 与后训练版本（实验 2 / 9）</span><span class="d">错值排在最后、带两种修正标记时的准确率（冲突情况）。7B 及以上为 4-bit。</span></figcaption>
+    <div class="legend" id="lg-f8"></div>
+    <div class="chart" id="f8"></div>
+    <details class="data"><summary>数据表（全部模型）</summary><div class="tablewrap" id="tb-f8"></div></details>
+  </figure>
+  <div class="tablewrap"><table>
+    <caption>关键指标随规模的变化（OLMo 列为 Instruct 版本）</caption>
+    <thead><tr><th>指标</th><th class="n">Qwen3-4B</th><th class="n">Qwen3-14B</th><th class="n">OLMo-2-7B</th><th class="n">OLMo-2-13B</th></tr></thead>
+    <tbody>
+      <tr><td>合成·打乱 k=8：选最后的值 %</td><td class="n">98.5</td><td class="n">97.0</td><td class="n">95.5</td><td class="n">95.0</td></tr>
+      <tr><td>合成·冲突：两种标记下准确率 %</td><td class="n">33.1</td><td class="n">47.5</td><td class="n">9.1</td><td class="n">29.0</td></tr>
+      <tr><td>倒序 + 步骤编号 k=8：准确率 %</td><td class="n">5.0</td><td class="n">88.5</td><td class="n">0</td><td class="n">11.5</td></tr>
+      <tr><td>真实·对称：后者被撤回仍选后者 %</td><td class="n">56.5</td><td class="n">45.5</td><td class="n">—</td><td class="n">41.5</td></tr>
+      <tr><td>真实·位置效应（10% 推导）</td><td class="n">42.0</td><td class="n">27.0</td><td class="n">85.5</td><td class="n">76.0</td></tr>
+      <tr><td>真实·位置效应（100% 推导）</td><td class="n">10.0</td><td class="n">8.0</td><td class="n">72.0</td><td class="n">66.0</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">真实文本上 Qwen3 的位置效应明显小于非千问读者，部分原因可能是 Qwen3 训练时见过这些题（能“认出”正确答案）；对称对照（图 4）排除这一点后，4B 仍有 60 个百分点、14B 有 40 个百分点。</p>
+</section>
+
+<section id="risks">
+  <div class="eyebrow">风险</div>
+  <h2>主要风险与未知</h2>
+  <ul class="claims" aria-label="风险">
+    <li><span class="chip risk">最大风险</span><div class="what">效应随规模减弱<span>Qwen3-14B 已能处理结构清晰的步骤编号，OLMo-2-13B 不能，减弱更像是训练数据或家族差异。若 32B / 70B 在困难条件下也基本正确，主张需收窄到“中小模型读者”。</span></div></li>
+    <li><span class="chip risk">关键</span><div class="what">真实场景中的复现<span>目前的冲突都是在受控条件下构造的。模型读自己的推理时代价很小（约 2 个百分点）；需要在 agent 记忆检索、倒序日志等自然的非时间顺序场景中复现。</span></div></li>
+    <li><span class="chip part">中</span><div class="what">7B 以上模型都是 4-bit<span>关键结论需在 bf16 下复现。</span></div></li>
+    <li><span class="chip part">中</span><div class="what">只测了“读取”<span>模型读一段写好的文本；生成过程中（接着往下写时）是否会误用已被推翻的旧值，尚未测量。</span></div></li>
+    <li><span class="chip part">中</span><div class="what">BBH 逻辑推理与 2605.22870 不一致<span>需要对齐打乱粒度和模型后再比较。</span></div></li>
+    <li><span class="chip todo">待补</span><div class="what">文献<span>Test of Time（时间推理、事实顺序）、2510.22752（上下文检索中的时间偏置）、LongMemEval 等记忆基准需细读并说明区别。</span></div></li>
+  </ul>
+</section>
+
+<section id="next">
+  <div class="eyebrow">下一步</div>
+  <h2>计划与需要讨论的决定</h2>
+  <div class="prose">
+    <p><b>1. 真实的非时间顺序场景</b>（5080 可做）：</p>
+    <ul class="plain">
+      <li><b>agent 记忆检索</b>：用带知识更新的长期记忆基准，检索结果按相关度排列（自带时间戳）与按时间排列对比，内容完全相同。若按相关度排列明显更差，按时间重排就是一个零成本的改进。</li>
+      <li><b>倒序日志</b>：用真实的提交历史、更新日志构造“当前值是多少”的问题，比较从旧到新与从新到旧两种呈现。</li>
+      <li><b>模型自己的长思考</b>：统计思考模式下同一个量被修正的频率，以及后续步骤是否误用已被推翻的旧值。</li>
+    </ul>
+    <p><b>2. 租 GPU 验证规模</b>：1 张 80GB 卡（A800 / H800 / H100），约 30–50 小时。先跑 32B（Qwen3-32B、OLMo-2-32B）的实验 18、19、13、2，约 10–15 小时；再决定是否上 70B。同时做 activation patching、关键结果的 bf16 复现，以及生成侧的实验。</p>
+  </div>
+  <ol class="decide">
+    <li><div><b>论文定位</b>：主线定为“语言模型按呈现位置读取状态更新”，以受控实验建立现象和机制，以记忆检索、日志等真实场景展示影响。是否认同？</div></li>
+    <li><div><b>算力</b>：是否租 GPU、预算多少，学校或课题组是否有现成的云资源额度。</div></li>
+    <li><div><b>真实场景的优先级</b>：agent 记忆检索、倒序日志、CoT 监控、模型自己的长思考，先做哪个。</div></li>
+    <li><div><b>目标会议与时间表</b>。</div></li>
+  </ol>
+</section>
+
+<section id="index">
+  <div class="eyebrow">附录</div>
+  <h2>实验索引</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>#</th><th>问题</th><th>状态</th></tr></thead>
+    <tbody id="exp-index"></tbody>
+  </table></div>
+</section>
+
+<footer>
+  <span>代码与逐实验记录：<span class="mono">cot-overwrite/</span>（RESULTS.md、LITERATURE.md、PLAN.md）。</span>
+  <span>图表数值均来自本地实验结果文件；每张图附数据表。English version available separately.</span>
+</footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const T = {
+  lineAria: "折线图", barAria: "柱状图", hbarAria: "按任务的打乱后失效比例",
+  failRate: "打乱后失效的比例", fullAcc: "原顺序重读准确率", nIncl: "纳入的题数",
+  f7Head: ["任务", "事先分类", "原顺序重读准确率 %", "打乱后仍正确 %", "打乱后失效 %", "纳入题数"],
+  f7Legend: { state: "需要维护会被更新的状态", partial: "部分", none: "不需要" },
+  f1Head: "条件", pickLast: "被覆盖的变量 · 打乱 · 选最后的值", ordered: "被覆盖的变量 · 保序",
+  f2Head: ["任务"], f2bHead: ["追踪：被询问者参与交换的次数", "题数", "原顺序", "打乱"],
+  f3Head: ["模型", "条件", "k=2", "k=4", "k=8"],
+  f4Head: ["读者", "保留推导", "无标记：选 A", "无标记：选 B", "B 被撤回：选 A", "B 被撤回：选 B", "A 被撤回：选 A", "A 被撤回：选 B"],
+  f5Head: "读者", f6Head: ["条件（纵轴：选错误结论 %）", "r=0", "r=1", "r=2", "r=4"],
+  f6Rows: ["4B · 复述正确，错误在最后", "4B · 复述错误，正确在最后", "14B · 复述正确，错误在最后", "14B · 复述错误，正确在最后"],
+  f8Head: ["模型", "阶段", "冲突准确率 %"], idxHead: null, sep: "，"
+};
+const DATA = {
+  f1: { x: [0, 1, 2, 4, 8], xLabel: "覆盖次数 k", yMax: 100, unit: "%",
+    series: [
+      { name: "被覆盖的变量 · 打乱", c: "--s1", v: [100, 79.5, 39.5, 19.0, 14.0] },
+      { name: "只赋值一次的变量 · 打乱", c: "--s2", v: [null, 100, 99.5, 100, 99.5] },
+      { name: "随机猜测（k+1 个值）", c: "--neutral-mark", v: [100, 50, 33.3, 20, 11.1], thin: true } ] },
+  f2: { cats: ["追踪 · 3 个对象", "追踪 · 5 个对象", "追踪 · 7 个对象", "逻辑推理 · 5 个对象"], yMax: 100, unit: "%",
+    series: [ { name: "按原顺序重读", c: "--s1", v: [100, 89.6, 82.9, 89.6] },
+              { name: "行级打乱", c: "--s2", v: [51.3, 29.0, 26.1, 85.3] } ] },
+  f2b: [["1", 94, 87.2, 41.1], ["2", 261, 92.7, 42.4], ["3", 107, 96.3, 28.3], ["4", 20, 95.0, 21.7]],
+  f3: { cats: ["打乱 · 无线索", "打乱 · 步骤编号", "倒序 · 开头说明", "倒序 · 步骤编号"],
+    byK: {
+      2: [ { name: "Qwen3-4B", c: "--s1", v: [5.5, 25.0, 1.0, 14.0] }, { name: "Qwen3-14B", c: "--s2", v: [24.2, 64.1, 69.0, 90.5] }, { name: "OLMo-2-13B-Instruct", c: "--s3", v: [7.0, 46.1, 19.5, 26.0] } ],
+      4: [ { name: "Qwen3-4B", c: "--s1", v: [1.8, 17.6, 0, 3.0] }, { name: "Qwen3-14B", c: "--s2", v: [3.6, 48.5, 41.0, 87.5] }, { name: "OLMo-2-13B-Instruct", c: "--s3", v: [5.5, 43.6, 7.0, 11.5] } ],
+      8: [ { name: "Qwen3-4B", c: "--s1", v: [0.6, 8.7, 0, 5.0] }, { name: "Qwen3-14B", c: "--s2", v: [1.2, 30.6, 12.0, 88.5] }, { name: "OLMo-2-13B-Instruct", c: "--s3", v: [0.0, 43.9, 6.5, 11.5] } ] },
+    table: [
+      ["Qwen3-4B", "打乱 · 无线索", 5.5, 1.8, 0.6], ["Qwen3-4B", "打乱 · 步骤编号", 25.0, 17.6, 8.7], ["Qwen3-4B", "倒序 · 开头说明", 1.0, 0, 0], ["Qwen3-4B", "倒序 · 步骤编号", 14.0, 3.0, 5.0],
+      ["Qwen3-14B", "打乱 · 无线索", 24.2, 3.6, 1.2], ["Qwen3-14B", "打乱 · 步骤编号", 64.1, 48.5, 30.6], ["Qwen3-14B", "倒序 · 开头说明", 69.0, 41.0, 12.0], ["Qwen3-14B", "倒序 · 步骤编号", 90.5, 87.5, 88.5],
+      ["OLMo-2-13B-Instruct", "打乱 · 无线索", 7.0, 5.5, 0.0], ["OLMo-2-13B-Instruct", "打乱 · 步骤编号", 46.1, 43.6, 43.9], ["OLMo-2-13B-Instruct", "倒序 · 开头说明", 19.5, 7.0, 6.5], ["OLMo-2-13B-Instruct", "倒序 · 步骤编号", 26.0, 11.5, 11.5],
+      ["OLMo-2-7B-Instruct", "打乱 · 无线索", 0.8, 0.6, 1.7], ["OLMo-2-7B-Instruct", "打乱 · 步骤编号", 24.2, 21.8, 11.0], ["OLMo-2-7B-Instruct", "倒序 · 开头说明", 0, 0, 0], ["OLMo-2-7B-Instruct", "倒序 · 步骤编号", 1.0, 0, 0] ] },
+  f4: { cats: ["4B · 无标记", "4B · B 撤回", "14B · 无标记", "14B · B 撤回", "OLMo 13B · 无标记", "OLMo 13B · B 撤回"], yMax: 100, unit: "%",
+    series: [ { name: "选在前的 A", c: "--s3", v: [11.4, 19.4, 20.0, 27.5, 7.0, 40.0] },
+              { name: "选在后的 B", c: "--s2", v: [71.6, 56.5, 59.5, 45.5, 88.0, 41.5] } ] },
+  f4full: [
+    ["Qwen3-4B", "10%", 11.4, 71.6, 19.4, 56.5, 10.4, 68.6], ["Qwen3-4B", "30%", 12.0, 61.2, 17.1, 50.2, 11.4, 56.5], ["Qwen3-4B", "100%", 18.1, 33.4, 17.4, 29.4, 15.7, 28.1],
+    ["Qwen3-14B", "10%", 20.0, 59.5, 27.5, 45.5, 8.5, 70.5], ["Qwen3-14B", "30%", 17.5, 51.5, 22.5, 37.5, 11.0, 54.0], ["Qwen3-14B", "100%", 17.0, 32.5, 18.0, 27.0, 10.5, 36.0],
+    ["OLMo-2-13B-Instruct", "10%", 7.0, 88.0, 40.0, 41.5, 0.5, 94.0], ["OLMo-2-13B-Instruct", "30%", 3.5, 90.5, 37.0, 43.0, 0.5, 94.0], ["OLMo-2-13B-Instruct", "100%", 4.5, 81.5, 32.5, 41.0, 0.5, 85.0] ],
+  f5: { x: [0, 10, 30, 60, 100], xLabel: "保留的推导段落比例（%）", yMax: 100, unit: " pp",
+    series: [
+      { name: "Qwen3-4B", c: "--s1", v: [21.7, 42.0, 32.2, 19.0, 10.0] },
+      { name: "Qwen3-14B", c: "--s2", v: [14.0, 27.0, 24.0, 14.3, 8.0] },
+      { name: "R1-Distill-Qwen-7B", c: "--s3", v: [7.0, 51.5, 61.0, 52.0, 42.5] },
+      { name: "OLMo-2-13B-Instruct", c: "--s4", v: [63.5, 76.0, 76.0, 76.0, 66.0] },
+      { name: "Phi-4-mini", c: "--s5", v: [86.0, 86.5, 86.5, 84.0, 85.5] } ] },
+  f5extra: [ ["Qwen3-8B", 19.5, 44.0, 36.5, 24.5, 17.0], ["OLMo-2-7B-Instruct", 80.0, 85.5, 82.5, 84.5, 72.0] ],
+  f6a: { x: [0, 1, 2, 4], xLabel: "额外复述次数 r", yMax: 100, unit: "%",
+    series: [ { name: "复述正确结论，错误结论在最后", c: "--s1", v: [37.3, 19.7, 13.3, 10.7] },
+              { name: "复述错误结论，正确结论在最后", c: "--s2", v: [6.7, 28.0, 37.7, 51.0] } ] },
+  f6b: { x: [0, 1, 2, 4], xLabel: "额外复述次数 r", yMax: 100, unit: "%",
+    series: [ { name: "复述正确结论，错误结论在最后", c: "--s1", v: [30.0, 13.0, 7.0, 4.5] },
+              { name: "复述错误结论，正确结论在最后", c: "--s2", v: [7.0, 34.0, 43.0, 57.0] } ] },
+  f8: { cats: ["OLMo-2-7B", "OLMo-2-13B", "Qwen3-4B"], yMax: 100, unit: "%",
+    series: [ { name: "Base", c: "--s1", v: [5.6, 9.6, 6.8] }, { name: "后训练版", c: "--s2", v: [9.1, 29.0, 33.1] } ] },
+  f8full: [ ["Qwen3-1.7B", "后训练", 3.3], ["Qwen3-4B-Base", "base", 6.8], ["Qwen3-4B", "后训练", 33.1], ["Qwen3-8B", "后训练", 32.3], ["Qwen3-14B", "后训练", 47.5],
+            ["OLMo-2-7B", "base", 5.6], ["OLMo-2-7B-SFT", "SFT", 6.3], ["OLMo-2-7B-DPO", "DPO", 9.3], ["OLMo-2-7B-Instruct", "RLVR", 9.1],
+            ["OLMo-2-13B", "base", 9.6], ["OLMo-2-13B-Instruct", "后训练", 29.0], ["Qwen2.5-Math-7B", "base（数学预训练）", 32.3], ["R1-Distill-Qwen-7B", "R1 蒸馏", 17.7], ["Phi-4-mini", "后训练", 5.6] ],
+  f7: {"min": 0, "max": 100, "rows": [{"name": "物体追踪 · 7", "label": "state", "v": 72.6, "full": 45.5, "shuf": 27.4, "n": 90}, {"name": "物体追踪 · 5", "label": "state", "v": 70.5, "full": 59.1, "shuf": 29.5, "n": 130}, {"name": "物体追踪 · 3", "label": "state", "v": 56.5, "full": 98.6, "shuf": 43.5, "n": 213}, {"name": "多步算术", "label": "state", "v": 42.0, "full": 74.9, "shuf": 58.0, "n": 173}, {"name": "导航", "label": "state", "v": 20.8, "full": 99.5, "shuf": 79.2, "n": 189}, {"name": "单词排序", "label": "partial", "v": 18.3, "full": 96.8, "shuf": 81.7, "n": 60}, {"name": "逻辑推理 · 5", "label": "none", "v": 10.3, "full": 95.1, "shuf": 89.7, "n": 194}, {"name": "谎言链", "label": "none", "v": 9.4, "full": 100.0, "shuf": 90.6, "n": 212}, {"name": "逻辑推理 · 7", "label": "none", "v": 8.3, "full": 98.1, "shuf": 91.7, "n": 101}, {"name": "日期理解", "label": "partial", "v": 7.0, "full": 96.2, "shuf": 93.0, "n": 176}, {"name": "电影推荐", "label": "none", "v": 6.5, "full": 97.6, "shuf": 93.5, "n": 123}, {"name": "彩色物体推理", "label": "partial", "v": 6.3, "full": 96.8, "shuf": 93.7, "n": 179}, {"name": "表格中的企鹅", "label": "partial", "v": 6.2, "full": 96.9, "shuf": 93.8, "n": 123}, {"name": "物体计数", "label": "state", "v": 5.6, "full": 45.2, "shuf": 94.4, "n": 71}, {"name": "改名玩笑", "label": "none", "v": 5.4, "full": 98.9, "shuf": 94.6, "n": 92}, {"name": "布尔表达式", "label": "state", "v": 5.3, "full": 100.0, "shuf": 94.7, "n": 220}, {"name": "因果判断", "label": "none", "v": 5.1, "full": 97.1, "shuf": 94.9, "n": 33}, {"name": "时间安排", "label": "none", "v": 3.7, "full": 93.5, "shuf": 96.3, "n": 173}, {"name": "形容词语序", "label": "none", "v": 3.4, "full": 93.9, "shuf": 96.6, "n": 185}, {"name": "指代消歧", "label": "none", "v": 3.1, "full": 99.2, "shuf": 96.9, "n": 129}, {"name": "逻辑推理 · 3", "label": "none", "v": 1.4, "full": 95.3, "shuf": 98.6, "n": 222}, {"name": "讽刺识别", "label": "none", "v": 1.4, "full": 98.7, "shuf": 98.6, "n": 74}, {"name": "形式谬误", "label": "none", "v": 0.8, "full": 99.4, "shuf": 99.2, "n": 177}, {"name": "翻译错误检测", "label": "none", "v": 0.6, "full": 99.1, "shuf": 99.4, "n": 108}, {"name": "几何图形", "label": "none", "v": 0.0, "full": 92.2, "shuf": 100.0, "n": 83}, {"name": "体育常识", "label": "none", "v": 0.0, "full": 100.0, "shuf": 100.0, "n": 109}]},
+  index: [
+    ["1", "打乱 × 覆盖次数（合成）", "完成"], ["2", "位置 vs 修正标记（合成）", "完成"], ["3", "跨模型复现", "完成"], ["4", "真实轨迹按段落打乱", "完成"],
+    ["5", "自然语言版合成任务", "完成"], ["6", "early answering + 打乱", "完成"], ["7", "近因注意力头 + 消融", "完成"], ["8", "长覆盖链（k 到 64）", "完成"],
+    ["9", "后训练谱系 + 规模", "完成"], ["10", "读写不对称（生成侧）", "计划中"], ["11", "插入撤回句", "完成"], ["12", "伪结论段", "完成"],
+    ["13", "竞争结论剂量-响应", "完成"], ["14", "消融近因头（真实文本）", "完成"], ["15", "复述 vs 位置", "完成"], ["16", "更多读者跑实验 13", "完成"],
+    ["17", "答案抽取器 + 缓解提示", "完成"], ["18", "显式顺序线索 vs 位置", "完成"], ["19", "真实文本撤回 + 对称对照", "完成"], ["20", "BBH 追踪 vs 逻辑推理", "完成"],
+    ["21", "天然竞争结论", "完成"], ["22", "BBH 全 27 个任务", "完成"] ]
+};
+const SVGNS = "http://www.w3.org/2000/svg";
+const tip = document.getElementById("tip");
+function el(tag, attrs, parent) { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function fmt(v, unit) { return v == null ? "—" : (Math.round(v * 10) / 10) + unit; }
+
+function showTip(evt, title, rows) {
+  tip.textContent = "";
+  const t = document.createElement("div"); t.className = "tt"; t.textContent = title; tip.appendChild(t);
+  rows.forEach(r => {
+    const row = document.createElement("div"); row.className = "row";
+    const i = document.createElement("i"); i.style.background = "var(" + r.c + ")";
+    const b = document.createElement("b"); b.textContent = r.value;
+    const s = document.createElement("span"); s.textContent = r.name;
+    row.append(i, b, s); tip.appendChild(row);
+  });
+  tip.hidden = false;
+  let x, y;
+  if (evt && evt.clientX != null && evt.type.startsWith("pointer")) { x = evt.clientX + 14; y = evt.clientY + 14; }
+  else { const r = evt.target.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top - 10; }
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  if (x + w > window.innerWidth - 8) x = Math.max(8, window.innerWidth - w - 8);
+  if (y + h > window.innerHeight - 8) y = Math.max(8, y - h - 28);
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function hideTip() { tip.hidden = true; }
+
+function legend(id, series, kind) {
+  const box = document.getElementById(id); box.textContent = "";
+  series.forEach(s => {
+    const sp = document.createElement("span"); const i = document.createElement("i");
+    i.className = kind === "line" ? "ln" : "sw"; i.style.background = "var(" + s.c + ")";
+    sp.append(i, document.createTextNode(s.name)); box.appendChild(sp);
+  });
+}
+
+function table(id, head, rows, textCols) {
+  const nText = textCols || 1;
+  const box = document.getElementById(id); box.textContent = "";
+  const t = document.createElement("table"); const th = document.createElement("thead"); const tr = document.createElement("tr");
+  head.forEach((h, i) => { const c = document.createElement("th"); c.textContent = h; if (i >= nText) c.className = "n"; tr.appendChild(c); });
+  th.appendChild(tr); t.appendChild(th);
+  const tb = document.createElement("tbody");
+  rows.forEach(r => { const row = document.createElement("tr"); r.forEach((v, i) => { const c = document.createElement("td"); c.textContent = (typeof v === "number") ? String(v) : v; if (i >= nText) c.className = "n"; row.appendChild(c); }); tb.appendChild(row); });
+  t.appendChild(tb); box.appendChild(t);
+}
+
+function yAxis(svg, m, iw, ih, yMax, unit) {
+  [0, 25, 50, 75, 100].filter(t => t <= yMax).forEach(t => {
+    const y = m.t + ih - t / yMax * ih;
+    el("line", { x1: m.l, x2: m.l + iw, y1: y, y2: y, style: "stroke: var(" + (t === 0 ? "--axis" : "--rule") + "); stroke-width: 1" }, svg);
+    const tx = el("text", { x: m.l - 8, y: y + 4, "text-anchor": "end", style: "fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums" }, svg);
+    tx.textContent = t + (unit.trim() === "%" ? "%" : "");
+  });
+}
+
+function lineChart(id, spec, height) {
+  const box = document.getElementById(id); const H = height || 260; box.style.height = H + "px";
+  let idx = null;
+  function draw() {
+    const W = box.clientWidth; if (!W) return; box.textContent = "";
+    const m = { t: 12, r: 18, b: 40, l: 44 }; const iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const xs = spec.x, x0 = xs[0], x1 = xs[xs.length - 1];
+    const X = v => m.l + (v - x0) / (x1 - x0) * iw, Y = v => m.t + ih - v / spec.yMax * ih;
+    const svg = el("svg", { width: W, height: H, role: "img", tabindex: 0, "aria-label": T.lineAria }, box);
+    yAxis(svg, m, iw, ih, spec.yMax, spec.unit);
+    xs.forEach(v => { const t = el("text", { x: X(v), y: m.t + ih + 18, "text-anchor": "middle", style: "fill: var(--muted); font-size: 11px" }, svg); t.textContent = v; });
+    const xl = el("text", { x: m.l + iw / 2, y: H - 4, "text-anchor": "middle", style: "fill: var(--ink-2); font-size: 11.5px" }, svg); xl.textContent = spec.xLabel;
+    spec.series.forEach(s => {
+      let d = ""; s.v.forEach((v, i) => { if (v == null) return; d += (d ? "L" : "M") + X(xs[i]) + "," + Y(v); });
+      el("path", { d, style: "fill: none; stroke: var(" + s.c + "); stroke-width: " + (s.thin ? 1.5 : 2) + "; stroke-linejoin: round; stroke-linecap: round" }, svg);
+      if (!s.thin) s.v.forEach((v, i) => { if (v == null) return; el("circle", { cx: X(xs[i]), cy: Y(v), r: 3.5, style: "fill: var(" + s.c + "); stroke: var(--surface); stroke-width: 2" }, svg); });
+    });
+    const cross = el("line", { y1: m.t, y2: m.t + ih, style: "stroke: var(--axis); stroke-width: 1; visibility: hidden" }, svg);
+    const hit = el("rect", { x: m.l - 10, y: m.t, width: iw + 20, height: ih, style: "fill: transparent" }, svg);
+    function at(i, evt) {
+      idx = i; const x = X(xs[i]); cross.setAttribute("x1", x); cross.setAttribute("x2", x); cross.style.visibility = "visible";
+      showTip(evt, spec.xLabel + " = " + xs[i], spec.series.map(s => ({ c: s.c, name: s.name, value: fmt(s.v[i], spec.unit) })));
+    }
+    hit.addEventListener("pointermove", e => { const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; let best = 0; xs.forEach((v, i) => { if (Math.abs(X(v) - px) < Math.abs(X(xs[best]) - px)) best = i; }); at(best, e); });
+    hit.addEventListener("pointerleave", () => { cross.style.visibility = "hidden"; hideTip(); });
+    svg.addEventListener("focus", e => at(idx == null ? 0 : idx, e));
+    svg.addEventListener("blur", () => { cross.style.visibility = "hidden"; hideTip(); });
+    svg.addEventListener("keydown", e => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); const cur = idx == null ? 0 : idx; const n = Math.min(xs.length - 1, Math.max(0, cur + (e.key === "ArrowRight" ? 1 : -1))); at(n, { type: "key", target: svg }); } });
+  }
+  new ResizeObserver(draw).observe(box); draw();
+}
+
+function barChart(id, spec, height) {
+  const box = document.getElementById(id); const H = height || 260; box.style.height = H + "px";
+  function draw() {
+    const W = box.clientWidth; if (!W) return; box.textContent = "";
+    const m = { t: 18, r: 8, b: 44, l: 44 }; const iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const cats = spec.cats, series = spec.series;
+    const nc = cats.length, ns = series.length; const slot = iw / nc;
+    const bw = Math.max(6, Math.min(24, (slot * 0.72 - (ns - 1) * 2) / ns)); const gw = ns * bw + (ns - 1) * 2;
+    const Y = v => m.t + ih - v / spec.yMax * ih;
+    const svg = el("svg", { width: W, height: H, role: "img", "aria-label": T.barAria }, box);
+    yAxis(svg, m, iw, ih, spec.yMax, spec.unit);
+    cats.forEach((c, ci) => {
+      const cx = m.l + slot * ci + slot / 2;
+      c.split(" · ").forEach((p, pi) => { const t = el("text", { x: cx, y: m.t + ih + 16 + pi * 14, "text-anchor": "middle", style: "fill: var(--ink-2); font-size: 11px" }, svg); t.textContent = p; });
+      series.forEach((s, si) => {
+        const v = s.v[ci]; const x = cx - gw / 2 + si * (bw + 2); const y = Y(v), h = Math.max(0, m.t + ih - y); const r = Math.min(4, h);
+        const d = "M" + x + "," + (m.t + ih) + "V" + (y + r) + "Q" + x + "," + y + " " + (x + r) + "," + y + "H" + (x + bw - r) + "Q" + (x + bw) + "," + y + " " + (x + bw) + "," + (y + r) + "V" + (m.t + ih) + "Z";
+        const bar = el("path", { d, style: "fill: var(" + s.c + ")" }, svg);
+        if (bw >= 14) { const lab = el("text", { x: x + bw / 2, y: y - 5, "text-anchor": "middle", style: "fill: var(--ink-2); font-size: 10.5px; font-variant-numeric: tabular-nums" }, svg); lab.textContent = (Math.round(v * 10) / 10); }
+        const hit = el("rect", { x: x - 1, y: m.t, width: bw + 2, height: ih, tabindex: 0, style: "fill: transparent", "aria-label": c + T.sep + s.name + ": " + fmt(v, spec.unit) }, svg);
+        const on = e => { bar.style.opacity = "0.82"; showTip(e, c, [{ c: s.c, name: s.name, value: fmt(v, spec.unit) }]); };
+        const off = () => { bar.style.opacity = "1"; hideTip(); };
+        hit.addEventListener("pointermove", on); hit.addEventListener("pointerleave", off); hit.addEventListener("focus", on); hit.addEventListener("blur", off);
+      });
+    });
+  }
+  new ResizeObserver(draw).observe(box); draw();
+  return { redraw: draw };
+}
+
+function hbarChart(id, rows, colors, maxV, minV) {
+  const box = document.getElementById(id); const rowH = 22; const H = rows.length * rowH + 34; box.style.height = H + "px";
+  function draw() {
+    const W = box.clientWidth; if (!W) return; box.textContent = "";
+    const lab = Math.min(170, W * 0.42); const m = { t: 4, r: 40, b: 26, l: lab + 8 }; const iw = W - m.l - m.r;
+    const X = v => m.l + (v - minV) / (maxV - minV) * iw;
+    const svg = el("svg", { width: W, height: H, role: "img", "aria-label": T.hbarAria }, box);
+    (minV < 0 ? [minV, 0, 25, 50, 75, 100] : [0, 25, 50, 75, 100]).filter(t => t >= minV && t <= maxV).forEach(t => {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, style: "stroke: var(" + (t === 0 ? "--axis" : "--rule") + "); stroke-width: 1" }, svg);
+      const tx = el("text", { x: X(t), y: H - 8, "text-anchor": "middle", style: "fill: var(--muted); font-size: 11px" }, svg); tx.textContent = t + "%";
+    });
+    rows.forEach((r, i) => {
+      const y = m.t + i * rowH + 4; const bh = 14;
+      const t = el("text", { x: m.l - 8, y: y + 11, "text-anchor": "end", style: "fill: var(--ink-2); font-size: 11px" }, svg); t.textContent = r.name;
+      const x0 = X(Math.min(0, r.v)), x1 = X(Math.max(0, r.v));
+      el("rect", { x: x0, y, width: Math.max(1, x1 - x0), height: bh, rx: 3, style: "fill: var(" + colors[r.label] + ")" }, svg);
+      const vt = el("text", { x: X(r.v) + (r.v >= 0 ? 5 : -5), y: y + 11, "text-anchor": r.v >= 0 ? "start" : "end", style: "fill: var(--ink-2); font-size: 10.5px; font-variant-numeric: tabular-nums" }, svg);
+      vt.textContent = (Math.round(r.v * 10) / 10);
+      const hit = el("rect", { x: 0, y: y - 3, width: W, height: rowH, tabindex: 0, style: "fill: transparent", "aria-label": r.name + T.sep + T.failRate + " " + r.v + "%" }, svg);
+      const on = e => showTip(e, r.name, [{ c: colors[r.label], name: T.failRate, value: (Math.round(r.v * 10) / 10) + "%" }, { c: "--neutral-mark", name: T.fullAcc, value: r.full + "%" }, { c: "--neutral-mark", name: T.nIncl, value: String(r.n) }]);
+      hit.addEventListener("pointermove", on); hit.addEventListener("pointerleave", hideTip); hit.addEventListener("focus", on); hit.addEventListener("blur", hideTip);
+    });
+  }
+  new ResizeObserver(draw).observe(box); draw();
+}
+
+// figure 1
+legend("lg-f1", DATA.f1.series, "line"); lineChart("f1", DATA.f1);
+table("tb-f1", [T.f1Head, ...DATA.f1.x.map(k => "k=" + k)], DATA.f1.series.map(s => [s.name, ...s.v.map(v => v == null ? "—" : v)])
+  .concat([[T.pickLast, "—", 72.0, 93.5, 97.0, 98.5], [T.ordered, 100, 100, 100, 99.5, 100]]));
+// figure 2
+legend("lg-f2", DATA.f2.series, "bar"); barChart("f2", DATA.f2);
+table("tb-f2", [T.f2Head[0], ...DATA.f2.series.map(s => s.name)], DATA.f2.cats.map((c, i) => [c, ...DATA.f2.series.map(s => s.v[i])]));
+table("tb-f2b", T.f2bHead, DATA.f2b);
+// figure 3 with k switch
+let k3 = 8;
+legend("lg-f3", DATA.f3.byK[8], "bar");
+const f3 = barChart("f3", { cats: DATA.f3.cats, yMax: 100, unit: "%", get series() { return DATA.f3.byK[k3]; } });
+document.querySelectorAll("#k-seg button").forEach(b => b.addEventListener("click", () => {
+  k3 = Number(b.dataset.k); document.querySelectorAll("#k-seg button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); f3.redraw();
+}));
+table("tb-f3", T.f3Head, DATA.f3.table, 2);
+// figure 4
+legend("lg-f4", DATA.f4.series, "bar"); barChart("f4", DATA.f4);
+table("tb-f4", T.f4Head, DATA.f4full, 2);
+// figure 5
+legend("lg-f5", DATA.f5.series, "line"); lineChart("f5", DATA.f5, 280);
+table("tb-f5", [T.f5Head, ...DATA.f5.x.map(x => x + "%")], DATA.f5.series.map(s => [s.name, ...s.v]).concat(DATA.f5extra));
+// figure 6
+legend("lg-f6a", DATA.f6a.series, "line"); lineChart("f6a", DATA.f6a, 240);
+legend("lg-f6b", DATA.f6b.series, "line"); lineChart("f6b", DATA.f6b, 240);
+table("tb-f6", T.f6Head, [[T.f6Rows[0], ...DATA.f6a.series[0].v], [T.f6Rows[1], ...DATA.f6a.series[1].v],
+  [T.f6Rows[2], ...DATA.f6b.series[0].v], [T.f6Rows[3], ...DATA.f6b.series[1].v]]);
+// figure 8
+legend("lg-f8", DATA.f8.series, "bar"); barChart("f8", DATA.f8, 240);
+table("tb-f8", T.f8Head, DATA.f8full, 2);
+// figure 7 (BBH-27)
+if (DATA.f7) {
+  document.getElementById("f7-fig").hidden = false;
+  const colors = { state: "--s1", partial: "--s3", none: "--neutral-mark" };
+  legend("lg-f7", [{ name: T.f7Legend.state, c: "--s1" }, { name: T.f7Legend.partial, c: "--s3" }, { name: T.f7Legend.none, c: "--neutral-mark" }], "bar");
+  const rows = DATA.f7.rows.slice().sort((a, b) => b.v - a.v);
+  hbarChart("f7", rows, colors, DATA.f7.max, DATA.f7.min);
+  table("tb-f7", T.f7Head, rows.map(r => [r.name, T.f7Legend[r.label], r.full, r.shuf, r.v, r.n]), 2);
+}
+// experiment index
+const ix = document.getElementById("exp-index");
+DATA.index.forEach(r => { const tr = document.createElement("tr"); r.forEach((v, i) => { const td = document.createElement("td"); td.textContent = v; if (i === 0) td.className = "mono"; tr.appendChild(td); }); ix.appendChild(tr); });
+window.addEventListener("scroll", hideTip, { passive: true });
+
+</script>

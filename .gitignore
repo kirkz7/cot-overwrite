@@ -1,0 +1,22 @@
+# environment and caches
+.venv/
+__pycache__/
+*.pyc
+
+# large or regenerable artifacts (hashes are recorded in PREREG_TRAINING.md and freeze/*/MANIFEST.txt)
+data_train/
+data_exp4.jsonl
+data_exp21.jsonl
+runs/
+logs/
+results/*
+!results/*summary*.json
+
+# model weights / optimizer states never go into git (share adapters via the Hugging Face Hub instead)
+*.safetensors
+*.pt
+*.bin
+
+# temporary files from atomic writes
+*.tmp
+*.old

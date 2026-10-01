@@ -1,0 +1,566 @@
+{
+ "Qwen3-4B": {
+  "table": {
+   "S_chrono_dated": {
+    "correct": 76.9,
+    "stale": 15.4,
+    "n": 78
+   },
+   "S_chrono_nodate": {
+    "correct": 74.4,
+    "stale": 15.4,
+    "n": 78
+   },
+   "S_rev_dated": {
+    "correct": 51.3,
+    "stale": 41.0,
+    "n": 78
+   },
+   "S_rev_dated_header": {
+    "correct": 53.8,
+    "stale": 41.0,
+    "n": 78
+   },
+   "S_rev_nodate": {
+    "correct": 38.5,
+    "stale": 55.1,
+    "n": 78
+   },
+   "T_newlast_dated": {
+    "correct": 75.7,
+    "stale": 20.0,
+    "n": 70
+   },
+   "T_newlast_nodate": {
+    "correct": 70.0,
+    "stale": 28.6,
+    "n": 70
+   },
+   "T_oldlast_dated": {
+    "correct": 72.9,
+    "stale": 22.9,
+    "n": 70
+   },
+   "T_oldlast_dated_header": {
+    "correct": 78.6,
+    "stale": 20.0,
+    "n": 70
+   },
+   "T_oldlast_nodate": {
+    "correct": 62.9,
+    "stale": 34.3,
+    "n": 70
+   }
+  },
+  "contrasts": {
+   "session: newest-first vs chronological (dated)": {
+    "correct": {
+     "diff": -25.6,
+     "lo": -38.5,
+     "hi": -12.8,
+     "n": 78
+    },
+    "stale": {
+     "diff": 25.6,
+     "lo": 14.1,
+     "hi": 37.2,
+     "n": 78
+    }
+   },
+   "session: newest-first vs chronological (no dates)": {
+    "correct": {
+     "diff": -35.9,
+     "lo": -48.7,
+     "hi": -23.1,
+     "n": 78
+    },
+    "stale": {
+     "diff": 39.7,
+     "lo": 29.5,
+     "hi": 51.3,
+     "n": 78
+    }
+   },
+   "session: + 'most recent first' header": {
+    "correct": {
+     "diff": 2.6,
+     "lo": 0.0,
+     "hi": 6.4,
+     "n": 78
+    },
+    "stale": {
+     "diff": 0.0,
+     "lo": -3.8,
+     "hi": 3.8,
+     "n": 78
+    }
+   },
+   "turn: old evidence last vs new last (dated)": {
+    "correct": {
+     "diff": -2.9,
+     "lo": -14.3,
+     "hi": 8.6,
+     "n": 70
+    },
+    "stale": {
+     "diff": 2.9,
+     "lo": -7.2,
+     "hi": 12.9,
+     "n": 70
+    }
+   },
+   "turn: old evidence last vs new last (no dates)": {
+    "correct": {
+     "diff": -7.1,
+     "lo": -18.6,
+     "hi": 4.3,
+     "n": 70
+    },
+    "stale": {
+     "diff": 5.7,
+     "lo": -4.3,
+     "hi": 17.1,
+     "n": 70
+    }
+   },
+   "turn: + 'sorted by relevance' header": {
+    "correct": {
+     "diff": 5.7,
+     "lo": 1.4,
+     "hi": 11.4,
+     "n": 70
+    },
+    "stale": {
+     "diff": -2.9,
+     "lo": -7.1,
+     "hi": 0.0,
+     "n": 70
+    }
+   }
+  }
+ },
+ "Qwen3-14B": {
+  "table": {
+   "S_chrono_dated": {
+    "correct": 78.2,
+    "stale": 14.1,
+    "n": 78
+   },
+   "S_chrono_nodate": {
+    "correct": 78.2,
+    "stale": 14.1,
+    "n": 78
+   },
+   "S_rev_dated": {
+    "correct": 53.8,
+    "stale": 35.9,
+    "n": 78
+   },
+   "S_rev_dated_header": {
+    "correct": 56.4,
+    "stale": 34.6,
+    "n": 78
+   },
+   "S_rev_nodate": {
+    "correct": 42.3,
+    "stale": 48.7,
+    "n": 78
+   },
+   "T_newlast_dated": {
+    "correct": 87.1,
+    "stale": 12.9,
+    "n": 70
+   },
+   "T_newlast_nodate": {
+    "correct": 82.9,
+    "stale": 17.1,
+    "n": 70
+   },
+   "T_oldlast_dated": {
+    "correct": 72.9,
+    "stale": 25.7,
+    "n": 70
+   },
+   "T_oldlast_dated_header": {
+    "correct": 74.3,
+    "stale": 24.3,
+    "n": 70
+   },
+   "T_oldlast_nodate": {
+    "correct": 68.6,
+    "stale": 31.4,
+    "n": 70
+   }
+  },
+  "contrasts": {
+   "session: newest-first vs chronological (dated)": {
+    "correct": {
+     "diff": -24.4,
+     "lo": -35.9,
+     "hi": -12.8,
+     "n": 78
+    },
+    "stale": {
+     "diff": 21.8,
+     "lo": 10.3,
+     "hi": 33.3,
+     "n": 78
+    }
+   },
+   "session: newest-first vs chronological (no dates)": {
+    "correct": {
+     "diff": -35.9,
+     "lo": -47.4,
+     "hi": -24.4,
+     "n": 78
+    },
+    "stale": {
+     "diff": 34.6,
+     "lo": 24.4,
+     "hi": 44.9,
+     "n": 78
+    }
+   },
+   "session: + 'most recent first' header": {
+    "correct": {
+     "diff": 2.6,
+     "lo": 0.0,
+     "hi": 6.4,
+     "n": 78
+    },
+    "stale": {
+     "diff": -1.3,
+     "lo": -3.8,
+     "hi": 0.0,
+     "n": 78
+    }
+   },
+   "turn: old evidence last vs new last (dated)": {
+    "correct": {
+     "diff": -14.3,
+     "lo": -24.3,
+     "hi": -4.3,
+     "n": 70
+    },
+    "stale": {
+     "diff": 12.9,
+     "lo": 4.3,
+     "hi": 21.4,
+     "n": 70
+    }
+   },
+   "turn: old evidence last vs new last (no dates)": {
+    "correct": {
+     "diff": -14.3,
+     "lo": -24.3,
+     "hi": -5.7,
+     "n": 70
+    },
+    "stale": {
+     "diff": 14.3,
+     "lo": 5.7,
+     "hi": 24.3,
+     "n": 70
+    }
+   },
+   "turn: + 'sorted by relevance' header": {
+    "correct": {
+     "diff": 1.4,
+     "lo": 0.0,
+     "hi": 4.3,
+     "n": 70
+    },
+    "stale": {
+     "diff": -1.4,
+     "lo": -4.3,
+     "hi": 0.0,
+     "n": 70
+    }
+   }
+  }
+ },
+ "OLMo-2-13B-Instruct": {
+  "table": {
+   "S_chrono_dated": {
+    "correct": 0.0,
+    "stale": 100.0,
+    "n": 1
+   },
+   "S_chrono_nodate": {
+    "correct": 0.0,
+    "stale": 100.0,
+    "n": 1
+   },
+   "S_rev_dated": {
+    "correct": 0.0,
+    "stale": 100.0,
+    "n": 1
+   },
+   "S_rev_dated_header": {
+    "correct": 0.0,
+    "stale": 100.0,
+    "n": 1
+   },
+   "S_rev_nodate": {
+    "correct": 0.0,
+    "stale": 100.0,
+    "n": 1
+   },
+   "T_newlast_dated": {
+    "correct": 70.0,
+    "stale": 20.0,
+    "n": 70
+   },
+   "T_newlast_nodate": {
+    "correct": 74.3,
+    "stale": 21.4,
+    "n": 70
+   },
+   "T_oldlast_dated": {
+    "correct": 58.6,
+    "stale": 37.1,
+    "n": 70
+   },
+   "T_oldlast_dated_header": {
+    "correct": 61.4,
+    "stale": 32.9,
+    "n": 70
+   },
+   "T_oldlast_nodate": {
+    "correct": 51.4,
+    "stale": 41.4,
+    "n": 70
+   }
+  },
+  "contrasts": {
+   "session: newest-first vs chronological (dated)": {
+    "correct": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 1
+    },
+    "stale": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 1
+    }
+   },
+   "session: newest-first vs chronological (no dates)": {
+    "correct": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 1
+    },
+    "stale": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 1
+    }
+   },
+   "session: + 'most recent first' header": {
+    "correct": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 1
+    },
+    "stale": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 1
+    }
+   },
+   "turn: old evidence last vs new last (dated)": {
+    "correct": {
+     "diff": -11.4,
+     "lo": -24.3,
+     "hi": 1.4,
+     "n": 70
+    },
+    "stale": {
+     "diff": 17.1,
+     "lo": 7.1,
+     "hi": 28.6,
+     "n": 70
+    }
+   },
+   "turn: old evidence last vs new last (no dates)": {
+    "correct": {
+     "diff": -22.9,
+     "lo": -35.7,
+     "hi": -10.0,
+     "n": 70
+    },
+    "stale": {
+     "diff": 20.0,
+     "lo": 8.5,
+     "hi": 31.4,
+     "n": 70
+    }
+   },
+   "turn: + 'sorted by relevance' header": {
+    "correct": {
+     "diff": 2.9,
+     "lo": -2.9,
+     "hi": 8.6,
+     "n": 70
+    },
+    "stale": {
+     "diff": -4.3,
+     "lo": -10.0,
+     "hi": 1.4,
+     "n": 70
+    }
+   }
+  }
+ },
+ "Phi-4-mini": {
+  "table": {
+   "S_chrono_dated": {
+    "correct": 80.8,
+    "stale": 9.0,
+    "n": 78
+   },
+   "S_chrono_nodate": {
+    "correct": 78.2,
+    "stale": 9.0,
+    "n": 78
+   },
+   "S_rev_dated": {
+    "correct": 28.2,
+    "stale": 59.0,
+    "n": 78
+   },
+   "S_rev_dated_header": {
+    "correct": 28.2,
+    "stale": 55.1,
+    "n": 78
+   },
+   "S_rev_nodate": {
+    "correct": 32.1,
+    "stale": 51.3,
+    "n": 78
+   },
+   "T_newlast_dated": {
+    "correct": 72.9,
+    "stale": 15.7,
+    "n": 70
+   },
+   "T_newlast_nodate": {
+    "correct": 78.6,
+    "stale": 15.7,
+    "n": 70
+   },
+   "T_oldlast_dated": {
+    "correct": 68.6,
+    "stale": 24.3,
+    "n": 70
+   },
+   "T_oldlast_dated_header": {
+    "correct": 70.0,
+    "stale": 24.3,
+    "n": 70
+   },
+   "T_oldlast_nodate": {
+    "correct": 60.0,
+    "stale": 34.3,
+    "n": 70
+   }
+  },
+  "contrasts": {
+   "session: newest-first vs chronological (dated)": {
+    "correct": {
+     "diff": -52.6,
+     "lo": -65.4,
+     "hi": -38.5,
+     "n": 78
+    },
+    "stale": {
+     "diff": 50.0,
+     "lo": 37.2,
+     "hi": 62.8,
+     "n": 78
+    }
+   },
+   "session: newest-first vs chronological (no dates)": {
+    "correct": {
+     "diff": -46.2,
+     "lo": -59.0,
+     "hi": -32.1,
+     "n": 78
+    },
+    "stale": {
+     "diff": 42.3,
+     "lo": 29.5,
+     "hi": 53.8,
+     "n": 78
+    }
+   },
+   "session: + 'most recent first' header": {
+    "correct": {
+     "diff": 0.0,
+     "lo": -6.4,
+     "hi": 6.4,
+     "n": 78
+    },
+    "stale": {
+     "diff": -3.8,
+     "lo": -11.5,
+     "hi": 2.6,
+     "n": 78
+    }
+   },
+   "turn: old evidence last vs new last (dated)": {
+    "correct": {
+     "diff": -4.3,
+     "lo": -15.7,
+     "hi": 7.1,
+     "n": 70
+    },
+    "stale": {
+     "diff": 8.6,
+     "lo": -2.9,
+     "hi": 20.0,
+     "n": 70
+    }
+   },
+   "turn: old evidence last vs new last (no dates)": {
+    "correct": {
+     "diff": -18.6,
+     "lo": -30.0,
+     "hi": -8.6,
+     "n": 70
+    },
+    "stale": {
+     "diff": 18.6,
+     "lo": 7.1,
+     "hi": 31.4,
+     "n": 70
+    }
+   },
+   "turn: + 'sorted by relevance' header": {
+    "correct": {
+     "diff": 1.4,
+     "lo": -7.1,
+     "hi": 11.4,
+     "n": 70
+    },
+    "stale": {
+     "diff": 0.0,
+     "lo": -7.1,
+     "hi": 8.6,
+     "n": 70
+    }
+   }
+  }
+ },
+ "judge_check": {
+  "n": 2050,
+  "agreement": 91.4
+ }
+}
