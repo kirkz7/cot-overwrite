@@ -21,6 +21,9 @@ $jobs = New-Object System.Collections.ArrayList
 # E1d: same timeline prompt, but the list must be written oldest first (exploits reading by position)
 [void]$jobs.Add(@('e1d_sorted_q4', 'explore_timeline.py read --models Qwen3-4B --conds sorted'))
 [void]$jobs.Add(@('e1d_judge',     'explore_timeline.py judge'))
+# E1c: thinking mode with the thinking text saved (LongMemEval + our email threads)
+[void]$jobs.Add(@('e1c_think_q4',  'explore_think.py gen --models Qwen3-4B'))
+[void]$jobs.Add(@('e1c_judge',     'explore_think.py judge'))
 # E3: the recency heads found on CoT traces (Exp 7 / 14), zeroed on application tasks
 [void]$jobs.Add(@('e3_heads_run',   'explore_heads.py run'))
 [void]$jobs.Add(@('e3_heads_judge', 'explore_heads.py judge'))
