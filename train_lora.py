@@ -44,7 +44,7 @@ def end_of_turn(tok):
 
 
 def encode(tok, row, eot):
-    prefix = tok(chat_prompt(tok, row["prompt"]), add_special_tokens=False).input_ids
+    prefix = tok(chat_prompt(tok, row["prompt"], row.get("prefix", "")), add_special_tokens=False).input_ids   # optional assistant prefix (CoT data)
     ans = tok(row["answer"] + eot, add_special_tokens=False).input_ids
     return prefix, ans
 
@@ -61,7 +61,7 @@ def validate(model, tok, val, eot_ids, max_new=24):
     model.eval()
     hits = collections.defaultdict(list)
     for r in val:
-        ids = torch.tensor([tok(chat_prompt(tok, r["prompt"]), add_special_tokens=False).input_ids], device="cuda")
+        ids = torch.tensor([tok(chat_prompt(tok, r["prompt"], r.get("prefix", "")), add_special_tokens=False).input_ids], device="cuda")
         out = tok.decode(greedy(model, ids, max_new, eot_ids), skip_special_tokens=True).strip().split("\n")[0]
         ok = norm(out) == norm(r["answer"])
         hits["all"].append(ok)
