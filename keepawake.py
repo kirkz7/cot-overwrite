@@ -13,7 +13,7 @@ ES_CONTINUOUS, ES_SYSTEM_REQUIRED = 0x80000000, 0x00000001
 def queue_running():
     # the querying powershell's own command line contains the pattern text, so exclude it
     out = subprocess.run(["powershell", "-NoProfile", "-Command",
-                          "@(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'chain\\.ps1|queue\\d*\\.ps1|run_exp\\d|run_app_|early_answer\\.py|mech_exp\\d' "
+                          "@(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'chain\\.ps1|queue\\d*\\.ps1|run_exp\\d|run_app_|run_ext_eval|train_lora|early_answer\\.py|mech_exp\\d' "
                           "-and $_.CommandLine -notmatch 'Get-CimInstance' }).Count"],
                          capture_output=True, text=True).stdout.strip()
     return out not in ("", "0")
