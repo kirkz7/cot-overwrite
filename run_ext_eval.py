@@ -81,7 +81,8 @@ def tot_items():
             df.sorting_type.isin(["start_time_and_target", "shuffle"])]
     out = []
     for _, r in df.iterrows():
-        facts = r["prompt"].split(" Answer the following question")[0].strip()
+        facts = re.split(r"\s*Answer the following question", r["prompt"])[0].strip()   # drop ToT's JSON-output instruction
+        assert "JSON" not in facts and "Answer the following" not in facts
         user = (facts + "\n\nAnswer the following question based on the temporal facts above. Answer with the entity or "
                 "value only.\nQuestion: " + r["question"])
         out.append(dict(qtype=r["question_type"], order="sorted" if r["sorting_type"] != "shuffle" else "shuffle",
