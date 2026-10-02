@@ -4,6 +4,7 @@ Two values of the queried quantity per item; which one is newer is decided by an
 is presented first or last at random, so presentation position carries no information about the label.
   cot        Exp 18 task, trace shuffled with "Step i:" tags (shuf_step)                    synthetic (our CoT origin)
   email/git/changelog  run_app_logs.py threads with dates, oldest_first or newest_first     synthetic applications
+  convo      ConvoMem changing-evidence (personas 0-49; 50-99 held out), two dated conversations in random order
   mab        MemoryAgentBench FactConsolidation conflict pairs (Wikidata facts, larger serial number = newer), shown
              with 8 other facts of the same context in random order                          real facts
   lme        LongMemEval knowledge-update sessions, chronological vs newest-first           TRANSFER TEST ONLY: no
@@ -39,7 +40,7 @@ from tasks import make_example
 from tasks_cue import build_cue_prompt, ordered_lines
 
 DIR = "results/probe_e7"
-TASKS = ["cot", "email", "git", "changelog", "mab"]
+TASKS = ["cot", "email", "git", "changelog", "mab", "convo"]
 
 
 # ------------------------------------------------------------------ items: (prompt, char ends of the statements, labels)
@@ -112,6 +113,48 @@ def mab_items(tok, n):
     return out
 
 
+CONVO_GLOB = r"D:\hf_cache\hub\datasets--Salesforce--ConvoMem\snapshots\*\core_benchmark\evidence_questions\changing_evidence\2_evidence\*.json"
+
+
+def convo_items(tok, n, personas=range(0, 50)):
+    """ConvoMem changing-evidence items (personas 0-49 only: 50-99 are held out for confirmation). The two conversations
+    get dates we assign (older < newer, as in the source) and are shown in random order; each is cut to the evidence
+    message and up to 5 messages around it."""
+    import json
+    files = sorted(glob.glob(CONVO_GLOB))
+    per = max(1, n // len(personas))
+    out = []
+    for pi in personas:
+        d = json.load(open(files[pi], encoding="utf-8"))
+        for k, ev in enumerate(d["evidence_items"][:per]):
+            texts = [m["text"] for m in ev["message_evidences"]]            # [older, newer] in source order
+            convs = []
+            for c, t in zip(ev["conversations"], texts):
+                msgs = c["messages"]
+                j = next((x for x, m in enumerate(msgs) if m["text"] == t), None)
+                if j is None:
+                    break
+                lo = max(0, j - 3)
+                convs.append(msgs[lo:lo + 6])
+            if len(convs) != 2:
+                continue
+            r = random.Random(f"convo{pi}-{k}")
+            dates = ["2024-%02d-%02d" % (r.randint(1, 5), r.randint(1, 28)), "2024-%02d-%02d" % (r.randint(7, 11), r.randint(1, 28))]
+            order = [1, 0] if r.random() < 0.5 else [0, 1]
+            blocks = []
+            for o in order:
+                body = "\n".join(f"{m['speaker']}: {m['text']}" for m in convs[o])
+                blocks.append(f"### Conversation (date: {dates[o]})\n{body}")
+            user = ("Here are records of your past conversations with the user.\n\n" + "\n\n".join(blocks) +
+                    f"\n\nCurrent date: 2024-12-01\nBased on the information above, answer the user's question in one short "
+                    f"sentence.\nQuestion: {ev['question']}")
+            p = chat_prompt(tok, user)
+            ends = [p.index(f"User: {texts[o]}") + len(f"User: {texts[o]}") for o in order]
+            out.append(dict(task="convo", i=f"{pi}-{k}", prompt=p, ends=ends, newer_first=order[0] == 1,
+                            is_newer=[o == 1 for o in order]))
+    return out
+
+
 def lme_items(tok):
     out = []
     for it in mem.load_items():
@@ -169,7 +212,7 @@ def run(args):
         layers = list(range(0, L + 1, 3)) + ([L] if L % 3 else [])
         scorer = Scorer(tok, model)
         items = cot_items(tok, args.n) + [x for f in LOG_SENT for x in log_items(tok, f, args.n)] + \
-            mab_items(tok, args.n) + lme_items(tok)
+            mab_items(tok, args.n) + convo_items(tok, args.n) + lme_items(tok)
         dec_h, dec_meta, bind_h, bind_meta = [], [], [], []
         for it in tqdm(items, desc=name):
             enc = tok(it["prompt"], add_special_tokens=False, return_offsets_mapping=True)
@@ -294,7 +337,7 @@ def main():
     if args.stage == "check":                 # structure only (tokenizer), prints no LongMemEval text
         from transformers import AutoTokenizer
         tok = AutoTokenizer.from_pretrained("Qwen/Qwen3-4B")
-        items = cot_items(tok, 50) + [x for f in LOG_SENT for x in log_items(tok, f, 50)] + mab_items(tok, 50) + lme_items(tok)
+        items = cot_items(tok, 50) + [x for f in LOG_SENT for x in log_items(tok, f, 50)] + mab_items(tok, 50) +             convo_items(tok, 400) + lme_items(tok)
         for task in TASKS + ["lme"]:
             its = [x for x in items if x["task"] == task]
             for x in its:
