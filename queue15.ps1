@@ -28,7 +28,7 @@ $jobs = New-Object System.Collections.ArrayList
 [void]$jobs.Add(@('e3_heads_run',   'explore_heads.py run'))
 [void]$jobs.Add(@('e3_heads_judge', 'explore_heads.py judge'))
 # E7: linear probes - does the model internally know which value is newer? (base, decoupled, control)
-[void]$jobs.Add(@('e7_probe_run',   'explore_probe.py run --n 600'))
+[void]$jobs.Add(@('e7_probe_run',   'explore_probe.py run --n 400'))
 # E4: recency or primacy as the CoT trace grows to ~19k tokens (link to Guo et al. 2026)
 [void]$jobs.Add(@('e4_primacy',     'explore_primacy.py run --n 50'))
 # E5: LoRA trained only on CoT traces with step / clock-time tags (decoupled vs chronological control), tested on applications
