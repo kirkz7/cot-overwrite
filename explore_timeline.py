@@ -22,15 +22,24 @@ import torch
 from tqdm import tqdm
 
 from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_reader
-from run_app_fix import build as fix_build, final_answer, generate
+from run_app_fix import build as fix_build, final_answer, generate, records
 from run_app_memory import JUDGE, letter_logprobs, load_items
 
 CONDS = {"pre": [f"pre_{o}_{t}" for o in ("chrono", "rev") for t in ("fwd", "bwd")],
-         "gen": ["gen_chrono", "gen_rev"]}
+         "gen": ["gen_chrono", "gen_rev"],
+         "sorted": ["sorted_chrono", "sorted_rev"]}
+# E1d: the same timeline prompt, but the list must be written in chronological order (oldest first), so that a
+# reader who takes the last listed entry is right (added after E1b, 2026-10-02 14:55)
+TIMELINE_SORTED = ("First, list every statement in the records that is relevant to the question, each with its date, "
+                   "in chronological order (oldest first). Then answer using the most recent statement, on a final line "
+                   "that starts with \"Answer:\".\n")
 
 
 def user_text(it, cond):
-    return fix_build(it, "S_chrono_timeline" if "_chrono" in cond else "S_rev_timeline")
+    c = "S_chrono_timeline" if "_chrono" in cond else "S_rev_timeline"
+    if cond.startswith("sorted_"):
+        return f"{records(it, c)}\n\nCurrent date: {it['qdate']}\n{TIMELINE_SORTED}Question: {it['question']}"
+    return fix_build(it, c)
 
 
 def prefill(it, cond):
@@ -69,7 +78,7 @@ def read(args):
                     p = chat_prompt(tok, user_text(it, cond), prefix=prefill(it, cond))
                     text = generate(tok, model, p, 48)
                     rec = dict(response=first_line(text))
-                else:
+                else:                                   # gen_* and sorted_*: the model writes its own timeline
                     p = chat_prompt(tok, user_text(it, cond))
                     text = generate(tok, model, p, 320)
                     rec = dict(response=final_answer("S_timeline", text), full=text)
@@ -132,7 +141,8 @@ def stats(args):
                             ("input order, list new->old", "pre_rev_bwd", "pre_chrono_bwd"),
                             ("list order, chrono input", "pre_chrono_bwd", "pre_chrono_fwd"),
                             ("list order, rev input", "pre_rev_bwd", "pre_rev_fwd"),
-                            ("input order, own timeline", "gen_rev", "gen_chrono")]:
+                            ("input order, own timeline", "gen_rev", "gen_chrono"),
+                            ("input order, own sorted timeline", "sorted_rev", "sorted_chrono")]:
             if a in piv and b in piv:
                 m = piv[[a, b]].dropna()
                 d, lo, hi, p = boot(m[a].astype(float), m[b].astype(float))

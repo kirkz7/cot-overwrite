@@ -18,6 +18,9 @@ $jobs = New-Object System.Collections.ArrayList
 [void]$jobs.Add(@('e1_judge_q14', 'explore_timeline.py judge'))
 [void]$jobs.Add(@('e2_dec_chr',  'explore_timeline.py read --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final --conds pre,gen'))
 [void]$jobs.Add(@('e2_judge',    'explore_timeline.py judge'))
+# E1d: same timeline prompt, but the list must be written oldest first (exploits reading by position)
+[void]$jobs.Add(@('e1d_sorted_q4', 'explore_timeline.py read --models Qwen3-4B --conds sorted'))
+[void]$jobs.Add(@('e1d_judge',     'explore_timeline.py judge'))
 # E3: the recency heads found on CoT traces (Exp 7 / 14), zeroed on application tasks
 [void]$jobs.Add(@('e3_heads_run',   'explore_heads.py run'))
 [void]$jobs.Add(@('e3_heads_judge', 'explore_heads.py judge'))
