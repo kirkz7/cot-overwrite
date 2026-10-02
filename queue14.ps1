@@ -45,12 +45,31 @@ foreach ($s in 0) {
 # 4. remaining base-model baselines (all before any trained model is evaluated)
 [void]$jobs.Add(@('ext_base_q17', 'run_ext_eval.py --models Qwen3-1.7B'))
 [void]$jobs.Add(@('ext_base_phi', 'run_ext_eval.py --models Phi-4-mini'))
-# 5. extra seeds for the main model
+[void]$jobs.Add(@('ext_base_q4_tot', 'run_ext_eval.py --models Qwen3-4B --benches tot'))
+# 5. configuration confirmed on the held-out-format dev set (2026-10-02 08:30, PREREG change log) -> evaluate trained models
+function Add-Evals($name, $models) {
+  [void]$jobs.Add(@("ext_$name",   "run_ext_eval.py --models $models"))
+  [void]$jobs.Add(@("mem_$name",   "run_app_memory.py read --models $models"))
+  [void]$jobs.Add(@("logs_$name",  "run_app_logs.py --n 100 --models $models"))
+  [void]$jobs.Add(@("agent_$name", "run_app_agent.py --n 150 --models $models"))
+}
+Add-Evals 'q4s0' 'Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'
+[void]$jobs.Add(@('judge_a', 'run_app_memory.py judge'))
+# 6. extra seeds for the main model
 foreach ($s in 1, 2) {
   [void]$jobs.Add(@("train_q4_dec_s$s",  ("train_lora.py --model Qwen3-4B --out runs/q4-dec-s$s "   + ($T -f 'decoupled', $s))))
   [void]$jobs.Add(@("train_q4_chr_s$s",  ("train_lora.py --model Qwen3-4B --out runs/q4-chr-s$s "   + ($T -f 'chrono', $s))))
 }
-# 6. evaluations of trained models are added only after the dev-set curves confirm the configuration (no test peeking)
+# 7. the other seed-0 models (Qwen3-1.7B base also needs the application suites)
+[void]$jobs.Add(@('mem_base_q17',   'run_app_memory.py read --models Qwen3-1.7B'))
+[void]$jobs.Add(@('logs_base_q17',  'run_app_logs.py --n 100 --models Qwen3-1.7B'))
+[void]$jobs.Add(@('agent_base_q17', 'run_app_agent.py --n 150 --models Qwen3-1.7B'))
+Add-Evals 'q17s0' 'Qwen3-1.7B@runs/q17-dec-s0/final,Qwen3-1.7B@runs/q17-chr-s0/final'
+Add-Evals 'phis0' 'Phi-4-mini@runs/phi-dec-s0/final,Phi-4-mini@runs/phi-chr-s0/final'
+[void]$jobs.Add(@('judge_b', 'run_app_memory.py judge'))
+# 8. seeds 1-2 of the main model
+Add-Evals 'q4s12' 'Qwen3-4B@runs/q4-dec-s1/final,Qwen3-4B@runs/q4-chr-s1/final,Qwen3-4B@runs/q4-dec-s2/final,Qwen3-4B@runs/q4-chr-s2/final'
+[void]$jobs.Add(@('judge_c', 'run_app_memory.py judge'))
 foreach ($j in $jobs) {
     $name = $j[0]; $cmd = $j[1]
     if ((Test-Path $log) -and (Select-String -Path $log -SimpleMatch "end   $name exit=0 (" -Quiet)) {

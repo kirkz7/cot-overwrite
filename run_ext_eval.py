@@ -226,7 +226,8 @@ def run_gsm8k(tok, model, w, four_bit):
         except ValueError:
             pred = None
         return dict(pred=pred, correct=pred is not None and abs(pred - it["gold"]) < 1e-6)
-    if four_bit:                                                 # CUDA graphs are not used with 4-bit weights
+    # CUDA-graph decoding only for architectures verified to be capturable (Phi-4-mini's LongRoPE length switch is not)
+    if four_bit or model.config.model_type not in ("qwen3", "qwen2"):
         for it in tqdm(items, desc="gsm8k"):
             text = gen(tok, model, it["user"], 400)
             w.write(dict(i=it["i"], response=text[-300:], **score(it, text)))
