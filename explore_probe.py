@@ -206,6 +206,32 @@ def behaviour(item, model, tok, scorer):
     return None, None                                        # lme: labels come from the judged app_memory files
 
 
+CAP = {"pos": None, "out": {}}
+
+
+def install_capture(model, layers):
+    """Keep only the requested positions of the requested hidden states (same values as output_hidden_states:
+    index 0 = embeddings, l = output of layer l-1, L = after the final norm), so 9k-token prompts fit with 14B."""
+    base = model.get_base_model() if hasattr(model, "get_base_model") else model
+    inner = base.model
+    L = len(inner.layers)
+
+    def grab(idx):
+        def hook(mod, inp, out):
+            if CAP["pos"] is None:
+                return
+            h = out[0] if isinstance(out, tuple) else out
+            CAP["out"][idx] = h[0, CAP["pos"]].float().cpu().numpy()
+        return hook
+    if 0 in layers:
+        inner.embed_tokens.register_forward_hook(grab(0))
+    for l in layers:
+        if 1 <= l < L:
+            inner.layers[l - 1].register_forward_hook(grab(l))
+    if L in layers:
+        inner.norm.register_forward_hook(grab(L))
+
+
 def task_items(tok, task, n):
     if task == "cot":
         return cot_items(tok, n)
@@ -227,6 +253,7 @@ def run(args):
         tok, model = load_reader(name)
         L = model.config.num_hidden_layers
         layers = list(range(0, L + 1, 3)) + ([L] if L % 3 else [])
+        install_capture(model, layers)
         scorer = Scorer(tok, model)
         for task in todo:
             dec_h, dec_meta, bind_h, bind_meta = [], [], [], []
@@ -234,11 +261,10 @@ def run(args):
                 enc = tok(it["prompt"], add_special_tokens=False, return_offsets_mapping=True)
                 pos = [len(enc.input_ids) - 1] + [token_index(enc.offset_mapping, c) for c in it["ends"]]
                 with sdpa_kernel(LONG_SDPA, set_priority=True):
-                    out = model(torch.tensor([enc.input_ids], device="cuda"), output_hidden_states=True, logits_to_keep=1)
-                    hs = out.hidden_states
-                    h = np.stack([np.stack([hs[l][0, p].float().cpu().numpy() for l in layers])
-                                  for p in pos]).astype(np.float16)
-                    del out, hs
+                    CAP["pos"], CAP["out"] = pos, {}
+                    model(torch.tensor([enc.input_ids], device="cuda"), logits_to_keep=1)
+                    CAP["pos"] = None
+                    h = np.stack([np.stack([CAP["out"][l][j] for l in layers]) for j in range(len(pos))]).astype(np.float16)
                     correct, stale = behaviour(it, model, tok, scorer)
                 dec_h.append(h[0])
                 dec_meta.append(dict(task=task, i=str(it["i"]), newer_first=it["newer_first"], correct=correct,

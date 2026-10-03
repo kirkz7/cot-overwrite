@@ -43,6 +43,10 @@ $jobs = New-Object System.Collections.ArrayList
 [void]$jobs.Add(@('e10_calibrate', 'explore_route.py calibrate'))
 [void]$jobs.Add(@('e10_run',       'explore_route.py run'))
 [void]$jobs.Add(@('e10_judge',     'explore_route.py judge'))
+# confirmations on other models: E7 probes on Qwen3-14B (scale), E1b prefilled timelines on Phi-4-mini (other family)
+[void]$jobs.Add(@('e7_probe_q14',  'explore_probe.py run --models Qwen3-14B --n 400'))
+[void]$jobs.Add(@('e1_pre_phi',    'explore_timeline.py read --models Phi-4-mini --conds pre'))
+[void]$jobs.Add(@('e1_judge_phi',  'explore_timeline.py judge'))
 # E5: LoRA trained only on CoT traces with step / clock-time tags (decoupled vs chronological control), tested on applications
 $C = '--data data_train/cot_{0}_train.jsonl --val data_train/cot_{0}_val.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 2048 --eval_every 100 --save_every 50 --seed 0'
 [void]$jobs.Add(@('e5_train_dec', ('train_lora.py --model Qwen3-4B --out runs/e5-cot-dec ' + ($C -f 'decoupled'))))
