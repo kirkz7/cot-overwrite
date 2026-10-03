@@ -121,7 +121,8 @@ def main():
     df["d_c_holm"], df["d_b_holm"] = np.nan, np.nan
     for (i, c), a in zip(fam, adj):
         df.at[i, c.replace("_p", "_holm")] = a
-    out = os.path.join(R, f"lora_analysis_{args.base}_{len(dec)}seed.csv")
+    suffix = "" if args.dec.startswith("q4-dec") else "_" + args.dec.replace(",", "+")   # keep the pre-registered file name
+    out = os.path.join(R, f"lora_analysis_{args.base}_{len(dec)}seed{suffix}.csv")
     df.round(4).to_csv(out, index=False)
     pd.set_option("display.width", 250)
     show = df[["test", "cond", "kind", "n", "base", "dec", "chr", "d_c", "d_c_lo", "d_c_hi", "d_c_holm",

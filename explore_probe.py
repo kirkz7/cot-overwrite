@@ -31,6 +31,13 @@ import numpy as np
 import pandas as pd
 import torch
 from tqdm import tqdm
+import transformers.integrations.sdpa_attention as hf_sdpa
+from torch.nn.attention import SDPBackend, sdpa_kernel
+
+# Long prompts (LongMemEval ~9k, padded traces ~19k tokens): repeat K/V instead of SDPA's enable_gqa, so the
+# memory-efficient kernel is used; the math fallback needs O(L^2) memory and ran out of memory on 2026-10-02.
+hf_sdpa.use_gqa_in_sdpa = lambda *a, **k: False
+LONG_SDPA = [SDPBackend.EFFICIENT_ATTENTION, SDPBackend.CUDNN_ATTENTION, SDPBackend.MATH]
 
 from app_common import tag, answer_fast, chat_prompt, first_number, free_gpu, load_jsonl, load_reader
 import run_app_logs as logs
@@ -199,43 +206,73 @@ def behaviour(item, model, tok, scorer):
     return None, None                                        # lme: labels come from the judged app_memory files
 
 
+def task_items(tok, task, n):
+    if task == "cot":
+        return cot_items(tok, n)
+    if task in LOG_SENT:
+        return log_items(tok, task, n)
+    return {"mab": mab_items, "convo": convo_items}[task](tok, n) if task != "lme" else lme_items(tok)
+
+
 @torch.no_grad()
 def run(args):
-    os.makedirs(DIR, exist_ok=True)
+    """Resumable: each (model, task) chunk is saved as soon as it is done; finished chunks are skipped."""
     for name in args.models.split(","):
-        path = f"{DIR}/{tag(name)}.npz"
-        if os.path.exists(path):
-            print("exists", path)
+        mdir = f"{DIR}/{tag(name)}"
+        os.makedirs(mdir, exist_ok=True)
+        todo = [t for t in TASKS + ["lme"] if not os.path.exists(f"{mdir}/{t}.npz")]
+        if not todo:
+            print("done", mdir)
             continue
         tok, model = load_reader(name)
         L = model.config.num_hidden_layers
         layers = list(range(0, L + 1, 3)) + ([L] if L % 3 else [])
         scorer = Scorer(tok, model)
-        items = cot_items(tok, args.n) + [x for f in LOG_SENT for x in log_items(tok, f, args.n)] + \
-            mab_items(tok, args.n) + convo_items(tok, args.n) + lme_items(tok)
-        dec_h, dec_meta, bind_h, bind_meta = [], [], [], []
-        for it in tqdm(items, desc=name):
-            enc = tok(it["prompt"], add_special_tokens=False, return_offsets_mapping=True)
-            pos = [len(enc.input_ids) - 1] + [token_index(enc.offset_mapping, c) for c in it["ends"]]
-            out = model(torch.tensor([enc.input_ids], device="cuda"), output_hidden_states=True, logits_to_keep=1)
-            hs = out.hidden_states
-            h = np.stack([np.stack([hs[l][0, p].float().cpu().numpy() for l in layers]) for p in pos]).astype(np.float16)
-            del out, hs
-            correct, stale = behaviour(it, model, tok, scorer)
-            dec_h.append(h[0])
-            dec_meta.append(dict(task=it["task"], i=str(it["i"]), newer_first=it["newer_first"], correct=correct,
-                                 stale=stale, qid=it.get("qid"), cond=it.get("cond")))
-            for j, isn in enumerate(it["is_newer"]):
-                bind_h.append(h[1 + j])
-                bind_meta.append(dict(task=it["task"], i=str(it["i"]), is_newer=isn,
-                                      is_last_shown=j == len(it["is_newer"]) - 1))
-            if it["task"] == "lme":
-                torch.cuda.empty_cache()
-        np.savez_compressed(path, dec_h=np.stack(dec_h), bind_h=np.stack(bind_h), layers=np.array(layers))
-        pd.DataFrame(dec_meta).to_json(path.replace(".npz", "_dec.jsonl"), orient="records", lines=True)
-        pd.DataFrame(bind_meta).to_json(path.replace(".npz", "_bind.jsonl"), orient="records", lines=True)
+        for task in todo:
+            dec_h, dec_meta, bind_h, bind_meta = [], [], [], []
+            for it in tqdm(task_items(tok, task, args.n), desc=f"{name} {task}"):
+                enc = tok(it["prompt"], add_special_tokens=False, return_offsets_mapping=True)
+                pos = [len(enc.input_ids) - 1] + [token_index(enc.offset_mapping, c) for c in it["ends"]]
+                with sdpa_kernel(LONG_SDPA, set_priority=True):
+                    out = model(torch.tensor([enc.input_ids], device="cuda"), output_hidden_states=True, logits_to_keep=1)
+                    hs = out.hidden_states
+                    h = np.stack([np.stack([hs[l][0, p].float().cpu().numpy() for l in layers])
+                                  for p in pos]).astype(np.float16)
+                    del out, hs
+                    correct, stale = behaviour(it, model, tok, scorer)
+                dec_h.append(h[0])
+                dec_meta.append(dict(task=task, i=str(it["i"]), newer_first=it["newer_first"], correct=correct,
+                                     stale=stale, qid=it.get("qid"), cond=it.get("cond")))
+                for j, isn in enumerate(it["is_newer"]):
+                    bind_h.append(h[1 + j])
+                    bind_meta.append(dict(task=task, i=str(it["i"]), is_newer=isn,
+                                          is_last_shown=j == len(it["is_newer"]) - 1))
+                if len(enc.input_ids) > 3000:
+                    torch.cuda.empty_cache()
+            pd.DataFrame(dec_meta).to_json(f"{mdir}/{task}_dec.jsonl", orient="records", lines=True)
+            pd.DataFrame(bind_meta).to_json(f"{mdir}/{task}_bind.jsonl", orient="records", lines=True)
+            np.savez_compressed(f"{mdir}/{task}.tmp.npz", dec_h=np.stack(dec_h),
+                                bind_h=np.stack(bind_h) if bind_h else np.zeros((0, len(layers), h.shape[-1]), np.float16),
+                                layers=np.array(layers))
+            os.replace(f"{mdir}/{task}.tmp.npz", f"{mdir}/{task}.npz")   # the chunk counts as done only once complete
         del tok, model, scorer
         free_gpu()
+
+
+def load_model_dir(mdir):
+    """Concatenate the saved task chunks of one model -> (z-like dict, dec meta, bind meta)."""
+    dec, bind, dms, bms, layers = [], [], [], [], None
+    for t in TASKS + ["lme"]:
+        if not os.path.exists(f"{mdir}/{t}.npz"):
+            continue
+        z = np.load(f"{mdir}/{t}.npz")
+        layers = z["layers"]
+        dec.append(z["dec_h"]); bind.append(z["bind_h"])
+        dms.append(pd.read_json(f"{mdir}/{t}_dec.jsonl", lines=True, dtype={"i": str}))
+        if os.path.getsize(f"{mdir}/{t}_bind.jsonl") > 2:
+            bms.append(pd.read_json(f"{mdir}/{t}_bind.jsonl", lines=True, dtype={"i": str}))
+    return (dict(dec_h=np.concatenate(dec), bind_h=np.concatenate(bind), layers=layers),
+            pd.concat(dms, ignore_index=True), pd.concat(bms, ignore_index=True))
 
 
 # ------------------------------------------------------------------ probes (CPU)
@@ -276,12 +313,10 @@ def lme_labels(name):
 
 def stats(args):
     rows = []
-    for path in sorted(glob.glob(f"{DIR}/*.npz")):
-        name = os.path.basename(path)[:-4]
-        z = np.load(path)
+    for mdir in sorted(d for d in glob.glob(f"{DIR}/*") if os.path.isdir(d)):
+        name = os.path.basename(mdir)
+        z, dm, bm = load_model_dir(mdir)
         layers = z["layers"]
-        dm = pd.read_json(path.replace(".npz", "_dec.jsonl"), lines=True, dtype={"i": str})
-        bm = pd.read_json(path.replace(".npz", "_bind.jsonl"), lines=True, dtype={"i": str})
         lab = lme_labels(name)
         for k, (q, c) in enumerate(zip(dm.qid, dm.cond)):
             if dm.task[k] == "lme" and (q, c) in lab:

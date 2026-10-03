@@ -13,7 +13,15 @@ import argparse
 import random
 
 import pandas as pd
+import torch
 from tqdm import tqdm
+import transformers.integrations.sdpa_attention as hf_sdpa
+from torch.nn.attention import SDPBackend, sdpa_kernel
+
+# Long prompts (LongMemEval ~9k, padded traces ~19k tokens): repeat K/V instead of SDPA's enable_gqa, so the
+# memory-efficient kernel is used; the math fallback needs O(L^2) memory and ran out of memory on 2026-10-02.
+hf_sdpa.use_gqa_in_sdpa = lambda *a, **k: False
+LONG_SDPA = [SDPBackend.EFFICIENT_ATTENTION, SDPBackend.CUDNN_ATTENTION, SDPBackend.MATH]
 
 from app_common import JsonlAppender, load_jsonl
 from probe import Scorer, load
@@ -61,6 +69,31 @@ def make_padded_example(k, seed, n_lines, max_step=30):
     return Example(k=k, target=target, control=rng.choice(distractors), lines=lines, seed=seed)
 
 
+@torch.no_grad()
+def score_long(scorer, prefix):
+    """Scorer.score without copying the KV cache once per continuation path (at ~19k tokens the 9 copies do not fit in
+    16 GB): the paths are scored one after another, cropping the cache back to the prompt after each."""
+    key = prefix[-40:]
+    if key not in scorer._conts:
+        k_ids = scorer._enc(key)
+        conts = {}
+        for c in scorer.cands:
+            full = scorer._enc(key + str(c))
+            assert full[:len(k_ids)] == k_ids, "prefix tokenization changed; adjust prompt ending"
+            conts[c] = tuple(full[len(k_ids):])
+        scorer._conts[key] = conts
+    conts = scorer._conts[key]
+    p_ids = scorer._enc(prefix)
+    out = scorer.model(torch.tensor([p_ids], device="cuda"), use_cache=True, logits_to_keep=1)
+    lp = {(): torch.log_softmax(out.logits[0, -1].float(), -1)}
+    cache = out.past_key_values
+    for p in sorted({cont[:j] for cont in conts.values() for j in range(1, len(cont))}):
+        o = scorer.model(torch.tensor([list(p)], device="cuda"), past_key_values=cache, use_cache=True, logits_to_keep=1)
+        lp[p] = torch.log_softmax(o.logits[0, -1].float(), -1)
+        cache.crop(len(p_ids))
+    return {c: sum(lp[cont[:j]][cont[j]].item() for j in range(len(cont))) for c, cont in conts.items()}
+
+
 def run(args):
     tok, model = load("Qwen/Qwen3-4B")
     scorer = Scorer(tok, model)
@@ -72,7 +105,8 @@ def run(args):
     for n, k, seed, cond in tqdm(todo):
         ex = make_padded_example(k, seed, n)
         prompt = build_prompt(ex, ex.target, cond, "bare", tok)
-        s = scorer.score(prompt)
+        with sdpa_kernel(LONG_SDPA, set_priority=True):
+            s = score_long(scorer, prompt)
         pred = max(s, key=s.get)
         hist = [l.value for l in ex.lines if l.var == ex.target]
         seen = [l.value for l in presented_lines(ex, cond) if l.var == ex.target]
