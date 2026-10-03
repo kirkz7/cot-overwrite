@@ -252,8 +252,11 @@ def make_sample(rng, wiki, mode, idx, formats):
         ans = tvals[j]["value"]
     text = render(fmt, shown, dated, datefmt, header)
     prompt = f"{INTRO[fmt]}\n\n{text}\n\n{q} Answer with the value only."
+    # chain: the target's records in chronological order, as shown (used only by gen_reason_data.py; no random draws)
+    chain = [dict(date=r["date"].strftime(datefmt) if dated else None, value=r["value"]) for r in tvals]
     return dict(id=idx, fmt=fmt, dated=dated, order=order, header=header, qtype=qtype, k=k, n_fill=n_fill,
-                prompt=prompt, answer=ans, other_values=[r["value"] for r in tvals if r["value"] != ans])
+                prompt=prompt, answer=ans, other_values=[r["value"] for r in tvals if r["value"] != ans],
+                attr_name=a, chain=chain, query_when=when.strftime(datefmt) if qtype == "asof" else None)
 
 
 def load_wiki():

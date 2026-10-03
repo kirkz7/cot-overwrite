@@ -54,6 +54,9 @@ def norm(s):
     return " ".join(re.sub(r"[^0-9a-z\-. ]", " ", s.casefold()).strip(" .").split())
 
 
+VAL_NEW = 24        # generation budget in validation; 256 when the targets are reasoning (E12)
+
+
 @torch.no_grad()
 def validate(model, tok, val, eot_ids, max_new=24):
     if not val:
@@ -62,8 +65,10 @@ def validate(model, tok, val, eot_ids, max_new=24):
     hits = collections.defaultdict(list)
     for r in val:
         ids = torch.tensor([tok(chat_prompt(tok, r["prompt"], r.get("prefix", "")), add_special_tokens=False).input_ids], device="cuda")
-        out = tok.decode(greedy(model, ids, max_new, eot_ids), skip_special_tokens=True).strip().split("\n")[0]
-        ok = norm(out) == norm(r["answer"])
+        text = tok.decode(greedy(model, ids, max_new, eot_ids), skip_special_tokens=True).strip()
+        # reasoning targets (E12): score the text after the last "Answer:"; plain targets: the first line
+        out = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.split("\n")[0]
+        ok = norm(out) == norm(r.get("final", r["answer"]))
         hits["all"].append(ok)
         hits[f"dated={r['dated']}|order={r['order']}"].append(ok)
         hits[f"qtype={r['qtype']}"].append(ok)
@@ -133,6 +138,8 @@ def main():
     eot_ids = {tok.convert_tokens_to_ids(eot), tok.eos_token_id}
 
     rows = load_jsonl(args.data)[:args.limit]
+    global VAL_NEW
+    VAL_NEW = 256 if any("final" in r for r in rows[:20]) else 24
     enc = [encode(tok, r, eot) for r in rows]
     keep = [i for i, (p, a) in enumerate(enc) if len(p) + len(a) <= args.max_len]
     rng = random.Random(args.seed)
@@ -180,7 +187,7 @@ def main():
     print(f"model {args.model} | trainable {n_train / 1e6:.1f}M | samples {n_samples} (dropped {len(enc) - len(keep)} > {args.max_len} tok)"
           f" | steps {total_steps}", flush=True)
     if state["step"] == 0:
-        v, dv = validate(model, tok, val, eot_ids), validate(model, tok, dev, eot_ids)
+        v, dv = validate(model, tok, val, eot_ids, VAL_NEW), validate(model, tok, dev, eot_ids, VAL_NEW)
         log.write(json.dumps(dict(step=0, val=v, dev=dv)) + "\n"); log.flush()
         print("step 0 val", v, "| dev", dv, flush=True)
 
@@ -210,7 +217,7 @@ def main():
         if state["step"] % args.save_every == 0 or state["seen"] >= n_samples:
             save_ckpt(model, opt, sched, state, ckpt)
         if state["step"] % args.eval_every == 0 or state["seen"] >= n_samples:
-            v, dv = validate(model, tok, val, eot_ids), validate(model, tok, dev, eot_ids)
+            v, dv = validate(model, tok, val, eot_ids, VAL_NEW), validate(model, tok, dev, eot_ids, VAL_NEW)
             log.write(json.dumps(dict(step=state["step"], val=v, dev=dv)) + "\n"); log.flush()
             print("step", state["step"], "val", v, "| dev", dv, flush=True)
     final = os.path.join(args.out, "final")
