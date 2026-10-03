@@ -315,6 +315,8 @@ def stats(args):
     rows = []
     for mdir in sorted(d for d in glob.glob(f"{DIR}/*") if os.path.isdir(d)):
         name = os.path.basename(mdir)
+        if args.only and name != args.only:
+            continue
         z, dm, bm = load_model_dir(mdir)
         layers = z["layers"]
         lab = lme_labels(name)
@@ -360,7 +362,7 @@ def stats(args):
     df = pd.DataFrame(rows)
     pd.set_option("display.width", 250)
     print(df.round(1).to_string(index=False))
-    df.round(2).to_csv(f"{DIR}/summary.csv", index=False)
+    df.round(2).to_csv(f"{DIR}/summary{'_' + args.only if args.only else ''}.csv", index=False)
 
 
 def main():
@@ -368,6 +370,7 @@ def main():
     ap.add_argument("stage", choices=["run", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B,Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final")
     ap.add_argument("--n", type=int, default=400)
+    ap.add_argument("--only", default=None, help="stats: only this model directory")
     args = ap.parse_args()
     if args.stage == "check":                 # structure only (tokenizer), prints no LongMemEval text
         from transformers import AutoTokenizer
