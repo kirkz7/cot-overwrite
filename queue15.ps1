@@ -31,6 +31,18 @@ $jobs = New-Object System.Collections.ArrayList
 [void]$jobs.Add(@('e7_probe_run',   'explore_probe.py run --n 400'))
 # E4: recency or primacy as the CoT trace grows to ~19k tokens (link to Guo et al. 2026)
 [void]$jobs.Add(@('e4_primacy',     'explore_primacy.py run --n 50'))
+# ---- 10-03 afternoon (queued while the user is away; thresholds in EXPLORE_PLAN.md) ----
+# E1d/E2 measurement fix: a second step "Answer:" for outputs without an answer line, then re-judge
+[void]$jobs.Add(@('e1d_repair',  'explore_timeline.py repair --models Qwen3-4B,Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
+[void]$jobs.Add(@('e1d_judge2',  'explore_timeline.py judge'))
+# E1c swap (thinking of one order after the input of the other) and length control (padded email threads)
+[void]$jobs.Add(@('e1c_swap',    'explore_think.py swap --models Qwen3-4B'))
+[void]$jobs.Add(@('e1c_pad',     'explore_think.py gen --pad --models Qwen3-4B'))
+[void]$jobs.Add(@('e1c_judge2',  'explore_think.py judge'))
+# E10: replicate Guo et al. 2026 attention routing (oracle positions) + reminder baseline; config chosen on calibration emails
+[void]$jobs.Add(@('e10_calibrate', 'explore_route.py calibrate'))
+[void]$jobs.Add(@('e10_run',       'explore_route.py run'))
+[void]$jobs.Add(@('e10_judge',     'explore_route.py judge'))
 # E5: LoRA trained only on CoT traces with step / clock-time tags (decoupled vs chronological control), tested on applications
 $C = '--data data_train/cot_{0}_train.jsonl --val data_train/cot_{0}_val.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 2048 --eval_every 100 --save_every 50 --seed 0'
 [void]$jobs.Add(@('e5_train_dec', ('train_lora.py --model Qwen3-4B --out runs/e5-cot-dec ' + ($C -f 'decoupled'))))

@@ -92,6 +92,35 @@ def read(args):
 
 
 @torch.no_grad()
+def repair(args):
+    """Measurement fix for gen_* / sorted_* (added 2026-10-03): many outputs have no "Answer:" line (often cut off at
+    320 tokens), so the judge saw the end of a timeline. Each such row gets a second step: its own text + "\\nAnswer:",
+    greedy answer. Rows that already had an answer line are copied. Saved as <cond>_r in the same file."""
+    from app_common import load_jsonl
+    items = {it["qid"]: it for it in load_items()}
+    for name in args.models.split(","):
+        path = f"results/explore_timeline_{tag(name)}.jsonl"
+        rows = [r for r in load_jsonl(path) if r["cond"].startswith(("gen_", "sorted_")) and not r["cond"].endswith("_r")]
+        w = JsonlAppender(path, key=lambda r: (r["qid"], r["cond"]))
+        todo = [r for r in rows if (r["qid"], r["cond"] + "_r") not in w.done]
+        print(name, "repair todo", len(todo), "need a second step", sum("Answer:" not in r["full"] for r in todo), flush=True)
+        tok = model = None
+        for r in tqdm(todo, desc=f"{name} repair"):
+            rec = dict(r, cond=r["cond"] + "_r", repaired=False)
+            if "Answer:" not in r["full"]:
+                if model is None:
+                    tok, model = load_reader(name)
+                p = chat_prompt(tok, user_text(items[r["qid"]], r["cond"])) + r["full"].rstrip() + "\nAnswer:"
+                rec.update(response=first_line(generate(tok, model, p, 48)), repaired=True)
+                torch.cuda.empty_cache()
+            w.write(rec)
+        w.close()
+        if model is not None:
+            del tok, model
+            free_gpu()
+
+
+@torch.no_grad()
 def judge(args):
     items = {it["qid"]: it for it in load_items()}
     plan = []
@@ -142,7 +171,9 @@ def stats(args):
                             ("list order, chrono input", "pre_chrono_bwd", "pre_chrono_fwd"),
                             ("list order, rev input", "pre_rev_bwd", "pre_rev_fwd"),
                             ("input order, own timeline", "gen_rev", "gen_chrono"),
-                            ("input order, own sorted timeline", "sorted_rev", "sorted_chrono")]:
+                            ("input order, own sorted timeline", "sorted_rev", "sorted_chrono"),
+                            ("input order, own timeline (repaired)", "gen_rev_r", "gen_chrono_r"),
+                            ("input order, own sorted timeline (repaired)", "sorted_rev_r", "sorted_chrono_r")]:
             if a in piv and b in piv:
                 m = piv[[a, b]].dropna()
                 d, lo, hi, p = boot(m[a].astype(float), m[b].astype(float))
@@ -183,7 +214,7 @@ def check():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["read", "judge", "check", "stats"])
+    ap.add_argument("stage", choices=["read", "judge", "check", "stats", "repair"])
     ap.add_argument("--models", default="Qwen3-4B,Qwen3-14B")
     ap.add_argument("--conds", default="pre", help="comma-separated groups: pre, gen")
     args = ap.parse_args()
@@ -193,6 +224,8 @@ def main():
         read(args)
     elif args.stage == "stats":
         stats(args)
+    elif args.stage == "repair":
+        repair(args)
     else:
         judge(args)
 
