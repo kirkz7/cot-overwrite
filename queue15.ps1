@@ -38,8 +38,9 @@ $jobs = New-Object System.Collections.ArrayList
 # E1c swap (thinking of one order after the input of the other) and length control (padded email threads)
 [void]$jobs.Add(@('e1c_swap',    'explore_think.py swap --models Qwen3-4B'))
 [void]$jobs.Add(@('e1c_pad',     'explore_think.py gen --pad --models Qwen3-4B'))
+[void]$jobs.Add(@('e11_notes',   'explore_think.py notes --models Qwen3-4B'))
 [void]$jobs.Add(@('e1c_judge2',  'explore_think.py judge'))
-# E10: replicate Guo et al. 2026 attention routing (oracle positions) + reminder baseline; config chosen on calibration emails
+# E10 (diagnostic only, not a fix): Guo et al. 2026 attention routing with oracle positions + reminder baseline
 [void]$jobs.Add(@('e10_calibrate', 'explore_route.py calibrate'))
 [void]$jobs.Add(@('e10_run',       'explore_route.py run'))
 [void]$jobs.Add(@('e10_judge',     'explore_route.py judge'))

@@ -159,6 +159,49 @@ def swap(args):
 
 
 @torch.no_grad()
+def notes(args):
+    """E11 (added 2026-10-03): format-agnostic two-step harness. Step 1 is the saved thinking (E1c). Step 2 removes the
+    original records and asks the question again with only the model's own notes, so the input's last-presented value
+    cannot pull the answer. No parser, no format-specific component. Conds: notes_chrono, notes_rev."""
+    from fastgen import GraphGen, auto_batch
+    items = {it["qid"]: it for it in load_items()}
+    for name in args.models.split(","):
+        path = f"results/explore_think_{tag(name)}.jsonl"
+        th = {(r["id"], r["cond"]): r["thought"] for r in load_jsonl(path) if r["task"] == "memory"}
+        w = JsonlAppender(path, key=lambda r: (r["task"], r["id"], r["cond"]))
+        plan = [("notes_chrono", "S_chrono_think"), ("notes_rev", "S_rev_think")]
+        todo = [(q, c, src) for q in items for c, src in plan if ("memory", q, c) not in w.done and (q, src) in th]
+        print(name, "notes todo", len(todo), flush=True)
+        if not todo:
+            w.close()
+            continue
+        tok, model = load_reader(name)
+        im_end = tok.convert_tokens_to_ids("<|im_end|>")
+
+        def prompt(q, src):
+            user = ("Below are your own notes, written while reading the user's past chat sessions (the sessions themselves "
+                    "are not shown again).\n\nNotes:\n" + th[(q, src)].strip() +
+                    f"\n\nCurrent date: {items[q]['qdate']}\nBased on your notes, answer the user's question in one short "
+                    f"sentence.\nQuestion: {items[q]['question']}")
+            return tok.apply_chat_template([{"role": "user", "content": user}], tokenize=False,
+                                           add_generation_prompt=True, enable_thinking=False)
+        enc = [tok(prompt(q, src), add_special_tokens=False).input_ids for q, c, src in todo]
+        L = max(map(len, enc)) + 104
+        gg = GraphGen(model, auto_batch(model, L, cap=8), L)
+        for b in tqdm(range(0, len(todo), gg.B), desc=f"{name} notes"):
+            out = gg.generate(enc[b:b + gg.B], 96, {im_end}, tok.pad_token_id, sample=False)
+            recs = []
+            for (q, c, src), (row, stop) in zip(todo[b:b + gg.B], out):
+                ans = tok.decode(row, skip_special_tokens=True).strip()
+                recs.append(dict(model=name, task="memory", id=q, cond=c, finished=True, n_think=0,
+                                 thought=th[(q, src)], answer=ans, response=ans.split("\n")[0][:400]))
+            w.write(*recs)
+        del tok, model, gg
+        free_gpu()
+        w.close()
+
+
+@torch.no_grad()
 def judge(args):
     """Memory rows: label the final answer and the end of the thinking (A up to date / B outdated / C neither)."""
     items = {it["qid"]: it for it in load_items()}
@@ -285,13 +328,13 @@ def show(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["gen", "judge", "stats", "show", "swap"])
+    ap.add_argument("stage", choices=["gen", "judge", "stats", "show", "swap", "notes"])
     ap.add_argument("--models", default="Qwen3-4B")
     ap.add_argument("--n_logs", type=int, default=20, help="email items per k (k = 1, 2, 4)")
     ap.add_argument("--i", type=int, default=0, help="show: which trace")
     ap.add_argument("--pad", action="store_true", help="gen: also the padded email threads (length control)")
     args = ap.parse_args()
-    {"gen": gen, "judge": judge, "stats": stats, "show": show, "swap": swap}[args.stage](args)
+    {"gen": gen, "judge": judge, "stats": stats, "show": show, "swap": swap, "notes": notes}[args.stage](args)
 
 
 if __name__ == "__main__":
