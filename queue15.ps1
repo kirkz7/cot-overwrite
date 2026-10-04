@@ -58,27 +58,35 @@ $R = '--data data_train/reason_{0}_train.jsonl --val data_train/reason_{0}_val.j
 [void]$jobs.Add(@('lc_q4',    'explore_longconv.py run --models Qwen3-4B'))
 [void]$jobs.Add(@('lc_phi',   'explore_longconv.py run --models Phi-4-mini'))
 [void]$jobs.Add(@('lc_judge', 'explore_longconv.py judge'))
-[void]$jobs.Add(@('lc_q14',   'explore_longconv.py run --models Qwen3-14B'))
-[void]$jobs.Add(@('lc_judge2','explore_longconv.py judge'))
+# ---- overnight 10-04 (user asked to use the GPU fully; thresholds in EXPLORE_PLAN.md) ----
+# E2 on Phi: the pre-registered Phi LoRAs (decoupled / control), prefilled timelines
+[void]$jobs.Add(@('e2_phi',       'explore_timeline.py read --models Phi-4-mini@runs/phi-dec-s0/final,Phi-4-mini@runs/phi-chr-s0/final --conds pre'))
+[void]$jobs.Add(@('e2_phi_judge', 'explore_timeline.py judge'))
 # E13: train fact-time binding on long block-dated documents (no chat formats); test on the frozen chat sets
 $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl --dev data_train/bind_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'
 [void]$jobs.Add(@('e13_train_dec', ('train_lora.py --model Qwen3-4B --out runs/e13-dec ' + ($B -f 'decoupled'))))
+[void]$jobs.Add(@('e13_dec_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e13-dec/final'))
+[void]$jobs.Add(@('e13_dec_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13-dec/final'))
+[void]$jobs.Add(@('e13_dec_judge1',   'explore_longconv.py judge'))
+[void]$jobs.Add(@('e13_dec_judge2',   'explore_reason_eval.py judge'))
+# E14: thinking mode with the decoupled / control answer-only LoRA (does the fix reach the model's own thinking?)
+[void]$jobs.Add(@('e14_think',  'explore_think.py gen --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
+[void]$jobs.Add(@('e14_judge',  'explore_think.py judge'))
+# E13 control
 [void]$jobs.Add(@('e13_train_chr', ('train_lora.py --model Qwen3-4B --out runs/e13-chr ' + ($B -f 'chrono'))))
-$E13 = 'Qwen3-4B@runs/e13-dec/final,Qwen3-4B@runs/e13-chr/final'
-[void]$jobs.Add(@('e13_longconv', "explore_longconv.py run --budget 320 --models $E13"))
-[void]$jobs.Add(@('e13_reason',   "explore_reason_eval.py run --models $E13"))
-[void]$jobs.Add(@('e13_judge1',   'explore_longconv.py judge'))
-[void]$jobs.Add(@('e13_judge2',   'explore_reason_eval.py judge'))
-# E5: LoRA trained only on CoT traces with step / clock-time tags (decoupled vs chronological control), tested on applications
-$C = '--data data_train/cot_{0}_train.jsonl --val data_train/cot_{0}_val.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 2048 --eval_every 100 --save_every 50 --seed 0'
-[void]$jobs.Add(@('e5_train_dec', ('train_lora.py --model Qwen3-4B --out runs/e5-cot-dec ' + ($C -f 'decoupled'))))
-[void]$jobs.Add(@('e5_train_chr', ('train_lora.py --model Qwen3-4B --out runs/e5-cot-chr ' + ($C -f 'chrono'))))
-$E5 = 'Qwen3-4B@runs/e5-cot-dec/final,Qwen3-4B@runs/e5-cot-chr/final'
-[void]$jobs.Add(@('e5_logs',   "run_app_logs.py --n 50 --models $E5"))
-[void]$jobs.Add(@('e5_agent',  "run_app_agent.py --n 75 --models $E5"))
-[void]$jobs.Add(@('e5_ext',    "run_ext_eval.py --models $E5 --benches cot,mab"))
-[void]$jobs.Add(@('e5_mem',    "run_app_memory.py read --models $E5"))
-[void]$jobs.Add(@('e5_judge',  'run_app_memory.py judge'))
+[void]$jobs.Add(@('e13_chr_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e13-chr/final'))
+[void]$jobs.Add(@('e13_chr_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13-chr/final'))
+[void]$jobs.Add(@('e13_chr_judge1',   'explore_longconv.py judge'))
+[void]$jobs.Add(@('e13_chr_judge2',   'explore_reason_eval.py judge'))
+# E13b: same binding data, answer-only target (is writing the dates out needed?)
+[void]$jobs.Add(@('e13b_train', 'train_lora.py --model Qwen3-4B --out runs/e13b-dec --data data_train/bindans_decoupled_train.jsonl --val data_train/bindans_decoupled_val.jsonl --dev data_train/bind_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'))
+[void]$jobs.Add(@('e13b_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e13b-dec/final'))
+[void]$jobs.Add(@('e13b_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13b-dec/final'))
+[void]$jobs.Add(@('e13b_judge1',   'explore_longconv.py judge'))
+[void]$jobs.Add(@('e13b_judge2',   'explore_reason_eval.py judge'))
+# slowest last: Qwen3-14B on the long-dialogue sets
+[void]$jobs.Add(@('lc_q14',   'explore_longconv.py run --models Qwen3-14B'))
+[void]$jobs.Add(@('lc_judge2','explore_longconv.py judge'))
 foreach ($j in $jobs) {
     $name = $j[0]; $cmd = $j[1]
     if ((Test-Path $log) -and (Select-String -Path $log -SimpleMatch "end   $name exit=0 (" -Quiet)) {
