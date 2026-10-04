@@ -65,7 +65,7 @@ def stats(args):
         if os.path.exists(lc):
             gold = {(x["id"], x["cond"]): x["gold"] for x in personamem()}
             a = pd.DataFrame([r for r in load_jsonl(lc) if r["task"] == "personamem"])
-            a["pred"] = [pm_pred(f) for f in a.full]
+            a["pred"] = [pm_pred(f if isinstance(f, str) else r) for f, r in zip(a.get("full", a.response), a.response)]
             a["correct"] = [p == gold[(i, c)] for p, i, c in zip(a.pred, a.id, a.cond)]
             df = pd.concat([df, a[["id", "cond", "qtype", "n_tok", "pred", "correct"]]], ignore_index=True)
         print("=" * 10, name, "| unparsed", int(df.pred.isna().sum()), "/", len(df))
