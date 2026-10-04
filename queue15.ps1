@@ -72,6 +72,8 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # E14: thinking mode with the decoupled / control answer-only LoRA (does the fix reach the model's own thinking?)
 [void]$jobs.Add(@('e14_think',  'explore_think.py gen --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
 [void]$jobs.Add(@('e14_judge',  'explore_think.py judge'))
+# judge the E13-control ConvoMem-long rows already generated (primary E13 threshold) before the long PersonaMem part
+[void]$jobs.Add(@('e13_chr_judge0', 'explore_longconv.py judge'))
 # PM-diag: why no order effect on PersonaMem (no-history controls + the other 5 question types), base models
 [void]$jobs.Add(@('pmdiag', 'explore_pmdiag.py run --models Qwen3-4B,Phi-4-mini'))
 # External memory sets (MemConflict, MemoryAgentBench-CR, LoCoMo) x (chrono, rev, BM25 retrieval order), base 4B first
