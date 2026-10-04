@@ -54,6 +54,12 @@ $R = '--data data_train/reason_{0}_train.jsonl --val data_train/reason_{0}_val.j
 [void]$jobs.Add(@('e12_train_chr', ('train_lora.py --model Qwen3-4B --out runs/e12-chr ' + ($R -f 'chrono'))))
 [void]$jobs.Add(@('e12_eval',      'explore_reason_eval.py run --models Qwen3-4B@runs/e12-dec/final,Qwen3-4B@runs/e12-chr/final,Qwen3-4B,Qwen3-4B@runs/q4-dec-s0/final'))
 [void]$jobs.Add(@('e12_judge',     'explore_reason_eval.py judge'))
+# long-dialogue test sets beyond LongMemEval (base models only; frozen as held-out tests)
+[void]$jobs.Add(@('lc_q4',    'explore_longconv.py run --models Qwen3-4B'))
+[void]$jobs.Add(@('lc_phi',   'explore_longconv.py run --models Phi-4-mini'))
+[void]$jobs.Add(@('lc_judge', 'explore_longconv.py judge'))
+[void]$jobs.Add(@('lc_q14',   'explore_longconv.py run --models Qwen3-14B'))
+[void]$jobs.Add(@('lc_judge2','explore_longconv.py judge'))
 # E5: LoRA trained only on CoT traces with step / clock-time tags (decoupled vs chronological control), tested on applications
 $C = '--data data_train/cot_{0}_train.jsonl --val data_train/cot_{0}_val.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 2048 --eval_every 100 --save_every 50 --seed 0'
 [void]$jobs.Add(@('e5_train_dec', ('train_lora.py --model Qwen3-4B --out runs/e5-cot-dec ' + ($C -f 'decoupled'))))
