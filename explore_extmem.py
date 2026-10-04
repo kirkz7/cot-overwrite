@@ -10,6 +10,7 @@ Sets:
            the update, up to ~20k source tokens; each session headed by its date. Judged by Qwen3-14B (A right direction,
            B reversed / old value as new, C neither).
   mabcr    MemoryAgentBench Conflict_Resolution, factconsolidation_sh_6k: numbered facts, larger number = newer.
+           NOT held-out: already a pre-registered LoRA test set and used in E7; the LoRA data has its format.
            Primary subset: the questions whose answer fact has exactly one older conflicting fact. String-matched.
            (sh_32k is 37.5k tokens: does not fit 16 GB; later.)
   locomo   LoCoMo (snap-research/locomo, locomo10.json): all temporal questions (category 2), full conversations,

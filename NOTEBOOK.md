@@ -78,6 +78,7 @@
 - **CoT 阶段**：完整的天然推理轨迹里，单处改动撼动不了答案；天然出现"先写对、最后改错"的轨迹很少（7.6%）。
 
 ## 6. 更正记录
+- **10-04**：排外部测试集时把 MemoryAgentBench-CR 当成了新留出集，**错**：它是 LoRA 预注册的测试集，训练数据也有它的风格。已在 EXPLORE_PLAN 标注。
 - **10-04**：E13 在 PersonaMem 上一度算成 18%，是解析器只取第一行造成的（模型写"The best answer is (d)."）。改为固定规则 `pm_pred` 后为 60/56；原模型和 Phi 的预测不变。规则是看到结果后改的，但只看格式、不看对错。
 - **10-03**：E1c 当初说"答案背离了正确的思考"是**错的**。判分器只读思考结尾 800 个字符，这种判法不可靠。今后判断"思考的结论"，要看只凭思考作答的结果。
 - **10-02**："找到新值照样按位置选（90 对 70）"来自粗糙的词匹配，已更正。
@@ -102,7 +103,7 @@
 - **规模**：32B / 70B（租卡），前沿模型 API 抽查。
 - **确认阶段**（暂停中，`resume_queue.ps1 -Queue queue14`）：Qwen3-4B 种子 1–2，1.7B 和 Phi 的全套测试。
 - **探索**：E6（判分器的位置偏差）、E7b（用探针看思考模式）、activation patching、E9（小规模强化学习，5080 上只能跑短上下文）。
-- **数据规则**：ConvoMem 人设 0–49 用于开发，50–99 留出。ConvoMem 长版和 PersonaMem 从 10-04 起冻结。MemConflict、MemoryAgentBench-CR（sh_6k）、LoCoMo 测完原模型后冻结（数据在 `D:\datasets\`、HF 缓存）。MAB-CR 32k 版（3.75 万 token）、BEAM、LongMemEval-V2 要等租卡。LongMemEval 已经看过，用于修复时要单独标注。BEAM 已下载，但 16 GB 显存放不下。
+- **数据规则**：ConvoMem 人设 0–49 用于开发，50–99 留出。ConvoMem 长版和 PersonaMem 从 10-04 起冻结。MemConflict、LoCoMo 测完原模型后冻结；MemoryAgentBench-CR 已在 LoRA 预注册测试和 E7 里用过、训练数据也有它的风格，**不算留出**（数据在 `D:\datasets\`、HF 缓存）。MAB-CR 32k 版（3.75 万 token）、BEAM、LongMemEval-V2 要等租卡。LongMemEval 已经看过，用于修复时要单独标注。BEAM 已下载，但 16 GB 显存放不下。
 - **写作前必须补读**：Test of Time（2406.09170）、2510.22752、Tang et al. 2026、2603.12271、Wallat et al. 2026。
 
 ## 10. 工程备忘
