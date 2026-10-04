@@ -110,10 +110,12 @@ def run(args):
             p = chat_prompt(tok, x["user"])
             n = len(tok(p, add_special_tokens=False).input_ids)
             with sdpa_kernel(LONG_SDPA, set_priority=True):
-                text = generate(tok, model, p, 16 if x["task"] == "personamem" else 64)
-            rec = dict(task=x["task"], id=x["id"], cond=x["cond"], n_tok=n, response=text.strip().split("\n")[0])
+                text = generate(tok, model, p, args.budget or (16 if x["task"] == "personamem" else 64))
+            # reasoning-trained readers (E13): the answer is the text after the last "Answer:"; others: the first line
+            resp = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.strip().split("\n")[0]
+            rec = dict(task=x["task"], id=x["id"], cond=x["cond"], n_tok=n, response=resp, full=text)
             if x["task"] == "personamem":
-                pred = letter(text)
+                pred = letter(resp)
                 rec.update(qtype=x["qtype"], pred=pred, correct=pred == x["gold"])
             w.write(rec)
             torch.cuda.empty_cache()
@@ -175,6 +177,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B")
+    ap.add_argument("--budget", type=int, default=None, help="new tokens; default 16 (PersonaMem) / 64 (ConvoMem)")
     args = ap.parse_args()
     if args.stage == "check":
         from transformers import AutoTokenizer
