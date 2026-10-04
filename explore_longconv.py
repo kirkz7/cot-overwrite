@@ -96,6 +96,16 @@ def letter(text):
     return m.group(1) if m else None
 
 
+def pm_pred(full):
+    # 10-04 fix: reasoning readers (E13) end with "The best answer is (d)." and no "Answer:", so the first line
+    # (the list header) held no letter. Rule: text after the last "Answer:" if present; else the last "(x)" in the
+    # whole output; else the first line. Identical for every model; base-model predictions are unchanged.
+    if "Answer:" in full:
+        return letter(full.rsplit("Answer:", 1)[1].strip().split("\n")[0])
+    ms = re.findall(r"\(([a-d])\)", full.lower())
+    return ms[-1] if ms else letter(full.strip().split("\n")[0])
+
+
 @torch.no_grad()
 def run(args):
     for name in args.models.split(","):
@@ -115,7 +125,7 @@ def run(args):
             resp = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.strip().split("\n")[0]
             rec = dict(task=x["task"], id=x["id"], cond=x["cond"], n_tok=n, response=resp, full=text)
             if x["task"] == "personamem":
-                pred = letter(resp)
+                pred = pm_pred(text)
                 rec.update(qtype=x["qtype"], pred=pred, correct=pred == x["gold"])
             w.write(rec)
             torch.cuda.empty_cache()
@@ -157,6 +167,12 @@ def stats(args):
             continue
         name = os.path.basename(path)[len("longconv_"):-len(".jsonl")]
         a = pd.DataFrame([r for r in load_jsonl(path) if r["task"] == "personamem"])
+        if len(a):  # re-parse stored outputs with pm_pred (rows written before the 10-04 parser fix)
+            gold = {(x["id"], x["cond"]): x["gold"] for x in personamem()}
+            a["pred"] = [pm_pred(r.get("full", r.response) if isinstance(r.get("full"), str) else r.response)
+                         for _, r in a.iterrows()]
+            a["correct"] = [p == gold[(i, c)] for p, i, c in zip(a.pred, a.id, a.cond)]
+            print(f"   personamem unparsed {a.pred.isna().sum()} / {len(a)}")
         jp = path.replace(".jsonl", "_judged.jsonl")
         b = pd.DataFrame(load_jsonl(jp)) if os.path.exists(jp) else pd.DataFrame()
         df = pd.concat([a, b], ignore_index=True)
