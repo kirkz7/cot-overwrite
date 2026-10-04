@@ -55,10 +55,13 @@ def convo_long(personas=range(50, 100), per=4):
     return out
 
 
-def personamem():
+def personamem(qtypes=QTYPES, conds=("chrono", "rev")):
+    # conds "nohist" (persona + question + options, no sessions) and "bare" (question + options only) are the
+    # 10-04 PM-diag controls: does the question need the history at all?
     root = PM[0]
     q = pd.read_csv(os.path.join(root, "questions_32k.csv"))
-    q = q[q.question_type.isin(QTYPES)]
+    if qtypes is not None:
+        q = q[q.question_type.isin(qtypes)]
     ctx = {}
     for line in open(os.path.join(root, "shared_contexts_32k.jsonl"), encoding="utf-8"):
         ctx.update(json.loads(line))
@@ -79,13 +82,19 @@ def personamem():
         dates = [(pd.Timestamp("2023-01-01") + pd.Timedelta(days=start + 45 * i + rnd.randint(0, 20))).strftime("%Y-%m-%d")
                  for i in range(len(body))]
         opts = eval(r.all_options) if isinstance(r.all_options, str) else list(r.all_options)
-        for cond in ("chrono", "rev"):
-            idx = list(range(len(body))) if cond == "chrono" else list(range(len(body)))[::-1]
-            blocks = [f"### Session (date: {dates[i]})\n" + "\n".join(t["content"] for t in body[i]) for i in idx]
-            user = (f"Persona of the user you have been talking with:\n{persona}\n\nHere are your past chat sessions with this "
-                    f"user.\n\n" + "\n\n".join(blocks) + f"\n\nThe user now says: {r.user_question_or_message}\n\n"
-                    "Which response is best for this user now? Options:\n" + "\n".join(opts) +
-                    "\n\nAnswer with the letter of the best option only, e.g. (a).")
+        tail = (f"The user now says: {r.user_question_or_message}\n\n"
+                "Which response is best for this user now? Options:\n" + "\n".join(opts) +
+                "\n\nAnswer with the letter of the best option only, e.g. (a).")
+        for cond in conds:
+            if cond == "bare":
+                user = tail
+            elif cond == "nohist":
+                user = f"Persona of the user you have been talking with:\n{persona}\n\n" + tail
+            else:
+                idx = list(range(len(body))) if cond == "chrono" else list(range(len(body)))[::-1]
+                blocks = [f"### Session (date: {dates[i]})\n" + "\n".join(t["content"] for t in body[i]) for i in idx]
+                user = (f"Persona of the user you have been talking with:\n{persona}\n\nHere are your past chat sessions with "
+                        f"this user.\n\n" + "\n\n".join(blocks) + "\n\n" + tail)
             out.append(dict(task="personamem", id=str(r.question_id), cond=cond, user=user, qtype=r.question_type,
                             gold=str(r.correct_answer).strip().strip("()").lower()[:1], n_sessions=len(body)))
     return out
