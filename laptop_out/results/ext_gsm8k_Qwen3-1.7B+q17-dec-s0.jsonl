@@ -1,0 +1,250 @@
+{"i": 0, "response": "$24", "pred": 24.0, "correct": false}
+{"i": 1, "response": "2 bolts of blue fiber and 1 bolt of white fiber", "pred": 1.0, "correct": false}
+{"i": 2, "response": "$100,000", "pred": 100000.0, "correct": false}
+{"i": 3, "response": "540 meters", "pred": 540.0, "correct": true}
+{"i": 4, "response": "15 cups", "pred": 15.0, "correct": false}
+{"i": 5, "response": "$5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 + $5 = $50", "pred": 50.0, "correct": false}
+{"i": 6, "response": "Toulouse has 40 sheep, Charleston has 40 sheep, and Seattle has 20 sheep.", "pred": 20.0, "correct": false}
+{"i": 7, "response": "200 GB", "pred": 200.0, "correct": false}
+{"i": 8, "response": "120 miles", "pred": 120.0, "correct": false}
+{"i": 9, "response": "Eliza's earnings for this week are $450.", "pred": 450.0, "correct": false}
+{"i": 10, "response": "60 + 180 + 126 = 366", "pred": 366.0, "correct": true}
+{"i": 11, "response": "3 dozen donuts: $68 per dozen \u2192 $68 \u00d7 3 = $204  \n2 dozen mini cupcakes: $80 per dozen \u2192 $80 \u00d7 2 = $160  \n6 dozen mini cheesecakes: $55 per dozen \u2192 $55 \u00d7 6 = $330  \nTotal cost: $204 + $160 + $330 = $694", "pred": 694.0, "correct": true}
+{"i": 12, "response": "1 year", "pred": 1.0, "correct": false}
+{"i": 13, "response": "15", "pred": 15.0, "correct": false}
+{"i": 14, "response": "50%", "pred": 50.0, "correct": false}
+{"i": 15, "response": "$5,000 (jewelry)", "pred": 5000.0, "correct": false}
+{"i": 16, "response": "80 miles westward and 150 miles northward", "pred": 150.0, "correct": false}
+{"i": 17, "response": "$20 * 35 * 50 + $30 * 15 * 50 = $35,000 + $22,500 = $57,500", "pred": 57500.0, "correct": true}
+{"i": 18, "response": "120", "pred": 120.0, "correct": false}
+{"i": 19, "response": "4 miles per hour", "pred": 4.0, "correct": false}
+{"i": 20, "response": "ink that is three-fifths water (so 9 liters of water). After spilling 1 liter of orange drink, the total volume is 24 liters. The amount of water in the orange drink is 6.666... liters, and the amount of water in the pineapple drink is 9 liters. So the total water is 6.666... + 9 = 15.666... liters.", "pred": 15.666, "correct": false}
+{"i": 21, "response": "10 years ago", "pred": 10.0, "correct": false}
+{"i": 22, "response": "3 + 2*2 + 0 = 7", "pred": 7.0, "correct": true}
+{"i": 23, "response": "4 centimeters shorter", "pred": 4.0, "correct": false}
+{"i": 24, "response": "$23.40", "pred": 23.4, "correct": false}
+{"i": 25, "response": "2", "pred": 2.0, "correct": true}
+{"i": 26, "response": "3 * 16.50 + 3 * 22.50 + 3 * 42 = 49.50 + 67.50 + 126 = 243 dollars", "pred": 243.0, "correct": true}
+{"i": 27, "response": "$4.00 * 60 = $240.00", "pred": 240.0, "correct": false}
+{"i": 28, "response": "15 miles", "pred": 15.0, "correct": false}
+{"i": 29, "response": "$33", "pred": 33.0, "correct": false}
+{"i": 30, "response": "11 years", "pred": 11.0, "correct": false}
+{"i": 31, "response": "80", "pred": 80.0, "correct": true}
+{"i": 32, "response": "10 dogs \u00d7 0.5 hours/day = 5 hours/day  \n5 hours/day \u00d7 7 days/week = 35 hours/week", "pred": 35.0, "correct": true}
+{"i": 33, "response": "40", "pred": 40.0, "correct": false}
+{"i": 34, "response": "14", "pred": 14.0, "correct": false}
+{"i": 35, "response": "4 points in the first 20 minutes, 3 points in the second 20 minutes, totaling 7 points.", "pred": 7.0, "correct": false}
+{"i": 36, "response": "$30.00", "pred": 30.0, "correct": false}
+{"i": 37, "response": "13", "pred": 13.0, "correct": false}
+{"i": 38, "response": "3 hours per day", "pred": 3.0, "correct": false}
+{"i": 39, "response": "12 miles", "pred": 12.0, "correct": false}
+{"i": 40, "response": "16 years old", "pred": 16.0, "correct": false}
+{"i": 41, "response": "400 feet", "pred": 400.0, "correct": false}
+{"i": 42, "response": "14 pieces", "pred": 14.0, "correct": false}
+{"i": 43, "response": "150g", "pred": 150.0, "correct": false}
+{"i": 44, "response": "$10.00", "pred": 10.0, "correct": false}
+{"i": 45, "response": "5 articles on Monday, 2/5 times more articles on Tuesday (which is 2/5 * 5 = 2 articles), and 2 times more articles on Wednesday (which is 2 * 2 = 4 articles). Total articles: 5 + 2 + 4 = 11 articles. Total hours: 11 articles * 4 hours = 44 hours.", "pred": 44.0, "correct": false}
+{"i": 46, "response": "23", "pred": 23.0, "correct": false}
+{"i": 47, "response": "$200", "pred": 200.0, "correct": false}
+{"i": 48, "response": "8", "pred": 8.0, "correct": true}
+{"i": 49, "response": "120", "pred": 120.0, "correct": false}
+{"i": 50, "response": "$210", "pred": 210.0, "correct": false}
+{"i": 51, "response": "2 hours", "pred": 2.0, "correct": false}
+{"i": 52, "response": "10", "pred": 10.0, "correct": false}
+{"i": 53, "response": "$600", "pred": 600.0, "correct": false}
+{"i": 54, "response": "7 kittens + 3 kittens (from Patchy) + 12 kittens (from Trixie) = 22 kittens", "pred": 22.0, "correct": false}
+{"i": 55, "response": "15", "pred": 15.0, "correct": false}
+{"i": 56, "response": "3", "pred": 3.0, "correct": true}
+{"i": 57, "response": "300", "pred": 300.0, "correct": false}
+{"i": 58, "response": "$40.00", "pred": 40.0, "correct": false}
+{"i": 59, "response": "120 + 67 = 187", "pred": 187.0, "correct": true}
+{"i": 60, "response": "24", "pred": 24.0, "correct": false}
+{"i": 61, "response": "$500 + $800 + $80 = $1380", "pred": 1380.0, "correct": false}
+{"i": 62, "response": "$50,000/year", "pred": 50000.0, "correct": false}
+{"i": 63, "response": "$140 * 6 + $140 * 0.9 = $840 + $126 = $966", "pred": 966.0, "correct": false}
+{"i": 64, "response": "100 miles", "pred": 100.0, "correct": false}
+{"i": 65, "response": "2 hours * 3 times a week * 4 weeks = 24 hours", "pred": 24.0, "correct": false}
+{"i": 66, "response": "16", "pred": 16.0, "correct": false}
+{"i": 67, "response": "175 diamonds, 140 rubies, 280 emeralds", "pred": 280.0, "correct": false}
+{"i": 68, "response": "10", "pred": 10.0, "correct": false}
+{"i": 69, "response": "$100 - $40 = $60", "pred": 60.0, "correct": true}
+{"i": 70, "response": "$15.00 * (5 classes * 15 students + 8 classes * 15 students) = $15.00 * (75 + 120) = $15.00 * 195 = $2925", "pred": 2925.0, "correct": false}
+{"i": 71, "response": "20 instructions for the first recipe and 40 instructions for the second recipe. Total instructions: 60.", "pred": 60.0, "correct": true}
+{"i": 72, "response": "$120", "pred": 120.0, "correct": false}
+{"i": 73, "response": "$150 each month", "pred": 150.0, "correct": false}
+{"i": 74, "response": "$12 + $18 + $21 = $51", "pred": 51.0, "correct": false}
+{"i": 75, "response": "16, 8, 4, 2", "pred": 2.0, "correct": false}
+{"i": 76, "response": "110 cups", "pred": 110.0, "correct": false}
+{"i": 77, "response": "Raymond does 200 pounds of laundry, David does 50 pounds of laundry.", "pred": 50.0, "correct": false}
+{"i": 78, "response": "$1.00", "pred": 1.0, "correct": false}
+{"i": 79, "response": "$70", "pred": 70.0, "correct": true}
+{"i": 80, "response": "24 - (1/6 * 24) - 6 = 24 - 4 - 6 = 14 liters", "pred": 14.0, "correct": false}
+{"i": 81, "response": "10 + 21 + 23 = 54  \n54 - 9 = 45  \n45 - 28 = 17", "pred": 17.0, "correct": true}
+{"i": 82, "response": "125 + (4*125 - 2) = 125 + 498 = 623 pounds", "pred": 623.0, "correct": true}
+{"i": 83, "response": "3 rose bushes \u00d7 25 roses = 75 roses  \n75 roses \u00d7 8 thorns = 600 thorns", "pred": 600.0, "correct": true}
+{"i": 84, "response": "16", "pred": 16.0, "correct": false}
+{"i": 85, "response": "4", "pred": 4.0, "correct": false}
+{"i": 86, "response": "12", "pred": 12.0, "correct": false}
+{"i": 87, "response": "$600 + 10% of $600 = $660", "pred": 660.0, "correct": false}
+{"i": 88, "response": "10,000", "pred": 10000.0, "correct": false}
+{"i": 89, "response": "1.625 gift bags per guest  \n1.625 gift bags \u00d7 $2 = $3.25", "pred": 3.25, "correct": false}
+{"i": 90, "response": "200 lbs", "pred": 200.0, "correct": false}
+{"i": 91, "response": "12", "pred": 12.0, "correct": false}
+{"i": 92, "response": "Jackson is 10 years old.", "pred": 10.0, "correct": false}
+{"i": 93, "response": "34.2 seconds", "pred": 34.2, "correct": false}
+{"i": 94, "response": "120", "pred": 120.0, "correct": false}
+{"i": 95, "response": "120", "pred": 120.0, "correct": false}
+{"i": 96, "response": "7 hours", "pred": 7.0, "correct": false}
+{"i": 97, "response": "12 tomatoes", "pred": 12.0, "correct": true}
+{"i": 98, "response": "some of the cars", "pred": null, "correct": false}
+{"i": 99, "response": "18 + (40 \u00d7 2) - (40 \u00d7 1) = 18 + 80 - 40 = 58", "pred": 58.0, "correct": true}
+{"i": 100, "response": "20 + 25 + 10 + 60 = 105", "pred": 105.0, "correct": false}
+{"i": 101, "response": "15 pages on Monday, 4 pages on Tuesday, 4 pages on Wednesday, 4 pages on Thursday, and 4 pages on Friday. The average is 4 pages per day.", "pred": 4.0, "correct": false}
+{"i": 102, "response": "5 glasses of water", "pred": 5.0, "correct": false}
+{"i": 103, "response": "10 minutes", "pred": 10.0, "correct": false}
+{"i": 104, "response": "1000 - (1/4 * 1000) - (1/3 * (1000 - 250)) = 1000 - 250 - 250 = 500", "pred": 500.0, "correct": true}
+{"i": 105, "response": "15 cookies", "pred": 15.0, "correct": false}
+{"i": 106, "response": "120 cubic inches", "pred": 120.0, "correct": false}
+{"i": 107, "response": "a few episodes of a 30-minute show", "pred": 30.0, "correct": false}
+{"i": 108, "response": "100", "pred": 100.0, "correct": false}
+{"i": 109, "response": "$30.00 + $2.00 = $32.00", "pred": 32.0, "correct": false}
+{"i": 110, "response": "14 rolls up", "pred": 14.0, "correct": false}
+{"i": 111, "response": "2 liters", "pred": 2.0, "correct": false}
+{"i": 112, "response": "6 times", "pred": 6.0, "correct": false}
+{"i": 113, "response": "2 * 15 - 5 = 25", "pred": 25.0, "correct": true}
+{"i": 114, "response": "1800", "pred": 1800.0, "correct": false}
+{"i": 115, "response": "$100", "pred": 100.0, "correct": false}
+{"i": 116, "response": "120", "pred": 120.0, "correct": false}
+{"i": 117, "response": "$60 each for 2 pairs of shoes, and 3 children, so 2 pairs * 3 children = 6 pairs. 6 pairs * $60 = $360.", "pred": 360.0, "correct": true}
+{"i": 118, "response": "2 containers", "pred": 2.0, "correct": false}
+{"i": 119, "response": "$40000 + 40000 = $80000", "pred": 80000.0, "correct": false}
+{"i": 120, "response": "60 sheets", "pred": 60.0, "correct": false}
+{"i": 121, "response": "13 fruits", "pred": 13.0, "correct": false}
+{"i": 122, "response": "10 hours", "pred": 10.0, "correct": false}
+{"i": 123, "response": "10 miles", "pred": 10.0, "correct": false}
+{"i": 124, "response": "20", "pred": 20.0, "correct": false}
+{"i": 125, "response": "3", "pred": 3.0, "correct": false}
+{"i": 126, "response": "38 chicken sausages and 6 fish sausages, so 38 + 6 = 44 sausages in total.", "pred": 44.0, "correct": false}
+{"i": 127, "response": "50 + 20 = 70", "pred": 70.0, "correct": false}
+{"i": 128, "response": "4 watermelons: 4 * 3 * 15 = 180$  \n20 peppers: 20 * 15 = 300$  \n10 oranges: 10 * (3 * 15 - 5) = 10 * 35 = 350$  \nTotal: 180 + 300 + 350 = 830$", "pred": 830.0, "correct": false}
+{"i": 129, "response": "$120,000", "pred": 120000.0, "correct": false}
+{"i": 130, "response": "60 - 20 = 40", "pred": 40.0, "correct": false}
+{"i": 131, "response": "$500 + $60 = $560", "pred": 560.0, "correct": false}
+{"i": 132, "response": "(2 roller coaster rides + 4 roller coaster rides) * 6 tickets + (2 luge rides * 6 tickets) = 6*6 + 2*6 = 36 + 12 = 48 tickets", "pred": 48.0, "correct": false}
+{"i": 133, "response": "41 miles", "pred": 41.0, "correct": false}
+{"i": 134, "response": "4 car washes a month \u00d7 $15 per car wash = $60 per month. $60 per month \u00d7 12 months = $720 in a year.", "pred": 720.0, "correct": true}
+{"i": 135, "response": "10", "pred": 10.0, "correct": false}
+{"i": 136, "response": "6", "pred": 6.0, "correct": true}
+{"i": 137, "response": "$7.50 * 2 + $1.50 * 2 + $1.00 * 2 + $20% delivery fee + $5.00 tip = $15 + $3 + $2 + $1.50 + $5.00 = $26.50", "pred": 26.5, "correct": false}
+{"i": 138, "response": "100 questions", "pred": 100.0, "correct": false}
+{"i": 139, "response": "12 + 22 = 34", "pred": 34.0, "correct": false}
+{"i": 140, "response": "50%", "pred": 50.0, "correct": false}
+{"i": 141, "response": "1400", "pred": 1400.0, "correct": false}
+{"i": 142, "response": "$140", "pred": 140.0, "correct": true}
+{"i": 143, "response": "2 + 3 + 3 + 3 + 4 + (0.10 * 2 + 0.10 * 3 + 0.10 * 3 + 0.10 * 3 + 0.10 * 4) = 2 + 3 + 3 + 3 + 4 + (0.2 + 0.3 + 0.3 + 0.3 + 0.4) = 2 + 3 + 3 + 3 + 4 + 1.5 = 16.5 dollars", "pred": 16.5, "correct": false}
+{"i": 144, "response": "$92", "pred": 92.0, "correct": false}
+{"i": 145, "response": "1000 pineapples", "pred": 1000.0, "correct": false}
+{"i": 146, "response": "500", "pred": 500.0, "correct": false}
+{"i": 147, "response": "15 bees", "pred": 15.0, "correct": false}
+{"i": 148, "response": "$20", "pred": 20.0, "correct": false}
+{"i": 149, "response": "12", "pred": 12.0, "correct": false}
+{"i": 150, "response": "12 minutes", "pred": 12.0, "correct": false}
+{"i": 151, "response": "$1.25", "pred": 1.25, "correct": false}
+{"i": 152, "response": "$0.00", "pred": 0.0, "correct": false}
+{"i": 153, "response": "14 + 14 + 14 = 42", "pred": 42.0, "correct": false}
+{"i": 154, "response": "16 weeks \u00d7 16 hours per week = 256 hours", "pred": 256.0, "correct": false}
+{"i": 155, "response": " + 120 croissants + 60 baguettes = 300 rolls + 120 croissants + 60 baguettes = 300 rolls + 120 croissants + 60 baguettes = 300 rolls + 120 croissants + 60 baguettes = 300 rolls + 120 croissants + 60 baguettes = 300 rolls + 120 croissants + 60 baguettes = 300 rolls + 120 croissants + 60 baguettes = 3", "pred": 3.0, "correct": false}
+{"i": 156, "response": "200 bananas for the monkeys, 400 bananas for the gorillas, and 100 bananas for the baboons. Total: 700 bananas.", "pred": 700.0, "correct": false}
+{"i": 157, "response": "150 yards", "pred": 150.0, "correct": false}
+{"i": 158, "response": "4 pens * $1.5 = $6  \n2 notebooks * $4 = $8  \n1 rim of bond paper * $20 = $20  \nTotal cost = $6 + $8 + $20 = $34", "pred": 34.0, "correct": true}
+{"i": 159, "response": "6", "pred": 6.0, "correct": false}
+{"i": 160, "response": "14.666... feet", "pred": 14.666, "correct": false}
+{"i": 161, "response": "10 starfish, 6 sea horses, 3 clownfish (Anakin) and 5 starfish, 3 sea horses, 5 clownfish (Locsin)", "pred": 5.0, "correct": false}
+{"i": 162, "response": "$24.00", "pred": 24.0, "correct": false}
+{"i": 163, "response": "$5", "pred": 5.0, "correct": false}
+{"i": 164, "response": "$35/hour * 3 hours = $105 loss in income, so $105 - $90 = $15 more than if she does the taxes herself.", "pred": 15.0, "correct": true}
+{"i": 165, "response": "\u20ac1500 - \u20ac1090 - \u20ac157 - \u20ac74 - \u20ac102 = \u20ac1500 - \u20ac1090 = \u20ac410; \u20ac410 - \u20ac157 = \u20ac253; \u20ac253 - \u20ac74 = \u20ac179; \u20ac179 - \u20ac102 = \u20ac77", "pred": 77.0, "correct": true}
+{"i": 166, "response": "15", "pred": 15.0, "correct": false}
+{"i": 167, "response": "16", "pred": 16.0, "correct": true}
+{"i": 168, "response": "$18", "pred": 18.0, "correct": true}
+{"i": 169, "response": "120 miles", "pred": 120.0, "correct": true}
+{"i": 170, "response": "$25 + $75 + $50 = $150", "pred": 150.0, "correct": true}
+{"i": 171, "response": "80 * 8 + 90 * 6 + 3 * 10 = 640 + 540 + 30 = 1190", "pred": 1190.0, "correct": false}
+{"i": 172, "response": "ally Thirtytwo, and Sally Thirtytwo is 8 years old. So, Sally Four is 8 years old. Granny Red is two times as old as Sally Four, so Granny Red is 16 years old. Sally Two is three years older than Granny Red, so Sally Two is 19 years old. The total age of the four birds is 19 + 16 + 8 + 3 = 46 years.", "pred": 46.0, "correct": false}
+{"i": 173, "response": "$1,800", "pred": 1800.0, "correct": false}
+{"i": 174, "response": "(60 potatoes \u00d7 1.5 minutes per potato) + (60 potatoes \u00d7 0.0833 minutes per potato) = 90 minutes + 5 minutes = 95 minutes", "pred": 95.0, "correct": true}
+{"i": 175, "response": "$3", "pred": 3.0, "correct": false}
+{"i": 176, "response": "60", "pred": 60.0, "correct": false}
+{"i": 177, "response": "1000$", "pred": 1000.0, "correct": false}
+{"i": 178, "response": "Bo has 40 crabs, Monic has 4 fewer crabs than Bo, so Monic has 40 - 4 = 36 crabs. Rani has ten more crabs than Monic, so Rani has 36 + 10 = 46 crabs. The total number of crabs is 40 + 36 + 46 = 122.", "pred": 122.0, "correct": true}
+{"i": 179, "response": "$100", "pred": 100.0, "correct": false}
+{"i": 180, "response": "16", "pred": 16.0, "correct": false}
+{"i": 181, "response": "400", "pred": 400.0, "correct": false}
+{"i": 182, "response": "32", "pred": 32.0, "correct": false}
+{"i": 183, "response": "10 seconds", "pred": 10.0, "correct": false}
+{"i": 184, "response": "100%", "pred": 100.0, "correct": false}
+{"i": 185, "response": "30 apples", "pred": 30.0, "correct": true}
+{"i": 186, "response": "4", "pred": 4.0, "correct": false}
+{"i": 187, "response": "$100.00", "pred": 100.0, "correct": false}
+{"i": 188, "response": "100 bags", "pred": 100.0, "correct": false}
+{"i": 189, "response": "$10.125", "pred": 10.125, "correct": false}
+{"i": 190, "response": "36 peaches", "pred": 36.0, "correct": false}
+{"i": 191, "response": "0.5 pounds of insects per day", "pred": 0.5, "correct": false}
+{"i": 192, "response": "50 trees", "pred": 50.0, "correct": false}
+{"i": 193, "response": "18 pink plastic flamingos", "pred": 18.0, "correct": false}
+{"i": 194, "response": "$0", "pred": 0.0, "correct": false}
+{"i": 195, "response": "$10.56", "pred": 10.56, "correct": false}
+{"i": 196, "response": "0", "pred": 0.0, "correct": false}
+{"i": 197, "response": "23786 - 8417 - 9092 = 6277", "pred": 6277.0, "correct": true}
+{"i": 198, "response": "20 + 3*20 + 20*20 = 20 + 60 + 400 = 480", "pred": 480.0, "correct": false}
+{"i": 199, "response": "$1000 \\times 5 \\text{ cents} = 5000 \\text{ cents} + 1000 \\times 10 \\text{ cents} = 5000 + 10000 = 15000 \\text{ cents}$", "pred": 15000.0, "correct": false}
+{"i": 200, "response": "5 pails in the morning and 6 pails in the afternoon, each pail containing 5 liters. So, 5 pails * 5 liters = 25 liters in the morning and 6 pails * 5 liters = 30 liters in the afternoon. Total water per day is 25 + 30 = 55 liters. The answer is 55.", "pred": 55.0, "correct": true}
+{"i": 201, "response": "$5000 + $2000 = $7000", "pred": 7000.0, "correct": false}
+{"i": 202, "response": "1000 barrels", "pred": 1000.0, "correct": false}
+{"i": 203, "response": "12 slices", "pred": 12.0, "correct": false}
+{"i": 204, "response": "22 + 10 + 6*9 + 2*6 = 22 + 10 + 54 + 12 = 98", "pred": 98.0, "correct": true}
+{"i": 205, "response": "93", "pred": 93.0, "correct": false}
+{"i": 206, "response": "500 kilometers", "pred": 500.0, "correct": false}
+{"i": 207, "response": "25 * 40 + 80 * 40 = 1000 + 3200 = 4200 grams", "pred": 4200.0, "correct": false}
+{"i": 208, "response": "4 cakes on Monday, 3 times that number (12) on Tuesday, and 5 times that number (60) on Wednesday. Total: 4 + 12 + 60 = 76 cakes.", "pred": 76.0, "correct": true}
+{"i": 209, "response": "$30", "pred": 30.0, "correct": false}
+{"i": 210, "response": "4 times", "pred": 4.0, "correct": false}
+{"i": 211, "response": "3", "pred": 3.0, "correct": false}
+{"i": 212, "response": "1.5 miles by 6 miles = 9 miles total perimeter  \n3 miles/hour  \n9 miles / 3 miles/hour = 3 hours  \n\nThe answer is 3", "pred": 3.0, "correct": false}
+{"i": 213, "response": "500", "pred": 500.0, "correct": false}
+{"i": 214, "response": "4 gallons", "pred": 4.0, "correct": false}
+{"i": 215, "response": "$8.00 per hour  \nTotal cost: $320.00 + $32.00 = $352.00  \nNumber of hours: $352.00 / $8.00 = 44 hours  \nThe answer is 44", "pred": 44.0, "correct": true}
+{"i": 216, "response": "$165", "pred": 165.0, "correct": false}
+{"i": 217, "response": "4 roses + 7 dahlias = 11 flowers", "pred": 11.0, "correct": false}
+{"i": 218, "response": "24 years old", "pred": 24.0, "correct": false}
+{"i": 219, "response": "17", "pred": 17.0, "correct": false}
+{"i": 220, "response": "(3 * 10) + (8 * 5) = 30 + 40 = 70 minutes", "pred": 70.0, "correct": true}
+{"i": 221, "response": "120 - 90 = 30 liters left in the tank. Then, 30 liters of rainwater is collected, so the total is 30 + 30 = 60 liters. The answer is 60.", "pred": 60.0, "correct": false}
+{"i": 222, "response": "90 + 40 = 130", "pred": 130.0, "correct": false}
+{"i": 223, "response": "$15000 + $5000 = $20000", "pred": 20000.0, "correct": true}
+{"i": 224, "response": "Carlos pays $90 and Benji pays $90, so together they pay $180.", "pred": 180.0, "correct": true}
+{"i": 225, "response": "6 days by bus and 3 days by car, totaling 9 days.", "pred": 9.0, "correct": true}
+{"i": 226, "response": "40%", "pred": 40.0, "correct": false}
+{"i": 227, "response": "$1.00", "pred": 1.0, "correct": false}
+{"i": 228, "response": "1.5 hours", "pred": 1.5, "correct": false}
+{"i": 229, "response": "3/4 of the remaining melons", "pred": 4.0, "correct": false}
+{"i": 230, "response": "$240,000", "pred": 240000.0, "correct": false}
+{"i": 231, "response": "10 shells", "pred": 10.0, "correct": false}
+{"i": 232, "response": "50 ants and 25 bugs, so total insects are 75", "pred": 75.0, "correct": true}
+{"i": 233, "response": "24", "pred": 24.0, "correct": false}
+{"i": 234, "response": "2", "pred": 2.0, "correct": false}
+{"i": 235, "response": "3", "pred": 3.0, "correct": false}
+{"i": 236, "response": "25", "pred": 25.0, "correct": false}
+{"i": 237, "response": "$60", "pred": 60.0, "correct": false}
+{"i": 238, "response": "Mary is 18 years old, Joan is 23 years old, and Jessa is 20 years old. The sum of their ages is 18 + 23 + 20 = 61.", "pred": 61.0, "correct": false}
+{"i": 239, "response": "1000 - (30% of 1000) - (3/5 of 700) = 1000 - 300 - 420 = 280", "pred": 280.0, "correct": true}
+{"i": 240, "response": "18", "pred": 18.0, "correct": false}
+{"i": 241, "response": "4", "pred": 4.0, "correct": false}
+{"i": 242, "response": "12 hours", "pred": 12.0, "correct": false}
+{"i": 243, "response": "1000 minutes", "pred": 1000.0, "correct": false}
+{"i": 244, "response": "5", "pred": 5.0, "correct": false}
+{"i": 245, "response": "12", "pred": 12.0, "correct": false}
+{"i": 246, "response": "$250 * 6 hours * 4 days * 5 weeks * 0.10 = $250 * 6 * 4 * 5 * 0.10 = $3000", "pred": 3000.0, "correct": false}
+{"i": 247, "response": "$12 + $43 + $15 + $4 + $22 = $96 total cost\n\n$96 divided by 3 = $32 per person\n\nThe answer is $32", "pred": 32.0, "correct": true}
+{"i": 248, "response": "4 bags \u00d7 50 pounds = 200 pounds  \n200 pounds \u00d7 $1.50 = $300", "pred": 300.0, "correct": true}
+{"i": 249, "response": "1200 calories", "pred": 1200.0, "correct": false}

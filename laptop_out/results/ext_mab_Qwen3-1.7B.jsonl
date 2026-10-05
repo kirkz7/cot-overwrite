@@ -1,0 +1,600 @@
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 0, "response": "The author of *Our Mutual Friend* is Charles Dickens. The spouse of Charles Dickens is Catherine Dickens. Therefore, the country of citizenship of the spouse of the", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 1, "response": "The spouse of Igor of Kiev passed away in the city of Kyiv.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 2, "response": "The sport associated with Steve Sax is association football. The birthplace of association football is England. Therefore, the country is England.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 3, "response": "The capital of the country of origin for the sport of association football (football) is London. The Tunisia national football team is associated with the sport of association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 4, "response": "American football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 5, "response": "University of Bucharest", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 6, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 7, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 8, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 9, "response": "The founder of the religion to which John Walsh belongs is the Church of Scotland. The location of work of the founder of the religion is not specified in the given", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 10, "response": "The religious affiliation of the person who founded the Transcendental Meditation movement is Hinduism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 11, "response": "The person with the citizenship of the country to which Edmund Burke belonged is the citizen of the Kingdom of Ireland. Edmund Burke was a citizen of the Kingdom of Ireland", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 12, "response": "The sport associated with John Harkes is association football. The origin of association football is in the country of England. The capital city of England is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 13, "response": "The partner of Laura Bush is associated with the religion of Christianity.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 14, "response": "Andrew Carnegie was a citizen of the United States of America. The name of the head of state in the United States of America is Donald Trump. ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 15, "response": "The capital city from which the Surrey Senior Cup, a sports competition, originated is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 16, "response": "The sport with which Carlos G\u00f3mez is associated is association football. Therefore, the country from which this sport comes is the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 17, "response": "The capital of the country where Madame du Barry held a citizenship is London.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 18, "response": "Mahmoud Abbas", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 19, "response": "The performer of \"Free as a Bird\" is The Beatles. The director/manager of The Beatles is Brian Epstein. The city where Brian Epstein comes from is", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 20, "response": "The work that was created by the individual who created Rand al'Thor is written in the language of English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 21, "response": "The person who founded the religion Karen Armstrong belongs to is not specified in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 22, "response": "The name of the child category of \"Categories\" created by the author is not provided in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 23, "response": "The country of origin of FC Vorskla Poltava is the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 24, "response": "The CEO of the developer of SteamOS is Gabe Newell, and he is a citizen of the United States of America. The capital of the United States", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 25, "response": "The chief executive officer of the developer of F-22 Raptor is Marillyn Hewson.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 26, "response": "The answer is: Joseph Story is employed by Harvard University. Therefore, the chairperson of the organization where Joseph Story was employed is not specified in the given facts", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 27, "response": "London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 28, "response": "The answer is: Botevgrad.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 29, "response": "The city that serves as the capital of the country of citizenship of Country Joe McDonald is San Francisco.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 30, "response": "The performer of the album \"Blood on the Tracks\" is Bob Dylan. The headquarters of the educational institution where Bob Dylan received education is the University of Minnesota.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 31, "response": "Bo Ryan is associated with the sport of basketball. The sport associated with Bo Ryan was first developed in the country of United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 32, "response": "The chief executive officer for the developer of Windows Phone is Tim Cook, and the continent of origin of Tim Cook is United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 33, "response": "The sport played by the Slovakia national football team is association football (soccer). The continent where association football originated is the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 34, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 35, "response": "Vito Corleone was created by Mario Puzo.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 36, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 37, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 38, "response": "The musical genre Michael Mantler is associated with is \"jazz.\" The answer is: **United States of America**.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 39, "response": "American football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 40, "response": "Benjamin Mazar is a citizen of Israel.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 41, "response": "The answer is: English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 42, "response": "The author of \"The Marriage of Figaro\" is Thomas Kyd. According to the facts, Thomas Kyd was born in the city of London. Therefore", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 43, "response": "The sport of baseball was created in the country of United States of America. The head of government in that nation is Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 44, "response": "The sport that Mike D'Antoni specialized in is basketball. The capital of the country where basketball hails from is Chicago, Illinois.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 45, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 46, "response": "The capital city of the country from which the sport of Daniele De Rossi originated is not provided in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 47, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 48, "response": "The sport played by Galwegians RFC was originated in the sport of rugby union. The capital of the country where rugby union was created is England.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 49, "response": "The founder of Shingon Buddhism is K\u016bkai. According to the facts, K\u016bkai speaks the language of Japanese. Therefore, the language", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 50, "response": "The partner of the head of government of the Council of People's Commissars is Nadezhda Krupskaya. Nadezhda Krup", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 51, "response": "The chairperson of the Congolese Party of Labour is Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 52, "response": "The religion associated with the Bagratuni Dynasty came into existence in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 53, "response": "The genre of music associated with the spouse of Roy Rogers is country music. The spouse of Roy Rogers is Dale Evans, and country music is associated with the sport", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 54, "response": "The director/producer of \"666 Park Avenue\" is American Broadcasting Company (ABC). The headquarters of ABC is located in the city of Los Angeles.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 55, "response": "The organization that Ron Dennis works for, first established in the city of Woking.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 56, "response": "The continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 57, "response": "The sport played by the partner of Victoria Beckham is association football (soccer). The partner of Victoria Beckham is David Beckham, who is associated with the sport of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 58, "response": "Sasanian Empire", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 59, "response": "The capital of the country that FC Irtysh Omsk originates from is located in the city of Omsk.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 60, "response": "The performer of the song collection \"Back to Black\" is Amy Winehouse. According to the facts provided, Amy Winehouse died in the city of Camden Town", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 61, "response": "American football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 62, "response": "The original broadcaster of \"The Brady Bunch\" is American Broadcasting Company. The person related to the original broadcaster of \"The Brady Bunch\" is Joe Hockey", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 63, "response": "New York City.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 64, "response": "The author of \"Starship Troopers\" is Robert A. Heinlein. According to the facts provided, Robert A. Heinlein is a citizen of United", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 65, "response": "Narendra Modi", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 66, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 67, "response": "The city that serves as the capital of the country that gave rise to the sport played by Rog\u00e9rio Ceni is **Minneapolis**.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 68, "response": "University of Minnesota", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 69, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 70, "response": "The spouse of Sophia Hawthorne is Nathaniel Hawthorne. The educational institution attended by Nathaniel Hawthorne is Bowdoin College. The headquarters of Bowd", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 71, "response": "Leo Stein is a citizen of United States of America. The name of the chief of state of the country where Leo Stein holds citizenship is Elizabeth II.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 72, "response": "Hal Needham is a citizen of United States of America. The name of the chief of state of the country that Hal Needham belongs to is Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 73, "response": "The AP1000 was made by Westinghouse Electric. The manufacturer of the AP1000 is Westinghouse Electric. The head of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 74, "response": "Portland.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 75, "response": "The performer of \"Aladdin Sane\" is David Bowie. The partner of David Bowie is Iman. Iman is affiliated with the religion of Islam.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 76, "response": "The Prime Minister of Sweden is Stefan L\u00f6fven. The answer is: Sweden.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 77, "response": "The CEO of the developer of AppleScript is Satya Nadella, and the capital city of the country whose citizenship is held by Satya Nadella is New", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 78, "response": "The country of origin for Gala RFC is not specified in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 79, "response": "American football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 80, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 81, "response": "The headquarters of the company where Leonte R\u0103utu worked is located in the city of Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 82, "response": "The head of government of the country of origin of Club Nouveau reports to the president of the country.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 83, "response": "The answer is: The univeristy where Bill Frisell was educated is Berklee College of Music.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 84, "response": "The capital of the country where Charles Messier held citizenship is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 85, "response": "The sportsperson who specializes in Lisa Leslie's position is a football player. Lisa Leslie plays the position of goaltender. The question asks which country the sport", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 86, "response": "The founder of the manufacturer of Ford F-Series is Henry Ford. The capital city of the country where Henry Ford hailed from is Detroit. ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 87, "response": "The sport that Sandy Alderson is associated with is association football (soccer). The capital of the country where association football originated is England. Therefore, the answer", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 88, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 89, "response": "The sport that features the split-finger fastball is baseball. Therefore, the birthplace of the sport is the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 90, "response": "English, Polish, and German.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 91, "response": "The capital of the country where the book \"The Birth of Tragedy\" first came from is located in the city of Frankfurt am Main.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 92, "response": "The manufacturer of Il-2 Shturmovik is Ilyushin. The headquarters location of Ilyushin is located in the city of Moscow", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 93, "response": "The performer of \"Viva Las Vegas\" is Elvis Presley. Elvis Presley's spouse is Priscilla Presley. Priscilla Presley is", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 94, "response": "The country of origin of the sport that the New Firm is related to is not specified in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 95, "response": "Sarit Thanarat is affiliated with the religion of Buddhism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 96, "response": "Gosford, New South Wales.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 97, "response": "rock music", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 98, "response": "The founder of the manufacturer of Ford Transit Connect is Henry Ford. Henry Ford is a citizen of the United States of America. The capital city of the United States", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 99, "response": "The official documents of the country where Alta IF originates are written in the language of English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 0, "response": "United Kingdom.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 1, "response": "The spouse of Igor of Kiev is Olga of Kiev. According to the given facts, Olga of Kiev died in the city of Rodez. Therefore", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 2, "response": "The sport associated with Steve Sax is baseball. The birthplace of baseball is the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 3, "response": "The city serves as the capital of the country of origin for the sport of the Tunisia national football team is **Rodez**.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 4, "response": "The sport that Blair Walsh plays in which he is known for his position on the team is American football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 5, "response": "University of Pisa.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 6, "response": "Bernard Arnault", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 7, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 8, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 9, "response": "The founder of the religion to which John Walsh belongs is located in the city of London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 10, "response": "The religious affiliation of the person who founded the Transcendental Meditation movement is atheism.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 11, "response": "The person with the citizenship of the country to which Edmund Burke belonged is the citizen of the Kingdom of Ireland. Edmund Burke was a citizen of the Kingdom of Ireland", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 12, "response": "The sport associated with John Harkes is association football. The origin of association football is in the country of England. The capital city of England is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 13, "response": "Judaism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 14, "response": "Andrew Carnegie was a citizen of United States of America. The name of the head of state in the country where Andrew Carnegie was a citizen is Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 15, "response": "The capital city from which the Surrey Senior Cup, a sports competition, originated is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 16, "response": "The sport with which Carlos G\u00f3mez is associated is baseball. Therefore, the country from which this sport comes is the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 17, "response": "Rome.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 18, "response": "Mahmoud Abbas.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 19, "response": "The performer of \"Free as a Bird\" is The Beatles, and their director/manager is Brian Epstein. The city where Brian Epstein comes from is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 20, "response": "German", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 21, "response": "The work location of the person who founded the religion Karen Armstrong belongs to is not specified in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 22, "response": "Aristotle", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 23, "response": "The country of origin of FC Vorskla Poltava is the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 24, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 25, "response": "Bernard Arnault", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 26, "response": "Joseph Story is employed by Harvard University. Therefore, the chairperson of the organization where Joseph Story was employed is not specified in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 27, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 28, "response": "The answer is: Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 29, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 30, "response": "The headquarters of the educational institution, where the performer of the album \"Blood on the Tracks\" received education, is located in the city of New York City.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 31, "response": "Bo Ryan is associated with the sport of association football. The sport associated with Bo Ryan was first developed in the country of England. The chief executive of the country", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 32, "response": "The chief executive officer for the developer of Windows Phone is Steve Jobs. The continent of origin of Steve Jobs is United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 33, "response": "The country where the sport played by the Slovakia national football team originated is Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 34, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 35, "response": "Vito Corleone", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 36, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 37, "response": "German", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 38, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 39, "response": "American football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 40, "response": "Benjamin Mazar", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 41, "response": "German.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 42, "response": "Oscar Wilde.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 43, "response": "The sport of baseball was developed in the United States of America. The head of government in that nation is Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 44, "response": "The sport that Mike D'Antoni specialized in is basketball. The capital of the country where basketball is played is Paris. ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 45, "response": "London.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 46, "response": "The capital city of the country from which the sport of Daniele De Rossi originated is not provided in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 47, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 48, "response": "The capital of the country where the sport played by Galwegians RFC was originated is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 49, "response": "Japanese.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 50, "response": "The partner of the head of government of the Council of People's Commissars is Tony Blair. According to the facts, Tony Blair is married to Cherie", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 51, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 52, "response": "The religion associated with the Bagratuni Dynasty came into existence in the city of Constantinople.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 53, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 54, "response": "The answer is: Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 55, "response": "The organization that Ron Dennis works for, McLaren Automotive, was first established in the city of Woking.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 57, "response": "The answer is: Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 58, "response": "The name of the political entity that was established from the successor of the Sasanian Empire is the Islamic Republic of Iran.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 59, "response": "The capital of the country that FC Irtysh Omsk originates from is located in Omsk.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 60, "response": "Camden Town.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 61, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 62, "response": "center", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 63, "response": "Camden Town.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 64, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 65, "response": "Tony Hall, Baron Hall of Birkenhead.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 66, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 67, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 68, "response": "University of Pisa.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 69, "response": "The author of Endymion is John Keats, and the place of death of John Keats is Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 70, "response": "The headquarters of the educational institution attended by the spouse of Sophia Hawthorne is located in the city of Boston.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 71, "response": "Leo Stein", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 72, "response": "Hal Needham", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 73, "response": "The manufacturer of AP1000 is Canadair, and the location where Canadair was founded is Tucson. Therefore, the head of government in", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 74, "response": "Ursula K. Le Guin.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 75, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 76, "response": "Stockholm.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 77, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 78, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 79, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 80, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 81, "response": "The headquarters of the company where Leonte R\u0103utu worked is located in the city of Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 82, "response": "Mahmoud Abbas.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 83, "response": "The answer is: The chairperson of Fatah is Mahmoud Abbas.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 84, "response": "The capital of the country where Charles Messier held citizenship is Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 85, "response": "The sportsperson who specializes in Lisa Leslie's position originally comes from the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 86, "response": "The name of the capital city of the country where the founder of the manufacturer of Ford F-Series hailed from is Toronto.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 87, "response": "The city that serves as the capital of the country where the sport that Sandy Alderson is associated with originated is Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 88, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 89, "response": "The nation is United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 90, "response": "English, Polish, and German.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 91, "response": "The capital of the country where the book \"The Birth of Tragedy\" first came from is located in Berlin.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 92, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 93, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 94, "response": "The country of origin of the sport that the New Firm is related to is United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 95, "response": "Sarit Thanarat is affiliated with the religion of Buddhism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 96, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 97, "response": "rock music", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 98, "response": "The answer is: United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 99, "response": "German.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 0, "response": "The author of *Our Mutual Friend* is Charles Dickens. The spouse of Charles Dickens is Catherine Dickens. The country of citizenship of Catherine Dickens is United Kingdom.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 1, "response": "The spouse of Igor of Kiev is Olga of Kiev. According to the facts provided, Olga of Kiev died in the city of Kyiv. Therefore,", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 2, "response": "The sport associated with Steve Sax is association football. The birthplace of association football is the country of England.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 3, "response": "The capital of the country of origin for the sport of the Tunisia national football team is Rome.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 4, "response": "The sport that Blair Walsh plays in which he is known for his position on the team is association football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 5, "response": "Trinity College Dublin", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 6, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 7, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 8, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 9, "response": "The founder of the religion to which John Walsh belongs is the Catholic Church. The location of work of the founder of the religion is not specified in the given facts", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 10, "response": "The religious affiliation of the person who founded the Transcendental Meditation movement is atheism.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 11, "response": "The person with the citizenship of the country to which Edmund Burke belonged is the citizen of the Kingdom of Ireland. Edmund Burke was a citizen of the Kingdom of Ireland", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 12, "response": "The sport associated with John Harkes is association football. The origin of association football is in the country of England. The capital of England is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 13, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 14, "response": "Emerson Mnangagwa.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 15, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 16, "response": "The sport with which Carlos G\u00f3mez is associated is baseball. The country from which baseball comes is the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 17, "response": "The capital of the country where Madame du Barry held a citizenship is Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 18, "response": "Moshe Kahlon", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 19, "response": "The performer of \"Free as a Bird\" is The Beatles, and their director/manager is Joe Hockey. The city where Joe Hockey comes from is Australia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 20, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 21, "response": "The answer is: Church of Scotland.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 22, "response": "The answer is: Categories.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 23, "response": "The country of origin of FC Vorskla Poltava is the sport of association football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 24, "response": "The CEO of the developer of SteamOS is Bernard Arnault, who is a citizen of France. The capital of France is Paris. Therefore, the answer is", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 25, "response": "Adel al-Jubeir", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 26, "response": "The answer is: Peter Diamandis.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 27, "response": "The performer who is the spouse of Derek Shepherd is Meredith Grey, and the city where she holds citizenship is United States of America. The capital of the country where", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 28, "response": "The answer is: Rome.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 29, "response": "New York City.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 30, "response": "The performer of the album \"Blood on the Tracks\" is Lou Reed, and the educational institution where he received education is the University of Minnesota. The headquarters of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 31, "response": "Bo Ryan is associated with the sport of association football. The sport associated with Bo Ryan was first developed in the country of England. The chief executive of the country", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 32, "response": "The chief executive officer for the developer of Windows Phone is Bernard Arnault. The continent of origin of Bernard Arnault is Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 33, "response": "The sport played by the Slovakia national football team is association football. Association football was created in the country of England. Therefore, the continent where the sport originated is", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 34, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 35, "response": "Vito Corleone was created by Mario Puzo.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 36, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 37, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 38, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 39, "response": "basketball", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 40, "response": "The answer is: Benjamin Mazar.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 41, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 42, "response": "The author of \"The Marriage of Figaro\" is Pierre Beaumarchais. The birthplace of Pierre Beaumarchais is not provided in the given", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 43, "response": "The sport of baseball was created in the country of the United States of America. The head of government in that nation is Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 44, "response": "The sport that Mike D'Antoni specialized in is basketball. The capital of the country where basketball hails from is Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 45, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 46, "response": "The capital city of the country from which the sport of Daniele De Rossi originated is not provided in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 47, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 48, "response": "The sport played by Galwegians RFC is rugby union. The capital of the country where rugby union was originated is England. Therefore, the answer is:", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 49, "response": "The answer is: Japanese.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 50, "response": "The partner of the head of government of the Council of People's Commissars is Meredith Grey. The place of death of Meredith Grey is Gads Hill Place", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 51, "response": "The chairperson of the Congolese Party of Labour is Stephen McNeil.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 52, "response": "The religion associated with the Bagratuni Dynasty came into existence in the city of Constantinople.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 53, "response": "The genre of music associated with the spouse of Roy Rogers is rock music. The spouse of Roy Rogers is John McVie, and rock music is associated with", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 54, "response": "The director/producer of \"666 Park Avenue\" is Canadair, and Canadair is a company founded in the city of Tucson. Therefore", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 55, "response": "The organization that Ron Dennis works for, McLaren Automotive, was first established in the city of Woking.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 57, "response": "The sport played by the partner of Victoria Beckham is association football (soccer). The capital city of the country where association football originated is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 58, "response": "Sasanian Empire", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 59, "response": "The capital of the country that FC Irtysh Omsk originates from is located in Omsk.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 60, "response": "The performer of the song collection \"Back to Black\" is Amy Winehouse. According to the facts provided, Amy Winehouse died in the city of Camden Town", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 61, "response": "American football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 62, "response": "The original broadcaster of \"The Brady Bunch\" is American Broadcasting Company. The person related to the original broadcaster of \"The Brady Bunch\" is Narendra Modi", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 63, "response": "Camden Town.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 64, "response": "Andrzej Sapkowski.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 65, "response": "Dave Filoni is employed by British Broadcasting Corporation.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 66, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 67, "response": "The city that serves as the capital of the country that gave rise to the sport played by Rog\u00e9rio Ceni is Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 68, "response": "University of Southern California", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 69, "response": "Giovanni Boccaccio", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 70, "response": "The spouse of Sophia Hawthorne is Meredith Grey. The educational institution attended by Meredith Grey is Harvard University. The headquarters of Harvard University is located in the city of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 71, "response": "Leo Stein", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 72, "response": "Hal Needham is a citizen of United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 73, "response": "Westinghouse Electric", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 74, "response": "The author of \"A Wizard of Earthsea\" is Pius XII. According to the given facts, Pius XII died in the city of Rome. Therefore", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 75, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 76, "response": "The Prime Minister of Sweden is Stefan L\u00f6fven. The answer is not provided in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 77, "response": "The CEO of the developer of AppleScript is Tim Cook. The capital city of the country whose citizenship is held by Tim Cook is Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 78, "response": "The answer is: Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 79, "response": "basketball", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 80, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 81, "response": "The headquarters of the company where Leonte R\u0103utu worked is not specified in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 82, "response": "The head of government of the country of origin of Club Nouveau reports to the head of state of that country.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 83, "response": "The answer is: The university where Bill Frisell was educated is The University of the Arts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 84, "response": "The capital of the country where Charles Messier held citizenship is Rome.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 85, "response": "The sportsperson who specializes in Lisa Leslie's position is originally from the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 86, "response": "The founder of the manufacturer of Ford F-Series is Henry Ford. The capital city of the country where Henry Ford hailed from is Detroit. ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 87, "response": "The sport that Sandy Alderson is associated with is association football. The origin of association football is in the country of England. Therefore, the capital of the country", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 88, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 89, "response": "The sport that features the split-finger fastball is baseball. The birthplace of baseball is the United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 90, "response": "English, French, and German.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 91, "response": "The capital of the country where the book \"The Birth of Tragedy\" first came from is located in the city of Russellville.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 92, "response": "The manufacturer of Il-2 Shturmovik is Ilyushin. The official language of England is English. Therefore, the answer is English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 93, "response": "The performer of \"Viva Las Vegas\" is Elvis Presley. The spouse of Elvis Presley is Priscilla Presley. Priscilla Presley", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 94, "response": "The sport that the New Firm is related to is association football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 95, "response": "The religious leader responsible for founding the religion to which Sarit Thanarat belongs is Gautama Buddha.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 96, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 97, "response": "rock music", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 98, "response": "The founder of the manufacturer of Ford Transit Connect is Dennis Muilenburg. According to the facts, Dennis Muilenburg is a citizen of United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 99, "response": "The answer is: English.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 0, "response": "goalkeeper is associated with the sport of association football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 1, "response": "Nobuhiro Watsuki is famous for Rurouni Kenshin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 2, "response": "The country where rugby union was created is England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 3, "response": "Ferdowsi is famous for Shahnameh.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 4, "response": "University of California, Berkeley.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 5, "response": "Thomas Kyd.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 6, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 7, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 8, "response": "Japanese", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 9, "response": "Jonathan Rothschild.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 10, "response": "Giuseppe Conte", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 11, "response": "Meredith Grey was performed by Ellen Pompeo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 12, "response": "cornerback", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 13, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 14, "response": "Galileo Galilei.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 15, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 16, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 17, "response": "England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 18, "response": "Microsoft.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 19, "response": "Satya Nadella", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 20, "response": "The chairperson of Harvard University is Lawrence S. Bacow.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 21, "response": "John Knox.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 22, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 23, "response": "Narendra Modi.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 24, "response": "United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 25, "response": "Chang'an.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 26, "response": "Narendra Modi.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 27, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 28, "response": "jazz", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 29, "response": "Guangzhou.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 30, "response": "The country where baseball was created is the United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 31, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 32, "response": "The headquarters of The University of the Arts is located in the city of Philadelphia.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 33, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 34, "response": "The capital of Tang Empire is Chang'an.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 35, "response": "American English.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 36, "response": "Amy Winehouse.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 37, "response": "Tokyo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 38, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 39, "response": "SteamOS was developed by Valve Corporation.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 40, "response": "The headquarters of University of Bucharest is located in the city of Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 41, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 42, "response": "wide receiver", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 43, "response": "Canberra.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 44, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 45, "response": "Pius XII.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 46, "response": "Amy Winehouse.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 47, "response": "Charles Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 48, "response": "The country where basketball was created is the United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 49, "response": "Hal Needham is a citizen of United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 50, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 51, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 52, "response": "Donald Trump.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 53, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 54, "response": "pop music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 55, "response": "Sable is a citizen of United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 57, "response": "Elvis Presley is married to Priscilla Presley.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 58, "response": "Emma Watson", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 59, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 60, "response": "rap rock", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 61, "response": "goalkeeper", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 62, "response": "Jack Dorsey.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 63, "response": "English.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 64, "response": "baseball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 65, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 66, "response": "Stephen McNeil works in the field of politician.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 67, "response": "Dave Filoni is employed by British Broadcasting Corporation.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 68, "response": "North America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 69, "response": "Canadair was founded in the city of Montreal.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 70, "response": "Westinghouse Electric.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 71, "response": "Japan.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 72, "response": "cornerback", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 73, "response": "Tony Blair is married to Alan Jay Lerner.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 74, "response": "John Keats.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 75, "response": "Oscar Wilde.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 76, "response": "Shinz\u014d Abe", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 77, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 78, "response": "flanker is associated with the sport of rugby union.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 79, "response": "Prague.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 80, "response": "goaltender", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 81, "response": "Elizabeth II.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 82, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 83, "response": "Karen Armstrong is affiliated with the religion of Catholic Church.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 84, "response": "Mario Puzo.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 85, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 86, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 87, "response": "Rodez.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 88, "response": "Ardashir I.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 89, "response": "Washington, D.C.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 90, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 91, "response": "Narendra Modi is a citizen of India.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 92, "response": "Victoria Beckham is married to David Beckham.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 93, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 94, "response": "Ferdowsi", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 95, "response": "point guard", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 96, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 97, "response": "Walter Chrysler's child is Walter Percy Chrysler Jr.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 98, "response": "Charles Darwin is married to Emma Darwin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 99, "response": "wide receiver.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 0, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 1, "response": "Nobuhiro Watsuki is famous for Rurouni Kenshin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 2, "response": "The country where rugby union was created is the country of England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 3, "response": "Ferdowsi is famous for Shahnameh.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 4, "response": "University of California, Berkeley", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 5, "response": "Pierre Beaumarchais.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 6, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 7, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 8, "response": "Japanese", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 9, "response": "Jonathan Rothschild.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 10, "response": "Giuseppe Conte", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 11, "response": "Ellen Pompeo", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 12, "response": "The position that Robert Parish plays is quarterback.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 13, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 14, "response": "Galileo Galilei.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 15, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 16, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 17, "response": "The country where association football was created is the country of England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 18, "response": "Steve Jobs.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 19, "response": "Satya Nadella", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 20, "response": "Peter Diamandis.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 21, "response": "John Knox.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 22, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 23, "response": "Tony Hall, Baron Hall of Birkenhead.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 24, "response": "Rodez.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 25, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 26, "response": "Tony Hall, Baron Hall of Birkenhead.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 27, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 28, "response": "post-punk", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 29, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 30, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 31, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 32, "response": "Berkeley.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 33, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 34, "response": "The Christianity was founded in the city of Jerusalem.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 35, "response": "American English.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 36, "response": "The answer is: The Beatles.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 37, "response": "Tokyo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 38, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 39, "response": "Valve Corporation.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 40, "response": "The headquarters of University of Bucharest is located in the city of Ankara.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 41, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 42, "response": "wide receiver", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 43, "response": "Canberra.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 44, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 45, "response": "Ursula K. Le Guin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 46, "response": "The answer is: The Beatles.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 47, "response": "Charles Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 48, "response": "The country where basketball was created is the United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 49, "response": "United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 50, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 51, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 52, "response": "Donald Trump.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 53, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 54, "response": "pop music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 55, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 57, "response": "Priscilla Presley.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 58, "response": "Emma Watson.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 59, "response": "association football", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 60, "response": "rock music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 61, "response": "goalkeeper.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 62, "response": "Jack Dorsey.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 63, "response": "German.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 64, "response": "baseball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 65, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 66, "response": "Stephen McNeil works in the field of politician.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 67, "response": "Dave Filoni is employed by Lucasfilm.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 68, "response": "North America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 69, "response": "Tucson.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 70, "response": "Canadair", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 71, "response": "Japan.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 72, "response": "placekicker", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 73, "response": "Cherie Blair.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 74, "response": "Oscar Wilde.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 75, "response": "Oscar Wilde.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 76, "response": "Shinz\u014d Abe", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 77, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 78, "response": "The sport that flanker is associated with is rugby union.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 79, "response": "Prague.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 80, "response": "center.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 81, "response": "Mikhail Gorbachev.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 82, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 83, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 84, "response": "Mario Puzo", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 85, "response": "Rajanpur.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 86, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 87, "response": "Rodez.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 88, "response": "Walter Chrysler.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 89, "response": "Washington, D.C.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 90, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 91, "response": "India.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 92, "response": "David Beckham.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 93, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 94, "response": "Robert Jordan.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 95, "response": "point guard.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 96, "response": "United Kingdom.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 97, "response": "Walter Percy Chrysler Jr.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 98, "response": "Catherine Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 99, "response": "wide receiver.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 0, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 1, "response": "Nobuhiro Watsuki is famous for Rurouni Kenshin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 2, "response": "The country where rugby union was created is the country of England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 3, "response": "Ferdowsi is famous for Shahnameh.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 4, "response": "University of California, Berkeley", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 5, "response": "Pierre Beaumarchais.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 6, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 7, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 8, "response": "Japanese", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 9, "response": "The name of the current head of the Tucson government is Jonathan Rothschild.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 10, "response": "Giuseppe Conte", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 11, "response": "Ellen Pompeo", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 12, "response": "quarterback", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 13, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 14, "response": "T. S. Eliot.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 15, "response": "Europe.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 16, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 17, "response": "Italy.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 18, "response": "Microsoft.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 19, "response": "Steve Jobs", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 20, "response": "The chairperson of Harvard University is Lawrence S. Bacow.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 21, "response": "John Knox.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 22, "response": "The sport that Galwegians RFC is associated with is rugby union.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 23, "response": "Bob Iger", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 24, "response": "United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 25, "response": "Chang'an.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 26, "response": "The director of British Broadcasting Corporation is Tony Hall, Baron Hall of Birkenhead.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 27, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 28, "response": "post-punk", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 29, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 30, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 31, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 32, "response": "Botevgrad.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 33, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 34, "response": "The city of Jerusalem.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 35, "response": "American English", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 36, "response": "Past Masters was performed by Madonna.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 37, "response": "Tokyo", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 38, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 39, "response": "SteamOS was developed by Valve Corporation.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 40, "response": "The headquarters of University of Bucharest is located in the city of Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 41, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 42, "response": "wide receiver", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 43, "response": "Canberra.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 44, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 45, "response": "The author of A Wizard of Earthsea is T. S. Eliot.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 46, "response": "Free as a Bird was performed by The Beatles.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 47, "response": "Charles Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 48, "response": "The answer is: United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 49, "response": "United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 50, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 51, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 52, "response": "Donald Trump.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 53, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 54, "response": "pop music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 55, "response": "Czech Republic.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 57, "response": "Priscilla Presley.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 58, "response": "Ellen Pompeo", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 59, "response": "association football", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 60, "response": "rock music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 61, "response": "goalkeeper", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 62, "response": "Bernard Arnault", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 63, "response": "English", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 64, "response": "baseball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 65, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 66, "response": "journalist.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 67, "response": "Lucasfilm", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 68, "response": "North America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 69, "response": "Canadair was founded in the city of Montreal.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 70, "response": "Canadair", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 71, "response": "Japan.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 72, "response": "placekicker", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 73, "response": "Tony Blair is married to Cherie Blair.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 74, "response": "John Keats", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 75, "response": "Oscar Wilde.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 76, "response": "Shinz\u014d Abe", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 77, "response": "Stephen McNeil.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 78, "response": "The sport that flanker is associated with is rugby union.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 79, "response": "Prague.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 80, "response": "center.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 81, "response": "Elizabeth II.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 82, "response": "Ferdinand von Richthofen is a citizen of Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 83, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 84, "response": "Mario Puzo", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 85, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 86, "response": "Asia.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 87, "response": "Kyiv.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 88, "response": "Ardashir I.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 89, "response": "Washington, D.C.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 90, "response": "basketball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 91, "response": "India.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 92, "response": "David Beckham.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 93, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 94, "response": "Robert Jordan", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 95, "response": "point guard", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 96, "response": "The country of citizenship of Colin Irwin is United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 97, "response": "Walter Percy Chrysler Jr.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 98, "response": "Emma Darwin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 99, "response": "wide receiver", "correct": true}

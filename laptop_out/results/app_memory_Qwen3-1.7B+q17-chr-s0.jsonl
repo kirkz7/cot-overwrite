@@ -1,0 +1,740 @@
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "S_chrono_dated", "n_tok": 7636, "skipped": false, "response": "25:50"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "S_rev_dated", "n_tok": 7636, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "S_rev_dated_header", "n_tok": 7646, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "S_chrono_nodate", "n_tok": 7566, "skipped": false, "response": "25:50"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "S_rev_nodate", "n_tok": 7566, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "T_newlast_dated", "n_tok": 575, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "T_oldlast_dated", "n_tok": 575, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "T_oldlast_dated_header", "n_tok": 583, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "T_newlast_nodate", "n_tok": 425, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a1eabeb", "cond": "T_oldlast_nodate", "n_tok": 425, "skipped": false, "response": "27:12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "S_chrono_dated", "n_tok": 5223, "skipped": false, "response": "three different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "S_rev_dated", "n_tok": 5223, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "S_rev_dated_header", "n_tok": 5233, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "S_chrono_nodate", "n_tok": 5153, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "S_rev_nodate", "n_tok": 5153, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "T_newlast_dated", "n_tok": 516, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "T_oldlast_dated", "n_tok": 516, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "T_oldlast_dated_header", "n_tok": 524, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "T_newlast_nodate", "n_tok": 366, "skipped": false, "response": "three different ones recently, and I'm always looking for new recommendations."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375", "cond": "T_oldlast_nodate", "n_tok": 366, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "S_chrono_dated", "n_tok": 5208, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "S_rev_dated", "n_tok": 5208, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "S_rev_dated_header", "n_tok": 5218, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "S_chrono_nodate", "n_tok": 5138, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "S_rev_nodate", "n_tok": 5138, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "T_newlast_dated", "n_tok": 449, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "T_oldlast_dated", "n_tok": 449, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "T_oldlast_dated_header", "n_tok": 457, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "T_newlast_nodate", "n_tok": 299, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "830ce83f", "cond": "T_oldlast_nodate", "n_tok": 299, "skipped": false, "response": "Chicago"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "S_chrono_dated", "n_tok": 6224, "skipped": false, "response": "$400,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "S_rev_dated", "n_tok": 6224, "skipped": false, "response": "$350,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "S_rev_dated_header", "n_tok": 6234, "skipped": false, "response": "$350,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "S_chrono_nodate", "n_tok": 6154, "skipped": false, "response": "$400,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "S_rev_nodate", "n_tok": 6154, "skipped": false, "response": "$350,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "T_newlast_dated", "n_tok": 518, "skipped": false, "response": "$400,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "T_oldlast_dated", "n_tok": 518, "skipped": false, "response": "$350,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "T_oldlast_dated_header", "n_tok": 526, "skipped": false, "response": "$350,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "T_newlast_nodate", "n_tok": 368, "skipped": false, "response": "$350,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "852ce960", "cond": "T_oldlast_nodate", "n_tok": 368, "skipped": false, "response": "$400,000"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "S_chrono_dated", "n_tok": 6322, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "S_rev_dated", "n_tok": 6322, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "S_rev_dated_header", "n_tok": 6332, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "S_chrono_nodate", "n_tok": 6252, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "S_rev_nodate", "n_tok": 6252, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "T_newlast_dated", "n_tok": 621, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "T_oldlast_dated", "n_tok": 621, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "T_oldlast_dated_header", "n_tok": 629, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "T_newlast_nodate", "n_tok": 471, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "945e3d21", "cond": "T_oldlast_nodate", "n_tok": 471, "skipped": false, "response": "three times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "S_chrono_dated", "n_tok": 5186, "skipped": false, "response": "Yes, she is using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "S_rev_dated", "n_tok": 5186, "skipped": false, "response": "Yes, she's using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "S_rev_dated_header", "n_tok": 5196, "skipped": false, "response": "Yes, she's using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "S_chrono_nodate", "n_tok": 5116, "skipped": false, "response": "Yes, she is using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "S_rev_nodate", "n_tok": 5116, "skipped": false, "response": "Yes, she's using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "T_newlast_dated", "n_tok": 515, "skipped": false, "response": "Yes, she's using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "T_oldlast_dated", "n_tok": 515, "skipped": false, "response": "Yes, she is using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "T_oldlast_dated_header", "n_tok": 523, "skipped": false, "response": "Yes, she is using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "T_newlast_nodate", "n_tok": 365, "skipped": false, "response": "Yes, she's using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "d7c942c3", "cond": "T_oldlast_nodate", "n_tok": 365, "skipped": false, "response": "Yes, she is using the same grocery list app as me."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "S_chrono_dated", "n_tok": 7627, "skipped": false, "response": "10-12 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "S_rev_dated", "n_tok": 7627, "skipped": false, "response": "5-6 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "S_rev_dated_header", "n_tok": 7637, "skipped": false, "response": "5-6 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "S_chrono_nodate", "n_tok": 7557, "skipped": false, "response": "10-12 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "S_rev_nodate", "n_tok": 7557, "skipped": false, "response": "5-6 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "T_newlast_dated", "n_tok": 573, "skipped": false, "response": "10-12 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "T_oldlast_dated", "n_tok": 573, "skipped": false, "response": "5-6 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "T_oldlast_dated_header", "n_tok": 581, "skipped": false, "response": "5-6 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "T_newlast_nodate", "n_tok": 423, "skipped": false, "response": "10-12 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "71315a70", "cond": "T_oldlast_nodate", "n_tok": 423, "skipped": false, "response": "5-6 hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "S_chrono_dated", "n_tok": 7114, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "S_rev_dated", "n_tok": 7114, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "S_rev_dated_header", "n_tok": 7124, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "S_chrono_nodate", "n_tok": 7044, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "S_rev_nodate", "n_tok": 7044, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "T_newlast_dated", "n_tok": 608, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "T_oldlast_dated", "n_tok": 608, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "T_oldlast_dated_header", "n_tok": 616, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "T_newlast_nodate", "n_tok": 458, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a93", "cond": "T_oldlast_nodate", "n_tok": 458, "skipped": false, "response": "four bikes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "S_chrono_dated", "n_tok": 5640, "skipped": false, "response": "Friday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "S_rev_dated", "n_tok": 5640, "skipped": false, "response": "Thursday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "S_rev_dated_header", "n_tok": 5650, "skipped": false, "response": "Thursday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "S_chrono_nodate", "n_tok": 5570, "skipped": false, "response": "Friday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "S_rev_nodate", "n_tok": 5570, "skipped": false, "response": "Thursday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "T_newlast_dated", "n_tok": 554, "skipped": false, "response": "Friday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "T_oldlast_dated", "n_tok": 554, "skipped": false, "response": "Thursday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "T_oldlast_dated_header", "n_tok": 562, "skipped": false, "response": "Thursday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "T_newlast_nodate", "n_tok": 404, "skipped": false, "response": "Friday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ce6d2d27", "cond": "T_oldlast_nodate", "n_tok": 404, "skipped": false, "response": "Thursday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "S_chrono_dated", "n_tok": 7354, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "S_rev_dated", "n_tok": 7354, "skipped": false, "response": "Hawaii"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "S_rev_dated_header", "n_tok": 7364, "skipped": false, "response": "Hawaii"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "S_chrono_nodate", "n_tok": 7284, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "S_rev_nodate", "n_tok": 7284, "skipped": false, "response": "Hawaii"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "T_newlast_dated", "n_tok": 512, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "T_oldlast_dated", "n_tok": 512, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "T_oldlast_dated_header", "n_tok": 520, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "T_newlast_nodate", "n_tok": 362, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9ea5eabc", "cond": "T_oldlast_nodate", "n_tok": 362, "skipped": false, "response": "Paris"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "S_chrono_dated", "n_tok": 5701, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "S_rev_dated", "n_tok": 5701, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "S_rev_dated_header", "n_tok": 5711, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "S_chrono_nodate", "n_tok": 5631, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "S_rev_nodate", "n_tok": 5631, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "T_newlast_dated", "n_tok": 557, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "T_oldlast_dated", "n_tok": 557, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "T_oldlast_dated_header", "n_tok": 565, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "T_newlast_nodate", "n_tok": 407, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c44", "cond": "T_oldlast_nodate", "n_tok": 407, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "S_chrono_dated", "n_tok": 7025, "skipped": false, "response": "7"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "S_rev_dated", "n_tok": 7025, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "S_rev_dated_header", "n_tok": 7035, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "S_chrono_nodate", "n_tok": 6955, "skipped": false, "response": "7"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "S_rev_nodate", "n_tok": 6955, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "T_newlast_dated", "n_tok": 599, "skipped": false, "response": "7"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "T_oldlast_dated", "n_tok": 599, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "T_oldlast_dated_header", "n_tok": 607, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "T_newlast_nodate", "n_tok": 449, "skipped": false, "response": "7"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a1eacc2a", "cond": "T_oldlast_nodate", "n_tok": 449, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "S_chrono_dated", "n_tok": 8464, "skipped": false, "response": "page 220"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "S_rev_dated", "n_tok": 8464, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "S_rev_dated_header", "n_tok": 8474, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "S_chrono_nodate", "n_tok": 8394, "skipped": false, "response": "page 220"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "S_rev_nodate", "n_tok": 8394, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "T_newlast_dated", "n_tok": 600, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "T_oldlast_dated", "n_tok": 600, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "T_oldlast_dated_header", "n_tok": 608, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "T_newlast_nodate", "n_tok": 450, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "184da446", "cond": "T_oldlast_nodate", "n_tok": 450, "skipped": false, "response": "page 200"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "S_chrono_dated", "n_tok": 5330, "skipped": false, "response": "a team of five engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "S_rev_dated", "n_tok": 5330, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "S_rev_dated_header", "n_tok": 5340, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "S_chrono_nodate", "n_tok": 5260, "skipped": false, "response": "a team of five engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "S_rev_nodate", "n_tok": 5260, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "T_newlast_dated", "n_tok": 547, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "T_oldlast_dated", "n_tok": 547, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "T_oldlast_dated_header", "n_tok": 555, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "T_newlast_nodate", "n_tok": 397, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae", "cond": "T_oldlast_nodate", "n_tok": 397, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "S_chrono_dated", "n_tok": 6363, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "S_rev_dated", "n_tok": 6363, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "S_rev_dated_header", "n_tok": 6373, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "S_chrono_nodate", "n_tok": 6293, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "S_rev_nodate", "n_tok": 6293, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "T_newlast_dated", "n_tok": 573, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "T_oldlast_dated", "n_tok": 573, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "T_oldlast_dated_header", "n_tok": 581, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "T_newlast_nodate", "n_tok": 423, "skipped": false, "response": "25 titles"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4d6b87c8", "cond": "T_oldlast_nodate", "n_tok": 423, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "S_chrono_dated", "n_tok": 4097, "skipped": false, "response": "120 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "S_rev_dated", "n_tok": 4097, "skipped": false, "response": "125 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "S_rev_dated_header", "n_tok": 4107, "skipped": false, "response": "125 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "S_chrono_nodate", "n_tok": 4027, "skipped": false, "response": "120 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "S_rev_nodate", "n_tok": 4027, "skipped": false, "response": "125 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "T_newlast_dated", "n_tok": 508, "skipped": false, "response": "120 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "T_oldlast_dated", "n_tok": 508, "skipped": false, "response": "125 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "T_oldlast_dated_header", "n_tok": 516, "skipped": false, "response": "125 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "T_newlast_nodate", "n_tok": 358, "skipped": false, "response": "120 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0f05491a", "cond": "T_oldlast_nodate", "n_tok": 358, "skipped": false, "response": "125 stars"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "S_chrono_dated", "n_tok": 6267, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "S_rev_dated", "n_tok": 6267, "skipped": false, "response": "6 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "S_rev_dated_header", "n_tok": 6277, "skipped": false, "response": "6 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "S_chrono_nodate", "n_tok": 6197, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "S_rev_nodate", "n_tok": 6197, "skipped": false, "response": "6 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "T_newlast_dated", "n_tok": 586, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "T_oldlast_dated", "n_tok": 586, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "T_oldlast_dated_header", "n_tok": 594, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "T_newlast_nodate", "n_tok": 436, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "08e075c7", "cond": "T_oldlast_nodate", "n_tok": 436, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "S_chrono_dated", "n_tok": 7253, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "S_rev_dated", "n_tok": 7253, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "S_rev_dated_header", "n_tok": 7263, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "S_chrono_nodate", "n_tok": 7183, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "S_rev_nodate", "n_tok": 7183, "skipped": false, "response": "Three sessions"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "T_newlast_dated", "n_tok": 576, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "T_oldlast_dated", "n_tok": 576, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "T_oldlast_dated_header", "n_tok": 584, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "T_newlast_nodate", "n_tok": 426, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f9e8c073", "cond": "T_oldlast_nodate", "n_tok": 426, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "S_chrono_dated", "n_tok": 7305, "skipped": false, "response": "14-24mm or 16-35mm"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "S_rev_dated", "n_tok": 7305, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "S_rev_dated_header", "n_tok": 7315, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "S_chrono_nodate", "n_tok": 7235, "skipped": false, "response": "14-24mm or 16-35mm"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "S_rev_nodate", "n_tok": 7235, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "T_newlast_dated", "n_tok": 668, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "T_oldlast_dated", "n_tok": 668, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "T_oldlast_dated_header", "n_tok": 676, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "T_newlast_nodate", "n_tok": 518, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "41698283", "cond": "T_oldlast_nodate", "n_tok": 518, "skipped": false, "response": "50mm prime lens"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "S_chrono_dated", "n_tok": 6087, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "S_rev_dated", "n_tok": 6087, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "S_rev_dated_header", "n_tok": 6097, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "S_chrono_nodate", "n_tok": 6017, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "S_rev_nodate", "n_tok": 6017, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "T_newlast_dated", "n_tok": 585, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "T_oldlast_dated", "n_tok": 585, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "T_oldlast_dated_header", "n_tok": 593, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "T_newlast_nodate", "n_tok": 435, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f", "cond": "T_oldlast_nodate", "n_tok": 435, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "S_chrono_dated", "n_tok": 5460, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "S_rev_dated", "n_tok": 5460, "skipped": false, "response": "4 MCU films"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "S_rev_dated_header", "n_tok": 5470, "skipped": false, "response": "4 MCU films"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "S_chrono_nodate", "n_tok": 5390, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "S_rev_nodate", "n_tok": 5390, "skipped": false, "response": "4 MCU films"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "T_newlast_dated", "n_tok": 572, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "T_oldlast_dated", "n_tok": 572, "skipped": false, "response": "4"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "T_oldlast_dated_header", "n_tok": 580, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "T_newlast_nodate", "n_tok": 422, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b6019101", "cond": "T_oldlast_nodate", "n_tok": 422, "skipped": false, "response": "4"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "S_chrono_dated", "n_tok": 6360, "skipped": false, "response": "3"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "S_rev_dated", "n_tok": 6360, "skipped": false, "response": "two"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "S_rev_dated_header", "n_tok": 6370, "skipped": false, "response": "two"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "S_chrono_nodate", "n_tok": 6290, "skipped": false, "response": "3"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "S_rev_nodate", "n_tok": 6290, "skipped": false, "response": "two"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "T_newlast_dated", "n_tok": 539, "skipped": false, "response": "3"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "T_oldlast_dated", "n_tok": 539, "skipped": false, "response": "two"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "T_oldlast_dated_header", "n_tok": 547, "skipped": false, "response": "two"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "T_newlast_nodate", "n_tok": 389, "skipped": false, "response": "3"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "45dc21b6", "cond": "T_oldlast_nodate", "n_tok": 389, "skipped": false, "response": "two"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "S_chrono_dated", "n_tok": 6010, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "S_rev_dated", "n_tok": 6010, "skipped": false, "response": "Old Company"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "S_rev_dated_header", "n_tok": 6020, "skipped": false, "response": "Old Company"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "S_chrono_nodate", "n_tok": 5940, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "S_rev_nodate", "n_tok": 5940, "skipped": false, "response": "Old Company"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "T_newlast_dated", "n_tok": 602, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "T_oldlast_dated", "n_tok": 602, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "T_oldlast_dated_header", "n_tok": 610, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "T_newlast_nodate", "n_tok": 452, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5a4f22c0", "cond": "T_oldlast_nodate", "n_tok": 452, "skipped": false, "response": "TechCorp"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "S_chrono_dated", "n_tok": 4928, "skipped": false, "response": "I switched to 1 tablespoon of coffee for every 5 ounces of water."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "S_rev_dated", "n_tok": 4928, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "S_rev_dated_header", "n_tok": 4938, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "S_chrono_nodate", "n_tok": 4858, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "S_rev_nodate", "n_tok": 4858, "skipped": false, "response": "1 tablespoon of coffee for every 5 ounces of water"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "T_newlast_dated", "n_tok": 560, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "T_oldlast_dated", "n_tok": 560, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "T_oldlast_dated_header", "n_tok": 568, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "T_newlast_nodate", "n_tok": 410, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6071bd76", "cond": "T_oldlast_nodate", "n_tok": 410, "skipped": false, "response": "more water per tablespoon of coffee"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "S_chrono_dated", "n_tok": 6653, "skipped": false, "response": "above my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "S_rev_dated", "n_tok": 6653, "skipped": false, "response": "above my living room sofa"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "S_rev_dated_header", "n_tok": 6663, "skipped": false, "response": "above my living room sofa"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "S_chrono_nodate", "n_tok": 6583, "skipped": false, "response": "above my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "S_rev_nodate", "n_tok": 6583, "skipped": false, "response": "above my living room sofa"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "T_newlast_dated", "n_tok": 688, "skipped": false, "response": "above my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "T_oldlast_dated", "n_tok": 688, "skipped": false, "response": "above my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "T_oldlast_dated_header", "n_tok": 696, "skipped": false, "response": "above my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "T_newlast_nodate", "n_tok": 538, "skipped": false, "response": "above my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e493bb7c", "cond": "T_oldlast_nodate", "n_tok": 538, "skipped": false, "response": "above my living room sofa"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "S_chrono_dated", "n_tok": 5926, "skipped": false, "response": "six times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "S_rev_dated", "n_tok": 5926, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "S_rev_dated_header", "n_tok": 5936, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "S_chrono_nodate", "n_tok": 5856, "skipped": false, "response": "six times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "S_rev_nodate", "n_tok": 5856, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "T_newlast_dated", "n_tok": 608, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "T_oldlast_dated", "n_tok": 608, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "T_oldlast_dated_header", "n_tok": 616, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "T_newlast_nodate", "n_tok": 458, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "618f13b2", "cond": "T_oldlast_nodate", "n_tok": 458, "skipped": false, "response": "four times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "S_chrono_dated", "n_tok": 6399, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "S_rev_dated", "n_tok": 6399, "skipped": false, "response": "10 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "S_rev_dated_header", "n_tok": 6409, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "S_chrono_nodate", "n_tok": 6329, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "S_rev_nodate", "n_tok": 6329, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "T_newlast_dated", "n_tok": 591, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "T_oldlast_dated", "n_tok": 591, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "T_oldlast_dated_header", "n_tok": 599, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "T_newlast_nodate", "n_tok": 441, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "72e3ee87", "cond": "T_oldlast_nodate", "n_tok": 441, "skipped": false, "response": "50 episodes"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "S_chrono_dated", "n_tok": 5693, "skipped": false, "response": "Yes, I go to the gym four times a week."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "S_rev_dated", "n_tok": 5693, "skipped": false, "response": "Yes, I go to the gym more frequently than I did previously."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "S_rev_dated_header", "n_tok": 5703, "skipped": false, "response": "Yes, I go to the gym more frequently than I did previously."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "S_chrono_nodate", "n_tok": 5623, "skipped": false, "response": "Yes, I go to the gym four times a week, which is consistent with my previous routine."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "S_rev_nodate", "n_tok": 5623, "skipped": false, "response": "Yes, I go to the gym more frequently than I did previously."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "T_newlast_dated", "n_tok": 531, "skipped": false, "response": "four times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "T_oldlast_dated", "n_tok": 531, "skipped": false, "response": "Yes, I go to the gym on Tuesdays, Thursdays, and Saturdays."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "T_oldlast_dated_header", "n_tok": 539, "skipped": false, "response": "Yes, I go to the gym on Tuesdays, Thursdays, and Saturdays."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "T_newlast_nodate", "n_tok": 381, "skipped": false, "response": "four times a week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c4ea545c", "cond": "T_oldlast_nodate", "n_tok": 381, "skipped": false, "response": "Yes, I go to the gym on Tuesdays, Thursdays, and Saturdays, which is four times a week."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "S_chrono_dated", "n_tok": 6562, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "S_rev_dated", "n_tok": 6562, "skipped": false, "response": "17"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "S_rev_dated_header", "n_tok": 6572, "skipped": false, "response": "17"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "S_chrono_nodate", "n_tok": 6492, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "S_rev_nodate", "n_tok": 6492, "skipped": false, "response": "17"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "T_newlast_dated", "n_tok": 608, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "T_oldlast_dated", "n_tok": 608, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "T_oldlast_dated_header", "n_tok": 616, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "T_newlast_nodate", "n_tok": 458, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "01493427", "cond": "T_oldlast_nodate", "n_tok": 458, "skipped": false, "response": "25"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "S_chrono_dated", "n_tok": 8665, "skipped": false, "response": "30"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "S_rev_dated", "n_tok": 8665, "skipped": false, "response": "20 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "S_rev_dated_header", "n_tok": 8675, "skipped": false, "response": "20 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "S_chrono_nodate", "n_tok": 8595, "skipped": false, "response": "30"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "S_rev_nodate", "n_tok": 8595, "skipped": false, "response": "20 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "T_newlast_dated", "n_tok": 570, "skipped": false, "response": "30 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "T_oldlast_dated", "n_tok": 570, "skipped": false, "response": "20 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "T_oldlast_dated_header", "n_tok": 578, "skipped": false, "response": "20 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "T_newlast_nodate", "n_tok": 420, "skipped": false, "response": "30"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6a27ffc2", "cond": "T_oldlast_nodate", "n_tok": 420, "skipped": false, "response": "20 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "S_chrono_dated", "n_tok": 5564, "skipped": false, "response": "3 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "S_rev_dated", "n_tok": 5564, "skipped": false, "response": "a month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "S_rev_dated_header", "n_tok": 5574, "skipped": false, "response": "a month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "S_chrono_nodate", "n_tok": 5494, "skipped": false, "response": "3 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "S_rev_nodate", "n_tok": 5494, "skipped": false, "response": "a month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "T_newlast_dated", "n_tok": 574, "skipped": false, "response": "3 months now"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "T_oldlast_dated", "n_tok": 574, "skipped": false, "response": "3 months now"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "T_oldlast_dated_header", "n_tok": 582, "skipped": false, "response": "3 months now"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "T_newlast_nodate", "n_tok": 424, "skipped": false, "response": "3 months now"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5", "cond": "T_oldlast_nodate", "n_tok": 424, "skipped": false, "response": "3 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "S_chrono_dated", "n_tok": 7598, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "S_rev_dated", "n_tok": 7598, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "S_rev_dated_header", "n_tok": 7608, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "S_chrono_nodate", "n_tok": 7528, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "S_rev_nodate", "n_tok": 7528, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "T_newlast_dated", "n_tok": 560, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "T_oldlast_dated", "n_tok": 560, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "T_oldlast_dated_header", "n_tok": 568, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "T_newlast_nodate", "n_tok": 410, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "18bc8abd", "cond": "T_oldlast_nodate", "n_tok": 410, "skipped": false, "response": "Kansas City Masterpiece BBQ sauce"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "S_chrono_dated", "n_tok": 7535, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "S_rev_dated", "n_tok": 7535, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "S_rev_dated_header", "n_tok": 7545, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "S_chrono_nodate", "n_tok": 7465, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "S_rev_nodate", "n_tok": 7465, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "T_newlast_dated", "n_tok": 538, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "T_oldlast_dated", "n_tok": 538, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "T_oldlast_dated_header", "n_tok": 546, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "T_newlast_nodate", "n_tok": 388, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "db467c8c", "cond": "T_oldlast_nodate", "n_tok": 388, "skipped": false, "response": "nine months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "S_chrono_dated", "n_tok": 6259, "skipped": false, "response": "4 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "S_rev_dated", "n_tok": 6259, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "S_rev_dated_header", "n_tok": 6269, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "S_chrono_nodate", "n_tok": 6189, "skipped": false, "response": "4 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "S_rev_nodate", "n_tok": 6189, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "T_newlast_dated", "n_tok": 607, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "T_oldlast_dated", "n_tok": 607, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "T_oldlast_dated_header", "n_tok": 615, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "T_newlast_nodate", "n_tok": 457, "skipped": false, "response": "4 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7a87bd0c", "cond": "T_oldlast_nodate", "n_tok": 457, "skipped": false, "response": "3 weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "S_chrono_dated", "n_tok": 5715, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "S_rev_dated", "n_tok": 5715, "skipped": false, "response": "6 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "S_rev_dated_header", "n_tok": 5725, "skipped": false, "response": "6 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "S_chrono_nodate", "n_tok": 5645, "skipped": false, "response": "9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "S_rev_nodate", "n_tok": 5645, "skipped": false, "response": "about 6 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "T_newlast_dated", "n_tok": 542, "skipped": false, "response": "about 9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "T_oldlast_dated", "n_tok": 542, "skipped": false, "response": "about 9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "T_oldlast_dated_header", "n_tok": 550, "skipped": false, "response": "about 9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "T_newlast_nodate", "n_tok": 392, "skipped": false, "response": "about 9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e61a7584", "cond": "T_oldlast_nodate", "n_tok": 392, "skipped": false, "response": "about 9 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "S_chrono_dated", "n_tok": 6705, "skipped": false, "response": "600 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "S_rev_dated", "n_tok": 6705, "skipped": false, "response": "500 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "S_rev_dated_header", "n_tok": 6715, "skipped": false, "response": "500 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "S_chrono_nodate", "n_tok": 6635, "skipped": false, "response": "600"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "S_rev_nodate", "n_tok": 6635, "skipped": false, "response": "500 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "T_newlast_dated", "n_tok": 622, "skipped": false, "response": "600 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "T_oldlast_dated", "n_tok": 622, "skipped": false, "response": "600 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "T_oldlast_dated_header", "n_tok": 630, "skipped": false, "response": "600 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "T_newlast_nodate", "n_tok": 472, "skipped": false, "response": "600 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "1cea1afa", "cond": "T_oldlast_nodate", "n_tok": 472, "skipped": false, "response": "500 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "S_chrono_dated", "n_tok": 7850, "skipped": false, "response": "20 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "S_rev_dated", "n_tok": 7850, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "S_rev_dated_header", "n_tok": 7860, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "S_chrono_nodate", "n_tok": 7780, "skipped": false, "response": "20 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "S_rev_nodate", "n_tok": 7780, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "T_newlast_dated", "n_tok": 538, "skipped": false, "response": "20 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "T_oldlast_dated", "n_tok": 538, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "T_oldlast_dated_header", "n_tok": 546, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "T_newlast_nodate", "n_tok": 388, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ed4ddc30", "cond": "T_oldlast_nodate", "n_tok": 388, "skipped": false, "response": "30 dozen"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "S_chrono_dated", "n_tok": 5348, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "S_rev_dated", "n_tok": 5348, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "S_rev_dated_header", "n_tok": 5358, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "S_chrono_nodate", "n_tok": 5278, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "S_rev_nodate", "n_tok": 5278, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "T_newlast_dated", "n_tok": 531, "skipped": false, "response": "fifth"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "T_oldlast_dated", "n_tok": 531, "skipped": false, "response": "fourth"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "T_oldlast_dated_header", "n_tok": 539, "skipped": false, "response": "fourth"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "T_newlast_nodate", "n_tok": 381, "skipped": false, "response": "fourth"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "8fb83627", "cond": "T_oldlast_nodate", "n_tok": 381, "skipped": false, "response": "four"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "S_chrono_dated", "n_tok": 5298, "skipped": false, "response": "Yes, I finished reading 'The Nightingale' by Kristin Hannah."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "S_rev_dated", "n_tok": 5298, "skipped": false, "response": "No, I put it down temporarily due to its emotional intensity, but I plan to return to it later."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "S_rev_dated_header", "n_tok": 5308, "skipped": false, "response": "No, I put it down temporarily because it was getting too emotional, but I plan to finish it later."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "S_chrono_nodate", "n_tok": 5228, "skipped": false, "response": "Yes, I finished reading 'The Nightingale' by Kristin Hannah."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "S_rev_nodate", "n_tok": 5228, "skipped": false, "response": "No, I put it down temporarily because it was getting too emotional, but I plan to finish it later."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "T_newlast_dated", "n_tok": 654, "skipped": false, "response": "Yes, I finished it."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "T_oldlast_dated", "n_tok": 654, "skipped": false, "response": "No, I put it down temporarily because it was getting too emotional and I was planning to finish it later."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "T_oldlast_dated_header", "n_tok": 662, "skipped": false, "response": "No, I put it down temporarily because it was getting too emotional and I was planning to finish it later."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "T_newlast_nodate", "n_tok": 504, "skipped": false, "response": "Yes, I finished it, but I had to put it down temporarily due to emotional reasons."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "b01defab", "cond": "T_oldlast_nodate", "n_tok": 504, "skipped": false, "response": "No, I put it down temporarily because it was getting too emotional and I was planning to finish it later."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "22d2cb42", "cond": "S_chrono_dated", "n_tok": 5220, "skipped": false, "response": "Main St music shop"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "22d2cb42", "cond": "S_rev_dated", "n_tok": 5220, "skipped": false, "response": "Rhythm Central on Main St"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "22d2cb42", "cond": "S_rev_dated_header", "n_tok": 5230, "skipped": false, "response": "Rhythm Central on Main St"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "22d2cb42", "cond": "S_chrono_nodate", "n_tok": 5150, "skipped": false, "response": "Main St music shop"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "22d2cb42", "cond": "S_rev_nodate", "n_tok": 5150, "skipped": false, "response": "Rhythm Central on Main St"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "S_chrono_dated", "n_tok": 6706, "skipped": false, "response": "132 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "S_rev_dated", "n_tok": 6706, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "S_rev_dated_header", "n_tok": 6716, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "S_chrono_nodate", "n_tok": 6636, "skipped": false, "response": "132 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "S_rev_nodate", "n_tok": 6636, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "T_newlast_dated", "n_tok": 567, "skipped": false, "response": "132 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "T_oldlast_dated", "n_tok": 567, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "T_oldlast_dated_header", "n_tok": 575, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "T_newlast_nodate", "n_tok": 417, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0e4e4c46", "cond": "T_oldlast_nodate", "n_tok": 417, "skipped": false, "response": "124 points"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "S_chrono_dated", "n_tok": 4637, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "S_rev_dated", "n_tok": 4637, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "S_rev_dated_header", "n_tok": 4647, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "S_chrono_nodate", "n_tok": 4567, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "S_rev_nodate", "n_tok": 4567, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "T_newlast_dated", "n_tok": 494, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "T_oldlast_dated", "n_tok": 494, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "T_oldlast_dated_header", "n_tok": 502, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "T_newlast_nodate", "n_tok": 344, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "4b24c848", "cond": "T_oldlast_nodate", "n_tok": 344, "skipped": false, "response": "five tops"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "S_chrono_dated", "n_tok": 4571, "skipped": false, "response": "$420"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "S_rev_dated", "n_tok": 4571, "skipped": false, "response": "$350"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "S_rev_dated_header", "n_tok": 4581, "skipped": false, "response": "$350"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "S_chrono_nodate", "n_tok": 4501, "skipped": false, "response": "$420"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "S_rev_nodate", "n_tok": 4501, "skipped": false, "response": "$350"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "T_newlast_dated", "n_tok": 560, "skipped": false, "response": "$420"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "T_oldlast_dated", "n_tok": 560, "skipped": false, "response": "$420"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "T_oldlast_dated_header", "n_tok": 568, "skipped": false, "response": "$420"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "T_newlast_nodate", "n_tok": 410, "skipped": false, "response": "$420"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7e974930", "cond": "T_oldlast_nodate", "n_tok": 410, "skipped": false, "response": "$350"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "S_chrono_dated", "n_tok": 6778, "skipped": false, "response": "10 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "S_rev_dated", "n_tok": 6778, "skipped": false, "response": "5 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "S_rev_dated_header", "n_tok": 6788, "skipped": false, "response": "5 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "S_chrono_nodate", "n_tok": 6708, "skipped": false, "response": "10 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "S_rev_nodate", "n_tok": 6708, "skipped": false, "response": "5 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "T_newlast_dated", "n_tok": 670, "skipped": false, "response": "10 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "T_oldlast_dated", "n_tok": 670, "skipped": false, "response": "5 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "T_oldlast_dated_header", "n_tok": 678, "skipped": false, "response": "5 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "T_newlast_nodate", "n_tok": 520, "skipped": false, "response": "10 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "603deb26", "cond": "T_oldlast_nodate", "n_tok": 520, "skipped": false, "response": "5 times"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "S_chrono_dated", "n_tok": 5226, "skipped": false, "response": "Monday, Wednesday, and Friday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "S_rev_dated", "n_tok": 5226, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "S_rev_dated_header", "n_tok": 5236, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "S_chrono_nodate", "n_tok": 5156, "skipped": false, "response": "Monday, Wednesday, and Friday"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "S_rev_nodate", "n_tok": 5156, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "T_newlast_dated", "n_tok": 496, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "T_oldlast_dated", "n_tok": 496, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "T_oldlast_dated_header", "n_tok": 504, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "T_newlast_nodate", "n_tok": 346, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "59524333", "cond": "T_oldlast_nodate", "n_tok": 346, "skipped": false, "response": "7:00 pm on Mondays, Wednesdays, and Fridays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "S_chrono_dated", "n_tok": 6382, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "S_rev_dated", "n_tok": 6382, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "S_rev_dated_header", "n_tok": 6392, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "S_chrono_nodate", "n_tok": 6312, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "S_rev_nodate", "n_tok": 6312, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "T_newlast_dated", "n_tok": 553, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "T_oldlast_dated", "n_tok": 553, "skipped": false, "response": "10 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "T_oldlast_dated_header", "n_tok": 561, "skipped": false, "response": "10 videos"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "T_newlast_nodate", "n_tok": 403, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5831f84d", "cond": "T_oldlast_nodate", "n_tok": 403, "skipped": false, "response": "12"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "eace081b", "cond": "S_chrono_dated", "n_tok": 6643, "skipped": false, "response": "Oahu, with a focus on relaxing on a beach not too crowded"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "eace081b", "cond": "S_rev_dated", "n_tok": 6643, "skipped": false, "response": "Oahu"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "eace081b", "cond": "S_rev_dated_header", "n_tok": 6653, "skipped": false, "response": "Oahu"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "eace081b", "cond": "S_chrono_nodate", "n_tok": 6573, "skipped": false, "response": "Oahu, specifically Kaimana Beach, Kailua Beach, Lanikai Beach, and Shark's Cove"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "eace081b", "cond": "S_rev_nodate", "n_tok": 6573, "skipped": false, "response": "Oahu"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "S_chrono_dated", "n_tok": 6355, "skipped": false, "response": "32"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "S_rev_dated", "n_tok": 6355, "skipped": false, "response": "27 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "S_rev_dated_header", "n_tok": 6365, "skipped": false, "response": "27 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "S_chrono_nodate", "n_tok": 6285, "skipped": false, "response": "32"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "S_rev_nodate", "n_tok": 6285, "skipped": false, "response": "27 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "T_newlast_dated", "n_tok": 548, "skipped": false, "response": "32 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "T_oldlast_dated", "n_tok": 548, "skipped": false, "response": "27 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "T_oldlast_dated_header", "n_tok": 556, "skipped": false, "response": "27 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "T_newlast_nodate", "n_tok": 398, "skipped": false, "response": "32"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "affe2881", "cond": "T_oldlast_nodate", "n_tok": 398, "skipped": false, "response": "27 different species"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "S_chrono_dated", "n_tok": 5892, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "S_rev_dated", "n_tok": 5892, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "S_rev_dated_header", "n_tok": 5902, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "S_chrono_nodate", "n_tok": 5822, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "S_rev_nodate", "n_tok": 5822, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "T_newlast_dated", "n_tok": 520, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "T_oldlast_dated", "n_tok": 520, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "T_oldlast_dated_header", "n_tok": 528, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "T_newlast_nodate", "n_tok": 370, "skipped": false, "response": "Premier Silver"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "50635ada", "cond": "T_oldlast_nodate", "n_tok": 370, "skipped": false, "response": "Premier Gold"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "S_chrono_dated", "n_tok": 6744, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "S_rev_dated", "n_tok": 6744, "skipped": false, "response": "27 minutes and 45 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "S_rev_dated_header", "n_tok": 6754, "skipped": false, "response": "27 minutes and 45 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "S_chrono_nodate", "n_tok": 6674, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "S_rev_nodate", "n_tok": 6674, "skipped": false, "response": "27 minutes and 45 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "T_newlast_dated", "n_tok": 689, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "T_oldlast_dated", "n_tok": 689, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "T_oldlast_dated_header", "n_tok": 697, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "T_newlast_nodate", "n_tok": 539, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "e66b632c", "cond": "T_oldlast_nodate", "n_tok": 539, "skipped": false, "response": "26 minutes and 30 seconds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "S_chrono_dated", "n_tok": 5578, "skipped": false, "response": "20"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "S_rev_dated", "n_tok": 5578, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "S_rev_dated_header", "n_tok": 5588, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "S_chrono_nodate", "n_tok": 5508, "skipped": false, "response": "20"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "S_rev_nodate", "n_tok": 5508, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "T_newlast_dated", "n_tok": 605, "skipped": false, "response": "20"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "T_oldlast_dated", "n_tok": 605, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "T_oldlast_dated_header", "n_tok": 613, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "T_newlast_nodate", "n_tok": 455, "skipped": false, "response": "20"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37", "cond": "T_oldlast_nodate", "n_tok": 455, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "S_chrono_dated", "n_tok": 4889, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "S_rev_dated", "n_tok": 4889, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "S_rev_dated_header", "n_tok": 4899, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "S_chrono_nodate", "n_tok": 4819, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "S_rev_nodate", "n_tok": 4819, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "T_newlast_dated", "n_tok": 503, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "T_oldlast_dated", "n_tok": 503, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "T_oldlast_dated_header", "n_tok": 511, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "T_newlast_nodate", "n_tok": 353, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e", "cond": "T_oldlast_nodate", "n_tok": 353, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "S_chrono_dated", "n_tok": 6225, "skipped": false, "response": "about two hours each day"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "S_rev_dated", "n_tok": 6225, "skipped": false, "response": "about an hour each day"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "S_rev_dated_header", "n_tok": 6235, "skipped": false, "response": "about an hour each day"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "S_chrono_nodate", "n_tok": 6155, "skipped": false, "response": "about two hours each day"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "S_rev_nodate", "n_tok": 6155, "skipped": false, "response": "about an hour each day"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "T_newlast_dated", "n_tok": 538, "skipped": false, "response": "about two hours"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "T_oldlast_dated", "n_tok": 538, "skipped": false, "response": "an hour"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "T_oldlast_dated_header", "n_tok": 546, "skipped": false, "response": "an hour"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "T_newlast_nodate", "n_tok": 388, "skipped": false, "response": "about an hour"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cc5ded98", "cond": "T_oldlast_nodate", "n_tok": 388, "skipped": false, "response": "an hour"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "S_chrono_dated", "n_tok": 4950, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "S_rev_dated", "n_tok": 4950, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "S_rev_dated_header", "n_tok": 4960, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "S_chrono_nodate", "n_tok": 4880, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "S_rev_nodate", "n_tok": 4880, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "T_newlast_dated", "n_tok": 508, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "T_oldlast_dated", "n_tok": 508, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "T_oldlast_dated_header", "n_tok": 516, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "T_newlast_nodate", "n_tok": 358, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dfde3500", "cond": "T_oldlast_nodate", "n_tok": 358, "skipped": false, "response": "Wednesday evening"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "S_chrono_dated", "n_tok": 6256, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "S_rev_dated", "n_tok": 6256, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "S_rev_dated_header", "n_tok": 6266, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "S_chrono_nodate", "n_tok": 6186, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "S_rev_nodate", "n_tok": 6186, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "T_newlast_dated", "n_tok": 570, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "T_oldlast_dated", "n_tok": 570, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "T_oldlast_dated_header", "n_tok": 578, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "T_newlast_nodate", "n_tok": 420, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "69fee5aa", "cond": "T_oldlast_nodate", "n_tok": 420, "skipped": false, "response": "37 coins"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "S_chrono_dated", "n_tok": 7028, "skipped": false, "response": "a single free night's stay at any Hilton property, with the requirement of 40,000 points for a standard room reward night"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "S_rev_dated", "n_tok": 7028, "skipped": false, "response": "a single free night's stay at any Hilton property"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "S_rev_dated_header", "n_tok": 7038, "skipped": false, "response": "a single free night's stay at any Hilton property"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "S_chrono_nodate", "n_tok": 6958, "skipped": false, "response": "A single free night's stay at any Hilton property requires around 5,000-10,000 points, depending on the hotel category and the specific room type."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "S_rev_nodate", "n_tok": 6958, "skipped": false, "response": "a single free night's stay at any Hilton property"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "T_newlast_dated", "n_tok": 507, "skipped": false, "response": "two free night's stays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "T_oldlast_dated", "n_tok": 507, "skipped": false, "response": "two free night's stays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "T_oldlast_dated_header", "n_tok": 515, "skipped": false, "response": "two free night's stays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "T_newlast_nodate", "n_tok": 357, "skipped": false, "response": "two free night's stays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "7401057b", "cond": "T_oldlast_nodate", "n_tok": 357, "skipped": false, "response": "two free night's stays"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "S_chrono_dated", "n_tok": 7692, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "S_rev_dated", "n_tok": 7692, "skipped": false, "response": "5 pounds in the past month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "S_rev_dated_header", "n_tok": 7702, "skipped": false, "response": "5 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "S_chrono_nodate", "n_tok": 7622, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "S_rev_nodate", "n_tok": 7622, "skipped": false, "response": "5 pounds in the past month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "T_newlast_dated", "n_tok": 642, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "T_oldlast_dated", "n_tok": 642, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "T_oldlast_dated_header", "n_tok": 650, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "T_newlast_nodate", "n_tok": 492, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "cf22b7bf", "cond": "T_oldlast_nodate", "n_tok": 492, "skipped": false, "response": "10 pounds"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "S_chrono_dated", "n_tok": 5406, "skipped": false, "response": "1300"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "S_rev_dated", "n_tok": 5406, "skipped": false, "response": "1250 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "S_rev_dated_header", "n_tok": 5416, "skipped": false, "response": "1250 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "S_chrono_nodate", "n_tok": 5336, "skipped": false, "response": "1300"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "S_rev_nodate", "n_tok": 5336, "skipped": false, "response": "1250 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "T_newlast_dated", "n_tok": 541, "skipped": false, "response": "1300"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "T_oldlast_dated", "n_tok": 541, "skipped": false, "response": "1250 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "T_oldlast_dated_header", "n_tok": 549, "skipped": false, "response": "1250 followers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "T_newlast_nodate", "n_tok": 391, "skipped": false, "response": "1300"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "a2f3aa27", "cond": "T_oldlast_nodate", "n_tok": 391, "skipped": false, "response": "1250"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "S_chrono_dated", "n_tok": 6932, "skipped": false, "response": "3-2 record"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "S_rev_dated", "n_tok": 6932, "skipped": false, "response": "3-2"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "S_rev_dated_header", "n_tok": 6942, "skipped": false, "response": "5-2 record"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "S_chrono_nodate", "n_tok": 6862, "skipped": false, "response": "3-2"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "S_rev_nodate", "n_tok": 6862, "skipped": false, "response": "5-2 record"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "T_newlast_dated", "n_tok": 547, "skipped": false, "response": "3-2"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "T_oldlast_dated", "n_tok": 547, "skipped": false, "response": "5-2 record"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "T_oldlast_dated_header", "n_tok": 555, "skipped": false, "response": "5-2 record"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "T_newlast_nodate", "n_tok": 397, "skipped": false, "response": "3-2"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c7dc5443", "cond": "T_oldlast_nodate", "n_tok": 397, "skipped": false, "response": "5-2 record"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "S_chrono_dated", "n_tok": 7126, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "S_rev_dated", "n_tok": 7126, "skipped": false, "response": "4"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "S_rev_dated_header", "n_tok": 7136, "skipped": false, "response": "4"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "S_chrono_nodate", "n_tok": 7056, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "S_rev_nodate", "n_tok": 7056, "skipped": false, "response": "4"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "T_newlast_dated", "n_tok": 578, "skipped": false, "response": "4 projects"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "T_oldlast_dated", "n_tok": 578, "skipped": false, "response": "4 projects"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "T_oldlast_dated_header", "n_tok": 586, "skipped": false, "response": "4 projects"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "T_newlast_nodate", "n_tok": 428, "skipped": false, "response": "4 projects"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "06db6396", "cond": "T_oldlast_nodate", "n_tok": 428, "skipped": false, "response": "5 projects"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "S_chrono_dated", "n_tok": 9282, "skipped": false, "response": "Ford F-150 pickup truck"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "S_rev_dated", "n_tok": 9282, "skipped": false, "response": "Ford Mustang Shelby GT350R"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "S_rev_dated_header", "n_tok": 9292, "skipped": false, "response": "Ford Mustang Shelby GT350R"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "S_chrono_nodate", "n_tok": 9212, "skipped": false, "response": "Ford F-150 pickup truck"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "S_rev_nodate", "n_tok": 9212, "skipped": false, "response": "Ford Mustang Shelby GT350R"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "T_newlast_dated", "n_tok": 551, "skipped": false, "response": "Ford F-150 pickup truck"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "T_oldlast_dated", "n_tok": 551, "skipped": false, "response": "Ford F-150 pickup truck"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "T_oldlast_dated_header", "n_tok": 559, "skipped": false, "response": "Ford Mustang Shelby GT350R model"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "T_newlast_nodate", "n_tok": 401, "skipped": false, "response": "Ford Mustang Shelby GT350R model"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "3ba21379", "cond": "T_oldlast_nodate", "n_tok": 401, "skipped": false, "response": "Ford Mustang Shelby GT350R"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "S_chrono_dated", "n_tok": 6164, "skipped": false, "response": "level 150"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "S_rev_dated", "n_tok": 6164, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "S_rev_dated_header", "n_tok": 6174, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "S_chrono_nodate", "n_tok": 6094, "skipped": false, "response": "level 150"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "S_rev_nodate", "n_tok": 6094, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "T_newlast_dated", "n_tok": 539, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "T_oldlast_dated", "n_tok": 539, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "T_oldlast_dated_header", "n_tok": 547, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "T_newlast_nodate", "n_tok": 389, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "9bbe84a2", "cond": "T_oldlast_nodate", "n_tok": 389, "skipped": false, "response": "level 100"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "S_chrono_dated", "n_tok": 5459, "skipped": false, "response": "9 largemouth bass"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "S_rev_dated", "n_tok": 5459, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "S_rev_dated_header", "n_tok": 5469, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "S_chrono_nodate", "n_tok": 5389, "skipped": false, "response": "9 largemouth bass"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "S_rev_nodate", "n_tok": 5389, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "T_newlast_dated", "n_tok": 524, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "T_oldlast_dated", "n_tok": 524, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "T_oldlast_dated_header", "n_tok": 532, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "T_newlast_nodate", "n_tok": 374, "skipped": false, "response": "7"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "10e09553", "cond": "T_oldlast_nodate", "n_tok": 374, "skipped": false, "response": "9"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "S_chrono_dated", "n_tok": 5824, "skipped": false, "response": "7:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "S_rev_dated", "n_tok": 5824, "skipped": false, "response": "8:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "S_rev_dated_header", "n_tok": 5834, "skipped": false, "response": "8:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "S_chrono_nodate", "n_tok": 5754, "skipped": false, "response": "7:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "S_rev_nodate", "n_tok": 5754, "skipped": false, "response": "8:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "T_newlast_dated", "n_tok": 651, "skipped": false, "response": "8:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "T_oldlast_dated", "n_tok": 651, "skipped": false, "response": "7:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "T_oldlast_dated_header", "n_tok": 659, "skipped": false, "response": "7:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "T_newlast_nodate", "n_tok": 501, "skipped": false, "response": "8:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "dad224aa", "cond": "T_oldlast_nodate", "n_tok": 501, "skipped": false, "response": "7:30 am"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "S_chrono_dated", "n_tok": 6276, "skipped": false, "response": "5 out of 10 people"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "S_rev_dated", "n_tok": 6276, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "S_rev_dated_header", "n_tok": 6286, "skipped": false, "response": "5"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "S_chrono_nodate", "n_tok": 6206, "skipped": false, "response": "5 out of 10 people"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "S_rev_nodate", "n_tok": 6206, "skipped": false, "response": "5 women out of 10 people"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "T_newlast_dated", "n_tok": 556, "skipped": false, "response": "6 women out of 10 people"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "T_oldlast_dated", "n_tok": 556, "skipped": false, "response": "half of them are women"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "T_oldlast_dated_header", "n_tok": 564, "skipped": false, "response": "half of them are women"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "T_newlast_nodate", "n_tok": 406, "skipped": false, "response": "6 women out of 10 people"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "ba61f0b9", "cond": "T_oldlast_nodate", "n_tok": 406, "skipped": false, "response": "half of them are women"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "S_chrono_dated", "n_tok": 5889, "skipped": false, "response": "Yes, I have a spare screwdriver that I picked up when organizing my computer desk."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "S_rev_dated", "n_tok": 5889, "skipped": false, "response": "Yes, I have a spare screwdriver that I picked up when I organized my computer desk."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "S_rev_dated_header", "n_tok": 5899, "skipped": false, "response": "Yes, I have a spare screwdriver that I picked up when I organized my computer desk."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "S_chrono_nodate", "n_tok": 5819, "skipped": false, "response": "Yes, I have a spare screwdriver that I picked up when organizing my computer desk."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "S_rev_nodate", "n_tok": 5819, "skipped": false, "response": "Yes, you have a spare screwdriver that you picked up when organizing your computer desk."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "T_newlast_dated", "n_tok": 483, "skipped": false, "response": "Yes, I have a spare screwdriver that I picked up when I organized my computer desk a while back."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "T_oldlast_dated", "n_tok": 483, "skipped": false, "response": "No, I misplaced the small screwdriver for upgrading the RAM."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "T_oldlast_dated_header", "n_tok": 491, "skipped": false, "response": "Yes, I have a spare screwdriver for opening up my laptop."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "T_newlast_nodate", "n_tok": 333, "skipped": false, "response": "Yes, I have a spare screwdriver that I picked up when I organized my computer desk a while back."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "42ec0761", "cond": "T_oldlast_nodate", "n_tok": 333, "skipped": false, "response": "Yes, I have a spare screwdriver."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "S_chrono_dated", "n_tok": 4889, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "S_rev_dated", "n_tok": 4889, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "S_rev_dated_header", "n_tok": 4899, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "S_chrono_nodate", "n_tok": 4819, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "S_rev_nodate", "n_tok": 4819, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "T_newlast_dated", "n_tok": 514, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "T_oldlast_dated", "n_tok": 514, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "T_oldlast_dated_header", "n_tok": 522, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "T_newlast_nodate", "n_tok": 364, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "5c40ec5b", "cond": "T_oldlast_nodate", "n_tok": 364, "skipped": false, "response": "twice"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "S_chrono_dated", "n_tok": 5580, "skipped": false, "response": "increase"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "S_rev_dated", "n_tok": 5580, "skipped": false, "response": "increase"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "S_rev_dated_header", "n_tok": 5590, "skipped": false, "response": "increase"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "S_chrono_nodate", "n_tok": 5510, "skipped": false, "response": "increase"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "S_rev_nodate", "n_tok": 5510, "skipped": false, "response": "increase"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "T_newlast_dated", "n_tok": 569, "skipped": false, "response": "increased"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "T_oldlast_dated", "n_tok": 569, "skipped": false, "response": "increased"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "T_oldlast_dated_header", "n_tok": 577, "skipped": false, "response": "increased"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "T_newlast_nodate", "n_tok": 419, "skipped": false, "response": "increased"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "c6853660", "cond": "T_oldlast_nodate", "n_tok": 419, "skipped": false, "response": "increased"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "S_chrono_dated", "n_tok": 6676, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "S_rev_dated", "n_tok": 6676, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "S_rev_dated_header", "n_tok": 6686, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "S_chrono_nodate", "n_tok": 6606, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "S_rev_nodate", "n_tok": 6606, "skipped": false, "response": "five trips"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "T_newlast_dated", "n_tok": 570, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "T_oldlast_dated", "n_tok": 570, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "T_oldlast_dated_header", "n_tok": 578, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "T_newlast_nodate", "n_tok": 420, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "26bdc477", "cond": "T_oldlast_nodate", "n_tok": 420, "skipped": false, "response": "five"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "S_chrono_dated", "n_tok": 5964, "skipped": false, "response": "the Air Fryer"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "S_rev_dated", "n_tok": 5964, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "S_rev_dated_header", "n_tok": 5974, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "S_chrono_nodate", "n_tok": 5894, "skipped": false, "response": "An Air Fryer"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "S_rev_nodate", "n_tok": 5894, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "T_newlast_dated", "n_tok": 455, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "T_oldlast_dated", "n_tok": 455, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "T_oldlast_dated_header", "n_tok": 463, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "T_newlast_nodate", "n_tok": 305, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0977f2af", "cond": "T_oldlast_nodate", "n_tok": 305, "skipped": false, "response": "Instant Pot"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375_abs", "cond": "S_chrono_dated", "n_tok": 5223, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375_abs", "cond": "S_rev_dated", "n_tok": 5223, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375_abs", "cond": "S_rev_dated_header", "n_tok": 5233, "skipped": false, "response": "None"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375_abs", "cond": "S_chrono_nodate", "n_tok": 5153, "skipped": false, "response": "four different ones"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "6aeb4375_abs", "cond": "S_rev_nodate", "n_tok": 5153, "skipped": false, "response": "three"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae_abs", "cond": "S_chrono_dated", "n_tok": 5322, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae_abs", "cond": "S_rev_dated", "n_tok": 5322, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae_abs", "cond": "S_rev_dated_header", "n_tok": 5332, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae_abs", "cond": "S_chrono_nodate", "n_tok": 5252, "skipped": false, "response": "a team of five engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "031748ae_abs", "cond": "S_rev_nodate", "n_tok": 5252, "skipped": false, "response": "4 engineers"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f_abs", "cond": "S_chrono_dated", "n_tok": 6084, "skipped": false, "response": "Every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f_abs", "cond": "S_rev_dated", "n_tok": 6084, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f_abs", "cond": "S_rev_dated_header", "n_tok": 6094, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f_abs", "cond": "S_chrono_nodate", "n_tok": 6014, "skipped": false, "response": "Every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2698e78f_abs", "cond": "S_rev_nodate", "n_tok": 6014, "skipped": false, "response": "every two weeks"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5_abs", "cond": "S_chrono_dated", "n_tok": 5564, "skipped": false, "response": "3 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5_abs", "cond": "S_rev_dated", "n_tok": 5564, "skipped": false, "response": "a month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5_abs", "cond": "S_rev_dated_header", "n_tok": 5574, "skipped": false, "response": "a month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5_abs", "cond": "S_chrono_nodate", "n_tok": 5494, "skipped": false, "response": "3 months"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "2133c1b5_abs", "cond": "S_rev_nodate", "n_tok": 5494, "skipped": false, "response": "a month"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37_abs", "cond": "S_chrono_dated", "n_tok": 5577, "skipped": false, "response": "20"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37_abs", "cond": "S_rev_dated", "n_tok": 5577, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37_abs", "cond": "S_rev_dated_header", "n_tok": 5587, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37_abs", "cond": "S_chrono_nodate", "n_tok": 5507, "skipped": false, "response": "20"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "0ddfec37_abs", "cond": "S_rev_nodate", "n_tok": 5507, "skipped": false, "response": "15"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e_abs", "cond": "S_chrono_dated", "n_tok": 4882, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e_abs", "cond": "S_rev_dated", "n_tok": 4882, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e_abs", "cond": "S_rev_dated_header", "n_tok": 4892, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e_abs", "cond": "S_chrono_nodate", "n_tok": 4812, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "f685340e_abs", "cond": "S_rev_nodate", "n_tok": 4812, "skipped": false, "response": "every other week"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "S_chrono_dated", "n_tok": 7129, "skipped": false, "response": "Yes, I have a road bike, a hybrid bike, and a new gravel bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "S_rev_dated", "n_tok": 7129, "skipped": false, "response": "Yes, I have a road bike and a hybrid bike, making a total of three bikes."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "S_rev_dated_header", "n_tok": 7139, "skipped": false, "response": "Yes, I have a road bike and a hybrid bike, making a total of three bikes."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "S_chrono_nodate", "n_tok": 7059, "skipped": false, "response": "Yes, I have a road bike, a hybrid bike, and a new gravel bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "S_rev_nodate", "n_tok": 7059, "skipped": false, "response": "Yes, I have a road bike and a hybrid bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "T_newlast_dated", "n_tok": 654, "skipped": false, "response": "Yes, I have a road bike, a hybrid bike, and a new gravel bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "T_oldlast_dated", "n_tok": 654, "skipped": false, "response": "Yes, I have a road bike and a hybrid bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "T_oldlast_dated_header", "n_tok": 662, "skipped": false, "response": "Yes, I have a road bike and a hybrid bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "T_newlast_nodate", "n_tok": 504, "skipped": false, "response": "Yes, I have a road bike and a new hybrid bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "89941a94", "cond": "T_oldlast_nodate", "n_tok": 504, "skipped": false, "response": "Yes, I have a road bike and a hybrid bike."}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "S_chrono_dated", "n_tok": 5701, "skipped": false, "response": "in a shoe rack"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "S_rev_dated", "n_tok": 5701, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "S_rev_dated_header", "n_tok": 5711, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "S_chrono_nodate", "n_tok": 5631, "skipped": false, "response": "in a shoe rack"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "S_rev_nodate", "n_tok": 5631, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "T_newlast_dated", "n_tok": 536, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "T_oldlast_dated", "n_tok": 536, "skipped": false, "response": "under my bed for storage"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "T_oldlast_dated_header", "n_tok": 544, "skipped": false, "response": "under my bed for storage"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "T_newlast_nodate", "n_tok": 386, "skipped": false, "response": "under my bed"}
+{"model": "Qwen3-1.7B@runs/q17-chr-s0/final", "qid": "07741c45", "cond": "T_oldlast_nodate", "n_tok": 386, "skipped": false, "response": "under my bed"}
