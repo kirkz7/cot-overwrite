@@ -20,3 +20,6 @@ results/*
 # temporary files from atomic writes
 *.tmp
 *.old
+
+# results collected on the 8 GB laptop for the USB stick (LAPTOP.md)
+laptop_out/

@@ -21,6 +21,7 @@
 | `REVIEW.md` | 每日复盘清单和复盘日志 |
 | `STAGE_REPORT*.md` | 10-01 的阶段报告（只含 CoT 阶段，已过时） |
 | `paper/` | 论文初稿（10-04，给导师看）：`main.tex`、`refs.bib`（`make_bib.py` 从 arXiv 接口生成）、`figures/`（`make_figures.py` 生成，新结果出来后重跑即可补上）、`lint_tex.py`（本机没有 LaTeX，靠它做静态检查）、`overleaf_upload.zip`（Overleaf 直接导入） |
+| `LAPTOP.md`、`queue_laptop.ps1` | 笔记本（4060，8 GB）队列：只跑 Qwen3-1.7B 的确认阶段生成，结果用 U 盘拷回，判分在台式机 |
 | `docs/archive/` | 过时的计划、报告、旧笔记 |
 
 ## 3. 论文主线与现状（10-04）
@@ -121,6 +122,7 @@
 ## 9. 还没做 / 待用户决定
 - **规模**：32B / 70B（租卡），前沿模型 API 抽查。
 - **确认阶段**（暂停中，`resume_queue.ps1 -Queue queue14`）：Qwen3-4B 种子 1–2，1.7B 和 Phi 的全套测试。
+  - **10-05**：1.7B 部分（原模型 + 种子 0 两组，外部测试 / 记忆 / 日志 / agent）挪到笔记本跑（`queue_laptop.ps1`，见 `LAPTOP.md`），命令与 queue14 相同；LongMemEval 判分拷回后在台式机做。笔记本 8 GB 放不下 4B / Phi（bf16）、14B 判分器和训练。
 - **探索**：E6（判分器的位置偏差）、E7b（用探针看思考模式）、activation patching、E9（小规模强化学习，5080 上只能跑短上下文）。
 - **数据规则**：ConvoMem 人设 0–49 用于开发，50–99 留出。ConvoMem 长版和 PersonaMem 从 10-04 起冻结。MemConflict、LoCoMo 测完原模型后冻结；MemoryAgentBench-CR 已在 LoRA 预注册测试和 E7 里用过、训练数据也有它的风格，**不算留出**（数据在 `D:\datasets\`、HF 缓存）。MAB-CR 32k 版（3.75 万 token）、BEAM、LongMemEval-V2 要等租卡。LongMemEval 已经看过，用于修复时要单独标注。BEAM 已下载，但 16 GB 显存放不下。
 - **写作前必须补读**：10-04 已核实 Tang et al.（2605.30233）、Qiao（2603.12271）、LCA（2605.26795）、2605.07307、2605.22870、Liao & Liang（2608.24460）及新发现的 DZ-TDPO（2512.03704）、StateMemBench（2608.19652）；**还没读**：Test of Time（2406.09170）、2510.22752、Wallat et al. 2026（无编号）。
