@@ -1,7 +1,7 @@
 # Exploration queue (EXPLORE_PLAN.md). Small, exploratory runs; same resume rules as queue14.ps1:
 # a job whose "end <name> exit=0" line is already in logs\queue15.log is skipped, and every script skips
 # the items already in its output file. To pause / continue: pause_queue.ps1 / resume_queue.ps1.
-$env:HF_HOME = 'D:\hf_cache'; $env:HF_HUB_OFFLINE = '1'; $env:PYTHONIOENCODING = 'utf-8'
+$env:HF_HOME = 'D:\hf_cache'; $env:HF_HUB_OFFLINE = '1'; $env:HF_DATASETS_OFFLINE = '1'; $env:PYTHONIOENCODING = 'utf-8'
 $env:HF_HUB_DISABLE_SYMLINKS_WARNING = '1'
 Set-Location $PSScriptRoot
 $py = '.\.venv\Scripts\python.exe'
@@ -93,6 +93,10 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('e17_mc_judge', 'explore_extmem.py judge --parse v2'))
 [void]$jobs.Add(@('e17_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('e17_lc_judge', 'explore_longconv.py judge'))
+# no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
+[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B,Qwen3-4B@runs/e13-dec/final'))
+[void]$jobs.Add(@('gen_e17',      'explore_general.py run --models Qwen3-4B@runs/e17-dec/final'))
+[void]$jobs.Add(@('gen_q4',       'explore_general.py run --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
 # E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
 [void]$jobs.Add(@('e15_rule', 'explore_order_rule.py run --models Qwen3-4B,Phi-4-mini'))
 # E13 control
