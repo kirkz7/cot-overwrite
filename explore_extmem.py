@@ -31,7 +31,7 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
-from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader
+from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text
 import run_app_memory as mem
 from explore_probe import LONG_SDPA, sdpa_kernel
 from run_app_fix import generate
@@ -41,6 +41,7 @@ MC_PATH = r"D:\datasets\memconflict\Step4_4.jsonl"
 LOCOMO_PATH = r"D:\datasets\locomo\locomo10.json"
 MAB_GLOB = r"D:\hf_cache\hub\datasets--ai-hyz--MemoryAgentBench\snapshots\*\data\Conflict_Resolution-*.parquet"
 CONDS = ("chrono", "rev", "retr")
+JUDGED = {"v1": "_judged.jsonl", "v2": "_judged2.jsonl"}   # parse rule v1: first line after "Answer:"; v2: app_common.answer_text
 BUDGET = {"memconf": 64, "memconf_rs": 64, "mabcr": 24, "locomo": 32}
 
 
@@ -270,10 +271,12 @@ Reply with a single letter: A or B."""
 def judge(args):
     tok = model = None
     for path in sorted(glob.glob(OUT.format("*"))):
-        if path.endswith("_judged.jsonl"):
+        if "_judged" in path:
             continue
         rows = [r for r in load_jsonl(path) if r["task"] in ("memconf", "memconf_rs", "locomo")]
-        w = JsonlAppender(path.replace(".jsonl", "_judged.jsonl"), key=lambda r: (r["task"], r["id"], r["cond"]))
+        if args.parse == "v2":       # E17 pre-registration: the judge sees all text after the last "Answer:"
+            rows = [r | {"response": answer_text(r["full"])} for r in rows if r["task"] in ("memconf", "memconf_rs")]
+        w = JsonlAppender(path.replace(".jsonl", JUDGED[args.parse]), key=lambda r: (r["task"], r["id"], r["cond"]))
         todo = [r for r in rows if (r["task"], r["id"], r["cond"]) not in w.done]
         print(os.path.basename(path), "judge todo", len(todo), flush=True)
         if todo and model is None:
@@ -294,11 +297,11 @@ def judge(args):
 def stats(args):
     from analyze_lora import boot
     for path in sorted(glob.glob(OUT.format("*"))):
-        if path.endswith("_judged.jsonl"):
+        if "_judged" in path:
             continue
         name = os.path.basename(path)[len("extmem_"):-len(".jsonl")]
         raw = pd.DataFrame(load_jsonl(path))
-        jp = path.replace(".jsonl", "_judged.jsonl")
+        jp = path.replace(".jsonl", JUDGED[args.parse])
         if os.path.exists(jp):
             j = pd.DataFrame(load_jsonl(jp)).set_index(["task", "id", "cond"])
             raw = raw.set_index(["task", "id", "cond"])
@@ -347,6 +350,7 @@ def main():
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B,Phi-4-mini")
     ap.add_argument("--tasks", default="", help="comma list of memconf,mabcr,locomo (default: all)")
+    ap.add_argument("--parse", choices=["v1", "v2"], default="v1", help="judge / stats: answer parse rule (v2 from E17 on)")
     ap.add_argument("--budget", type=int, default=None, help="new tokens; default per task (64/24/32); E13 readers: 320")
     args = ap.parse_args()
     {"run": run, "judge": judge, "stats": stats, "check": check}[args.stage](args)

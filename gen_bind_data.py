@@ -98,7 +98,8 @@ def make_sample(rng, wiki, mode, idx, genres):
     prompt = f"{INTRO[genre]}\n\n" + "\n\n".join(blocks) + f"\n\n{q} Answer with the value only."
     reasoning = "\n".join([f"Records about {a}, from oldest to newest:"] + [f"- {d}: {v}" for d, v in chain] + [line, f"Answer: {ans}"])
     return dict(id=idx, fmt=genre, dated=True, order=order, header=False, qtype=qtype, k=k, n_blocks=n_blocks,
-                long=long_doc, prompt=prompt, answer=reasoning, final=ans)
+                long=long_doc, prompt=prompt, answer=reasoning, final=ans,
+                _v2=dict(a=a, vals=vals, chain=chain, j=j, wv=wv, when=when.strftime(fmt), docs=blocks, intro=INTRO[genre]))
 
 
 def main():
@@ -121,7 +122,7 @@ def main():
             path = f"data_train/bind_{mode}_{split}.jsonl"
             with open(path, "w", encoding="utf-8") as f:
                 for r in out:
-                    f.write(json.dumps(r) + "\n")
+                    f.write(json.dumps({k: v for k, v in r.items() if k != "_v2"}) + "\n")   # _v2: for gen_bind_data_v2.py
             print(path, len(out), hashlib.sha256(open(path, "rb").read()).hexdigest()[:16].upper())
         r = rows["decoupled"]
         print("  genre", dict(collections.Counter(x["fmt"] for x in r)), "| order", dict(collections.Counter(x["order"] for x in r)),

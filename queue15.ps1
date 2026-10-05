@@ -85,6 +85,14 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # E16 (review 10-04): MemConflict items whose update session restates the old value, base 4B (boundary control)
 [void]$jobs.Add(@('ext_rs_q4', 'explore_extmem.py run --tasks memconf_rs --models Qwen3-4B'))
 [void]$jobs.Add(@('ext_judge_rs', 'explore_extmem.py judge'))
+# E17 (10-05, user: retrain): binding data with change questions + format instructions; judge parse v2 (whole answer)
+[void]$jobs.Add(@('ext_judge_v2', 'explore_extmem.py judge --parse v2'))
+[void]$jobs.Add(@('e17_train', 'train_lora.py --model Qwen3-4B --out runs/e17-dec --data data_train/bind2_decoupled_train.jsonl --val data_train/bind2_decoupled_val.jsonl --dev data_train/bind2_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'))
+[void]$jobs.Add(@('e17_format', 'explore_format_eval.py run --models Qwen3-4B@runs/e17-dec/final,Qwen3-4B@runs/e13-dec/final'))
+[void]$jobs.Add(@('e17_mc', 'explore_extmem.py run --tasks memconf --budget 320 --models Qwen3-4B@runs/e17-dec/final'))
+[void]$jobs.Add(@('e17_mc_judge', 'explore_extmem.py judge --parse v2'))
+[void]$jobs.Add(@('e17_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e17-dec/final'))
+[void]$jobs.Add(@('e17_lc_judge', 'explore_longconv.py judge'))
 # E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
 [void]$jobs.Add(@('e15_rule', 'explore_order_rule.py run --models Qwen3-4B,Phi-4-mini'))
 # E13 control

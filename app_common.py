@@ -111,6 +111,14 @@ def answer(tok, model, prompt, max_new=24):
     return out.strip().split("\n")[0]
 
 
+def answer_text(full):
+    """Parse rule v2 (10-05, EXPLORE_PLAN E17), for judge-scored answers: ALL text after the last "Answer:" (not only its
+    first line); without "Answer:", the whole response. v1 kept only the first line, so a sentence split over lines or a
+    list-then-answer output reached the judge cut short."""
+    full = full.strip()
+    return " ".join((full.rsplit("Answer:", 1)[1] if "Answer:" in full else full).split())
+
+
 def first_number(text):
     m = NUM.search(text.replace(",", ""))
     return float(m.group()) if m else None
