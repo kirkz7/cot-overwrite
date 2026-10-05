@@ -207,7 +207,7 @@ def items():
 
 @torch.no_grad()
 def run(args):
-    its = items()
+    its = [x for x in items() if not args.tasks or x["task"] in args.tasks.split(",")]
     for name in args.models.split(","):
         w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
         todo = [x for x in its if (x["task"], x["id"], x["cond"]) not in w.done]
@@ -220,8 +220,9 @@ def run(args):
             p = chat_prompt(tok, x["user"])
             n = len(tok(p, add_special_tokens=False).input_ids)
             with sdpa_kernel(LONG_SDPA, set_priority=True):
-                text = generate(tok, model, p, BUDGET[x["task"]])
-            resp = text.strip().split("\n")[0]
+                text = generate(tok, model, p, args.budget or BUDGET[x["task"]])
+            # reasoning-trained readers (E13): the answer is the text after the last "Answer:"; others: the first line
+            resp = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.strip().split("\n")[0]
             rec = {k: v for k, v in x.items() if k != "user"}
             rec.update(n_tok=n, response=resp, full=text)
             if x["task"] == "mabcr":
@@ -339,6 +340,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B,Phi-4-mini")
+    ap.add_argument("--tasks", default="", help="comma list of memconf,mabcr,locomo (default: all)")
+    ap.add_argument("--budget", type=int, default=None, help="new tokens; default per task (64/24/32); E13 readers: 320")
     args = ap.parse_args()
     {"run": run, "judge": judge, "stats": stats, "check": check}[args.stage](args)
 
