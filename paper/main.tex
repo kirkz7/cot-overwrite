@@ -36,7 +36,7 @@
 When a context states several values of the same quantity---a variable rewritten in a chain of thought, a user's city across chat sessions, a setting across commits---a language model must decide which value is current.
 We show that open models largely decide by position: the value written last is read as the newest, even when explicit dates, step numbers or ordering statements say otherwise.
 In shuffled chains of thought that overwrite a variable eight times, all 14 open models we test (1.7B--14B parameters) answer with the last-presented value in 89.5--99.5\% of items.
-On long-term memory benchmarks with dated sessions, showing the sessions newest first costs 18--63 accuracy points; on MemConflict, a third-party conflict benchmark, merely ordering the same sessions by retrieval relevance costs Qwen3-4B 19 points (75.4$\rightarrow$56.2).
+On long-term memory questions that require choosing between an older and a newer state, showing dated sessions newest first costs 18--63 accuracy points; on MemConflict, a third-party conflict benchmark, merely ordering the same sessions by retrieval relevance costs Qwen3-4B 19 points (75.4$\rightarrow$56.2).
 The effect is specific: on PersonaMem and on LoCoMo temporal questions, which can be answered without resolving a conflict between an older and a newer state, order has no effect.
 We trace two failure points.
 In short contexts the model internally represents which value is newer (linear-probe accuracy $\approx$98\%) but does not use it, and misleading order is copied into the model's own reasoning and then read by position.
@@ -89,7 +89,7 @@ For the training study and for every experiment after the initial chain-of-thoug
 
 \paragraph{Order and position in context.}
 Models use information at the beginning and end of long contexts better than in the middle \citep{liu2024lost}, and permuting premises hurts reasoning \citep{chen2024premise}.
-Studies of shuffled chains of thought report that answers often survive shuffling \citep{lca2026,cotorder2026a} while small models read arithmetic CoT by copying numbers by position \citep{cotorder2026b}; our CoT experiments reconcile these results: order matters exactly when a state is overwritten.
+Studies of shuffled chains of thought report that answers largely survive sentence- or line-level shuffling \citep{lca2026,cotorder2026a}. Closest to our chain-of-thought results, \citet{cotorder2026b} show that small (1--3B) models read arithmetic CoT by copying whichever number occupies the trailing position, which is why shuffled arithmetic CoT keeps most of its accuracy, while shuffling breaks BBH tracking and logical deduction and larger models become more selective. Our CoT experiments extend this positional readout to states that are overwritten several times and pit it against explicit time cues; unlike them, we find logical deduction almost unaffected by shuffling (\S\ref{sec:cot}), consistent with our account that order matters when a state is overwritten.
 For many in-context updates of a key--value list, retrieval of the latest value degrades and early values intrude \citep{qiao2026retrieval,chattaraj2026first}; with up to 64 overwrites inside a chain of thought we instead observe a stable recency default.
 \citet{fitch2026gemma} find that source framing outweighs position for two short conflicting documents, with a primacy rather than a recency bias for Gemma; \citet{fatemi2024tot} show that fact order affects temporal reasoning; and in-context retrieval shows recency and contiguity biases reminiscent of human episodic memory \citep{temporalbias2025}.
 When recency and another cue are perfectly correlated in training, which rule a model adopts is not determined by the data \citep{liao2026shortcut}; this is why we make the cues conflict.
@@ -106,7 +106,9 @@ LongMemEval \citep{wu2025longmemeval} includes knowledge-update questions and so
 MemConflict \citep{tao2026memconflict} evaluates memory systems under dynamic, static and conditional conflicts but does not vary presentation order.
 RoutePrism \citep{xu2026routeprism} varies the order in which records are \emph{ingested} into a memory and shows that retention policies then keep different evidence; our effect arises with all evidence present.
 \citet{jiang2026render} show that much of the gain of structured memories comes from a readable, time-ordered rendering, in line with our results.
+StateMemBench \citep{fan2026statemem} isolates ``state drift'', acting on a superseded value that is present in context, and lists ``trust the most recent mention'' among the lazy reader policies it is designed to trap.
 Memory systems add explicit state labels \citep{shi2026atma} or temporal indexes \citep{liu2026segtree}, and Supersede \citep{patel2026supersede} trains a bounded-memory agent to keep current values, noting that frontier models resolve explicit updates by a last-mention scan---the heuristic we show fails out of chronological order.
+Some fixes build the same assumption in: DZ-TDPO \citep{liao2025dztdpo} adds an attention bias that decays with token distance, assuming that valid updates sit at the trailing edge of the context, which our results suggest would hurt under newest-first or retrieval order.
 
 % =====================================================================
 \section{Setup}
@@ -131,7 +133,7 @@ They agree whenever $\pi$ is increasing in $\tau$, which is the case in almost a
 
 \paragraph{Measures.}
 We report accuracy and the \emph{stale rate} (the answer is a superseded value).
-The \emph{order effect} is the paired difference $\Delta = \mathrm{Acc}(\textsc{order}) - \mathrm{Acc}(\chrono)$ over the same items, with a 95\% paired bootstrap interval (10{,}000 resamples of items).
+The \emph{order effect} is the paired difference $\Delta = \mathrm{Acc}(\textsc{order}) - \mathrm{Acc}(\chrono)$ over the same items, with a 95\% paired bootstrap interval (10{,}000 resamples of items). Because items in the held-out sets share contexts (ConvoMem personas, PersonaMem's 33 shared contexts, MemConflict users, LoCoMo's 10 conversations), we also resampled these clusters; no conclusion changes, and the intervals widen by at most 1.5 points.
 Free-text answers are graded by Qwen3-14B (4-bit) given the question, the reference answer and, where available, the older and newer evidence, choosing among \emph{up to date}, \emph{stale}, and \emph{other}; agreement with string matching on the items where it applies is 91.4\% on LongMemEval and 90.8\% on MemConflict.
 
 \paragraph{Models.}
@@ -178,7 +180,7 @@ Variables assigned once are read correctly after shuffling ($\geq$99.5\%), but a
 The reader is not guessing: it picks the value presented last in 93.5--98.5\% of items for $k \geq 2$, and in 93--99\% of items in a longer variant with up to $k=64$ overwrites, where the first-presented value is never chosen for $k \geq 2$.
 At $k=8$, all 14 models pick the last-presented value in 89.5--99.5\% of shuffled items, while variables assigned once stay above 96.8\%. Larger models resist at small $k$ (at $k=2$: Qwen3-14B 73.5\%, OLMo-2-13B-Instruct 87.0\%) but not at $k=8$ (97.0\% and 95.0\%). Base, SFT, DPO and RL-tuned OLMo-2-7B checkpoints behave alike (93.5--99.0\% at $k=8$), and a natural-language version (``Box E has 41 marbles'') behaves identically.
 On the model's own reasoning for all usable BBH tasks, shuffling breaks 39\% of answers on tasks that we labeled in advance as tracking updated state, and 4\% on the others.
-This reconciles reports that shuffled CoT preserves answers \citep{lca2026,cotorder2026a} with reports that it does not \citep{cotorder2026b}: order matters exactly when a state is overwritten.
+This is consistent with reports that shuffled CoT preserves answers \citep{lca2026,cotorder2026a}, which concern reasoning whose states are mostly not overwritten: order matters when a state is overwritten. On logical deduction we see a small drop (five objects: 89.6\%$\rightarrow$85.3\%), whereas \citet{cotorder2026b} report a large one; the settings differ (line-level shuffling of the model's own CoT here, 1--3B readers there).
 
 \begin{figure}[t]
   \centering
@@ -221,7 +223,7 @@ From ConvoMem's changing-evidence questions \citep{convomem2025} we take persona
 
 \paragraph{MemConflict.}
 MemConflict simulates users whose state changes over four years of monthly sessions and asks, after each update, how an attribute changed.
-We use the 240 dynamic-conflict questions (at most 8 per simulated user) in which the old value is \emph{not} restated in the update session but appears in an earlier one, so that the answer requires relating two sessions by their dates.
+We use dynamic-conflict questions in which the old value is \emph{not} restated in the update session but appears in an earlier one, so that the answer requires relating two sessions by their dates. Of the 2{,}946 dynamic-conflict questions, 1{,}794 are of medium difficulty, 1{,}208 name exactly one changed attribute, 967 do not restate the old value in the update session, and 850 also mention it in an earlier session; we sample at most 8 per simulated user (240 questions). The complementary questions whose update session restates the old value (241, of which 219 remain after the same construction and sampling) form a control set \pending{E16: order effect on the restated items}.
 Each context contains the earlier session, the update session, and the sessions just before the update (2--6 sessions; median 18.5k tokens), each headed by its date.
 Qwen3-4B answers 75.4\% correctly in chronological order, 36.2\% newest first ($\Delta = -39.2$\ci{-46.2}{-31.7}) and 56.2\% in BM25 retrieval order ($\Delta = -19.2$\ci{-25.4}{-13.3}); the share of answers that state the change in the wrong direction rises from 5.0\% to 37.9\% and 18.3\%.
 Retrieval order places the update session first in 86 of 240 items; accuracy is 48.8\% on these and 60.4\% on the rest.
@@ -234,7 +236,8 @@ Since the retrieved sessions are the same in both conditions, re-sorting retriev
 On the 238 PersonaMem questions about how a preference evolved and why it changed (16k--30k tokens), presenting sessions newest first has no effect (Qwen3-4B $+2.5$\ci{-0.8}{5.9}; Phi-4-mini $-0.4$\ci{-3.8}{2.9}); the same holds for the five other question types (largest drop $-5.9$, $n=17$), and for the 321 LoCoMo temporal questions ($+1.2$\ci{-3.7}{5.9} newest first, $+3.1$\ci{-1.6}{7.8} in retrieval order).
 Diagnostics explain why (Appendix~\ref{app:pmdiag}).
 PersonaMem's update questions can be answered without the history: matching words between the user's final message and the options alone selects the correct option for 80.8\% of the ``why did the preference change'' questions (Qwen3-4B with the full history: 83.8\%), and Phi-4-mini answers ``how did the preference evolve'' questions equally well with and without the history (51.8\% both).
-The remaining question types do depend on the history, but none requires choosing between an older and a newer state; neither do LoCoMo's temporal questions, which ask when an event happened.
+One cell does not fit cleanly: by the criterion we wrote in advance (accuracy without the history at least 10 points below accuracy with it), Qwen3-4B's ``why did it change'' questions do depend on the history ($-12.1$ points without it, but only when a persona description is shown; with the final message and options alone it scores 80.8\% against 83.8\%), and newest-first order still does not hurt; we report this cell as unresolved rather than explained.
+The remaining question types do depend on the history, but none requires choosing between an older and a newer state; neither do LoCoMo's temporal questions, which ask when an event happened (we have not validated the judge on LoCoMo's free-form date answers as we did on the other sets).
 These null results delimit the phenomenon rather than contradict it: order matters when a conflicting older state is present and time is expressed only by position or by dates far from the facts.
 
 \paragraph{A confound.}
@@ -383,7 +386,7 @@ PersonaMem (held out) & newest first & 73.9 & \pending{} & 56.3 & $-17.6$\ci{-24
 \end{figure}
 
 \subsection{Thinking mode}
-Combining thinking mode with the answer-only decoupled LoRA raises newest-first LongMemEval accuracy from 52.6\% to 62.8\% ($+10.3$\ci{0.0}{20.5}; control 42.3\%), short of our pre-registered $+15$. The thinking itself changes little (the newer date is still mentioned first in 69\% of newest-first traces, versus 82\% without the LoRA); most of the gain comes from reading the answer off the thinking (answers agree with the thinking's conclusion in 74\% versus 58\% of items).
+Combining thinking mode with the answer-only decoupled LoRA raises newest-first accuracy on LongMemEval (seen) from 52.6\% to 62.8\% ($+10.3$\ci{0.0}{20.5}; control 42.3\%), short of our pre-registered $+15$. The thinking itself changes little (the newer date is still mentioned first in 69\% of newest-first traces, versus 82\% without the LoRA); most of the gain comes from reading the answer off the thinking (answers agree with the thinking's conclusion in 74\% versus 58\% of items).
 
 % =====================================================================
 \section{Discussion and limitations}
@@ -401,6 +404,7 @@ Memory and retrieval pipelines should present retrieved evidence in chronologica
   \item \textbf{Seeds and exploratory status.} The selection fix is pre-registered but reported for one seed; the confirmation seeds are paused. The mechanism experiments and the binding fix are exploratory, with thresholds written before running.
   \item \textbf{Judges and parsing.} Free-text answers are graded by Qwen3-14B (91\% agreement with string matching where both apply). For PersonaMem we corrected a parser after seeing that it failed on answers ending in ``The best answer is (d).''; the rule uses only the format, and no prediction of the base models changed.
   \item \textbf{Constructed orders.} Newest-first presentation is constructed by us, although it mirrors common interfaces; retrieval order is not, and it already costs 19 points.
+  \item \textbf{Rule or recency?} Every test so far asks for the \emph{current} value, so a reader that maps later text to later time and a reader that simply favors whatever is closest to the answer position make the same prediction. Questions about the \emph{earliest} value separate them (the first predicts the first-presented record, the second the last-presented one); this experiment is pre-registered but not yet run \pending{E15}. If the second account holds, our claim narrows from ``read as newer'' to ``position overrides explicit time''.
   \item \textbf{Long contexts remain unsolved.} At 25k tokens, writing a dated list first truncates and omits evidence, and neither fix brings LongMemEval to its chronological accuracy.
 \end{itemize}
 

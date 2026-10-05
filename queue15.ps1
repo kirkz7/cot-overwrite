@@ -82,6 +82,9 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # MemConflict fix test moved up (user, 10-04 21:20): E13 dec / control, reasoning budget 320
 [void]$jobs.Add(@('ext_e13_mc', 'explore_extmem.py run --tasks memconf --budget 320 --models Qwen3-4B@runs/e13-dec/final,Qwen3-4B@runs/e13-chr/final'))
 [void]$jobs.Add(@('ext_judge_mc', 'explore_extmem.py judge'))
+# E16 (review 10-04): MemConflict items whose update session restates the old value, base 4B (boundary control)
+[void]$jobs.Add(@('ext_rs_q4', 'explore_extmem.py run --tasks memconf_rs --models Qwen3-4B'))
+[void]$jobs.Add(@('ext_judge_rs', 'explore_extmem.py judge'))
 # E13 control
 [void]$jobs.Add(@('e13_train_chr', ('train_lora.py --model Qwen3-4B --out runs/e13-chr ' + ($B -f 'chrono'))))
 [void]$jobs.Add(@('e13_chr_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e13-chr/final'))
@@ -99,9 +102,6 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # slowest last: Qwen3-14B on the long-dialogue sets
 [void]$jobs.Add(@('lc_q14',   'explore_longconv.py run --models Qwen3-14B'))
 [void]$jobs.Add(@('lc_judge2','explore_longconv.py judge'))
-# E13 dec / control on the external sets (thresholds in EXPLORE_PLAN, written before the baselines)
-[void]$jobs.Add(@('ext_e13', 'explore_extmem.py run --budget 320 --models Qwen3-4B@runs/e13-dec/final,Qwen3-4B@runs/e13-chr/final'))
-[void]$jobs.Add(@('ext_judge3', 'explore_extmem.py judge'))
 foreach ($j in $jobs) {
     $name = $j[0]; $cmd = $j[1]
     if ((Test-Path $log) -and (Select-String -Path $log -SimpleMatch "end   $name exit=0 (" -Quiet)) {

@@ -32,6 +32,8 @@ KEYS = {
     "fitch2026gemma": "2609.30716",          # Words speak louder than order
     "liu2026segtree": "2606.04555",          # SegTreeMem
     "shi2026atma": "2607.01935",             # A-TMA
+    "fan2026statemem": "2608.19652",         # StateMemBench: state drift (review 10-04)
+    "liao2025dztdpo": "2512.03704",          # DZ-TDPO: state inertia, recency attention bias (review 10-04)
     "yu2026markers": "2605.28305",           # reflection markers
     "zhou2026positions": "2609.33759",       # Positions are not facts
     "temporalbias2025": "2510.22752",        # temporal biases in retrieval (transformers / SSMs)

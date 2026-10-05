@@ -97,7 +97,9 @@ def sess_text(s):
     return "\n".join(l for _, t in turns for m in t if (l := line(m)))
 
 
-def memconf(max_per=8, budget=20000):
+def memconf(max_per=8, budget=20000, restated=False, task="memconf"):
+    """restated=True (task memconf_rs, review 10-04): the complementary items whose update session itself restates the
+    old value ("moved from A to B"), so the direction of the change is written in one session (boundary control)"""
     out = []
     for inst in map(json.loads, open(MC_PATH, encoding="utf-8")):
         ch = inst["Full_Session_Chain"]
@@ -112,7 +114,7 @@ def memconf(max_per=8, budget=20000):
                 if len(m) != 1 or len(key(m[0][1])) < 3:
                     continue
                 attr, b, a = m[0]
-                if key(b) in txt[ui]:
+                if (key(b) in txt[ui]) != restated:
                     continue
                 prev = [i for i in range(ui) if key(b) in txt[i]]
                 if not prev:
@@ -139,9 +141,9 @@ def memconf(max_per=8, budget=20000):
                 user = ("Here are records of your past conversations with the user.\n\n" + "\n\n".join(blocks) +
                         f"\n\nCurrent date: {now}\nBased on the information above, answer the user's question in one short "
                         f"sentence.\nQuestion: {q}")
-                out.append(dict(task="memconf", id=f"{c['inst'][:8]}-{c['ui']}-{c['q']['question_id']}", cond=cond, user=user,
+                out.append(dict(task=task, id=f"{c['inst'][:8]}-{c['ui']}-{c['q']['question_id']}", cond=cond, user=user,
                                 q=q, ref=c["q"]["answer"], old=c["b"], new=c["a"], attr=c["attr"],
-                                d_old=ch[[i for i in c["sess"] if key(c["b"]) in txt[i]][-1]]["Date"],
+                                d_old=ch[[i for i in c["sess"] if i < c["ui"] and key(c["b"]) in txt[i]][-1]]["Date"],
                                 d_new=ch[c["ui"]]["Date"], n_sess=len(docs),
                                 pos_new={k: v.index(len(docs) - 1) for k, v in orders(q, docs).items()}[cond]))
     return out
@@ -201,13 +203,17 @@ def locomo():
     return out
 
 
-def items():
-    return mabcr() + memconf() + locomo()
+def items(tasks=""):
+    """default: the three frozen sets; memconf_rs (restated-old-value control) only when asked for explicitly"""
+    out = mabcr() + memconf() + locomo()
+    if "memconf_rs" in tasks.split(","):
+        out += memconf(restated=True, task="memconf_rs")
+    return out
 
 
 @torch.no_grad()
 def run(args):
-    its = [x for x in items() if not args.tasks or x["task"] in args.tasks.split(",")]
+    its = [x for x in items(args.tasks) if not args.tasks or x["task"] in args.tasks.split(",")]
     for name in args.models.split(","):
         w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
         todo = [x for x in its if (x["task"], x["id"], x["cond"]) not in w.done]
@@ -266,14 +272,14 @@ def judge(args):
     for path in sorted(glob.glob(OUT.format("*"))):
         if path.endswith("_judged.jsonl"):
             continue
-        rows = [r for r in load_jsonl(path) if r["task"] in ("memconf", "locomo")]
+        rows = [r for r in load_jsonl(path) if r["task"] in ("memconf", "memconf_rs", "locomo")]
         w = JsonlAppender(path.replace(".jsonl", "_judged.jsonl"), key=lambda r: (r["task"], r["id"], r["cond"]))
         todo = [r for r in rows if (r["task"], r["id"], r["cond"]) not in w.done]
         print(os.path.basename(path), "judge todo", len(todo), flush=True)
         if todo and model is None:
             tok, model = load_reader("Qwen3-14B")
         for r in tqdm(todo):
-            if r["task"] == "memconf":
+            if r["task"] in ("memconf", "memconf_rs"):
                 text = MC_JUDGE.format(d0=r["d_old"], d1=r["d_new"], old=r["old"], new=r["new"], q=r["q"], ref=r["ref"], r=r["response"])
                 lp = mem.letter_logprobs(tok, model, text)
                 lab = "ABC"[max(range(3), key=lambda i: lp[i])]
@@ -281,7 +287,7 @@ def judge(args):
                 text = LC_JUDGE.format(q=r["q"], ref=r["ref"], r=r["response"])
                 lp = mem.letter_logprobs(tok, model, text)
                 lab = "AB"[max(range(2), key=lambda i: lp[i])]
-            w.write(dict(task=r["task"], id=r["id"], cond=r["cond"], label=lab, correct=lab == "A", stale=lab == "B" and r["task"] == "memconf"))
+            w.write(dict(task=r["task"], id=r["id"], cond=r["cond"], label=lab, correct=lab == "A", stale=lab == "B" and r["task"] in ("memconf", "memconf_rs")))
         w.close()
 
 
