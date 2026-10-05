@@ -85,6 +85,8 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # E16 (review 10-04): MemConflict items whose update session restates the old value, base 4B (boundary control)
 [void]$jobs.Add(@('ext_rs_q4', 'explore_extmem.py run --tasks memconf_rs --models Qwen3-4B'))
 [void]$jobs.Add(@('ext_judge_rs', 'explore_extmem.py judge'))
+# E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
+[void]$jobs.Add(@('e15_rule', 'explore_order_rule.py run --models Qwen3-4B,Phi-4-mini'))
 # E13 control
 [void]$jobs.Add(@('e13_train_chr', ('train_lora.py --model Qwen3-4B --out runs/e13-chr ' + ($B -f 'chrono'))))
 [void]$jobs.Add(@('e13_chr_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e13-chr/final'))
