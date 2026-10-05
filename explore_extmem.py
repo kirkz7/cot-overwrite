@@ -41,7 +41,7 @@ MC_PATH = r"D:\datasets\memconflict\Step4_4.jsonl"
 LOCOMO_PATH = r"D:\datasets\locomo\locomo10.json"
 MAB_GLOB = r"D:\hf_cache\hub\datasets--ai-hyz--MemoryAgentBench\snapshots\*\data\Conflict_Resolution-*.parquet"
 CONDS = ("chrono", "rev", "retr")
-BUDGET = {"memconf": 64, "mabcr": 24, "locomo": 32}
+BUDGET = {"memconf": 64, "memconf_rs": 64, "mabcr": 24, "locomo": 32}
 
 
 def words(s):
