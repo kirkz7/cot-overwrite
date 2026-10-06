@@ -306,7 +306,7 @@ def stats(args):
         name = os.path.basename(path)[len("extmem_"):-len(".jsonl")]
         raw = pd.DataFrame(load_jsonl(path))
         jp = path.replace(".jsonl", JUDGED[args.parse])
-        if os.path.exists(jp):
+        if os.path.exists(jp) and os.path.getsize(jp):   # empty when only string-scored tasks were judged
             j = pd.DataFrame(load_jsonl(jp)).set_index(["task", "id", "cond"])
             raw = raw.set_index(["task", "id", "cond"])
             for col in ("correct", "stale"):
