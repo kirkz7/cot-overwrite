@@ -39,6 +39,7 @@ from torch.nn.attention import SDPBackend, sdpa_kernel
 hf_sdpa.use_gqa_in_sdpa = lambda *a, **k: False
 LONG_SDPA = [SDPBackend.EFFICIENT_ATTENTION, SDPBackend.CUDNN_ATTENTION, SDPBackend.MATH]
 
+from paths import hub
 from app_common import tag, answer_fast, chat_prompt, first_number, free_gpu, load_jsonl, load_reader
 import run_app_logs as logs
 import run_app_memory as mem
@@ -120,7 +121,8 @@ def mab_items(tok, n):
     return out
 
 
-CONVO_GLOB = r"D:\hf_cache\hub\datasets--Salesforce--ConvoMem\snapshots\*\core_benchmark\evidence_questions\changing_evidence\2_evidence\*.json"
+CONVO_GLOB = hub("datasets--Salesforce--ConvoMem", "snapshots", "*", "core_benchmark", "evidence_questions", "changing_evidence",
+                 "2_evidence", "*.json")
 
 
 def convo_items(tok, n, personas=range(0, 50)):

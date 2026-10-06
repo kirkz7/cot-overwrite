@@ -4,6 +4,8 @@ Works for any tokenizer: each candidate's continuation tokens are computed from
 tok(prefix + str(c)); the prefix is run once, then all distinct proper prefixes of
 the continuations are run as one right-padded batch on top of the branched KV cache.
 """
+import os
+
 import torch
 from torch.nn.attention import SDPBackend, sdpa_kernel
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
@@ -35,7 +37,8 @@ def greedy(model, ids, max_new, stop_ids=()):
 
 def load(name, four_bit=False):
     tok = AutoTokenizer.from_pretrained(name)
-    kw = dict(dtype=torch.bfloat16, device_map="cuda")
+    # COT_DEVICE_MAP=auto spreads a model over both cloud cards (Qwen3-32B); unset on the desktop -> one card as before
+    kw = dict(dtype=torch.bfloat16, device_map=os.environ.get("COT_DEVICE_MAP", "cuda"))
     if four_bit:
         kw["quantization_config"] = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
                                                        bnb_4bit_compute_dtype=torch.bfloat16)

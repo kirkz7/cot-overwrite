@@ -69,6 +69,7 @@ MODELS = {  # name -> (hf id, 4-bit)
     "Qwen3-1.7B": ("Qwen/Qwen3-1.7B", False),
     "Qwen3-8B": ("Qwen/Qwen3-8B", True),
     "OLMo-2-7B-Instruct": ("allenai/OLMo-2-1124-7B-Instruct", True),
+    "Qwen3-32B": ("Qwen/Qwen3-32B", False),   # cloud only, bf16 over two cards (COT_DEVICE_MAP=auto)
 }
 NUM = re.compile(r"-?\d+(?:\.\d+)?")
 

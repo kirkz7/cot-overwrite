@@ -31,15 +31,16 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
+from paths import data, hub
 from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text
 import run_app_memory as mem
 from explore_probe import LONG_SDPA, sdpa_kernel
 from run_app_fix import generate
 
 OUT = "results/extmem_{}.jsonl"
-MC_PATH = r"D:\datasets\memconflict\Step4_4.jsonl"
-LOCOMO_PATH = r"D:\datasets\locomo\locomo10.json"
-MAB_GLOB = r"D:\hf_cache\hub\datasets--ai-hyz--MemoryAgentBench\snapshots\*\data\Conflict_Resolution-*.parquet"
+MC_PATH = data("memconflict", "Step4_4.jsonl")
+LOCOMO_PATH = data("locomo", "locomo10.json")
+MAB_GLOB = hub("datasets--ai-hyz--MemoryAgentBench", "snapshots", "*", "data", "Conflict_Resolution-*.parquet")
 CONDS = ("chrono", "rev", "retr")
 JUDGED = {"v1": "_judged.jsonl", "v2": "_judged2.jsonl"}   # parse rule v1: first line after "Answer:"; v2: app_common.answer_text
 BUDGET = {"memconf": 64, "memconf_rs": 64, "mabcr": 24, "locomo": 32}

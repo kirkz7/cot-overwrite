@@ -22,13 +22,14 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
+from paths import hub
 from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader
 import run_app_memory as mem
 from explore_probe import CONVO_GLOB, LONG_SDPA, sdpa_kernel
 from run_app_fix import generate
 
 OUT = "results/longconv_{}.jsonl"
-PM = glob.glob(r"D:\hf_cache\hub\datasets--bowen-upenn--PersonaMem-v1\snapshots\*")
+PM = glob.glob(hub("datasets--bowen-upenn--PersonaMem-v1", "snapshots", "*"))
 QTYPES = ("track_full_preference_evolution", "recalling_the_reasons_behind_previous_updates")
 
 
