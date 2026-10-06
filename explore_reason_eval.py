@@ -20,7 +20,7 @@ import run_app_logs as logs
 import run_app_memory as mem
 from explore_route import convo_items
 from explore_think import log_items
-from run_app_fix import generate
+from run_app_fix import generate, generate_think
 
 OUT = "results/explore_reason_{}.jsonl"
 
@@ -54,7 +54,10 @@ def run(args):
                 and (not args.tasks or x["task"] in args.tasks.split(","))]
         print(name, "todo", len(todo), flush=True)
         for x in tqdm(todo, desc=name):
-            text = generate(tok, model, to_think(x["prompt"]) if args.think else x["prompt"], 1024 if args.think else 320)
+            if args.think:                                            # Qwen3 recommended sampling (10-06)
+                text = generate_think(tok, model, to_think(x["prompt"]), 1024, (x["task"], x["id"], x["cond"]))
+            else:
+                text = generate(tok, model, x["prompt"], 320)
             rec = dict(task=x["task"], id=x["id"], cond=x["cond"], full=text, response=extract(text),
                        reasoned="Answer:" in text)
             if "hist" in x:

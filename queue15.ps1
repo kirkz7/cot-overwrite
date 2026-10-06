@@ -96,6 +96,7 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # E18 (10-06 01:30, user: training first): dated list inside Qwen3's thinking block; evaluated with thinking on AND off
 [void]$jobs.Add(@('e18_train', 'train_lora.py --model Qwen3-4B --out runs/e18-dec --data data_train/bind3_decoupled_train.jsonl --val data_train/bind3_decoupled_val.jsonl --dev data_train/bind3_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'))
 [void]$jobs.Add(@('e18_format',    'explore_format_eval.py run --data bind3 --modes think,direct --models Qwen3-4B@runs/e18-dec/final'))
+[void]$jobs.Add(@('e18_format_s',  'explore_format_eval.py run --data bind3 --modes think --models Qwen3-4B@runs/e18-dec/final'))   # thinking: Qwen3 sampling (10-06)
 [void]$jobs.Add(@('e18_lc_think',  'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e18-dec/final'))
 [void]$jobs.Add(@('e18_lc_direct', 'explore_longconv.py run --models Qwen3-4B@runs/e18-dec/final'))
 [void]$jobs.Add(@('e18_lc_judge',  'explore_longconv.py judge'))

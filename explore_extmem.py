@@ -34,7 +34,7 @@ from tqdm import tqdm
 from app_common import tag, out_tag, strip_think, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text
 import run_app_memory as mem
 from explore_probe import LONG_SDPA, sdpa_kernel
-from run_app_fix import generate
+from run_app_fix import generate, generate_think
 
 OUT = "results/extmem_{}.jsonl"
 MC_PATH = r"D:\datasets\memconflict\Step4_4.jsonl"
@@ -227,7 +227,10 @@ def run(args):
             p = chat_prompt(tok, x["user"], think=args.think)
             n = len(tok(p, add_special_tokens=False).input_ids)
             with sdpa_kernel(LONG_SDPA, set_priority=True):
-                text = generate(tok, model, p, args.budget or BUDGET[x["task"]])
+                if args.think:                                        # Qwen3 recommended sampling (10-06)
+                    text = generate_think(tok, model, p, args.budget or 1024, (x["task"], x["id"], x["cond"]))
+                else:
+                    text = generate(tok, model, p, args.budget or BUDGET[x["task"]])
             # reasoning-trained readers (E13): the answer is the text after the last "Answer:"; others: the first line
             vis = strip_think(text)                                   # E18 thinking mode: the visible reply only
             resp = vis.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in vis else vis.strip().split("\n")[0]

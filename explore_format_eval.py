@@ -21,7 +21,7 @@ from tqdm import tqdm
 
 from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text, strip_think
 from explore_probe import LONG_SDPA, sdpa_kernel
-from run_app_fix import generate
+from run_app_fix import generate, generate_think
 
 OUT = {"bind2": "results/e17_format_{}.jsonl", "bind3": "results/fmt3_{}.jsonl"}
 N = 150
@@ -65,7 +65,8 @@ def run(args):
         for x, m in tqdm(todo, desc=name):
             p = chat_prompt(tok, x["prompt"], think=m == "think")
             with sdpa_kernel(LONG_SDPA, set_priority=True):
-                text = generate(tok, model, p, BUDGET[m])
+                # thinking mode: Qwen3 recommended sampling (10-06); "think_greedy" rows are the earlier greedy run
+                text = generate_think(tok, model, p, BUDGET[m], (x["id"], m)) if m == "think" else generate(tok, model, p, BUDGET[m])
             ans = answer_text(text)
             w.write(dict(id=x["id"], mode=m, qtype=x["qtype"], kind=x.get("kind", "temporal"), style=x["style"],
                          order=x["order"], full=text, response=ans,

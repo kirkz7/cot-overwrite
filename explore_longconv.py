@@ -25,7 +25,7 @@ from tqdm import tqdm
 from app_common import tag, out_tag, strip_think, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader
 import run_app_memory as mem
 from explore_probe import CONVO_GLOB, LONG_SDPA, sdpa_kernel
-from run_app_fix import generate
+from run_app_fix import generate, generate_think
 
 OUT = "results/longconv_{}.jsonl"
 PM = glob.glob(r"D:\hf_cache\hub\datasets--bowen-upenn--PersonaMem-v1\snapshots\*")
@@ -131,7 +131,10 @@ def run(args):
             p = chat_prompt(tok, x["user"], think=args.think)
             n = len(tok(p, add_special_tokens=False).input_ids)
             with sdpa_kernel(LONG_SDPA, set_priority=True):
-                text = generate(tok, model, p, args.budget or (16 if x["task"] == "personamem" else 64))
+                if args.think:                                        # Qwen3 recommended sampling (10-06)
+                    text = generate_think(tok, model, p, args.budget or 1024, (x["task"], x["id"], x["cond"]))
+                else:
+                    text = generate(tok, model, p, args.budget or (16 if x["task"] == "personamem" else 64))
             # reasoning-trained readers (E13): the answer is the text after the last "Answer:"; others: the first line
             vis = strip_think(text)                                   # E18 thinking mode: the visible reply only
             resp = vis.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in vis else vis.strip().split("\n")[0]
