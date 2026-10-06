@@ -89,8 +89,13 @@
 3. **队列。** `queue15.ps1` 是 PowerShell 写的。写一个 bash 版的 `queue_cloud.sh`，语义相同：日志里已有 `end <name> exit=0` 的任务跳过；每个脚本自己也会跳过已完成的条目，所以都可以续跑。用 `nohup` 或 `tmux` 后台运行，日志放 `logs/`。不需要 `keepawake.py`。
 4. **注意力核。** `explore_probe.LONG_SDPA` 指定了 SDPA 后端顺序，Linux 上应该能用。如果 flash 后端可用、更快，**不要改**，保持和台式机一致，只是速度慢一点。
 5. **移植验证（门槛，开跑 32B 前必须过）**：
-   - 在 Qwen3-4B 上重跑 `run_app_logs.py --n 100 --models Qwen3-4B` 和 `explore_order_rule.py run --models Qwen3-4B`。和台式机结果文件逐条比较，要求逐条一致率 ≥95%。贪心解码，换卡后浮点差异可能让少数条目变化。各条件的汇总数字差 ≤2 个点。
-   - 不过就先查原因，不要往下跑。
+   - 台式机的参照输出在 `reference/desktop/`，说明、哈希和台式机环境见那里的 README。`results/` 被 `.gitignore` 忽略，所以参照文件单独放在这个目录。
+   - **不要把参照文件复制进 `results/`**，否则脚本会以为已经跑完，全部跳过。
+   - 在 Qwen3-4B 上重跑，输出写进 `results/`：
+     - `run_app_logs.py --n 100 --models Qwen3-4B`
+     - `explore_order_rule.py run --models Qwen3-4B`
+   - 然后运行 `python compare_reference.py logs` 和 `python compare_reference.py e15`，逐条比对。门槛已写在脚本里：逐条答案一致率 ≥95%，各条件正确率差 ≤2 个点。贪心解码，换卡后的浮点差异可能让少数条目变化，所以不要求 100%。
+   - 不过就先查原因，例如注意力后端、精度、chat template、transformers 版本，不要往下跑。
 
 ## 5. 实验（按优先级）
 
