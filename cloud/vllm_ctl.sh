@@ -8,6 +8,7 @@
 # Fixed server settings (CLOUD_NOTEBOOK.md "vLLM"): bf16, max_model_len 40960, the model's generation_config ignored,
 # seed 0. The client sends one request at a time.
 set -u
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
 cd "$(dirname "$0")/.."
 VENV=${VLLM_VENV:-/data/vllm-venv}
 URL=${COT_VLLM_URL:-http://127.0.0.1:8000}
@@ -26,6 +27,11 @@ down() {
         kill -KILL -- "-$pid" 2>/dev/null
         rm -f "$PIDF"
     fi
+    # a server on this port that this script did not start (no pid file): stop it too
+    for p in $(ss -ltnpH "sport = :$PORT" 2>/dev/null | grep -o 'pid=[0-9]*' | cut -d= -f2 | sort -u); do
+        kill -TERM -- "-$(ps -o pgid= -p "$p" | tr -d ' ')" 2>/dev/null || kill -TERM "$p" 2>/dev/null
+    done
+    for _ in $(seq 30); do [ -z "$(served)" ] && break; sleep 2; done
     # wait until this server's cards are free again (the next job may load an HF model)
     gpus=${CUDA_VISIBLE_DEVICES:-}
     for _ in $(seq 60); do

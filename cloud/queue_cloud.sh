@@ -14,6 +14,7 @@ JOBS=${1:?usage: cloud/queue_cloud.sh <jobs file>}
 export HF_HOME=${HF_HOME:-/data/hf_cache}
 export COT_DATA=${COT_DATA:-/data/datasets}
 export HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 PYTHONIOENCODING=utf-8 TOKENIZERS_PARALLELISM=false
+export CUDA_DEVICE_ORDER=PCI_BUS_ID   # CUDA_VISIBLE_DEVICES numbers = nvidia-smi numbers
 PY=${COT_PY:-.venv/bin/python}
 LOG=logs/queue_cloud.log
 mkdir -p logs
