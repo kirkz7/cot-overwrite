@@ -93,13 +93,13 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('e17_mc_judge', 'explore_extmem.py judge --parse v2'))
 [void]$jobs.Add(@('e17_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('e17_lc_judge', 'explore_longconv.py judge'))
-# no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
-[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B'))   # E13 dropped (user, 10-05)
 # E18 design diagnostic (10-05 22:30): is writing the dated list needed? E13b (answer-only) vs E13 (list); E17 on the same sets
 [void]$jobs.Add(@('diag_e13b_lc',  'explore_longconv.py run --budget 320 --tasks convo_long --models Qwen3-4B@runs/e13b-dec/final'))
 [void]$jobs.Add(@('diag_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13b-dec/final,Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('diag_judge1',   'explore_longconv.py judge'))
 [void]$jobs.Add(@('diag_judge2',   'explore_reason_eval.py judge'))
+# no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
+[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B'))   # E13 dropped (user, 10-05)
 [void]$jobs.Add(@('gen_e17',     'explore_general.py run --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('gen_q4',       'explore_general.py run --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
 # E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
