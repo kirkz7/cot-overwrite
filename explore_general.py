@@ -2,7 +2,7 @@
 Protocol copied from published fine-tuning fixes (FILM-7B / IN2 2404.16811; Xiong et al. 2406.19292; Biderman et al.
 TMLR 2024), plus IFEval because their multiple-choice benchmarks cannot see format collapse. lm-evaluation-harness 0.4.13,
 the reader loaded exactly as in every other experiment (app_common.load_reader: LoRA merged into bf16 Qwen3-4B).
-  loglikelihood, no chat template : MMLU 5-shot (as FILM), ARC-Challenge 0-shot, HellaSwag 0-shot (first 2000)
+  loglikelihood, no chat template : MMLU 5-shot (as FILM; first 50 per subject), ARC-Challenge 0-shot, HellaSwag 0-shot (first 2000)
   generation, chat template, no thinking : IFEval (all 541), LongBench-E qasper / multifieldqa_en / hotpotqa / 2wikimqa
                                             (first 100 each, context cut to 16k tokens by the harness)
 GSM8K is already measured for every reader in run_ext_eval.py (reported alongside).
@@ -14,7 +14,7 @@ import os
 
 OUT = "results/general_{}.json"
 LL_TASKS = {"mmlu": 5, "arc_challenge": 0, "hellaswag": 0}
-LL_LIMIT = {"hellaswag": 2000}
+LL_LIMIT = {"hellaswag": 2000, "mmlu": 50}   # mmlu: first 50 per subject (~2.8k of 14k; Xiong et al. used 20%)
 GEN_TASKS = ["ifeval", "longbench_qasper_e", "longbench_multifieldqa_en_e", "longbench_hotpotqa_e", "longbench_2wikimqa_e"]
 GEN_LIMIT = {t: 100 for t in GEN_TASKS if t.startswith("longbench")}
 MAX_LEN = 16384
@@ -62,7 +62,7 @@ def run(args):
         lm = HFLM(pretrained=model, tokenizer=tok, batch_size=args.batch, max_length=MAX_LEN, enable_thinking=False)
         for tasks, fs, lim, chat in ((todo_ll, LL_TASKS, LL_LIMIT, False), (todo_gen, None, GEN_LIMIT, True)):
             for t in tasks:
-                lm.batch_size_per_gpu = 1 if t.startswith("longbench") else int(args.batch)   # 16k contexts: one at a time
+                lm.batch_size_per_gpu = 1 if t.startswith("longbench") or t == "mmlu" else int(args.batch)   # long prompts: full-vocab logits overflow 16 GB at batch 4
                 done.update(evaluate(lm, [t], fs, lim, chat))
                 json.dump(done, open(path, "w", encoding="utf-8"), indent=1)    # resumable per task
                 torch.cuda.empty_cache()

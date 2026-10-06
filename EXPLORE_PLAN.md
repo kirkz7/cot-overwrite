@@ -264,6 +264,7 @@
 ### 通用能力检查（"修复不伤原模型"，10-05 写定，在跑之前；用户要求照搬主会论文的做法）
 - **来源**：FILM-7B / IN2（2404.16811）、Xiong et al.（2406.19292）、Biderman et al.（TMLR 2024）都用 MMLU、ARC、HellaSwag、GSM8K 等证明修复不伤通用能力。它们多是多选题，测不出"只会答一个值"，所以加 IFEval（生成式指令遵循，规则打分）。我们训练的是长文档，所以加 LongBench。
 - **做法**（`explore_general.py`，lm-evaluation-harness 0.4.13，读者加载方式与其他实验相同）：MMLU 5-shot、ARC-C 0-shot、HellaSwag 0-shot（前 2000 条），不加聊天模板；IFEval 全部 541 条、LongBench-E 的 qasper / multifieldqa_en / hotpotqa / 2wikimqa（各前 100 条，上下文截到 16k token），用聊天模板、关闭思考。GSM8K 沿用已有结果。
+- **工程调整（10-05 21:30，没看任何结果）**：MMLU 全量 5-shot 在 16 GB 上要约 65 小时/模型（batch 4 时全词表 logits 爆显存，溢出到共享内存）。改为每个学科前 50 题（约 2.8k / 14k，Xiong et al. 也只用了 20%），MMLU 和 LongBench 用 batch 1。门槛不变。
 - **测哪些模型**：原模型、E17 解耦组、短对话解耦组和对照组（q4-dec / q4-chr），以及 **E13 解耦组作为"已知有格式问题"的对照**。
 - **门槛**（每个修复模型对原模型）：MMLU、ARC-C、HellaSwag、GSM8K 各下降 ≤2 个点；IFEval prompt 级严格正确率下降 ≤3 个点；LongBench 四项平均 F1 下降 ≤2 个点。任何一项不满足 = 这个修复"伤了通用能力"，论文里如实报告，并考虑效仿 FILM 混入通用指令数据重训（新变量，另行预注册）。
 - **检查本身是否有效**（预测，不是门槛）：E13 的 IFEval 应当明显低于原模型。如果 E13 在 IFEval 上不掉，说明 IFEval 对这类格式问题不敏感，论文里要同时报告我们自己的格式遵守测试。
