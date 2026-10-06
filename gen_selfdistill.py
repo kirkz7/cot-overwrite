@@ -22,7 +22,9 @@ import re
 
 REPO, REV = "allenai/tulu-3-sft-mixture", "b14afda60f1bbebe55d5d2fa1e4df5042f97f8be"
 SHARDS = [f"data/train-0000{i}-of-00006.parquet" for i in range(6)]
-EXCLUDE = re.compile(r"instruction.?following|ifeval|\bif[_-]|gsm|mmlu|\barc\b|hellaswag|longbench|aya", re.I)
+# 10-07 (cloud, user-approved, before any generation): "ifdata" (personahub_ifdata = instruction following) and
+# "math-grade" (tulu-3-sft-personas-math-grade = grade-school math, GSM8K's domain) were not caught; added per the pre-registration text
+EXCLUDE = re.compile(r"instruction.?following|ifeval|\bif[_-]|ifdata|gsm|math-grade|mmlu|\barc\b|hellaswag|longbench|aya", re.I)
 THINK = dict(temperature=0.6, top_p=0.95, top_k=20, max_tokens=3072)
 DIRECT = dict(temperature=0.7, top_p=0.8, top_k=20, max_tokens=1024)
 MODEL = "Qwen/Qwen3-4B"

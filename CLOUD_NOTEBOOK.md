@@ -82,6 +82,13 @@
 - 速度：同一批 10 条长 prompt（MemConflict），32B 上 HF（两卡流水线）和 vLLM（两卡张量并行）各跑一遍。
 - 决定规则：两项验证都通过、并且实测快 ≥1.5 倍，32B 的所有生成任务都用 vLLM（每个测试集内所有条件同一个引擎，不混用）；否则照原计划用 HF。
 
+**P7 · E18.1（训练和测试在云端，CLOUD_PLAN P7、EXPLORE_PLAN「E18.1」；门槛照那里，不改）**：
+- 用户目标（10-07）：开思考、关思考在普通任务上都不掉点，在构造任务上有提升。所以测试在计划清单之外加了思考开的通用能力（`explore_general_think.py`，同 P6b；原模型思考开基线在 GPU0 跑）。
+- 输入数据：E12 的 1000 行从 `weights-e18` 还原，SHA256 按 CRLF 换算后 = 21de5794…（git 存 LF）。自检：云端重生成 `bind3_decoupled_train.jsonl`，CRLF 哈希前缀 **4BAFEB760E58B565，与台式机一致**（WikiText 版本一致）。为跑自检临时生成了 E13 的 `bind_decoupled_*`（对照组用占位文件，产物已删）。
+- 下载（用户同意）：`allenai/tulu-3-sft-mixture` 6 个 parquet，1413 MB，revision b14afda6…，ODC-BY。IFEval 已缓存。
+- **更正（10-07 06:00，开跑前、没看任何结果，用户同意）**：`gen_selfdistill.py` 的排除规则 `\bif[_-]` 漏掉了 `personahub_ifdata_manual_seed_v3`（指令遵循）和 `tulu-3-sft-personas-math-grade`（小学数学，GSM8K 同类），与预注册文字"排除与指令遵循、IFEval、GSM … 有关的来源"不一致。按文字修正（加 `ifdata`、`math-grade`）：15 个来源各 40 条，共 600 条。
+- 队列：`cloud/jobs_e181.txt`（GPU1）：自蒸馏（vLLM venv）→ `gen_bind_data_v4.py` → 训练（超参照计划）→ 测试（全部 HF，顺序照计划）。
+
 ## 移植验证结果
 
 10-06 10:13–10:27，Qwen3-4B bf16 单卡（GPU0），`cloud/jobs_p0.txt`。
