@@ -1,6 +1,9 @@
 # Qwen3-32B on vLLM (two cards, tensor parallel). User decision 10-06: every generation job on vLLM (CLOUD_NOTEBOOK.md).
 # Results go to *_Qwen3-32B~vllm.jsonl. The CoT bench scores candidate log-probs, so it runs on HF (two-card pipeline).
 v32_ext       COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-32B COT_VLLM_TP=2 explore_extmem.py run --tasks memconf,mabcr,locomo,mabcr32k --models Qwen3-32B
+# early official numbers for MemConflict / LoCoMo (user 10-06): judge right after v32_ext; costs one 32B server restart
+v32_judge_ext  explore_extmem.py judge
+v32_judge_ext2 explore_extmem.py judge --parse v2
 v32_lc        COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-32B COT_VLLM_TP=2 explore_longconv.py run --models Qwen3-32B
 v32_mem       COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-32B COT_VLLM_TP=2 run_app_memory.py read --models Qwen3-32B
 v32_logs      COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-32B COT_VLLM_TP=2 run_app_logs.py --n 100 --models Qwen3-32B
