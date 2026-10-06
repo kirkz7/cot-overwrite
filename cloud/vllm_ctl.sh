@@ -35,7 +35,8 @@ up() {
     [ "$(served)" = "$model" ] && { echo "[$(date +%H:%M:%S)] vllm already serving $model"; return 0; }
     down
     echo "[$(date +%H:%M:%S)] vllm up $model tp=$tp" | tee -a logs/vllm_server.log
-    HF_HUB_OFFLINE=1 setsid nohup "$VENV/bin/vllm" serve "$model" --tensor-parallel-size "$tp" --dtype bfloat16 \
+    # flashinfer compiles kernels at start-up: it needs the venv's ninja and the CUDA 13.0 toolkit (torch is cu130)
+    PATH="$VENV/bin:/usr/local/cuda-13.0/bin:$PATH" CUDA_HOME=/usr/local/cuda-13.0 HF_HUB_OFFLINE=1 setsid nohup "$VENV/bin/vllm" serve "$model" --tensor-parallel-size "$tp" --dtype bfloat16 \
         --max-model-len 40960 --generation-config vllm --seed 0 --gpu-memory-utilization 0.88 \
         --host 127.0.0.1 --port "${URL##*:}" >> logs/vllm_server.log 2>&1 < /dev/null &
     echo $! > "$PIDF"
