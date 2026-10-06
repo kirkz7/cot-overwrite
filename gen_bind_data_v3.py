@@ -40,9 +40,11 @@ def styled(rng, split, value_final, sentence, dated):
     return style, final, rng.choice(INSTR[split][style])
 
 
-def build(s, split, rng):
+def build(s, split, rng, kind=None):
+    """kind=None draws the kind (E18); E18.1 passes a kind (no draw, otherwise identical)."""
     v = copy.deepcopy(s["_v2"])
-    kind = rng.choices(KINDS, KW)[0]
+    if kind is None:
+        kind = rng.choices(KINDS, KW)[0]
     a, vals, chain = v["a"], v["vals"], v["chain"]
     lst = [f"Records about {a}, from oldest to newest:"] + [f"- {d}: {x}" for d, x in chain]
     head = f"{v['intro']}\n\n" + "\n\n".join(v["docs"]) + "\n\n"
