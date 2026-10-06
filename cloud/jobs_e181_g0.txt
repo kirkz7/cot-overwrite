@@ -1,0 +1,9 @@
+# P7 · E18.1 tests, GPU0 part (~7 h): MemConflict (all extmem judging stays on this card), no-harm thinking on, reason evals.
+e181_mc_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e181-dec/final
+e181_mc_tj   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2
+e181_gen_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-4B@runs/e181-dec/final
+e181_rs_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_reason_eval.py run --think --models Qwen3-4B@runs/e181-dec/final
+e181_rs      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_reason_eval.py run --models Qwen3-4B@runs/e181-dec/final
+e181_rs_j    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_reason_eval.py judge
+e181_mc      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py run --tasks memconf --models Qwen3-4B@runs/e181-dec/final
+e181_mc_j    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2

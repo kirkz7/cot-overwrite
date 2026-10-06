@@ -1,2 +1,2 @@
-# P6b: no-harm suite with thinking ON, E18 (HF). GPU0 (10-07: GPU1 trains E18.1).
-p6b_e18    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-4B@runs/e18-dec/final
+# P6b: no-harm suite with thinking ON, E18 (HF). GPU1, after the E18.1 tests there (lowest priority; E18.1 supersedes E18).
+p6b_e18    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-4B@runs/e18-dec/final

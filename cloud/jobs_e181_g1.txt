@@ -1,0 +1,7 @@
+# P7 · E18.1 tests, GPU1 part (~5.5 h): format, ConvoMem-long + PersonaMem thinking on (main gate) + judge, no-harm thinking off, PersonaMem thinking off.
+e181_fmt     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_format_eval.py run --data bind4 --modes think,direct --models Qwen3-4B@runs/e181-dec/final
+e181_lc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec/final
+e181_lc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py judge
+e181_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-4B@runs/e181-dec/final
+e181_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k
+e181_lc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --models Qwen3-4B@runs/e181-dec/final

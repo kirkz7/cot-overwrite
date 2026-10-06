@@ -1,19 +1,4 @@
-# P7 · E18.1 (CLOUD_PLAN.md, user 10-07): data, training and tests on GPU1, all HF (no COT_ENGINE). Order as in the plan,
-# plus the thinking-on no-harm suite (user goal: no loss on ordinary tasks with thinking on or off).
+# P7 · E18.1 data + training on GPU1 (tests: jobs_e181_g1.txt GPU1, jobs_e181_g0.txt GPU0, run side by side after training).
 e181_sd      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/selfdistill_vllm.py
 e181_data    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 gen_bind_data_v4.py
 e181_train   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 train_lora.py --model Qwen3-4B --out runs/e181-dec --data data_train/bind4_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0
-e181_fmt     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_format_eval.py run --data bind4 --modes think,direct --models Qwen3-4B@runs/e181-dec/final
-e181_lc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec/final
-e181_lc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py judge
-e181_mc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e181-dec/final
-e181_mc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
-e181_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-4B@runs/e181-dec/final
-e181_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k
-e181_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-4B@runs/e181-dec/final
-e181_lc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --models Qwen3-4B@runs/e181-dec/final
-e181_rs_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_reason_eval.py run --think --models Qwen3-4B@runs/e181-dec/final
-e181_rs      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_reason_eval.py run --models Qwen3-4B@runs/e181-dec/final
-e181_rs_j    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_reason_eval.py judge
-e181_mc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py run --tasks memconf --models Qwen3-4B@runs/e181-dec/final
-e181_mc_j    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
