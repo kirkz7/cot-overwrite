@@ -49,7 +49,8 @@ def run(args):
     for name in args.models.split(","):
         w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
         tok, model = load_reader(name)
-        todo = [x for x in items(tok) if (x["task"], x["id"], x["cond"]) not in w.done]
+        todo = [x for x in items(tok) if (x["task"], x["id"], x["cond"]) not in w.done
+                and (not args.tasks or x["task"] in args.tasks.split(","))]
         print(name, "todo", len(todo), flush=True)
         for x in tqdm(todo, desc=name):
             text = generate(tok, model, x["prompt"], 320)
@@ -138,6 +139,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B")
+    ap.add_argument("--tasks", default="", help="comma list of convo,lme,email<n> (default: all)")
     args = ap.parse_args()
     if args.stage == "check":
         from transformers import AutoTokenizer

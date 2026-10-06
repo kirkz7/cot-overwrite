@@ -120,7 +120,8 @@ def pm_pred(full):
 def run(args):
     for name in args.models.split(","):
         w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
-        todo = [x for x in convo_long() + personamem() if (x["task"], x["id"], x["cond"]) not in w.done]
+        todo = [x for x in convo_long() + personamem() if (x["task"], x["id"], x["cond"]) not in w.done
+                and (not args.tasks or x["task"] in args.tasks.split(","))]
         print(name, "todo", len(todo), flush=True)
         if not todo:
             w.close()
@@ -204,6 +205,7 @@ def main():
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B")
     ap.add_argument("--budget", type=int, default=None, help="new tokens; default 16 (PersonaMem) / 64 (ConvoMem)")
+    ap.add_argument("--tasks", default="", help="comma list of convo_long,personamem (default: both)")
     args = ap.parse_args()
     if args.stage == "check":
         from transformers import AutoTokenizer
