@@ -9,6 +9,12 @@
 - Python 3.12.3，uv 建 `.venv`，版本按 `CLOUD_PLAN.md` 第 3 节和笔记本分支的 `laptop_requirements.txt`（台式机环境清单）。
 - 租期：48 小时（10-06 起）。
 
+## 模型和数据版本（下载时解析到的 commit）
+
+- Qwen3-4B `1cfa9a72…`，Qwen3-14B `40c06982…`，Qwen3-32B `9216db57…`（10-06 12:43 下完）；PersonaMem `a8076d56…`；BEAM `bd579313…`（refs/convert/parquet）。
+- MemConflict `Step4_4.jsonl` sha256 `8ef9ec85…`，LoCoMo `locomo10.json` sha256 `79fa87e9…`（GitHub main，10-06）。台式机钉过的 LongMemEval / MAB / ToT / TempReason / BABILong / GSM8K 照用台式机的 revision。
+- 和台式机是否同一版本：4B 由 P0 间接确认；其余待台式机提供 hash 核对。
+
 ## 代码移植（P0 第 1、2 步）
 
 - `paths.py`：`COT_DATA`（默认 `D:\datasets`）、`HF_HOME`（默认 `D:\hf_cache`）。替换了 `run_app_memory.py`、`analyze_apps.py`、`explore_extmem.py`（3 处）、`explore_longconv.py`、`explore_probe.py` 的写死路径。台式机不设变量时路径不变。
