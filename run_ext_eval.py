@@ -142,6 +142,12 @@ def run_mab(tok, model, w):
         ctx = mab_context(group[0]["facts"], order, seed=zlib.crc32(src.encode()))   # same shuffle for every model / run
         marker = "\n\nQuestion: "
         full = lambda q: chat_prompt(tok, f"{ctx}{marker}{q}\nAnswer with the answer only.")
+        if getattr(model, "is_vllm", False):   # vLLM: full prompt each time (the server reuses the shared prefix itself)
+            for it in todo:
+                out = greedy(model, torch.tensor([tok(full(it["q"]), add_special_tokens=False).input_ids]), 32, stop_ids(tok))
+                resp = tok.decode(out, skip_special_tokens=True).strip().split("\n")[0]
+                w.write(dict(src=src, order=order, qi=it["qi"], response=resp, correct=contains_any(resp, it["golds"])))
+            continue
         prefix_text = full("X").split(marker)[0] + marker
         p_ids = tok(prefix_text, add_special_tokens=False).input_ids
         with sdpa_kernel(PREFILL, set_priority=True):
@@ -196,6 +202,7 @@ def run_tempreason(tok, model, w):
 
 
 def run_cot(tok, model, w):
+    assert not getattr(model, "is_vllm", False), "cot scores candidate log-probs on the HF model: run --benches cot without COT_ENGINE=vllm"
     from probe import Scorer
     from tasks import make_example
     from tasks_cue import CONDS, build_cue_prompt
@@ -227,7 +234,7 @@ def run_gsm8k(tok, model, w, four_bit):
             pred = None
         return dict(pred=pred, correct=pred is not None and abs(pred - it["gold"]) < 1e-6)
     # CUDA-graph decoding only for architectures verified to be capturable (Phi-4-mini's LongRoPE length switch is not)
-    if four_bit or model.config.model_type not in ("qwen3", "qwen2"):
+    if four_bit or getattr(model, "is_vllm", False) or model.config.model_type not in ("qwen3", "qwen2"):
         for it in tqdm(items, desc="gsm8k"):
             text = gen(tok, model, it["user"], 400)
             w.write(dict(i=it["i"], response=text[-300:], **score(it, text)))

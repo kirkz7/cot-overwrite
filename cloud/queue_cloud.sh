@@ -5,6 +5,7 @@
 #   usage: cloud/queue_cloud.sh cloud/jobs_p0.txt      (foreground; normally started by cloud/resume_queue.sh)
 # Job files: one job per line, "<name> [VAR=value ...] <command line after python>"; blank lines and # comments are
 # ignored. Qwen3-32B jobs carry COT_DEVICE_MAP=auto (two cards); 4B and the 14B judge stay on one card as on the desktop.
+# Jobs with COT_ENGINE=vllm get the vLLM server started first (cloud/vllm_ctl.sh); any other job stops it first.
 # The job file is re-read after every job, so jobs appended while the queue runs are picked up.
 # A failed job is not retried in the same run (rerun the queue after fixing it).
 set -u
@@ -38,8 +39,15 @@ while :; do
     tried[$next]=1
     t=$(date +%s)
     log "[$(now)] start $next"
-    env $nextcmd_env $PY $nextcmd >> "logs/$next.log" 2>&1
+    # vLLM jobs (COT_ENGINE=vllm COT_VLLM_MODEL=<hf id> [COT_VLLM_TP=n]) need the server; every other job needs free cards
+    if [[ " $nextcmd_env" == *" COT_ENGINE=vllm "* ]]; then
+        vm=$(sed -n 's/.*COT_VLLM_MODEL=\([^ ]*\).*/\1/p' <<< "$nextcmd_env"); vtp=$(sed -n 's/.*COT_VLLM_TP=\([^ ]*\).*/\1/p' <<< "$nextcmd_env")
+        cloud/vllm_ctl.sh up "$vm" "${vtp:-2}" >> "logs/$next.log" 2>&1
+    elif [ -f logs/vllm_server.pid ]; then
+        cloud/vllm_ctl.sh down >> "logs/$next.log" 2>&1
+    fi
     rc=$?
+    [ $rc -eq 0 ] && { env $nextcmd_env $PY $nextcmd >> "logs/$next.log" 2>&1; rc=$?; }
     log "[$(now)] end   $next exit=$rc ($(( ($(date +%s) - t) / 60 )) min)"
 done
 log "[$(now)] queue done $JOBS"

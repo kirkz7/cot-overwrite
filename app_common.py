@@ -87,6 +87,11 @@ def load_reader(name):
     """name = a MODELS key, or "<MODELS key>@<adapter dir>" for a LoRA-tuned reader (merged when the base is bf16)."""
     base, _, adapter = name.partition("@")
     hf, four = MODELS[base]
+    if os.environ.get("COT_ENGINE") == "vllm":   # cloud: forward passes on a vLLM server, see vllm_client.py
+        from transformers import AutoTokenizer
+        from vllm_client import VLLMReader
+        assert not adapter and not four, "the vLLM path is for bf16 base models only"
+        return AutoTokenizer.from_pretrained(hf), VLLMReader(hf)
     tok, model = load(hf, four)
     if adapter:
         from peft import PeftModel

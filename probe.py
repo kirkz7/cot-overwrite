@@ -21,6 +21,8 @@ PREFILL = [SDPBackend.CUDNN_ATTENTION, SDPBackend.EFFICIENT_ATTENTION, SDPBacken
 
 @torch.no_grad()
 def greedy(model, ids, max_new, stop_ids=()):
+    if getattr(model, "is_vllm", False):   # cloud: same decoding on a vLLM server (vllm_client.py)
+        return model.greedy(ids[0].tolist(), max_new, stop_ids)
     with sdpa_kernel(PREFILL, set_priority=True):
         out = model(ids, use_cache=True, logits_to_keep=1)
     cache, gen = out.past_key_values, []
