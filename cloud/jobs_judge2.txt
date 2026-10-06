@@ -1,0 +1,5 @@
+# Second judging pass for rows generated after the first pass (4B gap-filler); only unjudged rows are judged.
+judge2_ext      explore_extmem.py judge
+judge2_ext2     explore_extmem.py judge --parse v2
+judge2_lc       explore_longconv.py judge
+judge2_mem      run_app_memory.py judge
