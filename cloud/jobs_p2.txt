@@ -1,6 +1,5 @@
-# P2: long sets the 16 GB desktop card cannot hold (4B and 32B). NOT READY: both need code first.
-# - MAB-CR factconsolidation_sh_32k: explore_extmem.py mabcr() only reads the 6k file; add an option for 32k.
-# - BEAM: no reader yet; read the paper/data format, pre-register construction + thresholds in CLOUD_NOTEBOOK.md.
-# Fill in the jobs once that code exists, e.g.:
-# p2_mab32k_q4   explore_extmem.py run --tasks mabcr32k --models Qwen3-4B
-# p2_mab32k_q32  explore_extmem.py run --tasks mabcr32k --models Qwen3-32B
+# P2: long sets the 16 GB desktop card cannot hold (CLOUD_PLAN.md section 5). Pre-registration in CLOUD_NOTEBOOK.md.
+# MAB-CR factconsolidation_sh_32k (~37.5k tokens, 100 questions x chrono/rev/retr; string-scored, no judge)
+p2_mab32k_q4   explore_extmem.py run --tasks mabcr32k --models Qwen3-4B
+p2_mab32k_q32  COT_DEVICE_MAP=auto explore_extmem.py run --tasks mabcr32k --models Qwen3-32B
+# BEAM: no reader yet; read the paper / data format and pre-register construction + thresholds first.

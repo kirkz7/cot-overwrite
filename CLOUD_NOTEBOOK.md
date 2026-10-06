@@ -28,6 +28,12 @@
 
 **移植验证（P0）**：Qwen3-4B 上 `run_app_logs.py --n 100` 和 `explore_order_rule.py run`，用台式机的 `compare_reference.py` 比对 `reference/desktop/`：逐条答案一致率 ≥95%，各条件正确率差 ≤2 个点。不过就先查原因，不往下跑。
 
+**P2 · MemoryAgentBench-CR 32k 版**（10-06 写定，开跑前）：
+- 数据：`factconsolidation_sh_32k`，100 题 × 正序 / 倒序 / 检索序（BM25），每条约 37.5k token（Qwen3 上限 40960）。代码：`explore_extmem.py --tasks mabcr32k`，构造和 6k 版完全相同，只换 source；默认任务列表不变。字符串判分，不用判分器。
+- 主分析：答案事实恰有一条更早冲突事实的题（58/100，6k 版是 76/100），沿用 6k 版的规则。其余 42 题单独报告。
+- 门槛：统一门槛（倒序或检索序比正序低 ≥10 个点，配对 bootstrap 95% CI 不含 0）。4B 和 32B 分别判定。
+- 不是留出集。已知风险：先验冲突造成的地板效应（4B 在 6k 上正序 83% 选了旧值）。正序本身很低时，按"地板效应"报告，附正序正确率和选旧值比例。
+
 ## 移植验证结果
 
 10-06 10:13–10:27，Qwen3-4B bf16 单卡（GPU0），`cloud/jobs_p0.txt`。
