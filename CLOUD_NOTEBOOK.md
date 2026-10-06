@@ -27,6 +27,7 @@
 1. **32B 原模型全量测试，最高优先级**（vLLM，`cloud/jobs_v32.txt`）：决定机制在大模型上还在不在。32B 一下完，其他队列让路。
 2. **14B 4-bit 延展测试**（CLOUD_PLAN P1b，HF，和台式机的 14B 配置一致）：ConvoMem 长版 + PersonaMem（`jobs_p1b_g0.txt`，GPU0），MemConflict / LoCoMo / MAB-CR + E15（`jobs_p1b_g1.txt`，GPU1）。32B 下载期间先跑，32B 开始时暂停。
 3. 14B bf16（vLLM）作可选对照，时间够再续（`jobs_v14.txt`，已跑 356 条）。云端 4B 停掉（4B 在 5080 上做），已有的 `~vllm` 4B 结果保留。
+5. **8B / 14B 全量（用户 10-06 21:30）**：和 32B 同一套测试、同一个引擎（vLLM bf16），做 8B / 14B / 32B 的规模曲线。`Qwen3-8B-bf16`（GPU0 :8000，`jobs_v8.txt`）、`Qwen3-14B-bf16`（GPU1 :8001，`jobs_v14.txt`，续跑）。顺序见 `cloud/chain_after_v32.sh`：32B → 每张卡先做完 14B 4-bit（P1b）再接 8B / 14B bf16 → 统一判分。
 4. 训练：配方在 5080 上用 4B 定型；定型后 14B / 32B 的训练和测试在云端，按"受控测试 / 真实任务 / 不伤通用能力"三层评测。
 
 ## 队列
