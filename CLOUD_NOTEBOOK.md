@@ -108,7 +108,7 @@ vLLM 0.31.0（torch 2.13 + cu130，`/data/vllm-venv`），Qwen3-4B 单卡（GPU1
 
 ## 留出集接触记录
 
-（无）
+- 10-06 约 12:10：为确认 BEAM 的数据格式，通过 HF datasets-server 看了 BEAM `100K` split 第 0 个对话的原文：knowledge_update、contradiction_resolution、temporal_reasoning 各 1 道题（含答案和 source_chat_ids），以及第 1 条用户消息。BEAM 当时还没定为留出集；若之后用作留出集，这个对话要在报告里标注或剔除。
 
 ## 问题和更正
 
