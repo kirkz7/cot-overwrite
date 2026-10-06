@@ -69,7 +69,14 @@
 
 - **BEAM 可行性检查（10-06，开跑前，只看计数）**：180 道 knowledge_update 题里，**168 道的旧信息和新信息在同一个 session**（同一个日期）；10 道的证据 id 在对话里找不到；2 道旧信息不早于新信息；按预注册规则剩 **0 道**。BEAM 的日期只到 session 一级，同一 session 内的消息没有时间戳，所以旧、新两条之间没有显式时间可以区分，测不了"显式时间 vs 位置"。没有跑任何模型。另外：BEAM 消息末尾的 `->-> i,j` 计划编号随时间递增，构造时已删除（代码 `explore_beam.py` 保留）。
 
-**vLLM 推理引擎**（10-06 用户同意试，开跑前写定）：
+**P6b · E18 通用能力检查，思考开**（10-07 05:30 用户要求补测；开跑前写定）：
+- 为什么：P6 按 CLOUD_PLAN 只测了思考关；E18 训练时思考开 / 关各半，修复效果主要在思考开下测得，所以要补"思考开不伤原模型"。
+- 测什么：只测会生成文字的三项——IFEval（541）、LongBench-E 四项（各前 50）、GSM8K（250，同 `run_ext_eval` 的题和判分规则）。MMLU / ARC-C / HellaSwag 是对数似然，不生成、不套 chat 模板，思考开关不起作用，沿用 P6。
+- 怎么跑（`explore_general_think.py`，`explore_general.py` 不动）：HF，Qwen3 思考开；解码照台式机 E18 协议用 Qwen3 推荐采样（temperature 0.6、top-p 0.95、top-k 20），生成上限 4096 token（思考 + 回答）；只给 `</think>` 之后的可见回答打分。lm-eval 种子固定（0 / 1234 / 1234）；batch：IFEval 4、LongBench 1（同 P6），GSM8K 8（左填充，每批固定种子）。LongBench 的 max_length = 16384 + 4096，上下文仍截到约 16k，和思考关一致。原模型和 E18 同设置，各占一张卡并行。
+- 思考没写完：GSM8K 记为答错并报告比例；lm-eval 的两项按 lm-eval 的做法用整段输出打分（无法区分），上限 4096 应很少触发。
+- 门槛（同 P6，原模型和 E18 都在思考开下比）：IFEval 降 ≤3，GSM8K 降 ≤2，LongBench 四项平均降 ≤2。
+
+**vLLM 推理引擎****vLLM 推理引擎**（10-06 用户同意试，开跑前写定）：
 - 做法：vLLM 装在单独的虚拟环境（`/data/vllm-venv`），作为服务运行（`cloud/vllm_ctl.sh`）。实验脚本仍在原环境，prompt、chat 模板、分词、输出解码都不变；`probe.greedy` 把同样的 token id、长度上限和停止集合发给服务（`vllm_client.py`）。解码规则照搬 HF 版：每步取最大、停止 token 保留、忽略模型自带的 generation_config。只用于原模型 bf16 生成；判分器（14B 4-bit）和 CoT 打分（`run_ext_eval --benches cot`，要逐个候选的对数概率）仍用 HF。
 - 验证门槛（和 P0 同一把尺子）：vLLM 跑 Qwen3-4B（单卡）的倒序日志和 E15，用 `compare_reference.py` 和台式机比：逐条一致 ≥95%，各条件正确率差 ≤2 个点。
 - 速度：同一批 10 条长 prompt（MemConflict），32B 上 HF（两卡流水线）和 vLLM（两卡张量并行）各跑一遍。
