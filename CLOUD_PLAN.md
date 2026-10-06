@@ -120,6 +120,16 @@
 - 判分器只在需要判分的数据都生成完后跑一次，省得反复加载。
 - 32B 在 2 万 token 的 prompt 上 prefill 很慢，MemConflict 可能每条十几到几十秒，先测再说。
 
+### P1b · Qwen3-14B 长对话（10-06 从台式机队列移来）
+
+- 台式机原计划跑 `explore_longconv.py run --models Qwen3-14B`，然后 `explore_longconv.py judge`，测 ConvoMem 长版和 PersonaMem。在 16 GB 上只能用 4-bit，3 万 token 时可能爆显存，所以移到云端。
+- **同时补测 14B 在 10-04 之后新加的测试集**，用 `--models Qwen3-14B`：
+  - `explore_extmem.py run`：MemConflict、LoCoMo、MAB-CR，三种顺序；
+  - `explore_order_rule.py run`：E15。
+
+  14B 的其他测试（CoT 总表、日志 / 邮件 / git、agent、LongMemEval、E1b、E7 探针）台式机都已做过（4-bit），不用重跑。已知模式：短的结构化记录上 14B 几乎不受顺序影响（日志正序 98.8 / 倒序 94.9），长会话里和 4B 一样掉（LongMemEval 带日期 78.2 → 53.8）。32B 要检验的就是这个模式。
+- **用 `MODELS` 里现有的 4-bit 配置跑**，和台式机已有的 14B 结果保持一致。时间够的话，再另跑一份 bf16 作对照（加一个新的 `MODELS` 键，例如 `Qwen3-14B-bf16`）。
+
 ### P2 · 台式机装不下的长测试集（4B 和 32B 都跑）
 
 - **MemoryAgentBench-CR `factconsolidation_sh_32k`**（约 3.75 万 token）：`explore_extmem.py` 的 `mabcr()` 只读了 6k 版，加一个参数选 32k。照原来的规则，主要看"答案事实恰有一条更早冲突事实"的题。注意它**不是留出集**，而且有先验冲突导致的地板效应：4B 在 6k 上正序 83% 选了旧值。

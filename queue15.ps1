@@ -93,13 +93,13 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('e17_mc_judge', 'explore_extmem.py judge --parse v2'))
 [void]$jobs.Add(@('e17_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('e17_lc_judge', 'explore_longconv.py judge'))
-# no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
-[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B'))   # E13 dropped (user, 10-05)
 # E18 design diagnostic (10-05 22:30): is writing the dated list needed? E13b (answer-only) vs E13 (list); E17 on the same sets
 [void]$jobs.Add(@('diag_e13b_lc',  'explore_longconv.py run --budget 320 --tasks convo_long --models Qwen3-4B@runs/e13b-dec/final'))
 [void]$jobs.Add(@('diag_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13b-dec/final,Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('diag_judge1',   'explore_longconv.py judge'))
 [void]$jobs.Add(@('diag_judge2',   'explore_reason_eval.py judge'))
+# no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
+[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B'))   # E13 dropped (user, 10-05)
 [void]$jobs.Add(@('gen_e17',     'explore_general.py run --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('gen_q4',       'explore_general.py run --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
 # E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
@@ -114,9 +114,7 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('ext_phi',    'explore_extmem.py run --models Phi-4-mini'))
 [void]$jobs.Add(@('ext_judge2', 'explore_extmem.py judge'))
 [void]$jobs.Add(@('e13b_train', 'train_lora.py --model Qwen3-4B --out runs/e13b-dec --data data_train/bindans_decoupled_train.jsonl --val data_train/bindans_decoupled_val.jsonl --dev data_train/bind_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'))
-# slowest last: Qwen3-14B on the long-dialogue sets
-[void]$jobs.Add(@('lc_q14',   'explore_longconv.py run --models Qwen3-14B'))
-[void]$jobs.Add(@('lc_judge2','explore_longconv.py judge'))
+# (10-06) Qwen3-14B long-dialogue base test moved to the cloud (CLOUD_PLAN P1); the 5080 trains and explores 4B only
 foreach ($j in $jobs) {
     $name = $j[0]; $cmd = $j[1]
     if ((Test-Path $log) -and (Select-String -Path $log -SimpleMatch "end   $name exit=0 (" -Quiet)) {

@@ -4,7 +4,7 @@ TMLR 2024), plus IFEval because their multiple-choice benchmarks cannot see form
 the reader loaded exactly as in every other experiment (app_common.load_reader: LoRA merged into bf16 Qwen3-4B).
   loglikelihood, no chat template : MMLU 5-shot (as FILM; first 50 per subject), ARC-Challenge 0-shot, HellaSwag 0-shot (first 2000)
   generation, chat template, no thinking : IFEval (all 541), LongBench-E qasper / multifieldqa_en / hotpotqa / 2wikimqa
-                                            (first 100 each, context cut to 16k tokens by the harness)
+                                            (first 50 each, context cut to 16k tokens by the harness)
 GSM8K is already measured for every reader in run_ext_eval.py (reported alongside).
 usage: python explore_general.py fetch | run --models Qwen3-4B,Qwen3-4B@runs/e17-dec/final | stats
 """
@@ -16,7 +16,7 @@ OUT = "results/general_{}.json"
 LL_TASKS = {"mmlu": 5, "arc_challenge": 0, "hellaswag": 0}
 LL_LIMIT = {"hellaswag": 2000, "mmlu": 50}   # mmlu: first 50 per subject (~2.8k of 14k; Xiong et al. used 20%)
 GEN_TASKS = ["ifeval", "longbench_qasper_e", "longbench_multifieldqa_en_e", "longbench_hotpotqa_e", "longbench_2wikimqa_e"]
-GEN_LIMIT = {t: 100 for t in GEN_TASKS if t.startswith("longbench")}
+GEN_LIMIT = {t: 50 for t in GEN_TASKS if t.startswith("longbench")}   # 10-05 23:40: 100 -> 50 (lm-eval ~40 s per 16k item)
 MAX_LEN = 16384
 # headline metric per task
 METRIC = {"mmlu": "acc,none", "arc_challenge": "acc_norm,none", "hellaswag": "acc_norm,none",
