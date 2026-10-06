@@ -23,10 +23,10 @@ import torch
 from tqdm import tqdm
 
 from paths import hub
-from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader
+from app_common import tag, out_tag, strip_think, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader
 import run_app_memory as mem
 from explore_probe import CONVO_GLOB, LONG_SDPA, sdpa_kernel
-from run_app_fix import generate
+from run_app_fix import generate, generate_think
 
 OUT = "results/longconv_{}.jsonl"
 PM = glob.glob(hub("datasets--bowen-upenn--PersonaMem-v1", "snapshots", "*"))
@@ -107,6 +107,7 @@ def letter(text):
 
 
 def pm_pred(full):
+    full = strip_think(full)                                          # E18: ignore the thought
     # 10-04 fix: reasoning readers (E13) end with "The best answer is (d)." and no "Answer:", so the first line
     # (the list header) held no letter. Rule: text after the last "Answer:" if present; else the last "(x)" in the
     # whole output; else the first line. Identical for every model; base-model predictions are unchanged.
@@ -119,7 +120,7 @@ def pm_pred(full):
 @torch.no_grad()
 def run(args):
     for name in args.models.split(","):
-        w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
+        w = JsonlAppender(OUT.format(out_tag(name, args.think)), key=lambda r: (r["task"], r["id"], r["cond"]))
         todo = [x for x in convo_long() + personamem() if (x["task"], x["id"], x["cond"]) not in w.done
                 and (not args.tasks or x["task"] in args.tasks.split(","))]
         print(name, "todo", len(todo), flush=True)
@@ -128,12 +129,16 @@ def run(args):
             continue
         tok, model = load_reader(name)
         for x in tqdm(todo, desc=name):
-            p = chat_prompt(tok, x["user"])
+            p = chat_prompt(tok, x["user"], think=args.think)
             n = len(tok(p, add_special_tokens=False).input_ids)
             with sdpa_kernel(LONG_SDPA, set_priority=True):
-                text = generate(tok, model, p, args.budget or (16 if x["task"] == "personamem" else 64))
+                if args.think:                                        # Qwen3 recommended sampling (10-06)
+                    text = generate_think(tok, model, p, args.budget or 1024, (x["task"], x["id"], x["cond"]))
+                else:
+                    text = generate(tok, model, p, args.budget or (16 if x["task"] == "personamem" else 64))
             # reasoning-trained readers (E13): the answer is the text after the last "Answer:"; others: the first line
-            resp = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.strip().split("\n")[0]
+            vis = strip_think(text)                                   # E18 thinking mode: the visible reply only
+            resp = vis.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in vis else vis.strip().split("\n")[0]
             rec = dict(task=x["task"], id=x["id"], cond=x["cond"], n_tok=n, response=resp, full=text)
             if x["task"] == "personamem":
                 pred = pm_pred(text)
@@ -206,6 +211,7 @@ def main():
     ap.add_argument("--models", default="Qwen3-4B")
     ap.add_argument("--budget", type=int, default=None, help="new tokens; default 16 (PersonaMem) / 64 (ConvoMem)")
     ap.add_argument("--tasks", default="", help="comma list of convo_long,personamem (default: both)")
+    ap.add_argument("--think", action="store_true", help="Qwen3 thinking mode (E18); results go to <tag>+think")
     args = ap.parse_args()
     if args.stage == "check":
         from transformers import AutoTokenizer

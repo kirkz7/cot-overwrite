@@ -96,6 +96,21 @@ def generate(tok, model, prompt, max_new):
     return tok.decode(greedy(model, ids, max_new, stop_ids(tok)), skip_special_tokens=True).strip()
 
 
+QWEN_THINK_SAMPLING = dict(do_sample=True, temperature=0.6, top_p=0.95, top_k=20)   # Qwen3 model card, thinking mode
+
+
+def generate_think(tok, model, prompt, max_new, key):
+    """E18 thinking mode, decoded as the Qwen3 model card recommends for thinking (greedy decoding there "can lead to
+    endless repetitions"; seen on PersonaMem 10-06). Seeded from the item key, so every run is reproducible."""
+    import zlib
+    ids = tok(prompt, return_tensors="pt", add_special_tokens=False).input_ids.cuda()
+    torch.manual_seed(zlib.crc32(str(key).encode()))
+    out = model.generate(ids, attention_mask=torch.ones_like(ids), max_new_tokens=max_new, eos_token_id=sorted(stop_ids(tok)),
+                         pad_token_id=tok.pad_token_id if tok.pad_token_id is not None else tok.eos_token_id,
+                         **QWEN_THINK_SAMPLING)
+    return tok.decode(out[0, ids.shape[1]:], skip_special_tokens=True).strip()
+
+
 def final_answer(cond, text):
     """The part of a response that the judge grades."""
     if cond.endswith("timeline"):

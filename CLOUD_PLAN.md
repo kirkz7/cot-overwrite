@@ -139,6 +139,51 @@
 
 只跑 P1 的第 1、2、4、5 项。OLMo-2 原生上下文只有 4k，长测试集可能不适用；先查它支持的长度，不行就只跑短任务。
 
+### P6 · E18 的通用能力检查（10-06 用户要求放到云端；在 P1 之外的空闲卡上做，优先级高于 P2 / P3）
+
+- **背景**：E18 是台式机上训的 4B 修复候选（清单放进 Qwen3 思考模式）。修复的主要测试在台式机跑；"不伤原模型"的通用能力检查改到云端跑，台式机队列里已删除。门槛见 `EXPLORE_PLAN.md`「通用能力检查」和「E18」第 5 条：相对原模型，MMLU / ARC-C / HellaSwag / GSM8K 各降 ≤2 个点，IFEval 降 ≤3，LongBench 四项平均降 ≤2。**测的是思考关**（`explore_general.py` 默认 `enable_thinking=False`）。
+- **取得权重**：权重在单独的分支 `weights-e18`（不在 main），按那里 `weights/e18-dec/RESTORE.md` 的步骤还原到 `runs/e18-dec/final/`，并**核对 SHA256 = `45f05d3d41fbd9fc3a4428e5e6d0eafa91a5fff3345e27af2712a348901e91e2`**。
+  ```
+  git fetch origin weights-e18
+  git checkout origin/weights-e18 -- weights/e18-dec
+  ```
+  还原后不要把 `weights/` 提交到 `cloud-l20`。
+- **原模型和 E18 都在云端跑**，在同一台机器、同一套设置下比较。台式机的原模型结果只做参照：MMLU、ARC、HellaSwag、IFEval 已有，LongBench 没跑完。
+  ```
+  python explore_general.py fetch                                    # 一次，缓存数据集（联网）
+  python explore_general.py run --models Qwen3-4B
+  python explore_general.py run --models Qwen3-4B@runs/e18-dec/final
+  python run_ext_eval.py --models Qwen3-4B --benches gsm8k
+  python run_ext_eval.py --models Qwen3-4B@runs/e18-dec/final --benches gsm8k
+  python explore_general.py stats --models Qwen3-4B,Qwen3-4B@runs/e18-dec/final
+  ```
+- **不要改 `explore_general.py` 的设置**，包括题数、batch、截断长度：MMLU 每个学科前 50 题、HellaSwag 前 2000、IFEval 全部 541、LongBench-E 四项各前 50、MMLU 和 LongBench 用 batch 1。这些是预注册时定的，台式机也用这套。L20 显存大，也不要为了更快而改 batch，batch 会轻微影响对数似然的数值。
+- 两张卡可以各跑一个模型并行（`CUDA_VISIBLE_DEVICES=0` / `1`）。
+- **报告**：每项给原模型、E18、差值（附 lm-eval 报出的标准误），逐项按门槛写"达到 / 没达到"。写进 `CLOUD_NOTEBOOK.md`，`results/general_*.json` 和 `results/ext_gsm8k_*.jsonl` 推到 `cloud-l20`。
+- **E17 和短对话 LoRA 不测**：已被 E18 取代，不进论文。
+
+### P5 · MemConflict 端到端（**10-06 用户决定降级、暂缓：先不要做，包括读论文和查仓库**；保留设计备查）
+
+- **为什么做**：前面的 MemConflict 测试是我们截取会话、人为排顺序做出来的受控测试，只能证明机制。端到端测试要用原作者的全部题、全部会话，加一个标准检索记忆，顺序由检索器决定，检索失败也计入成绩。它回答的是"现实部署里修复有没有用"。
+- **原论文（2605.20926）的协议**（台式机 10-06 已读原文核实）：
+  - 评测 6 个记忆系统（A-Mem、LangMem、Letta、MemOS、Mem0、Memobase），后端 LLM 都是 gpt-5.0-mini，**没有 BM25 / embedding 加读者的基线**；
+  - 默认检索 K=3（敏感性分析用 K=2、5）；
+  - 判分：用 LLM 比对答案再人工复核，判分提示见原文附录 Fig. A5；
+  - 指标：AA 按动态 / 静态 / 条件分别报告，总分宏平均，动态冲突另报 UOCS、静态冲突另报 CRS；
+  - 主实验用了 12 个用户，我们的数据文件有 30 个。
+- **我们的设置**（读者研究，不换记忆系统）：
+  - **检索器**：照 LongMemEval 论文里检索加读者实验的默认设置（检索器、按会话还是按轮切块、K）。**云端先读论文核实，写进预注册**。另加 BM25 一组，它不依赖额外模型。
+  - **K**：按会话切块时 K=3 为主（约 1.2 万 token），K=5 作敏感性分析。
+  - **两种呈现顺序都报**：检索器的相关度顺序（最相关在前），以及按会话日期重排（很多记忆系统这样做）。两种都是部署里会出现的，都不是我们排的。
+  - **题目**：全部 30 个用户、全部三类冲突，原题原答案，不做任何筛选。
+  - **判分**：原文 Fig. A5 的提示，判分模型换成 Qwen3-14B 4-bit（偏离官方协议，论文里写明）。抽约 100 题由用户人工核对，报一致率。是否另用 gpt-5-mini 判一个子集，由用户决定（需要 API 和费用）。
+  - **比较**：原模型和修复模型都跑，同一检索结果、同一提示。4B 原模型、E17 / E18 在台式机跑；14B、32B 原模型在云端跑；32B 修复模型等 P4。
+- **预注册要点**（开跑前由台式机写进 EXPLORE_PLAN，云端照用）：
+  - 修复模型总分（宏平均 AA）不低于原模型；
+  - 动态冲突 AA 高于原模型，置信区间不含 0（按用户整群 bootstrap）；
+  - **静态冲突不能明显下降**：静态冲突的正确答案是原本稳定的值，不是最新的值，"永远选最新"的矫枉过正会在这里暴露。
+- **云端现在能先做的**：读 LongMemEval 论文的检索加读者设置并写下来；查 MemConflict 的 GitHub 仓库有没有公开评测代码和判分提示的原文，有就记下路径和 commit。**脚本等台式机推送后再跑。**
+
 ### P4 · 32B 训练（必须等台式机通知，并经用户同意）
 
 - 用 E18 的最终配方和数据文件，由台式机推送。训练超参照 4B：LoRA rank 16、alpha 32、学习率 1e-4、1 轮、max_len 8192。32B 用 bf16 双卡，开梯度检查点；显存不够再考虑 4-bit 底座（QLoRA），但那是变量变化，要预注册。

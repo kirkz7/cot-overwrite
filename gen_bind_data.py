@@ -99,7 +99,9 @@ def make_sample(rng, wiki, mode, idx, genres):
     reasoning = "\n".join([f"Records about {a}, from oldest to newest:"] + [f"- {d}: {v}" for d, v in chain] + [line, f"Answer: {ans}"])
     return dict(id=idx, fmt=genre, dated=True, order=order, header=False, qtype=qtype, k=k, n_blocks=n_blocks,
                 long=long_doc, prompt=prompt, answer=reasoning, final=ans,
-                _v2=dict(a=a, vals=vals, chain=chain, j=j, wv=wv, when=when.strftime(fmt), docs=blocks, intro=INTRO[genre]))
+                _v2=dict(a=a, vals=vals, chain=chain, j=j, wv=wv, when=when.strftime(fmt), docs=blocks, intro=INTRO[genre],
+                         attrs=attrs, others=[(st["attr"], st["value"], dates[bi].strftime(fmt))     # E18: non-target records
+                                              for bi, lst in enumerate(stmts) for st in lst if not st.get("target")]))
 
 
 def main():

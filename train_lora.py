@@ -23,7 +23,7 @@ import transformers.integrations.sdpa_attention as hf_sdpa
 from torch.nn.attention import SDPBackend, sdpa_kernel
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-from app_common import MODELS, chat_prompt, load_jsonl
+from app_common import MODELS, chat_prompt, load_jsonl, strip_think
 from probe import greedy
 
 # Repeat K/V instead of SDPA's enable_gqa: the memory-efficient kernel (O(L) memory, has a backward pass) does
@@ -44,7 +44,8 @@ def end_of_turn(tok):
 
 
 def encode(tok, row, eot):
-    prefix = tok(chat_prompt(tok, row["prompt"], row.get("prefix", "")), add_special_tokens=False).input_ids   # optional assistant prefix (CoT data)
+    prefix = tok(chat_prompt(tok, row["prompt"], row.get("prefix", ""), think=row.get("think", False)),
+                 add_special_tokens=False).input_ids   # optional assistant prefix (CoT data); think: E18 thinking-mode rows
     ans = tok(row["answer"] + eot, add_special_tokens=False).input_ids
     return prefix, ans
 
@@ -64,8 +65,9 @@ def validate(model, tok, val, eot_ids, max_new=24):
     model.eval()
     hits = collections.defaultdict(list)
     for r in val:
-        ids = torch.tensor([tok(chat_prompt(tok, r["prompt"], r.get("prefix", "")), add_special_tokens=False).input_ids], device="cuda")
-        text = tok.decode(greedy(model, ids, max_new, eot_ids), skip_special_tokens=True).strip()
+        ids = torch.tensor([tok(chat_prompt(tok, r["prompt"], r.get("prefix", ""), think=r.get("think", False)),
+                                add_special_tokens=False).input_ids], device="cuda")
+        text = strip_think(tok.decode(greedy(model, ids, max_new, eot_ids), skip_special_tokens=True).strip())   # E18: visible reply only
         # reasoning targets (E12): score the text after the last "Answer:"; plain targets: the first line
         out = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.split("\n")[0]
         ok = norm(out) == norm(r.get("final", r["answer"]))
@@ -139,7 +141,7 @@ def main():
 
     rows = load_jsonl(args.data)[:args.limit]
     global VAL_NEW
-    VAL_NEW = 256 if any("final" in r for r in rows[:20]) else 24
+    VAL_NEW = (512 if any(r.get("think") for r in rows[:50]) else 256) if any("final" in r for r in rows[:20]) else 24
     enc = [encode(tok, r, eot) for r in rows]
     keep = [i for i, (p, a) in enumerate(enc) if len(p) + len(a) <= args.max_len]
     rng = random.Random(args.seed)
