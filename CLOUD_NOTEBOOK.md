@@ -34,6 +34,14 @@
 - 门槛：统一门槛（倒序或检索序比正序低 ≥10 个点，配对 bootstrap 95% CI 不含 0）。4B 和 32B 分别判定。
 - 不是留出集。已知风险：先验冲突造成的地板效应（4B 在 6k 上正序 83% 选了旧值）。正序本身很低时，按"地板效应"报告，附正序正确率和选旧值比例。
 
+**P2 · BEAM 知识更新**（10-06 用户同意下载并按此方案做；开跑前写定）：
+- 数据：HF `Mohammadta/BEAM`（论文 2510.27246，ICLR 2026，CC-BY-SA-4.0），`100K` / `500K` / `1M` 三个 split，共 90 段对话；不用 `BEAM-10M`。**定为冻结留出集**：只看汇总；格式检查时看过的 1 个对话已记在接触记录里。
+- 题目：每段对话的 `knowledge_update` 题（每段 2 道，最多 180 道）。旧信息 `source_chat_ids.original_info`、新信息 `updated_info`。旧、新在同一个 session（同一日期）的题剔除，报告剔除数。
+- 构造（仿 MemConflict）：单位是一轮"用户消息 + 助手回复"；同一 session 里相邻的几轮合成一块，块头标该 session 的日期（`### Conversation (date: ...)`）。旧信息块 = 旧证据所在轮及前后各 1 轮；新信息块同理；再从新信息所在 session 往前，每个中间 session 取中间 3 轮作一块，直到总长约 20k token（超了就停）。旧块 + 新块本身超过 20k 的题剔除。prompt 措辞、"Current date"（新信息日期 + 1 天）、64 token 上限都照 MemConflict。
+- 条件：正序 / 倒序 / 检索序（`explore_extmem.bm25_order`，问题作查询）。
+- 判分：14B 4-bit 判分器，用 `run_app_memory.JUDGE`（A 新值 / B 旧值 / C 都不是），旧 / 新证据用题目自带的 `conversation_references`（两条时）或证据消息原文前 400 字。主指标 = A 的比例；同时报告 B（选旧值）。
+- 门槛：统一门槛（倒序或检索序比正序低 ≥10 个点、配对 bootstrap 95% CI 不含 0），另报按对话的整群 bootstrap。各模型分别判定。没复现时按地板效应 / 题目不需要历史 / 反例分类，附数字。
+
 **vLLM 推理引擎**（10-06 用户同意试，开跑前写定）：
 - 做法：vLLM 装在单独的虚拟环境（`/data/vllm-venv`），作为服务运行（`cloud/vllm_ctl.sh`）。实验脚本仍在原环境，prompt、chat 模板、分词、输出解码都不变；`probe.greedy` 把同样的 token id、长度上限和停止集合发给服务（`vllm_client.py`）。解码规则照搬 HF 版：每步取最大、停止 token 保留、忽略模型自带的 generation_config。只用于原模型 bf16 生成；判分器（14B 4-bit）和 CoT 打分（`run_ext_eval --benches cot`，要逐个候选的对数概率）仍用 HF。
 - 验证门槛（和 P0 同一把尺子）：vLLM 跑 Qwen3-4B（单卡）的倒序日志和 E15，用 `compare_reference.py` 和台式机比：逐条一致 ≥95%，各条件正确率差 ≤2 个点。
