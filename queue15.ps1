@@ -94,7 +94,7 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('e17_longconv', 'explore_longconv.py run --budget 320 --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('e17_lc_judge', 'explore_longconv.py judge'))
 # no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
-[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B,Qwen3-4B@runs/e13-dec/final'))
+[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B'))   # E13 dropped (user, 10-05)
 [void]$jobs.Add(@('gen_e17',      'explore_general.py run --models Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('gen_q4',       'explore_general.py run --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
 # E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
