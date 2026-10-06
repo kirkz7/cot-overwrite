@@ -95,10 +95,11 @@ def load_reader(name):
     return tok, model
 
 
-def chat_prompt(tok, user, prefix=""):
+def chat_prompt(tok, user, prefix="", think=False):
+    """think=True (E18): Qwen3 thinking mode, the reply starts with <think>; default: thinking off (empty think block)."""
     msgs = [{"role": "user", "content": user}]
     try:
-        head = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
+        head = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=think)
     except TypeError:
         head = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
     return head + prefix
@@ -111,11 +112,31 @@ def answer(tok, model, prompt, max_new=24):
     return out.strip().split("\n")[0]
 
 
+def out_tag(name, think=False):
+    """results-file tag; thinking-mode runs (E18 --think) get their own files: "Qwen3-4B+e18-dec+think"."""
+    return tag(name) + ("+think" if think else "")
+
+
+def to_think(prompt):
+    """a thinking-off chat prompt (ends with Qwen3's empty think block) -> the same prompt with thinking on"""
+    empty = "<think>\n\n</think>\n\n"
+    assert prompt.endswith(empty), "not a Qwen3 thinking-off prompt"
+    return prompt[: -len(empty)]
+
+
+def strip_think(text):
+    """The visible reply: text after </think> (thinking mode); unchanged when there is no </think>.
+    An unfinished thought (budget used up inside <think>) leaves no visible reply: returns ""."""
+    if "</think>" in text:
+        return text.split("</think>", 1)[1].strip()
+    return "" if text.lstrip().startswith("<think>") else text
+
+
 def answer_text(full):
     """Parse rule v2 (10-05, EXPLORE_PLAN E17), for judge-scored answers: ALL text after the last "Answer:" (not only its
     first line); without "Answer:", the whole response. v1 kept only the first line, so a sentence split over lines or a
     list-then-answer output reached the judge cut short."""
-    full = full.strip()
+    full = strip_think(full).strip()
     return " ".join((full.rsplit("Answer:", 1)[1] if "Answer:" in full else full).split())
 
 

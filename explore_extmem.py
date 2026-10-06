@@ -31,7 +31,7 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
-from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text
+from app_common import tag, out_tag, strip_think, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text
 import run_app_memory as mem
 from explore_probe import LONG_SDPA, sdpa_kernel
 from run_app_fix import generate
@@ -216,7 +216,7 @@ def items(tasks=""):
 def run(args):
     its = [x for x in items(args.tasks) if not args.tasks or x["task"] in args.tasks.split(",")]
     for name in args.models.split(","):
-        w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
+        w = JsonlAppender(OUT.format(out_tag(name, args.think)), key=lambda r: (r["task"], r["id"], r["cond"]))
         todo = [x for x in its if (x["task"], x["id"], x["cond"]) not in w.done]
         print(name, "todo", len(todo), flush=True)
         if not todo:
@@ -224,12 +224,13 @@ def run(args):
             continue
         tok, model = load_reader(name)
         for x in tqdm(todo, desc=name):
-            p = chat_prompt(tok, x["user"])
+            p = chat_prompt(tok, x["user"], think=args.think)
             n = len(tok(p, add_special_tokens=False).input_ids)
             with sdpa_kernel(LONG_SDPA, set_priority=True):
                 text = generate(tok, model, p, args.budget or BUDGET[x["task"]])
             # reasoning-trained readers (E13): the answer is the text after the last "Answer:"; others: the first line
-            resp = text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.strip().split("\n")[0]
+            vis = strip_think(text)                                   # E18 thinking mode: the visible reply only
+            resp = vis.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in vis else vis.strip().split("\n")[0]
             rec = {k: v for k, v in x.items() if k != "user"}
             rec.update(n_tok=n, response=resp, full=text)
             if x["task"] == "mabcr":
@@ -350,6 +351,7 @@ def main():
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B,Phi-4-mini")
     ap.add_argument("--tasks", default="", help="comma list of memconf,mabcr,locomo (default: all)")
+    ap.add_argument("--think", action="store_true", help="Qwen3 thinking mode (E18); results go to <tag>+think")
     ap.add_argument("--parse", choices=["v1", "v2"], default="v1", help="judge / stats: answer parse rule (v2 from E17 on)")
     ap.add_argument("--budget", type=int, default=None, help="new tokens; default per task (64/24/32); E13 readers: 320")
     args = ap.parse_args()

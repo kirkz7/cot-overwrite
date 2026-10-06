@@ -15,7 +15,7 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
-from app_common import tag, JsonlAppender, chat_prompt, first_number, free_gpu, load_jsonl, load_reader
+from app_common import tag, out_tag, strip_think, to_think, JsonlAppender, chat_prompt, first_number, free_gpu, load_jsonl, load_reader
 import run_app_logs as logs
 import run_app_memory as mem
 from explore_route import convo_items
@@ -26,6 +26,7 @@ OUT = "results/explore_reason_{}.jsonl"
 
 
 def extract(text):
+    text = strip_think(text)                                          # E18: the visible reply only
     return text.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in text else text.strip().split("\n")[0]
 
 
@@ -47,13 +48,13 @@ def items(tok):
 @torch.no_grad()
 def run(args):
     for name in args.models.split(","):
-        w = JsonlAppender(OUT.format(tag(name)), key=lambda r: (r["task"], r["id"], r["cond"]))
+        w = JsonlAppender(OUT.format(out_tag(name, args.think)), key=lambda r: (r["task"], r["id"], r["cond"]))
         tok, model = load_reader(name)
         todo = [x for x in items(tok) if (x["task"], x["id"], x["cond"]) not in w.done
                 and (not args.tasks or x["task"] in args.tasks.split(","))]
         print(name, "todo", len(todo), flush=True)
         for x in tqdm(todo, desc=name):
-            text = generate(tok, model, x["prompt"], 320)
+            text = generate(tok, model, to_think(x["prompt"]) if args.think else x["prompt"], 1024 if args.think else 320)
             rec = dict(task=x["task"], id=x["id"], cond=x["cond"], full=text, response=extract(text),
                        reasoned="Answer:" in text)
             if "hist" in x:
@@ -140,6 +141,7 @@ def main():
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B")
     ap.add_argument("--tasks", default="", help="comma list of convo,lme,email<n> (default: all)")
+    ap.add_argument("--think", action="store_true", help="Qwen3 thinking mode (E18); results go to <tag>+think")
     args = ap.parse_args()
     if args.stage == "check":
         from transformers import AutoTokenizer
