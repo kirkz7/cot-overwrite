@@ -114,9 +114,7 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('ext_phi',    'explore_extmem.py run --models Phi-4-mini'))
 [void]$jobs.Add(@('ext_judge2', 'explore_extmem.py judge'))
 [void]$jobs.Add(@('e13b_train', 'train_lora.py --model Qwen3-4B --out runs/e13b-dec --data data_train/bindans_decoupled_train.jsonl --val data_train/bindans_decoupled_val.jsonl --dev data_train/bind_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'))
-# slowest last: Qwen3-14B on the long-dialogue sets
-[void]$jobs.Add(@('lc_q14',   'explore_longconv.py run --models Qwen3-14B'))
-[void]$jobs.Add(@('lc_judge2','explore_longconv.py judge'))
+# (10-06) Qwen3-14B long-dialogue base test moved to the cloud (CLOUD_PLAN P1); the 5080 trains and explores 4B only
 foreach ($j in $jobs) {
     $name = $j[0]; $cmd = $j[1]
     if ((Test-Path $log) -and (Select-String -Path $log -SimpleMatch "end   $name exit=0 (" -Quiet)) {
