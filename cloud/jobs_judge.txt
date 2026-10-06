@@ -1,0 +1,5 @@
+# Judge everything generated so far (Qwen3-14B 4-bit nf4 on HF, as on the desktop); extmem with both parse rules.
+judge_ext      explore_extmem.py judge
+judge_ext2     explore_extmem.py judge --parse v2
+judge_lc       explore_longconv.py judge
+judge_mem      run_app_memory.py judge

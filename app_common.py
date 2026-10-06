@@ -70,6 +70,7 @@ MODELS = {  # name -> (hf id, 4-bit)
     "Qwen3-8B": ("Qwen/Qwen3-8B", True),
     "OLMo-2-7B-Instruct": ("allenai/OLMo-2-1124-7B-Instruct", True),
     "Qwen3-32B": ("Qwen/Qwen3-32B", False),   # cloud only, bf16 over two cards (COT_DEVICE_MAP=auto)
+    "Qwen3-14B-bf16": ("Qwen/Qwen3-14B", False),   # cloud reader (the judge stays "Qwen3-14B", 4-bit)
 }
 NUM = re.compile(r"-?\d+(?:\.\d+)?")
 
@@ -77,6 +78,8 @@ NUM = re.compile(r"-?\d+(?:\.\d+)?")
 def tag(name):
     """File-name tag of a reader: "Qwen3-4B" -> "Qwen3-4B"; "Qwen3-4B@runs/q4-dec/final" -> "Qwen3-4B+q4-dec"."""
     base, _, adapter = name.partition("@")
+    if os.environ.get("COT_ENGINE") == "vllm":   # cloud vLLM runs get their own result files
+        base += "~vllm"
     if not adapter:
         return base
     parts = [p for p in re.split(r"[\\/]", adapter) if p and p not in ("final", "ckpt", "runs", ".")]

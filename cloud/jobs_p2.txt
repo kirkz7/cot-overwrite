@@ -1,3 +1,4 @@
+# 4B part done on HF (p2_mab32k_q4). The 32B / vLLM runs of mabcr32k are in cloud/jobs_v32.txt, jobs_v4.txt, jobs_v14.txt.
 # P2: long sets the 16 GB desktop card cannot hold (CLOUD_PLAN.md section 5). Pre-registration in CLOUD_NOTEBOOK.md.
 # MAB-CR factconsolidation_sh_32k (~37.5k tokens, 100 questions x chrono/rev/retr; string-scored, no judge)
 p2_mab32k_q4   explore_extmem.py run --tasks mabcr32k --models Qwen3-4B

@@ -71,6 +71,11 @@ vLLM 0.31.0（torch 2.13 + cu130，`/data/vllm-venv`），Qwen3-4B 单卡（GPU1
 和云端 HF 的 P0（97.6% / 94.8%）相比，vLLM 和台式机的一致程度相当，E15 还略高。速度：倒序日志约 10 条/秒，HF 约 6 条/秒（4B 单卡、短 prompt）。
 - 启动问题：flashinfer 启动时要编译内核，需要 venv 里的 ninja 和 CUDA 13.0 工具链；`cloud/vllm_ctl.sh` 已加 PATH / CUDA_HOME。
 - **长 prompt 补充检查结果**（MAB-CR 32k，4B，vLLM 对本机 HF，300 条）：逐条一致 **94.0%**（门槛 ≥95，**不通过**）；各条件正确率 HF/vLLM：正序 39.0/39.0，倒序 39.0/38.0，检索序 54.0/52.0，最大差 2.0（门槛 ≤2，通过）。按预注册规则：长 prompt 的测试集不用 vLLM。输出在 `results/vllm_check/extmem_Qwen3-4B.jsonl`。
+- **10-06 用户决定（推翻上面的预注册规则）：所有生成任务都用 vLLM，包括长 prompt。** 理由（用户）：效率优先；每个模型自己的条件之间是同一个引擎，自己和自己比；之后可能还要跑 70B。为了让模型之间也可比，**云端用 vLLM 重测 4B 和 14B**（14B 当答题模型用 bf16，`Qwen3-14B-bf16`；判分器仍是 HF 的 14B 4-bit）。论文里 32B 与台式机 4B/14B 的结果比较时要注明引擎不同；云端内部的模型比较都是 vLLM。
+  - 结果文件名带 `~vllm`（`app_common.tag`），不覆盖 HF 结果。
+  - 例外：CoT 打分（`--benches cot`）要候选的对数概率，仍用 HF；它在每个模型内部的条件之间也是同一个引擎。
+  - 队列：`cloud/jobs_v32.txt`（32B，两卡张量并行）→ `cloud/jobs_v4.txt`（GPU0 :8000）和 `cloud/jobs_v14.txt`（GPU1 :8001）并行 → `cloud/jobs_judge.txt`。`jobs_p1.txt` 作废。
+  - 4B 的 MAB-CR 32k vLLM 结果（上面的长 prompt 检查）直接作为 `extmem_Qwen3-4B~vllm.jsonl` 的一部分，不重跑。
 - 还差：32B 的速度对比（等 32B 下完）。脚本 `cloud/speedtest_32b.py`：10 条 MemConflict 正序 prompt（按长度均匀取，约 8k–25k token，每条上下文不同，vLLM 的前缀缓存帮不上忙），HF 和 vLLM 各跑一遍，不写 results/。
 - 判分器冒烟测试（10-06）：14B 4-bit 加载 6 s、显存 10.6 GB，三条合成样例（新值 / 旧值 / 不知道）分别判 A / B / C，每条约 0.1 s。
 - **长 prompt 补充检查**（10-06 11:35 写定，开跑前）：上面两项的 prompt 都短（E15 中位 1k token）。用 vLLM 把 4B 的 MAB-CR 32k（300 条，每条约 37.5k token）再跑一遍，和本机 HF 的结果（`results/extmem_Qwen3-4B.jsonl`）逐条比。标准同 P0：逐条答案一致 ≥95%，各条件（正序 / 倒序 / 检索序，各 100 条）正确率差 ≤2 个点。注意每个条件只有 100 条，1 条 = 1 个点。不过就不用 vLLM 跑长 prompt 的测试集。

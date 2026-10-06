@@ -1,3 +1,4 @@
+# SUPERSEDED 10-06 by cloud/jobs_v32.txt (user: every generation job on vLLM); kept for the record.
 # P1: Qwen3-32B base (bf16, two cards). Order from CLOUD_PLAN.md section 5; start only after P0 passes.
 # First time 10 items per job and report the total ETA to the user before running the full list.
 # Generation first; the judge (Qwen3-14B 4-bit nf4) runs once at the end over everything generated.

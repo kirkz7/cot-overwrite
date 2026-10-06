@@ -40,11 +40,13 @@ while :; do
     t=$(date +%s)
     log "[$(now)] start $next"
     # vLLM jobs (COT_ENGINE=vllm COT_VLLM_MODEL=<hf id> [COT_VLLM_TP=n]) need the server; every other job needs free cards
+    # (the server for this job's COT_VLLM_URL port and CUDA_VISIBLE_DEVICES; other queues' servers are left alone)
+    vport=$(sed -n 's/.*COT_VLLM_URL=[^ ]*:\([0-9]*\).*/\1/p' <<< "$nextcmd_env"); vport=${vport:-8000}
     if [[ " $nextcmd_env" == *" COT_ENGINE=vllm "* ]]; then
         vm=$(sed -n 's/.*COT_VLLM_MODEL=\([^ ]*\).*/\1/p' <<< "$nextcmd_env"); vtp=$(sed -n 's/.*COT_VLLM_TP=\([^ ]*\).*/\1/p' <<< "$nextcmd_env")
-        cloud/vllm_ctl.sh up "$vm" "${vtp:-2}" >> "logs/$next.log" 2>&1
-    elif [ -f logs/vllm_server.pid ]; then
-        cloud/vllm_ctl.sh down >> "logs/$next.log" 2>&1
+        env $nextcmd_env cloud/vllm_ctl.sh up "$vm" "${vtp:-2}" >> "logs/$next.log" 2>&1
+    elif [ -f "logs/vllm_server_$vport.pid" ]; then
+        env $nextcmd_env cloud/vllm_ctl.sh down >> "logs/$next.log" 2>&1
     fi
     rc=$?
     [ $rc -eq 0 ] && { env $nextcmd_env $PY $nextcmd >> "logs/$next.log" 2>&1; rc=$?; }
