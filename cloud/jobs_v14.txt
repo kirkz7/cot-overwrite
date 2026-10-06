@@ -1,4 +1,4 @@
-# PAUSED 10-06 12:31: the 14B bf16 run is the optional control in CLOUD_PLAN P1b; it continues only after 32B and the 4-bit P1b.
+# RESUMED 10-06 21:30 (user: full 14B suite like 32B, bf16 on vLLM). Runs after jobs_p1b_g1 on GPU1.
 # Qwen3-14B bf16 reader on vLLM, GPU1 :8001 (the judge stays Qwen3-14B 4-bit on HF). CoT bench on HF, same card.
 v14_ext       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 explore_extmem.py run --tasks memconf,mabcr,locomo,mabcr32k --models Qwen3-14B-bf16
 v14_lc        CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 explore_longconv.py run --models Qwen3-14B-bf16
