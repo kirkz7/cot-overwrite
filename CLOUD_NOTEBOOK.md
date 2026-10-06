@@ -175,10 +175,11 @@ LongMemEval 是"已看过"的数据（只用于说明现象，不作修复证据
 
 - 10-06 22:08：32B 全部队列跑完，只有 `v32_exteval` 失败：ToT 有 4 道题的 prompt 超过 40960 token（最长 42057），vLLM 拒绝（HTTP 400）。台式机 HF 照常跑过这些题（位置超出训练长度）。修正：`vllm_ctl.sh` 的 max_model_len 改为 43008，并设 `VLLM_ALLOW_LONG_MAX_MODEL_LEN=1`，和 HF 的做法一致；40960 以内的 prompt 不受影响。已完成：MAB 600 条、ToT 276 条；剩下 ToT、TempReason、BABILong、GSM8K 等两张卡空出来后重跑（`cloud/rerun_v32_exteval.sh`）。
 
-## 留出集接触记录## 留出集接触记录
+## 留出集接触记录
 
 - 10-06 约 12:10：为确认 BEAM 的数据格式，通过 HF datasets-server 看了 BEAM `100K` split 第 0 个对话的原文：knowledge_update、contradiction_resolution、temporal_reasoning 各 1 道题（含答案和 source_chat_ids），以及第 1 条用户消息。BEAM 当时还没定为留出集；若之后用作留出集，这个对话要在报告里标注或剔除。
 
 ## 问题和更正
 
 - 2026-10-06：台式机参照输出已推到 `main` 的 `reference/desktop/`（commit 0933b9f），已合并进 `cloud-l20`。两个文件的 sha256 和 README 不同，原因是 git 把 CRLF 换成了 LF；换回 CRLF 后哈希一致（8f3b353f…、96803347…），内容没变。
+- 10-07 02:10：8B 的外部测试集在同一道 ToT 题上失败（HTTP 500，CUDA device-side assert）：max_model_len 调到 43008 后，vLLM 的 RoPE 表仍只到 40960，越界。改法：max_model_len 改回 40960；`run_ext_eval.run_simple` 在 vLLM 下遇到 prompt + 输出超过 40960 的题（ToT 420 题里 4 道，约 42k token）写一行 `skipped`、不计分。vLLM 的 ToT 成绩按 416 题算；和台式机 HF 比较时用共同题目。8B、32B 的外部测试集之后补跑（`cloud/followup.sh`、`orchestrate.sh` 最后一步）；4B、14B 直接用改好的代码。
