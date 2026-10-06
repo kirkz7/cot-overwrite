@@ -139,6 +139,29 @@
 
 只跑 P1 的第 1、2、4、5 项。OLMo-2 原生上下文只有 4k，长测试集可能不适用；先查它支持的长度，不行就只跑短任务。
 
+### P6 · E18 的通用能力检查（10-06 用户要求放到云端；在 P1 之外的空闲卡上做，优先级高于 P2 / P3）
+
+- **背景**：E18 是台式机上训的 4B 修复候选（清单放进 Qwen3 思考模式）。修复的主要测试在台式机跑；"不伤原模型"的通用能力检查改到云端跑，台式机队列里已删除。门槛见 `EXPLORE_PLAN.md`「通用能力检查」和「E18」第 5 条：相对原模型，MMLU / ARC-C / HellaSwag / GSM8K 各降 ≤2 个点，IFEval 降 ≤3，LongBench 四项平均降 ≤2。**测的是思考关**（`explore_general.py` 默认 `enable_thinking=False`）。
+- **取得权重**：权重在单独的分支 `weights-e18`（不在 main），按那里 `weights/e18-dec/RESTORE.md` 的步骤还原到 `runs/e18-dec/final/`，并**核对 SHA256 = `45f05d3d41fbd9fc3a4428e5e6d0eafa91a5fff3345e27af2712a348901e91e2`**。
+  ```
+  git fetch origin weights-e18
+  git checkout origin/weights-e18 -- weights/e18-dec
+  ```
+  还原后不要把 `weights/` 提交到 `cloud-l20`。
+- **原模型和 E18 都在云端跑**，在同一台机器、同一套设置下比较。台式机的原模型结果只做参照：MMLU、ARC、HellaSwag、IFEval 已有，LongBench 没跑完。
+  ```
+  python explore_general.py fetch                                    # 一次，缓存数据集（联网）
+  python explore_general.py run --models Qwen3-4B
+  python explore_general.py run --models Qwen3-4B@runs/e18-dec/final
+  python run_ext_eval.py --models Qwen3-4B --benches gsm8k
+  python run_ext_eval.py --models Qwen3-4B@runs/e18-dec/final --benches gsm8k
+  python explore_general.py stats --models Qwen3-4B,Qwen3-4B@runs/e18-dec/final
+  ```
+- **不要改 `explore_general.py` 的设置**，包括题数、batch、截断长度：MMLU 每个学科前 50 题、HellaSwag 前 2000、IFEval 全部 541、LongBench-E 四项各前 50、MMLU 和 LongBench 用 batch 1。这些是预注册时定的，台式机也用这套。L20 显存大，也不要为了更快而改 batch，batch 会轻微影响对数似然的数值。
+- 两张卡可以各跑一个模型并行（`CUDA_VISIBLE_DEVICES=0` / `1`）。
+- **报告**：每项给原模型、E18、差值（附 lm-eval 报出的标准误），逐项按门槛写"达到 / 没达到"。写进 `CLOUD_NOTEBOOK.md`，`results/general_*.json` 和 `results/ext_gsm8k_*.jsonl` 推到 `cloud-l20`。
+- **E17 和短对话 LoRA 不测**：已被 E18 取代，不进论文。
+
 ### P5 · MemConflict 端到端（**10-06 用户决定降级、暂缓：先不要做，包括读论文和查仓库**；保留设计备查）
 
 - **为什么做**：前面的 MemConflict 测试是我们截取会话、人为排顺序做出来的受控测试，只能证明机制。端到端测试要用原作者的全部题、全部会话，加一个标准检索记忆，顺序由检索器决定，检索失败也计入成绩。它回答的是"现实部署里修复有没有用"。
