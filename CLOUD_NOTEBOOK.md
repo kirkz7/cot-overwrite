@@ -42,6 +42,8 @@
 - 判分：14B 4-bit 判分器，用 `run_app_memory.JUDGE`（A 新值 / B 旧值 / C 都不是），旧 / 新证据用题目自带的 `conversation_references`（两条时）或证据消息原文前 400 字。主指标 = A 的比例；同时报告 B（选旧值）。
 - 门槛：统一门槛（倒序或检索序比正序低 ≥10 个点、配对 bootstrap 95% CI 不含 0），另报按对话的整群 bootstrap。各模型分别判定。没复现时按地板效应 / 题目不需要历史 / 反例分类，附数字。
 
+- **BEAM 可行性检查（10-06，开跑前，只看计数）**：180 道 knowledge_update 题里，**168 道的旧信息和新信息在同一个 session**（同一个日期）；10 道的证据 id 在对话里找不到；2 道旧信息不早于新信息；按预注册规则剩 **0 道**。BEAM 的日期只到 session 一级，同一 session 内的消息没有时间戳，所以旧、新两条之间没有显式时间可以区分，测不了"显式时间 vs 位置"。没有跑任何模型。另外：BEAM 消息末尾的 `->-> i,j` 计划编号随时间递增，构造时已删除（代码 `explore_beam.py` 保留）。
+
 **vLLM 推理引擎**（10-06 用户同意试，开跑前写定）：
 - 做法：vLLM 装在单独的虚拟环境（`/data/vllm-venv`），作为服务运行（`cloud/vllm_ctl.sh`）。实验脚本仍在原环境，prompt、chat 模板、分词、输出解码都不变；`probe.greedy` 把同样的 token id、长度上限和停止集合发给服务（`vllm_client.py`）。解码规则照搬 HF 版：每步取最大、停止 token 保留、忽略模型自带的 generation_config。只用于原模型 bf16 生成；判分器（14B 4-bit）和 CoT 打分（`run_ext_eval --benches cot`，要逐个候选的对数概率）仍用 HF。
 - 验证门槛（和 P0 同一把尺子）：vLLM 跑 Qwen3-4B（单卡）的倒序日志和 E15，用 `compare_reference.py` 和台式机比：逐条一致 ≥95%，各条件正确率差 ≤2 个点。
