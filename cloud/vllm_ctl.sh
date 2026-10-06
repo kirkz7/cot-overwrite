@@ -5,8 +5,8 @@
 #   cloud/vllm_ctl.sh down
 # One server per port: COT_VLLM_URL (default http://127.0.0.1:8000) picks the port, CUDA_VISIBLE_DEVICES the cards,
 # so two single-card servers (e.g. 4B on GPU0 :8000, 14B on GPU1 :8001) can run side by side.
-# Fixed server settings (CLOUD_NOTEBOOK.md "vLLM"): bf16, max_model_len 43008 (4 ToT prompts reach 42k tokens; HF on the
-# desktop ran them past the 40960 trained length, so vLLM is allowed to as well), the model's generation_config ignored,
+# Fixed server settings (CLOUD_NOTEBOOK.md "vLLM"): bf16, max_model_len 40960 (vLLM's RoPE table stops at the trained length:
+# 43008 crashed the kernel on the 4 ToT prompts of 42k tokens; run_ext_eval skips those under vLLM), the model's generation_config ignored,
 # seed 0. The client sends one request at a time.
 set -u
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
@@ -48,9 +48,9 @@ up() {
     down
     echo "[$(date +%H:%M:%S)] vllm :$PORT up $model tp=$tp gpus=${CUDA_VISIBLE_DEVICES:-all}" | tee -a "$SLOG"
     # flashinfer compiles kernels at start-up: it needs the venv's ninja and the CUDA 13.0 toolkit (torch is cu130)
-    PATH="$VENV/bin:/usr/local/cuda-13.0/bin:$PATH" CUDA_HOME=/usr/local/cuda-13.0 HF_HUB_OFFLINE=1 VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 setsid nohup \
+    PATH="$VENV/bin:/usr/local/cuda-13.0/bin:$PATH" CUDA_HOME=/usr/local/cuda-13.0 HF_HUB_OFFLINE=1 setsid nohup \
         "$VENV/bin/vllm" serve "$model" --tensor-parallel-size "$tp" --dtype bfloat16 \
-        --max-model-len 43008 --generation-config vllm --seed 0 --gpu-memory-utilization 0.88 \
+        --max-model-len 40960 --generation-config vllm --seed 0 --gpu-memory-utilization 0.88 \
         --host 127.0.0.1 --port "$PORT" >> "$SLOG" 2>&1 < /dev/null &
     echo $! > "$PIDF"
     for _ in $(seq 360); do

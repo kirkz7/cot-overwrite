@@ -184,7 +184,12 @@ def tot_score(it, resp):
 
 
 def run_simple(tok, model, w, items, key, max_new, score):
+    limit = getattr(model.config, "max_position_embeddings", 10 ** 9) if getattr(model, "is_vllm", False) else 10 ** 9
     for it in tqdm([x for x in items if key(x) not in w.done]):
+        if len(tok(chat_prompt(tok, it["user"]), add_special_tokens=False).input_ids) + max_new > limit:
+            # vLLM cannot place tokens past the trained length (RoPE table; 4 ToT prompts reach 42k): recorded, not scored
+            w.write(dict(**{k: v for k, v in it.items() if k not in ("user", "facts")}, response="", correct=None, skipped=True))
+            continue
         resp = gen(tok, model, it["user"], max_new)
         w.write(dict(**{k: v for k, v in it.items() if k not in ("user", "facts")}, response=resp[-400:], **score(it, resp)))
 
@@ -253,6 +258,8 @@ def run_gsm8k(tok, model, w, four_bit):
 
 def summarize(bench, rows):
     df = pd.DataFrame(rows)
+    if "skipped" in df:                                       # vLLM: prompts past the trained length, not scored
+        df = df[df.skipped != True].astype({"correct": bool})
     if df.empty:
         return ""
     by = {"mab": ["src", "order"], "tot": ["qtype", "order"], "tempreason": ["order"], "babilong": ["task"],
