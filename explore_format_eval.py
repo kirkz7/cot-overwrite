@@ -23,7 +23,7 @@ from app_common import tag, JsonlAppender, chat_prompt, free_gpu, load_jsonl, lo
 from explore_probe import LONG_SDPA, sdpa_kernel
 from run_app_fix import generate, generate_think
 
-OUT = {"bind2": "results/e17_format_{}.jsonl", "bind3": "results/fmt3_{}.jsonl"}
+OUT = {"bind2": "results/e17_format_{}.jsonl", "bind3": "results/fmt3_{}.jsonl", "bind4": "results/fmt4_{}.jsonl"}
 N = 150
 BUDGET = {"direct": 320, "think": 1024}
 
@@ -100,7 +100,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["run", "stats"])
     ap.add_argument("--models", default="Qwen3-4B@runs/e17-dec/final,Qwen3-4B@runs/e13-dec/final")
-    ap.add_argument("--data", default="bind2", choices=["bind2", "bind3"])
+    ap.add_argument("--data", default="bind2", choices=["bind2", "bind3", "bind4"])
     ap.add_argument("--modes", default="direct", help="comma list of direct (thinking off) / think")
     args = ap.parse_args()
     {"run": run, "stats": stats}[args.stage](args)
