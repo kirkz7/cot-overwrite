@@ -46,6 +46,12 @@ up() {
     model=$1; tp=${2:-2}
     [ "$(served)" = "$model" ] && { echo "[$(date +%H:%M:%S)] vllm :$PORT already serving $model"; return 0; }
     down
+    if [ -z "${CUDA_VISIBLE_DEVICES:-}" ]; then   # an all-card server: stop single-card servers left on other ports (10-07 16:55)
+        for f in logs/vllm_server_*.pid; do
+            [ -e "$f" ] || continue; p=${f#logs/vllm_server_}; p=${p%.pid}; [ "$p" = "$PORT" ] && continue
+            COT_VLLM_URL="http://127.0.0.1:$p" "$0" down
+        done
+    fi
     echo "[$(date +%H:%M:%S)] vllm :$PORT up $model tp=$tp gpus=${CUDA_VISIBLE_DEVICES:-all}" | tee -a "$SLOG"
     # flashinfer compiles kernels at start-up: it needs the venv's ninja and the CUDA 13.0 toolkit (torch is cu130)
     PATH="$VENV/bin:/usr/local/cuda-13.0/bin:$PATH" CUDA_HOME=/usr/local/cuda-13.0 HF_HUB_OFFLINE=1 setsid nohup \
