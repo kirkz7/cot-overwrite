@@ -2,6 +2,7 @@
 # a job whose "end <name> exit=0" line is already in logs\queue15.log is skipped, and every script skips
 # the items already in its output file. To pause / continue: pause_queue.ps1 / resume_queue.ps1.
 $env:HF_HOME = 'D:\hf_cache'; $env:HF_HUB_OFFLINE = '1'; $env:HF_DATASETS_OFFLINE = '1'; $env:PYTHONIOENCODING = 'utf-8'
+$env:COT_TRAIN_BWD_IN_CTX = '0'   # 5080: backward outside the SDPA context, as for E13-E18 (train_lora.py)
 $env:HF_HUB_DISABLE_SYMLINKS_WARNING = '1'
 Set-Location $PSScriptRoot
 $py = '.\.venv\Scripts\python.exe'

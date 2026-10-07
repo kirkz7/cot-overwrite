@@ -30,6 +30,7 @@ from probe import greedy
 # not accept enable_gqa on this torch build, and the fallback math kernel would need O(L^2) memory per layer.
 hf_sdpa.use_gqa_in_sdpa = lambda *a, **k: False
 TRAIN_SDPA = [SDPBackend.EFFICIENT_ATTENTION, SDPBackend.CUDNN_ATTENTION, SDPBackend.MATH]
+BWD_IN_CTX = os.environ.get("COT_TRAIN_BWD_IN_CTX", "1") == "1"   # see the training loop
 # every linear layer except the LM head: architectures name their projections differently (Phi-4-mini fuses them into
 # qkv_proj / gate_up_proj, so an explicit q_proj/.../up_proj list would silently adapt only o_proj and down_proj there)
 TARGETS = "all-linear"
@@ -201,10 +202,15 @@ def main():
             p, a = enc[i]
             ids = torch.tensor([p + a], device="cuda")
             # the backward pass recomputes the checkpointed forward: keep it under the same SDPA backends, or the
-            # recompute may pick another kernel (cloud L20, 10-07: CheckpointError, saved [1,32,1696] vs recomputed [1,32,1679])
+            # recompute may pick another kernel (cloud L20, 10-07: CheckpointError, saved [1,32,1696] vs recomputed [1,32,1679]).
+            # COT_TRAIN_BWD_IN_CTX=0 (desktop 5080, 10-06): backward outside the context as for E13-E18 - on 16 GB the
+            # in-context backward ran at ~570 tok/s near the memory limit vs ~1470; same maths, only the recompute kernel differs.
             with sdpa_kernel(TRAIN_SDPA, set_priority=True):
                 logits = model(input_ids=ids, logits_to_keep=len(a) + 1).logits[0, :-1].float()
                 loss = F.cross_entropy(logits, ids[0, -len(a):])
+                if BWD_IN_CTX:
+                    (loss / len(batch)).backward()
+            if not BWD_IN_CTX:
                 (loss / len(batch)).backward()
             run_loss += loss.item(); run_n += 1
             state["tokens"] += len(p) + len(a)
