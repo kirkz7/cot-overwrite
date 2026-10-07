@@ -86,7 +86,7 @@ def stop_ids(tok):
     """End-of-turn ids of this tokenizer (only tokens that really exist in its vocabulary)."""
     if id(tok) not in _STOPS:
         vocab = tok.get_vocab()
-        _STOPS[id(tok)] = {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>")
+        _STOPS[id(tok)] = {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>", "<end_of_turn>")
                                                 if t in vocab}
     return _STOPS[id(tok)]
 

@@ -1,0 +1,4 @@
+# Second family (user 10-07): Gemma-3-12B-it bf16 on vLLM, the same suite as the Qwen scale runs. GPU0 :8000 part (extmem, E15, CoT on HF).
+g12_ext      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 explore_extmem.py run --tasks memconf,mabcr,locomo,mabcr32k --models Gemma-3-12B
+g12_e15      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 explore_order_rule.py run --models Gemma-3-12B
+g12_cot_hf   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 run_ext_eval.py run --benches cot --models Gemma-3-12B

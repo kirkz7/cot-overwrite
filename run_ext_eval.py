@@ -46,7 +46,7 @@ def contains_any(resp, golds):
 
 def stop_ids(tok):
     vocab = tok.get_vocab()
-    return {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>") if t in vocab}
+    return {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>", "<end_of_turn>") if t in vocab}   # last: Gemma 3 (cloud)
 
 
 def gen(tok, model, user, max_new=32):

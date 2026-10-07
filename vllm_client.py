@@ -21,6 +21,9 @@ class VLLMReader:
         served = [m["id"] for m in self._call("/v1/models")["data"]]
         assert hf_id in served, f"the vLLM server serves {served}, not {hf_id} (cloud/vllm_ctl.sh up {hf_id})"
         self.config = AutoConfig.from_pretrained(hf_id)   # scripts read max_position_embeddings / model_type
+        text = getattr(self.config, "text_config", None)   # Gemma 3 keeps the text settings one level down
+        if not hasattr(self.config, "max_position_embeddings") and text is not None:
+            self.config.max_position_embeddings = text.max_position_embeddings
 
     def _call(self, path, body=None):
         req = urllib.request.Request(self.url + path, data=None if body is None else json.dumps(body).encode(),

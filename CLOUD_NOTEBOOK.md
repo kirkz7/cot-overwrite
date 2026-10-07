@@ -41,6 +41,14 @@
 6. **P6 · E18 通用能力检查（用户 10-07 00:00，CLOUD_PLAN P6）**：原模型 4B 和 E18（`weights-e18` 分支的 LoRA，还原到 `runs/e18-dec/final/`，**SHA256 核对一致 45f05d3d…**；`weights/` 只在本地，已加到 `.git/info/exclude`，不提交）各跑 `explore_general.py run`（设置一律不改）和 GSM8K，HF、思考关。排法（`cloud/orchestrate.sh`）：GPU0 8B 跑完 → P6 原模型 → 4B 补空隙；GPU1 14B 4-bit 跑完 → P6 E18 → 14B bf16；之后统一判分，最后补跑 32B 外部测试集。
 4. 训练：配方在 5080 上用 4B 定型；定型后 14B / 32B 的训练和测试在云端，按"受控测试 / 真实任务 / 不伤通用能力"三层评测。
 
+## 第二家族：Gemma 3（用户 10-07 13:20，优先）
+
+- 选择：Gemma 3 instruct（128k 上下文，4B / 12B / 27B 三档，可画第二条规模曲线）。OLMo-2-32B 原生上下文只有 4k，放不下 MemConflict / ConvoMem 长版 / PersonaMem，所以不用。云端跑 **12B、27B**（bf16，5080 放不下）；4B 交给 5080。
+- 许可：Gemma 需要在 HF 接受许可（用户已接受并在本机 `hf auth login`，token 在 `/data/hf_cache/token`，只读）。revision：12B 96b6f1ec…（24.4 GB），27B 005ad340…（54.9 GB）。
+- 测试：和 Qwen 规模测试完全相同的一套（vLLM bf16、思考关、贪心；CoT 打分用 HF；判分器 14B 4-bit）。12B 单卡，两张卡各起一个服务、任务不重叠；27B 两卡张量并行。
+- 代码适配（对 Qwen 无影响）：停止词加 Gemma 的 `<end_of_turn>`（Qwen 词表里没有，自动忽略；已核对 Qwen 停止集合不变）；`vllm_client` 从 `text_config` 读 `max_position_embeddings`；`vllm_ctl.sh` 支持 `COT_VLLM_MAXLEN`，Gemma 用 43008（Gemma 位置编码到 128k，ToT 的 4 道 42k 题照常跑；Qwen 是 40960、这 4 道跳过；跨家族比较 ToT 时用共同的 416 道）。
+- 排法（`cloud/orchestrate8.sh`）：E18.1 两项门槛跑完 → GPU0 / GPU1 各跑 12B 的一半（GPU1 先做第一轮判分）→ 27B（两卡）→ 32B 外部测试集补跑 → 第二轮判分。预计明早 6 点前后全部完成。
+
 ## 交给 5080 的 4B 测试（用户 10-07 13:10：云端只留给大显存模型）
 
 云端只跑完 E18.1 的两项关键门槛（PersonaMem + ConvoMem 长版思考开及其判分、MemConflict 思考开及其判分），其余 4B 测试交给台式机。权重在 `weights-e181`（RESTORE.md），协议同 CLOUD_PLAN P7（全部 HF）。`M=Qwen3-4B@runs/e181-dec/final`：

@@ -72,6 +72,8 @@ MODELS = {  # name -> (hf id, 4-bit)
     "Qwen3-32B": ("Qwen/Qwen3-32B", False),   # cloud only, bf16 over two cards (COT_DEVICE_MAP=auto)
     "Qwen3-14B-bf16": ("Qwen/Qwen3-14B", False),   # cloud reader (the judge stays "Qwen3-14B", 4-bit)
     "Qwen3-8B-bf16": ("Qwen/Qwen3-8B", False),   # cloud reader (the desktop "Qwen3-8B" is 4-bit)
+    "Gemma-3-12B": ("google/gemma-3-12b-it", False),   # second family (cloud, user 10-07), bf16
+    "Gemma-3-27B": ("google/gemma-3-27b-it", False),
 }
 NUM = re.compile(r"-?\d+(?:\.\d+)?")
 
@@ -164,7 +166,8 @@ def answer_fast(tok, model, prompt, max_new=24):
     """Same as answer(), caching the newline stop-set per tokenizer."""
     key = id(tok)
     if key not in _STOP_CACHE:
-        _STOP_CACHE[key] = {tok.eos_token_id} | {i for t, i in tok.get_vocab().items() if "\n" in tok.convert_tokens_to_string([t])}
+        _STOP_CACHE[key] = {tok.eos_token_id} | {i for t, i in tok.get_vocab().items() if "\n" in tok.convert_tokens_to_string([t])} \
+            | {tok.get_vocab()[t] for t in ("<end_of_turn>",) if t in tok.get_vocab()}   # Gemma 3 end of turn (cloud)
     ids = tok(prompt, return_tensors="pt", add_special_tokens=False).input_ids.cuda()
     out = tok.decode(greedy(model, ids, max_new, _STOP_CACHE[key]), skip_special_tokens=True)
     return out.strip().split("\n")[0]
