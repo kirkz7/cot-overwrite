@@ -56,6 +56,9 @@
 - **租期**：思考开的通用能力放不下（需要 6 小时以上）；思考关的通用能力（E18.1-8B 那份）预计贴着或超过租期结束，需要用户决定是否延长。
 - 排法（`cloud/orchestrate10.sh`）：27B → 第二轮判分 → GPU0：自蒸馏 → 数据 → 训练（约 5 小时）→ 合并 → PersonaMem / ConvoMem 思考开 + 判分；GPU1：原模型 8B 基线（思考开 PersonaMem / ConvoMem / MemConflict，思考关通用能力，GSM8K）→ 等合并 → E18.1-8B MemConflict 思考开 + 判分 → 通用能力 → GSM8K。
 
+- **8B 自蒸馏和数据（10-08 01:20–01:29）**：Qwen3-8B 自己作答，保留 463 条（思考开 218），丢弃 137 条（全部没写完），`selfdistill8b_train.jsonl` SHA256 前缀 DB6793EF2F20E8CA。`bind4q8_decoupled_train.jsonl` 3963 行（通用 463 行 = 11.7%），前缀 117035D09E739ACB；构造题与 4B 完全相同（val 哈希 12CF83BB5C3139FA，与 4B 的 bind4 val 一致）。训练 01:29 开始（GPU0）。
+- vLLM 思考采样（新代码）检查：原模型 8B 前 55 条思考 100% 正常结束，可见回答 100% 非空、内容正常。
+
 ## 第二家族：Gemma 3（用户 10-07 13:20，优先）
 
 - 选择：Gemma 3 instruct（128k 上下文，4B / 12B / 27B 三档，可画第二条规模曲线）。OLMo-2-32B 原生上下文只有 4k，放不下 MemConflict / ConvoMem 长版 / PersonaMem，所以不用。云端跑 **12B、27B**（bf16，5080 放不下）；4B 交给 5080。
