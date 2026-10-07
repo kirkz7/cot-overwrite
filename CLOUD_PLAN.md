@@ -139,6 +139,65 @@
 
 只跑 P1 的第 1、2、4、5 项。OLMo-2 原生上下文只有 4k，长测试集可能不适用；先查它支持的长度，不行就只跑短任务。
 
+### P6 · E18 的通用能力检查（10-06 用户要求放到云端；在 P1 之外的空闲卡上做，优先级高于 P2 / P3）
+
+- **背景**：E18 是台式机上训的 4B 修复候选（清单放进 Qwen3 思考模式）。修复的主要测试在台式机跑；"不伤原模型"的通用能力检查改到云端跑，台式机队列里已删除。门槛见 `EXPLORE_PLAN.md`「通用能力检查」和「E18」第 5 条：相对原模型，MMLU / ARC-C / HellaSwag / GSM8K 各降 ≤2 个点，IFEval 降 ≤3，LongBench 四项平均降 ≤2。**测的是思考关**（`explore_general.py` 默认 `enable_thinking=False`）。
+- **取得权重**：权重在单独的分支 `weights-e18`（不在 main），按那里 `weights/e18-dec/RESTORE.md` 的步骤还原到 `runs/e18-dec/final/`，并**核对 SHA256 = `45f05d3d41fbd9fc3a4428e5e6d0eafa91a5fff3345e27af2712a348901e91e2`**。
+  ```
+  git fetch origin weights-e18
+  git checkout origin/weights-e18 -- weights/e18-dec
+  ```
+  还原后不要把 `weights/` 提交到 `cloud-l20`。
+- **原模型和 E18 都在云端跑**，在同一台机器、同一套设置下比较。台式机的原模型结果只做参照：MMLU、ARC、HellaSwag、IFEval 已有，LongBench 没跑完。
+  ```
+  python explore_general.py fetch                                    # 一次，缓存数据集（联网）
+  python explore_general.py run --models Qwen3-4B
+  python explore_general.py run --models Qwen3-4B@runs/e18-dec/final
+  python run_ext_eval.py --models Qwen3-4B --benches gsm8k
+  python run_ext_eval.py --models Qwen3-4B@runs/e18-dec/final --benches gsm8k
+  python explore_general.py stats --models Qwen3-4B,Qwen3-4B@runs/e18-dec/final
+  ```
+- **不要改 `explore_general.py` 的设置**，包括题数、batch、截断长度：MMLU 每个学科前 50 题、HellaSwag 前 2000、IFEval 全部 541、LongBench-E 四项各前 50、MMLU 和 LongBench 用 batch 1。这些是预注册时定的，台式机也用这套。L20 显存大，也不要为了更快而改 batch，batch 会轻微影响对数似然的数值。
+- 两张卡可以各跑一个模型并行（`CUDA_VISIBLE_DEVICES=0` / `1`）。
+- **报告**：每项给原模型、E18、差值（附 lm-eval 报出的标准误），逐项按门槛写"达到 / 没达到"。写进 `CLOUD_NOTEBOOK.md`，`results/general_*.json` 和 `results/ext_gsm8k_*.jsonl` 推到 `cloud-l20`。
+- **E17 和短对话 LoRA 不测**：已被 E18 取代，不进论文。
+
+### P7 · E18.1：训练和测试都在云端（10-06 17:30，用户要求；优先级高于 P2 / P3）
+
+- **是什么**：E18 的改进版，只改训练数据。为什么改、改了什么、门槛，见 `EXPLORE_PLAN.md`「E18.1」，**照那里的门槛判定，不要改**。
+  - E18 的问题：思考开时 PersonaMem 掉了 7–17 个点，思考被"记录清单"模板劫持。
+  - E18.1 的改动：加入原因题、整句选项的多选题，以及原版 Qwen3-4B 自己生成的通用回答（自蒸馏）。
+- **0. 先合并 main**：台式机在 main 上改了代码，你的 `cloud-l20` 需要这些改动：`app_common.strip_think / to_think / out_tag`、各测试脚本的 `--think`、`run_app_fix.generate_think`（思考模式用官方采样）、`train_lora` 的思考行、`gen_bind_data_v3/v4`、`gen_selfdistill.py`、`explore_format_eval --data bind4`。执行 `git merge origin/main`，冲突时两边都保留。
+- **1. 还原输入数据**：E12 的 1000 行在分支 `weights-e18` 的 `data/`，按那里 README 的命令还原为 `data_train/reason_decoupled_train.jsonl`，**核对 SHA256 = `21de579406e02d0dcb1c1a45a154a30d71ef2e2cec0fb4c68e5b93fb944252bf`**。可选的自检：`python gen_bind_data_v3.py` 应得到 `bind3_decoupled_train.jsonl`，哈希前缀 `4BAFEB760E58B565`。如果不一致，多半是 WikiText 的 parquet 版本变了，先停下来报告。
+- **2. 自蒸馏数据**：`python gen_selfdistill.py --n 600 --engine vllm`（用 vLLM 的 venv；缺 pandas / datasets / transformers 就在那个 venv 里补装，或者用 `--engine hf` 在主环境跑，会慢）。
+  - **要下载**：`allenai/tulu-3-sft-mixture` 的 6 个 parquet（约 1.4 GB，固定 revision `b14afda6…`），以及 `google/IFEval`（很小，可能已缓存）。**先把下载清单给用户确认**。
+  - 记下保留行数、丢弃数（写不完 / 太长）、思考开的行数、哈希。
+- **3. 生成 E18.1 训练数据**：`python gen_bind_data_v4.py`。它会打印 `bind4_decoupled_*` 三个文件的哈希和各题型数量，自检不过会直接报错。
+- **4. 训练（4B，HF，单卡）**：
+  ```
+  python train_lora.py --model Qwen3-4B --out runs/e181-dec --data data_train/bind4_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0
+  ```
+- **5. 测试：全部用 HF（不要设 `COT_ENGINE=vllm`）**，和台式机的 E18 用同一套代码路径，结果才能直接比较。按下面的顺序跑，先跑能决定成败的：
+  ```
+  M=Qwen3-4B@runs/e181-dec/final
+  python explore_format_eval.py run --data bind4 --modes think,direct --models $M
+  python explore_longconv.py run --think --budget 1024 --models $M      # ConvoMem 长版 + PersonaMem，思考开（主要门槛）
+  python explore_longconv.py judge
+  python explore_extmem.py run --tasks memconf --think --budget 1024 --models $M
+  python explore_extmem.py judge --parse v2
+  python explore_general.py run --models $M ; python run_ext_eval.py --models $M --benches gsm8k
+  python explore_longconv.py run --models $M                            # 思考关
+  python explore_reason_eval.py run --think --models $M ; python explore_reason_eval.py run --models $M ; python explore_reason_eval.py judge
+  python explore_extmem.py run --tasks memconf --models $M ; python explore_extmem.py judge --parse v2
+  ```
+  看结果用各脚本的 `stats`，带 `+think` 的结果文件是思考开。原模型的通用能力基线直接用 P6 的结果（同一台机器）。
+- **6. 报告和交付**：
+  - 在 `CLOUD_NOTEBOOK.md` 逐条写：数据哈希、训练日志的验证分数，以及每条门槛"达到 / 没达到"，附数字和置信区间。和台式机的 E18 并排比较：PersonaMem 思考开 63.9 / 56.7，思考关 72.7 / 72.3；ConvoMem 长版思考开 97.6 / 96.8；MemConflict 思考开 72.9 / 71.7 / 70.0。
+  - PersonaMem 没过门槛时，只按汇总诊断：思考开头是不是还是清单、写不完的比例、原因题和演变题分别的正确率。可参照台式机的 `diag_pm_harm.py` 和 NOTEBOOK 里的诊断写法。
+  - 结果文件推到 `cloud-l20`。**权重**按 `weights-e18` 的做法（权重文件超过 100 MB 就切成两段，并给出 SHA256）推到新分支 `weights-e181`，台式机要用。
+- **7. 交给台式机（10-06 21:00 加；现在就做，不用等训练）**：台式机要用同样的数据训 E18.1 的种子 1、2。把 `data_train/selfdistill_train.jsonl` 推到分支 `weights-e18` 的 `data/selfdistill_train.jsonl`，在 `data/README.md` 里补上它的 SHA256（LF）和行数，再推一次。
+- **不要做**：改门槛、改训练超参、改数据比例、用测试结果回头改训练数据；也不要训 32B。
+
 ### P5 · MemConflict 端到端（**10-06 用户决定降级、暂缓：先不要做，包括读论文和查仓库**；保留设计备查）
 
 - **为什么做**：前面的 MemConflict 测试是我们截取会话、人为排顺序做出来的受控测试，只能证明机制。端到端测试要用原作者的全部题、全部会话，加一个标准检索记忆，顺序由检索器决定，检索失败也计入成绩。它回答的是"现实部署里修复有没有用"。

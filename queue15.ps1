@@ -2,6 +2,7 @@
 # a job whose "end <name> exit=0" line is already in logs\queue15.log is skipped, and every script skips
 # the items already in its output file. To pause / continue: pause_queue.ps1 / resume_queue.ps1.
 $env:HF_HOME = 'D:\hf_cache'; $env:HF_HUB_OFFLINE = '1'; $env:HF_DATASETS_OFFLINE = '1'; $env:PYTHONIOENCODING = 'utf-8'
+$env:COT_TRAIN_BWD_IN_CTX = '0'   # 5080: backward outside the SDPA context, as for E13-E18 (train_lora.py)
 $env:HF_HUB_DISABLE_SYMLINKS_WARNING = '1'
 Set-Location $PSScriptRoot
 $py = '.\.venv\Scripts\python.exe'
@@ -105,18 +106,45 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('e18_reason',    'explore_reason_eval.py run --think --models Qwen3-4B@runs/e18-dec/final'))
 [void]$jobs.Add(@('e18_reason_d',  'explore_reason_eval.py run --models Qwen3-4B@runs/e18-dec/final'))
 [void]$jobs.Add(@('e18_reason_j',  'explore_reason_eval.py judge'))
-[void]$jobs.Add(@('gen_e18',       'explore_general.py run --models Qwen3-4B@runs/e18-dec/final'))
 [void]$jobs.Add(@('e18_mc_direct', 'explore_extmem.py run --tasks memconf --models Qwen3-4B@runs/e18-dec/final'))
 [void]$jobs.Add(@('e18_mc_judge2', 'explore_extmem.py judge --parse v2'))
+# 10-07 00:40: all 4B work is on the 5080 (cloud: large models only). Order: seed 1 -> E18.1 seed-0 remaining tests
+# (handed over by the cloud, CLOUD_NOTEBOOK) -> base thinking-on control -> seed 2 -> seed tests
+# 10-07 02:20 (user: E18.1 passed on the cloud; seeds first)
+[void]$jobs.Add(@('e181_s1_train', 'train_lora.py --model Qwen3-4B --out runs/e181-dec-s1 --data data_train/bind4_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 1'))
+[void]$jobs.Add(@('e181_s2_train', 'train_lora.py --model Qwen3-4B --out runs/e181-dec-s2 --data data_train/bind4_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 2'))
+[void]$jobs.Add(@('e181_s1_lc',     'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s1/final'))
+[void]$jobs.Add(@('e181_s1_mc',     'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s1/final'))
+[void]$jobs.Add(@('e181_s2_lc',     'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s2/final'))
+[void]$jobs.Add(@('e181_s2_mc',     'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s2/final'))
+[void]$jobs.Add(@('e181_seed_judge1', 'explore_longconv.py judge'))
+[void]$jobs.Add(@('e181_seed_judge2', 'explore_extmem.py judge --parse v2'))
+[void]$jobs.Add(@('e181_s1_format', 'explore_format_eval.py run --data bind4 --modes think,direct --models Qwen3-4B@runs/e181-dec-s1/final'))
+[void]$jobs.Add(@('e181_s2_format', 'explore_format_eval.py run --data bind4 --modes think,direct --models Qwen3-4B@runs/e181-dec-s2/final'))
+[void]$jobs.Add(@('e181_s1_reason', 'explore_reason_eval.py run --think --models Qwen3-4B@runs/e181-dec-s1/final'))
+[void]$jobs.Add(@('e181_s2_reason', 'explore_reason_eval.py run --think --models Qwen3-4B@runs/e181-dec-s2/final'))
+[void]$jobs.Add(@('e181_seed_judge3', 'explore_reason_eval.py judge'))
+[void]$jobs.Add(@('gen_base_lb', 'explore_general.py run --models Qwen3-4B'))   # finish the desktop base (LongBench) = same-machine baseline
+[void]$jobs.Add(@('e181_gen', 'explore_general.py run --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('e181_gsm8k', 'run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k'))
+[void]$jobs.Add(@('e181_lc_direct', 'explore_longconv.py run --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('e181_reason', 'explore_reason_eval.py run --think --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('e181_reason_d', 'explore_reason_eval.py run --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('e181_mc_direct', 'explore_extmem.py run --tasks memconf --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('e181_judge1', 'explore_longconv.py judge'))
+[void]$jobs.Add(@('e181_judge2', 'explore_extmem.py judge --parse v2'))
+[void]$jobs.Add(@('e181_judge3', 'explore_reason_eval.py judge'))
+[void]$jobs.Add(@('e181_gen_think', 'explore_general_think.py run --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('base_lc_think', 'explore_longconv.py run --think --budget 1024 --models Qwen3-4B'))
+[void]$jobs.Add(@('base_mc_think', 'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B'))
+[void]$jobs.Add(@('base_think_judge1', 'explore_longconv.py judge'))
+[void]$jobs.Add(@('base_think_judge2', 'explore_extmem.py judge --parse v2'))
 # E18 design diagnostic (10-05 22:30): is writing the dated list needed? E13b (answer-only) vs E13 (list); E17 on the same sets
 [void]$jobs.Add(@('diag_e13b_lc',  'explore_longconv.py run --budget 320 --tasks convo_long --models Qwen3-4B@runs/e13b-dec/final'))
 [void]$jobs.Add(@('diag_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13b-dec/final,Qwen3-4B@runs/e17-dec/final'))
 [void]$jobs.Add(@('diag_judge1',   'explore_longconv.py judge'))
 [void]$jobs.Add(@('diag_judge2',   'explore_reason_eval.py judge'))
-# no-harm suite (10-05, protocol copied from FILM-7B / Xiong et al. / Biderman et al. + IFEval + LongBench-E)
-[void]$jobs.Add(@('gen_base_e13', 'explore_general.py run --models Qwen3-4B'))   # E13 dropped (user, 10-05)
-[void]$jobs.Add(@('gen_e17',     'explore_general.py run --models Qwen3-4B@runs/e17-dec/final'))
-[void]$jobs.Add(@('gen_q4',       'explore_general.py run --models Qwen3-4B@runs/q4-dec-s0/final,Qwen3-4B@runs/q4-chr-s0/final'))
+# no-harm suite: moved to the cloud 10-06 (CLOUD_PLAN P6: base + E18); E17 and the short-dialogue LoRAs dropped (superseded by E18)
 # E15 (review 10-04): earliest-value questions separate 'later text read as later time' from mechanical recency
 [void]$jobs.Add(@('e15_rule', 'explore_order_rule.py run --models Qwen3-4B,Phi-4-mini'))
 # E13 control

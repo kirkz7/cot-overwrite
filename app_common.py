@@ -127,6 +127,8 @@ def to_think(prompt):
 def strip_think(text):
     """The visible reply: text after </think> (thinking mode); unchanged when there is no </think>.
     An unfinished thought (budget used up inside <think>) leaves no visible reply: returns ""."""
+    if not isinstance(text, str):                                    # missing field in old rows
+        return ""
     if "</think>" in text:
         return text.split("</think>", 1)[1].strip()
     return "" if text.lstrip().startswith("<think>") else text
