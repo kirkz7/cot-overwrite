@@ -200,10 +200,12 @@ def main():
         for i in batch:
             p, a = enc[i]
             ids = torch.tensor([p + a], device="cuda")
+            # the backward pass recomputes the checkpointed forward: keep it under the same SDPA backends, or the
+            # recompute may pick another kernel (cloud L20, 10-07: CheckpointError, saved [1,32,1696] vs recomputed [1,32,1679])
             with sdpa_kernel(TRAIN_SDPA, set_priority=True):
                 logits = model(input_ids=ids, logits_to_keep=len(a) + 1).logits[0, :-1].float()
-            loss = F.cross_entropy(logits, ids[0, -len(a):])
-            (loss / len(batch)).backward()
+                loss = F.cross_entropy(logits, ids[0, -len(a):])
+                (loss / len(batch)).backward()
             run_loss += loss.item(); run_n += 1
             state["tokens"] += len(p) + len(a)
         torch.nn.utils.clip_grad_norm_(params, 1.0)
