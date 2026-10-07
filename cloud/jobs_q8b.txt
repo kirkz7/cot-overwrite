@@ -1,6 +1,9 @@
 # 8B E18.1, GPU1: base Qwen3-8B baselines (thinking on via vLLM; no-harm thinking off via HF) -> [merged model ready] -> E18.1-8B MemConflict thinking on + judge -> no-harm thinking off
 b8_lc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_longconv.py run --think --budget 1024 --models Qwen3-8B-bf16
 b8_mc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-bf16
+# 10-08 04:15 (user: new clean held-out, slightly higher priority): base Qwen3-4B on the unused ConvoMem parts, vLLM
+h4_base     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-4B COT_VLLM_TP=1 explore_convo_heldout.py run --models Qwen3-4B
+h4_base_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-4B COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-4B
 b8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16
 b8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16 --benches gsm8k
 q8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_file.py /root/cot-overwrite/runs/e181-q8/merged/config.json
@@ -9,3 +12,8 @@ e8_mc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_ext
 e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
 e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k
 e8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16@runs/e181-q8/final
+# final judging for everything generated in this phase (GPU1; GPU0 never judges extmem / longconv after this point)
+fj_ext      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge
+fj_ext2     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
+fj_lc       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py judge
+fj_ch       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_convo_heldout.py judge

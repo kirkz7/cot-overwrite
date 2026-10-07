@@ -74,7 +74,8 @@ MODELS = {  # name -> (hf id, 4-bit)
     "Qwen3-8B-bf16": ("Qwen/Qwen3-8B", False),   # cloud reader (the desktop "Qwen3-8B" is 4-bit)
     "Gemma-3-12B": ("google/gemma-3-12b-it", False),   # second family (cloud, user 10-07), bf16
     "Gemma-3-27B": ("google/gemma-3-27b-it", False),
-    "Qwen3-8B-e181": ("/root/cot-overwrite/runs/e181-q8/merged", False),   # E18.1 recipe on 8B, LoRA merged for vLLM (cloud 10-07)
+    "Qwen3-8B-e181": ("/root/cot-overwrite/runs/e181-q8/merged", False),
+    "Qwen3-4B-e181": ("/root/cot-overwrite/runs/e181-dec/merged", False),   # E18.1-4B, LoRA merged for vLLM (cloud 10-08)   # E18.1 recipe on 8B, LoRA merged for vLLM (cloud 10-07)
 }
 NUM = re.compile(r"-?\d+(?:\.\d+)?")
 
