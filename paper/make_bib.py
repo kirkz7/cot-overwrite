@@ -49,6 +49,18 @@ KEYS = {
     "hu2022lora": "2106.09685",
     "cobbe2021gsm8k": "2110.14168",
     "suzgun2023bbh": "2210.09261",
+    # added 10-07 (scale study, fix training and no-harm suite)
+    "gemma3": "2503.19786",                  # Gemma 3 (second model family)
+    "kwon2023vllm": "2309.06180",            # vLLM / PagedAttention (cloud inference engine)
+    "lambert2024tulu3": "2411.15124",        # Tulu 3 (prompts for self-distilled general data)
+    "an2024film": "2404.16811",              # FILM-7B / IN2 (mixing general data; no-harm protocol)
+    "biderman2024lmeval": "2405.14782",      # lm-evaluation-harness
+    "hendrycks2021mmlu": "2009.03300",       # MMLU
+    "clark2018arc": "1803.05457",            # ARC
+    "zellers2019hellaswag": "1905.07830",    # HellaSwag
+    "zhou2023ifeval": "2311.07911",          # IFEval
+    "bai2024longbench": "2308.14508",        # LongBench
+    "beam2025": "2510.27246",                # BEAM (checked, not usable: updates within one session)
 }
 
 NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
