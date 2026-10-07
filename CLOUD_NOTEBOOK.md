@@ -87,7 +87,13 @@
 - 输入数据：E12 的 1000 行从 `weights-e18` 还原，SHA256 按 CRLF 换算后 = 21de5794…（git 存 LF）。自检：云端重生成 `bind3_decoupled_train.jsonl`，CRLF 哈希前缀 **4BAFEB760E58B565，与台式机一致**（WikiText 版本一致）。为跑自检临时生成了 E13 的 `bind_decoupled_*`（对照组用占位文件，产物已删）。
 - 下载（用户同意）：`allenai/tulu-3-sft-mixture` 6 个 parquet，1413 MB，revision b14afda6…，ODC-BY。IFEval 已缓存。
 - **更正（10-07 06:00，开跑前、没看任何结果，用户同意）**：`gen_selfdistill.py` 的排除规则 `\bif[_-]` 漏掉了 `personahub_ifdata_manual_seed_v3`（指令遵循）和 `tulu-3-sft-personas-math-grade`（小学数学，GSM8K 同类），与预注册文字"排除与指令遵循、IFEval、GSM … 有关的来源"不一致。按文字修正（加 `ifdata`、`math-grade`）：15 个来源各 40 条，共 600 条。
-- 队列：`cloud/jobs_e181.txt`（GPU1）：自蒸馏（vLLM venv）→ `gen_bind_data_v4.py` → 训练（超参照计划）→ 测试（全部 HF，顺序照计划）。
+- **自蒸馏结果（10-07 07:57–08:04，vLLM，原版 Qwen3-4B）**：600 个提示，保留 **474** 条（思考开 221 / 思考关 253），丢弃 126 条（全部是没写完：思考开上限 3072、思考关 1024；太长 0）。`selfdistill_train.jsonl` SHA256 前缀 78A512959C2B2D7A（LF；CRLF 换算 CFCA555F7CBB8942）。
+- **E18.1 训练数据（`gen_bind_data_v4.py`，自检全部通过）**：
+  - train 3974 行，SHA256 前缀 0B46429FD80CB99A（LF）：题型 temporal 1481 / choice 237 / choice_sent 196 / reason 277 / single 143 / absent 166；思考开 1266 / 关 1234；通用（自蒸馏）474 行 = **11.9%**（计划约 11%）；另含 E12 1000 行。
+  - val 300 行 12CF83BB5C3139FA；dev 300 行 CDFADCCFC7031F42。
+  - 每条目标都含所需字符串；可见回答里出现清单 0。
+- 训练 10-07 08:04 在 GPU1 开始（超参照计划）。
+- 队列：`cloud/jobs_e181.txt`（GPU1）：自蒸馏（vLLM venv）- 队列：`cloud/jobs_e181.txt`（GPU1）：自蒸馏（vLLM venv）→ `gen_bind_data_v4.py` → 训练（超参照计划）→ 测试（全部 HF，顺序照计划）。
 
 ## 移植验证结果
 
