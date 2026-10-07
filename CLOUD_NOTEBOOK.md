@@ -170,7 +170,20 @@ vLLM 0.31.0（torch 2.13 + cu130，`/data/vllm-venv`），Qwen3-4B 单卡（GPU1
 
 全部达到预注册门槛。注意：LongBench 每项只有 50 题，标准误 5–7 个点，各项差值都在一个标准误以内；GSM8K 的 CI 下限 −5.6，点估计达到但精度有限。原模型在台式机上的参照：见 NOTEBOOK（LongBench 台式机没跑完）。
 
-### P1 · Qwen3-32B（vLLM）· 长对话### P1 · Qwen3-32B（vLLM）· 长对话：ConvoMem 长版 / PersonaMem / LongMemEval / 倒序日志（10-06 22:30 提前判分）
+### P6b · 原模型 Qwen3-4B 思考开基线（10-07 07:20–10:50，HF，`explore_general_think.py`）
+
+| 测试 | 思考开 | 思考关（P6） |
+|---|---|---|
+| IFEval（541） | 82.6 | 79.9 |
+| LongBench qasper | 47.7 | 50.3 |
+| LongBench multifieldqa_en | 51.8 | 56.8 |
+| LongBench hotpotqa | 75.8 | 65.0 |
+| LongBench 2wikimqa | 68.3 | 42.1 |
+| GSM8K（250） | 92.8（思考写不完 5.2%） | 92.0 |
+
+这是 E18 / E18.1 思考开通用能力检查的对照基线（同机同设置）。耗时 3.5 小时。
+
+### P1 · Qwen3-32B（vLLM）· 长对话：ConvoMem 长版 / PersonaMem / LongMemEval / 倒序日志（10-06 22:30 提前判分）
 
 | 测试集 | 正序 | 倒序 | 倒序−正序 [95% CI] | 判定 | 对照 |
 |---|---|---|---|---|---|
