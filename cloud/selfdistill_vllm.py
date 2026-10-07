@@ -5,9 +5,11 @@ import subprocess
 import sys
 
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-if os.path.exists("data_train/selfdistill_train.jsonl"):
-    print("selfdistill_train.jsonl exists, skipping")
+extra = sys.argv[1:]                       # e.g. --model Qwen/Qwen3-8B --out data_train/selfdistill8b_train.jsonl (10-07)
+out = extra[extra.index("--out") + 1] if "--out" in extra else "data_train/selfdistill_train.jsonl"
+if os.path.exists(out):
+    print(out, "exists, skipping")
     sys.exit(0)
 venv = os.environ.get("VLLM_VENV", "/data/vllm-venv")
 env = dict(os.environ, PATH=f"{venv}/bin:/usr/local/cuda-13.0/bin:" + os.environ["PATH"], CUDA_HOME="/usr/local/cuda-13.0")
-sys.exit(subprocess.call([f"{venv}/bin/python", "gen_selfdistill.py", "--n", "600", "--engine", "vllm"], env=env))
+sys.exit(subprocess.call([f"{venv}/bin/python", "gen_selfdistill.py", "--n", "600", "--engine", "vllm"] + extra, env=env))

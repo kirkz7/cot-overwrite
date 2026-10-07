@@ -1,0 +1,10 @@
+# 8B E18.1, GPU1: base Qwen3-8B baselines (thinking on via vLLM; no-harm thinking off via HF) -> [merged model ready] -> E18.1-8B MemConflict thinking on + judge -> no-harm thinking off
+b8_lc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_longconv.py run --think --budget 1024 --models Qwen3-8B-bf16
+b8_mc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-bf16
+b8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16
+b8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16 --benches gsm8k
+q8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_file.py /root/cot-overwrite/runs/e181-q8/merged/config.json
+e8_mc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-e181
+e8_mc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
+e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
+e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k

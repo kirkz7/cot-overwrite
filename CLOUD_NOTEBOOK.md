@@ -41,6 +41,20 @@
 6. **P6 · E18 通用能力检查（用户 10-07 00:00，CLOUD_PLAN P6）**：原模型 4B 和 E18（`weights-e18` 分支的 LoRA，还原到 `runs/e18-dec/final/`，**SHA256 核对一致 45f05d3d…**；`weights/` 只在本地，已加到 `.git/info/exclude`，不提交）各跑 `explore_general.py run`（设置一律不改）和 GSM8K，HF、思考关。排法（`cloud/orchestrate.sh`）：GPU0 8B 跑完 → P6 原模型 → 4B 补空隙；GPU1 14B 4-bit 跑完 → P6 E18 → 14B bf16；之后统一判分，最后补跑 32B 外部测试集。
 4. 训练：配方在 5080 上用 4B 定型；定型后 14B / 32B 的训练和测试在云端，按"受控测试 / 真实任务 / 不伤通用能力"三层评测。
 
+## 8B E18.1（用户 10-07 21:40；开跑前写定）
+
+- **配方照 E18.1，只换模型**：同样的构造题（`gen_bind_data_v4.py` 按种子生成，与 4B 相同）、同样 1000 行 E12、同样超参（rank 16、alpha 32、lr 1e-4、1 轮、accum 8、max_len 8192、种子 0）。`train_lora.py --model Qwen3-8B-bf16`（bf16 LoRA）。
+- **自蒸馏用 8B 自己的回答**（自蒸馏的本意）：同样 600 个提示、同样采样设置，`gen_selfdistill.py --model Qwen/Qwen3-8B` → `selfdistill8b_train.jsonl` → `bind4q8_decoupled_*`。
+- **测试引擎**：思考开的测试用 vLLM（LoRA 先合并进 bf16 权重，`cloud/merge_lora.py`，与 `load_reader` 的合并方式相同），Qwen3 官方采样、每题固定种子（vLLM 每个请求带 seed），上限 1024；原模型 8B 的基线同样用 vLLM。通用能力（思考关）和 GSM8K 用 HF，原模型 8B 同样用 HF。8B 内部比较都是同一引擎；**和 4B E18.1（HF）的数字不直接比**。
+- **门槛**（沿用 E18.1 的相对门槛，基线换成同引擎实测的原模型 8B）：
+  1. PersonaMem 思考开：不比原模型 8B **思考关**（vLLM，规模测试已有）低 5 个点以上（同 4B 的做法：原模型基线是思考关）；
+  2. ConvoMem 长版思考开：|倒序 − 正序| ≤5；
+  3. MemConflict 思考开：正序不比原模型 8B 思考关低 5 点以上；倒序比原模型 8B 思考关高 ≥10、CI 不含 0；裸值 ≤5%；
+  4. 通用能力（思考关）：MMLU / ARC-C / HellaSwag / GSM8K 各降 ≤2，IFEval 降 ≤3，LongBench 平均降 ≤2（原模型 8B，HF，同机）。
+  - 只报告：原模型 8B 思考开在 PersonaMem / ConvoMem 长版 / MemConflict 上的结果（"只开思考够不够"的对照）。
+- **租期**：思考开的通用能力放不下（需要 6 小时以上）；思考关的通用能力（E18.1-8B 那份）预计贴着或超过租期结束，需要用户决定是否延长。
+- 排法（`cloud/orchestrate10.sh`）：27B → 第二轮判分 → GPU0：自蒸馏 → 数据 → 训练（约 5 小时）→ 合并 → PersonaMem / ConvoMem 思考开 + 判分；GPU1：原模型 8B 基线（思考开 PersonaMem / ConvoMem / MemConflict，思考关通用能力，GSM8K）→ 等合并 → E18.1-8B MemConflict 思考开 + 判分 → 通用能力 → GSM8K。
+
 ## 第二家族：Gemma 3（用户 10-07 13:20，优先）
 
 - 选择：Gemma 3 instruct（128k 上下文，4B / 12B / 27B 三档，可画第二条规模曲线）。OLMo-2-32B 原生上下文只有 4k，放不下 MemConflict / ConvoMem 长版 / PersonaMem，所以不用。云端跑 **12B、27B**（bf16，5080 放不下）；4B 交给 5080。
