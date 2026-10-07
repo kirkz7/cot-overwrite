@@ -176,6 +176,8 @@
 - **LoCoMo 的判分没有验证**：粗字符串对比一致率只有约 75%（字符串方法本身粗糙）。LoCoMo 的零结果要带这个注释。
 
 ## 10. 工程备忘
+- **队列改由 Windows 任务计划程序启动（10-07，用户同意）**：任务 `cot-queue15`（无触发器，只由 `resume_queue.ps1` 启动；删除：`Unregister-ScheduledTask cot-queue15`）。原因：从 Claude 会话启动的队列是 Claude 应用的子进程，Claude 后台服务重启时会被一起结束（10-05、10-06、10-07 三次）。
+  - 坑：Claude 桌面是 MSIX 应用，会话里写到 `AppData\Roaming` 的东西实际在 `AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming`，应用外看不到。所以 `.venv\pyvenv.cfg` 的 `home` 改成了 uv Python 的真实路径（备份 `pyvenv.cfg.bak`），队列里设了 `NLTK_DATA`。在任务计划程序里实测：Python、torch、CUDA、NLTK 均正常。
 - **10-07 09:25 左右整机非正常关机**（系统日志：意外关机 → 09:30 重启，随后 Windows 更新的 TrustedInstaller 又计划重启一次）。队列停在种子 2 第 350 步，12:10 从断点续训。建议用户在 Windows 更新里设置活动时间或暂停更新，避免长任务被重启打断。
 - **评测框架**：lm-eval 0.4.13（含 ifeval、longbench 依赖）已装进 .venv；数据集已缓存到 D:\hf_cache，离线可用（队列加了 HF_DATASETS_OFFLINE=1）。10-05 在 GPU 上小规模试跑通过。
 - **长期规则（用户 10-05）**：修复的评测照搬主会论文的做法，必须含"不伤原模型"检查（见上级目录 CLAUDE.md 和记忆）。

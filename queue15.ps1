@@ -3,6 +3,10 @@
 # the items already in its output file. To pause / continue: pause_queue.ps1 / resume_queue.ps1.
 $env:HF_HOME = 'D:\hf_cache'; $env:HF_HUB_OFFLINE = '1'; $env:HF_DATASETS_OFFLINE = '1'; $env:PYTHONIOENCODING = 'utf-8'
 $env:COT_TRAIN_BWD_IN_CTX = '0'   # 5080: backward outside the SDPA context, as for E13-E18 (train_lora.py)
+# Claude desktop is an MSIX app: what the session wrote under AppData\Roaming lives in its package folder. The queue now
+# runs from Task Scheduler (outside the app), so point NLTK there (IFEval needs punkt_tab). .venv\pyvenv.cfg "home" was
+# changed to the real uv Python path in the same folder (10-07; backup .venv\pyvenv.cfg.bak).
+$env:NLTK_DATA = 'C:\Users\admin\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\nltk_data'
 $env:HF_HUB_DISABLE_SYMLINKS_WARNING = '1'
 Set-Location $PSScriptRoot
 $py = '.\.venv\Scripts\python.exe'
