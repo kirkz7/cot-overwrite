@@ -1,6 +1,6 @@
 # Second family: Gemma-3-12B-it, GPU1 :8001 part (long dialogues, LongMemEval, logs, agent, external benchmarks).
-g12_lc       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 explore_longconv.py run --models Gemma-3-12B
-g12_mem      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 run_app_memory.py read --models Gemma-3-12B
-g12_logs     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 run_app_logs.py --n 100 --models Gemma-3-12B
-g12_agent    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 run_app_agent.py --n 150 --models Gemma-3-12B
-g12_exteval  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=43008 run_ext_eval.py run --benches mab,tot,tempreason,babilong,gsm8k --models Gemma-3-12B
+g12_lc       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=49152 explore_longconv.py run --models Gemma-3-12B
+g12_mem      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=49152 run_app_memory.py read --models Gemma-3-12B
+g12_logs     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=49152 run_app_logs.py --n 100 --models Gemma-3-12B
+g12_agent    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=49152 run_app_agent.py --n 150 --models Gemma-3-12B
+g12_exteval  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-12b-it COT_VLLM_TP=1 COT_VLLM_MAXLEN=49152 run_ext_eval.py run --benches mab,tot,tempreason,babilong,gsm8k --models Gemma-3-12B

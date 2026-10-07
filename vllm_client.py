@@ -18,7 +18,9 @@ class VLLMReader:
     def __init__(self, hf_id):
         self.url = os.environ.get("COT_VLLM_URL", "http://127.0.0.1:8000").rstrip("/")
         self.name = hf_id
-        served = [m["id"] for m in self._call("/v1/models")["data"]]
+        models = self._call("/v1/models")["data"]
+        served = [m["id"] for m in models]
+        self.max_model_len = next((m.get("max_model_len") for m in models if m["id"] == hf_id), None) or 10 ** 9
         assert hf_id in served, f"the vLLM server serves {served}, not {hf_id} (cloud/vllm_ctl.sh up {hf_id})"
         self.config = AutoConfig.from_pretrained(hf_id)   # scripts read max_position_embeddings / model_type
         text = getattr(self.config, "text_config", None)   # Gemma 3 keeps the text settings one level down

@@ -184,7 +184,7 @@ def tot_score(it, resp):
 
 
 def run_simple(tok, model, w, items, key, max_new, score):
-    limit = getattr(model.config, "max_position_embeddings", 10 ** 9) if getattr(model, "is_vllm", False) else 10 ** 9
+    limit = min(getattr(model.config, "max_position_embeddings", 10 ** 9), model.max_model_len) if getattr(model, "is_vllm", False) else 10 ** 9
     for it in tqdm([x for x in items if key(x) not in w.done]):
         if len(tok(chat_prompt(tok, it["user"]), add_special_tokens=False).input_ids) + max_new > limit:
             # vLLM cannot place tokens past the trained length (RoPE table; 4 ToT prompts reach 42k): recorded, not scored
