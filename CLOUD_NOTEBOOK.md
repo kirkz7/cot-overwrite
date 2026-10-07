@@ -52,6 +52,7 @@
   3. MemConflict 思考开：正序不比原模型 8B 思考关低 5 点以上；倒序比原模型 8B 思考关高 ≥10、CI 不含 0；裸值 ≤5%；
   4. 通用能力（思考关）：MMLU / ARC-C / HellaSwag / GSM8K 各降 ≤2，IFEval 降 ≤3，LongBench 平均降 ≤2（原模型 8B，HF，同机）。
   - 只报告：原模型 8B 思考开在 PersonaMem / ConvoMem 长版 / MemConflict 上的结果（"只开思考够不够"的对照）。
+- **租期已续（用户 10-08 00:00）**：追加思考开的通用能力（`explore_general_think.py`，同 P6b 设置）：原模型 8B（GPU0，排在 E18.1-8B PersonaMem 之后）和 E18.1-8B（GPU1，排在思考关通用能力之后）；门槛同 P6b（IFEval 降 ≤3，GSM8K 降 ≤2，LongBench 平均降 ≤2，都是思考开对思考开）。
 - **租期**：思考开的通用能力放不下（需要 6 小时以上）；思考关的通用能力（E18.1-8B 那份）预计贴着或超过租期结束，需要用户决定是否延长。
 - 排法（`cloud/orchestrate10.sh`）：27B → 第二轮判分 → GPU0：自蒸馏 → 数据 → 训练（约 5 小时）→ 合并 → PersonaMem / ConvoMem 思考开 + 判分；GPU1：原模型 8B 基线（思考开 PersonaMem / ConvoMem / MemConflict，思考关通用能力，GSM8K）→ 等合并 → E18.1-8B MemConflict 思考开 + 判分 → 通用能力 → GSM8K。
 

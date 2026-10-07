@@ -5,3 +5,4 @@ q8_train   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 train_lora.
 q8_merge   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 cloud/merge_lora.py Qwen3-8B-bf16 runs/e181-q8/final runs/e181-q8/merged
 e8_lc_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 explore_longconv.py run --think --budget 1024 --models Qwen3-8B-e181
 e8_lc_tj   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_longconv.py judge
+b8_gen_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-8B-bf16
