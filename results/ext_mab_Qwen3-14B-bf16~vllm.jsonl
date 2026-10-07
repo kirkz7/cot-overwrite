@@ -1,0 +1,600 @@
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 0, "response": "United Kingdom.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 1, "response": "Kyiv.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 2, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 3, "response": "Tunisia national football team is associated with the sport of association football. Association football was created in the country of England. The capital of England is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 4, "response": "placekicker", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 5, "response": "University of Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 6, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 7, "response": "London is located in the continent of Europe. Thomas Arne was born in the city of London. Therefore, the place of birth of Thomas Arne was located", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 8, "response": "United Kingdom is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 9, "response": "The founder of the religion to which John Walsh belongs is Jesus Christ, as John Walsh is affiliated with the Catholic Church, and Catholic Church was founded by Jesus Christ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 10, "response": "Maharishi Mahesh Yogi.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 11, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 12, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 13, "response": "Judaism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 14, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 15, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 16, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 17, "response": "Paris", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 18, "response": "politician", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 19, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 20, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 21, "response": "The work location of the person who founded the religion Karen Armstrong belongs to is not provided in the given facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 22, "response": "The author of \"Categories\" is Aristotle. Aristotle's child is Nicomachus.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 23, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 24, "response": "Woking", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 25, "response": "Marillyn Hewson.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 26, "response": "Lawrence S. Bacow.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 27, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 28, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 29, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 30, "response": "Minneapolis", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 31, "response": "Tim Cook", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 32, "response": "North America", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 33, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 34, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 35, "response": "The Godfather.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 36, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 37, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 38, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 39, "response": "center is associated with the sport of basketball.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 40, "response": "Jesus Christ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 41, "response": "Russian", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 42, "response": "The author of \"The Marriage of Figaro\" is Pierre Beaumarchais, who was born in the city of Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 43, "response": "United States of America, Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 44, "response": "London.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 45, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 46, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 47, "response": "Germany is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 48, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 49, "response": "Japanese.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 50, "response": "The partner of the head of government of the Council of People's Commissars is Nadezhda Krupskaya, who died in the city of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 51, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 52, "response": "Christianity.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 53, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 54, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 55, "response": "McLaren Automotive was founded in the city of Woking.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 57, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 58, "response": "The question asks for the name of the political entity that was established from the successor of the Sasanian Empire. However, none of the provided facts directly mention", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 59, "response": "Omsk", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 60, "response": "Camden Town.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 61, "response": "American football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 62, "response": "director", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 63, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 64, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 65, "response": "Bob Iger", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 66, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 67, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 68, "response": "University of Pisa.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 69, "response": "The author of Endymion is John Keats. According to the facts provided, John Keats died in the city of Rome. Therefore, the place of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 70, "response": "Philadelphia.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 71, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 72, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 73, "response": "The AP1000 was produced by Westinghouse Electric, which was founded in Pittsburgh. The current head of the Pittsburgh government is Bill Peduto.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 74, "response": "Portland.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 75, "response": "Islam.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 76, "response": "Stockholm.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 77, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 78, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 79, "response": "American football.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 80, "response": "France is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 81, "response": "University of Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 82, "response": "United States of America government.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 83, "response": "The individual responsible for founding the organization that has its headquarters in the same location where Bill Frisell received his education is Alan Jay Lerner.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 84, "response": "Paris", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 85, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 86, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 87, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 88, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 89, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 90, "response": "Polish.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 91, "response": "Berlin.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 92, "response": "Russian.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 93, "response": "Las Vegas.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 94, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 95, "response": "Buddhism was founded by Gautama Buddha.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 96, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 97, "response": "rock music", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 98, "response": "Ford Motor Company was founded by Henry Ford. Henry Ford is a citizen of United States of America. The capital of United States of America is Washington, D.C", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "original", "qi": 99, "response": "The official documents of the country where Alta IF originates are written in the language of English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 0, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 1, "response": "Kyiv.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 2, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 3, "response": "Tunisia national football team is associated with the sport of association football. Association football was created in the country of England. The capital of England is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 4, "response": "placekicker", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 5, "response": "University of Bucharest", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 6, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 7, "response": "London is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 8, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 9, "response": "Methodism was founded by John Wesley. John Walsh is affiliated with the religion of Methodism. The founder of Methodism, John Wesley, worked in the city", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 10, "response": "Maharishi Mahesh Yogi", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 11, "response": "Kingdom of Ireland", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 12, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 13, "response": "Anglicanism.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 14, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 15, "response": "The Surrey Senior Cup is associated with the sport of association football. However, the facts do not provide any information about the origin or capital city of the Surrey Senior", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 16, "response": "The sport with which Carlos G\u00f3mez is associated is basketball. According to fact 405, Carlos G\u00f3mez is associated with the sport of basketball", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 17, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 18, "response": "The job title of the chairperson of the political organization Fatah is politician.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 19, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 20, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 21, "response": "The work location of the person who founded the religion Karen Armstrong belongs to is Edinburgh.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 22, "response": "Nicomachus.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 23, "response": "Ukraine", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 24, "response": "Paris", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 25, "response": "Adel al-Jubeir", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 26, "response": "Peter Diamandis.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 27, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 28, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 29, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 30, "response": "Minneapolis", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 31, "response": "Tim Cook", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 32, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 33, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 34, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 35, "response": "The creator of Vito Corleone is Mario Puzo. The significant creation associated with Mario Puzo is The Godfather.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 36, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 37, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 38, "response": "Canada", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 39, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 40, "response": "Israel", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 41, "response": "German", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 42, "response": "The author of \"The Marriage of Figaro\" is Pierre Beaumarchais, who was born in the city of Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 43, "response": "United States of America, Donald Trump.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 44, "response": "Berkeley", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 45, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 46, "response": "Rome", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 47, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 48, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 49, "response": "Japanese.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 50, "response": "The partner of the head of government of the Council of People's Commissars is Nadezhda Krupskaya, who died in the city of", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 51, "response": "Stephen McNeil.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 52, "response": "Christianity", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 53, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 54, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 55, "response": "McLaren Automotive was founded in the city of Woking.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 57, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 58, "response": "The question is asking for the name of the political entity that was established from the successor of the Sasanian Empire. However, none of the provided facts directly", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 59, "response": "Omsk", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 60, "response": "Camden Town.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 61, "response": "cornerback", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 62, "response": "The original broadcaster of \"The Brady Bunch\" is American Broadcasting Company. The person related to this broadcaster is the director of American Broadcasting Company, which is Ernst", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 63, "response": "The person who founded Chanel is Coco Chanel. According to fact 16, Chanel was founded by Coco Chanel. Fact 352 states that Coco Chanel", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 64, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 65, "response": "Bob Iger", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 66, "response": "English.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 67, "response": "Rog\u00e9rio Ceni plays the position of flanker, which is associated with the sport of rugby union. Rugby union was created in the country of England.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 68, "response": "University of Pisa.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 69, "response": "Rome.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 70, "response": "Philadelphia", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 71, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 72, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 73, "response": "The AP1000 was produced by Westinghouse Electric, according to fact 196. The capital of the country where Westinghouse Electric", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 74, "response": "The author of \"A Wizard of Earthsea\" is Ursula K. Le Guin. According to fact 53, Ursula K. Le Gu", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 75, "response": "Islam", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 76, "response": "The Prime Minister of Sweden is Stefan L\u00f6fven, and he worked in the city of Stockholm.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 77, "response": "Apple Inc.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 78, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 79, "response": "American football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 80, "response": "France is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 81, "response": "The headquarters of the company where Leonte R\u0103utu worked is located in the city of Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 82, "response": "The country of origin of Club Nouveau is the Soviet Union (fact 353). The name of the current head of the Council of People's Com", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 83, "response": "The individual responsible for founding the organization that has its headquarters in the same location where Bill Frisell received his education is Bob Iger.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 84, "response": "Charles Messier is a citizen of France (fact 202). The capital of France is Paris (fact 163). Therefore, the answer", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 85, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 86, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 87, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 88, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 89, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 90, "response": "Polish.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 91, "response": "Berlin", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 92, "response": "Russian.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 93, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 94, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 95, "response": "Gautama Buddha", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 96, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 97, "response": "rock music", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 98, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "reversed", "qi": 99, "response": "Swedish", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 0, "response": "France", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 1, "response": "Moscow.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 2, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 3, "response": "Tunisia national football team is associated with the sport of association football. Association football was created in the country of England. The capital of England is London.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 4, "response": "placekicker", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 5, "response": "University of Bucharest", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 6, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 7, "response": "London is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 8, "response": "Israel  ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 9, "response": "John Walsh is affiliated with the religion of Methodism. Methodism was founded by John Wesley. The founder of Methodism, John Wesley, worked in the city", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 10, "response": "Maharishi Mahesh Yogi.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 11, "response": "Catholic Church.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 12, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 13, "response": "Church of Scotland", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 14, "response": "The name of the head of state in the country where Andrew Carnegie was a citizen is Elizabeth II.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 15, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 16, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 17, "response": "London", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 18, "response": "Mahmoud Abbas works in the field of politician.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 19, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 20, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 21, "response": "University of Bucharest", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 22, "response": "Nicomachus.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 23, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 24, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 25, "response": "Marillyn Hewson.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 26, "response": "Peter Diamandis", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 27, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 28, "response": "Prague", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 29, "response": "Oceania", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 30, "response": "Minneapolis", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 31, "response": "Tim Cook", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 32, "response": "North America", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 33, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 34, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 35, "response": "The Fairly OddParents.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 36, "response": "Ayumi Hamasaki is a citizen of Japan.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 37, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 38, "response": "Canada.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 39, "response": "basketball", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 40, "response": "Israel", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 41, "response": "Russian", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 42, "response": "The author of \"The Marriage of Figaro\" is Pierre Beaumarchais, who was born in the city of Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 43, "response": "Darryl Strawberry is associated with the sport of baseball, which was created in the country of United States of America. The head of government in the United States", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 44, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 45, "response": "Gads Hill Place.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 46, "response": "Rome", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 47, "response": "Germany is located in the continent of Europe.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 48, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 49, "response": "Japanese.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 50, "response": "Moscow.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 51, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 52, "response": "Christianity", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 53, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 54, "response": "Canberra", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 55, "response": "Woking", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 56, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 57, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 58, "response": "The question is asking for the name of the political entity that was established from the successor of the Sasanian Empire. However, none of the provided facts directly", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 59, "response": "Omsk", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 60, "response": "Camden Town.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 61, "response": "baseball", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 62, "response": "The original broadcaster of \"The Brady Bunch\" is American Broadcasting Company. The chairperson of American Broadcasting Company is Bob Iger. Therefore, the person related", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 63, "response": "Coco Chanel died in the city of Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 64, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 65, "response": "Kathleen Kennedy", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 66, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 67, "response": "Rog\u00e9rio Ceni plays the position of goalkeeper, which is associated with the sport of association football. Association football was created in the country of England. The", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 68, "response": "University of Pisa", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 69, "response": "Leipzig.", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 70, "response": "Philadelphia", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 71, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 72, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 73, "response": "Bill Peduto", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 74, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 75, "response": "Islam", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 76, "response": "The question cannot be answered based on the provided facts.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 77, "response": "Washington, D.C.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 78, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 79, "response": "rugby", "correct": true}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 80, "response": "Europe", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 81, "response": "The headquarters of the company where Leonte R\u0103utu worked is located in the city of Bucharest.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 82, "response": "The country of origin of Club Nouveau is the Soviet Union (fact 353). The name of the current head of state in the Soviet Union is", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 83, "response": "The individual responsible for founding the organization that has its headquarters in the same location where Bill Frisell received his education is Berklee College of Music.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 84, "response": "Paris", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 85, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 86, "response": "Canberra", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 87, "response": "England", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 88, "response": "English", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 89, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 90, "response": "Polish.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 91, "response": "Berlin", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 92, "response": "Russian", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 93, "response": "London", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 94, "response": "association football", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 95, "response": "Jesus Christ", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 96, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 97, "response": "rock music", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 98, "response": "Canberra", "correct": false}
+{"src": "factconsolidation_mh_6k", "order": "shuffled", "qi": 99, "response": "English", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 0, "response": "ice hockey", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 1, "response": "Rurouni Kenshin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 2, "response": "England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 3, "response": "Shahnameh.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 4, "response": "University of California, Berkeley.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 5, "response": "Pierre Beaumarchais.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 6, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 7, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 8, "response": "Japanese.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 9, "response": "Jonathan Rothschild.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 10, "response": "Giuseppe Conte.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 11, "response": "Ellen Pompeo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 12, "response": "center", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 13, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 14, "response": "Galileo Galilei.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 15, "response": "Europe", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 16, "response": "Catholic Church", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 17, "response": "England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 18, "response": "Microsoft.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 19, "response": "Satya Nadella.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 20, "response": "Lawrence S. Bacow.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 21, "response": "John Knox.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 22, "response": "rugby union", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 23, "response": "Bob Iger.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 24, "response": "Moscow.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 25, "response": "Chang'an.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 26, "response": "Tony Hall, Baron Hall of Birkenhead.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 27, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 28, "response": "jazz", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 29, "response": "Paris", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 30, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 31, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 32, "response": "Philadelphia.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 33, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 34, "response": "Jerusalem", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 35, "response": "American English.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 36, "response": "The Beatles.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 37, "response": "Tokyo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 38, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 39, "response": "Valve Corporation.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 40, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 41, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 42, "response": "cornerback", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 43, "response": "Canberra.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 44, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 45, "response": "Ursula K. Le Guin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 46, "response": "The Beatles.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 47, "response": "Charles Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 48, "response": "United States of America.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 49, "response": "United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 50, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 51, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 52, "response": "Donald Trump.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 53, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 54, "response": "pop music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 55, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 56, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 57, "response": "Priscilla Presley.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 58, "response": "Emma Watson.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 59, "response": "basketball", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 60, "response": "rock music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 61, "response": "goalkeeper", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 62, "response": "Jack Dorsey", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 63, "response": "English", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 64, "response": "baseball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 65, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 66, "response": "politician", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 67, "response": "Lucasfilm.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 68, "response": "North America", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 69, "response": "Montreal.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 70, "response": "Westinghouse Electric.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 71, "response": "Japan.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 72, "response": "placekicker", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 73, "response": "Cherie Blair.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 74, "response": "John Keats.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 75, "response": "Oscar Wilde.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 76, "response": "Shinz\u014d Abe.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 77, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 78, "response": "rugby union", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 79, "response": "Prague.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 80, "response": "center", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 81, "response": "Mikhail Gorbachev.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 82, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 83, "response": "Catholic Church", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 84, "response": "Mario Puzo.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 85, "response": "Rajanpur.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 86, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 87, "response": "Kyiv.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 88, "response": "Ardashir I.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 89, "response": "Washington, D.C.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 90, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 91, "response": "India.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 92, "response": "David Beckham.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 93, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 94, "response": "Robert Jordan.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 95, "response": "point guard", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 96, "response": "United Kingdom.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 97, "response": "Walter Percy Chrysler Jr.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 98, "response": "Emma Darwin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "original", "qi": 99, "response": "wide receiver", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 0, "response": "ice hockey", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 1, "response": "Rurouni Kenshin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 2, "response": "India.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 3, "response": "Shahnameh.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 4, "response": "University of California, Berkeley.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 5, "response": "Pierre Beaumarchais.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 6, "response": "basketball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 7, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 8, "response": "Japanese.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 9, "response": "Jonathan Rothschild.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 10, "response": "Giuseppe Conte.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 11, "response": "Ellen Pompeo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 12, "response": "center", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 13, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 14, "response": "Galileo Galilei.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 15, "response": "Europe", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 16, "response": "Zoroastrianism.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 17, "response": "England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 18, "response": "Microsoft.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 19, "response": "Satya Nadella.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 20, "response": "Peter Diamandis", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 21, "response": "John Knox", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 22, "response": "rugby union", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 23, "response": "Bob Iger", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 24, "response": "Moscow", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 25, "response": "Chang'an.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 26, "response": "Narendra Modi.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 27, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 28, "response": "post-punk", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 29, "response": "Paris", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 30, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 31, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 32, "response": "Philadelphia.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 33, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 34, "response": "Jerusalem.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 35, "response": "American English", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 36, "response": "The Beatles", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 37, "response": "Tokyo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 38, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 39, "response": "Valve Corporation.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 40, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 41, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 42, "response": "cornerback", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 43, "response": "Canberra.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 44, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 45, "response": "Ursula K. Le Guin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 46, "response": "The Beatles", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 47, "response": "Charles Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 48, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 49, "response": "United States of America", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 50, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 51, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 52, "response": "Donald Trump", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 53, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 54, "response": "pop music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 55, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 56, "response": "France", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 57, "response": "Priscilla Presley", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 58, "response": "Emma Watson", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 59, "response": "basketball", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 60, "response": "rap rock", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 61, "response": "goalkeeper", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 62, "response": "Jack Dorsey.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 63, "response": "German", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 64, "response": "baseball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 65, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 66, "response": "journalist", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 67, "response": "British Broadcasting Corporation", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 68, "response": "North America", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 69, "response": "Tucson", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 70, "response": "Westinghouse Electric.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 71, "response": "Japan.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 72, "response": "placekicker", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 73, "response": "Cherie Blair.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 74, "response": "John Keats", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 75, "response": "Oscar Wilde.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 76, "response": "Shinz\u014d Abe.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 77, "response": "Denis Sassou-Nguesso.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 78, "response": "rugby union", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 79, "response": "Prague.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 80, "response": "goaltender", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 81, "response": "Mikhail Gorbachev.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 82, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 83, "response": "Church of Scotland", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 84, "response": "Mario Puzo.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 85, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 86, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 87, "response": "Kyiv.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 88, "response": "Ardashir I.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 89, "response": "Washington, D.C.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 90, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 91, "response": "Australia", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 92, "response": "David Beckham", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 93, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 94, "response": "Ferdowsi.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 95, "response": "point guard", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 96, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 97, "response": "Charles Frederick, Duke of Holstein-Gottorp.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 98, "response": "Emma Darwin", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "reversed", "qi": 99, "response": "wide receiver", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 0, "response": "ice hockey", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 1, "response": "Rurouni Kenshin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 2, "response": "England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 3, "response": "Shahnameh.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 4, "response": "University of California, Berkeley", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 5, "response": "Pierre Beaumarchais.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 6, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 7, "response": "American football.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 8, "response": "Japanese", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 9, "response": "Jonathan Rothschild.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 10, "response": "Giuseppe Conte", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 11, "response": "Ellen Pompeo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 12, "response": "center", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 13, "response": "France", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 14, "response": "Galileo Galilei.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 15, "response": "Europe", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 16, "response": "Zoroastrianism.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 17, "response": "England.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 18, "response": "Microsoft", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 19, "response": "Satya Nadella.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 20, "response": "Peter Diamandis", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 21, "response": "John Knox", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 22, "response": "rugby union", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 23, "response": "Bob Iger.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 24, "response": "Moscow", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 25, "response": "Chang'an.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 26, "response": "Tony Hall, Baron Hall of Birkenhead", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 27, "response": "Israel.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 28, "response": "post-punk", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 29, "response": "Paris", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 30, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 31, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 32, "response": "Philadelphia.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 33, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 34, "response": "Jerusalem.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 35, "response": "German", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 36, "response": "The Beatles", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 37, "response": "Tokyo.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 38, "response": "Paris.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 39, "response": "Valve Corporation.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 40, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 41, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 42, "response": "cornerback", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 43, "response": "Canberra.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 44, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 45, "response": "Ursula K. Le Guin.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 46, "response": "The Beatles", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 47, "response": "Charles Dickens.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 48, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 49, "response": "United States of America.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 50, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 51, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 52, "response": "Connachta", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 53, "response": "Catholicism.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 54, "response": "pop music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 55, "response": "United States of America", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 56, "response": "France", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 57, "response": "Priscilla Presley.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 58, "response": "Emma Watson", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 59, "response": "association football", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 60, "response": "rock music", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 61, "response": "goalkeeper", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 62, "response": "Jack Dorsey", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 63, "response": "English", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 64, "response": "baseball", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 65, "response": "American football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 66, "response": "journalist", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 67, "response": "British Broadcasting Corporation", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 68, "response": "North America", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 69, "response": "Montreal.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 70, "response": "Westinghouse Electric.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 71, "response": "Japan.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 72, "response": "placekicker", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 73, "response": "Cherie Blair.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 74, "response": "John Keats.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 75, "response": "Oscar Wilde.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 76, "response": "Shinz\u014d Abe", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 77, "response": "Stephen McNeil", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 78, "response": "rugby union", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 79, "response": "Prague.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 80, "response": "center", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 81, "response": "Mikhail Gorbachev.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 82, "response": "Germany.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 83, "response": "Catholic Church", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 84, "response": "Nobuhiro Watsuki.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 85, "response": "Bucharest.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 86, "response": "Asia", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 87, "response": "Kyiv.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 88, "response": "Ardashir I.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 89, "response": "Washington, D.C.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 90, "response": "association football", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 91, "response": "India.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 92, "response": "David Beckham.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 93, "response": "France.", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 94, "response": "Ferdowsi.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 95, "response": "point guard", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 96, "response": "United Kingdom", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 97, "response": "Charles Frederick, Duke of Holstein-Gottorp.", "correct": true}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 98, "response": "Emma Darwin", "correct": false}
+{"src": "factconsolidation_sh_6k", "order": "shuffled", "qi": 99, "response": "wide receiver", "correct": true}
