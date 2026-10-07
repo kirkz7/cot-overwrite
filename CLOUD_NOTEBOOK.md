@@ -41,6 +41,21 @@
 6. **P6 · E18 通用能力检查（用户 10-07 00:00，CLOUD_PLAN P6）**：原模型 4B 和 E18（`weights-e18` 分支的 LoRA，还原到 `runs/e18-dec/final/`，**SHA256 核对一致 45f05d3d…**；`weights/` 只在本地，已加到 `.git/info/exclude`，不提交）各跑 `explore_general.py run`（设置一律不改）和 GSM8K，HF、思考关。排法（`cloud/orchestrate.sh`）：GPU0 8B 跑完 → P6 原模型 → 4B 补空隙；GPU1 14B 4-bit 跑完 → P6 E18 → 14B bf16；之后统一判分，最后补跑 32B 外部测试集。
 4. 训练：配方在 5080 上用 4B 定型；定型后 14B / 32B 的训练和测试在云端，按"受控测试 / 真实任务 / 不伤通用能力"三层评测。
 
+## 交给 5080 的 4B 测试（用户 10-07 13:10：云端只留给大显存模型）
+
+云端只跑完 E18.1 的两项关键门槛（PersonaMem + ConvoMem 长版思考开及其判分、MemConflict 思考开及其判分），其余 4B 测试交给台式机。权重在 `weights-e181`（RESTORE.md），协议同 CLOUD_PLAN P7（全部 HF）。`M=Qwen3-4B@runs/e181-dec/final`：
+```
+python explore_general.py run --models $M ; python run_ext_eval.py run --models $M --benches gsm8k   # 通用能力，思考关（原模型基线 = 云端 P6）
+python explore_general_think.py run --models $M                                                     # 通用能力，思考开（原模型基线 = 云端 P6b；脚本在 cloud-l20）
+python explore_longconv.py run --models $M                                                          # PersonaMem / ConvoMem 长版，思考关
+python explore_reason_eval.py run --think --models $M ; python explore_reason_eval.py run --models $M ; python explore_reason_eval.py judge
+python explore_extmem.py run --tasks memconf --models $M ; python explore_extmem.py judge --parse v2
+# 原模型思考开对照（预注册见下"原模型思考开对照"）：
+python explore_longconv.py run --think --budget 1024 --models Qwen3-4B ; python explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B
+# 可选：P6b E18：python explore_general_think.py run --models Qwen3-4B@runs/e18-dec/final
+```
+注意：云端结果是 L20 上跑的；台式机跑的 4B 结果和云端的 P6 / P6b 基线比较时，换卡带来的数值差异见 P0（逐条约 3–5% 不同，汇总差 ≤2 点）。
+
 ## 队列
 
 - 脚本在 `cloud/`：`queue_cloud.sh`（`queue15.ps1` 的 bash 版）、`resume_queue.sh p0|p1|p2`、`pause_queue.sh`。

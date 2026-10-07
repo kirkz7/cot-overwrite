@@ -1,11 +1,12 @@
+# 10-07 13:10 user: cloud only for large-memory models; 4B tests go to the 5080. Kept: the PersonaMem / ConvoMem-long gate and its judge.
 # P7 · E18.1 tests, GPU1 part (~5.5 h): format, ConvoMem-long + PersonaMem thinking on (main gate) + judge, no-harm thinking off, PersonaMem thinking off.
 e181_fmt     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_format_eval.py run --data bind4 --modes think,direct --models Qwen3-4B@runs/e181-dec/final
 e181_lc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec/final
 e181_lc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py judge
-e181_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-4B@runs/e181-dec/final
-e181_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k
-e181_lc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --models Qwen3-4B@runs/e181-dec/final
+# MOVED TO 5080 (user 10-07 13:10): e181_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-4B@runs/e181-dec/final
+# MOVED TO 5080 (user 10-07 13:10): e181_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k
+# MOVED TO 5080 (user 10-07 13:10): e181_lc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --models Qwen3-4B@runs/e181-dec/final
 # 10-07 13:00 (user): base Qwen3-4B with thinking on, same protocol as E18 / E18.1 (HF, Qwen3 sampling, budget 1024):
 # does thinking alone fix the order effect on the held-out sets? (before P6b E18)
-bt_lc_t      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --think --budget 1024 --models Qwen3-4B
-bt_mc_t      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B
+# MOVED TO 5080 (user 10-07 13:10): bt_lc_t      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --think --budget 1024 --models Qwen3-4B
+# MOVED TO 5080 (user 10-07 13:10): bt_mc_t      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B
