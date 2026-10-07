@@ -1,0 +1,4 @@
+# Ablation (user 10-07, top priority): E18.1 minus the self-distilled general rows (only change: 474 'general' rows removed
+# from bind4_decoupled_train.jsonl, everything else identical incl. hyperparameters, val/dev). GPU0. Then the format test.
+nosd_train   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 train_lora.py --model Qwen3-4B --out runs/e181nosd-dec --data data_train/bind4nosd_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0
+nosd_fmt     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_format_eval.py run --data bind4 --modes think,direct --models Qwen3-4B@runs/e181nosd-dec/final
