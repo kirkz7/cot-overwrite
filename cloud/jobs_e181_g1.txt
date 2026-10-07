@@ -5,3 +5,7 @@ e181_lc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_l
 e181_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-4B@runs/e181-dec/final
 e181_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k
 e181_lc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --models Qwen3-4B@runs/e181-dec/final
+# 10-07 13:00 (user): base Qwen3-4B with thinking on, same protocol as E18 / E18.1 (HF, Qwen3 sampling, budget 1024):
+# does thinking alone fix the order effect on the held-out sets? (before P6b E18)
+bt_lc_t      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py run --think --budget 1024 --models Qwen3-4B
+bt_mc_t      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B
