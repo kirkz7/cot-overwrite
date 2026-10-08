@@ -1,0 +1,98 @@
+========== Gemma-3-12B~vllm
+mabcr    conflict (primary) n= 76 | chrono  51.3 rev  30.3 retr  89.5 | stale chrono 43.4 rev 64.5 retr  5.3 | median tok 7176
+      rev - chrono  -21.1 [ -35.5,   -6.6]
+      retr - chrono   38.2 [  26.3,   50.0]
+mabcr    no conflict        n= 24 | chrono  95.8 rev  95.8 retr 100.0 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 7175
+      rev - chrono    0.0 [   0.0,    0.0]
+      retr - chrono    4.2 [   0.0,   12.5]
+mabcr32k conflict (primary) n= 58 | chrono  36.2 rev  29.3 retr  81.0 | stale chrono 39.7 rev 48.3 retr 12.1 | median tok 38610
+      rev - chrono   -6.9 [ -19.0,    5.2]
+      retr - chrono   44.8 [  31.0,   58.6]
+mabcr32k no conflict        n= 42 | chrono  76.2 rev  66.7 retr  95.2 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 38610
+      rev - chrono   -9.5 [ -26.2,    7.1]
+      retr - chrono   19.0 [   7.1,   33.3]
+memconf  all                n=240 | chrono  73.8 rev  26.7 retr  57.1 | stale chrono  3.8 rev 40.0 retr 20.0 | median tok 19106
+      rev - chrono  -47.1 [ -54.6,  -40.0]
+      retr - chrono  -16.7 [ -23.3,  -10.0]
+========== Gemma-3-27B~vllm
+mabcr    conflict (primary) n= 76 | chrono  43.4 rev   6.6 retr  89.5 | stale chrono 51.3 rev 86.8 retr 10.5 | median tok 7176
+      rev - chrono  -36.8 [ -47.4,  -26.3]
+      retr - chrono   46.1 [  35.5,   57.9]
+mabcr    no conflict        n= 24 | chrono  95.8 rev  91.7 retr  95.8 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 7175
+      rev - chrono   -4.2 [ -12.5,    0.0]
+      retr - chrono    0.0 [ -12.5,   12.5]
+mabcr32k conflict (primary) n= 58 | chrono  24.1 rev  15.5 retr  74.1 | stale chrono 56.9 rev 63.8 retr 17.2 | median tok 38610
+      rev - chrono   -8.6 [ -17.2,    0.0]
+      retr - chrono   50.0 [  34.5,   63.8]
+mabcr32k no conflict        n= 42 | chrono  78.6 rev  66.7 retr  85.7 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 38610
+      rev - chrono  -11.9 [ -23.8,   -2.4]
+      retr - chrono    7.1 [  -4.8,   19.0]
+memconf  all                n=240 | chrono  75.8 rev  22.9 retr  57.5 | stale chrono  2.1 rev 41.2 retr 17.9 | median tok 19106
+      rev - chrono  -52.9 [ -60.0,  -45.8]
+      retr - chrono  -18.3 [ -25.4,  -11.2]
+========== Qwen3-14B-bf16~vllm+think
+memconf  all                n= 45 | chrono  73.3 rev  71.1 retr  66.7 | stale chrono  4.6 rev 15.8 retr 11.1 | median tok 18465
+      rev - chrono   -2.2 [ -17.8,   13.3]
+      retr - chrono   -6.7 [ -22.2,    8.9]
+========== Qwen3-14B-bf16~vllm
+mabcr    conflict (primary) n= 76 | chrono   9.2 rev  15.8 retr  59.2 | stale chrono 84.2 rev 77.6 retr 35.5 | median tok 6952
+      rev - chrono    6.6 [  -1.3,   14.5]
+      retr - chrono   50.0 [  39.5,   60.5]
+mabcr    no conflict        n= 24 | chrono  87.5 rev  91.7 retr  95.8 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 6951
+      rev - chrono    4.2 [   0.0,   12.5]
+      retr - chrono    8.3 [   0.0,   20.8]
+mabcr32k conflict (primary) n= 58 | chrono  13.8 rev  15.5 retr  48.3 | stale chrono 65.5 rev 63.8 retr 36.2 | median tok 37541
+      rev - chrono    1.7 [  -5.2,    8.6]
+      retr - chrono   34.5 [  22.4,   46.6]
+mabcr32k no conflict        n= 42 | chrono  76.2 rev  78.6 retr  83.3 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 37541
+      rev - chrono    2.4 [  -9.5,   14.3]
+      retr - chrono    7.1 [  -2.4,   16.7]
+memconf  all                n=240 | chrono  84.6 rev  48.8 retr  69.2 | stale chrono  4.6 rev 30.8 retr 14.2 | median tok 18467
+      rev - chrono  -35.8 [ -42.5,  -29.2]
+      retr - chrono  -15.4 [ -21.2,   -9.6]
+========== Qwen3-14B
+mabcr    conflict (primary) n= 76 | chrono  17.1 rev  17.1 retr  63.2 | stale chrono 76.3 rev 76.3 retr 32.9 | median tok 6952
+      rev - chrono    0.0 [  -7.9,    7.9]
+      retr - chrono   46.1 [  32.9,   57.9]
+mabcr    no conflict        n= 24 | chrono  87.5 rev  95.8 retr  95.8 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 6951
+      rev - chrono    8.3 [   0.0,   20.8]
+      retr - chrono    8.3 [   0.0,   20.8]
+memconf  all                n=240 | chrono  82.1 rev  48.3 retr  65.4 | stale chrono  3.8 rev 25.8 retr 14.2 | median tok 18467
+      rev - chrono  -33.8 [ -40.4,  -27.1]
+      retr - chrono  -16.7 [ -22.5,  -10.8]
+========== Qwen3-32B~vllm+think
+memconf  all                n=240 | chrono  83.8 rev  73.3 | stale chrono  3.8 rev 12.1 retr  nan | median tok 18463
+      rev - chrono  -10.4 [ -16.2,   -4.6]
+========== Qwen3-32B~vllm
+mabcr    conflict (primary) n= 76 | chrono  11.8 rev  11.8 retr  80.3 | stale chrono 81.6 rev 81.6 retr 18.4 | median tok 6952
+      rev - chrono    0.0 [  -6.6,    7.9]
+      retr - chrono   68.4 [  57.9,   78.9]
+mabcr    no conflict        n= 24 | chrono  91.7 rev  91.7 retr  95.8 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 6951
+      rev - chrono    0.0 [   0.0,    0.0]
+      retr - chrono    4.2 [   0.0,   12.5]
+mabcr32k conflict (primary) n= 58 | chrono  20.7 rev  25.9 retr  72.4 | stale chrono 58.6 rev 55.2 retr 17.2 | median tok 37541
+      rev - chrono    5.2 [  -1.7,   12.1]
+      retr - chrono   51.7 [  36.2,   67.2]
+mabcr32k no conflict        n= 42 | chrono  71.4 rev  76.2 retr  83.3 | stale chrono  0.0 rev  0.0 retr  0.0 | median tok 37541
+      rev - chrono    4.8 [   0.0,   11.9]
+      retr - chrono   11.9 [   0.0,   23.8]
+memconf  all                n=240 | chrono  80.0 rev  58.8 retr  70.0 | stale chrono  3.3 rev 20.0 retr 12.9 | median tok 18467
+      rev - chrono  -21.2 [ -27.9,  -14.6]
+      retr - chrono  -10.0 [ -15.4,   -4.6]
+========== Qwen3-4B+e181-dec+think
+memconf  all                n=240 | chrono  80.4 rev  77.5 retr  77.9 | stale chrono  3.8 rev  8.3 retr  5.0 | median tok 18463
+      rev - chrono   -2.9 [  -8.3,    2.5]
+      retr - chrono   -2.5 [  -7.9,    2.9]
+========== Qwen3-4B-e181~vllm+think
+Traceback (most recent call last):
+  File "/root/cot-overwrite/explore_extmem.py", line 369, in <module>
+    main()
+  File "/root/cot-overwrite/explore_extmem.py", line 365, in main
+    {"run": run, "judge": judge, "stats": stats, "check": check}[args.stage](args)
+  File "/root/cot-overwrite/explore_extmem.py", line 326, in stats
+    h = h[h.correct.notna()]
+          ^^^^^^^^^
+  File "/root/cot-overwrite/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'correct'. Did you mean: 'corrwith'?

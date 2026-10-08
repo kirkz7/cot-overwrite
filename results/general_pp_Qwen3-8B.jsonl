@@ -1,0 +1,1582 @@
+{"task": "ifeval", "i": 5, "pp": 0.0, "finished": true, "n_new": 213, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 16, "pp": 0.0, "finished": true, "n_new": 286, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 30, "pp": 0.0, "finished": true, "n_new": 312, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 29, "pp": 0.0, "finished": true, "n_new": 352, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 21, "pp": 0.0, "finished": true, "n_new": 366, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 4, "pp": 0.0, "finished": true, "n_new": 382, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 17, "pp": 0.0, "finished": true, "n_new": 407, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 22, "pp": 0.0, "finished": true, "n_new": 417, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 28, "pp": 0.0, "finished": true, "n_new": 417, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 18, "pp": 0.0, "finished": true, "n_new": 425, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 8, "pp": 0.0, "finished": true, "n_new": 480, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 3, "pp": 0.0, "finished": true, "n_new": 515, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 20, "pp": 0.0, "finished": true, "n_new": 515, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 12, "pp": 0.0, "finished": true, "n_new": 539, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 14, "pp": 0.0, "finished": true, "n_new": 543, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 15, "pp": 0.0, "finished": true, "n_new": 579, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 26, "pp": 0.0, "finished": true, "n_new": 618, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 19, "pp": 0.0, "finished": true, "n_new": 621, "strict": false, "loose": true, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 1, "pp": 0.0, "finished": true, "n_new": 683, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 13, "pp": 0.0, "finished": true, "n_new": 691, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 35, "pp": 0.0, "finished": true, "n_new": 338, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 11, "pp": 0.0, "finished": true, "n_new": 828, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 6, "pp": 0.0, "finished": true, "n_new": 846, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 38, "pp": 0.0, "finished": true, "n_new": 472, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 0, "pp": 0.0, "finished": true, "n_new": 890, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 33, "pp": 0.0, "finished": true, "n_new": 623, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 34, "pp": 0.0, "finished": true, "n_new": 600, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 51, "pp": 0.0, "finished": true, "n_new": 226, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 41, "pp": 0.0, "finished": true, "n_new": 534, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 7, "pp": 0.0, "finished": true, "n_new": 964, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 36, "pp": 0.0, "finished": true, "n_new": 680, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 24, "pp": 0.0, "finished": true, "n_new": 1068, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 25, "pp": 0.0, "finished": true, "n_new": 1069, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 53, "pp": 0.0, "finished": true, "n_new": 263, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 39, "pp": 0.0, "finished": true, "n_new": 803, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 42, "pp": 0.0, "finished": true, "n_new": 771, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 43, "pp": 0.0, "finished": true, "n_new": 742, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 10, "pp": 0.0, "finished": true, "n_new": 1260, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 46, "pp": 0.0, "finished": true, "n_new": 793, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 60, "pp": 0.0, "finished": true, "n_new": 376, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 9, "pp": 0.0, "finished": true, "n_new": 1358, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 45, "pp": 0.0, "finished": true, "n_new": 872, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 44, "pp": 0.0, "finished": true, "n_new": 897, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 57, "pp": 0.0, "finished": true, "n_new": 502, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 56, "pp": 0.0, "finished": true, "n_new": 572, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 55, "pp": 0.0, "finished": true, "n_new": 653, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 32, "pp": 0.0, "finished": true, "n_new": 1341, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 47, "pp": 0.0, "finished": true, "n_new": 997, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 64, "pp": 0.0, "finished": true, "n_new": 512, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 40, "pp": 0.0, "finished": true, "n_new": 1168, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 23, "pp": 0.0, "finished": true, "n_new": 1635, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 68, "pp": 0.0, "finished": true, "n_new": 460, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 67, "pp": 0.0, "finished": true, "n_new": 505, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 54, "pp": 0.0, "finished": true, "n_new": 962, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 62, "pp": 0.0, "finished": true, "n_new": 763, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 65, "pp": 0.0, "finished": true, "n_new": 739, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 69, "pp": 0.0, "finished": true, "n_new": 580, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 72, "pp": 0.0, "finished": true, "n_new": 518, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 58, "pp": 0.0, "finished": true, "n_new": 975, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 63, "pp": 0.0, "finished": true, "n_new": 830, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 75, "pp": 0.0, "finished": true, "n_new": 566, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 27, "pp": 0.0, "finished": true, "n_new": 2011, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 59, "pp": 0.0, "finished": true, "n_new": 1094, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 2, "pp": 0.0, "finished": true, "n_new": 2029, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 48, "pp": 0.0, "finished": true, "n_new": 1422, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 74, "pp": 0.0, "finished": true, "n_new": 638, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 77, "pp": 0.0, "finished": true, "n_new": 519, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 49, "pp": 0.0, "finished": true, "n_new": 1446, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 66, "pp": 0.0, "finished": true, "n_new": 940, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 81, "pp": 0.0, "finished": true, "n_new": 605, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 97, "pp": 0.0, "finished": true, "n_new": 178, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 91, "pp": 0.0, "finished": true, "n_new": 357, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 73, "pp": 0.0, "finished": true, "n_new": 880, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 86, "pp": 0.0, "finished": true, "n_new": 492, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 80, "pp": 0.0, "finished": true, "n_new": 768, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 61, "pp": 0.0, "finished": true, "n_new": 1409, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 82, "pp": 0.0, "finished": true, "n_new": 739, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 85, "pp": 0.0, "finished": true, "n_new": 729, "strict": false, "loose": true, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 93, "pp": 0.0, "finished": true, "n_new": 533, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 78, "pp": 0.0, "finished": true, "n_new": 1012, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 84, "pp": 0.0, "finished": true, "n_new": 887, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 98, "pp": 0.0, "finished": true, "n_new": 600, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 83, "pp": 0.0, "finished": true, "n_new": 958, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 37, "pp": 0.0, "finished": true, "n_new": 2301, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 89, "pp": 0.0, "finished": true, "n_new": 830, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 71, "pp": 0.0, "finished": true, "n_new": 1418, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 108, "pp": 0.0, "finished": true, "n_new": 387, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 106, "pp": 0.0, "finished": true, "n_new": 429, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 99, "pp": 0.0, "finished": true, "n_new": 751, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 105, "pp": 0.0, "finished": true, "n_new": 544, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 52, "pp": 0.0, "finished": true, "n_new": 2175, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 111, "pp": 0.0, "finished": true, "n_new": 298, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 87, "pp": 0.0, "finished": true, "n_new": 1100, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 90, "pp": 0.0, "finished": true, "n_new": 1077, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 92, "pp": 0.0, "finished": true, "n_new": 989, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 100, "pp": 0.0, "finished": true, "n_new": 819, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 104, "pp": 0.0, "finished": true, "n_new": 703, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 70, "pp": 0.0, "finished": true, "n_new": 1743, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 109, "pp": 0.0, "finished": true, "n_new": 555, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 50, "pp": 0.0, "finished": true, "n_new": 2463, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 88, "pp": 0.0, "finished": true, "n_new": 1328, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 115, "pp": 0.0, "finished": true, "n_new": 500, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 96, "pp": 0.0, "finished": true, "n_new": 1196, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 113, "pp": 0.0, "finished": true, "n_new": 647, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 118, "pp": 0.0, "finished": true, "n_new": 551, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 112, "pp": 0.0, "finished": true, "n_new": 678, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 114, "pp": 0.0, "finished": true, "n_new": 770, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 79, "pp": 0.0, "finished": true, "n_new": 1876, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 101, "pp": 0.0, "finished": true, "n_new": 1263, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 127, "pp": 0.0, "finished": true, "n_new": 472, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 110, "pp": 0.0, "finished": true, "n_new": 976, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 121, "pp": 0.0, "finished": true, "n_new": 768, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 95, "pp": 0.0, "finished": true, "n_new": 1617, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 94, "pp": 0.0, "finished": true, "n_new": 1645, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 125, "pp": 0.0, "finished": true, "n_new": 705, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 102, "pp": 0.0, "finished": true, "n_new": 1462, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 116, "pp": 0.0, "finished": true, "n_new": 1014, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 119, "pp": 0.0, "finished": true, "n_new": 952, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 123, "pp": 0.0, "finished": true, "n_new": 870, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 126, "pp": 0.0, "finished": true, "n_new": 793, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 117, "pp": 0.0, "finished": true, "n_new": 1165, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 135, "pp": 0.0, "finished": true, "n_new": 668, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 130, "pp": 0.0, "finished": true, "n_new": 882, "strict": false, "loose": true, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 140, "pp": 0.0, "finished": true, "n_new": 551, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 128, "pp": 0.0, "finished": true, "n_new": 1064, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 137, "pp": 0.0, "finished": true, "n_new": 755, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 129, "pp": 0.0, "finished": true, "n_new": 1008, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 150, "pp": 0.0, "finished": true, "n_new": 351, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 31, "pp": 0.0, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 138, "pp": 0.0, "finished": true, "n_new": 740, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 152, "pp": 0.0, "finished": true, "n_new": 270, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 142, "pp": 0.0, "finished": true, "n_new": 674, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 131, "pp": 0.0, "finished": true, "n_new": 1078, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 141, "pp": 0.0, "finished": true, "n_new": 776, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 148, "pp": 0.0, "finished": true, "n_new": 559, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 132, "pp": 0.0, "finished": true, "n_new": 1128, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 133, "pp": 0.0, "finished": true, "n_new": 1150, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 154, "pp": 0.0, "finished": true, "n_new": 435, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 103, "pp": 0.0, "finished": true, "n_new": 2245, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 168, "pp": 0.0, "finished": true, "n_new": 219, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 164, "pp": 0.0, "finished": true, "n_new": 349, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 159, "pp": 0.0, "finished": true, "n_new": 542, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 145, "pp": 0.0, "finished": true, "n_new": 1003, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 134, "pp": 0.0, "finished": true, "n_new": 1429, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 143, "pp": 0.0, "finished": true, "n_new": 1097, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 122, "pp": 0.0, "finished": true, "n_new": 1865, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 158, "pp": 0.0, "finished": true, "n_new": 658, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 151, "pp": 0.0, "finished": true, "n_new": 1024, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 160, "pp": 0.0, "finished": true, "n_new": 720, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 149, "pp": 0.0, "finished": true, "n_new": 1081, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 169, "pp": 0.0, "finished": true, "n_new": 414, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 175, "pp": 0.0, "finished": true, "n_new": 272, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 157, "pp": 0.0, "finished": true, "n_new": 888, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 124, "pp": 0.0, "finished": true, "n_new": 2061, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 120, "pp": 0.0, "finished": true, "n_new": 2213, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 174, "pp": 0.0, "finished": true, "n_new": 389, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 136, "pp": 0.0, "finished": true, "n_new": 1742, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 156, "pp": 0.0, "finished": true, "n_new": 1014, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 177, "pp": 0.0, "finished": true, "n_new": 400, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 165, "pp": 0.0, "finished": true, "n_new": 931, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 166, "pp": 0.0, "finished": true, "n_new": 884, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 153, "pp": 0.0, "finished": true, "n_new": 1258, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 173, "pp": 0.0, "finished": true, "n_new": 602, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 176, "pp": 0.0, "finished": true, "n_new": 534, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 155, "pp": 0.0, "finished": true, "n_new": 1249, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 180, "pp": 0.0, "finished": true, "n_new": 476, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 188, "pp": 0.0, "finished": true, "n_new": 253, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 181, "pp": 0.0, "finished": true, "n_new": 517, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 184, "pp": 0.0, "finished": true, "n_new": 560, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 190, "pp": 0.0, "finished": true, "n_new": 401, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 76, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 195, "pp": 0.0, "finished": true, "n_new": 319, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 107, "pp": 0.0, "finished": true, "n_new": 3294, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 197, "pp": 0.0, "finished": true, "n_new": 388, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 192, "pp": 0.0, "finished": true, "n_new": 533, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 183, "pp": 0.0, "finished": true, "n_new": 790, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 186, "pp": 0.0, "finished": true, "n_new": 727, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 191, "pp": 0.0, "finished": true, "n_new": 595, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 182, "pp": 0.0, "finished": true, "n_new": 969, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 194, "pp": 0.0, "finished": true, "n_new": 572, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 178, "pp": 0.0, "finished": true, "n_new": 1092, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 179, "pp": 0.0, "finished": true, "n_new": 1158, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 189, "pp": 0.0, "finished": true, "n_new": 915, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 202, "pp": 0.0, "finished": true, "n_new": 438, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 146, "pp": 0.0, "finished": true, "n_new": 2373, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 199, "pp": 0.0, "finished": true, "n_new": 718, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 209, "pp": 0.0, "finished": true, "n_new": 314, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 201, "pp": 0.0, "finished": true, "n_new": 542, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 196, "pp": 0.0, "finished": true, "n_new": 847, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 171, "pp": 0.0, "finished": true, "n_new": 1685, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 208, "pp": 0.0, "finished": true, "n_new": 504, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 147, "pp": 0.0, "finished": true, "n_new": 2591, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 215, "pp": 0.0, "finished": true, "n_new": 337, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 161, "pp": 0.0, "finished": true, "n_new": 2197, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 210, "pp": 0.0, "finished": true, "n_new": 590, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 214, "pp": 0.0, "finished": true, "n_new": 400, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 216, "pp": 0.0, "finished": true, "n_new": 397, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 217, "pp": 0.0, "finished": true, "n_new": 508, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 198, "pp": 0.0, "finished": true, "n_new": 1255, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 223, "pp": 0.0, "finished": true, "n_new": 497, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 212, "pp": 0.0, "finished": true, "n_new": 946, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 207, "pp": 0.0, "finished": true, "n_new": 1062, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 220, "pp": 0.0, "finished": true, "n_new": 749, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 221, "pp": 0.0, "finished": true, "n_new": 620, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 219, "pp": 0.0, "finished": true, "n_new": 816, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 225, "pp": 0.0, "finished": true, "n_new": 516, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 224, "pp": 0.0, "finished": true, "n_new": 651, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 206, "pp": 0.0, "finished": true, "n_new": 1310, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 167, "pp": 0.0, "finished": true, "n_new": 2719, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 203, "pp": 0.0, "finished": true, "n_new": 1567, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 234, "pp": 0.0, "finished": true, "n_new": 289, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 233, "pp": 0.0, "finished": true, "n_new": 364, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 218, "pp": 0.0, "finished": true, "n_new": 1096, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 200, "pp": 0.0, "finished": true, "n_new": 1651, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 226, "pp": 0.0, "finished": true, "n_new": 820, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 205, "pp": 0.0, "finished": true, "n_new": 1538, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 213, "pp": 0.0, "finished": true, "n_new": 1283, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 222, "pp": 0.0, "finished": true, "n_new": 1154, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 242, "pp": 0.0, "finished": true, "n_new": 281, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 230, "pp": 0.0, "finished": true, "n_new": 895, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 227, "pp": 0.0, "finished": true, "n_new": 1140, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 139, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 232, "pp": 0.0, "finished": true, "n_new": 802, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 228, "pp": 0.0, "finished": true, "n_new": 1227, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 144, "pp": 0.0, "finished": true, "n_new": 4034, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 237, "pp": 0.0, "finished": true, "n_new": 775, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 250, "pp": 0.0, "finished": true, "n_new": 258, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 243, "pp": 0.0, "finished": true, "n_new": 692, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 249, "pp": 0.0, "finished": true, "n_new": 461, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 238, "pp": 0.0, "finished": true, "n_new": 956, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 247, "pp": 0.0, "finished": true, "n_new": 729, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 245, "pp": 0.0, "finished": true, "n_new": 801, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 246, "pp": 0.0, "finished": true, "n_new": 775, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 258, "pp": 0.0, "finished": true, "n_new": 309, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 239, "pp": 0.0, "finished": true, "n_new": 1008, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 241, "pp": 0.0, "finished": true, "n_new": 914, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 248, "pp": 0.0, "finished": true, "n_new": 867, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 256, "pp": 0.0, "finished": true, "n_new": 573, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 257, "pp": 0.0, "finished": true, "n_new": 568, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 204, "pp": 0.0, "finished": true, "n_new": 2590, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 260, "pp": 0.0, "finished": true, "n_new": 393, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 162, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 163, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 229, "pp": 0.0, "finished": true, "n_new": 1732, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 253, "pp": 0.0, "finished": true, "n_new": 827, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 254, "pp": 0.0, "finished": true, "n_new": 810, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 252, "pp": 0.0, "finished": true, "n_new": 911, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 266, "pp": 0.0, "finished": true, "n_new": 433, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 255, "pp": 0.0, "finished": true, "n_new": 844, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 240, "pp": 0.0, "finished": true, "n_new": 1513, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 244, "pp": 0.0, "finished": true, "n_new": 1364, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 231, "pp": 0.0, "finished": true, "n_new": 1784, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 170, "pp": 0.0, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 264, "pp": 0.0, "finished": true, "n_new": 627, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 259, "pp": 0.0, "finished": true, "n_new": 770, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 172, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 275, "pp": 0.0, "finished": true, "n_new": 389, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 261, "pp": 0.0, "finished": true, "n_new": 773, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 274, "pp": 0.0, "finished": true, "n_new": 465, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 269, "pp": 0.0, "finished": true, "n_new": 529, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 268, "pp": 0.0, "finished": true, "n_new": 688, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 276, "pp": 0.0, "finished": true, "n_new": 424, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 267, "pp": 0.0, "finished": true, "n_new": 746, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 236, "pp": 0.0, "finished": true, "n_new": 1935, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 273, "pp": 0.0, "finished": true, "n_new": 554, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 263, "pp": 0.0, "finished": true, "n_new": 867, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 272, "pp": 0.0, "finished": true, "n_new": 576, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 279, "pp": 0.0, "finished": true, "n_new": 409, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 265, "pp": 0.0, "finished": true, "n_new": 887, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 262, "pp": 0.0, "finished": true, "n_new": 990, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 285, "pp": 0.0, "finished": true, "n_new": 344, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 271, "pp": 0.0, "finished": true, "n_new": 727, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 288, "pp": 0.0, "finished": true, "n_new": 326, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 185, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 187, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 287, "pp": 0.0, "finished": true, "n_new": 504, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 291, "pp": 0.0, "finished": true, "n_new": 444, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 270, "pp": 0.0, "finished": true, "n_new": 977, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 282, "pp": 0.0, "finished": true, "n_new": 730, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 300, "pp": 0.0, "finished": true, "n_new": 384, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 280, "pp": 0.0, "finished": true, "n_new": 804, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 193, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 299, "pp": 0.0, "finished": true, "n_new": 475, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 286, "pp": 0.0, "finished": true, "n_new": 720, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 293, "pp": 0.0, "finished": true, "n_new": 574, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 294, "pp": 0.0, "finished": true, "n_new": 580, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 289, "pp": 0.0, "finished": true, "n_new": 707, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 311, "pp": 0.0, "finished": true, "n_new": 216, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 283, "pp": 0.0, "finished": true, "n_new": 942, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 295, "pp": 0.0, "finished": true, "n_new": 713, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 301, "pp": 0.0, "finished": true, "n_new": 617, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 315, "pp": 0.0, "finished": true, "n_new": 250, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 308, "pp": 0.0, "finished": true, "n_new": 381, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 307, "pp": 0.0, "finished": true, "n_new": 465, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 304, "pp": 0.0, "finished": true, "n_new": 684, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 306, "pp": 0.0, "finished": true, "n_new": 615, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 318, "pp": 0.0, "finished": true, "n_new": 361, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 296, "pp": 0.0, "finished": true, "n_new": 958, "strict": false, "loose": true, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 319, "pp": 0.0, "finished": true, "n_new": 328, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 317, "pp": 0.0, "finished": true, "n_new": 465, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 313, "pp": 0.0, "finished": true, "n_new": 546, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 211, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 302, "pp": 0.0, "finished": true, "n_new": 944, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 281, "pp": 0.0, "finished": true, "n_new": 1413, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 321, "pp": 0.0, "finished": true, "n_new": 420, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 316, "pp": 0.0, "finished": true, "n_new": 621, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 324, "pp": 0.0, "finished": true, "n_new": 454, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 297, "pp": 0.0, "finished": true, "n_new": 1227, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 310, "pp": 0.0, "finished": true, "n_new": 854, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 305, "pp": 0.0, "finished": true, "n_new": 1047, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 298, "pp": 0.0, "finished": true, "n_new": 1324, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 338, "pp": 0.0, "finished": true, "n_new": 155, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 328, "pp": 0.0, "finished": true, "n_new": 444, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 325, "pp": 0.0, "finished": true, "n_new": 670, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 323, "pp": 0.0, "finished": true, "n_new": 745, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 312, "pp": 0.0, "finished": true, "n_new": 1037, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 309, "pp": 0.0, "finished": true, "n_new": 1182, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 277, "pp": 0.0, "finished": true, "n_new": 2035, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 292, "pp": 0.0, "finished": true, "n_new": 1683, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 329, "pp": 0.0, "finished": true, "n_new": 713, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 335, "pp": 0.0, "finished": true, "n_new": 577, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 340, "pp": 0.0, "finished": true, "n_new": 394, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 284, "pp": 0.0, "finished": true, "n_new": 1927, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 333, "pp": 0.0, "finished": true, "n_new": 663, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 343, "pp": 0.0, "finished": true, "n_new": 370, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 341, "pp": 0.0, "finished": true, "n_new": 503, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 339, "pp": 0.0, "finished": true, "n_new": 573, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 346, "pp": 0.0, "finished": true, "n_new": 356, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 331, "pp": 0.0, "finished": true, "n_new": 902, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 334, "pp": 0.0, "finished": true, "n_new": 882, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 336, "pp": 0.0, "finished": true, "n_new": 855, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 327, "pp": 0.0, "finished": true, "n_new": 1106, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 337, "pp": 0.0, "finished": true, "n_new": 919, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 345, "pp": 0.0, "finished": true, "n_new": 618, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 353, "pp": 0.0, "finished": true, "n_new": 429, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 350, "pp": 0.0, "finished": true, "n_new": 479, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 235, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 359, "pp": 0.0, "finished": true, "n_new": 294, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 320, "pp": 0.0, "finished": true, "n_new": 1565, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 326, "pp": 0.0, "finished": true, "n_new": 1381, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 347, "pp": 0.0, "finished": true, "n_new": 763, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 332, "pp": 0.0, "finished": true, "n_new": 1266, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 358, "pp": 0.0, "finished": true, "n_new": 485, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 362, "pp": 0.0, "finished": true, "n_new": 423, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 348, "pp": 0.0, "finished": true, "n_new": 846, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 322, "pp": 0.0, "finished": true, "n_new": 1706, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 342, "pp": 0.0, "finished": true, "n_new": 1131, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 356, "pp": 0.0, "finished": true, "n_new": 741, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 365, "pp": 0.0, "finished": true, "n_new": 410, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 354, "pp": 0.0, "finished": true, "n_new": 830, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 368, "pp": 0.0, "finished": true, "n_new": 409, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 330, "pp": 0.0, "finished": true, "n_new": 1684, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 364, "pp": 0.0, "finished": true, "n_new": 622, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 251, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 361, "pp": 0.0, "finished": true, "n_new": 777, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 363, "pp": 0.0, "finished": true, "n_new": 712, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 373, "pp": 0.0, "finished": true, "n_new": 523, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 349, "pp": 0.0, "finished": true, "n_new": 1248, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 351, "pp": 0.0, "finished": true, "n_new": 1194, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 303, "pp": 0.0, "finished": true, "n_new": 2734, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 344, "pp": 0.0, "finished": true, "n_new": 1482, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 367, "pp": 0.0, "finished": true, "n_new": 776, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 377, "pp": 0.0, "finished": true, "n_new": 481, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 382, "pp": 0.0, "finished": true, "n_new": 410, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 360, "pp": 0.0, "finished": true, "n_new": 1046, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 374, "pp": 0.0, "finished": true, "n_new": 684, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 387, "pp": 0.0, "finished": true, "n_new": 398, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 376, "pp": 0.0, "finished": true, "n_new": 742, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 386, "pp": 0.0, "finished": true, "n_new": 481, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 379, "pp": 0.0, "finished": true, "n_new": 769, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 388, "pp": 0.0, "finished": true, "n_new": 454, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 390, "pp": 0.0, "finished": true, "n_new": 415, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 381, "pp": 0.0, "finished": true, "n_new": 775, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 366, "pp": 0.0, "finished": true, "n_new": 1184, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 369, "pp": 0.0, "finished": true, "n_new": 1195, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 378, "pp": 0.0, "finished": true, "n_new": 954, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 383, "pp": 0.0, "finished": true, "n_new": 776, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 314, "pp": 0.0, "finished": true, "n_new": 2944, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 404, "pp": 0.0, "finished": true, "n_new": 252, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 392, "pp": 0.0, "finished": true, "n_new": 683, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 371, "pp": 0.0, "finished": true, "n_new": 1368, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 375, "pp": 0.0, "finished": true, "n_new": 1205, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 396, "pp": 0.0, "finished": true, "n_new": 686, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 278, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 384, "pp": 0.0, "finished": true, "n_new": 1019, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 389, "pp": 0.0, "finished": true, "n_new": 931, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 394, "pp": 0.0, "finished": true, "n_new": 876, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 397, "pp": 0.0, "finished": true, "n_new": 907, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 409, "pp": 0.0, "finished": true, "n_new": 472, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 290, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 391, "pp": 0.0, "finished": true, "n_new": 1146, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 395, "pp": 0.0, "finished": true, "n_new": 1106, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 411, "pp": 0.0, "finished": true, "n_new": 562, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 403, "pp": 0.0, "finished": true, "n_new": 840, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 357, "pp": 0.0, "finished": true, "n_new": 2406, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 393, "pp": 0.0, "finished": true, "n_new": 1337, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 406, "pp": 0.0, "finished": true, "n_new": 956, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 400, "pp": 0.0, "finished": true, "n_new": 1117, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 398, "pp": 0.0, "finished": true, "n_new": 1230, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 408, "pp": 0.0, "finished": true, "n_new": 967, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 402, "pp": 0.0, "finished": true, "n_new": 1133, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 410, "pp": 0.0, "finished": true, "n_new": 912, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 385, "pp": 0.0, "finished": true, "n_new": 1768, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 412, "pp": 0.0, "finished": true, "n_new": 893, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 418, "pp": 0.0, "finished": true, "n_new": 773, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 372, "pp": 0.0, "finished": true, "n_new": 2335, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 401, "pp": 0.0, "finished": true, "n_new": 1360, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 428, "pp": 0.0, "finished": true, "n_new": 427, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 419, "pp": 0.0, "finished": true, "n_new": 859, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 416, "pp": 0.0, "finished": true, "n_new": 1067, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 413, "pp": 0.0, "finished": true, "n_new": 1196, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 431, "pp": 0.0, "finished": true, "n_new": 456, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 425, "pp": 0.0, "finished": true, "n_new": 774, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 399, "pp": 0.0, "finished": true, "n_new": 1800, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 426, "pp": 0.0, "finished": true, "n_new": 792, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 432, "pp": 0.0, "finished": true, "n_new": 591, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 429, "pp": 0.0, "finished": true, "n_new": 735, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 438, "pp": 0.0, "finished": true, "n_new": 454, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 440, "pp": 0.0, "finished": true, "n_new": 351, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 422, "pp": 0.0, "finished": true, "n_new": 1137, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 420, "pp": 0.0, "finished": true, "n_new": 1291, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 435, "pp": 0.0, "finished": true, "n_new": 724, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 430, "pp": 0.0, "finished": true, "n_new": 857, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 433, "pp": 0.0, "finished": true, "n_new": 776, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 447, "pp": 0.0, "finished": true, "n_new": 231, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 434, "pp": 0.0, "finished": true, "n_new": 925, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 405, "pp": 0.0, "finished": true, "n_new": 2125, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 427, "pp": 0.0, "finished": true, "n_new": 1194, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 439, "pp": 0.0, "finished": true, "n_new": 687, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 451, "pp": 0.0, "finished": true, "n_new": 319, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 417, "pp": 0.0, "finished": true, "n_new": 1715, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 441, "pp": 0.0, "finished": true, "n_new": 807, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 459, "pp": 0.0, "finished": true, "n_new": 175, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 449, "pp": 0.0, "finished": true, "n_new": 517, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 450, "pp": 0.0, "finished": true, "n_new": 498, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 414, "pp": 0.0, "finished": true, "n_new": 1987, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 446, "pp": 0.0, "finished": true, "n_new": 664, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 456, "pp": 0.0, "finished": true, "n_new": 427, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 352, "pp": 0.0, "finished": true, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 423, "pp": 0.0, "finished": true, "n_new": 1734, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 452, "pp": 0.0, "finished": true, "n_new": 572, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 421, "pp": 0.0, "finished": true, "n_new": 1786, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 355, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 455, "pp": 0.0, "finished": true, "n_new": 588, "strict": false, "loose": true, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 442, "pp": 0.0, "finished": true, "n_new": 1035, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 462, "pp": 0.0, "finished": true, "n_new": 369, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 448, "pp": 0.0, "finished": true, "n_new": 849, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 457, "pp": 0.0, "finished": true, "n_new": 633, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 436, "pp": 0.0, "finished": true, "n_new": 1494, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 444, "pp": 0.0, "finished": true, "n_new": 1152, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 463, "pp": 0.0, "finished": true, "n_new": 484, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 458, "pp": 0.0, "finished": true, "n_new": 672, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 465, "pp": 0.0, "finished": true, "n_new": 504, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 460, "pp": 0.0, "finished": true, "n_new": 737, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 467, "pp": 0.0, "finished": true, "n_new": 539, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 480, "pp": 0.0, "finished": true, "n_new": 224, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 464, "pp": 0.0, "finished": true, "n_new": 702, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 370, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 474, "pp": 0.0, "finished": true, "n_new": 514, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 478, "pp": 0.0, "finished": true, "n_new": 512, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 454, "pp": 0.0, "finished": true, "n_new": 1203, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 470, "pp": 0.0, "finished": true, "n_new": 675, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 473, "pp": 0.0, "finished": true, "n_new": 701, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 475, "pp": 0.0, "finished": true, "n_new": 687, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 486, "pp": 0.0, "finished": true, "n_new": 367, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 380, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false, false]}
+{"task": "ifeval", "i": 493, "pp": 0.0, "finished": true, "n_new": 215, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 481, "pp": 0.0, "finished": true, "n_new": 729, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 482, "pp": 0.0, "finished": true, "n_new": 705, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 424, "pp": 0.0, "finished": true, "n_new": 2675, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 494, "pp": 0.0, "finished": true, "n_new": 339, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 469, "pp": 0.0, "finished": true, "n_new": 1192, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 484, "pp": 0.0, "finished": true, "n_new": 773, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 483, "pp": 0.0, "finished": true, "n_new": 840, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 491, "pp": 0.0, "finished": true, "n_new": 565, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 490, "pp": 0.0, "finished": true, "n_new": 796, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 488, "pp": 0.0, "finished": true, "n_new": 877, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 472, "pp": 0.0, "finished": true, "n_new": 1426, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 453, "pp": 0.0, "finished": true, "n_new": 2043, "strict": false, "loose": true, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 497, "pp": 0.0, "finished": true, "n_new": 728, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 479, "pp": 0.0, "finished": true, "n_new": 1325, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 502, "pp": 0.0, "finished": true, "n_new": 564, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 492, "pp": 0.0, "finished": true, "n_new": 972, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 487, "pp": 0.0, "finished": true, "n_new": 1153, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 499, "pp": 0.0, "finished": true, "n_new": 650, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 505, "pp": 0.0, "finished": true, "n_new": 518, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 407, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 498, "pp": 0.0, "finished": true, "n_new": 851, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 513, "pp": 0.0, "finished": true, "n_new": 161, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 508, "pp": 0.0, "finished": true, "n_new": 417, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 496, "pp": 0.0, "finished": true, "n_new": 1097, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 415, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false, false]}
+{"task": "ifeval", "i": 503, "pp": 0.0, "finished": true, "n_new": 935, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 517, "pp": 0.0, "finished": true, "n_new": 348, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 506, "pp": 0.0, "finished": true, "n_new": 811, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 489, "pp": 0.0, "finished": true, "n_new": 1529, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 509, "pp": 0.0, "finished": true, "n_new": 648, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 507, "pp": 0.0, "finished": true, "n_new": 735, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 500, "pp": 0.0, "finished": true, "n_new": 1129, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 501, "pp": 0.0, "finished": true, "n_new": 1123, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 495, "pp": 0.0, "finished": true, "n_new": 1453, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 527, "pp": 0.0, "finished": true, "n_new": 185, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 510, "pp": 0.0, "finished": true, "n_new": 805, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 477, "pp": 0.0, "finished": true, "n_new": 2222, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 520, "pp": 0.0, "finished": true, "n_new": 517, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 504, "pp": 0.0, "finished": true, "n_new": 1231, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 515, "pp": 0.0, "finished": true, "n_new": 748, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 525, "pp": 0.0, "finished": true, "n_new": 402, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 528, "pp": 0.0, "finished": true, "n_new": 357, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 533, "pp": 0.0, "finished": true, "n_new": 192, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 466, "pp": 0.0, "finished": true, "n_new": 2675, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 514, "pp": 0.0, "finished": true, "n_new": 881, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 521, "pp": 0.0, "finished": true, "n_new": 706, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 519, "pp": 0.0, "finished": true, "n_new": 847, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 512, "pp": 0.0, "finished": true, "n_new": 1001, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 529, "pp": 0.0, "finished": true, "n_new": 512, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 516, "pp": 0.0, "finished": true, "n_new": 1057, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 538, "pp": 0.0, "finished": true, "n_new": 314, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 522, "pp": 0.0, "finished": true, "n_new": 879, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 539, "pp": 0.0, "finished": true, "n_new": 322, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 523, "pp": 0.0, "finished": true, "n_new": 781, "strict": false, "loose": false, "inst_strict": [true, false, false]}
+{"task": "ifeval", "i": 532, "pp": 0.0, "finished": true, "n_new": 628, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 530, "pp": 0.0, "finished": true, "n_new": 705, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 540, "pp": 0.0, "finished": true, "n_new": 406, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 535, "pp": 0.0, "finished": true, "n_new": 585, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 437, "pp": 0.0, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 537, "pp": 0.0, "finished": true, "n_new": 642, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 524, "pp": 0.0, "finished": true, "n_new": 1033, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 518, "pp": 0.0, "finished": true, "n_new": 1398, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 468, "pp": 0.0, "finished": true, "n_new": 3264, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 443, "pp": 0.0, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 536, "pp": 0.0, "finished": true, "n_new": 909, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 511, "pp": 0.0, "finished": true, "n_new": 1719, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 445, "pp": 0.0, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 3, "pp": 0.0, "finished": true, "n_new": 762, "correct": true}
+{"task": "gsm8k", "i": 1, "pp": 0.0, "finished": true, "n_new": 819, "correct": true}
+{"task": "ifeval", "i": 526, "pp": 0.0, "finished": true, "n_new": 1310, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 0, "pp": 0.0, "finished": true, "n_new": 932, "correct": true}
+{"task": "ifeval", "i": 534, "pp": 0.0, "finished": true, "n_new": 1257, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 6, "pp": 0.0, "finished": true, "n_new": 964, "correct": true}
+{"task": "gsm8k", "i": 9, "pp": 0.0, "finished": true, "n_new": 1037, "correct": true}
+{"task": "ifeval", "i": 461, "pp": 0.0, "finished": true, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "gsm8k", "i": 18, "pp": 0.0, "finished": true, "n_new": 846, "correct": true}
+{"task": "gsm8k", "i": 16, "pp": 0.0, "finished": true, "n_new": 1084, "correct": true}
+{"task": "ifeval", "i": 471, "pp": 0.0, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 23, "pp": 0.0, "finished": true, "n_new": 893, "correct": true}
+{"task": "ifeval", "i": 476, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "gsm8k", "i": 22, "pp": 0.0, "finished": true, "n_new": 982, "correct": true}
+{"task": "gsm8k", "i": 4, "pp": 0.0, "finished": true, "n_new": 1662, "correct": true}
+{"task": "gsm8k", "i": 27, "pp": 0.0, "finished": true, "n_new": 970, "correct": true}
+{"task": "gsm8k", "i": 17, "pp": 0.0, "finished": true, "n_new": 1343, "correct": true}
+{"task": "gsm8k", "i": 28, "pp": 0.0, "finished": true, "n_new": 946, "correct": true}
+{"task": "gsm8k", "i": 21, "pp": 0.0, "finished": true, "n_new": 1169, "correct": true}
+{"task": "gsm8k", "i": 29, "pp": 0.0, "finished": true, "n_new": 842, "correct": true}
+{"task": "ifeval", "i": 485, "pp": 0.0, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "gsm8k", "i": 11, "pp": 0.0, "finished": true, "n_new": 1687, "correct": true}
+{"task": "gsm8k", "i": 14, "pp": 0.0, "finished": true, "n_new": 1662, "correct": true}
+{"task": "gsm8k", "i": 25, "pp": 0.0, "finished": true, "n_new": 1255, "correct": true}
+{"task": "gsm8k", "i": 24, "pp": 0.0, "finished": true, "n_new": 1352, "correct": true}
+{"task": "gsm8k", "i": 8, "pp": 0.0, "finished": true, "n_new": 1938, "correct": true}
+{"task": "gsm8k", "i": 32, "pp": 0.0, "finished": true, "n_new": 894, "correct": true}
+{"task": "gsm8k", "i": 26, "pp": 0.0, "finished": true, "n_new": 1419, "correct": true}
+{"task": "ifeval", "i": 531, "pp": 0.0, "finished": true, "n_new": 2603, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 5, "pp": 0.0, "finished": true, "n_new": 2210, "correct": true}
+{"task": "gsm8k", "i": 19, "pp": 0.0, "finished": true, "n_new": 1742, "correct": true}
+{"task": "gsm8k", "i": 36, "pp": 0.0, "finished": true, "n_new": 788, "correct": true}
+{"task": "gsm8k", "i": 33, "pp": 0.0, "finished": true, "n_new": 1075, "correct": true}
+{"task": "gsm8k", "i": 34, "pp": 0.0, "finished": true, "n_new": 1040, "correct": true}
+{"task": "gsm8k", "i": 42, "pp": 0.0, "finished": true, "n_new": 776, "correct": true}
+{"task": "gsm8k", "i": 30, "pp": 0.0, "finished": true, "n_new": 1597, "correct": true}
+{"task": "gsm8k", "i": 10, "pp": 0.0, "finished": true, "n_new": 2436, "correct": true}
+{"task": "gsm8k", "i": 13, "pp": 0.0, "finished": true, "n_new": 2529, "correct": true}
+{"task": "gsm8k", "i": 55, "pp": 0.0, "finished": true, "n_new": 609, "correct": true}
+{"task": "gsm8k", "i": 51, "pp": 0.0, "finished": true, "n_new": 865, "correct": true}
+{"task": "gsm8k", "i": 31, "pp": 0.0, "finished": true, "n_new": 1802, "correct": true}
+{"task": "gsm8k", "i": 15, "pp": 0.0, "finished": true, "n_new": 2719, "correct": true}
+{"task": "gsm8k", "i": 49, "pp": 0.0, "finished": true, "n_new": 983, "correct": true}
+{"task": "gsm8k", "i": 48, "pp": 0.0, "finished": true, "n_new": 1110, "correct": true}
+{"task": "gsm8k", "i": 56, "pp": 0.0, "finished": true, "n_new": 745, "correct": true}
+{"task": "gsm8k", "i": 12, "pp": 0.0, "finished": true, "n_new": 2902, "correct": true}
+{"task": "gsm8k", "i": 46, "pp": 0.0, "finished": true, "n_new": 1383, "correct": true}
+{"task": "gsm8k", "i": 52, "pp": 0.0, "finished": true, "n_new": 1134, "correct": true}
+{"task": "gsm8k", "i": 47, "pp": 0.0, "finished": true, "n_new": 1415, "correct": true}
+{"task": "gsm8k", "i": 50, "pp": 0.0, "finished": true, "n_new": 1279, "correct": true}
+{"task": "gsm8k", "i": 20, "pp": 0.0, "finished": true, "n_new": 2875, "correct": true}
+{"task": "gsm8k", "i": 53, "pp": 0.0, "finished": true, "n_new": 1314, "correct": true}
+{"task": "gsm8k", "i": 43, "pp": 0.0, "finished": true, "n_new": 1765, "correct": true}
+{"task": "gsm8k", "i": 38, "pp": 0.0, "finished": true, "n_new": 1941, "correct": true}
+{"task": "gsm8k", "i": 59, "pp": 0.0, "finished": true, "n_new": 1024, "correct": true}
+{"task": "gsm8k", "i": 68, "pp": 0.0, "finished": true, "n_new": 809, "correct": true}
+{"task": "gsm8k", "i": 57, "pp": 0.0, "finished": true, "n_new": 1493, "correct": true}
+{"task": "gsm8k", "i": 69, "pp": 0.0, "finished": true, "n_new": 811, "correct": true}
+{"task": "gsm8k", "i": 71, "pp": 0.0, "finished": true, "n_new": 654, "correct": true}
+{"task": "gsm8k", "i": 39, "pp": 0.0, "finished": true, "n_new": 2323, "correct": true}
+{"task": "gsm8k", "i": 2, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 61, "pp": 0.0, "finished": true, "n_new": 1430, "correct": true}
+{"task": "gsm8k", "i": 64, "pp": 0.0, "finished": true, "n_new": 1075, "correct": true}
+{"task": "gsm8k", "i": 72, "pp": 0.0, "finished": true, "n_new": 793, "correct": true}
+{"task": "gsm8k", "i": 7, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 41, "pp": 0.0, "finished": true, "n_new": 2565, "correct": true}
+{"task": "gsm8k", "i": 45, "pp": 0.0, "finished": true, "n_new": 2441, "correct": true}
+{"task": "gsm8k", "i": 63, "pp": 0.0, "finished": true, "n_new": 1504, "correct": true}
+{"task": "gsm8k", "i": 79, "pp": 0.0, "finished": true, "n_new": 904, "correct": true}
+{"task": "gsm8k", "i": 37, "pp": 0.0, "finished": true, "n_new": 3041, "correct": true}
+{"task": "gsm8k", "i": 66, "pp": 0.0, "finished": true, "n_new": 1789, "correct": true}
+{"task": "gsm8k", "i": 44, "pp": 0.0, "finished": true, "n_new": 3090, "correct": true}
+{"task": "gsm8k", "i": 77, "pp": 0.0, "finished": true, "n_new": 1397, "correct": true}
+{"task": "gsm8k", "i": 83, "pp": 0.0, "finished": true, "n_new": 1058, "correct": true}
+{"task": "gsm8k", "i": 35, "pp": 0.0, "finished": true, "n_new": 3502, "correct": true}
+{"task": "gsm8k", "i": 40, "pp": 0.0, "finished": true, "n_new": 3306, "correct": true}
+{"task": "gsm8k", "i": 74, "pp": 0.0, "finished": true, "n_new": 1680, "correct": true}
+{"task": "gsm8k", "i": 65, "pp": 0.0, "finished": true, "n_new": 2044, "correct": true}
+{"task": "gsm8k", "i": 82, "pp": 0.0, "finished": true, "n_new": 1119, "correct": true}
+{"task": "gsm8k", "i": 67, "pp": 0.0, "finished": true, "n_new": 2219, "correct": true}
+{"task": "gsm8k", "i": 90, "pp": 0.0, "finished": true, "n_new": 949, "correct": true}
+{"task": "gsm8k", "i": 81, "pp": 0.0, "finished": true, "n_new": 1375, "correct": true}
+{"task": "gsm8k", "i": 78, "pp": 0.0, "finished": true, "n_new": 1791, "correct": true}
+{"task": "gsm8k", "i": 75, "pp": 0.0, "finished": true, "n_new": 1997, "correct": true}
+{"task": "gsm8k", "i": 88, "pp": 0.0, "finished": true, "n_new": 1397, "correct": true}
+{"task": "gsm8k", "i": 96, "pp": 0.0, "finished": true, "n_new": 608, "correct": true}
+{"task": "gsm8k", "i": 80, "pp": 0.0, "finished": true, "n_new": 1652, "correct": true}
+{"task": "gsm8k", "i": 91, "pp": 0.0, "finished": true, "n_new": 1384, "correct": true}
+{"task": "gsm8k", "i": 84, "pp": 0.0, "finished": true, "n_new": 1751, "correct": true}
+{"task": "gsm8k", "i": 92, "pp": 0.0, "finished": true, "n_new": 1360, "correct": true}
+{"task": "gsm8k", "i": 70, "pp": 0.0, "finished": true, "n_new": 2775, "correct": true}
+{"task": "gsm8k", "i": 105, "pp": 0.0, "finished": true, "n_new": 752, "correct": true}
+{"task": "gsm8k", "i": 101, "pp": 0.0, "finished": true, "n_new": 1045, "correct": true}
+{"task": "gsm8k", "i": 76, "pp": 0.0, "finished": true, "n_new": 2608, "correct": true}
+{"task": "gsm8k", "i": 58, "pp": 0.0, "finished": true, "n_new": 3707, "correct": true}
+{"task": "gsm8k", "i": 107, "pp": 0.0, "finished": true, "n_new": 930, "correct": true}
+{"task": "gsm8k", "i": 97, "pp": 0.0, "finished": true, "n_new": 1356, "correct": true}
+{"task": "gsm8k", "i": 54, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 60, "pp": 0.0, "finished": true, "n_new": 3735, "correct": true}
+{"task": "gsm8k", "i": 94, "pp": 0.0, "finished": true, "n_new": 1726, "correct": true}
+{"task": "gsm8k", "i": 109, "pp": 0.0, "finished": true, "n_new": 923, "correct": true}
+{"task": "gsm8k", "i": 113, "pp": 0.0, "finished": true, "n_new": 821, "correct": true}
+{"task": "gsm8k", "i": 99, "pp": 0.0, "finished": true, "n_new": 1572, "correct": true}
+{"task": "gsm8k", "i": 117, "pp": 0.0, "finished": true, "n_new": 599, "correct": true}
+{"task": "gsm8k", "i": 108, "pp": 0.0, "finished": true, "n_new": 1261, "correct": true}
+{"task": "gsm8k", "i": 95, "pp": 0.0, "finished": true, "n_new": 1882, "correct": true}
+{"task": "gsm8k", "i": 62, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 103, "pp": 0.0, "finished": true, "n_new": 1861, "correct": true}
+{"task": "gsm8k", "i": 118, "pp": 0.0, "finished": true, "n_new": 952, "correct": true}
+{"task": "gsm8k", "i": 104, "pp": 0.0, "finished": true, "n_new": 1862, "correct": true}
+{"task": "gsm8k", "i": 100, "pp": 0.0, "finished": true, "n_new": 2172, "correct": false}
+{"task": "gsm8k", "i": 73, "pp": 0.0, "finished": true, "n_new": 3878, "correct": true}
+{"task": "gsm8k", "i": 123, "pp": 0.0, "finished": true, "n_new": 1076, "correct": true}
+{"task": "gsm8k", "i": 102, "pp": 0.0, "finished": true, "n_new": 2408, "correct": true}
+{"task": "gsm8k", "i": 125, "pp": 0.0, "finished": true, "n_new": 1044, "correct": true}
+{"task": "gsm8k", "i": 121, "pp": 0.0, "finished": true, "n_new": 1208, "correct": true}
+{"task": "gsm8k", "i": 127, "pp": 0.0, "finished": true, "n_new": 930, "correct": true}
+{"task": "gsm8k", "i": 131, "pp": 0.0, "finished": true, "n_new": 721, "correct": true}
+{"task": "gsm8k", "i": 111, "pp": 0.0, "finished": true, "n_new": 2079, "correct": true}
+{"task": "gsm8k", "i": 110, "pp": 0.0, "finished": true, "n_new": 2108, "correct": true}
+{"task": "gsm8k", "i": 130, "pp": 0.0, "finished": true, "n_new": 980, "correct": true}
+{"task": "gsm8k", "i": 112, "pp": 0.0, "finished": true, "n_new": 1968, "correct": true}
+{"task": "gsm8k", "i": 86, "pp": 0.0, "finished": true, "n_new": 3703, "correct": true}
+{"task": "gsm8k", "i": 126, "pp": 0.0, "finished": true, "n_new": 1198, "correct": true}
+{"task": "gsm8k", "i": 133, "pp": 0.0, "finished": true, "n_new": 735, "correct": true}
+{"task": "gsm8k", "i": 134, "pp": 0.0, "finished": true, "n_new": 782, "correct": true}
+{"task": "gsm8k", "i": 124, "pp": 0.0, "finished": true, "n_new": 1564, "correct": true}
+{"task": "gsm8k", "i": 120, "pp": 0.0, "finished": true, "n_new": 1805, "correct": true}
+{"task": "gsm8k", "i": 136, "pp": 0.0, "finished": true, "n_new": 878, "correct": true}
+{"task": "gsm8k", "i": 85, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 87, "pp": 0.0, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 142, "pp": 0.0, "finished": true, "n_new": 573, "correct": true}
+{"task": "gsm8k", "i": 114, "pp": 0.0, "finished": true, "n_new": 2464, "correct": true}
+{"task": "gsm8k", "i": 132, "pp": 0.0, "finished": true, "n_new": 1339, "correct": true}
+{"task": "gsm8k", "i": 135, "pp": 0.0, "finished": true, "n_new": 1100, "correct": true}
+{"task": "gsm8k", "i": 89, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 129, "pp": 0.0, "finished": true, "n_new": 1630, "correct": true}
+{"task": "gsm8k", "i": 106, "pp": 0.0, "finished": true, "n_new": 3098, "correct": true}
+{"task": "gsm8k", "i": 128, "pp": 0.0, "finished": true, "n_new": 1830, "correct": true}
+{"task": "gsm8k", "i": 140, "pp": 0.0, "finished": true, "n_new": 1015, "correct": true}
+{"task": "gsm8k", "i": 93, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 115, "pp": 0.0, "finished": true, "n_new": 2675, "correct": true}
+{"task": "gsm8k", "i": 98, "pp": 0.0, "finished": true, "n_new": 3622, "correct": true}
+{"task": "gsm8k", "i": 148, "pp": 0.0, "finished": true, "n_new": 875, "correct": true}
+{"task": "gsm8k", "i": 137, "pp": 0.0, "finished": true, "n_new": 1334, "correct": true}
+{"task": "gsm8k", "i": 144, "pp": 0.0, "finished": true, "n_new": 1118, "correct": true}
+{"task": "gsm8k", "i": 149, "pp": 0.0, "finished": true, "n_new": 1227, "correct": true}
+{"task": "gsm8k", "i": 143, "pp": 0.0, "finished": true, "n_new": 1435, "correct": true}
+{"task": "gsm8k", "i": 141, "pp": 0.0, "finished": true, "n_new": 1552, "correct": true}
+{"task": "gsm8k", "i": 138, "pp": 0.0, "finished": true, "n_new": 1697, "correct": true}
+{"task": "gsm8k", "i": 160, "pp": 0.0, "finished": true, "n_new": 828, "correct": true}
+{"task": "gsm8k", "i": 151, "pp": 0.0, "finished": true, "n_new": 1241, "correct": true}
+{"task": "gsm8k", "i": 152, "pp": 0.0, "finished": true, "n_new": 1069, "correct": true}
+{"task": "gsm8k", "i": 166, "pp": 0.0, "finished": true, "n_new": 614, "correct": true}
+{"task": "gsm8k", "i": 158, "pp": 0.0, "finished": true, "n_new": 1012, "correct": true}
+{"task": "gsm8k", "i": 156, "pp": 0.0, "finished": true, "n_new": 1341, "correct": true}
+{"task": "gsm8k", "i": 165, "pp": 0.0, "finished": true, "n_new": 974, "correct": true}
+{"task": "gsm8k", "i": 145, "pp": 0.0, "finished": true, "n_new": 1902, "correct": true}
+{"task": "gsm8k", "i": 169, "pp": 0.0, "finished": true, "n_new": 965, "correct": true}
+{"task": "gsm8k", "i": 167, "pp": 0.0, "finished": true, "n_new": 1084, "correct": true}
+{"task": "gsm8k", "i": 170, "pp": 0.0, "finished": true, "n_new": 981, "correct": true}
+{"task": "gsm8k", "i": 154, "pp": 0.0, "finished": true, "n_new": 1638, "correct": true}
+{"task": "gsm8k", "i": 161, "pp": 0.0, "finished": true, "n_new": 1482, "correct": true}
+{"task": "gsm8k", "i": 164, "pp": 0.0, "finished": true, "n_new": 1503, "correct": true}
+{"task": "gsm8k", "i": 116, "pp": 0.0, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 179, "pp": 0.0, "finished": true, "n_new": 890, "correct": true}
+{"task": "gsm8k", "i": 168, "pp": 0.0, "finished": true, "n_new": 1601, "correct": true}
+{"task": "gsm8k", "i": 178, "pp": 0.0, "finished": true, "n_new": 1068, "correct": true}
+{"task": "gsm8k", "i": 119, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 150, "pp": 0.0, "finished": true, "n_new": 2391, "correct": true}
+{"task": "gsm8k", "i": 155, "pp": 0.0, "finished": true, "n_new": 2244, "correct": true}
+{"task": "gsm8k", "i": 122, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 180, "pp": 0.0, "finished": true, "n_new": 934, "correct": true}
+{"task": "gsm8k", "i": 176, "pp": 0.0, "finished": true, "n_new": 1342, "correct": true}
+{"task": "gsm8k", "i": 171, "pp": 0.0, "finished": true, "n_new": 1544, "correct": true}
+{"task": "gsm8k", "i": 175, "pp": 0.0, "finished": true, "n_new": 1409, "correct": true}
+{"task": "gsm8k", "i": 185, "pp": 0.0, "finished": true, "n_new": 933, "correct": true}
+{"task": "gsm8k", "i": 173, "pp": 0.0, "finished": true, "n_new": 1596, "correct": true}
+{"task": "gsm8k", "i": 153, "pp": 0.0, "finished": true, "n_new": 2626, "correct": true}
+{"task": "gsm8k", "i": 190, "pp": 0.0, "finished": true, "n_new": 680, "correct": true}
+{"task": "gsm8k", "i": 157, "pp": 0.0, "finished": true, "n_new": 2626, "correct": true}
+{"task": "gsm8k", "i": 172, "pp": 0.0, "finished": true, "n_new": 1911, "correct": true}
+{"task": "gsm8k", "i": 139, "pp": 0.0, "finished": true, "n_new": 3544, "correct": true}
+{"task": "gsm8k", "i": 191, "pp": 0.0, "finished": true, "n_new": 822, "correct": true}
+{"task": "gsm8k", "i": 200, "pp": 0.0, "finished": true, "n_new": 700, "correct": true}
+{"task": "gsm8k", "i": 188, "pp": 0.0, "finished": true, "n_new": 1250, "correct": true}
+{"task": "gsm8k", "i": 202, "pp": 0.0, "finished": true, "n_new": 694, "correct": true}
+{"task": "gsm8k", "i": 195, "pp": 0.0, "finished": true, "n_new": 1229, "correct": true}
+{"task": "gsm8k", "i": 199, "pp": 0.0, "finished": true, "n_new": 1106, "correct": true}
+{"task": "gsm8k", "i": 146, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 147, "pp": 0.0, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 193, "pp": 0.0, "finished": true, "n_new": 1592, "correct": true}
+{"task": "gsm8k", "i": 204, "pp": 0.0, "finished": true, "n_new": 1068, "correct": true}
+{"task": "gsm8k", "i": 208, "pp": 0.0, "finished": true, "n_new": 863, "correct": true}
+{"task": "gsm8k", "i": 203, "pp": 0.0, "finished": true, "n_new": 1331, "correct": true}
+{"task": "gsm8k", "i": 196, "pp": 0.0, "finished": true, "n_new": 1756, "correct": true}
+{"task": "gsm8k", "i": 174, "pp": 0.0, "finished": true, "n_new": 3125, "correct": true}
+{"task": "gsm8k", "i": 159, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 206, "pp": 0.0, "finished": true, "n_new": 1439, "correct": true}
+{"task": "gsm8k", "i": 182, "pp": 0.0, "finished": true, "n_new": 2868, "correct": true}
+{"task": "gsm8k", "i": 162, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 189, "pp": 0.0, "finished": true, "n_new": 2450, "correct": true}
+{"task": "gsm8k", "i": 211, "pp": 0.0, "finished": true, "n_new": 1216, "correct": true}
+{"task": "gsm8k", "i": 181, "pp": 0.0, "finished": true, "n_new": 3050, "correct": true}
+{"task": "gsm8k", "i": 163, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 215, "pp": 0.0, "finished": true, "n_new": 780, "correct": true}
+{"task": "gsm8k", "i": 217, "pp": 0.0, "finished": true, "n_new": 715, "correct": true}
+{"task": "gsm8k", "i": 186, "pp": 0.0, "finished": true, "n_new": 2891, "correct": true}
+{"task": "gsm8k", "i": 194, "pp": 0.0, "finished": true, "n_new": 2402, "correct": true}
+{"task": "gsm8k", "i": 212, "pp": 0.0, "finished": true, "n_new": 1148, "correct": true}
+{"task": "gsm8k", "i": 210, "pp": 0.0, "finished": true, "n_new": 1609, "correct": true}
+{"task": "gsm8k", "i": 220, "pp": 0.0, "finished": true, "n_new": 820, "correct": true}
+{"task": "gsm8k", "i": 207, "pp": 0.0, "finished": true, "n_new": 2069, "correct": true}
+{"task": "gsm8k", "i": 192, "pp": 0.0, "finished": true, "n_new": 2804, "correct": true}
+{"task": "gsm8k", "i": 197, "pp": 0.0, "finished": true, "n_new": 2681, "correct": true}
+{"task": "gsm8k", "i": 222, "pp": 0.0, "finished": true, "n_new": 749, "correct": true}
+{"task": "gsm8k", "i": 223, "pp": 0.0, "finished": true, "n_new": 764, "correct": true}
+{"task": "gsm8k", "i": 177, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 184, "pp": 0.0, "finished": true, "n_new": 3559, "correct": false}
+{"task": "gsm8k", "i": 218, "pp": 0.0, "finished": true, "n_new": 1349, "correct": true}
+{"task": "gsm8k", "i": 224, "pp": 0.0, "finished": true, "n_new": 946, "correct": true}
+{"task": "gsm8k", "i": 232, "pp": 0.0, "finished": true, "n_new": 818, "correct": true}
+{"task": "gsm8k", "i": 213, "pp": 0.0, "finished": true, "n_new": 1882, "correct": true}
+{"task": "gsm8k", "i": 237, "pp": 0.0, "finished": true, "n_new": 467, "correct": true}
+{"task": "gsm8k", "i": 219, "pp": 0.0, "finished": true, "n_new": 1583, "correct": true}
+{"task": "gsm8k", "i": 221, "pp": 0.0, "finished": true, "n_new": 1439, "correct": true}
+{"task": "gsm8k", "i": 227, "pp": 0.0, "finished": true, "n_new": 1206, "correct": true}
+{"task": "gsm8k", "i": 183, "pp": 0.0, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 187, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 228, "pp": 0.0, "finished": true, "n_new": 1432, "correct": true}
+{"task": "gsm8k", "i": 201, "pp": 0.0, "finished": true, "n_new": 3409, "correct": true}
+{"task": "gsm8k", "i": 238, "pp": 0.0, "finished": true, "n_new": 1041, "correct": true}
+{"task": "gsm8k", "i": 243, "pp": 0.0, "finished": true, "n_new": 848, "correct": true}
+{"task": "gsm8k", "i": 225, "pp": 0.0, "finished": true, "n_new": 1693, "correct": true}
+{"task": "gsm8k", "i": 229, "pp": 0.0, "finished": true, "n_new": 1546, "correct": true}
+{"task": "gsm8k", "i": 231, "pp": 0.0, "finished": true, "n_new": 1570, "correct": true}
+{"task": "gsm8k", "i": 248, "pp": 0.0, "finished": true, "n_new": 656, "correct": true}
+{"task": "ifeval", "i": 3, "pp": 1.5, "finished": true, "n_new": 433, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 1, "pp": 1.5, "finished": true, "n_new": 631, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 4, "pp": 1.5, "finished": true, "n_new": 433, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 235, "pp": 0.0, "finished": true, "n_new": 1589, "correct": true}
+{"task": "ifeval", "i": 5, "pp": 1.5, "finished": true, "n_new": 405, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 198, "pp": 0.0, "finished": true, "n_new": 4010, "correct": true}
+{"task": "ifeval", "i": 0, "pp": 1.5, "finished": true, "n_new": 867, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "gsm8k", "i": 247, "pp": 0.0, "finished": true, "n_new": 1054, "correct": true}
+{"task": "gsm8k", "i": 244, "pp": 0.0, "finished": true, "n_new": 1352, "correct": true}
+{"task": "gsm8k", "i": 239, "pp": 0.0, "finished": true, "n_new": 1512, "correct": true}
+{"task": "ifeval", "i": 8, "pp": 1.5, "finished": true, "n_new": 521, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 246, "pp": 0.0, "finished": true, "n_new": 1264, "correct": true}
+{"task": "ifeval", "i": 6, "pp": 1.5, "finished": true, "n_new": 658, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 240, "pp": 0.0, "finished": true, "n_new": 1709, "correct": true}
+{"task": "ifeval", "i": 2, "pp": 1.5, "finished": true, "n_new": 1066, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 226, "pp": 0.0, "finished": true, "n_new": 2381, "correct": true}
+{"task": "ifeval", "i": 11, "pp": 1.5, "finished": true, "n_new": 740, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 205, "pp": 0.0, "finished": true, "n_new": 4096, "correct": false}
+{"task": "ifeval", "i": 12, "pp": 1.5, "finished": true, "n_new": 625, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 18, "pp": 1.5, "finished": true, "n_new": 387, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 15, "pp": 1.5, "finished": true, "n_new": 516, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 214, "pp": 0.0, "finished": true, "n_new": 3225, "correct": true}
+{"task": "ifeval", "i": 21, "pp": 1.5, "finished": true, "n_new": 365, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 7, "pp": 1.5, "finished": true, "n_new": 992, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 14, "pp": 1.5, "finished": true, "n_new": 690, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 16, "pp": 1.5, "finished": true, "n_new": 701, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 249, "pp": 0.0, "finished": true, "n_new": 1550, "correct": true}
+{"task": "ifeval", "i": 20, "pp": 1.5, "finished": true, "n_new": 574, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 13, "pp": 1.5, "finished": true, "n_new": 818, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 33, "pp": 1.5, "finished": true, "n_new": 228, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "gsm8k", "i": 230, "pp": 0.0, "finished": true, "n_new": 2641, "correct": true}
+{"task": "ifeval", "i": 19, "pp": 1.5, "finished": true, "n_new": 685, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 17, "pp": 1.5, "finished": true, "n_new": 781, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 209, "pp": 0.0, "finished": true, "n_new": 4035, "correct": true}
+{"task": "ifeval", "i": 29, "pp": 1.5, "finished": true, "n_new": 352, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 30, "pp": 1.5, "finished": true, "n_new": 347, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 22, "pp": 1.5, "finished": true, "n_new": 653, "strict": true, "loose": false, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 242, "pp": 0.0, "finished": true, "n_new": 2075, "correct": true}
+{"task": "gsm8k", "i": 233, "pp": 0.0, "finished": true, "n_new": 2685, "correct": true}
+{"task": "ifeval", "i": 32, "pp": 1.5, "finished": true, "n_new": 387, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 28, "pp": 1.5, "finished": true, "n_new": 482, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 9, "pp": 1.5, "finished": true, "n_new": 1289, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 35, "pp": 1.5, "finished": true, "n_new": 350, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 34, "pp": 1.5, "finished": true, "n_new": 461, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 10, "pp": 1.5, "finished": true, "n_new": 1313, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 26, "pp": 1.5, "finished": true, "n_new": 660, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 25, "pp": 1.5, "finished": true, "n_new": 692, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 51, "pp": 1.5, "finished": true, "n_new": 274, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 38, "pp": 1.5, "finished": true, "n_new": 462, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 24, "pp": 1.5, "finished": true, "n_new": 907, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 53, "pp": 1.5, "finished": true, "n_new": 242, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 42, "pp": 1.5, "finished": true, "n_new": 470, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 216, "pp": 0.0, "finished": true, "n_new": 3868, "correct": true}
+{"task": "ifeval", "i": 57, "pp": 1.5, "finished": true, "n_new": 299, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 45, "pp": 1.5, "finished": true, "n_new": 553, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 55, "pp": 1.5, "finished": true, "n_new": 397, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 41, "pp": 1.5, "finished": true, "n_new": 684, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 43, "pp": 1.5, "finished": true, "n_new": 654, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 39, "pp": 1.5, "finished": true, "n_new": 787, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 60, "pp": 1.5, "finished": true, "n_new": 352, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 44, "pp": 1.5, "finished": true, "n_new": 754, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 56, "pp": 1.5, "finished": true, "n_new": 541, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 64, "pp": 1.5, "finished": true, "n_new": 324, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 68, "pp": 1.5, "finished": true, "n_new": 242, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 47, "pp": 1.5, "finished": true, "n_new": 868, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 46, "pp": 1.5, "finished": true, "n_new": 914, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 36, "pp": 1.5, "finished": true, "n_new": 1154, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 67, "pp": 1.5, "finished": true, "n_new": 444, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 40, "pp": 1.5, "finished": true, "n_new": 1188, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 54, "pp": 1.5, "finished": true, "n_new": 994, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 58, "pp": 1.5, "finished": true, "n_new": 902, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 23, "pp": 1.5, "finished": true, "n_new": 1777, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 48, "pp": 1.5, "finished": true, "n_new": 1188, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 72, "pp": 1.5, "finished": true, "n_new": 478, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 65, "pp": 1.5, "finished": true, "n_new": 734, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 62, "pp": 1.5, "finished": true, "n_new": 957, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 74, "pp": 1.5, "finished": true, "n_new": 598, "strict": false, "loose": true, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 66, "pp": 1.5, "finished": true, "n_new": 813, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 63, "pp": 1.5, "finished": true, "n_new": 945, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 59, "pp": 1.5, "finished": true, "n_new": 1035, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 69, "pp": 1.5, "finished": true, "n_new": 797, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 75, "pp": 1.5, "finished": true, "n_new": 600, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 50, "pp": 1.5, "finished": true, "n_new": 1406, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 245, "pp": 0.0, "finished": true, "n_new": 3453, "correct": true}
+{"task": "gsm8k", "i": 234, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "ifeval", "i": 49, "pp": 1.5, "finished": true, "n_new": 1585, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 77, "pp": 1.5, "finished": true, "n_new": 690, "strict": false, "loose": true, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 76, "pp": 1.5, "finished": true, "n_new": 770, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 81, "pp": 1.5, "finished": true, "n_new": 502, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 73, "pp": 1.5, "finished": true, "n_new": 952, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 71, "pp": 1.5, "finished": true, "n_new": 994, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 78, "pp": 1.5, "finished": true, "n_new": 758, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 80, "pp": 1.5, "finished": true, "n_new": 641, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "gsm8k", "i": 236, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "ifeval", "i": 86, "pp": 1.5, "finished": true, "n_new": 525, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 79, "pp": 1.5, "finished": true, "n_new": 771, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 85, "pp": 1.5, "finished": true, "n_new": 675, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 97, "pp": 1.5, "finished": true, "n_new": 315, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 61, "pp": 1.5, "finished": true, "n_new": 1547, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 83, "pp": 1.5, "finished": true, "n_new": 748, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 241, "pp": 0.0, "finished": false, "n_new": 4096, "correct": false}
+{"task": "ifeval", "i": 52, "pp": 1.5, "finished": true, "n_new": 1875, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 92, "pp": 1.5, "finished": true, "n_new": 573, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 84, "pp": 1.5, "finished": true, "n_new": 832, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 91, "pp": 1.5, "finished": true, "n_new": 678, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 82, "pp": 1.5, "finished": true, "n_new": 910, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 106, "pp": 1.5, "finished": true, "n_new": 325, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 98, "pp": 1.5, "finished": true, "n_new": 514, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 70, "pp": 1.5, "finished": true, "n_new": 1468, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 99, "pp": 1.5, "finished": true, "n_new": 510, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 111, "pp": 1.5, "finished": true, "n_new": 251, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 27, "pp": 1.5, "finished": true, "n_new": 2588, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 102, "pp": 1.5, "finished": true, "n_new": 544, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 88, "pp": 1.5, "finished": true, "n_new": 899, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 105, "pp": 1.5, "finished": true, "n_new": 506, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 89, "pp": 1.5, "finished": true, "n_new": 942, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 104, "pp": 1.5, "finished": true, "n_new": 610, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 90, "pp": 1.5, "finished": true, "n_new": 1052, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 109, "pp": 1.5, "finished": true, "n_new": 522, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 108, "pp": 1.5, "finished": true, "n_new": 556, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 37, "pp": 1.5, "finished": true, "n_new": 2596, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 113, "pp": 1.5, "finished": true, "n_new": 503, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 118, "pp": 1.5, "finished": true, "n_new": 409, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 112, "pp": 1.5, "finished": true, "n_new": 585, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 115, "pp": 1.5, "finished": true, "n_new": 528, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 100, "pp": 1.5, "finished": true, "n_new": 945, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 114, "pp": 1.5, "finished": true, "n_new": 620, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 110, "pp": 1.5, "finished": true, "n_new": 766, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 119, "pp": 1.5, "finished": true, "n_new": 608, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 127, "pp": 1.5, "finished": true, "n_new": 524, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 124, "pp": 1.5, "finished": true, "n_new": 608, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 101, "pp": 1.5, "finished": true, "n_new": 1204, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 125, "pp": 1.5, "finished": true, "n_new": 663, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 107, "pp": 1.5, "finished": true, "n_new": 1135, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 116, "pp": 1.5, "finished": true, "n_new": 920, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 126, "pp": 1.5, "finished": true, "n_new": 732, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 123, "pp": 1.5, "finished": true, "n_new": 854, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 93, "pp": 1.5, "finished": true, "n_new": 1646, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 135, "pp": 1.5, "finished": true, "n_new": 579, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 96, "pp": 1.5, "finished": true, "n_new": 1590, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 103, "pp": 1.5, "finished": true, "n_new": 1419, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 122, "pp": 1.5, "finished": true, "n_new": 992, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 121, "pp": 1.5, "finished": true, "n_new": 1041, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 130, "pp": 1.5, "finished": true, "n_new": 769, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 94, "pp": 1.5, "finished": true, "n_new": 1746, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 132, "pp": 1.5, "finished": true, "n_new": 772, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 133, "pp": 1.5, "finished": true, "n_new": 782, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 117, "pp": 1.5, "finished": true, "n_new": 1224, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 137, "pp": 1.5, "finished": true, "n_new": 736, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 140, "pp": 1.5, "finished": true, "n_new": 598, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 152, "pp": 1.5, "finished": true, "n_new": 196, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 95, "pp": 1.5, "finished": true, "n_new": 1830, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 142, "pp": 1.5, "finished": true, "n_new": 608, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 128, "pp": 1.5, "finished": true, "n_new": 1091, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 131, "pp": 1.5, "finished": true, "n_new": 1027, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 129, "pp": 1.5, "finished": true, "n_new": 1168, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 134, "pp": 1.5, "finished": true, "n_new": 1093, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 148, "pp": 1.5, "finished": true, "n_new": 564, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 154, "pp": 1.5, "finished": true, "n_new": 460, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 136, "pp": 1.5, "finished": true, "n_new": 1137, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 138, "pp": 1.5, "finished": true, "n_new": 1090, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 31, "pp": 1.5, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 141, "pp": 1.5, "finished": true, "n_new": 987, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 150, "pp": 1.5, "finished": true, "n_new": 706, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 168, "pp": 1.5, "finished": true, "n_new": 257, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 164, "pp": 1.5, "finished": true, "n_new": 407, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 149, "pp": 1.5, "finished": true, "n_new": 761, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 145, "pp": 1.5, "finished": true, "n_new": 992, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 158, "pp": 1.5, "finished": true, "n_new": 648, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 160, "pp": 1.5, "finished": true, "n_new": 605, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 143, "pp": 1.5, "finished": true, "n_new": 1094, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 169, "pp": 1.5, "finished": true, "n_new": 368, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 151, "pp": 1.5, "finished": true, "n_new": 863, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 159, "pp": 1.5, "finished": true, "n_new": 782, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 171, "pp": 1.5, "finished": true, "n_new": 406, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 166, "pp": 1.5, "finished": true, "n_new": 648, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 175, "pp": 1.5, "finished": true, "n_new": 326, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 173, "pp": 1.5, "finished": true, "n_new": 413, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 163, "pp": 1.5, "finished": true, "n_new": 816, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 174, "pp": 1.5, "finished": true, "n_new": 405, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 177, "pp": 1.5, "finished": true, "n_new": 388, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 165, "pp": 1.5, "finished": true, "n_new": 801, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 156, "pp": 1.5, "finished": true, "n_new": 1068, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 157, "pp": 1.5, "finished": true, "n_new": 1086, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 153, "pp": 1.5, "finished": true, "n_new": 1152, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 180, "pp": 1.5, "finished": true, "n_new": 521, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 176, "pp": 1.5, "finished": true, "n_new": 601, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 181, "pp": 1.5, "finished": true, "n_new": 544, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 155, "pp": 1.5, "finished": true, "n_new": 1272, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 194, "pp": 1.5, "finished": true, "n_new": 259, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 120, "pp": 1.5, "finished": true, "n_new": 2395, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 183, "pp": 1.5, "finished": true, "n_new": 570, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 188, "pp": 1.5, "finished": true, "n_new": 416, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 191, "pp": 1.5, "finished": true, "n_new": 394, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 190, "pp": 1.5, "finished": true, "n_new": 457, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 195, "pp": 1.5, "finished": true, "n_new": 329, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 172, "pp": 1.5, "finished": true, "n_new": 945, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 161, "pp": 1.5, "finished": true, "n_new": 1320, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 186, "pp": 1.5, "finished": true, "n_new": 559, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 184, "pp": 1.5, "finished": true, "n_new": 668, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 139, "pp": 1.5, "finished": true, "n_new": 2030, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 197, "pp": 1.5, "finished": true, "n_new": 309, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 192, "pp": 1.5, "finished": true, "n_new": 520, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 182, "pp": 1.5, "finished": true, "n_new": 842, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 178, "pp": 1.5, "finished": true, "n_new": 984, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 187, "pp": 1.5, "finished": true, "n_new": 782, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 202, "pp": 1.5, "finished": true, "n_new": 361, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 196, "pp": 1.5, "finished": true, "n_new": 671, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 179, "pp": 1.5, "finished": true, "n_new": 1115, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 214, "pp": 1.5, "finished": true, "n_new": 278, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 208, "pp": 1.5, "finished": true, "n_new": 418, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 146, "pp": 1.5, "finished": true, "n_new": 2117, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 201, "pp": 1.5, "finished": true, "n_new": 562, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 189, "pp": 1.5, "finished": true, "n_new": 957, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 209, "pp": 1.5, "finished": true, "n_new": 505, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 210, "pp": 1.5, "finished": true, "n_new": 518, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 198, "pp": 1.5, "finished": true, "n_new": 776, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 216, "pp": 1.5, "finished": true, "n_new": 399, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 215, "pp": 1.5, "finished": true, "n_new": 435, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 147, "pp": 1.5, "finished": true, "n_new": 2262, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 199, "pp": 1.5, "finished": true, "n_new": 804, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 217, "pp": 1.5, "finished": true, "n_new": 459, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 204, "pp": 1.5, "finished": true, "n_new": 805, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 223, "pp": 1.5, "finished": true, "n_new": 320, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 87, "pp": 1.5, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 219, "pp": 1.5, "finished": true, "n_new": 425, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 211, "pp": 1.5, "finished": true, "n_new": 809, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 225, "pp": 1.5, "finished": true, "n_new": 415, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 224, "pp": 1.5, "finished": true, "n_new": 453, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 206, "pp": 1.5, "finished": true, "n_new": 1006, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 233, "pp": 1.5, "finished": true, "n_new": 336, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 221, "pp": 1.5, "finished": true, "n_new": 660, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 234, "pp": 1.5, "finished": true, "n_new": 355, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 220, "pp": 1.5, "finished": true, "n_new": 705, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 205, "pp": 1.5, "finished": true, "n_new": 1136, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 212, "pp": 1.5, "finished": true, "n_new": 1055, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 167, "pp": 1.5, "finished": true, "n_new": 2193, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 218, "pp": 1.5, "finished": true, "n_new": 934, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 213, "pp": 1.5, "finished": true, "n_new": 1133, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 239, "pp": 1.5, "finished": true, "n_new": 379, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 200, "pp": 1.5, "finished": true, "n_new": 1477, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 232, "pp": 1.5, "finished": true, "n_new": 683, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 203, "pp": 1.5, "finished": true, "n_new": 1483, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 226, "pp": 1.5, "finished": true, "n_new": 925, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 207, "pp": 1.5, "finished": true, "n_new": 1494, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 227, "pp": 1.5, "finished": true, "n_new": 983, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 229, "pp": 1.5, "finished": true, "n_new": 923, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 231, "pp": 1.5, "finished": true, "n_new": 924, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 230, "pp": 1.5, "finished": true, "n_new": 1022, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 242, "pp": 1.5, "finished": true, "n_new": 584, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 144, "pp": 1.5, "finished": true, "n_new": 3387, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 247, "pp": 1.5, "finished": true, "n_new": 535, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 228, "pp": 1.5, "finished": true, "n_new": 1066, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 237, "pp": 1.5, "finished": true, "n_new": 868, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 238, "pp": 1.5, "finished": true, "n_new": 852, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 250, "pp": 1.5, "finished": true, "n_new": 471, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 249, "pp": 1.5, "finished": true, "n_new": 531, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 245, "pp": 1.5, "finished": true, "n_new": 644, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 248, "pp": 1.5, "finished": true, "n_new": 632, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 222, "pp": 1.5, "finished": true, "n_new": 1370, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 258, "pp": 1.5, "finished": true, "n_new": 315, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 243, "pp": 1.5, "finished": true, "n_new": 835, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 170, "pp": 1.5, "finished": true, "n_new": 2899, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 246, "pp": 1.5, "finished": true, "n_new": 842, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 260, "pp": 1.5, "finished": true, "n_new": 350, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 253, "pp": 1.5, "finished": true, "n_new": 686, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 236, "pp": 1.5, "finished": true, "n_new": 1234, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 255, "pp": 1.5, "finished": true, "n_new": 660, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 266, "pp": 1.5, "finished": true, "n_new": 460, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 244, "pp": 1.5, "finished": true, "n_new": 1069, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 241, "pp": 1.5, "finished": true, "n_new": 1156, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 254, "pp": 1.5, "finished": true, "n_new": 765, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 256, "pp": 1.5, "finished": true, "n_new": 695, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 251, "pp": 1.5, "finished": true, "n_new": 923, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 263, "pp": 1.5, "finished": true, "n_new": 600, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 274, "pp": 1.5, "finished": true, "n_new": 354, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 268, "pp": 1.5, "finished": true, "n_new": 552, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 252, "pp": 1.5, "finished": true, "n_new": 980, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 269, "pp": 1.5, "finished": true, "n_new": 575, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 275, "pp": 1.5, "finished": true, "n_new": 384, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 264, "pp": 1.5, "finished": true, "n_new": 672, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 276, "pp": 1.5, "finished": true, "n_new": 369, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 267, "pp": 1.5, "finished": true, "n_new": 661, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 271, "pp": 1.5, "finished": true, "n_new": 587, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 273, "pp": 1.5, "finished": true, "n_new": 547, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 259, "pp": 1.5, "finished": true, "n_new": 906, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 279, "pp": 1.5, "finished": true, "n_new": 370, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 240, "pp": 1.5, "finished": true, "n_new": 1567, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 257, "pp": 1.5, "finished": true, "n_new": 960, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 270, "pp": 1.5, "finished": true, "n_new": 730, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 185, "pp": 1.5, "finished": true, "n_new": 3085, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 265, "pp": 1.5, "finished": true, "n_new": 846, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 261, "pp": 1.5, "finished": true, "n_new": 895, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 288, "pp": 1.5, "finished": true, "n_new": 328, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 292, "pp": 1.5, "finished": true, "n_new": 307, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 293, "pp": 1.5, "finished": true, "n_new": 310, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 287, "pp": 1.5, "finished": true, "n_new": 416, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 285, "pp": 1.5, "finished": true, "n_new": 578, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 162, "pp": 1.5, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 262, "pp": 1.5, "finished": true, "n_new": 1180, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 289, "pp": 1.5, "finished": true, "n_new": 546, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 272, "pp": 1.5, "finished": true, "n_new": 1007, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 299, "pp": 1.5, "finished": true, "n_new": 374, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 283, "pp": 1.5, "finished": true, "n_new": 709, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 286, "pp": 1.5, "finished": true, "n_new": 620, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 300, "pp": 1.5, "finished": true, "n_new": 418, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 301, "pp": 1.5, "finished": true, "n_new": 416, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 291, "pp": 1.5, "finished": true, "n_new": 605, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 280, "pp": 1.5, "finished": true, "n_new": 794, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 282, "pp": 1.5, "finished": true, "n_new": 790, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 297, "pp": 1.5, "finished": true, "n_new": 531, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 294, "pp": 1.5, "finished": true, "n_new": 629, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 308, "pp": 1.5, "finished": true, "n_new": 325, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 277, "pp": 1.5, "finished": true, "n_new": 1021, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 296, "pp": 1.5, "finished": true, "n_new": 613, "strict": false, "loose": true, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 295, "pp": 1.5, "finished": true, "n_new": 696, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 304, "pp": 1.5, "finished": true, "n_new": 557, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 311, "pp": 1.5, "finished": true, "n_new": 305, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 306, "pp": 1.5, "finished": true, "n_new": 497, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 302, "pp": 1.5, "finished": true, "n_new": 690, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 318, "pp": 1.5, "finished": true, "n_new": 302, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 319, "pp": 1.5, "finished": true, "n_new": 287, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 303, "pp": 1.5, "finished": true, "n_new": 731, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 307, "pp": 1.5, "finished": true, "n_new": 580, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 305, "pp": 1.5, "finished": true, "n_new": 665, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 324, "pp": 1.5, "finished": true, "n_new": 313, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 315, "pp": 1.5, "finished": true, "n_new": 482, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 321, "pp": 1.5, "finished": true, "n_new": 432, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 316, "pp": 1.5, "finished": true, "n_new": 588, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 313, "pp": 1.5, "finished": true, "n_new": 627, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 310, "pp": 1.5, "finished": true, "n_new": 709, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 333, "pp": 1.5, "finished": true, "n_new": 296, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 325, "pp": 1.5, "finished": true, "n_new": 498, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 312, "pp": 1.5, "finished": true, "n_new": 719, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 338, "pp": 1.5, "finished": true, "n_new": 240, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 317, "pp": 1.5, "finished": true, "n_new": 744, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 309, "pp": 1.5, "finished": true, "n_new": 905, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 330, "pp": 1.5, "finished": true, "n_new": 545, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 193, "pp": 1.5, "finished": true, "n_new": 4096, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 327, "pp": 1.5, "finished": true, "n_new": 625, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 335, "pp": 1.5, "finished": true, "n_new": 460, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 328, "pp": 1.5, "finished": true, "n_new": 646, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 284, "pp": 1.5, "finished": true, "n_new": 1572, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 340, "pp": 1.5, "finished": true, "n_new": 317, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 298, "pp": 1.5, "finished": true, "n_new": 1377, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 323, "pp": 1.5, "finished": true, "n_new": 844, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 329, "pp": 1.5, "finished": true, "n_new": 726, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 345, "pp": 1.5, "finished": true, "n_new": 409, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 339, "pp": 1.5, "finished": true, "n_new": 632, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 353, "pp": 1.5, "finished": true, "n_new": 284, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 343, "pp": 1.5, "finished": true, "n_new": 514, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 326, "pp": 1.5, "finished": true, "n_new": 1056, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 334, "pp": 1.5, "finished": true, "n_new": 884, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 331, "pp": 1.5, "finished": true, "n_new": 954, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 350, "pp": 1.5, "finished": true, "n_new": 460, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 359, "pp": 1.5, "finished": true, "n_new": 274, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 290, "pp": 1.5, "finished": true, "n_new": 1945, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 358, "pp": 1.5, "finished": true, "n_new": 394, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 342, "pp": 1.5, "finished": true, "n_new": 752, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 320, "pp": 1.5, "finished": true, "n_new": 1330, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 346, "pp": 1.5, "finished": true, "n_new": 686, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 337, "pp": 1.5, "finished": true, "n_new": 1040, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 354, "pp": 1.5, "finished": true, "n_new": 620, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 332, "pp": 1.5, "finished": true, "n_new": 1190, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 351, "pp": 1.5, "finished": true, "n_new": 720, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 347, "pp": 1.5, "finished": true, "n_new": 860, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 356, "pp": 1.5, "finished": true, "n_new": 663, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 348, "pp": 1.5, "finished": true, "n_new": 829, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 278, "pp": 1.5, "finished": true, "n_new": 2519, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 362, "pp": 1.5, "finished": true, "n_new": 492, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 281, "pp": 1.5, "finished": true, "n_new": 2378, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 322, "pp": 1.5, "finished": true, "n_new": 1629, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 368, "pp": 1.5, "finished": true, "n_new": 386, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 336, "pp": 1.5, "finished": true, "n_new": 1403, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 344, "pp": 1.5, "finished": true, "n_new": 1154, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 364, "pp": 1.5, "finished": true, "n_new": 566, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 365, "pp": 1.5, "finished": true, "n_new": 577, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 363, "pp": 1.5, "finished": true, "n_new": 729, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 235, "pp": 1.5, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 373, "pp": 1.5, "finished": true, "n_new": 519, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 374, "pp": 1.5, "finished": true, "n_new": 563, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 386, "pp": 1.5, "finished": true, "n_new": 283, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 377, "pp": 1.5, "finished": true, "n_new": 488, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 375, "pp": 1.5, "finished": true, "n_new": 598, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 349, "pp": 1.5, "finished": true, "n_new": 1331, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 382, "pp": 1.5, "finished": true, "n_new": 499, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 361, "pp": 1.5, "finished": true, "n_new": 1011, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 367, "pp": 1.5, "finished": true, "n_new": 802, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 388, "pp": 1.5, "finished": true, "n_new": 333, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 352, "pp": 1.5, "finished": true, "n_new": 1375, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 360, "pp": 1.5, "finished": true, "n_new": 1110, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 387, "pp": 1.5, "finished": true, "n_new": 432, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 376, "pp": 1.5, "finished": true, "n_new": 700, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 381, "pp": 1.5, "finished": true, "n_new": 630, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 390, "pp": 1.5, "finished": true, "n_new": 376, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 371, "pp": 1.5, "finished": true, "n_new": 986, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 369, "pp": 1.5, "finished": true, "n_new": 1050, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 366, "pp": 1.5, "finished": true, "n_new": 1153, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 380, "pp": 1.5, "finished": true, "n_new": 817, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 399, "pp": 1.5, "finished": true, "n_new": 306, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 384, "pp": 1.5, "finished": true, "n_new": 747, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 314, "pp": 1.5, "finished": true, "n_new": 2541, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 378, "pp": 1.5, "finished": true, "n_new": 887, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 383, "pp": 1.5, "finished": true, "n_new": 800, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 389, "pp": 1.5, "finished": true, "n_new": 662, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 404, "pp": 1.5, "finished": true, "n_new": 417, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 394, "pp": 1.5, "finished": true, "n_new": 604, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 370, "pp": 1.5, "finished": true, "n_new": 1372, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 396, "pp": 1.5, "finished": true, "n_new": 646, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 392, "pp": 1.5, "finished": true, "n_new": 723, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 400, "pp": 1.5, "finished": true, "n_new": 773, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 409, "pp": 1.5, "finished": true, "n_new": 513, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 379, "pp": 1.5, "finished": true, "n_new": 1353, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 397, "pp": 1.5, "finished": true, "n_new": 852, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 395, "pp": 1.5, "finished": true, "n_new": 901, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 413, "pp": 1.5, "finished": true, "n_new": 584, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 411, "pp": 1.5, "finished": true, "n_new": 641, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 355, "pp": 1.5, "finished": true, "n_new": 2235, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 403, "pp": 1.5, "finished": true, "n_new": 992, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 401, "pp": 1.5, "finished": true, "n_new": 1082, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 357, "pp": 1.5, "finished": true, "n_new": 2328, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 410, "pp": 1.5, "finished": true, "n_new": 836, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 398, "pp": 1.5, "finished": true, "n_new": 1151, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 372, "pp": 1.5, "finished": true, "n_new": 1925, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 416, "pp": 1.5, "finished": true, "n_new": 725, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 385, "pp": 1.5, "finished": true, "n_new": 1569, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 407, "pp": 1.5, "finished": true, "n_new": 993, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 418, "pp": 1.5, "finished": true, "n_new": 679, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 412, "pp": 1.5, "finished": true, "n_new": 923, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 421, "pp": 1.5, "finished": true, "n_new": 671, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 408, "pp": 1.5, "finished": true, "n_new": 1035, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 417, "pp": 1.5, "finished": true, "n_new": 834, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 406, "pp": 1.5, "finished": true, "n_new": 1148, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 402, "pp": 1.5, "finished": true, "n_new": 1288, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 429, "pp": 1.5, "finished": true, "n_new": 425, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 393, "pp": 1.5, "finished": true, "n_new": 1545, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 391, "pp": 1.5, "finished": true, "n_new": 1632, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 427, "pp": 1.5, "finished": true, "n_new": 537, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 419, "pp": 1.5, "finished": true, "n_new": 900, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 428, "pp": 1.5, "finished": true, "n_new": 549, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 341, "pp": 1.5, "finished": true, "n_new": 3112, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 426, "pp": 1.5, "finished": true, "n_new": 735, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 422, "pp": 1.5, "finished": true, "n_new": 813, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 425, "pp": 1.5, "finished": true, "n_new": 784, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 438, "pp": 1.5, "finished": true, "n_new": 453, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 447, "pp": 1.5, "finished": true, "n_new": 224, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 440, "pp": 1.5, "finished": true, "n_new": 422, "strict": false, "loose": true, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 431, "pp": 1.5, "finished": true, "n_new": 594, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 433, "pp": 1.5, "finished": true, "n_new": 586, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 420, "pp": 1.5, "finished": true, "n_new": 1117, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 435, "pp": 1.5, "finished": true, "n_new": 567, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 439, "pp": 1.5, "finished": true, "n_new": 508, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 449, "pp": 1.5, "finished": true, "n_new": 327, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 451, "pp": 1.5, "finished": true, "n_new": 304, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 437, "pp": 1.5, "finished": true, "n_new": 645, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 432, "pp": 1.5, "finished": true, "n_new": 819, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 441, "pp": 1.5, "finished": true, "n_new": 663, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 459, "pp": 1.5, "finished": true, "n_new": 277, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 448, "pp": 1.5, "finished": true, "n_new": 549, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 456, "pp": 1.5, "finished": true, "n_new": 355, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 446, "pp": 1.5, "finished": true, "n_new": 624, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 452, "pp": 1.5, "finished": true, "n_new": 522, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 414, "pp": 1.5, "finished": true, "n_new": 1756, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 423, "pp": 1.5, "finished": true, "n_new": 1326, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 405, "pp": 1.5, "finished": true, "n_new": 2014, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 442, "pp": 1.5, "finished": true, "n_new": 860, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 455, "pp": 1.5, "finished": true, "n_new": 537, "strict": false, "loose": true, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 430, "pp": 1.5, "finished": true, "n_new": 1101, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 461, "pp": 1.5, "finished": true, "n_new": 437, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 458, "pp": 1.5, "finished": true, "n_new": 492, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 444, "pp": 1.5, "finished": true, "n_new": 872, "strict": false, "loose": false, "inst_strict": [true, true, false]}
+{"task": "ifeval", "i": 462, "pp": 1.5, "finished": true, "n_new": 477, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 457, "pp": 1.5, "finished": true, "n_new": 527, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 434, "pp": 1.5, "finished": true, "n_new": 1174, "strict": false, "loose": true, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 467, "pp": 1.5, "finished": true, "n_new": 375, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 480, "pp": 1.5, "finished": true, "n_new": 208, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 465, "pp": 1.5, "finished": true, "n_new": 626, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 464, "pp": 1.5, "finished": true, "n_new": 659, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 460, "pp": 1.5, "finished": true, "n_new": 743, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 473, "pp": 1.5, "finished": true, "n_new": 454, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 450, "pp": 1.5, "finished": true, "n_new": 1032, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 415, "pp": 1.5, "finished": true, "n_new": 2200, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 474, "pp": 1.5, "finished": true, "n_new": 493, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 478, "pp": 1.5, "finished": true, "n_new": 486, "strict": false, "loose": false, "inst_strict": [false, true]}
+{"task": "ifeval", "i": 470, "pp": 1.5, "finished": true, "n_new": 677, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 486, "pp": 1.5, "finished": true, "n_new": 372, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 475, "pp": 1.5, "finished": true, "n_new": 611, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 445, "pp": 1.5, "finished": true, "n_new": 1432, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 463, "pp": 1.5, "finished": true, "n_new": 1083, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 493, "pp": 1.5, "finished": true, "n_new": 260, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 481, "pp": 1.5, "finished": true, "n_new": 704, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 482, "pp": 1.5, "finished": true, "n_new": 683, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 483, "pp": 1.5, "finished": true, "n_new": 684, "strict": false, "loose": false, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 494, "pp": 1.5, "finished": true, "n_new": 379, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 487, "pp": 1.5, "finished": true, "n_new": 700, "strict": false, "loose": false, "inst_strict": [false, true, true]}
+{"task": "ifeval", "i": 490, "pp": 1.5, "finished": true, "n_new": 642, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 484, "pp": 1.5, "finished": true, "n_new": 893, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 499, "pp": 1.5, "finished": true, "n_new": 336, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 469, "pp": 1.5, "finished": true, "n_new": 1197, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 479, "pp": 1.5, "finished": true, "n_new": 1024, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 424, "pp": 1.5, "finished": true, "n_new": 2447, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 503, "pp": 1.5, "finished": true, "n_new": 380, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 472, "pp": 1.5, "finished": true, "n_new": 1266, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 505, "pp": 1.5, "finished": true, "n_new": 327, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 454, "pp": 1.5, "finished": true, "n_new": 1720, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 498, "pp": 1.5, "finished": true, "n_new": 592, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 497, "pp": 1.5, "finished": true, "n_new": 666, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 436, "pp": 1.5, "finished": true, "n_new": 2181, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 488, "pp": 1.5, "finished": true, "n_new": 982, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 492, "pp": 1.5, "finished": true, "n_new": 898, "strict": false, "loose": true, "inst_strict": [false]}
+{"task": "ifeval", "i": 513, "pp": 1.5, "finished": true, "n_new": 212, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 508, "pp": 1.5, "finished": true, "n_new": 432, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 500, "pp": 1.5, "finished": true, "n_new": 834, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 466, "pp": 1.5, "finished": true, "n_new": 1820, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "ifeval", "i": 517, "pp": 1.5, "finished": true, "n_new": 360, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 501, "pp": 1.5, "finished": true, "n_new": 859, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 507, "pp": 1.5, "finished": true, "n_new": 587, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 506, "pp": 1.5, "finished": true, "n_new": 615, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 509, "pp": 1.5, "finished": true, "n_new": 569, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 504, "pp": 1.5, "finished": true, "n_new": 848, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 485, "pp": 1.5, "finished": true, "n_new": 1462, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 520, "pp": 1.5, "finished": true, "n_new": 406, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 496, "pp": 1.5, "finished": true, "n_new": 1149, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 527, "pp": 1.5, "finished": true, "n_new": 163, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 521, "pp": 1.5, "finished": true, "n_new": 430, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 515, "pp": 1.5, "finished": true, "n_new": 594, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 502, "pp": 1.5, "finished": true, "n_new": 1021, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 516, "pp": 1.5, "finished": true, "n_new": 603, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 510, "pp": 1.5, "finished": true, "n_new": 777, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 525, "pp": 1.5, "finished": true, "n_new": 344, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 522, "pp": 1.5, "finished": true, "n_new": 552, "strict": true, "loose": true, "inst_strict": [true, true, true]}
+{"task": "ifeval", "i": 514, "pp": 1.5, "finished": true, "n_new": 800, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 453, "pp": 1.5, "finished": true, "n_new": 2507, "strict": false, "loose": true, "inst_strict": [true, false]}
+{"task": "ifeval", "i": 489, "pp": 1.5, "finished": true, "n_new": 1677, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 533, "pp": 1.5, "finished": true, "n_new": 343, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 495, "pp": 1.5, "finished": true, "n_new": 1526, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 528, "pp": 1.5, "finished": true, "n_new": 493, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 519, "pp": 1.5, "finished": true, "n_new": 846, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 529, "pp": 1.5, "finished": true, "n_new": 538, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 539, "pp": 1.5, "finished": true, "n_new": 319, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 535, "pp": 1.5, "finished": true, "n_new": 387, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 540, "pp": 1.5, "finished": true, "n_new": 305, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 530, "pp": 1.5, "finished": true, "n_new": 599, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 538, "pp": 1.5, "finished": true, "n_new": 413, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 534, "pp": 1.5, "finished": true, "n_new": 480, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 537, "pp": 1.5, "finished": true, "n_new": 452, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 532, "pp": 1.5, "finished": true, "n_new": 624, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 523, "pp": 1.5, "finished": true, "n_new": 961, "strict": false, "loose": false, "inst_strict": [true, false, true]}
+{"task": "ifeval", "i": 536, "pp": 1.5, "finished": true, "n_new": 689, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 524, "pp": 1.5, "finished": true, "n_new": 928, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 1, "pp": 1.5, "finished": true, "n_new": 666, "correct": true}
+{"task": "ifeval", "i": 526, "pp": 1.5, "finished": true, "n_new": 1143, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 0, "pp": 1.5, "finished": true, "n_new": 952, "correct": true}
+{"task": "gsm8k", "i": 3, "pp": 1.5, "finished": true, "n_new": 918, "correct": true}
+{"task": "ifeval", "i": 512, "pp": 1.5, "finished": true, "n_new": 1844, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 518, "pp": 1.5, "finished": true, "n_new": 1811, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "ifeval", "i": 531, "pp": 1.5, "finished": true, "n_new": 1426, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "ifeval", "i": 468, "pp": 1.5, "finished": true, "n_new": 3244, "strict": true, "loose": true, "inst_strict": [true, true]}
+{"task": "gsm8k", "i": 9, "pp": 1.5, "finished": true, "n_new": 1024, "correct": true}
+{"task": "ifeval", "i": 471, "pp": 1.5, "finished": true, "n_new": 3277, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 11, "pp": 1.5, "finished": true, "n_new": 1121, "correct": true}
+{"task": "ifeval", "i": 443, "pp": 1.5, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "gsm8k", "i": 18, "pp": 1.5, "finished": true, "n_new": 963, "correct": true}
+{"task": "gsm8k", "i": 22, "pp": 1.5, "finished": true, "n_new": 647, "correct": true}
+{"task": "gsm8k", "i": 6, "pp": 1.5, "finished": true, "n_new": 1337, "correct": true}
+{"task": "ifeval", "i": 511, "pp": 1.5, "finished": true, "n_new": 2499, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 16, "pp": 1.5, "finished": true, "n_new": 1388, "correct": true}
+{"task": "gsm8k", "i": 23, "pp": 1.5, "finished": true, "n_new": 781, "correct": true}
+{"task": "gsm8k", "i": 17, "pp": 1.5, "finished": true, "n_new": 1364, "correct": true}
+{"task": "gsm8k", "i": 10, "pp": 1.5, "finished": true, "n_new": 1661, "correct": true}
+{"task": "gsm8k", "i": 15, "pp": 1.5, "finished": true, "n_new": 1654, "correct": true}
+{"task": "gsm8k", "i": 8, "pp": 1.5, "finished": true, "n_new": 1821, "correct": true}
+{"task": "gsm8k", "i": 5, "pp": 1.5, "finished": true, "n_new": 1891, "correct": true}
+{"task": "gsm8k", "i": 32, "pp": 1.5, "finished": true, "n_new": 712, "correct": true}
+{"task": "gsm8k", "i": 27, "pp": 1.5, "finished": true, "n_new": 1002, "correct": true}
+{"task": "gsm8k", "i": 14, "pp": 1.5, "finished": true, "n_new": 1890, "correct": true}
+{"task": "ifeval", "i": 476, "pp": 1.5, "finished": false, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false, false]}
+{"task": "ifeval", "i": 477, "pp": 1.5, "finished": true, "n_new": 4096, "strict": false, "loose": false, "inst_strict": [false]}
+{"task": "gsm8k", "i": 29, "pp": 1.5, "finished": true, "n_new": 1063, "correct": true}
+{"task": "ifeval", "i": 491, "pp": 1.5, "finished": true, "n_new": 3888, "strict": true, "loose": true, "inst_strict": [true]}
+{"task": "gsm8k", "i": 28, "pp": 1.5, "finished": true, "n_new": 1204, "correct": true}
+{"task": "gsm8k", "i": 4, "pp": 1.5, "finished": true, "n_new": 2316, "correct": true}
+{"task": "gsm8k", "i": 21, "pp": 1.5, "finished": true, "n_new": 1746, "correct": true}
+{"task": "gsm8k", "i": 24, "pp": 1.5, "finished": true, "n_new": 1448, "correct": true}
+{"task": "gsm8k", "i": 13, "pp": 1.5, "finished": true, "n_new": 2166, "correct": true}
+{"task": "gsm8k", "i": 19, "pp": 1.5, "finished": true, "n_new": 1934, "correct": true}
+{"task": "gsm8k", "i": 2, "pp": 1.5, "finished": true, "n_new": 2394, "correct": true}
+{"task": "gsm8k", "i": 33, "pp": 1.5, "finished": true, "n_new": 1013, "correct": true}
+{"task": "gsm8k", "i": 25, "pp": 1.5, "finished": true, "n_new": 1438, "correct": true}
+{"task": "gsm8k", "i": 34, "pp": 1.5, "finished": true, "n_new": 1156, "correct": true}
+{"task": "gsm8k", "i": 26, "pp": 1.5, "finished": true, "n_new": 1461, "correct": true}
+{"task": "gsm8k", "i": 42, "pp": 1.5, "finished": true, "n_new": 611, "correct": true}
+{"task": "gsm8k", "i": 31, "pp": 1.5, "finished": true, "n_new": 1304, "correct": true}
+{"task": "gsm8k", "i": 35, "pp": 1.5, "finished": true, "n_new": 1174, "correct": true}
+{"task": "gsm8k", "i": 30, "pp": 1.5, "finished": true, "n_new": 1395, "correct": true}
+{"task": "gsm8k", "i": 20, "pp": 1.5, "finished": true, "n_new": 2097, "correct": true}
+{"task": "gsm8k", "i": 36, "pp": 1.5, "finished": true, "n_new": 1096, "correct": true}
+{"task": "gsm8k", "i": 55, "pp": 1.5, "finished": true, "n_new": 483, "correct": true}
+{"task": "gsm8k", "i": 46, "pp": 1.5, "finished": true, "n_new": 1047, "correct": true}
+{"task": "gsm8k", "i": 49, "pp": 1.5, "finished": true, "n_new": 971, "correct": true}
+{"task": "gsm8k", "i": 51, "pp": 1.5, "finished": true, "n_new": 913, "correct": true}
+{"task": "gsm8k", "i": 56, "pp": 1.5, "finished": true, "n_new": 953, "correct": true}
+{"task": "gsm8k", "i": 47, "pp": 1.5, "finished": true, "n_new": 1220, "correct": true}
+{"task": "gsm8k", "i": 43, "pp": 1.5, "finished": true, "n_new": 1382, "correct": true}
+{"task": "gsm8k", "i": 52, "pp": 1.5, "finished": true, "n_new": 1091, "correct": true}
+{"task": "gsm8k", "i": 48, "pp": 1.5, "finished": true, "n_new": 1316, "correct": true}
+{"task": "gsm8k", "i": 50, "pp": 1.5, "finished": true, "n_new": 1193, "correct": true}
+{"task": "gsm8k", "i": 12, "pp": 1.5, "finished": true, "n_new": 3347, "correct": true}
+{"task": "gsm8k", "i": 59, "pp": 1.5, "finished": true, "n_new": 1093, "correct": true}
+{"task": "gsm8k", "i": 65, "pp": 1.5, "finished": true, "n_new": 1003, "correct": true}
+{"task": "gsm8k", "i": 38, "pp": 1.5, "finished": true, "n_new": 1948, "correct": true}
+{"task": "gsm8k", "i": 53, "pp": 1.5, "finished": true, "n_new": 1339, "correct": true}
+{"task": "gsm8k", "i": 41, "pp": 1.5, "finished": true, "n_new": 1878, "correct": true}
+{"task": "gsm8k", "i": 39, "pp": 1.5, "finished": true, "n_new": 2108, "correct": true}
+{"task": "gsm8k", "i": 71, "pp": 1.5, "finished": true, "n_new": 568, "correct": true}
+{"task": "gsm8k", "i": 61, "pp": 1.5, "finished": true, "n_new": 1274, "correct": true}
+{"task": "gsm8k", "i": 68, "pp": 1.5, "finished": true, "n_new": 953, "correct": true}
+{"task": "gsm8k", "i": 67, "pp": 1.5, "finished": true, "n_new": 1152, "correct": true}
+{"task": "gsm8k", "i": 45, "pp": 1.5, "finished": true, "n_new": 1778, "correct": true}
+{"task": "gsm8k", "i": 69, "pp": 1.5, "finished": true, "n_new": 749, "correct": true}
+{"task": "gsm8k", "i": 57, "pp": 1.5, "finished": true, "n_new": 1544, "correct": true}
+{"task": "gsm8k", "i": 72, "pp": 1.5, "finished": true, "n_new": 839, "correct": true}
+{"task": "gsm8k", "i": 7, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 44, "pp": 1.5, "finished": true, "n_new": 2149, "correct": true}
+{"task": "gsm8k", "i": 66, "pp": 1.5, "finished": true, "n_new": 1732, "correct": true}
+{"task": "gsm8k", "i": 37, "pp": 1.5, "finished": true, "n_new": 2757, "correct": true}
+{"task": "gsm8k", "i": 83, "pp": 1.5, "finished": true, "n_new": 726, "correct": true}
+{"task": "gsm8k", "i": 79, "pp": 1.5, "finished": true, "n_new": 1021, "correct": true}
+{"task": "gsm8k", "i": 63, "pp": 1.5, "finished": true, "n_new": 2020, "correct": true}
+{"task": "gsm8k", "i": 81, "pp": 1.5, "finished": true, "n_new": 1095, "correct": true}
+{"task": "gsm8k", "i": 90, "pp": 1.5, "finished": true, "n_new": 787, "correct": true}
+{"task": "gsm8k", "i": 80, "pp": 1.5, "finished": true, "n_new": 1391, "correct": true}
+{"task": "gsm8k", "i": 88, "pp": 1.5, "finished": true, "n_new": 1226, "correct": true}
+{"task": "gsm8k", "i": 84, "pp": 1.5, "finished": true, "n_new": 1389, "correct": true}
+{"task": "gsm8k", "i": 76, "pp": 1.5, "finished": true, "n_new": 1713, "correct": true}
+{"task": "gsm8k", "i": 82, "pp": 1.5, "finished": true, "n_new": 1514, "correct": true}
+{"task": "gsm8k", "i": 91, "pp": 1.5, "finished": true, "n_new": 1296, "correct": true}
+{"task": "gsm8k", "i": 74, "pp": 1.5, "finished": true, "n_new": 1954, "correct": true}
+{"task": "gsm8k", "i": 75, "pp": 1.5, "finished": true, "n_new": 1992, "correct": true}
+{"task": "gsm8k", "i": 58, "pp": 1.5, "finished": true, "n_new": 3105, "correct": true}
+{"task": "gsm8k", "i": 92, "pp": 1.5, "finished": true, "n_new": 1313, "correct": true}
+{"task": "gsm8k", "i": 77, "pp": 1.5, "finished": true, "n_new": 2021, "correct": true}
+{"task": "gsm8k", "i": 96, "pp": 1.5, "finished": true, "n_new": 1123, "correct": true}
+{"task": "gsm8k", "i": 78, "pp": 1.5, "finished": true, "n_new": 2107, "correct": true}
+{"task": "gsm8k", "i": 95, "pp": 1.5, "finished": true, "n_new": 1448, "correct": true}
+{"task": "gsm8k", "i": 101, "pp": 1.5, "finished": true, "n_new": 1078, "correct": true}
+{"task": "gsm8k", "i": 89, "pp": 1.5, "finished": true, "n_new": 1997, "correct": true}
+{"task": "gsm8k", "i": 105, "pp": 1.5, "finished": true, "n_new": 673, "correct": true}
+{"task": "gsm8k", "i": 40, "pp": 1.5, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 94, "pp": 1.5, "finished": true, "n_new": 1784, "correct": true}
+{"task": "gsm8k", "i": 97, "pp": 1.5, "finished": true, "n_new": 1575, "correct": true}
+{"task": "gsm8k", "i": 99, "pp": 1.5, "finished": true, "n_new": 1474, "correct": true}
+{"task": "gsm8k", "i": 64, "pp": 1.5, "finished": true, "n_new": 3539, "correct": true}
+{"task": "gsm8k", "i": 113, "pp": 1.5, "finished": true, "n_new": 753, "correct": true}
+{"task": "gsm8k", "i": 109, "pp": 1.5, "finished": true, "n_new": 882, "correct": true}
+{"task": "gsm8k", "i": 107, "pp": 1.5, "finished": true, "n_new": 1102, "correct": true}
+{"task": "gsm8k", "i": 70, "pp": 1.5, "finished": true, "n_new": 3179, "correct": true}
+{"task": "gsm8k", "i": 54, "pp": 1.5, "finished": true, "n_new": 4025, "correct": true}
+{"task": "gsm8k", "i": 117, "pp": 1.5, "finished": true, "n_new": 537, "correct": true}
+{"task": "gsm8k", "i": 108, "pp": 1.5, "finished": true, "n_new": 1150, "correct": true}
+{"task": "gsm8k", "i": 93, "pp": 1.5, "finished": true, "n_new": 2283, "correct": true}
+{"task": "gsm8k", "i": 60, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 62, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 104, "pp": 1.5, "finished": true, "n_new": 1523, "correct": true}
+{"task": "gsm8k", "i": 118, "pp": 1.5, "finished": true, "n_new": 892, "correct": true}
+{"task": "gsm8k", "i": 73, "pp": 1.5, "finished": true, "n_new": 3576, "correct": true}
+{"task": "gsm8k", "i": 120, "pp": 1.5, "finished": true, "n_new": 956, "correct": true}
+{"task": "gsm8k", "i": 102, "pp": 1.5, "finished": true, "n_new": 2023, "correct": true}
+{"task": "gsm8k", "i": 123, "pp": 1.5, "finished": true, "n_new": 944, "correct": true}
+{"task": "gsm8k", "i": 103, "pp": 1.5, "finished": true, "n_new": 2046, "correct": true}
+{"task": "gsm8k", "i": 86, "pp": 1.5, "finished": true, "n_new": 3360, "correct": true}
+{"task": "gsm8k", "i": 121, "pp": 1.5, "finished": true, "n_new": 1173, "correct": true}
+{"task": "gsm8k", "i": 130, "pp": 1.5, "finished": true, "n_new": 848, "correct": true}
+{"task": "gsm8k", "i": 126, "pp": 1.5, "finished": true, "n_new": 1014, "correct": true}
+{"task": "gsm8k", "i": 127, "pp": 1.5, "finished": true, "n_new": 1000, "correct": true}
+{"task": "gsm8k", "i": 110, "pp": 1.5, "finished": true, "n_new": 1903, "correct": true}
+{"task": "gsm8k", "i": 131, "pp": 1.5, "finished": true, "n_new": 944, "correct": true}
+{"task": "gsm8k", "i": 112, "pp": 1.5, "finished": true, "n_new": 1985, "correct": true}
+{"task": "gsm8k", "i": 134, "pp": 1.5, "finished": true, "n_new": 881, "correct": true}
+{"task": "gsm8k", "i": 133, "pp": 1.5, "finished": true, "n_new": 924, "correct": true}
+{"task": "gsm8k", "i": 125, "pp": 1.5, "finished": true, "n_new": 1289, "correct": true}
+{"task": "gsm8k", "i": 129, "pp": 1.5, "finished": true, "n_new": 1224, "correct": true}
+{"task": "gsm8k", "i": 111, "pp": 1.5, "finished": true, "n_new": 2165, "correct": true}
+{"task": "gsm8k", "i": 136, "pp": 1.5, "finished": true, "n_new": 766, "correct": true}
+{"task": "gsm8k", "i": 98, "pp": 1.5, "finished": true, "n_new": 3153, "correct": true}
+{"task": "gsm8k", "i": 114, "pp": 1.5, "finished": true, "n_new": 2151, "correct": true}
+{"task": "gsm8k", "i": 85, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 128, "pp": 1.5, "finished": true, "n_new": 1509, "correct": true}
+{"task": "gsm8k", "i": 87, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 132, "pp": 1.5, "finished": true, "n_new": 1354, "correct": true}
+{"task": "gsm8k", "i": 142, "pp": 1.5, "finished": true, "n_new": 761, "correct": true}
+{"task": "gsm8k", "i": 124, "pp": 1.5, "finished": true, "n_new": 1742, "correct": true}
+{"task": "gsm8k", "i": 135, "pp": 1.5, "finished": true, "n_new": 1327, "correct": true}
+{"task": "gsm8k", "i": 116, "pp": 1.5, "finished": true, "n_new": 2426, "correct": true}
+{"task": "gsm8k", "i": 140, "pp": 1.5, "finished": true, "n_new": 1167, "correct": true}
+{"task": "gsm8k", "i": 148, "pp": 1.5, "finished": true, "n_new": 890, "correct": true}
+{"task": "gsm8k", "i": 141, "pp": 1.5, "finished": true, "n_new": 1257, "correct": true}
+{"task": "gsm8k", "i": 144, "pp": 1.5, "finished": true, "n_new": 1092, "correct": true}
+{"task": "gsm8k", "i": 149, "pp": 1.5, "finished": true, "n_new": 929, "correct": true}
+{"task": "gsm8k", "i": 152, "pp": 1.5, "finished": true, "n_new": 912, "correct": true}
+{"task": "gsm8k", "i": 137, "pp": 1.5, "finished": true, "n_new": 1646, "correct": true}
+{"task": "gsm8k", "i": 106, "pp": 1.5, "finished": true, "n_new": 3487, "correct": true}
+{"task": "gsm8k", "i": 100, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 158, "pp": 1.5, "finished": true, "n_new": 927, "correct": true}
+{"task": "gsm8k", "i": 151, "pp": 1.5, "finished": true, "n_new": 1228, "correct": true}
+{"task": "gsm8k", "i": 156, "pp": 1.5, "finished": true, "n_new": 1063, "correct": true}
+{"task": "gsm8k", "i": 139, "pp": 1.5, "finished": true, "n_new": 1803, "correct": true}
+{"task": "gsm8k", "i": 115, "pp": 1.5, "finished": true, "n_new": 3111, "correct": true}
+{"task": "gsm8k", "i": 160, "pp": 1.5, "finished": true, "n_new": 994, "correct": true}
+{"task": "gsm8k", "i": 166, "pp": 1.5, "finished": true, "n_new": 699, "correct": true}
+{"task": "gsm8k", "i": 143, "pp": 1.5, "finished": true, "n_new": 1803, "correct": true}
+{"task": "gsm8k", "i": 154, "pp": 1.5, "finished": true, "n_new": 1524, "correct": true}
+{"task": "gsm8k", "i": 165, "pp": 1.5, "finished": true, "n_new": 952, "correct": true}
+{"task": "gsm8k", "i": 161, "pp": 1.5, "finished": true, "n_new": 1263, "correct": true}
+{"task": "gsm8k", "i": 122, "pp": 1.5, "finished": true, "n_new": 3406, "correct": true}
+{"task": "gsm8k", "i": 164, "pp": 1.5, "finished": true, "n_new": 1395, "correct": true}
+{"task": "gsm8k", "i": 150, "pp": 1.5, "finished": true, "n_new": 2040, "correct": true}
+{"task": "gsm8k", "i": 145, "pp": 1.5, "finished": true, "n_new": 2245, "correct": true}
+{"task": "gsm8k", "i": 169, "pp": 1.5, "finished": true, "n_new": 1144, "correct": true}
+{"task": "gsm8k", "i": 179, "pp": 1.5, "finished": true, "n_new": 721, "correct": true}
+{"task": "gsm8k", "i": 138, "pp": 1.5, "finished": true, "n_new": 2705, "correct": true}
+{"task": "gsm8k", "i": 170, "pp": 1.5, "finished": true, "n_new": 1184, "correct": true}
+{"task": "gsm8k", "i": 155, "pp": 1.5, "finished": true, "n_new": 2139, "correct": true}
+{"task": "gsm8k", "i": 180, "pp": 1.5, "finished": true, "n_new": 769, "correct": true}
+{"task": "gsm8k", "i": 167, "pp": 1.5, "finished": true, "n_new": 1486, "correct": true}
+{"task": "gsm8k", "i": 171, "pp": 1.5, "finished": true, "n_new": 1352, "correct": true}
+{"task": "gsm8k", "i": 175, "pp": 1.5, "finished": true, "n_new": 1100, "correct": true}
+{"task": "gsm8k", "i": 119, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 178, "pp": 1.5, "finished": true, "n_new": 1190, "correct": true}
+{"task": "gsm8k", "i": 168, "pp": 1.5, "finished": true, "n_new": 1656, "correct": true}
+{"task": "gsm8k", "i": 176, "pp": 1.5, "finished": true, "n_new": 1330, "correct": true}
+{"task": "gsm8k", "i": 185, "pp": 1.5, "finished": true, "n_new": 822, "correct": true}
+{"task": "gsm8k", "i": 190, "pp": 1.5, "finished": true, "n_new": 667, "correct": true}
+{"task": "gsm8k", "i": 172, "pp": 1.5, "finished": true, "n_new": 1693, "correct": true}
+{"task": "gsm8k", "i": 173, "pp": 1.5, "finished": true, "n_new": 1713, "correct": true}
+{"task": "gsm8k", "i": 157, "pp": 1.5, "finished": true, "n_new": 2652, "correct": true}
+{"task": "gsm8k", "i": 153, "pp": 1.5, "finished": true, "n_new": 2937, "correct": true}
+{"task": "gsm8k", "i": 174, "pp": 1.5, "finished": true, "n_new": 1892, "correct": true}
+{"task": "gsm8k", "i": 191, "pp": 1.5, "finished": true, "n_new": 1114, "correct": true}
+{"task": "gsm8k", "i": 181, "pp": 1.5, "finished": true, "n_new": 1740, "correct": true}
+{"task": "gsm8k", "i": 188, "pp": 1.5, "finished": true, "n_new": 1294, "correct": true}
+{"task": "gsm8k", "i": 200, "pp": 1.5, "finished": true, "n_new": 864, "correct": true}
+{"task": "gsm8k", "i": 146, "pp": 1.5, "finished": true, "n_new": 3662, "correct": true}
+{"task": "gsm8k", "i": 202, "pp": 1.5, "finished": true, "n_new": 842, "correct": true}
+{"task": "gsm8k", "i": 195, "pp": 1.5, "finished": true, "n_new": 1337, "correct": true}
+{"task": "gsm8k", "i": 194, "pp": 1.5, "finished": true, "n_new": 1430, "correct": true}
+{"task": "gsm8k", "i": 196, "pp": 1.5, "finished": true, "n_new": 1388, "correct": true}
+{"task": "gsm8k", "i": 208, "pp": 1.5, "finished": true, "n_new": 778, "correct": true}
+{"task": "gsm8k", "i": 147, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 199, "pp": 1.5, "finished": true, "n_new": 1444, "correct": true}
+{"task": "gsm8k", "i": 193, "pp": 1.5, "finished": true, "n_new": 1763, "correct": true}
+{"task": "gsm8k", "i": 204, "pp": 1.5, "finished": true, "n_new": 1291, "correct": true}
+{"task": "gsm8k", "i": 206, "pp": 1.5, "finished": true, "n_new": 1171, "correct": true}
+{"task": "gsm8k", "i": 197, "pp": 1.5, "finished": true, "n_new": 1891, "correct": true}
+{"task": "gsm8k", "i": 207, "pp": 1.5, "finished": true, "n_new": 1299, "correct": true}
+{"task": "gsm8k", "i": 217, "pp": 1.5, "finished": true, "n_new": 592, "correct": true}
+{"task": "gsm8k", "i": 198, "pp": 1.5, "finished": true, "n_new": 1943, "correct": true}
+{"task": "gsm8k", "i": 192, "pp": 1.5, "finished": true, "n_new": 2251, "correct": true}
+{"task": "gsm8k", "i": 159, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 211, "pp": 1.5, "finished": true, "n_new": 1097, "correct": true}
+{"task": "gsm8k", "i": 215, "pp": 1.5, "finished": true, "n_new": 856, "correct": true}
+{"task": "gsm8k", "i": 162, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 189, "pp": 1.5, "finished": true, "n_new": 2502, "correct": true}
+{"task": "gsm8k", "i": 163, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 213, "pp": 1.5, "finished": true, "n_new": 1204, "correct": true}
+{"task": "gsm8k", "i": 212, "pp": 1.5, "finished": true, "n_new": 1349, "correct": true}
+{"task": "gsm8k", "i": 222, "pp": 1.5, "finished": true, "n_new": 710, "correct": true}
+{"task": "gsm8k", "i": 182, "pp": 1.5, "finished": true, "n_new": 3237, "correct": true}
+{"task": "gsm8k", "i": 203, "pp": 1.5, "finished": true, "n_new": 2081, "correct": true}
+{"task": "gsm8k", "i": 220, "pp": 1.5, "finished": true, "n_new": 1032, "correct": true}
+{"task": "gsm8k", "i": 223, "pp": 1.5, "finished": true, "n_new": 901, "correct": true}
+{"task": "gsm8k", "i": 210, "pp": 1.5, "finished": true, "n_new": 1802, "correct": true}
+{"task": "gsm8k", "i": 232, "pp": 1.5, "finished": true, "n_new": 697, "correct": true}
+{"task": "gsm8k", "i": 218, "pp": 1.5, "finished": true, "n_new": 1328, "correct": true}
+{"task": "gsm8k", "i": 237, "pp": 1.5, "finished": true, "n_new": 454, "correct": true}
+{"task": "gsm8k", "i": 201, "pp": 1.5, "finished": true, "n_new": 2702, "correct": true}
+{"task": "gsm8k", "i": 224, "pp": 1.5, "finished": true, "n_new": 1129, "correct": true}
+{"task": "gsm8k", "i": 221, "pp": 1.5, "finished": true, "n_new": 1347, "correct": true}
+{"task": "gsm8k", "i": 227, "pp": 1.5, "finished": true, "n_new": 1030, "correct": true}
+{"task": "gsm8k", "i": 177, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 219, "pp": 1.5, "finished": true, "n_new": 1469, "correct": true}
+{"task": "gsm8k", "i": 235, "pp": 1.5, "finished": true, "n_new": 737, "correct": true}
+{"task": "gsm8k", "i": 228, "pp": 1.5, "finished": true, "n_new": 1286, "correct": true}
+{"task": "gsm8k", "i": 231, "pp": 1.5, "finished": true, "n_new": 1162, "correct": true}
+{"task": "gsm8k", "i": 183, "pp": 1.5, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 184, "pp": 1.5, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 225, "pp": 1.5, "finished": true, "n_new": 1501, "correct": true}
+{"task": "gsm8k", "i": 205, "pp": 1.5, "finished": true, "n_new": 2942, "correct": true}
+{"task": "gsm8k", "i": 186, "pp": 1.5, "finished": true, "n_new": 3844, "correct": true}
+{"task": "gsm8k", "i": 238, "pp": 1.5, "finished": true, "n_new": 1075, "correct": true}
+{"task": "gsm8k", "i": 248, "pp": 1.5, "finished": true, "n_new": 679, "correct": true}
+{"task": "gsm8k", "i": 239, "pp": 1.5, "finished": true, "n_new": 1256, "correct": true}
+{"task": "gsm8k", "i": 240, "pp": 1.5, "finished": true, "n_new": 1153, "correct": true}
+{"task": "gsm8k", "i": 187, "pp": 1.5, "finished": true, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 243, "pp": 1.5, "finished": true, "n_new": 903, "correct": true}
+{"task": "gsm8k", "i": 214, "pp": 1.5, "finished": true, "n_new": 2675, "correct": true}
+{"task": "gsm8k", "i": 209, "pp": 1.5, "finished": true, "n_new": 3085, "correct": true}
+{"task": "gsm8k", "i": 230, "pp": 1.5, "finished": true, "n_new": 1918, "correct": true}
+{"task": "gsm8k", "i": 247, "pp": 1.5, "finished": true, "n_new": 1227, "correct": true}
+{"task": "gsm8k", "i": 244, "pp": 1.5, "finished": true, "n_new": 1438, "correct": true}
+{"task": "gsm8k", "i": 216, "pp": 1.5, "finished": true, "n_new": 2986, "correct": true}
+{"task": "gsm8k", "i": 246, "pp": 1.5, "finished": true, "n_new": 1464, "correct": true}
+{"task": "gsm8k", "i": 249, "pp": 1.5, "finished": true, "n_new": 1684, "correct": true}
+{"task": "gsm8k", "i": 229, "pp": 1.5, "finished": true, "n_new": 2677, "correct": true}
+{"task": "gsm8k", "i": 226, "pp": 1.5, "finished": true, "n_new": 2851, "correct": true}
+{"task": "gsm8k", "i": 242, "pp": 1.5, "finished": true, "n_new": 2696, "correct": true}
+{"task": "gsm8k", "i": 245, "pp": 1.5, "finished": true, "n_new": 2823, "correct": true}
+{"task": "gsm8k", "i": 234, "pp": 1.5, "finished": true, "n_new": 3986, "correct": true}
+{"task": "gsm8k", "i": 233, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 236, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
+{"task": "gsm8k", "i": 241, "pp": 1.5, "finished": false, "n_new": 4096, "correct": false}
