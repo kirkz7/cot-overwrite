@@ -115,14 +115,13 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 # 10-07 00:40: all 4B work is on the 5080 (cloud: large models only). Order: seed 1 -> E18.1 seed-0 remaining tests
 # (handed over by the cloud, CLOUD_NOTEBOOK) -> base thinking-on control -> seed 2 -> seed tests
 # 10-07 02:20 (user: E18.1 passed on the cloud; seeds first)
-# 10-07 17:50 (user): no-harm suite first (base LongBench, E18.1 thinking off / on, base thinking on), seeds after
+# 10-07 17:50 (user): no-harm suite first (base LongBench, E18.1 thinking off / on), seeds after; base thinking-on suite dropped 10-08 (use the cloud P6b baseline)
 [void]$jobs.Add(@('e181_s1_train', 'train_lora.py --model Qwen3-4B --out runs/e181-dec-s1 --data data_train/bind4_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 1'))
 [void]$jobs.Add(@('e181_s2_train', 'train_lora.py --model Qwen3-4B --out runs/e181-dec-s2 --data data_train/bind4_decoupled_train.jsonl --val data_train/bind4_decoupled_val.jsonl --dev data_train/bind4_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 2'))
 [void]$jobs.Add(@('gen_base_lb', 'explore_general.py run --models Qwen3-4B'))   # finish the desktop base (LongBench) = same-machine baseline
 [void]$jobs.Add(@('e181_gen', 'explore_general.py run --models Qwen3-4B@runs/e181-dec/final'))
 [void]$jobs.Add(@('e181_gsm8k', 'run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k'))
 [void]$jobs.Add(@('e181_gen_think', 'explore_general_think.py run --models Qwen3-4B@runs/e181-dec/final'))
-[void]$jobs.Add(@('base_gen_think', 'explore_general_think.py run --models Qwen3-4B'))   # same-machine thinking-on baseline
 [void]$jobs.Add(@('e181_s1_lc',     'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s1/final'))
 [void]$jobs.Add(@('e181_s1_mc',     'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s1/final'))
 [void]$jobs.Add(@('e181_s2_lc',     'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s2/final'))
