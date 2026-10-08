@@ -109,6 +109,8 @@ def run(args):
         model = VLLMReader(hf)
         stop = stop_ids(tok)
         samp = {k: v for k, v in QWEN_THINK_SAMPLING.items() if k != "do_sample"}
+        if os.environ.get("COT_PRESENCE_PENALTY"):   # option C (8B, 10-08 23:20); the file tag carries "~pp<value>"
+            samp["presence_penalty"] = float(os.environ["COT_PRESENCE_PENALTY"])
         budget = 1024 + GEN if args.think else GEN
 
         def one(e):
