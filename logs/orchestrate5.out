@@ -1,0 +1,4 @@
+queue p6b_base started in the background; progress: logs/queue_cloud.log
+[07:57:41] vllm :8001 down
+queue e181 started in the background; progress: logs/queue_cloud.log
+queue e181_g1 started in the background; progress: logs/queue_cloud.log

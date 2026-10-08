@@ -1,0 +1,21 @@
+{
+ "model": "Qwen3-4B",
+ "data": "data_train/bind4nosd_decoupled_train.jsonl",
+ "val": "data_train/bind4_decoupled_val.jsonl",
+ "out": "runs/e181nosd-dec",
+ "rank": 16,
+ "alpha": 32,
+ "dropout": 0.05,
+ "lr": 0.0001,
+ "epochs": 1.0,
+ "accum": 8,
+ "max_len": 8192,
+ "save_every": 50,
+ "eval_every": 300,
+ "val_n": 60,
+ "dev": "data_train/bind4_decoupled_dev.jsonl",
+ "dev_n": 60,
+ "limit": null,
+ "seed": 0,
+ "probe": false
+}

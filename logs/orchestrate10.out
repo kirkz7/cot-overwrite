@@ -1,0 +1,4 @@
+queue judge2 started in the background; progress: logs/queue_cloud.log
+[01:20:31] vllm :8000 down
+queue q8a started in the background; progress: logs/queue_cloud.log
+queue q8b started in the background; progress: logs/queue_cloud.log

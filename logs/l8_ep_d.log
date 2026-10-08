@@ -1,0 +1,4 @@
+[02:15:26] vllm :8001 down
+[02:15:26] vllm :8001 up /root/cot-overwrite/runs/e181-q8/merged tp=1 gpus=1
+[02:16:21] vllm :8001 ready
+Qwen3-8B-e181 date think todo 500

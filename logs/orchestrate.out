@@ -1,0 +1,4 @@
+queue p6_base started in the background; progress: logs/queue_cloud.log
+queue v4 started in the background; progress: logs/queue_cloud.log
+queue p6_e18 started in the background; progress: logs/queue_cloud.log
+queue v14 started in the background; progress: logs/queue_cloud.log

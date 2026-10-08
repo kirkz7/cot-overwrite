@@ -1,0 +1,4 @@
+[23:18:47] vllm :8001 down
+[23:18:47] vllm :8001 up Qwen/Qwen3-8B tp=1 gpus=1
+[23:19:42] vllm :8001 ready
+Qwen3-8B-bf16 date  todo 500

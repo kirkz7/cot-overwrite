@@ -1,0 +1,12 @@
+logs: reference 1800 rows, fresh 1800 rows, matched 1800
+  same answer: 97.6%  (pass >= 95)
+                         ref  fresh  diff
+fmt       order                          
+changelog newest_first  82.3   82.0  -0.3
+          oldest_first  84.0   83.7  -0.3
+email     newest_first  58.0   59.0   1.0
+          oldest_first  88.3   88.3   0.0
+git       newest_first  70.7   69.0  -1.7
+          oldest_first  75.0   74.0  -1.0
+  largest per-condition difference: 1.7 points  (pass <= 2)
+  PORT CHECK: PASS

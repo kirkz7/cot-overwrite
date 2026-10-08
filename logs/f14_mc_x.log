@@ -1,0 +1,20 @@
+[05:56:24] vllm :8000 down
+[05:56:24] vllm :8000 up Qwen/Qwen3-14B tp=1 gpus=0
+[05:57:24] vllm :8000 ready
+Qwen3-14B-bf16 -> results/extmem_Qwen3-14B-bf16~vllm+think.jsonl todo 240 conc 6
+20 / 240
+40 / 240
+[06:37:22] vllm :8000 down
+[06:37:22] vllm :8000 up Qwen/Qwen3-14B tp=1 gpus=0
+[06:38:22] vllm :8000 ready
+Qwen3-14B-bf16 -> results/extmem_Qwen3-14B-bf16~vllm+think.jsonl todo 195 conc 6
+20 / 195
+40 / 195
+60 / 195
+80 / 195
+100 / 195
+120 / 195
+140 / 195
+160 / 195
+180 / 195
+195 / 195
