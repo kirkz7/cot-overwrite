@@ -9,11 +9,7 @@ q8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_
 h4_e181_lt  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_extmem.py run --tasks locomo --think --budget 1024 --models Qwen3-4B-e181
 c8_base    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --models Qwen3-8B-bf16
 c8_base_t  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-bf16
-# 10-08 08:55 (user): E18.1-8B tests dropped (MemConflict, new held-out, no-harm). GPU1 now shares E18.2's tests with GPU0
-x2_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_file.py /root/cot-overwrite/results/many_eval_8b-e182.jsonl
-x2_mc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e182-q8/merged COT_VLLM_TP=1 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-e182
-x2_mc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
-x2_ch_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e182-q8/merged COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-e182
+# 10-08 09:25 (user chose option C, no E18.2 training): E18.2 test jobs removed; option C runs on GPU0 (jobs_c.txt)
 b8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16
 # final judging (GPU1 only)
 fj_ext      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge

@@ -1,0 +1,7 @@
+# Option C (user 10-08 09:25; CLOUD_NOTEBOOK "方案 C", written before running), GPU0: thinking with presence_penalty=1.5, no training
+c_e8_lc    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_PRESENCE_PENALTY=1.5 COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged explore_longconv.py run --think --budget 1024 --models Qwen3-8B-e181
+c_b8_lc    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_PRESENCE_PENALTY=1.5 COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-8B explore_longconv.py run --think --budget 1024 --models Qwen3-8B-bf16
+c_lc_j     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_longconv.py judge
+c_e8_mc    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_PRESENCE_PENALTY=1.5 COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-e181
+c_mc_j     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2
+c_e8_ch    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_PRESENCE_PENALTY=1.5 COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-e181

@@ -86,6 +86,9 @@ def tag(name):
     base, _, adapter = name.partition("@")
     if os.environ.get("COT_ENGINE") == "vllm":   # cloud vLLM runs get their own result files
         base += "~vllm"
+    if os.environ.get("COT_PRESENCE_PENALTY"):   # option C (cloud 10-08): thinking with presence_penalty, own files
+        assert os.environ.get("COT_ENGINE") == "vllm", "COT_PRESENCE_PENALTY needs the vLLM engine"
+        base += "~pp" + os.environ["COT_PRESENCE_PENALTY"]
     if not adapter:
         return base
     parts = [p for p in re.split(r"[\\/]", adapter) if p and p not in ("final", "ckpt", "runs", ".")]

@@ -105,6 +105,8 @@ def generate_think(tok, model, prompt, max_new, key):
     import zlib
     if getattr(model, "is_vllm", False):   # cloud: the same sampling on a vLLM server, seeded per item
         kw = {k: v for k, v in QWEN_THINK_SAMPLING.items() if k != "do_sample"}
+        if os.environ.get("COT_PRESENCE_PENALTY"):   # option C (cloud 10-08); the file tag carries "~pp<value>"
+            kw["presence_penalty"] = float(os.environ["COT_PRESENCE_PENALTY"])
         ids = tok(prompt, add_special_tokens=False).input_ids
         out = model.sample(ids, max_new, stop_ids(tok), zlib.crc32(str(key).encode()), **kw)
         return tok.decode(out, skip_special_tokens=True).strip()
