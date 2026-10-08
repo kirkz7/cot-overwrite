@@ -12,11 +12,19 @@ e8_mc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_ext
 # 10-08 08:35: moved from jobs_q8a; E18.1-8B no-harm moved after them (E18.2 supersedes it)
 h4_e181_lt  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_extmem.py run --tasks locomo --think --budget 1024 --models Qwen3-4B-e181
 b8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16
-e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
-e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k
-e8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16@runs/e181-q8/final
+# 10-08 08:40 (user): E18.1-8B no-harm slowed down; 8B on the new clean held-out instead (judged by fj_ch below)
+c8_base    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --models Qwen3-8B-bf16
+c8_base_t  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-bf16
+c8_e181_t  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-e181
 # final judging for everything generated in this phase (GPU1; GPU0 never judges extmem / longconv after this point)
 fj_ext      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge
 fj_ext2     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
 fj_lc       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py judge
 fj_ch       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_convo_heldout.py judge
+# then wait for E18.2-8B's run on the new held-out (GPU0) and judge it (judges never run on both cards at once)
+c8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_file.py /root/cot-overwrite/results/convoh_Qwen3-8B-e182~vllm+think.done
+fj_ch2      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_convo_heldout.py judge
+# E18.1-8B no-harm, only if time is left (user 10-08 08:40: slowed down)
+e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
+e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k
+e8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16@runs/e181-q8/final

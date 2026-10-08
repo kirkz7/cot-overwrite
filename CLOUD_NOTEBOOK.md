@@ -110,6 +110,7 @@
   - PersonaMem 对 E18 系列不是盲测（已标注）；E18.2 的设计用到了 PersonaMem 的汇总诊断，结论要另有干净留出（新 ConvoMem 集）支持，8B 的新 ConvoMem 集排在门槛测试之后。
 - 排法：GPU0（`cloud/jobs_diag.txt`，接在 presence_penalty 诊断之后）：E18.1-8B 在 `many_dev` 上的基线 → 收集 → 组装 → 训练（约 4 小时）→ 合并 → `many_dev` → PersonaMem / ConvoMem 长版 + 判分 → MemConflict + 判分 → 通用能力思考关 / GSM8K / 思考开。GPU1（`jobs_q8b.txt`）：原模型 8B 通用能力 → GSM8K → E18.1-8B MemConflict + 判分 → E18.1-4B LoCoMo（从 GPU0 挪过来）→ 原模型 8B 思考开通用能力（E18.2 的基线）→ E18.1-8B 通用能力（E18.2 优先，挪到后面）→ 统一判分。
 - 4B：先看 8B；8B 过了再用同一配方训 4B，让配方统一。
+- **8B 上新的干净留出集（用户 10-08 08:40 同意；E18.1-8B 的通用能力暂时放缓，排到最后、有时间才跑）**：原模型 8B 思考关 / 思考开、E18.1-8B 思考开（GPU1）、E18.2-8B 思考开（GPU0，MemConflict 之后）。构造、判分、门槛和 4B 那次完全相同（"新的干净留出集"一节），基线换成原模型 8B 思考关（同引擎 vLLM）。
 
 ## 8B E18.1（用户 10-07 21:40；开跑前写定）
 

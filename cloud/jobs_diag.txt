@@ -12,6 +12,8 @@ x2_lc_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=
 x2_lc_tj   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_longconv.py judge
 x2_mc_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e182-q8/merged COT_VLLM_TP=1 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-e182
 x2_mc_tj   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2
+x2_ch_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e182-q8/merged COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-e182
+x2_ch_ok   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 -c open('results/convoh_Qwen3-8B-e182~vllm+think.done','w').write('ok')
 x2_gen     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general.py run --models Qwen3-8B-bf16@runs/e182-q8/final
 x2_gsm     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e182-q8/final --benches gsm8k
 x2_gen_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-8B-bf16@runs/e182-q8/final
