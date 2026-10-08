@@ -110,6 +110,10 @@
 - 只报告：原模型 8B 思考开 + presence_penalty 在 PersonaMem / ConvoMem 长版上的结果（只加惩罚、不训练够不够）；没写完和循环的比例；对原本已写完的题的影响（同一种子，有无惩罚配对比较）。
 - **已知限制**：通用能力没有在 presence_penalty 下测（lm-eval 走 HF，HF 没有 presence_penalty）；E18.1-8B 的通用能力测试按用户 10-08 08:55 的决定已取消。所以方案 C 只能说明"在记忆任务上是否有效"，不能说明"不伤通用能力"。PersonaMem 对 E18 系列不是盲测，presence_penalty 的诊断也看过 PersonaMem 的汇总，结论要以新的干净留出集为准。
 - **用户 10-08 09:35：恢复 E18.1-8B 的通用能力测试，和原模型 8B 对比**（方案 C 用的就是 E18.1-8B 的权重）。设置和门槛照"8B E18.1"一节第 4 条和思考开那条，不改：思考关（HF：MMLU / ARC-C / HellaSwag / IFEval / LongBench-E + GSM8K，GPU1）各降 ≤2（IFEval ≤3）；思考开（HF，Qwen3 采样，同 P6b：IFEval / LongBench / GSM8K，GPU0 在方案 C 之后）IFEval 降 ≤3、GSM8K 降 ≤2、LongBench 平均降 ≤2。这测的是权重本身；presence_penalty 对通用能力的影响仍没有测（见限制）。
+- **presence_penalty 下的通用能力（用户 10-08 09:45 同意补测；开跑前写定）**：`cloud/general_pp.py`，vLLM，思考开，Qwen3 采样，上限 4096（同 P6b），IFEval 全部 541（lm-eval 的 `process_results` 给可见回答打分）+ GSM8K 250（同一判分规则）；原模型 8B 和 E18.1-8B 各跑 presence_penalty = 0 和 1.5，每题同一个种子（配对）。思考没写完记空回答并报告比例。
+  - 门槛（方案 C 的实际部署配置对原模型）：**E18.1-8B + 惩罚 对 原模型 8B 不加惩罚**：IFEval prompt-level strict 降 ≤3，GSM8K 降 ≤2。
+  - 只报告：每个模型加惩罚前后的差（惩罚本身的影响）；E18.1-8B 不加惩罚对原模型（vLLM 版，与 HF 的思考开通用能力互相印证）。
+  - 排在 GPU1 最后（统一判分之后），两个模型约 1–2 小时。
 - 排法：GPU0（`cloud/jobs_c.txt`）：E18.1-8B + 惩罚 PersonaMem / ConvoMem 长版 → 原模型 8B + 惩罚同上 → 判分 → E18.1-8B + 惩罚 MemConflict → 判分 → E18.1-8B + 惩罚 新留出集。GPU1：原模型 8B 基线（通用能力、GSM8K、新留出集思考关 / 开）+ E18.1-4B LoCoMo → 原模型 8B 思考开通用能力 → 统一判分。
 
 ## E18.2 · 8B（**没有训练**：停止规则触发，用户 10-08 09:25 改选方案 C）（用户 10-08 08:30："重新训练，加入相关记录很多的题，并且稍微惩罚一直重复循环的话"；云端起草，开跑前写定）
