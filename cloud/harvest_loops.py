@@ -23,7 +23,9 @@ from train_lora import norm
 from vllm_client import VLLMReader
 
 mode, served, tag = sys.argv[1], sys.argv[2], sys.argv[3]
-src = {"harvest": "data_train/many_harvest.jsonl", "eval": "data_train/many_dev.jsonl"}[mode]
+# diagnostics (10-08, after the stop rule): greedy decoding on the first 300 harvest prompts; long (PersonaMem-length) prompts
+src = {"harvest": "data_train/many_harvest.jsonl", "eval": "data_train/many_dev.jsonl",
+       "greedy": "data_train/many_harvest.jsonl", "long": "data_train/many_long_harvest.jsonl"}[mode]
 out = f"results/many_{mode}_{tag}.jsonl"
 tok = AutoTokenizer.from_pretrained(served)
 model = VLLMReader(served)
@@ -46,6 +48,8 @@ STOP = stop_ids(tok)
 
 
 def one(x, ids):   # worker threads only send requests; tokenising and decoding stay in the main thread
+    if mode == "greedy":
+        return x, model.greedy(ids, 1024, STOP)
     return x, model.sample(ids, 1024, STOP, zlib.crc32(str(("many", x["id"])).encode()), **kw)
 
 
@@ -60,7 +64,7 @@ def score(x, out_ids):
                 correct=fin and all(norm(n) in norm(vis) for n in x["need"]), gen=gen)
 
 
-rows = load_jsonl(src)
+rows = load_jsonl(src)[:300] if mode == "greedy" else load_jsonl(src)
 w = JsonlAppender(out, key=lambda r: r["id"])
 todo = [x for x in rows if x["id"] not in w.done]
 # 32 requests in flight (vLLM batches them); each request carries its own seed, so the order does not matter
@@ -78,12 +82,12 @@ print(f"{mode} {tag}: n {len(d)} | unfinished {100 - d.finished.mean() * 100:.1f
       f"correct {d.correct.mean() * 100:.1f}%")
 print("by qtype:", d.groupby("qtype")[["finished", "looping", "correct"]].mean().mul(100).round(1).to_dict("index"))
 print("by records:", d.groupby(d.k + 1)[["looping", "correct"]].mean().mul(100).round(1).to_dict("index"))
-if mode == "harvest":
+if mode in ("harvest", "greedy", "long"):
     src_by_id = {x["id"]: x for x in rows}
     ul = [dict(id=f"ul-{r.id}", kind="ul", ul=True, think=True, prompt=src_by_id[r.id]["prompt"], answer=r.gen,
                ul_spans=repeat_spans(r.gen), qtype="ul", dated=True, order=src_by_id[r.id]["order"])
           for r in d[d.looping].itertuples()]
-    path = f"data_train/ul_loops{tag}.jsonl"
+    path = f"data_train/ul_loops{tag}" + ("" if mode == "harvest" else f"-{mode}") + ".jsonl"
     with open(path, "w", encoding="utf-8") as f:
         for r in ul:
             f.write(json.dumps(r) + "\n")

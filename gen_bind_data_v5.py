@@ -33,7 +33,7 @@ N_MANY = {"train": 600, "val": 100, "dev": 200, "harvest": 1000}
 SEEDS = {"train": 51, "val": 52, "dev": 53, "harvest": 54}
 
 
-def make_many(rng, wiki, idx, genres):
+def make_many(rng, wiki, idx, genres, words_range=None):
     genre = rng.choice(genres)
     attrs = rng.sample(sorted(g.ATTRS), rng.randint(2, 4))
     target, others = attrs[0], attrs[1:]
@@ -54,7 +54,7 @@ def make_many(rng, wiki, idx, genres):
     long_doc = rng.random() < 0.25
     bodies = []
     for b in range(n_blocks):
-        words = rng.randint(150, 400) if long_doc else rng.randint(60, 200)
+        words = rng.randint(*words_range) if words_range else rng.randint(150, 400) if long_doc else rng.randint(60, 200)
         prose = []
         while sum(len(p.split()) for p in prose) < words:
             prose.append(g.wiki_sentences(rng, wiki, words - sum(len(p.split()) for p in prose)))
@@ -170,6 +170,23 @@ def stage_many(args):
         assert ok
 
 
+def stage_many_long(args):
+    """diagnostic (10-08): the same many-record items at PersonaMem-like length (about 15-30k tokens), thinking on"""
+    wiki = g.load_wiki()
+    rng = random.Random(55)
+    rows = []
+    for i in range(300):
+        s = make_many(rng, wiki, f"long-{i}", TRAIN_GENRES, words_range=(900, 1600))
+        row, thought = build_many(s, "harvest", random.Random(f"e182-long-{i}"))
+        row["think"] = True
+        row["answer"] = think_answer(thought, row["final"], True)
+        rows.append(row)
+    with open("data_train/many_long_harvest.jsonl", "w", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps(r) + "\n")
+    print("data_train/many_long_harvest.jsonl", len(rows))
+
+
 def stage_assemble(args):
     ul = [json.loads(l) for l in open(args.ul, encoding="utf-8")] if args.ul else []
     ul = ul[:args.ul_max]
@@ -191,14 +208,14 @@ def stage_assemble(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["many", "assemble"])
+    ap.add_argument("stage", choices=["many", "many_long", "assemble"])
     ap.add_argument("--base", default="data_train/bind4q8_decoupled")
     ap.add_argument("--ul", default="")
     ap.add_argument("--ul_max", type=int, default=300)
     ap.add_argument("--ul_min", type=int, default=50)
     ap.add_argument("--prefix", default="data_train/bind5q8_decoupled")
     args = ap.parse_args()
-    {"many": stage_many, "assemble": stage_assemble}[args.stage](args)
+    {"many": stage_many, "many_long": stage_many_long, "assemble": stage_assemble}[args.stage](args)
 
 
 if __name__ == "__main__":

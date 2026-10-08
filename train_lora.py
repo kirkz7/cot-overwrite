@@ -146,6 +146,8 @@ def main():
     eot_ids = {tok.convert_tokens_to_ids(eot), tok.eos_token_id}
 
     rows = load_jsonl(args.data)[:args.limit]
+    # cloud 10-08: a missing data file used to "train" 0 steps and save an untrained adapter with exit code 0
+    assert os.path.exists(args.data) and rows, f"no training rows in {args.data}"
     global VAL_NEW
     VAL_NEW = (512 if any(r.get("think") for r in rows[:50]) else 256) if any("final" in r for r in rows[:20]) else 24
     enc = [encode(tok, r, eot) for r in rows]

@@ -1,0 +1,3 @@
+# Diagnostics (10-08 08:50, after the E18.2 stop rule; synthetic data only, no test data): what makes E18.1-8B loop?
+d2_greedy  CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 cloud/harvest_loops.py greedy /root/cot-overwrite/runs/e181-q8/merged 8b-e181
+d2_long    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 cloud/harvest_loops.py long /root/cot-overwrite/runs/e181-q8/merged 8b-e181
