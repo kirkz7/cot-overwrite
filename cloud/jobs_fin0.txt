@@ -1,0 +1,4 @@
+# CLOUD_PLAN P8 (10-08 review, written before any 14B / 32B thinking-mode output). GPU0, started by cloud/orchestrate_fin.sh
+# after jobs_c (base 8B thinking-on no-harm). Qwen3-14B bf16, thinking on, MemConflict chrono + rev, concurrent requests.
+f14_mc_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-14B cloud/run_extmem_conc.py --models Qwen3-14B-bf16 --tasks memconf --conds chrono,rev --think --budget 1024 --conc 6
+f14_judge  CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2

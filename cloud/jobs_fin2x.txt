@@ -1,0 +1,2 @@
+# CLOUD_PLAN P8, optional: only if it can start before 05:20 (the 32B chrono + rev run is over by then). 32B retrieval order, thinking on.
+f32_mc_x   COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=2 COT_VLLM_MODEL=Qwen/Qwen3-32B cloud/run_extmem_conc.py --models Qwen3-32B --tasks memconf --conds retr --think --budget 1024 --conc 6
