@@ -10,6 +10,15 @@ q8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_
 e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
 e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k
 h4_e181_lt  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_extmem.py run --tasks locomo --think --budget 1024 --models Qwen3-4B-e181
+# 10-08 09:55 (user, top priority): LoCoMo official end to end, 4B base vs E18.1 (CLOUD_NOTEBOOK)
+lo_b4    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_locomo_official.py run --models Qwen3-4B --order official
+lo_b4t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_locomo_official.py run --think --models Qwen3-4B --order official
+lo_e4t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_locomo_official.py run --think --models Qwen3-4B-e181 --order official
+lo_e4    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_locomo_official.py run --models Qwen3-4B-e181 --order official
+loc_b4    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_locomo_official.py run --models Qwen3-4B --order chrono
+loc_b4t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_locomo_official.py run --think --models Qwen3-4B --order chrono
+loc_e4t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_locomo_official.py run --think --models Qwen3-4B-e181 --order chrono
+loc_e4    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_locomo_official.py run --models Qwen3-4B-e181 --order chrono
 c8_base    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --models Qwen3-8B-bf16
 c8_base_t  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-bf16
 # 10-08 09:25 (user chose option C, no E18.2 training): E18.2 test jobs removed; option C runs on GPU0 (jobs_c.txt)
