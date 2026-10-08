@@ -5,5 +5,15 @@ c_lc_j     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_lon
 c_e8_mc    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_PRESENCE_PENALTY=1.5 COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-e181
 c_mc_j     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2
 c_e8_ch    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_PRESENCE_PENALTY=1.5 COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-e181
+# 10-08 10:20 (user): LongMemEval official retrieval + reading, date order vs relevance order, 4B base vs E18.1 (CLOUD_NOTEBOOK)
+lme_b4_d    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_lme_official.py run --models Qwen3-4B --order date
+lme_b4t_d   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_lme_official.py run --think --models Qwen3-4B --order date
+lme_e4t_d   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_lme_official.py run --think --models Qwen3-4B-e181 --order date
+lme_e4_d    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_lme_official.py run --models Qwen3-4B-e181 --order date
+lme_b4_r    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_lme_official.py run --models Qwen3-4B --order relevance
+lme_b4t_r   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-4B explore_lme_official.py run --think --models Qwen3-4B --order relevance
+lme_e4t_r   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_lme_official.py run --think --models Qwen3-4B-e181 --order relevance
+lme_e4_r    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged explore_lme_official.py run --models Qwen3-4B-e181 --order relevance
+lme_judge  CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_lme_official.py judge
 # 10-08 09:35 (user): E18.1-8B thinking-on no-harm (same setup as base 8B's b8_gen_t; HF, no presence_penalty)
 e8_gen_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-8B-bf16@runs/e181-q8/final

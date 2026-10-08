@@ -124,6 +124,21 @@
 - **LoCoMo 作干净的"不伤害"检查**（看过 1 道题，从没用于设计）：E18.1-4B 思考开在 LoCoMo 三种顺序上，各不比原模型 4B 思考关（vLLM，已有）低 5 个点以上。
 - 排法：GPU1 在原模型 8B 的 MemConflict 之后先跑原模型 4B 的两种模式；GPU0 在 E18.1-8B 的 PersonaMem 门槛之后跑 E18.1-4B（合并 → ConvoMem 新集 → LoCoMo）。
 
+## LongMemEval 官方检索 + 作答 · 4B（用户 10-08 10:10 选定，10:15 同意下载；开跑前写定）
+
+- **LongMemEval 不是盲测（设计时用过），作为证据使用时必须注明。** 只看汇总，不打印对话文本。
+- **数据**：`longmemeval_s_cleaned.json`（同一仓库 revision 98d7416c，277 MB，SHA256 前缀 d6f21ea9d60a0d56；用户 10:15 同意下载），500 题，每题约 50 段会话。另装 `rank_bm25`（官方检索依赖）。
+- **官方代码**（xiaowu0162/LongMemEval commit 9e0b455f，复制在 `/data/lme_official`），`explore_lme_official.py` 直接调用：检索 = `run_retrieval.py` 的 flat-bm25、会话粒度（`process_item_flat_index` + BM25Okapi，与官方相同）；作答 = `run_generation.prepare_prompt`（flat-session、json 格式、useronly false、cot true，即 `run_generation.sh` 的默认设置），贪心、生成上限 800，历史截断规则同官方；判分 = `evaluate_qa.get_anscheck_prompt`（按题型的官方判分提示，"_abs" 题用拒答提示），回复里有 "yes" 记为对。
+- **唯一的改动（要测的变量）**：官方在作答前把检索到的会话**按日期排序**（`run_generation.py` 224–225 行）；`--order relevance` 去掉这一行，会话保持 BM25 相关度顺序（大多数 RAG / 记忆系统的做法）。其余完全相同。
+- **不得不偏离的地方**：① Qwen3 不在官方模型表里，最大长度设 32768；② **检索取前 5 个会话**（官方脚本默认 50）：取前 10 时 22% 的历史被截断，而官方截断保留历史开头（日期排序后是最旧的会话），两种顺序会丢掉不同的会话、多出一个变量；前 5 时 500 题全部不截断，提示中位 14.8k、最长 21.6k token，两种顺序检索到同一批会话（全部证据命中 74.5%，知识更新 96%、时间推理 70%）；③ 思考开（官方没有）：Qwen3 思考采样、上限 1024 + 800，只判 `</think>` 之后的回答；④ vLLM 生成；⑤ 判分器 = Qwen3-14B 4-bit + 官方判分提示（官方用 GPT-4o 或本地 Llama-3.1-70B）。⑥ 官方 `prepare_prompt` 会就地删掉 `has_answer`，每题先深拷贝；清洗版数据缺 `has_answer` 时按 False（只影响检索命中率的统计）。
+- **条件**（原模型 Qwen3-4B 和 E18.1-4B 合并权重）：{原模型思考关、原模型思考开、E18.1 思考开、E18.1 思考关} × {官方日期顺序、相关度顺序}，共 8 组 × 500 题。
+- **判定**（主要看知识更新 KU 78 题、时间推理 TR 133 题；另报全部 500 题和各题型）：
+  1. **相关度顺序的代价**：原模型（思考关，官方默认）相关度 − 日期顺序，在 KU 上 ≤ −10 且配对 bootstrap 95% CI 不含 0，算"真实 RAG 顺序下复现"。
+  2. **修复**：相关度顺序下，E18.1 思考开对原模型思考开（只差训练）和对原模型思考关的 KU 差，CI 不含 0 才算提升；E18.1 思考开在相关度顺序下的 KU 不比它自己在日期顺序下低 5 点以上（顺序不敏感）。
+  3. **不伤害**：日期顺序（官方）下，E18.1 思考开的全部题正确率不比原模型思考开低 5 点以上。
+  - 预期写在前面：KU 只有 78 题，单项 CI 会宽（1 题约 1.3 点）。
+- 排法：GPU0，接在方案 C 之后（约 17:30），8 组生成约 3–4 小时，判分约 1 小时；E18.1-8B 思考开通用能力顺延到最后（约 02:30）。
+
 ## LoCoMo 官方端到端 · 4B（用户 10-08 09:50："最高优先级，全按官方来，一个基线一个 E18.1"；开跑前写定）
 
 - **官方代码**：snap-research/locomo commit 3eb6f2c5（`task_eval/hf_llm_utils.py`、`evaluation.py`、`evaluation_stats.py`、`gpt_utils.py`、`scripts/evaluate_hf_llm.sh`，复制在 `/data/locomo_official`）。`explore_locomo_official.py` 直接调用官方的上下文构造（`get_input_context` + `CONV_START_PROMPT`）、问题提示（`QA_PROMPT`，时间题加官方的 "Use DATE of CONVERSATION…"）、答案后处理（取第一行、小写、去掉 (a)/(b)/answer:）和 F1 判分（`eval_question_answering`）。
