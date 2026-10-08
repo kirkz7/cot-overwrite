@@ -6,6 +6,9 @@ h4_base_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE
 b8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16
 b8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16 --benches gsm8k
 q8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_file.py /root/cot-overwrite/runs/e181-q8/merged/config.json
+# 10-08 09:35 (user, option C needs it): E18.1-8B no-harm back, compared with base 8B (same HF setup); thinking-on part runs on GPU0 (jobs_c)
+e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
+e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k
 h4_e181_lt  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_extmem.py run --tasks locomo --think --budget 1024 --models Qwen3-4B-e181
 c8_base    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --models Qwen3-8B-bf16
 c8_base_t  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-8B-bf16
