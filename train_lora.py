@@ -46,8 +46,12 @@ def end_of_turn(tok):
 def encode(tok, row, eot):
     prefix = tok(chat_prompt(tok, row["prompt"], row.get("prefix", ""), think=row.get("think", False)),
                  add_special_tokens=False).input_ids   # optional assistant prefix (CoT data); think: E18 thinking-mode rows
+    if row.get("ul"):   # E18.2 unlikelihood row: the model's own unfinished looping thought, no end-of-turn token
+        e = tok(row["answer"], add_special_tokens=False, return_offsets_mapping=True)
+        mask = [any(s < te and ts < en for s, en in row["ul_spans"]) for ts, te in e.offset_mapping]
+        return prefix, e.input_ids, mask
     ans = tok(row["answer"] + eot, add_special_tokens=False).input_ids
-    return prefix, ans
+    return prefix, ans, None
 
 
 def norm(s):
@@ -113,6 +117,8 @@ def main():
     ap.add_argument("--limit", type=int, default=None, help="use only the first N training rows (smoke tests)")
     ap.add_argument("--seed", type=int, default=0, help="data order and LoRA initialisation")
     ap.add_argument("--probe", action="store_true", help="memory probe: 3 steps on the longest samples, then exit")
+    ap.add_argument("--ul_alpha", type=float, default=0.5,
+                    help="E18.2: weight of the unlikelihood loss -log(1 - p) on the repeated-line tokens of ul rows")
     args = ap.parse_args()
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, set_peft_model_state_dict
     from peft.utils import load_peft_weights
@@ -143,7 +149,7 @@ def main():
     global VAL_NEW
     VAL_NEW = (512 if any(r.get("think") for r in rows[:50]) else 256) if any("final" in r for r in rows[:20]) else 24
     enc = [encode(tok, r, eot) for r in rows]
-    keep = [i for i, (p, a) in enumerate(enc) if len(p) + len(a) <= args.max_len]
+    keep = [i for i, (p, a, _) in enumerate(enc) if len(p) + len(a) <= args.max_len]
     rng = random.Random(args.seed)
     n_samples = int(len(keep) * args.epochs)
     order = [keep[i % len(keep)] for i in range(n_samples)]
@@ -158,7 +164,7 @@ def main():
         model.train()
         t = time.time()
         for i in longest:
-            p, a = enc[i]
+            p, a, _ = enc[i]
             ids = torch.tensor([p + a], device="cuda")
             with sdpa_kernel(TRAIN_SDPA, set_priority=True):
                 logits = model(input_ids=ids, logits_to_keep=len(a) + 1).logits[0, :-1].float()
@@ -194,19 +200,28 @@ def main():
         print("step 0 val", v, "| dev", dv, flush=True)
 
     model.train()
-    t0, run_loss, run_n = time.time(), 0.0, 0
+    t0, run_loss, run_n, run_ul, run_uln = time.time(), 0.0, 0, 0.0, 0
     while state["seen"] < n_samples:
         batch = order[state["seen"]:state["seen"] + args.accum]
         for i in batch:
-            p, a = enc[i]
+            p, a, mask = enc[i]
             ids = torch.tensor([p + a], device="cuda")
             # the backward pass recomputes the checkpointed forward: keep it under the same SDPA backends, or the
             # recompute may pick another kernel (cloud L20, 10-07: CheckpointError, saved [1,32,1696] vs recomputed [1,32,1679])
             with sdpa_kernel(TRAIN_SDPA, set_priority=True):
                 logits = model(input_ids=ids, logits_to_keep=len(a) + 1).logits[0, :-1].float()
-                loss = F.cross_entropy(logits, ids[0, -len(a):])
+                if mask is None:
+                    loss = F.cross_entropy(logits, ids[0, -len(a):])
+                else:   # E18.2: push down p(token) only on lines that repeat an earlier line; no likelihood term
+                    pt = logits.log_softmax(-1).gather(1, ids[0, -len(a):, None])[:, 0].exp()
+                    m = torch.tensor(mask, device="cuda")
+                    ul = -torch.log1p(-pt.clamp(max=1 - 1e-5))[m].mean()
+                    loss = args.ul_alpha * ul
                 (loss / len(batch)).backward()
-            run_loss += loss.item(); run_n += 1
+            if mask is None:
+                run_loss += loss.item(); run_n += 1
+            else:
+                run_ul += ul.item(); run_uln += 1
             state["tokens"] += len(p) + len(a)
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step(); sched.step(); opt.zero_grad(set_to_none=True)
@@ -214,10 +229,11 @@ def main():
         if state["step"] % 10 == 0 or state["seen"] >= n_samples:
             el = time.time() - t0
             rec = dict(step=state["step"], loss=round(run_loss / max(run_n, 1), 4), lr=sched.get_last_lr()[0],
+                       **({"ul": round(run_ul / run_uln, 4), "ul_n": run_uln} if run_uln else {}),
                        tok_s=round(state["tokens"] / max(el, 1e-6)), mem_gb=round(torch.cuda.max_memory_allocated() / 2**30, 2))
             log.write(json.dumps(rec) + "\n"); log.flush()
             print(rec, flush=True)
-            run_loss, run_n = 0.0, 0
+            run_loss, run_n, run_ul, run_uln = 0.0, 0, 0.0, 0
         if state["step"] % args.save_every == 0 or state["seen"] >= n_samples:
             save_ckpt(model, opt, sched, state, ckpt)
         if state["step"] % args.eval_every == 0 or state["seen"] >= n_samples:

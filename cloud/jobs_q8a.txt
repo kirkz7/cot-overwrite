@@ -8,6 +8,4 @@ e8_lc_tj   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_lon
 # 10-08 04:15: E18.1-4B on the new clean held-out (vLLM, merged LoRA) + LoCoMo no-harm (thinking on), then judge the ConvoMem sets
 h4_merge    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 cloud/merge_lora.py Qwen3-4B runs/e181-dec/final /root/cot-overwrite/runs/e181-dec/merged
 h4_e181_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-4B-e181
-h4_e181_lt  CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_extmem.py run --tasks locomo --think --budget 1024 --models Qwen3-4B-e181
-h4_judge    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_convo_heldout.py judge
-b8_gen_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-8B-bf16
+# 10-08 08:35: h4_e181_lt and b8_gen_t moved to jobs_q8b (GPU1); h4_judge dropped (the convoh judge ran early on GPU1). GPU0 runs E18.2 (jobs_diag).

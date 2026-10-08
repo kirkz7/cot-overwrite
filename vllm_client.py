@@ -33,12 +33,12 @@ class VLLMReader:
         with urllib.request.urlopen(req, timeout=3600) as r:
             return json.load(r)
 
-    def sample(self, ids, max_new, stop_ids, seed, temperature, top_p, top_k):
+    def sample(self, ids, max_new, stop_ids, seed, temperature, top_p, top_k, **extra):
         """thinking mode (run_app_fix.generate_think on vLLM): Qwen3 sampling, one fixed seed per item"""
         stop_ids = sorted({int(i) for i in stop_ids})
         body = dict(model=self.name, prompt=[int(i) for i in ids], max_tokens=max_new, temperature=temperature, top_p=top_p,
                     top_k=top_k, seed=int(seed), ignore_eos=True, stop_token_ids=stop_ids, skip_special_tokens=False,
-                    logprobs=1, return_tokens_as_token_ids=True)
+                    logprobs=1, return_tokens_as_token_ids=True, **extra)   # extra: diagnostics only (e.g. presence_penalty)
         ch = self._call("/v1/completions", body)["choices"][0]
         return [int(t.split(":", 1)[1]) for t in ch["logprobs"]["tokens"]]
 

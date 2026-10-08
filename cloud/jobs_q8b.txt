@@ -9,6 +9,9 @@ b8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eva
 q8_wait    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 cloud/wait_file.py /root/cot-overwrite/runs/e181-q8/merged/config.json
 e8_mc_t    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-8B-e181
 e8_mc_tj   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
+# 10-08 08:35: moved from jobs_q8a; E18.1-8B no-harm moved after them (E18.2 supersedes it)
+h4_e181_lt  CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_extmem.py run --tasks locomo --think --budget 1024 --models Qwen3-4B-e181
+b8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16
 e8_gen     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general.py run --models Qwen3-8B-bf16@runs/e181-q8/final
 e8_gsm     CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_ext_eval.py run --models Qwen3-8B-bf16@runs/e181-q8/final --benches gsm8k
 e8_gen_t   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_general_think.py run --models Qwen3-8B-bf16@runs/e181-q8/final
