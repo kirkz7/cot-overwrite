@@ -1,0 +1,2 @@
+# CLOUD_PLAN P8: final judging of everything generated (Qwen3-14B 4-bit judge, parse v2), GPU0. Resumable.
+finj_mc    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2
