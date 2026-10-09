@@ -1,9 +1,11 @@
 """Figures for the paper draft (paper/figures/*.pdf + *.png).
 
-Numbers from runs finished on 10-04 (external sets, ConvoMem-long, E13) are computed from results/*.jsonl, so re-running
-this script after tonight's queue fills in the pending bars. Older numbers are copied from RESULTS.md / STAGE_REPORT_EN.md
-(the section is named next to each constant). No conversation text is read or printed except our own synthetic data.
-usage: .venv\\Scripts\\python.exe paper/make_figures.py
+Figure 3 is computed from the desktop's results/*.jsonl (4B / Phi external sets and ConvoMem-long). The other numbers are
+copied from RESULTS.md / STAGE_REPORT_EN.md / CLOUD_NOTEBOOK.md (the section is named next to each constant), so the
+scale figure and the fix figure can be rebuilt on any machine. No conversation text is read or printed except our own
+synthetic data.
+usage: .venv\\Scripts\\python.exe paper/make_figures.py            (all figures; fig3 needs the desktop results)
+       python paper/make_figures.py fig_scale fig_fix              (only the named figures)
 """
 import json
 import os
@@ -20,8 +22,10 @@ sys.path.insert(0, ROOT)
 OUT = os.path.join(ROOT, "paper", "figures")
 os.makedirs(OUT, exist_ok=True)
 
-# reference palette (dataviz skill, references/palette.md), fixed slot order; slots 1-3 validate all-pairs
+# reference palette (dataviz skill, references/palette.md), fixed slot order; slots 1-3 validate all-pairs,
+# slots 1-6 validate as adjacent pairs (lines); aqua / yellow / magenta are below 3:1 on white, so lines are direct-labelled
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
+YELLOW, MAGENTA, GREEN = "#eda100", "#e87ba4", "#008300"
 GRAY = "#9a9994"          # reference series (base model)
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e6e5e1"
 
@@ -241,6 +245,49 @@ def fig_apps():
     save(fig, "fig3_apps")
 
 
+# ------------------------------------------------------------------ Figure: scale (Qwen3 4B-32B, cloud, vLLM bf16)
+SIZES = ["4B", "8B", "14B", "32B"]
+# newest-first (or retrieval) minus chronological, paired bootstrap 95% CI; RESULTS.md "10-07 复盘 · 规模曲线"
+SCALE = {
+    "MemConflict, newest first": ([-40.4, -37.1, -35.8, -21.2], [(-47.5, -33.3), (-43.8, -30.4), (-42.5, -29.2), (-27.9, -14.6)]),
+    "MemConflict, retrieval order": ([-19.2, -17.9, -15.4, -10.0], [(-25.4, -13.3), (-23.8, -12.5), (-21.2, -9.6), (-15.4, -4.6)]),
+    "LongMemEval, newest first (seen)": ([-24.4, -24.4, -23.1, -24.4], [(-35.9, -12.8), (-34.6, -14.1), (-33.3, -12.8), (-35.9, -14.1)]),
+    "ConvoMem-long, newest first": ([-17.7, -12.1, -2.4, -6.5], [(-25.0, -10.5), (-17.7, -6.5), (-6.5, 1.6), (-11.3, -2.4)]),
+    "Dated logs, newest first": ([-11.3, -13.6, -3.6, -2.9], [(-14.9, -7.9), (-17.1, -10.1), (-5.3, -1.8), (-4.7, -1.1)]),
+}
+# pre-registered CoT test, HF scoring, k=8, n=100 per point (RESULTS.md "10-07 复盘 · 规模曲线", CoT rows)
+COT_PICK_LAST_K8 = [98.0, 99.0, 97.0, 97.0]     # shuffled, no time cue: % answering the last-presented value
+COT_REV_STEP = [4.0, 62.0, 63.0, 80.0]          # newest first with a step number on every line: % correct
+
+
+def fig_scale():
+    fig, (a, b) = plt.subplots(1, 2, figsize=(6.5, 2.55), gridspec_kw={"width_ratios": [1.55, 1]})
+    style = [(BLUE, "o", "-", True), (BLUE, "o", "--", False), (ORANGE, "s", "-", True), (AQUA, "^", "-", True),
+             (YELLOW, "D", "-", True)]
+    x = np.arange(len(SIZES))
+    a.axhline(0, color=INK2, lw=0.8)
+    a.axhline(-10, color=GRAY, lw=0.8, ls=":")
+    a.text(3.42, -10, "threshold", fontsize=6.2, color=INK2, va="center")
+    for j, ((name, (ys, cis)), (col, mk, ls, filled)) in enumerate(zip(SCALE.items(), style)):
+        xo = x + (j - 2) * 0.07
+        lo = [y - c[0] for y, c in zip(ys, cis)]
+        hi = [c[1] - y for y, c in zip(ys, cis)]
+        a.errorbar(xo, ys, yerr=[lo, hi], color=col, lw=1.6, ls=ls, marker=mk, ms=4.2, capsize=0, elinewidth=0.8,
+                   mfc=col if filled else "white", mec=col, label=name)
+    a.set_xticks(x, ["Qwen3-" + s for s in SIZES]); a.set_xlim(-0.3, 3.95)
+    a.set_ylim(-50, 5); a.set_ylabel("accuracy change vs. chronological (pp)")
+    a.set_title("(a) Order effect on memory questions, by model size", loc="left")
+    a.legend(loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=2, fontsize=6.4, handlelength=2.4, columnspacing=1.2)
+    b.plot(x, COT_PICK_LAST_K8, color=MAGENTA, lw=1.6, marker="o", ms=4.2)
+    b.plot(x, COT_REV_STEP, color=GREEN, lw=1.6, marker="s", ms=4.2)
+    b.text(1.5, COT_PICK_LAST_K8[1] - 6, "shuffled, no cue:\npicks last-presented", fontsize=6.2, color=INK, va="top", ha="center")
+    b.text(1.5, COT_REV_STEP[1] - 7, "newest first + step\nnumbers: correct", fontsize=6.2, color=INK, va="top", ha="center")
+    b.set_xticks(x, SIZES); b.set_xlim(-0.3, 3.3); b.set_ylim(0, 112); b.set_yticks(range(0, 101, 20)); b.set_ylabel("% of items")
+    b.set_title("(b) Chains of thought, k = 8 overwrites", loc="left")
+    fig.tight_layout(w_pad=1.4)
+    save(fig, "fig_scale")
+
+
 # ------------------------------------------------------------------ Figure 4: mechanism
 def fig_mech():
     fig, (a, b) = plt.subplots(1, 2, figsize=(6.5, 2.25), gridspec_kw={"width_ratios": [1.15, 1]})
@@ -270,7 +317,7 @@ def fig_mech():
 
 # ------------------------------------------------------------------ Figure 5: fixes
 def fig_fix():
-    fig, (a, b) = plt.subplots(1, 2, figsize=(6.5, 2.5), gridspec_kw={"width_ratios": [1.45, 1]})
+    fig, (a, b) = plt.subplots(1, 2, figsize=(6.5, 2.5), gridspec_kw={"width_ratios": [1.42, 1.08]})
     # (a) selection stage: answer-only LoRA, pre-registered, Qwen3-4B seed 0 (RESULTS.md "LoRA 修复"; E2 row from E2 table)
     groups = [("logs\nnewest-first", [70.3, 89.3, 100.0]),
               ("CoT rev.\n+ steps", [6.0, 2.0, 74.7]),
@@ -283,29 +330,26 @@ def fig_fix():
         for ci, (val, col, lab) in enumerate(zip(v, [GRAY, ORANGE, BLUE], ["base", "chronological-only LoRA", "decoupled LoRA"])):
             a.bar(gi + (ci - 1) * w, val, w * 0.9, color=col, label=lab if gi == 0 else None)
         a.text(gi, max(v) + 3, fmt_delta(v[2] - v[1]), ha="center", fontsize=6.8, color=INK)
-    a.set_xticks(range(len(groups)), [g for g, _ in groups]); a.tick_params(axis="x", labelsize=6.2)
+    a.set_xticks(range(len(groups)), [g for g, _ in groups]); a.tick_params(axis="x", labelsize=5.8)
     a.set_ylim(0, 140); a.set_yticks(range(0, 101, 20)); a.set_ylabel("% correct")
     a.set_title("(a) Selection: decoupled training (answer only)", loc="left")
     a.legend(loc="upper center", fontsize=6.6, ncol=3, borderaxespad=0.2, handlelength=1.2, columnspacing=0.8)
-    # (b) binding stage: E13, newest-first presentation
-    base_l, dec_l, chr_l = longconv("Qwen3-4B"), longconv("Qwen3-4B+e13-dec"), longconv("Qwen3-4B+e13-chr")
-    base_x, dec_x, chr_x = extmem("Qwen3-4B"), extmem("Qwen3-4B+e13-dec"), extmem("Qwen3-4B+e13-chr")
-    groups = [("ConvoMem-long", [acc(base_l, "convo_long", "rev"), acc(chr_l, "convo_long", "rev"), acc(dec_l, "convo_long", "rev")]),
-              ("MemConflict", [acc(base_x, "memconf", "rev"), acc(chr_x, "memconf", "rev"), acc(dec_x, "memconf", "rev")]),
-              # LongMemEval, already seen (RESULTS.md E12 / E13 sections); E13 control pending
-              ("LongMemEval\n(seen)", [51.3, reason_acc("Qwen3-4B+e13-chr"), 62.8])]
+    # (b) dated list inside thinking (E18, E18.1), thinking on; base without thinking (desktop HF). E18: RESULTS.md
+    # "E18 · 清单放进思考模式：全部测试汇总"; E18.1 (cloud HF, seed 0): CLOUD_NOTEBOOK.md "P7 · E18.1 测试结果"
+    groups = [("newest first", [77.4, 96.8, 96.8]),
+              ("newest first", [36.2, 71.7, 77.5]),
+              ("retrieval", [56.2, 70.0, 77.9]),
+              ("newest first", [73.9, 56.7, 71.0])]
+    for xc, ds in ((0, "ConvoMem-long"), (1.5, "MemConflict"), (3, "PersonaMem")):
+        b.text(xc, -0.13, ds, transform=b.get_xaxis_transform(), ha="center", va="top", fontsize=6.4, color=INK)
     for gi, (g, v) in enumerate(groups):
-        for ci, (val, col, lab) in enumerate(zip(v, [GRAY, ORANGE, BLUE], ["base", "binding, chronological only", "binding, decoupled"])):
-            if val is None or np.isnan(val):
-                b.text(gi + (ci - 1) * w, 3, "pending", rotation=90, ha="center", va="bottom", fontsize=6, color=INK2)
-                continue
-            b.bar(gi + (ci - 1) * w, val, w * 0.9, color=col, label=lab)
-    h, l = b.get_legend_handles_labels()
-    uniq = dict(zip(l, h))
-    b.legend(uniq.values(), uniq.keys(), loc="upper center", fontsize=6.6, ncol=1, borderaxespad=0.2)
-    b.set_xticks(range(len(groups)), [g for g, _ in groups]); b.tick_params(axis="x", labelsize=6.4)
+        for ci, (val, col, lab) in enumerate(zip(v, [GRAY, AQUA, BLUE], ["base", "E18 (first version)", "E18.1 (final)"])):
+            b.bar(gi + (ci - 1) * w, val, w * 0.9, color=col, label=lab if gi == 0 else None)
+        b.text(gi, max(v) + 3, fmt_delta(v[2] - v[0]), ha="center", fontsize=6.8, color=INK)
+    b.legend(loc="upper center", fontsize=6.6, ncol=3, borderaxespad=0.2, handlelength=1.2, columnspacing=0.8)
+    b.set_xticks(range(len(groups)), [g for g, _ in groups]); b.tick_params(axis="x", labelsize=5.8)
     b.set_ylim(0, 140); b.set_yticks(range(0, 101, 20))
-    b.set_title("(b) Binding: fact-time training, newest first", loc="left")
+    b.set_title("(b) Dated list in thinking (held-out sets)", loc="left")
     fig.tight_layout(w_pad=1.2)
     save(fig, "fig5_fix")
 
@@ -331,4 +375,8 @@ def numbers():
 
 
 if __name__ == "__main__":
-    fig_concept(); fig_cot(); fig_apps(); fig_mech(); fig_fix(); numbers()
+    if sys.argv[1:]:
+        for name in sys.argv[1:]:
+            globals()[name]()
+    else:
+        fig_concept(); fig_cot(); fig_apps(); fig_scale(); fig_mech(); fig_fix(); numbers()
