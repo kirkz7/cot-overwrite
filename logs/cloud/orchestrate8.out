@@ -1,0 +1,5 @@
+queue g12a started in the background; progress: logs/queue_cloud.log
+queue judge started in the background; progress: logs/queue_cloud.log
+queue g12b started in the background; progress: logs/queue_cloud.log
+queue g27 started in the background; progress: logs/queue_cloud.log
+queue v32 started in the background; progress: logs/queue_cloud.log

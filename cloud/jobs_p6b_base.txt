@@ -1,0 +1,2 @@
+# P6b: no-harm suite with thinking ON, base Qwen3-4B (HF). GPU0.
+p6b_base   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general_think.py run --models Qwen3-4B

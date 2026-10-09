@@ -11,6 +11,8 @@
 
 用中文回复用户，如实报告，包括负面结果。
 
+> **10-08 晚更新**：租期最后一晚的排程见第 5 节 **P8**（14B / 32B 开思考的 MemConflict，06:30 停 GPU，留一小时上传）。
+
 ## 1. 规则（摘自 CLAUDE.md，云端同样适用）
 
 - **不在测试数据上调东西。** 门槛先写进 `EXPLORE_PLAN.md`（云端写进 `CLOUD_NOTEBOOK.md` 的"预注册"一节），再开跑。对照组只差一个变量。
@@ -100,6 +102,98 @@
 ## 5. 实验（按优先级）
 
 **统一的门槛**（照抄 4B 的复现规则，开跑前写进 `CLOUD_NOTEBOOK.md`）：在一个测试集上，倒序（或检索序）比正序低 ≥10 个点，并且配对 bootstrap 95% CI 不含 0，就算"在 32B 上复现"。留出集上同时报告整群 bootstrap：ConvoMem 按人设，PersonaMem 按共享上下文，MemConflict 按用户，LoCoMo 按对话。没复现时必须写清原因，例如题目不需要历史、正序本身做不好（地板效应），或者真是反例，并附上支撑这个判断的数字。
+
+### P8 · 租期最后一晚：14B / 32B 开思考的 MemConflict（台式机 10-08 复盘写定，北京时间 10-09，租期约 07:30 结束）
+
+- **为什么做这一项**：
+  - 新的干净留出集上，只开思考就基本去掉了顺序效应：4B −21 → −7，8B −16 → −3（CLOUD_NOTEBOOK 10-08）。
+  - 但 MemConflict 上原模型 8B 开思考还是 80.4 / 63.7 / 72.5（倒序 − 正序 −16.7），E18.1 + 惩罚比只开思考高 +17.1。
+  - 所以"开思考够不够、训练还有没有必要"到 14B、32B 会怎样，决定论文的说法。这件事只能在 L20 上做：bf16 的 14B、32B 放不进 5080，HF 4-bit 开思考要十几个小时。
+  - 没选 32B 跑新干净留出集（云端 10-08 10:05 列的候选）：那里 4B、8B 只开思考已基本修好，32B 的结果可以预料；MemConflict 是只开思考还修不好的集，结果预料不到。
+- **排程**（北京时间；时间都是估计。8B 开思考实测：思考平均约 360 token，没写完 2.8%）：
+
+  | 时间 | GPU0 | GPU1 |
+  |---|---|---|
+  | 现在 → 约 02:30 | `jobs_c`：原模型 8B 思考开通用能力（不动） | `jobs_lme8`：LongMemEval 8B（用户 23:20 排的，不动；估计 04:30–05:30 结束） |
+  | 约 02:30 起 | `jobs_fin0`：14B 思考开，正序 + 倒序 480 条（约 1.5–2 小时）→ 判分 | 同上 |
+  | 14B 跑完，GPU1 还忙，还没到 05:00 | `jobs_fin0x`：14B 检索序 240 条 → 判分 | 同上 |
+  | GPU1 在 05:00 前空出 | `jobs_fin2`（两卡 TP2）：32B 思考开，正序 + 倒序 480 条（约 1.5–2.5 小时，可能在 06:05 被截断） | （同左） |
+  | 32B 在 05:20 前跑完 | `jobs_fin2x`：32B 检索序 | （同左） |
+  | GPU1 到 05:00 还忙 | 不跑 32B；GPU0 续跑 14B | 不动 |
+  | 06:05 | 所有生成停止 → `jobs_finj` 统一判分（parse v2） | |
+  | 06:30 | GPU 工作全部结束；`jobs_lme8` 如果还在跑也停（已存的行都保留，没判分的回台式机判） | |
+  | 06:30 → 07:30 | 上传（见下面的清单） | |
+
+  - 规则（写在 `cloud/orchestrate_fin.sh` 里）：GPU1 空出时，GPU0 上还在跑的队列最多再跑 15 分钟（不超过 05:00），然后两卡都给 32B。
+  - 06:05 前还剩生成时间，就续跑 14B（先补完正序 + 倒序，再补检索序）。
+  - 编排不改动用户的队列，只有 06:30 收尾时会停 `jobs_lme8`。要保证 32B 能跑，就要让 GPU1 在 05:00 前空出来，这由用户决定，例如把 `jobs_lme8` 还没开始的组挪到后面。
+- **设置**：
+  - 和 8B 思考开（`b8_mc_t`）完全一样：同样的题和提示、Qwen3 思考采样（T 0.6、top-p 0.95、top-k 20）、每题固定种子、上限 1024、判分器 Qwen3-14B 4-bit、parse v2。
+  - **不加 presence_penalty**：测的是原模型；惩罚是方案 C 给 E18.1 的部署配置。
+  - 只有两处不同：
+    1. 并发请求（`cloud/run_extmem_conc.py`，同时发 6 条；原脚本一次一条）。vLLM 成批计算，数值和逐条跑有微小差别，要和"引擎不同"一样注明。
+    2. 题目按固定的伪随机顺序跑（题号的 crc32），同一题的各个顺序一起提交。到点停下时，跑完的是随机子样本，每题的顺序都齐全。
+  - 对照是同一模型、同一引擎（vLLM bf16）的思考关结果，已有：14B 84.6 / 48.8 / 69.2，32B 80.0 / 58.8 / 70.0。两者只差"开不开思考"这一个变量。
+- **判定：沿用 EXPLORE_PLAN「10-06 复盘新增」C**。C 在 10-06 写定，那时还没有任何 4B 以上原模型开思考的 MemConflict 输出。判定标准不改，只补两条（都在任何 14B / 32B 开思考的输出之前写定）：14B 也按 C 判定；到点截断时，配对题少于 120 道只作描述。`diag_think_scale.py` 照此计算。
+  - 只用两次运行（开 / 关）都有正序和该顺序的题：
+    - E_think = 倒序（或检索序）− 正序（思考开），配对 bootstrap 95% CI，另报按用户整群的 CI。
+    - E_off = 同一批题上思考关的倒序 − 正序。
+    - D = E_think − E_off。
+  - 统一门槛（思考开本身）：E_think ≤ −10 且 CI 不含 0 → **复现**；否则未复现。
+  - 思考的作用：
+    - E_think > −5 且 CI 含 0 → **思考消除**；
+    - 否则，D ≥ +10 且 CI 不含 0 → **思考减弱**；
+    - 其余 → **没有明显作用**。
+  - 标注：
+    - 配对题少于 120 道（到点截断）→ 只作描述，不下判定。
+    - 思考没写完超过 5% → 结果加标注。C 原计划为这种情况补跑上限 2048，这次租期内没有时间，如实写明。
+  - 检索序（如果跑到）按同样规则另报。
+  - 论文怎么写（C 已定，这里补全）：
+    - 32B **思考消除**：必须写"32B 开思考时没有这个问题"，"思考模式无效"改为小模型的结论。
+    - 32B 开思考仍**复现**：写"到 32B，只开思考仍不够，训练仍有必要"。
+    - 其余情况：只报数字和区间。
+    - 14B 作为规模曲线的中间点。8B 已有：E_think −16.7（80.4 / 63.7），思考关 −37.1。
+  - C 里"同时用 vLLM 跑 4B 思考开作同引擎对照"一项，由同引擎的 8B 思考开代替。用户 10-07 定了云端只跑大显存模型。4B 改在 5080 上用 HF 跑（`base_mc_think`），和 HF 的思考关结果配对。
+- **执行步骤（云端会话）**：
+  1. 取文件（不合并分支；本分支的 `CLOUD_PLAN.md` 只比 `cloud-l20` 多了 main 上的 P7 第 7 步和本节）：
+     ```
+     git fetch origin claude/blissful-volta-87xkbv
+     git checkout FETCH_HEAD -- CLOUD_PLAN.md diag_think_scale.py cloud/run_extmem_conc.py cloud/orchestrate_fin.sh cloud/jobs_fin0.txt cloud/jobs_fin0x.txt cloud/jobs_fin2.txt cloud/jobs_fin2x.txt cloud/jobs_finj.txt
+     ```
+  2. 冒烟测试（02:30 前做）：借 GPU1 上 `jobs_lme8` 正在用的 :8001 服务，写到临时文件，不碰正式结果。
+     - 先用 `curl -s http://127.0.0.1:8001/v1/models` 看它在服务哪个模型：`Qwen/Qwen3-8B` 对应 `--models Qwen3-8B-bf16`，`.../e181-q8/merged` 对应 `--models Qwen3-8B-e181`。
+     - 然后运行：
+       ```
+       HF_HOME=/data/hf_cache COT_DATA=/data/datasets HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 COT_ENGINE=vllm COT_VLLM_URL=http://127.0.0.1:8001 \
+         .venv/bin/python cloud/run_extmem_conc.py --models Qwen3-8B-bf16 --tasks memconf --conds chrono,rev --think --budget 1024 --conc 4 --limit 4 --out /tmp/smoke_mc.jsonl
+       ```
+     - 通过的标准：4 行；字段和 `results/extmem_Qwen3-8B-bf16~vllm+think.jsonl` 的行一样；`full` 里有 `</think>`；`response` 不空。只打印这些判断，不打印题目和回答，应输出 `4 True True`：
+       ```
+       .venv/bin/python -c "import json; s=[json.loads(l) for l in open('/tmp/smoke_mc.jsonl')]; r=json.loads(open('results/extmem_Qwen3-8B-bf16~vllm+think.jsonl').readline()); print(len(s), all(sorted(x)==sorted(r) for x in s), all('</think>' in x['full'] and bool(x['response']) for x in s))"
+       ```
+     - 测完删掉临时文件。
+  3. 启动编排（只启动一次，它会先等 `jobs_c` 结束）。启动前先确认没有别的编排脚本在等着接队列：`pgrep -af '[o]rchestrate|[c]hain_after'` 应该没有输出。
+     ```
+     setsid nohup cloud/orchestrate_fin.sh >> logs/queue_cloud.out 2>&1 < /dev/null &
+     ```
+     进度看 `logs/queue_cloud.log` 里 `orchestrate_fin:` 开头的行。
+     - 要中止：先 `pkill -f '[o]rchestrate_fin.sh'`，再停对应的队列（把 `fin0` 换成要停的队列名）：
+       ```
+       pid=$(pgrep -f '[q]ueue_cloud.sh cloud/jobs_fin0.txt' | head -1); [ -n "$pid" ] && pkill -TERM -s "$(ps -o sid= -p "$pid" | tr -d ' ')"
+       ```
+       不要用 `cloud/pause_queue.sh`：它不分队列，会停掉找到的第一个队列，两条队列同时在跑时可能停错。
+  4. 06:30 后上传：
+     - 确认日志里已有 `orchestrate_fin: GPU work over`。
+     - 统计（只看汇总）：`.venv/bin/python diag_think_scale.py`（8B / 14B / 32B 三对）和 `.venv/bin/python explore_extmem.py stats --parse v2`。
+     - 在 `CLOUD_NOTEBOOK.md` 新开一节"P8 · 开思考的规模曲线"，照预注册逐条写判定和数字，写明配对题数、没写完的比例、是否被截断。
+     - `git add -f` 所有还没提交的结果，包括 10-08 以来的这些：LongMemEval 官方 4B / 8B、LoCoMo 官方、新留出集的判分、方案 C、general_pp、E18.1-8B 通用能力、`extmem_Qwen3-8B-bf16~vllm+think_judged2.jsonl`、P8 的新结果。每个文件都要小于 100 MB。
+     - commit，push 到 `cloud-l20`，然后用 `git log origin/cloud-l20 -1` 核对确实推上去了。
+     - 用户撤销 HF token 和 GitHub PAT，关机。
+- **这次不排的**：
+  - 任何 4B 测试：5080 能跑。原模型 4B 开思考的 MemConflict 已在台式机队列里（`base_mc_think`），建议提前，和台式机 HF 的思考关结果（75.4 / 36.2 / 56.2）配对，给规模曲线补上 4B 这个点。
+  - 14B / 32B 的新干净留出集：4B、8B 只开思考已基本修好，结果可以预料；时间也不够。
+  - 32B 的 LongMemEval 官方端到端：太长。
+  - Gemma 的干净留出集、14B / 32B 的训练：时间不够，也没有预注册。
 
 ### P0 · 移植并验证（见第 4 节）
 

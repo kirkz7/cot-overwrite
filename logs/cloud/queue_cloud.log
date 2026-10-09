@@ -1,0 +1,492 @@
+[10:13:42] queue start cloud/jobs_p0.txt
+[10:13:42] start p0_logs_q4
+[10:19:36] end   p0_logs_q4 exit=0 (5 min)
+[10:19:36] start p0_e15_q4
+[10:26:34] end   p0_e15_q4 exit=0 (6 min)
+[10:26:34] start p0_cmp_logs
+[10:26:43] end   p0_cmp_logs exit=0 (0 min)
+[10:26:43] start p0_cmp_e15
+[10:26:52] end   p0_cmp_e15 exit=0 (0 min)
+[10:26:52] queue done cloud/jobs_p0.txt
+[10:43:51] queue start /tmp/claude-0/-root/4d15bcb0-d9f5-46d1-9a48-0f2f3a196337/scratchpad/jobs_now.txt
+[10:43:51] start p2_mab32k_q4
+[11:27:08] end   p2_mab32k_q4 exit=0 (43 min)
+[11:58:43] queue start cloud/jobs_v4.txt
+[11:58:43] start v4_ext
+[11:58:43] queue start cloud/jobs_v14.txt
+[11:58:43] start v14_ext
+[12:01:20] end   v14_ext exit=1 (2 min)
+[12:01:20] start v14_lc
+[12:01:57] stopped v4/v14 queues and stray vLLM servers (restart with CUDA_DEVICE_ORDER=PCI_BUS_ID)
+[12:02:11] queue start cloud/jobs_v4.txt
+[12:02:11] start v4_ext
+[12:02:11] queue start cloud/jobs_v14.txt
+[12:02:11] start v14_ext
+[12:31:37] stopped v4 queue (user 10-06: 4B work is on the 5080; partial ~vllm 4B results kept)
+[12:31:57] paused v14 (bf16) queue: 14B 4-bit P1b first, after/around 32B
+[12:31:57] queue start cloud/jobs_p1b_g0.txt
+[12:31:57] start p1b_lc_q14
+[12:31:57] queue start cloud/jobs_p1b_g1.txt
+[12:31:57] start p1b_ext_q14
+[12:43:29] paused p1b_g0/p1b_g1 (14B 4-bit) for the 32B queue
+[12:43:29] queue start cloud/jobs_v32.txt
+[12:43:29] start v32_ext
+[18:21:41] end   v32_ext exit=0 (338 min)
+[18:21:41] start v32_judge_ext
+[18:26:36] end   v32_judge_ext exit=0 (4 min)
+[18:26:36] start v32_judge_ext2
+[18:30:07] end   v32_judge_ext2 exit=0 (3 min)
+[18:30:07] start v32_lc
+[20:34:18] end   v32_lc exit=0 (124 min)
+[20:34:18] start v32_mem
+[21:04:55] end   v32_mem exit=0 (30 min)
+[21:04:55] start v32_logs
+[21:17:08] end   v32_logs exit=0 (12 min)
+[21:17:08] start v32_agent
+[21:25:02] end   v32_agent exit=0 (7 min)
+[21:25:02] start v32_exteval
+[21:48:52] end   v32_exteval exit=1 (23 min)
+[21:48:52] start v32_e15
+[21:57:12] end   v32_e15 exit=0 (8 min)
+[21:57:12] start v32_cot_hf
+[22:08:42] end   v32_cot_hf exit=0 (11 min)
+[22:08:42] queue done cloud/jobs_v32.txt
+[22:08:50] queue start cloud/jobs_p1b_g1.txt
+[22:08:50] queue start cloud/jobs_p1b_g0.txt
+[22:08:50] start p1b_lc_q14
+[22:08:50] start p1b_ext_q14
+[23:25:38] end   p1b_lc_q14 exit=0 (76 min)
+[23:25:38] queue done cloud/jobs_p1b_g0.txt
+[23:25:58] queue start cloud/jobs_v8.txt
+[23:25:58] start v8_ext
+[00:01:35] orchestrate.sh replaces chain/after_v8/rerun scripts (P6 added)
+[00:58:18] end   v8_ext exit=0 (92 min)
+[00:58:18] start v8_lc
+[01:42:54] end   v8_lc exit=0 (44 min)
+[01:42:54] start v8_mem
+[01:53:56] end   v8_mem exit=0 (11 min)
+[01:53:56] start v8_logs
+[01:58:33] end   v8_logs exit=0 (4 min)
+[01:58:33] start v8_agent
+[02:01:45] end   v8_agent exit=0 (3 min)
+[02:01:45] start v8_exteval
+[02:10:54] end   v8_exteval exit=1 (9 min)
+[02:10:54] start v8_e15
+[02:15:22] end   v8_e15 exit=0 (4 min)
+[02:15:22] start v8_cot_hf
+[02:18:37] end   v8_cot_hf exit=0 (3 min)
+[02:18:37] queue done cloud/jobs_v8.txt
+[02:18:38] queue start cloud/jobs_p6_base.txt
+[02:18:38] start p6_gen_base
+[03:00:14] end   p6_gen_base exit=0 (41 min)
+[03:00:14] start p6_gsm_base
+[03:03:37] end   p6_gsm_base exit=0 (3 min)
+[03:03:37] queue done cloud/jobs_p6_base.txt
+[03:03:44] queue start cloud/jobs_v4.txt
+[03:03:44] start v4_ext
+[03:10:23] end   p1b_ext_q14 exit=0 (301 min)
+[03:10:23] start p1b_e15_q14
+[03:23:26] end   p1b_e15_q14 exit=0 (13 min)
+[03:23:26] queue done cloud/jobs_p1b_g1.txt
+[03:23:40] queue start cloud/jobs_p6_e18.txt
+[03:23:40] start p6_gen_e18
+[03:26:36] end   v4_ext exit=0 (22 min)
+[03:26:36] start v4_lc
+[03:58:12] end   v4_lc exit=0 (31 min)
+[03:58:12] start v4_mem
+[04:05:06] end   v4_mem exit=0 (6 min)
+[04:05:06] start v4_logs
+[04:05:13] end   p6_gen_e18 exit=0 (41 min)
+[04:05:13] start p6_gsm_e18
+[04:07:11] end   p6_gsm_e18 exit=0 (1 min)
+[04:07:11] queue done cloud/jobs_p6_e18.txt
+[04:07:16] queue start cloud/jobs_v14.txt
+[04:07:16] start v14_ext
+[04:08:25] end   v4_logs exit=0 (3 min)
+[04:08:25] start v4_agent
+[04:10:19] end   v4_agent exit=0 (1 min)
+[04:10:19] start v4_exteval
+[04:33:13] end   v4_exteval exit=0 (22 min)
+[04:33:13] start v4_e15
+[04:35:29] end   v4_e15 exit=0 (2 min)
+[04:35:29] start v4_cot_hf
+[04:37:44] end   v4_cot_hf exit=0 (2 min)
+[04:37:44] queue done cloud/jobs_v4.txt
+[04:48:25] orchestrate2 replaces orchestrate/followup; v14 split over both cards
+[04:48:25] queue start cloud/jobs_v8.txt
+[04:48:25] queue start cloud/jobs_v14_ext.txt
+[04:48:25] skip  v8_ext (already finished)
+[04:48:25] start v14_ext
+[04:48:25] skip  v8_lc (already finished)
+[04:48:25] skip  v8_mem (already finished)
+[04:48:25] skip  v8_logs (already finished)
+[04:48:25] skip  v8_agent (already finished)
+[04:48:25] start v8_exteval
+[05:19:59] end   v8_exteval exit=0 (31 min)
+[05:19:59] skip  v8_e15 (already finished)
+[05:19:59] skip  v8_cot_hf (already finished)
+[05:19:59] queue done cloud/jobs_v8.txt
+[05:20:02] orchestrate3 replaces orchestrate2 (P6b thinking-on no-harm added)
+[05:20:02] queue start cloud/jobs_v14_rest.txt
+[05:20:02] start v14_lc
+[06:35:58] end   v14_lc exit=0 (75 min)
+[06:35:58] start v14_mem
+[06:44:45] orchestrate4 replaces orchestrate3 (E18.1 on GPU1 after 14B; P6b on GPU0)
+[06:50:37] orchestrate5 replaces orchestrate4 (E18.1 tests split over both cards)
+[06:55:48] end   v14_mem exit=0 (19 min)
+[06:55:48] start v14_logs
+[06:56:47] end   v14_ext exit=0 (128 min)
+[06:56:47] start v14_exteval
+[07:04:03] end   v14_logs exit=0 (8 min)
+[07:04:03] start v14_agent
+[07:09:41] end   v14_agent exit=0 (5 min)
+[07:09:41] start v14_e15
+[07:15:03] end   v14_e15 exit=0 (5 min)
+[07:15:03] start v14_cot_hf
+[07:20:25] end   v14_cot_hf exit=0 (5 min)
+[07:20:25] queue done cloud/jobs_v14_rest.txt
+[07:20:38] queue start cloud/jobs_p6b_base.txt
+[07:20:38] start p6b_base
+[07:57:15] end   v14_exteval exit=0 (60 min)
+[07:57:15] queue done cloud/jobs_v14_ext.txt
+[07:57:41] queue start cloud/jobs_e181.txt
+[07:57:41] start e181_sd
+[08:04:06] end   e181_sd exit=0 (6 min)
+[08:04:06] start e181_data
+[08:04:13] end   e181_data exit=0 (0 min)
+[08:04:13] start e181_train
+[08:29:31] end   e181_train exit=1 (25 min)
+[08:29:31] queue done cloud/jobs_e181.txt
+[08:29:47] queue start cloud/jobs_e181_g1.txt
+[08:29:47] start e181_fmt
+[08:30:00] end   e181_fmt exit=1 (0 min)
+[08:30:00] start e181_lc_t
+[08:30:04] stopped orchestrate5 and e181_g1 (E18.1 training failed: checkpoint recompute mismatch)
+[08:32:30] orchestrate6 start (train_lora backward under the same SDPA backends)
+[08:32:30] queue start cloud/jobs_e181.txt
+[08:32:30] skip  e181_sd (already finished)
+[08:32:30] skip  e181_data (already finished)
+[08:32:30] start e181_train
+[10:49:59] end   p6b_base exit=0 (209 min)
+[10:49:59] queue done cloud/jobs_p6b_base.txt
+[10:57:37] end   e181_train exit=0 (145 min)
+[10:57:37] queue done cloud/jobs_e181.txt
+[10:57:40] queue start cloud/jobs_e181_g1.txt
+[10:57:40] start e181_fmt
+[10:58:04] queue start cloud/jobs_e181_g0.txt
+[10:58:04] start e181_mc_t
+[11:07:51] end   e181_fmt exit=0 (10 min)
+[11:07:51] start e181_lc_t
+[12:04:43] orchestrate7 replaces orchestrate6 (no-self-distill ablation, top priority)
+[12:12:33] paused e181_g0
+[12:12:33] queue start cloud/jobs_nosd.txt
+[12:12:33] start nosd_train
+[12:16:56] cancelled nosd (user: format misses are not caused by self-distillation; E18 scores the same)
+[12:17:09] queue start cloud/jobs_e181_g0.txt
+[12:17:09] start e181_mc_t
+[12:59:24] orchestrate8 replaces orchestrate7 (Gemma 3 second family)
+[14:08:45] end   e181_mc_t exit=0 (111 min)
+[14:08:45] start e181_mc_tj
+[14:10:11] end   e181_lc_t exit=0 (182 min)
+[14:10:11] start e181_lc_tj
+[14:12:38] end   e181_lc_tj exit=0 (2 min)
+[14:12:38] queue done cloud/jobs_e181_g1.txt
+[14:14:08] end   e181_mc_tj exit=0 (5 min)
+[14:14:08] queue done cloud/jobs_e181_g0.txt
+[14:14:27] queue start cloud/jobs_g12a.txt
+[14:14:27] start g12_ext
+[14:14:27] queue start cloud/jobs_judge.txt
+[14:14:27] start judge_ext
+[14:24:58] end   judge_ext exit=0 (10 min)
+[14:24:58] start judge_ext2
+[14:25:20] end   judge_ext2 exit=0 (0 min)
+[14:25:20] start judge_lc
+[14:25:30] end   judge_lc exit=0 (0 min)
+[14:25:30] start judge_mem
+[14:31:09] end   judge_mem exit=0 (5 min)
+[14:31:09] queue done cloud/jobs_judge.txt
+[14:31:32] queue start cloud/jobs_g12b.txt
+[14:31:32] start g12_lc
+[15:29:11] end   g12_lc exit=0 (57 min)
+[15:29:11] start g12_mem
+[15:46:32] end   g12_mem exit=0 (17 min)
+[15:46:32] start g12_logs
+[15:53:48] end   g12_logs exit=0 (7 min)
+[15:53:48] start g12_agent
+[15:58:59] end   g12_agent exit=0 (5 min)
+[15:58:59] start g12_exteval
+[16:10:35] end   g12_exteval exit=1 (11 min)
+[16:10:35] queue done cloud/jobs_g12b.txt
+[16:11:30] queue start cloud/jobs_g12b.txt
+[16:11:30] skip  g12_lc (already finished)
+[16:11:30] skip  g12_mem (already finished)
+[16:11:30] skip  g12_logs (already finished)
+[16:11:30] skip  g12_agent (already finished)
+[16:11:30] start g12_exteval
+[16:20:59] end   g12_ext exit=0 (126 min)
+[16:20:59] start g12_e15
+[16:27:40] end   g12_e15 exit=0 (6 min)
+[16:27:40] start g12_cot_hf
+[16:32:53] end   g12_cot_hf exit=0 (5 min)
+[16:32:53] queue done cloud/jobs_g12a.txt
+[16:33:06] queue start cloud/jobs_g27.txt
+[16:33:06] start g27_wait
+[16:51:08] end   g12_exteval exit=0 (39 min)
+[16:51:08] queue done cloud/jobs_g12b.txt
+[16:51:37] end   g27_wait exit=0 (18 min)
+[16:51:37] start g27_ext
+[16:54:48] end   g27_ext exit=1 (3 min)
+[16:54:48] start g27_lc
+[16:55:00] paused g27 (vLLM 27B failed to start; diagnosing)
+[16:55:12] queue start cloud/jobs_v32.txt
+[16:55:12] skip  v32_ext (already finished)
+[16:55:12] skip  v32_judge_ext (already finished)
+[16:55:12] skip  v32_judge_ext2 (already finished)
+[16:55:12] skip  v32_lc (already finished)
+[16:55:12] skip  v32_mem (already finished)
+[16:55:12] skip  v32_logs (already finished)
+[16:55:12] skip  v32_agent (already finished)
+[16:55:12] start v32_exteval
+[16:55:43] orchestrate9 replaces orchestrate8 (27B after the 32B rerun)
+[17:57:14] end   v32_exteval exit=0 (62 min)
+[17:57:14] skip  v32_e15 (already finished)
+[17:57:14] skip  v32_cot_hf (already finished)
+[17:57:14] queue done cloud/jobs_v32.txt
+[17:57:15] queue start cloud/jobs_g27.txt
+[17:57:15] skip  g27_wait (already finished)
+[17:57:15] start g27_ext
+[21:19:38] end   g27_ext exit=0 (202 min)
+[21:19:38] start g27_lc
+[21:57:49] orchestrate10 replaces orchestrate9 (8B E18.1 after 27B + judge)
+[22:52:43] end   g27_lc exit=0 (93 min)
+[22:52:43] start g27_mem
+[23:21:00] end   g27_mem exit=0 (28 min)
+[23:21:00] start g27_logs
+[23:32:01] end   g27_logs exit=0 (11 min)
+[23:32:01] start g27_agent
+[23:39:20] end   g27_agent exit=0 (7 min)
+[23:39:20] start g27_exteval
+[00:45:06] end   g27_exteval exit=0 (65 min)
+[00:45:06] start g27_e15
+[00:55:49] end   g27_e15 exit=0 (10 min)
+[00:55:49] start g27_cot_hf
+[01:06:06] end   g27_cot_hf exit=0 (10 min)
+[01:06:06] queue done cloud/jobs_g27.txt
+[01:06:25] queue start cloud/jobs_judge2.txt
+[01:06:25] start judge2_ext
+[01:12:01] end   judge2_ext exit=0 (5 min)
+[01:12:01] start judge2_ext2
+[01:14:57] end   judge2_ext2 exit=0 (2 min)
+[01:14:57] start judge2_lc
+[01:16:20] end   judge2_lc exit=0 (1 min)
+[01:16:20] start judge2_mem
+[01:20:15] end   judge2_mem exit=0 (3 min)
+[01:20:15] queue done cloud/jobs_judge2.txt
+[01:20:31] queue start cloud/jobs_q8a.txt
+[01:20:31] queue start cloud/jobs_q8b.txt
+[01:20:31] start q8_sd
+[01:20:31] start b8_lc_t
+[01:28:56] end   q8_sd exit=0 (8 min)
+[01:28:56] start q8_data
+[01:29:02] end   q8_data exit=0 (0 min)
+[01:29:02] start q8_train
+[03:54:40] end   b8_lc_t exit=0 (154 min)
+[03:54:40] start b8_mc_t
+[04:47:45] end   q8_train exit=0 (198 min)
+[04:47:45] start q8_merge
+[04:48:14] end   q8_merge exit=0 (0 min)
+[04:48:14] start e8_lc_t
+[05:57:17] end   b8_mc_t exit=0 (122 min)
+[05:57:17] start h4_base
+[06:14:53] end   h4_base exit=0 (17 min)
+[06:14:53] start h4_base_t
+[06:56:52] end   e8_lc_t exit=0 (128 min)
+[06:56:52] start e8_lc_tj
+[06:58:16] end   e8_lc_tj exit=0 (1 min)
+[06:58:17] start h4_merge
+[06:58:37] end   h4_merge exit=0 (0 min)
+[06:58:37] start h4_e181_t
+[08:02:02] end   h4_e181_t exit=0 (63 min)
+[08:02:02] start h4_e181_lt
+[08:03:58] end   h4_base_t exit=0 (109 min)
+[08:03:58] start b8_gen
+[08:07:09] paused q8a for the presence_penalty diagnostic
+[08:07:09] queue start cloud/jobs_diag.txt
+[08:07:09] start d_pp1.5
+[08:27:57] end   d_pp1.5 exit=0 (20 min)
+[08:27:57] start x2_ev1
+[08:31:09] end   x2_ev1 exit=0 (3 min)
+[08:31:09] start x2_harv
+[08:45:04] end   x2_harv exit=0 (13 min)
+[08:45:04] start x2_gate
+[08:45:06] end   x2_gate exit=1 (0 min)
+[08:45:06] start x2_data
+[08:45:06] end   x2_data exit=1 (0 min)
+[08:45:06] start x2_train
+[08:45:21] end   x2_train exit=0 (0 min)
+[08:45:21] start x2_merge
+[08:45:46] stopped jobs_diag: E18.2 stop rule (4 looping thoughts < 50), waiting for the user
+[08:45:47] queue start cloud/jobs_q8a.txt
+[08:45:47] skip  q8_sd (already finished)
+[08:45:47] skip  q8_data (already finished)
+[08:45:47] skip  q8_train (already finished)
+[08:45:47] skip  q8_merge (already finished)
+[08:45:47] skip  e8_lc_t (already finished)
+[08:45:47] skip  e8_lc_tj (already finished)
+[08:45:47] skip  h4_merge (already finished)
+[08:45:47] skip  h4_e181_t (already finished)
+[08:45:47] queue done cloud/jobs_q8a.txt
+[08:46:50] queue start cloud/jobs_diag2.txt
+[08:46:50] start d2_greedy
+[08:51:58] end   d2_greedy exit=0 (5 min)
+[08:51:58] start d2_long
+[09:13:10] end   b8_gen exit=0 (69 min)
+[09:13:10] start b8_gsm
+[09:18:25] end   b8_gsm exit=0 (5 min)
+[09:18:26] start q8_wait
+[09:18:26] end   q8_wait exit=0 (0 min)
+[09:18:26] start h4_e181_lt
+[09:21:40] end   d2_long exit=0 (29 min)
+[09:21:40] queue done cloud/jobs_diag2.txt
+[09:22:02] queue start cloud/jobs_diag2.txt
+[09:22:02] skip  d2_greedy (already finished)
+[09:22:02] skip  d2_long (already finished)
+[09:22:02] start d2_probe
+[09:23:04] queue start cloud/jobs_c.txt
+[09:23:04] start c_e8_lc
+[09:41:23] orchestrate10 done
+[09:41:25] paused q8b (h4_e181_lt resumable) so LoCoMo official runs first (user: top priority)
+[09:41:25] queue start cloud/jobs_q8b.txt
+[09:41:25] skip  b8_lc_t (already finished)
+[09:41:25] skip  b8_mc_t (already finished)
+[09:41:25] skip  h4_base (already finished)
+[09:41:25] skip  h4_base_t (already finished)
+[09:41:25] skip  b8_gen (already finished)
+[09:41:25] skip  b8_gsm (already finished)
+[09:41:25] skip  q8_wait (already finished)
+[09:41:25] start lo_b4
+[09:46:53] end   lo_b4 exit=0 (5 min)
+[09:46:53] start lo_b4t
+[10:27:26] end   lo_b4t exit=0 (40 min)
+[10:27:26] start lo_e4t
+[10:52:53] end   lo_e4t exit=0 (25 min)
+[10:52:53] start lo_e4
+[10:56:14] end   lo_e4 exit=0 (3 min)
+[10:56:14] start loc_b4
+[11:01:39] end   loc_b4 exit=0 (5 min)
+[11:01:39] start loc_b4t
+[11:23:15] end   c_e8_lc exit=0 (120 min)
+[11:23:15] start c_b8_lc
+[11:41:51] end   loc_b4t exit=0 (40 min)
+[11:41:51] start loc_e4t
+[12:03:37] end   loc_e4t exit=0 (21 min)
+[12:03:37] start loc_e4
+[12:07:01] end   loc_e4 exit=0 (3 min)
+[12:07:01] start lme_b4_d
+[12:32:37] end   lme_b4_d exit=0 (25 min)
+[12:32:37] start lme_b4t_d
+[13:11:45] end   lme_b4t_d exit=0 (39 min)
+[13:11:45] start lme_e4t_d
+[13:47:08] end   lme_e4t_d exit=0 (35 min)
+[13:47:08] start lme_e4_d
+[13:54:53] end   c_b8_lc exit=0 (151 min)
+[13:54:53] start c_lc_j
+[13:56:17] end   c_lc_j exit=0 (1 min)
+[13:56:17] start c_e8_mc
+[14:11:42] end   lme_e4_d exit=0 (24 min)
+[14:11:42] start lme_b4_r
+[14:37:37] end   lme_b4_r exit=0 (25 min)
+[14:37:37] start lme_b4t_r
+[15:18:08] end   lme_b4t_r exit=0 (40 min)
+[15:18:08] start lme_e4t_r
+[15:21:20] end   c_e8_mc exit=0 (85 min)
+[15:21:20] start c_mc_j
+[15:24:25] end   c_mc_j exit=0 (3 min)
+[15:24:25] start c_e8_ch
+[15:55:04] end   lme_e4t_r exit=0 (36 min)
+[15:55:04] start lme_e4_r
+[16:19:34] end   lme_e4_r exit=0 (24 min)
+[16:19:34] start lme_judge
+[16:35:19] end   lme_judge exit=0 (15 min)
+[16:35:19] start e8_gen
+[17:31:01] end   e8_gen exit=0 (55 min)
+[17:31:01] start e8_gsm
+[17:36:19] end   e8_gsm exit=0 (5 min)
+[17:36:19] start h4_e181_lt
+[17:37:01] end   c_e8_ch exit=0 (132 min)
+[17:37:01] start e8_gen_t
+[17:57:40] end   h4_e181_lt exit=0 (21 min)
+[17:57:40] start c8_base
+[18:25:22] end   c8_base exit=0 (27 min)
+[18:25:22] start c8_base_t
+[21:46:54] end   c8_base_t exit=0 (201 min)
+[21:46:54] start fj_ext
+[21:51:17] end   fj_ext exit=0 (4 min)
+[21:51:17] start fj_ext2
+[21:51:25] end   fj_ext2 exit=0 (0 min)
+[21:51:25] start fj_lc
+[21:51:35] end   fj_lc exit=0 (0 min)
+[21:51:35] start fj_ch
+[21:58:17] end   e8_gen_t exit=0 (261 min)
+[21:58:17] start b8_gen_t
+[22:03:44] end   fj_ch exit=0 (12 min)
+[22:03:44] start g_pp_b8
+[22:35:55] end   g_pp_b8 exit=0 (32 min)
+[22:35:55] start g_pp_e8
+[23:06:06] end   g_pp_e8 exit=0 (30 min)
+[23:06:06] queue done cloud/jobs_q8b.txt
+[23:18:45] queue start cloud/jobs_lme8.txt
+[23:18:45] start l8_b_d
+[23:52:55] end   l8_b_d exit=0 (34 min)
+[23:52:55] start l8_b_r
+[00:26:29] end   l8_b_r exit=0 (33 min)
+[00:26:29] start l8_bt_d
+[00:51:55] orchestrate_fin: waiting for GPU0 (jobs_c)
+[01:20:49] end   l8_bt_d exit=0 (54 min)
+[01:20:49] start l8_bt_r
+[02:15:23] end   l8_bt_r exit=0 (54 min)
+[02:15:23] start l8_ep_d
+[02:41:24] end   b8_gen_t exit=0 (283 min)
+[02:41:24] queue done cloud/jobs_c.txt
+[02:41:29] orchestrate_fin: start queue fin0
+[02:41:29] queue start cloud/jobs_fin0.txt
+[02:41:29] start f14_mc_t
+[02:58:38] end   l8_ep_d exit=0 (43 min)
+[02:58:38] start l8_ep_r
+[03:43:11] end   l8_ep_r exit=0 (44 min)
+[03:43:11] start l8_judge
+[03:55:51] end   l8_judge exit=0 (12 min)
+[03:55:51] queue done cloud/jobs_lme8.txt
+[03:56:08] orchestrate_fin: GPU1 free
+[03:56:30] end   f14_mc_t exit=0 (75 min)
+[03:56:30] start f14_judge
+[03:57:44] end   f14_judge exit=0 (1 min)
+[03:57:44] queue done cloud/jobs_fin0.txt
+[03:58:08] orchestrate_fin: start queue fin2
+[03:58:08] queue start cloud/jobs_fin2.txt
+[03:58:08] start f32_mc_t
+[05:56:04] end   f32_mc_t exit=0 (117 min)
+[05:56:04] queue done cloud/jobs_fin2.txt
+[05:56:17] orchestrate_fin: no time for jobs_fin2x
+[05:56:17] orchestrate_fin: start queue fin0
+[05:56:17] queue start cloud/jobs_fin0.txt
+[05:56:17] skip  f14_mc_t (already finished)
+[05:56:17] skip  f14_judge (already finished)
+[05:56:17] queue done cloud/jobs_fin0.txt
+[05:56:22] orchestrate_fin: start queue fin0x
+[05:56:22] queue start cloud/jobs_fin0x.txt
+[05:56:22] start f14_mc_x
+[06:05:28] orchestrate_fin: stopped queue fin0x
+[06:05:28] orchestrate_fin: start queue finj
+[06:05:28] queue start cloud/jobs_finj.txt
+[06:05:28] start finj_mc
+[06:06:48] end   finj_mc exit=0 (1 min)
+[06:06:48] queue done cloud/jobs_finj.txt
+[06:07:03] orchestrate_fin: GPU work over: compute stats (diag_think_scale.py) and upload (CLOUD_PLAN P8, 06:30-07:30)
+[06:37:22] user 06:40: resume 14B retr (jobs_fin0x) in the last 50 min; hard stop 07:10
+[06:37:22] queue start cloud/jobs_fin0x.txt
+[06:37:22] start f14_mc_x
+[07:08:01] end   f14_mc_x exit=0 (30 min)
+[07:08:01] start f14x_judge
+[07:08:41] end   f14x_judge exit=0 (0 min)
+[07:08:41] queue done cloud/jobs_fin0x.txt

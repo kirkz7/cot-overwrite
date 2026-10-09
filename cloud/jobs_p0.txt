@@ -1,0 +1,7 @@
+# P0: port verification on Qwen3-4B (CLOUD_PLAN.md section 4.5). Gate before any 32B run:
+# per-row same answer >= 95% vs reference/desktop/, every per-condition accuracy within 2 points.
+# Fresh runs go into results/ (never copy the reference files there, or the runs skip every item).
+p0_logs_q4      run_app_logs.py --n 100 --models Qwen3-4B
+p0_e15_q4       explore_order_rule.py run --models Qwen3-4B
+p0_cmp_logs     compare_reference.py logs
+p0_cmp_e15      compare_reference.py e15

@@ -1,0 +1,15 @@
+[08:31:09] vllm :8000 already serving /root/cot-overwrite/runs/e181-q8/merged
+0 / 1000
+100 / 1000
+200 / 1000
+300 / 1000
+400 / 1000
+500 / 1000
+600 / 1000
+700 / 1000
+800 / 1000
+900 / 1000
+harvest 8b-e181: n 1000 | unfinished 0.4% | looping 0.4% | correct 80.7%
+by qtype: {'many_asof': {'finished': 100.0, 'looping': 0.0, 'correct': 60.1}, 'many_choice_sent': {'finished': 100.0, 'looping': 0.0, 'correct': 91.2}, 'many_current': {'finished': 100.0, 'looping': 0.0, 'correct': 93.2}, 'many_first': {'finished': 100.0, 'looping': 0.0, 'correct': 85.1}, 'many_history': {'finished': 97.6, 'looping': 2.4, 'correct': 72.6}, 'many_previous': {'finished': 100.0, 'looping': 0.0, 'correct': 71.6}}
+by records: {7: {'looping': 0.0, 'correct': 85.7}, 8: {'looping': 0.0, 'correct': 81.4}, 9: {'looping': 0.0, 'correct': 82.0}, 10: {'looping': 0.0, 'correct': 81.8}, 11: {'looping': 0.0, 'correct': 79.2}, 12: {'looping': 0.8, 'correct': 82.5}, 13: {'looping': 0.9, 'correct': 75.0}, 14: {'looping': 1.6, 'correct': 77.3}}
+data_train/ul_loops8b-e181.jsonl 4 rows | penalised characters share 0.816

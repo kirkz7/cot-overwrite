@@ -1,0 +1,3 @@
+# 10-07 04:55: 14B bf16 split over both cards (no shared jobs). GPU1: extmem, then the external benchmarks.
+v14_ext       CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 explore_extmem.py run --tasks memconf,mabcr,locomo,mabcr32k --models Qwen3-14B-bf16
+v14_exteval   CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 run_ext_eval.py run --benches mab,tot,tempreason,babilong,gsm8k --models Qwen3-14B-bf16

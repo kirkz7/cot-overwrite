@@ -1,0 +1,4 @@
+# CLOUD_PLAN P8, GPU0 (cloud/orchestrate_fin.sh): while GPU1 is still busy before 05:00, when the 32B run is skipped, and in
+# any generation time left before 06:05. Qwen3-14B bf16, thinking on, MemConflict retrieval order (the third order).
+f14_mc_x   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_TP=1 COT_VLLM_MODEL=Qwen/Qwen3-14B cloud/run_extmem_conc.py --models Qwen3-14B-bf16 --tasks memconf --conds retr --think --budget 1024 --conc 6
+f14x_judge CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_extmem.py judge --parse v2

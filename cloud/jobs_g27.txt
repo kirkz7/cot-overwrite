@@ -1,0 +1,10 @@
+# Second family: Gemma-3-27B-it bf16 on vLLM, two cards (tensor parallel); CoT on HF (two-card pipeline).
+g27_wait     cloud/wait_queue.py g12b
+g27_ext      COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 explore_extmem.py run --tasks memconf,mabcr,locomo,mabcr32k --models Gemma-3-27B
+g27_lc       COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 explore_longconv.py run --models Gemma-3-27B
+g27_mem      COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 run_app_memory.py read --models Gemma-3-27B
+g27_logs     COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 run_app_logs.py --n 100 --models Gemma-3-27B
+g27_agent    COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 run_app_agent.py --n 150 --models Gemma-3-27B
+g27_exteval  COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 run_ext_eval.py run --benches mab,tot,tempreason,babilong,gsm8k --models Gemma-3-27B
+g27_e15      COT_ENGINE=vllm COT_VLLM_MODEL=google/gemma-3-27b-it COT_VLLM_TP=2 COT_VLLM_MAXLEN=49152 explore_order_rule.py run --models Gemma-3-27B
+g27_cot_hf   COT_DEVICE_MAP=auto run_ext_eval.py run --benches cot --models Gemma-3-27B

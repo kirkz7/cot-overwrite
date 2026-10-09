@@ -86,7 +86,7 @@ def stop_ids(tok):
     """End-of-turn ids of this tokenizer (only tokens that really exist in its vocabulary)."""
     if id(tok) not in _STOPS:
         vocab = tok.get_vocab()
-        _STOPS[id(tok)] = {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>")
+        _STOPS[id(tok)] = {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>", "<end_of_turn>")
                                                 if t in vocab}
     return _STOPS[id(tok)]
 
@@ -103,6 +103,13 @@ def generate_think(tok, model, prompt, max_new, key):
     """E18 thinking mode, decoded as the Qwen3 model card recommends for thinking (greedy decoding there "can lead to
     endless repetitions"; seen on PersonaMem 10-06). Seeded from the item key, so every run is reproducible."""
     import zlib
+    if getattr(model, "is_vllm", False):   # cloud: the same sampling on a vLLM server, seeded per item
+        kw = {k: v for k, v in QWEN_THINK_SAMPLING.items() if k != "do_sample"}
+        if os.environ.get("COT_PRESENCE_PENALTY"):   # option C (cloud 10-08); the file tag carries "~pp<value>"
+            kw["presence_penalty"] = float(os.environ["COT_PRESENCE_PENALTY"])
+        ids = tok(prompt, add_special_tokens=False).input_ids
+        out = model.sample(ids, max_new, stop_ids(tok), zlib.crc32(str(key).encode()), **kw)
+        return tok.decode(out, skip_special_tokens=True).strip()
     ids = tok(prompt, return_tensors="pt", add_special_tokens=False).input_ids.cuda()
     torch.manual_seed(zlib.crc32(str(key).encode()))
     out = model.generate(ids, attention_mask=torch.ones_like(ids), max_new_tokens=max_new, eos_token_id=sorted(stop_ids(tok)),

@@ -1,0 +1,3 @@
+# P6 (CLOUD_PLAN.md): no-harm suite, base Qwen3-4B, HF, thinking off, explore_general settings unchanged. GPU0.
+p6_gen_base   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_general.py run --models Qwen3-4B
+p6_gsm_base   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 run_ext_eval.py run --models Qwen3-4B --benches gsm8k

@@ -1,0 +1,3 @@
+# P1b on GPU1: the sets added after 10-04 (MemConflict / LoCoMo / MAB-CR three orders; E15), Qwen3-14B 4-bit on HF.
+p1b_ext_q14    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py run --models Qwen3-14B
+p1b_e15_q14    CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_order_rule.py run --models Qwen3-14B

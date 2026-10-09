@@ -1,0 +1,9 @@
+data_train/bind4_decoupled_train.jsonl 3974 0B46429FD80CB99A
+  kind {'reason': 277, 'temporal': 1481, 'choice': 237, 'single': 143, 'choice_sent': 196, 'absent': 166} | think {False: 1234, True: 1266} | general rows 474 (11.9% of train)
+  every final contains its needed strings: True | visible replies with a list (bind + E12 rows): 0
+data_train/bind4_decoupled_val.jsonl 300 12CF83BB5C3139FA
+  kind {'temporal': 160, 'single': 14, 'choice_sent': 22, 'reason': 37, 'absent': 33, 'choice': 34} | think {True: 148, False: 152} | general rows 0 
+  every final contains its needed strings: True | visible replies with a list (bind + E12 rows): 0
+data_train/bind4_decoupled_dev.jsonl 300 CDFADCCFC7031F42
+  kind {'reason': 34, 'temporal': 179, 'absent': 25, 'single': 18, 'choice_sent': 17, 'choice': 27} | think {False: 141, True: 159} | general rows 0 
+  every final contains its needed strings: True | visible replies with a list (bind + E12 rows): 0

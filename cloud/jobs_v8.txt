@@ -1,0 +1,9 @@
+# Qwen3-8B bf16 on vLLM, GPU0 :8000, the same suite as 32B (user 10-06 21:30: 8B / 14B / 32B scale curve, one engine).
+v8_ext       CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_extmem.py run --tasks memconf,mabcr,locomo,mabcr32k --models Qwen3-8B-bf16
+v8_lc        CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_longconv.py run --models Qwen3-8B-bf16
+v8_mem       CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 run_app_memory.py read --models Qwen3-8B-bf16
+v8_logs      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 run_app_logs.py --n 100 --models Qwen3-8B-bf16
+v8_agent     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 run_app_agent.py --n 150 --models Qwen3-8B-bf16
+v8_exteval   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 run_ext_eval.py run --benches mab,tot,tempreason,babilong,gsm8k --models Qwen3-8B-bf16
+v8_e15       CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-8B COT_VLLM_TP=1 explore_order_rule.py run --models Qwen3-8B-bf16
+v8_cot_hf    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 run_ext_eval.py run --benches cot --models Qwen3-8B-bf16

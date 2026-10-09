@@ -1,0 +1,6 @@
+[08:27:57] vllm :8000 already serving /root/cot-overwrite/runs/e181-q8/merged
+0 / 200
+100 / 200
+eval 8b-e181: n 200 | unfinished 0.5% | looping 0.5% | correct 83.5%
+by qtype: {'many_asof': {'finished': 100.0, 'looping': 0.0, 'correct': 67.6}, 'many_choice_sent': {'finished': 100.0, 'looping': 0.0, 'correct': 94.4}, 'many_current': {'finished': 100.0, 'looping': 0.0, 'correct': 96.0}, 'many_first': {'finished': 100.0, 'looping': 0.0, 'correct': 72.2}, 'many_history': {'finished': 96.9, 'looping': 3.1, 'correct': 75.0}, 'many_previous': {'finished': 100.0, 'looping': 0.0, 'correct': 83.3}}
+by records: {7: {'looping': 0.0, 'correct': 92.6}, 8: {'looping': 0.0, 'correct': 88.5}, 9: {'looping': 0.0, 'correct': 88.2}, 10: {'looping': 0.0, 'correct': 85.7}, 11: {'looping': 0.0, 'correct': 83.9}, 12: {'looping': 0.0, 'correct': 81.5}, 13: {'looping': 0.0, 'correct': 76.2}, 14: {'looping': 3.3, 'correct': 73.3}}

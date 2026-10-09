@@ -1,0 +1,4 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:02,  3.99it/s]Fetching 12 files:  42%|████▏     | 5/12 [00:00<00:00, 11.11it/s]Fetching 12 files:  58%|█████▊    | 7/12 [00:19<00:00, 11.11it/s]Fetching 12 files:  67%|██████▋   | 8/12 [08:08<05:10, 77.56s/it]Fetching 12 files:  75%|███████▌  | 9/12 [18:16<08:47, 175.87s/it]Fetching 12 files:  83%|████████▎ | 10/12 [20:34<05:35, 167.87s/it]Fetching 12 files:  92%|█████████▏| 11/12 [20:35<02:09, 129.54s/it]Fetching 12 files: 100%|██████████| 12/12 [20:38<00:00, 98.19s/it] Fetching 12 files: 100%|██████████| 12/12 [20:38<00:00, 103.20s/it]
+model Qwen/Qwen3-8B main -> b968826d9c46dd6066d109eabc6255188de91218
+exit=0

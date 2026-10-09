@@ -1,0 +1,12 @@
+e15: reference 900 rows, fresh 900 rows, matched 900
+  same answer: 94.8%  (pass >= 95)
+                         ref  fresh  diff
+qtype          order                     
+current        chrono   44.7   44.7   0.0
+               reverse  41.3   42.0   0.7
+earliest       chrono   72.7   73.3   0.7
+               reverse  23.3   22.7  -0.7
+earliest_first chrono   78.7   79.3   0.7
+               reverse  16.0   17.3   1.3
+  largest per-condition difference: 1.3 points  (pass <= 2)
+  PORT CHECK: FAIL - find the cause before running 32B

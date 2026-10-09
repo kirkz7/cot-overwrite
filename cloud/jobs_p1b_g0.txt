@@ -1,0 +1,3 @@
+# P1b (CLOUD_PLAN.md, user 10-06): Qwen3-14B with the desktop's 4-bit nf4 config on HF, so it joins the desktop's 14B
+# results. Runs after the 32B queue (32B has priority); two cards used side by side (this file GPU0, jobs_p1b_g1.txt GPU1).
+p1b_lc_q14     CUDA_VISIBLE_DEVICES=0 explore_longconv.py run --models Qwen3-14B

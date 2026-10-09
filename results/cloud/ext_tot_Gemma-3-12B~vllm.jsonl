@@ -1,0 +1,418 @@
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R11 of E57 immediately after E95 was the R11 of E57.", "gold": "E76", "response": "E98", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R11 of E57 immediately after E95 was the R11 of E57.", "gold": "E76", "response": "E6", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R96 of E59 immediately before E92?", "gold": "E11", "response": "E17", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R96 of E59 immediately before E92?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R82 of E60 immediately before E27?", "gold": "E98", "response": "E95", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R82 of E60 immediately before E27?", "gold": "E98", "response": "E95", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R76 of E6 immediately before E90 was the R76 of E6.", "gold": "E45", "response": "E76", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R76 of E6 immediately before E90 was the R76 of E6.", "gold": "E45", "response": "E36", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R20 of E76 immediately after E26 was the R20 of E76.", "gold": "E6", "response": "E90", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R20 of E76 immediately after E26 was the R20 of E76.", "gold": "E6", "response": "E30", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R53 of the entity E16 immediately before E69?", "gold": "E11", "response": "E30", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R53 of the entity E16 immediately before E69?", "gold": "E11", "response": "E30", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R88 of E69 immediately before E92 was the R88 of E69.", "gold": "E16", "response": "E69", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R88 of E69 immediately before E92 was the R88 of E69.", "gold": "E16", "response": "E42", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R35 of the entity E21 immediately after E94?", "gold": "E98", "response": "E74", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R35 of the entity E21 immediately after E94?", "gold": "E98", "response": "E45", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R14 of the entity E30 immediately after E36?", "gold": "E59", "response": "E11", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R14 of the entity E30 immediately after E36?", "gold": "E59", "response": "E10", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E22, which entity was the R88 of E25?", "gold": "E16", "response": "E16", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E22, which entity was the R88 of E25?", "gold": "E16", "response": "E22", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R63 of E69 in 1982?", "gold": "E92", "response": "E22", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R63 of E69 in 1982?", "gold": "E92", "response": "E33", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1988, E41 was the R53 of which entity?", "gold": "E22", "response": "E30", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1988, E41 was the R53 of which entity?", "gold": "E22", "response": "E33", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R11 of E43 in 1909?", "gold": "E44", "response": "E36", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R11 of E43 in 1909?", "gold": "E44", "response": "E30", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E36 was the R20 of which entity in 1922?", "gold": "E59", "response": "E10", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E36 was the R20 of which entity in 1922?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1965, E69 was the R90 of which entity?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1965, E69 was the R90 of which entity?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E59 was the R90 of one of the entities in 1970. Find that entity.", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E59 was the R90 of one of the entities in 1970. Find that entity.", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R90 of E37 in 1941?", "gold": "E69", "response": "E41", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R90 of E37 in 1941?", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R11 of E42 in year 1964.", "gold": "E59", "response": "E22", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R11 of E42 in year 1964.", "gold": "E59", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E24 was the R88 of which entity in 2013?", "gold": "E22", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E24 was the R88 of which entity in 2013?", "gold": "E22", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R19 of E37 in 1980?", "gold": "E36", "response": "E10", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R19 of E37 in 1980?", "gold": "E36", "response": "E30", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R90 of entity E11.", "gold": "E24", "response": "E59", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R90 of entity E11.", "gold": "E24", "response": "E59", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R85 of E25?", "gold": "E69", "response": "E16", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R85 of E25?", "gold": "E69", "response": "E33", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the last R20 of E27.", "gold": "E6", "response": "E57", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the last R20 of E27.", "gold": "E6", "response": "E95", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R90 of E22?", "gold": "E16", "response": "E30", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R90 of E22?", "gold": "E16", "response": "E16", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the last R20 of E36.", "gold": "E21", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the last R20 of E36.", "gold": "E21", "response": "E27", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R20 of E26?", "gold": "E43", "response": "E82", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R20 of E26?", "gold": "E43", "response": "E82", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the last that was the R63 of E17?", "gold": "E42", "response": "E30", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the last that was the R63 of E17?", "gold": "E42", "response": "E30", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R17 of E11?", "gold": "E92", "response": "E92", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R17 of E11?", "gold": "E92", "response": "E92", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the last that was the R20 of E74?", "gold": "E6", "response": "E6", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the last that was the R20 of E74?", "gold": "E6", "response": "E76", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R90 of E24?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R90 of E24?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E59, which entity was the R20 of E6?", "gold": "E94", "response": "E59", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E59, which entity was the R20 of E6?", "gold": "E94", "response": "E94", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E30, which entity was the R20 of E59?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E30, which entity was the R20 of E59?", "gold": "E82", "response": "E59", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E60, which entity was the R14 of E21?", "gold": "E43", "response": "E6", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E60, which entity was the R14 of E21?", "gold": "E43", "response": "E63", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R90 of E69 immediately after E59 was the R90 of E69.", "gold": "E11", "response": "E92", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R90 of E69 immediately after E59 was the R90 of E69.", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R63 of the entity E75 immediately before E41?", "gold": "E94", "response": "E33", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R63 of the entity E75 immediately before E41?", "gold": "E94", "response": "E33", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of the entity E69 immediately after E74?", "gold": "E37", "response": "E41", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of the entity E69 immediately after E74?", "gold": "E37", "response": "E37", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R82 of E59 immediately after E30?", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R82 of E59 immediately after E30?", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R20 of the entity E7 immediately before E74?", "gold": "E98", "response": "E59", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R20 of the entity E7 immediately before E74?", "gold": "E98", "response": "E21", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R88 of E92 immediately after E59?", "gold": "E11", "response": "E24", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R88 of E92 immediately after E59?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E17, which entity was the R90 of E37?", "gold": "E16", "response": "E16", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E17, which entity was the R90 of E37?", "gold": "E16", "response": "E16", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R17 of E69 in year 1932.", "gold": "E42", "response": "E92", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R17 of E69 in year 1932.", "gold": "E42", "response": "E92", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R82 of E76 in year 1971.", "gold": "E44", "response": "E60", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R82 of E76 in year 1971.", "gold": "E44", "response": "E60", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R17 of E69 in year 1921.", "gold": "E37", "response": "E24", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R17 of E69 in year 1921.", "gold": "E37", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E92 was the R90 of which entity in 1958?", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E92 was the R90 of which entity in 1958?", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 2011, which entity was the R53 of E69?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 2011, which entity was the R53 of E69?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R90 of E69 in 1916?", "gold": "E92", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R90 of E69 in 1916?", "gold": "E92", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R20 of E6 in 2011?", "gold": "E90", "response": "E95", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R20 of E6 in 2011?", "gold": "E90", "response": "E60", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R17 of E11 in year 2005.", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R17 of E11 in year 2005.", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R88 of E42 in year 1968.", "gold": "E69", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R88 of E42 in year 1968.", "gold": "E69", "response": "E42", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1949, which entity was the R11 of E43?", "gold": "E59", "response": "E81", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1949, which entity was the R11 of E43?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R35 of E91?", "gold": "E57", "response": "E57", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R35 of E91?", "gold": "E57", "response": "E63", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R22 of E90?", "gold": "E95", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R22 of E90?", "gold": "E95", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R17 of entity E22.", "gold": "E9", "response": "E9", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R17 of entity E22.", "gold": "E9", "response": "E17", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R53 of entity E33.", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R53 of entity E33.", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the last that was the R88 of E76?", "gold": "E74", "response": "E74", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the last that was the R88 of E76?", "gold": "E74", "response": "E74", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the first R90 of E69.", "gold": "E92", "response": "E33", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the first R90 of E69.", "gold": "E92", "response": "E92", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R22 of E30?", "gold": "E94", "response": "E94", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R22 of E30?", "gold": "E94", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R53 of E69?", "gold": "E92", "response": "E22", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R53 of E69?", "gold": "E92", "response": "E9", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R35 of E21?", "gold": "E7", "response": "E74", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R35 of E21?", "gold": "E7", "response": "E7", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R22 of E21?", "gold": "E76", "response": "E7", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R22 of E21?", "gold": "E76", "response": "E7", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R82 of the entity E6 immediately before E82?", "gold": "E26", "response": "E26", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R82 of the entity E6 immediately before E82?", "gold": "E26", "response": "E27", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R82 of E11 immediately before E60 was the R82 of E11.", "gold": "E30", "response": "E95", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R82 of E11 immediately before E60 was the R82 of E11.", "gold": "E30", "response": "E91", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E33, which entity was the R90 of E69?", "gold": "E11", "response": "E69", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E33, which entity was the R90 of E69?", "gold": "E11", "response": "E69", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R14 of E98 immediately before E43 was the R14 of E98.", "gold": "E82", "response": "E95", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R14 of E98 immediately before E43 was the R14 of E98.", "gold": "E82", "response": "E36", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E11, which entity was the R85 of E74?", "gold": "E25", "response": "E17", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E11, which entity was the R85 of E74?", "gold": "E25", "response": "E41", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of E92 immediately before E42?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of E92 immediately before E42?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R11 of E74 immediately before E92 was the R11 of E74.", "gold": "E11", "response": "E75", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R11 of E74 immediately before E92 was the R11 of E74.", "gold": "E11", "response": "E22", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R82 of the entity E57 immediately before E36?", "gold": "E11", "response": "E95", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R82 of the entity E57 immediately before E36?", "gold": "E11", "response": "E90", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R88 of the entity E22 immediately after E59?", "gold": "E42", "response": "E92", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R88 of the entity E22 immediately after E59?", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of E11 immediately before E33?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of E11 immediately before E33?", "gold": "E22", "response": "E24", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E63 was the R82 of one of the entities in 1926. Find that entity.", "gold": "E10", "response": "E10", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E63 was the R82 of one of the entities in 1926. Find that entity.", "gold": "E10", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E8 was the R76 of which one of the entities in 1968?", "gold": "E91", "response": "E59", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E8 was the R76 of which one of the entities in 1968?", "gold": "E91", "response": "E95", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E91 was the R76 of which entity in 2010?", "gold": "E98", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E91 was the R76 of which entity in 2010?", "gold": "E98", "response": "E36", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R11 of E90 in year 1948.", "gold": "E27", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R11 of E90 in year 1948.", "gold": "E27", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R82 of E60 in year 1976.", "gold": "E91", "response": "E57", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R82 of E60 in year 1976.", "gold": "E91", "response": "E57", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E42 was the R17 of one of the entities in 1917. Find that entity.", "gold": "E33", "response": "E33", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E42 was the R17 of one of the entities in 1917. Find that entity.", "gold": "E33", "response": "E59", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that was the R17 of the entity E92 in 1944.", "gold": "E33", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that was the R17 of the entity E92 in 1944.", "gold": "E33", "response": "E33", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1909, which entity was the R88 of E24?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1909, which entity was the R88 of E24?", "gold": "E11", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1963, which entity was the R76 of E60?", "gold": "E6", "response": "E45", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1963, which entity was the R76 of E60?", "gold": "E6", "response": "E74", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R90 of E92 in year 1945.", "gold": "E41", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R90 of E92 in year 1945.", "gold": "E41", "response": "E9", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R53 of E17?", "gold": "E33", "response": "E9", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R53 of E17?", "gold": "E33", "response": "E59", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the first R35 of E63.", "gold": "E90", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the first R35 of E63.", "gold": "E90", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the last R20 of E57.", "gold": "E95", "response": "E76", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the last R20 of E57.", "gold": "E95", "response": "E76", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R17 of entity E75.", "gold": "E11", "response": "E37", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R17 of entity E75.", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the first R53 of E30.", "gold": "E42", "response": "E74", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the first R53 of E30.", "gold": "E42", "response": "E74", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R17 of entity E11.", "gold": "E69", "response": "E24", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R17 of entity E11.", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R17 of E22?", "gold": "E11", "response": "E24", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R17 of E22?", "gold": "E11", "response": "E22", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the last R22 of E83.", "gold": "E74", "response": "E74", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the last R22 of E83.", "gold": "E74", "response": "E74", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R82 of E63?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R82 of E63?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R90 of E33?", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R90 of E33?", "gold": "E42", "response": "E59", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R90 of the entity E69 immediately after E69?", "gold": "E92", "response": "E69", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R90 of the entity E69 immediately after E69?", "gold": "E92", "response": "E11", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of the entity E69 immediately before E42?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of the entity E69 immediately before E42?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R11 of the entity E59 immediately after E82?", "gold": "E8", "response": "E6", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R11 of the entity E59 immediately after E82?", "gold": "E8", "response": "E6", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E94, which entity was the R20 of E10?", "gold": "E83", "response": "E11", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E94, which entity was the R20 of E10?", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E11, which entity was the R82 of E82?", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E11, which entity was the R82 of E82?", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E91, which entity was the R82 of E59?", "gold": "E11", "response": "E91", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E91, which entity was the R82 of E59?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of E92 immediately before E11?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of E92 immediately before E11?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E82, which entity was the R82 of E76?", "gold": "E11", "response": "E57", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E82, which entity was the R82 of E76?", "gold": "E11", "response": "E82", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R53 of the entity E69 immediately before E33?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R53 of the entity E69 immediately before E33?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R20 of E59 immediately after E95 was the R20 of E59.", "gold": "E83", "response": "E21", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R20 of E59 immediately after E95 was the R20 of E59.", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R17 of E11 in year 1975.", "gold": "E42", "response": "E59", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R17 of E11 in year 1975.", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1990, which entity was the R76 of E59?", "gold": "E36", "response": "E76", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1990, which entity was the R76 of E59?", "gold": "E36", "response": "E6", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E26 was the R14 of which one of the entities in 1934?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E26 was the R14 of which one of the entities in 1934?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R22 of E83 in 1926?", "gold": "E98", "response": "E6", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R22 of E83 in 1926?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that was the R17 of the entity E69 in 2007.", "gold": "E92", "response": "E92", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that was the R17 of the entity E69 in 2007.", "gold": "E92", "response": "E92", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E83 was the R36 of which entity in 1939?", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E83 was the R36 of which entity in 1939?", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that was the R96 of the entity E92 in 2005.", "gold": "E9", "response": "E9", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that was the R96 of the entity E92 in 2005.", "gold": "E9", "response": "E9", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1930, which entity was the R63 of E69?", "gold": "E92", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1930, which entity was the R63 of E69?", "gold": "E92", "response": "No entity", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1967, E76 was the R20 of which entity?", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1967, E76 was the R20 of which entity?", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E92 was the R63 of one of the entities in 1996. Find that entity.", "gold": "E92", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E92 was the R63 of one of the entities in 1996. Find that entity.", "gold": "E92", "response": "E69", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R85 of E92?", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R85 of E92?", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the first R88 of E11.", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the first R88 of E11.", "gold": "E59", "response": "E69", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R82 of E76?", "gold": "E82", "response": "E76", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R82 of E76?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R17 of E69?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R17 of E69?", "gold": "E22", "response": "E24", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R53 of E92?", "gold": "E69", "response": "E37", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R53 of E92?", "gold": "E69", "response": "E41", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R20 of entity E83.", "gold": "E21", "response": "E21", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R20 of entity E83.", "gold": "E21", "response": "E21", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R17 of E92?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R17 of E92?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the first R76 of E83.", "gold": "E44", "response": "E74", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the first R76 of E83.", "gold": "E44", "response": "E26", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R63 of E69?", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R63 of E69?", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R36 of E30?", "gold": "E95", "response": "E98", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R36 of E30?", "gold": "E95", "response": "E95", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R36 of E94 immediately after E63 was the R36 of E94.", "gold": "E57", "response": "E7", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R36 of E94 immediately after E63 was the R36 of E94.", "gold": "E57", "response": "E37", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R20 of E82 immediately before E11?", "gold": "E6", "response": "E6", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R20 of E82 immediately before E11?", "gold": "E6", "response": "E11", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R63 of the entity E69 immediately before E22?", "gold": "E9", "response": "E33", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R63 of the entity E69 immediately before E22?", "gold": "E9", "response": "E24", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R90 of E42 immediately after E16 was the R90 of E42.", "gold": "E17", "response": "E41", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R90 of E42 immediately after E16 was the R90 of E42.", "gold": "E17", "response": "E30", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R20 of the entity E76 immediately before E83?", "gold": "E63", "response": "E10", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R20 of the entity E76 immediately before E83?", "gold": "E63", "response": "E98", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R88 of E24 immediately after E69?", "gold": "E59", "response": "E11", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R88 of E24 immediately after E69?", "gold": "E59", "response": "E92", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E63, which entity was the R20 of E90?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E63, which entity was the R20 of E90?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R11 of the entity E45 immediately after E82?", "gold": "E11", "response": "E63", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R11 of the entity E45 immediately after E82?", "gold": "E11", "response": "E30", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R82 of E83 immediately after E43 was the R82 of E83.", "gold": "E82", "response": "E59", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R82 of E83 immediately after E43 was the R82 of E83.", "gold": "E82", "response": "E6", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R88 of the entity E24 immediately after E69?", "gold": "E11", "response": "E92", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R88 of the entity E24 immediately after E69?", "gold": "E11", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E42 was the R88 of which one of the entities in 2003?", "gold": "E24", "response": "E33", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E42 was the R88 of which one of the entities in 2003?", "gold": "E24", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R53 of E69 in year 1935.", "gold": "E17", "response": "E9", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R53 of E69 in year 1935.", "gold": "E17", "response": "E33", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1967, E10 was the R82 of which entity?", "gold": "E91", "response": "E91", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1967, E10 was the R82 of which entity?", "gold": "E91", "response": "E6", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1929, which entity was the R20 of E60?", "gold": "E94", "response": "E95", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1929, which entity was the R20 of E60?", "gold": "E94", "response": "E10", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that was the R63 of the entity E41 in 1994.", "gold": "E42", "response": "E25", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that was the R63 of the entity E41 in 1994.", "gold": "E42", "response": "E25", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E22 was the R96 of which one of the entities in 1963?", "gold": "E94", "response": "E94", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E22 was the R96 of which one of the entities in 1963?", "gold": "E94", "response": "E92", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E22 was the R88 of which one of the entities in 1964?", "gold": "E33", "response": "E59", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E22 was the R88 of which one of the entities in 1964?", "gold": "E33", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R82 of E60 in year 1952.", "gold": "E36", "response": "E95", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R82 of E60 in year 1952.", "gold": "E36", "response": "E83", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E90 was the R19 of which one of the entities in 1954?", "gold": "E30", "response": "E30", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E90 was the R19 of which one of the entities in 1954?", "gold": "E30", "response": "E6", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R88 of E9 in 1953?", "gold": "E92", "response": "E42", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R88 of E9 in 1953?", "gold": "E92", "response": "E24", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R17 of E59?", "gold": "E92", "response": "E11", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R17 of E59?", "gold": "E92", "response": "E11", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R63 of E22?", "gold": "E9", "response": "E59", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R63 of E22?", "gold": "E9", "response": "E30", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the last R14 of E6.", "gold": "E27", "response": "E11", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the last R14 of E6.", "gold": "E27", "response": "E36", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R63 of E11?", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R63 of E11?", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R63 of E11?", "gold": "E41", "response": "E33", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R63 of E11?", "gold": "E41", "response": "E16", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R14 of E98?", "gold": "E74", "response": "E27", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R14 of E98?", "gold": "E74", "response": "E10", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R35 of entity E59.", "gold": "E26", "response": "E74", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R35 of entity E59.", "gold": "E26", "response": "E44", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R63 of E11?", "gold": "E69", "response": "E69", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R63 of E11?", "gold": "E69", "response": "E24", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R88 of E69?", "gold": "E59", "response": "E42", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R88 of E69?", "gold": "E59", "response": "E24", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R17 of entity E74.", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R17 of entity E74.", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R90 of E69 immediately after E33 was the R90 of E69.", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R90 of E69 immediately after E33 was the R90 of E69.", "gold": "E24", "response": "E22", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R63 of E69 immediately after E24 was the R63 of E69.", "gold": "E33", "response": "E41", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R63 of E69 immediately after E24 was the R63 of E69.", "gold": "E33", "response": "E69", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R90 of E69 immediately after E92 was the R90 of E69.", "gold": "E59", "response": "E69", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R90 of E69 immediately after E92 was the R90 of E69.", "gold": "E59", "response": "E42", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R53 of E69 immediately after E30 was the R53 of E69.", "gold": "E17", "response": "E24", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R53 of E69 immediately after E30 was the R53 of E69.", "gold": "E17", "response": "E59", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E57, which entity was the R14 of E59?", "gold": "E36", "response": "E76", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E57, which entity was the R14 of E59?", "gold": "E36", "response": "E60", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R11 of E59 immediately before E94?", "gold": "E90", "response": "E94", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R11 of E59 immediately before E94?", "gold": "E90", "response": "E90", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R82 of the entity E59 immediately before E30?", "gold": "E60", "response": "E60", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R82 of the entity E59 immediately before E30?", "gold": "E60", "response": "E91", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of E69 immediately before E59?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of E69 immediately before E59?", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R35 of E59 immediately after E63 was the R35 of E59.", "gold": "E74", "response": "E91", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R35 of E59 immediately after E63 was the R35 of E59.", "gold": "E74", "response": "E98", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E63, which entity was the R14 of E59?", "gold": "E83", "response": "E94", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E63, which entity was the R14 of E59?", "gold": "E83", "response": "E83", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E59 was the R82 of which entity in 1975?", "gold": "E6", "response": "E98", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E59 was the R82 of which entity in 1975?", "gold": "E6", "response": "E6", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that was the R63 of the entity E69 in 1926.", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that was the R63 of the entity E69 in 1926.", "gold": "E17", "response": "E33", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R96 of E69 in 1997?", "gold": "E59", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R96 of E69 in 1997?", "gold": "E59", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1994, which entity was the R53 of E69?", "gold": "E24", "response": "E69", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1994, which entity was the R53 of E69?", "gold": "E24", "response": "E22", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R90 of E69 in year 1982.", "gold": "E92", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R90 of E69 in year 1982.", "gold": "E92", "response": "E92", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R17 of E69 in year 1989.", "gold": "E42", "response": "E42", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R17 of E69 in year 1989.", "gold": "E42", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R14 of E59 in year 2005.", "gold": "E95", "response": "E11", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R14 of E59 in year 2005.", "gold": "E95", "response": "E36", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E59 was the R19 of which one of the entities in 1975?", "gold": "E43", "response": "E43", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E59 was the R19 of which one of the entities in 1975?", "gold": "E43", "response": "E43", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1910, which entity was the R20 of E59?", "gold": "E36", "response": "E59", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1910, which entity was the R20 of E59?", "gold": "E36", "response": "E95", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E69 was the R17 of which one of the entities in 1990?", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E69 was the R17 of which one of the entities in 1990?", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R82 of entity E59.", "gold": "E43", "response": "E43", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R82 of entity E59.", "gold": "E43", "response": "E21", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R76 of entity E59.", "gold": "E82", "response": "E21", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R76 of entity E59.", "gold": "E82", "response": "E60", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R88 of E69?", "gold": "E74", "response": "E41", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R88 of E69?", "gold": "E74", "response": "E74", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R63 of entity E69.", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R63 of entity E69.", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R17 of E69?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R17 of E69?", "gold": "E22", "response": "E17", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R11 of E69?", "gold": "E37", "response": "E37", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R11 of E69?", "gold": "E37", "response": "E9", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R88 of E69?", "gold": "E33", "response": "E33", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R88 of E69?", "gold": "E33", "response": "E33", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R63 of E69?", "gold": "E30", "response": "E17", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R63 of E69?", "gold": "E30", "response": "E17", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R85 of entity E69.", "gold": "E16", "response": "E94", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R85 of entity E69.", "gold": "E16", "response": "E94", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R69 of E38 immediately before E9?", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R69 of E38 immediately before E9?", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R71 of E24 immediately after E11?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R71 of E24 immediately after E11?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately after E16, which entity was the R69 of E55?", "gold": "E97", "response": "E97", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately after E16, which entity was the R69 of E55?", "gold": "E97", "response": "E97", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R27 of E30 immediately before E19?", "gold": "E7", "response": "E7", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R27 of E30 immediately before E19?", "gold": "E7", "response": "E7", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R17 of E17 immediately before E75 was the R17 of E17.", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R17 of E17 immediately before E75 was the R17 of E17.", "gold": "E76", "response": "E76", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Immediately before E55, which entity was the R11 of E76?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Immediately before E55, which entity was the R11 of E76?", "gold": "E98", "response": "E77", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R11 of E76 immediately after E82 was the R11 of E76.", "gold": "E16", "response": "E16", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R11 of E76 immediately after E82 was the R11 of E76.", "gold": "E16", "response": "E16", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R17 of the entity E25 immediately after E16?", "gold": "E98", "response": "E77", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R17 of the entity E25 immediately after E16?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "before_after", "order": "sorted", "question": "Which entity was the R27 of the entity E73 immediately after E47?", "gold": "E30", "response": "E74", "correct": false}
+{"qtype": "before_after", "order": "shuffle", "question": "Which entity was the R27 of the entity E73 immediately after E47?", "gold": "E30", "response": "E74", "correct": false}
+{"qtype": "before_after", "order": "sorted", "question": "Find the entity that was the R11 of E95 immediately after E9 was the R11 of E95.", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "before_after", "order": "shuffle", "question": "Find the entity that was the R11 of E95 immediately after E9 was the R11 of E95.", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E82 was the R11 of which entity in 2014?", "gold": "E17", "response": "E17", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E82 was the R11 of which entity in 2014?", "gold": "E17", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E95 was the R17 of one of the entities in 1996. Find that entity.", "gold": "E24", "response": "E24", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E95 was the R17 of one of the entities in 1996. Find that entity.", "gold": "E24", "response": "There is no information about E95 being the R17 of any entity in 1996. The", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E30 was the R25 of one of the entities in 1995. Find that entity.", "gold": "E73", "response": "E73", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E30 was the R25 of one of the entities in 1995. Find that entity.", "gold": "E73", "response": "E73", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E24 was the R71 of one of the entities in 2000. Find that entity.", "gold": "E25", "response": "E25", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E24 was the R71 of one of the entities in 2000. Find that entity.", "gold": "E25", "response": "E25", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E82 was the R17 of which one of the entities in 1973?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E82 was the R17 of which one of the entities in 1973?", "gold": "E98", "response": "E98", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "In 1964, which entity was the R59 of E7?", "gold": "E12", "response": "No entity was the R59 of E7 in 1964.", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "In 1964, which entity was the R59 of E7?", "gold": "E12", "response": "E12", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Find the entity that evidently was the R58 of E76 in year 2007.", "gold": "E37", "response": "E37", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Find the entity that evidently was the R58 of E76 in year 2007.", "gold": "E37", "response": "E37", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E76 was the R17 of which one of the entities in 2015?", "gold": "E82", "response": "None", "correct": false}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E76 was the R17 of which one of the entities in 2015?", "gold": "E82", "response": "E82", "correct": true}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "Which entity was the R27 of E19 in 1940?", "gold": "E30", "response": "E30", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "Which entity was the R27 of E19 in 1940?", "gold": "E30", "response": "No entity was the R27 of E19 in 1940.", "correct": false}
+{"qtype": "event_at_time_t", "order": "sorted", "question": "E82 was the R11 of which one of the entities in 1996?", "gold": "E77", "response": "E77", "correct": true}
+{"qtype": "event_at_time_t", "order": "shuffle", "question": "E82 was the R11 of which one of the entities in 1996?", "gold": "E77", "response": "E77", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R16 of entity E19.", "gold": "E90", "response": "E61", "correct": false}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R16 of entity E19.", "gold": "E90", "response": "E92", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the last R11 of entity E76.", "gold": "E38", "response": "E38", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the last R11 of entity E76.", "gold": "E38", "response": "E95", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Identify the entity that was the first R11 of entity E25.", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Identify the entity that was the first R11 of entity E25.", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the last that was the R11 of E76?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the last that was the R11 of E76?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the first R11 of E76?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the first R11 of E76?", "gold": "E11", "response": "E11", "correct": true}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R27 of E73?", "gold": "E59", "response": "E59", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R27 of E73?", "gold": "E59", "response": "E66", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Find the entity that has been the last R17 of E82.", "gold": "E95", "response": "E95", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Find the entity that has been the last R17 of E82.", "gold": "E95", "response": "E76", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity was the first that was the R71 of E24?", "gold": "E95", "response": "E95", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity was the first that was the R71 of E24?", "gold": "E95", "response": "E98", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R11 of E76?", "gold": "E22", "response": "E22", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R11 of E76?", "gold": "E22", "response": "E95", "correct": false}
+{"qtype": "first_last", "order": "sorted", "question": "Which entity has been the last R25 of E71?", "gold": "E18", "response": "E18", "correct": true}
+{"qtype": "first_last", "order": "shuffle", "question": "Which entity has been the last R25 of E71?", "gold": "E18", "response": "E19", "correct": false}

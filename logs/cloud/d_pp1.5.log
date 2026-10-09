@@ -1,0 +1,5 @@
+[08:07:11] vllm :8000 down
+[08:07:11] vllm :8000 up /root/cot-overwrite/runs/e181-q8/merged tp=1 gpus=0
+[08:08:06] vllm :8000 ready
+presence_penalty=1.5: 64 previously unfinished items | now finished 70.3% | still looping 25.0% | correct 51.6%
+by qtype: {'recalling_th': {'finished': 85.7, 'correct': 42.9}, 'track_full_p': {'finished': 68.4, 'correct': 52.6}}

@@ -1,0 +1,900 @@
+{"id": "L2_Q845043_P286_0", "order": "sorted", "n_facts": 3, "response": "Marco Baroni.", "correct": false, "wrong_time": true}
+{"id": "L2_Q845043_P286_0", "order": "reversed", "n_facts": 3, "response": "Marco Baroni.", "correct": false, "wrong_time": true}
+{"id": "L2_Q845043_P286_0", "order": "shuffled", "n_facts": 3, "response": "Marco Baroni.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11445_P6_2", "order": "sorted", "n_facts": 3, "response": "Muhammad Anton", "correct": false, "wrong_time": true}
+{"id": "L2_Q11445_P6_2", "order": "reversed", "n_facts": 3, "response": "Muhammad Anton", "correct": false, "wrong_time": true}
+{"id": "L2_Q11445_P6_2", "order": "shuffled", "n_facts": 3, "response": "Muhammad Anton", "correct": false, "wrong_time": true}
+{"id": "L2_Q4908282_P54_1", "order": "sorted", "n_facts": 9, "response": "Charlton Athletic F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4908282_P54_1", "order": "reversed", "n_facts": 9, "response": "Charlton Athletic F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4908282_P54_1", "order": "shuffled", "n_facts": 9, "response": "Charlton Athletic F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q712462_P108_2", "order": "sorted", "n_facts": 4, "response": "University of Pittsburgh", "correct": false, "wrong_time": true}
+{"id": "L2_Q712462_P108_2", "order": "reversed", "n_facts": 4, "response": "University of Pittsburgh", "correct": false, "wrong_time": true}
+{"id": "L2_Q712462_P108_2", "order": "shuffled", "n_facts": 4, "response": "University of Pittsburgh", "correct": false, "wrong_time": true}
+{"id": "L2_Q1741_P6_3", "order": "sorted", "n_facts": 17, "response": "Jakob Reumann.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1741_P6_3", "order": "reversed", "n_facts": 17, "response": "Karl Seitz", "correct": false, "wrong_time": true}
+{"id": "L2_Q1741_P6_3", "order": "shuffled", "n_facts": 17, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q249904_P6_2", "order": "sorted", "n_facts": 3, "response": "Justin Huang", "correct": false, "wrong_time": true}
+{"id": "L2_Q249904_P6_2", "order": "reversed", "n_facts": 3, "response": "Rao Ching-ling.", "correct": true, "wrong_time": false}
+{"id": "L2_Q249904_P6_2", "order": "shuffled", "n_facts": 3, "response": "Rao Ching-ling.", "correct": true, "wrong_time": false}
+{"id": "L2_Q386160_P488_0", "order": "sorted", "n_facts": 3, "response": "Mohamed Hussein Tantawi.", "correct": true, "wrong_time": false}
+{"id": "L2_Q386160_P488_0", "order": "reversed", "n_facts": 3, "response": "Mohamed Hussein Tantawi.", "correct": true, "wrong_time": false}
+{"id": "L2_Q386160_P488_0", "order": "shuffled", "n_facts": 3, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q659124_P54_3", "order": "sorted", "n_facts": 8, "response": "Celta Vigo", "correct": true, "wrong_time": false}
+{"id": "L2_Q659124_P54_3", "order": "reversed", "n_facts": 8, "response": "Celta Vigo", "correct": true, "wrong_time": false}
+{"id": "L2_Q659124_P54_3", "order": "shuffled", "n_facts": 8, "response": "Celta Vigo", "correct": true, "wrong_time": false}
+{"id": "L2_Q16425386_P6_2", "order": "sorted", "n_facts": 3, "response": "Petru-Ioan Barbu.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16425386_P6_2", "order": "reversed", "n_facts": 3, "response": "Petru-Ioan Barbu", "correct": true, "wrong_time": false}
+{"id": "L2_Q16425386_P6_2", "order": "shuffled", "n_facts": 3, "response": "Ion-Iosif Josan.", "correct": false, "wrong_time": true}
+{"id": "L2_Q74747_P39_1", "order": "sorted", "n_facts": 5, "response": "Interior Minister.", "correct": true, "wrong_time": false}
+{"id": "L2_Q74747_P39_1", "order": "reversed", "n_facts": 5, "response": "Interior Minister.", "correct": true, "wrong_time": false}
+{"id": "L2_Q74747_P39_1", "order": "shuffled", "n_facts": 5, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q93005_P108_1", "order": "sorted", "n_facts": 5, "response": "United States Army.", "correct": false, "wrong_time": true}
+{"id": "L2_Q93005_P108_1", "order": "reversed", "n_facts": 5, "response": "University of Chicago", "correct": false, "wrong_time": true}
+{"id": "L2_Q93005_P108_1", "order": "shuffled", "n_facts": 5, "response": "United States Army.", "correct": false, "wrong_time": true}
+{"id": "L2_Q896313_P488_0", "order": "sorted", "n_facts": 11, "response": "Gustav Pufal", "correct": true, "wrong_time": false}
+{"id": "L2_Q896313_P488_0", "order": "reversed", "n_facts": 11, "response": "Gustav Pufal", "correct": true, "wrong_time": false}
+{"id": "L2_Q896313_P488_0", "order": "shuffled", "n_facts": 11, "response": "Gustav Pufal", "correct": true, "wrong_time": false}
+{"id": "L2_Q15445_P6_1", "order": "sorted", "n_facts": 3, "response": "Maria Jos\u00e9 S\u00e1nchez i Ortega.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15445_P6_1", "order": "reversed", "n_facts": 3, "response": "Maria Jos\u00e9 S\u00e1nchez i Ortega.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15445_P6_1", "order": "shuffled", "n_facts": 3, "response": "Maria Jos\u00e9 S\u00e1nchez i Ortega.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3298578_P54_2", "order": "sorted", "n_facts": 4, "response": "Milton Keynes Dons F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3298578_P54_2", "order": "reversed", "n_facts": 4, "response": "Milton Keynes Dons F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3298578_P54_2", "order": "shuffled", "n_facts": 4, "response": "Milton Keynes Dons F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11095476_P39_0", "order": "sorted", "n_facts": 3, "response": "Shujishi.", "correct": false, "wrong_time": false}
+{"id": "L2_Q11095476_P39_0", "order": "reversed", "n_facts": 3, "response": "Shujishi of Qing dynasty.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11095476_P39_0", "order": "shuffled", "n_facts": 3, "response": "Shujishi of Qing dynasty.", "correct": true, "wrong_time": false}
+{"id": "L2_Q931348_P108_0", "order": "sorted", "n_facts": 3, "response": "Smith College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q931348_P108_0", "order": "reversed", "n_facts": 3, "response": "Smith College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q931348_P108_0", "order": "shuffled", "n_facts": 3, "response": "Smith College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7328800_P39_9", "order": "sorted", "n_facts": 11, "response": "Member of the 7th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7328800_P39_9", "order": "reversed", "n_facts": 11, "response": "Member of the 8th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q7328800_P39_9", "order": "shuffled", "n_facts": 11, "response": "Member of the 8th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q9616386_P69_0", "order": "sorted", "n_facts": 3, "response": "Wellesley College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q9616386_P69_0", "order": "reversed", "n_facts": 3, "response": "Wellesley College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q9616386_P69_0", "order": "shuffled", "n_facts": 3, "response": "Wellesley College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q592540_P39_4", "order": "sorted", "n_facts": 5, "response": "Member of the Senate of the Netherlands.", "correct": true, "wrong_time": false}
+{"id": "L2_Q592540_P39_4", "order": "reversed", "n_facts": 5, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q592540_P39_4", "order": "shuffled", "n_facts": 5, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q1459111_P54_4", "order": "sorted", "n_facts": 11, "response": "Sportfreunde Siegen", "correct": false, "wrong_time": true}
+{"id": "L2_Q1459111_P54_4", "order": "reversed", "n_facts": 11, "response": "Caracas F\u00fatbol Club.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1459111_P54_4", "order": "shuffled", "n_facts": 11, "response": "Caracas F\u00fatbol Club.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5538345_P39_0", "order": "sorted", "n_facts": 5, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q5538345_P39_0", "order": "reversed", "n_facts": 5, "response": "Member of the 35th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5538345_P39_0", "order": "shuffled", "n_facts": 5, "response": "Member of the 35th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3573536_P108_5", "order": "sorted", "n_facts": 9, "response": "France 5", "correct": true, "wrong_time": false}
+{"id": "L2_Q3573536_P108_5", "order": "reversed", "n_facts": 9, "response": "France 2", "correct": true, "wrong_time": false}
+{"id": "L2_Q3573536_P108_5", "order": "shuffled", "n_facts": 9, "response": "France 2", "correct": true, "wrong_time": false}
+{"id": "L2_Q1115329_P6_0", "order": "sorted", "n_facts": 8, "response": "Henri Joseph Fran\u00e7ois", "correct": true, "wrong_time": false}
+{"id": "L2_Q1115329_P6_0", "order": "reversed", "n_facts": 8, "response": "Henri Joseph Fran\u00e7ois", "correct": true, "wrong_time": false}
+{"id": "L2_Q1115329_P6_0", "order": "shuffled", "n_facts": 8, "response": "Henri Joseph Fran\u00e7ois", "correct": true, "wrong_time": false}
+{"id": "L2_Q67025_P108_0", "order": "sorted", "n_facts": 3, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q67025_P108_0", "order": "reversed", "n_facts": 3, "response": "Maatschappij tot Bevordering der Toonkunst.", "correct": false, "wrong_time": true}
+{"id": "L2_Q67025_P108_0", "order": "shuffled", "n_facts": 3, "response": "Berlin University of the Arts.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1361114_P39_2", "order": "sorted", "n_facts": 5, "response": "United States Deputy Secretary of Defense.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1361114_P39_2", "order": "reversed", "n_facts": 5, "response": "United States Secretary of the Navy.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1361114_P39_2", "order": "shuffled", "n_facts": 5, "response": "United States Secretary of Defense.", "correct": false, "wrong_time": true}
+{"id": "L2_Q61913745_P108_0", "order": "sorted", "n_facts": 3, "response": "Conception Seminary College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q61913745_P108_0", "order": "reversed", "n_facts": 3, "response": "Conception Seminary College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q61913745_P108_0", "order": "shuffled", "n_facts": 3, "response": "Conception Seminary College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q91636_P108_2", "order": "sorted", "n_facts": 7, "response": "Max Planck Institute for Physics.", "correct": true, "wrong_time": false}
+{"id": "L2_Q91636_P108_2", "order": "reversed", "n_facts": 7, "response": "Max Planck Institute for Physics", "correct": true, "wrong_time": false}
+{"id": "L2_Q91636_P108_2", "order": "shuffled", "n_facts": 7, "response": "Max Planck Institute for Physics.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5056185_P102_2", "order": "sorted", "n_facts": 4, "response": "Communist Party of Great Britain.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5056185_P102_2", "order": "reversed", "n_facts": 4, "response": "The Communist Party of Great Britain.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5056185_P102_2", "order": "shuffled", "n_facts": 4, "response": "Communist Party of Great Britain.", "correct": true, "wrong_time": false}
+{"id": "L2_Q74747_P39_2", "order": "sorted", "n_facts": 5, "response": "Minister of Transport, Public Works and Water Management.", "correct": true, "wrong_time": false}
+{"id": "L2_Q74747_P39_2", "order": "reversed", "n_facts": 5, "response": "Minister of Transport, Public Works and Water Management.", "correct": true, "wrong_time": false}
+{"id": "L2_Q74747_P39_2", "order": "shuffled", "n_facts": 5, "response": "Minister of Transport, Public Works and Water Management.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131331_P39_1", "order": "sorted", "n_facts": 6, "response": "Member of the 24th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131331_P39_1", "order": "reversed", "n_facts": 6, "response": "Member of the 24th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131331_P39_1", "order": "shuffled", "n_facts": 6, "response": "Member of the 24th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q60607633_P108_1", "order": "sorted", "n_facts": 4, "response": "University of Washington.", "correct": true, "wrong_time": false}
+{"id": "L2_Q60607633_P108_1", "order": "reversed", "n_facts": 4, "response": "University of Washington.", "correct": true, "wrong_time": false}
+{"id": "L2_Q60607633_P108_1", "order": "shuffled", "n_facts": 4, "response": "University of Washington.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16164230_P54_2", "order": "sorted", "n_facts": 3, "response": "Ethnikos Achna FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q16164230_P54_2", "order": "reversed", "n_facts": 3, "response": "Ethnikos Achna FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q16164230_P54_2", "order": "shuffled", "n_facts": 3, "response": "APOEL F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q13826_P6_4", "order": "sorted", "n_facts": 7, "response": "Grace Padaca", "correct": true, "wrong_time": false}
+{"id": "L2_Q13826_P6_4", "order": "reversed", "n_facts": 7, "response": "Faustino G. Dy III", "correct": false, "wrong_time": true}
+{"id": "L2_Q13826_P6_4", "order": "shuffled", "n_facts": 7, "response": "Grace Padaca.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1741_P6_14", "order": "sorted", "n_facts": 17, "response": "Helmut Zilk", "correct": true, "wrong_time": false}
+{"id": "L2_Q1741_P6_14", "order": "reversed", "n_facts": 17, "response": "Michael H\u00e4upl.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1741_P6_14", "order": "shuffled", "n_facts": 17, "response": "Helmut Zilk.", "correct": true, "wrong_time": false}
+{"id": "L2_Q107441_P108_2", "order": "sorted", "n_facts": 6, "response": "Military Engineering-Technical University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q107441_P108_2", "order": "reversed", "n_facts": 6, "response": "Military Engineering-Technical University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q107441_P108_2", "order": "shuffled", "n_facts": 6, "response": "Military Engineering-Technical University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q872743_P54_3", "order": "sorted", "n_facts": 5, "response": "FC Liefering", "correct": true, "wrong_time": false}
+{"id": "L2_Q872743_P54_3", "order": "reversed", "n_facts": 5, "response": "FC Liefering", "correct": true, "wrong_time": false}
+{"id": "L2_Q872743_P54_3", "order": "shuffled", "n_facts": 5, "response": "FC Liefering.", "correct": true, "wrong_time": false}
+{"id": "L2_Q645570_P54_3", "order": "sorted", "n_facts": 6, "response": "RC Strasbourg", "correct": true, "wrong_time": false}
+{"id": "L2_Q645570_P54_3", "order": "reversed", "n_facts": 6, "response": "RC Strasbourg.", "correct": true, "wrong_time": false}
+{"id": "L2_Q645570_P54_3", "order": "shuffled", "n_facts": 6, "response": "RC Strasbourg.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1390688_P39_6", "order": "sorted", "n_facts": 8, "response": "Leader of the Opposition.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1390688_P39_6", "order": "reversed", "n_facts": 8, "response": "Leader of the Opposition.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1390688_P39_6", "order": "shuffled", "n_facts": 8, "response": "Leader of the Opposition.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1053252_P54_5", "order": "sorted", "n_facts": 8, "response": "Gen\u00e7lerbirli\u011fi S.K.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1053252_P54_5", "order": "reversed", "n_facts": 8, "response": "Gen\u00e7lerbirli\u011fi S.K.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1053252_P54_5", "order": "shuffled", "n_facts": 8, "response": "Gen\u00e7lerbirli\u011fi S.K.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1943651_P127_2", "order": "sorted", "n_facts": 3, "response": "Johnston Press", "correct": false, "wrong_time": true}
+{"id": "L2_Q1943651_P127_2", "order": "reversed", "n_facts": 3, "response": "Johnston Press", "correct": false, "wrong_time": true}
+{"id": "L2_Q1943651_P127_2", "order": "shuffled", "n_facts": 3, "response": "Johnston Press", "correct": false, "wrong_time": true}
+{"id": "L2_Q639560_P286_0", "order": "sorted", "n_facts": 11, "response": "Hermann Gerland.", "correct": true, "wrong_time": false}
+{"id": "L2_Q639560_P286_0", "order": "reversed", "n_facts": 11, "response": "Hermann Gerland.", "correct": true, "wrong_time": false}
+{"id": "L2_Q639560_P286_0", "order": "shuffled", "n_facts": 11, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q4699790_P108_0", "order": "sorted", "n_facts": 7, "response": "United States Department of Justice Antitrust Division.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4699790_P108_0", "order": "reversed", "n_facts": 7, "response": "United States Department of Justice Antitrust Division.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4699790_P108_0", "order": "shuffled", "n_facts": 7, "response": "United States Department of Justice Antitrust Division.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5237292_P39_1", "order": "sorted", "n_facts": 4, "response": "Member of the 2nd Northern Ireland Assembly.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5237292_P39_1", "order": "reversed", "n_facts": 4, "response": "Member of the 2nd Northern Ireland Assembly.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5237292_P39_1", "order": "shuffled", "n_facts": 4, "response": "Member of the 2nd Northern Ireland Assembly.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3348270_P102_1", "order": "sorted", "n_facts": 3, "response": "The Democratic Party of Serbia.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3348270_P102_1", "order": "reversed", "n_facts": 3, "response": "The Democratic Party of Serbia.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3348270_P102_1", "order": "shuffled", "n_facts": 3, "response": "The Serbian Radical Party.", "correct": false, "wrong_time": true}
+{"id": "L2_Q28870540_P69_0", "order": "sorted", "n_facts": 3, "response": "Harvard University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q28870540_P69_0", "order": "reversed", "n_facts": 3, "response": "Harvard University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q28870540_P69_0", "order": "shuffled", "n_facts": 3, "response": "Harvard University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q188920_P488_9", "order": "sorted", "n_facts": 11, "response": "Daniel Carp", "correct": true, "wrong_time": false}
+{"id": "L2_Q188920_P488_9", "order": "reversed", "n_facts": 11, "response": "Frank Blake", "correct": false, "wrong_time": true}
+{"id": "L2_Q188920_P488_9", "order": "shuffled", "n_facts": 11, "response": "Daniel Carp", "correct": true, "wrong_time": false}
+{"id": "L2_Q2545334_P69_0", "order": "sorted", "n_facts": 3, "response": "K\u00f6llnisches Gymnasium.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2545334_P69_0", "order": "reversed", "n_facts": 3, "response": "K\u00f6llnisches Gymnasium.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2545334_P69_0", "order": "shuffled", "n_facts": 3, "response": "K\u00f6llnisches Gymnasium.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_29", "order": "sorted", "n_facts": 45, "response": "Edward Fitzsimmons Dunne.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_29", "order": "reversed", "n_facts": 45, "response": "Fred A. Busse.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_29", "order": "shuffled", "n_facts": 45, "response": "Fred A. Busse.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6791091_P108_0", "order": "sorted", "n_facts": 4, "response": "St. John's University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6791091_P108_0", "order": "reversed", "n_facts": 4, "response": "St. John's University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6791091_P108_0", "order": "shuffled", "n_facts": 4, "response": "St. John's University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q552408_P39_1", "order": "sorted", "n_facts": 3, "response": "Member of the Parliament of Norway.", "correct": true, "wrong_time": false}
+{"id": "L2_Q552408_P39_1", "order": "reversed", "n_facts": 3, "response": "Member of the Parliament of Norway.", "correct": true, "wrong_time": false}
+{"id": "L2_Q552408_P39_1", "order": "shuffled", "n_facts": 3, "response": "member of the Parliament of Norway", "correct": true, "wrong_time": false}
+{"id": "L2_Q9052219_P39_0", "order": "sorted", "n_facts": 4, "response": "Councillor of Salvador.", "correct": true, "wrong_time": false}
+{"id": "L2_Q9052219_P39_0", "order": "reversed", "n_facts": 4, "response": "councillor of Salvador", "correct": true, "wrong_time": false}
+{"id": "L2_Q9052219_P39_0", "order": "shuffled", "n_facts": 4, "response": "councillor of Salvador.", "correct": true, "wrong_time": false}
+{"id": "L2_Q581360_P54_7", "order": "sorted", "n_facts": 9, "response": "CF La Nuc\u00eda", "correct": true, "wrong_time": false}
+{"id": "L2_Q581360_P54_7", "order": "reversed", "n_facts": 9, "response": "CF La Nuc\u00eda", "correct": true, "wrong_time": false}
+{"id": "L2_Q581360_P54_7", "order": "shuffled", "n_facts": 9, "response": "CF La Nuc\u00eda", "correct": true, "wrong_time": false}
+{"id": "L2_Q1450705_P286_2", "order": "sorted", "n_facts": 13, "response": "Nicolae Sotir.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1450705_P286_2", "order": "reversed", "n_facts": 13, "response": "Nicolae Sotir.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1450705_P286_2", "order": "shuffled", "n_facts": 13, "response": "Nicolae Sotir.", "correct": true, "wrong_time": false}
+{"id": "L2_Q947789_P39_2", "order": "sorted", "n_facts": 4, "response": "Prime Minister of Denmark.", "correct": false, "wrong_time": true}
+{"id": "L2_Q947789_P39_2", "order": "reversed", "n_facts": 4, "response": "Prime Minister of Denmark.", "correct": false, "wrong_time": true}
+{"id": "L2_Q947789_P39_2", "order": "shuffled", "n_facts": 4, "response": "Prime Minister of Denmark.", "correct": false, "wrong_time": true}
+{"id": "L2_Q193272_P488_10", "order": "sorted", "n_facts": 28, "response": "Sani Abacha was the chair of Economic Community of West African States in Nov, 1997.", "correct": true, "wrong_time": false}
+{"id": "L2_Q193272_P488_10", "order": "reversed", "n_facts": 28, "response": "Abdulsalami Abubakar", "correct": false, "wrong_time": true}
+{"id": "L2_Q193272_P488_10", "order": "shuffled", "n_facts": 28, "response": "Abdulsalami Abubakar", "correct": false, "wrong_time": true}
+{"id": "L2_Q533753_P54_3", "order": "sorted", "n_facts": 5, "response": "S.S. Lazio.", "correct": true, "wrong_time": false}
+{"id": "L2_Q533753_P54_3", "order": "reversed", "n_facts": 5, "response": "Societ\u00e0 Polisportiva Ars et Labor and S.S. Lazio.", "correct": true, "wrong_time": false}
+{"id": "L2_Q533753_P54_3", "order": "shuffled", "n_facts": 5, "response": "Piacenza Calcio and S.S. Lazio.", "correct": true, "wrong_time": false}
+{"id": "L2_Q14960_P6_2", "order": "sorted", "n_facts": 3, "response": "Mark\u00e9ta Va\u0148kov\u00e1", "correct": true, "wrong_time": false}
+{"id": "L2_Q14960_P6_2", "order": "reversed", "n_facts": 3, "response": "Mark\u00e9ta Va\u0148kov\u00e1", "correct": true, "wrong_time": false}
+{"id": "L2_Q14960_P6_2", "order": "shuffled", "n_facts": 3, "response": "Mark\u00e9ta Va\u0148kov\u00e1", "correct": true, "wrong_time": false}
+{"id": "L2_Q1115329_P6_4", "order": "sorted", "n_facts": 8, "response": "Henri Joseph Fran\u00e7ois", "correct": false, "wrong_time": true}
+{"id": "L2_Q1115329_P6_4", "order": "reversed", "n_facts": 8, "response": "Edgard Pature", "correct": false, "wrong_time": true}
+{"id": "L2_Q1115329_P6_4", "order": "shuffled", "n_facts": 8, "response": "Edgard Pature", "correct": false, "wrong_time": true}
+{"id": "L2_Q689874_P286_2", "order": "sorted", "n_facts": 3, "response": "Jim Curtin", "correct": true, "wrong_time": false}
+{"id": "L2_Q689874_P286_2", "order": "reversed", "n_facts": 3, "response": "Jim Curtin", "correct": true, "wrong_time": false}
+{"id": "L2_Q689874_P286_2", "order": "shuffled", "n_facts": 3, "response": "Jim Curtin", "correct": true, "wrong_time": false}
+{"id": "L2_Q10473318_P54_0", "order": "sorted", "n_facts": 7, "response": "Scottish Football League XI.", "correct": true, "wrong_time": false}
+{"id": "L2_Q10473318_P54_0", "order": "reversed", "n_facts": 7, "response": "Scottish Football League XI.", "correct": true, "wrong_time": false}
+{"id": "L2_Q10473318_P54_0", "order": "shuffled", "n_facts": 7, "response": "Scottish Football League XI.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_0", "order": "sorted", "n_facts": 3, "response": "Member of the 35th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_0", "order": "reversed", "n_facts": 3, "response": "Member of the 35th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_0", "order": "shuffled", "n_facts": 3, "response": "Member of the 35th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1129443_P488_1", "order": "sorted", "n_facts": 5, "response": "Jordi Pujol.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1129443_P488_1", "order": "reversed", "n_facts": 5, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q1129443_P488_1", "order": "shuffled", "n_facts": 5, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q15789_P286_3", "order": "sorted", "n_facts": 11, "response": "J\u00fcrgen Klinsmann.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15789_P286_3", "order": "reversed", "n_facts": 11, "response": "Ottmar Hitzfeld", "correct": true, "wrong_time": false}
+{"id": "L2_Q15789_P286_3", "order": "shuffled", "n_facts": 11, "response": "Hansi Flick", "correct": false, "wrong_time": true}
+{"id": "L2_Q8076806_P54_1", "order": "sorted", "n_facts": 8, "response": "Club Atl\u00e9tico Lan\u00fas.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8076806_P54_1", "order": "reversed", "n_facts": 8, "response": "San Lorenzo de Almagro.", "correct": false, "wrong_time": true}
+{"id": "L2_Q8076806_P54_1", "order": "shuffled", "n_facts": 8, "response": "San Lorenzo de Almagro.", "correct": false, "wrong_time": true}
+{"id": "L2_Q525514_P54_4", "order": "sorted", "n_facts": 6, "response": "Hapoel Haifa F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q525514_P54_4", "order": "reversed", "n_facts": 6, "response": "Hapoel Haifa F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q525514_P54_4", "order": "shuffled", "n_facts": 6, "response": "Hapoel Haifa F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2090099_P39_3", "order": "sorted", "n_facts": 5, "response": "President of the Spanish Senate.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2090099_P39_3", "order": "reversed", "n_facts": 5, "response": "President of the Spanish Senate.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2090099_P39_3", "order": "shuffled", "n_facts": 5, "response": "Minister of State of Spain.", "correct": false, "wrong_time": true}
+{"id": "L2_Q334411_P39_2", "order": "sorted", "n_facts": 10, "response": "Member of the 48th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q334411_P39_2", "order": "reversed", "n_facts": 10, "response": "Member of the 48th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q334411_P39_2", "order": "shuffled", "n_facts": 10, "response": "Member of the 48th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q26234470_P39_1", "order": "sorted", "n_facts": 4, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q26234470_P39_1", "order": "reversed", "n_facts": 4, "response": "Member of the 12th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q26234470_P39_1", "order": "shuffled", "n_facts": 4, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2842849_P488_0", "order": "sorted", "n_facts": 3, "response": "Hermon Carey Bumpus", "correct": true, "wrong_time": false}
+{"id": "L2_Q2842849_P488_0", "order": "reversed", "n_facts": 3, "response": "Hermon Carey Bumpus.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2842849_P488_0", "order": "shuffled", "n_facts": 3, "response": "Hermon Carey Bumpus.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3701942_P54_3", "order": "sorted", "n_facts": 11, "response": "Genoa CFC", "correct": true, "wrong_time": false}
+{"id": "L2_Q3701942_P54_3", "order": "reversed", "n_facts": 11, "response": "Genoa CFC", "correct": true, "wrong_time": false}
+{"id": "L2_Q3701942_P54_3", "order": "shuffled", "n_facts": 11, "response": "Genoa CFC", "correct": true, "wrong_time": false}
+{"id": "L2_Q16512517_P39_4", "order": "sorted", "n_facts": 10, "response": "Minister of Coordination of Greece.", "correct": false, "wrong_time": true}
+{"id": "L2_Q16512517_P39_4", "order": "reversed", "n_facts": 10, "response": "Minister without portfolio.", "correct": false, "wrong_time": false}
+{"id": "L2_Q16512517_P39_4", "order": "shuffled", "n_facts": 10, "response": "Minister of Economy, Minister of Commercial Marine, and Minister without portfolio.", "correct": false, "wrong_time": false}
+{"id": "L2_Q1175443_P39_7", "order": "sorted", "n_facts": 11, "response": "Member of the 53rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1175443_P39_7", "order": "reversed", "n_facts": 11, "response": "Member of the House of Lords.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1175443_P39_7", "order": "shuffled", "n_facts": 11, "response": "Member of the 53rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q361032_P69_1", "order": "sorted", "n_facts": 3, "response": "Academy of Arts, Architecture and Design in Prague.", "correct": true, "wrong_time": false}
+{"id": "L2_Q361032_P69_1", "order": "reversed", "n_facts": 3, "response": "Academy of Arts, Architecture and Design in Prague.", "correct": true, "wrong_time": false}
+{"id": "L2_Q361032_P69_1", "order": "shuffled", "n_facts": 3, "response": "Academy of Arts, Architecture and Design in Prague.", "correct": true, "wrong_time": false}
+{"id": "L2_Q711174_P39_1", "order": "sorted", "n_facts": 8, "response": "auxiliary bishop", "correct": true, "wrong_time": false}
+{"id": "L2_Q711174_P39_1", "order": "reversed", "n_facts": 8, "response": "auxiliary bishop", "correct": true, "wrong_time": false}
+{"id": "L2_Q711174_P39_1", "order": "shuffled", "n_facts": 8, "response": "titular bishop", "correct": true, "wrong_time": false}
+{"id": "L2_Q693844_P488_0", "order": "sorted", "n_facts": 11, "response": "F. C. D. Wyneken", "correct": true, "wrong_time": false}
+{"id": "L2_Q693844_P488_0", "order": "reversed", "n_facts": 11, "response": "C. F. W. Walther", "correct": false, "wrong_time": true}
+{"id": "L2_Q693844_P488_0", "order": "shuffled", "n_facts": 11, "response": "F. C. D. Wyneken", "correct": true, "wrong_time": false}
+{"id": "L2_Q128877_P54_1", "order": "sorted", "n_facts": 6, "response": "Karlsruher SC.", "correct": true, "wrong_time": false}
+{"id": "L2_Q128877_P54_1", "order": "reversed", "n_facts": 6, "response": "Karlsruher SC", "correct": true, "wrong_time": false}
+{"id": "L2_Q128877_P54_1", "order": "shuffled", "n_facts": 6, "response": "Karlsruher SC.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1726_P6_13", "order": "sorted", "n_facts": 17, "response": "Kaspar von Steinsdorf.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1726_P6_13", "order": "reversed", "n_facts": 17, "response": "Georg Kronawitter.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1726_P6_13", "order": "shuffled", "n_facts": 17, "response": "Georg Kronawitter.", "correct": false, "wrong_time": true}
+{"id": "L2_Q10294207_P39_0", "order": "sorted", "n_facts": 3, "response": "Vice Premier of the Republic of China.", "correct": true, "wrong_time": false}
+{"id": "L2_Q10294207_P39_0", "order": "reversed", "n_facts": 3, "response": "Vice Premier of the Republic of China.", "correct": true, "wrong_time": false}
+{"id": "L2_Q10294207_P39_0", "order": "shuffled", "n_facts": 3, "response": "Vice Premier of the Republic of China.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2092409_P54_0", "order": "sorted", "n_facts": 9, "response": "Envigado F\u00fatbol Club.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2092409_P54_0", "order": "reversed", "n_facts": 9, "response": "Envigado F\u00fatbol Club.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2092409_P54_0", "order": "shuffled", "n_facts": 9, "response": "Envigado F\u00fatbol Club.", "correct": true, "wrong_time": false}
+{"id": "L2_Q333916_P39_3", "order": "sorted", "n_facts": 8, "response": "Member of the Parliamentary Assembly of the Council of Europe.", "correct": false, "wrong_time": false}
+{"id": "L2_Q333916_P39_3", "order": "reversed", "n_facts": 8, "response": "Member of the 40th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q333916_P39_3", "order": "shuffled", "n_facts": 8, "response": "Member of the Parliamentary Assembly of the Council of Europe.", "correct": false, "wrong_time": false}
+{"id": "L2_Q8014397_P39_5", "order": "sorted", "n_facts": 8, "response": "Member of the 10th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8014397_P39_5", "order": "reversed", "n_facts": 8, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q8014397_P39_5", "order": "shuffled", "n_facts": 8, "response": "Member of the 10th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q56811155_P108_0", "order": "sorted", "n_facts": 3, "response": "Children's Hospital of Western Ontario.", "correct": true, "wrong_time": false}
+{"id": "L2_Q56811155_P108_0", "order": "reversed", "n_facts": 3, "response": "Children's Hospital of Western Ontario.", "correct": true, "wrong_time": false}
+{"id": "L2_Q56811155_P108_0", "order": "shuffled", "n_facts": 3, "response": "Children's Hospital of Western Ontario.", "correct": true, "wrong_time": false}
+{"id": "L2_Q83407_P6_2", "order": "sorted", "n_facts": 4, "response": "Abel Dubois", "correct": false, "wrong_time": true}
+{"id": "L2_Q83407_P6_2", "order": "reversed", "n_facts": 4, "response": "Elio Di Rupo.", "correct": false, "wrong_time": true}
+{"id": "L2_Q83407_P6_2", "order": "shuffled", "n_facts": 4, "response": "Maurice Lafosse", "correct": true, "wrong_time": false}
+{"id": "L2_Q1538693_P39_1", "order": "sorted", "n_facts": 4, "response": "Prefect of Bouches-de-la-Meuse.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1538693_P39_1", "order": "reversed", "n_facts": 4, "response": "Prefect of Bouches-de-la-Meuse.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1538693_P39_1", "order": "shuffled", "n_facts": 4, "response": "Prefect of Bouches-de-la-Meuse.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1726_P6_2", "order": "sorted", "n_facts": 17, "response": "Josef von Teng", "correct": true, "wrong_time": false}
+{"id": "L2_Q1726_P6_2", "order": "reversed", "n_facts": 17, "response": "Josef von Teng", "correct": true, "wrong_time": false}
+{"id": "L2_Q1726_P6_2", "order": "shuffled", "n_facts": 17, "response": "Josef von Teng", "correct": true, "wrong_time": false}
+{"id": "L2_Q231349_P108_1", "order": "sorted", "n_facts": 9, "response": "University of Paris.", "correct": true, "wrong_time": false}
+{"id": "L2_Q231349_P108_1", "order": "reversed", "n_facts": 9, "response": "University College London.", "correct": true, "wrong_time": false}
+{"id": "L2_Q231349_P108_1", "order": "shuffled", "n_facts": 9, "response": "University of Paris.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7363386_P54_3", "order": "sorted", "n_facts": 7, "response": "FC Politehnica Ia\u0219i", "correct": true, "wrong_time": false}
+{"id": "L2_Q7363386_P54_3", "order": "reversed", "n_facts": 7, "response": "FC Politehnica Ia\u0219i", "correct": true, "wrong_time": false}
+{"id": "L2_Q7363386_P54_3", "order": "shuffled", "n_facts": 7, "response": "FC Politehnica Ia\u0219i", "correct": true, "wrong_time": false}
+{"id": "L2_Q2792033_P488_3", "order": "sorted", "n_facts": 6, "response": "Renato Balduzzi.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2792033_P488_3", "order": "reversed", "n_facts": 6, "response": "Renato Balduzzi.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2792033_P488_3", "order": "shuffled", "n_facts": 6, "response": "Renato Balduzzi.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1172065_P54_5", "order": "sorted", "n_facts": 7, "response": "ACF Fiorentina", "correct": false, "wrong_time": true}
+{"id": "L2_Q1172065_P54_5", "order": "reversed", "n_facts": 7, "response": "U.S. Salernitana 1919", "correct": true, "wrong_time": false}
+{"id": "L2_Q1172065_P54_5", "order": "shuffled", "n_facts": 7, "response": "ACF Fiorentina", "correct": false, "wrong_time": true}
+{"id": "L2_Q1814393_P6_0", "order": "sorted", "n_facts": 5, "response": "Svend Aage Troelsen", "correct": true, "wrong_time": false}
+{"id": "L2_Q1814393_P6_0", "order": "reversed", "n_facts": 5, "response": "Svend Aage Troelsen.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1814393_P6_0", "order": "shuffled", "n_facts": 5, "response": "Svend Aage Troelsen.", "correct": true, "wrong_time": false}
+{"id": "L2_Q9056250_P488_8", "order": "sorted", "n_facts": 9, "response": "Margarita Prohens Rigo", "correct": true, "wrong_time": false}
+{"id": "L2_Q9056250_P488_8", "order": "reversed", "n_facts": 9, "response": "Margarita Prohens Rigo", "correct": true, "wrong_time": false}
+{"id": "L2_Q9056250_P488_8", "order": "shuffled", "n_facts": 9, "response": "Margarita Prohens Rigo", "correct": true, "wrong_time": false}
+{"id": "L2_Q67796571_P108_3", "order": "sorted", "n_facts": 6, "response": "University of Miami", "correct": true, "wrong_time": false}
+{"id": "L2_Q67796571_P108_3", "order": "reversed", "n_facts": 6, "response": "University of Miami", "correct": true, "wrong_time": false}
+{"id": "L2_Q67796571_P108_3", "order": "shuffled", "n_facts": 6, "response": "University of Miami", "correct": true, "wrong_time": false}
+{"id": "L2_Q5331721_P39_3", "order": "sorted", "n_facts": 5, "response": "Member of the 29th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5331721_P39_3", "order": "reversed", "n_facts": 5, "response": "Member of the 29th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5331721_P39_3", "order": "shuffled", "n_facts": 5, "response": "Member of the 28th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11801875_P39_1", "order": "sorted", "n_facts": 3, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11801875_P39_1", "order": "reversed", "n_facts": 3, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11801875_P39_1", "order": "shuffled", "n_facts": 3, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5262358_P108_3", "order": "sorted", "n_facts": 4, "response": "Unite the Union", "correct": true, "wrong_time": false}
+{"id": "L2_Q5262358_P108_3", "order": "reversed", "n_facts": 4, "response": "Unite the Union", "correct": true, "wrong_time": false}
+{"id": "L2_Q5262358_P108_3", "order": "shuffled", "n_facts": 4, "response": "Unite the Union", "correct": true, "wrong_time": false}
+{"id": "L2_Q311782_P108_1", "order": "sorted", "n_facts": 3, "response": "United States Department of State.", "correct": true, "wrong_time": false}
+{"id": "L2_Q311782_P108_1", "order": "reversed", "n_facts": 3, "response": "United States Department of State.", "correct": true, "wrong_time": false}
+{"id": "L2_Q311782_P108_1", "order": "shuffled", "n_facts": 3, "response": "United States Department of State.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_2", "order": "sorted", "n_facts": 3, "response": "Member of the 37th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_2", "order": "reversed", "n_facts": 3, "response": "Member of the 36th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5236572_P39_2", "order": "shuffled", "n_facts": 3, "response": "Member of the 37th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q859822_P39_3", "order": "sorted", "n_facts": 5, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q859822_P39_3", "order": "reversed", "n_facts": 5, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q859822_P39_3", "order": "shuffled", "n_facts": 5, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8020429_P39_1", "order": "sorted", "n_facts": 3, "response": "Member of the 26th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8020429_P39_1", "order": "reversed", "n_facts": 3, "response": "Member of the 26th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8020429_P39_1", "order": "shuffled", "n_facts": 3, "response": "Member of the 26th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q310226_P54_2", "order": "sorted", "n_facts": 7, "response": "Real Zaragoza", "correct": true, "wrong_time": false}
+{"id": "L2_Q310226_P54_2", "order": "reversed", "n_facts": 7, "response": "Real Zaragoza", "correct": true, "wrong_time": false}
+{"id": "L2_Q310226_P54_2", "order": "shuffled", "n_facts": 7, "response": "Real Zaragoza.", "correct": true, "wrong_time": false}
+{"id": "L2_Q117892_P488_8", "order": "sorted", "n_facts": 10, "response": "Yolanda Kakabadse", "correct": false, "wrong_time": true}
+{"id": "L2_Q117892_P488_8", "order": "reversed", "n_facts": 10, "response": "Yolanda Kakabadse.", "correct": false, "wrong_time": true}
+{"id": "L2_Q117892_P488_8", "order": "shuffled", "n_facts": 10, "response": "Yolanda Kakabadse", "correct": false, "wrong_time": true}
+{"id": "L2_Q19518_P286_0", "order": "sorted", "n_facts": 6, "response": "Alain Casanova.", "correct": false, "wrong_time": true}
+{"id": "L2_Q19518_P286_0", "order": "reversed", "n_facts": 6, "response": "Alain Casanova.", "correct": false, "wrong_time": true}
+{"id": "L2_Q19518_P286_0", "order": "shuffled", "n_facts": 6, "response": "Alain Casanova.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11492669_P286_0", "order": "sorted", "n_facts": 3, "response": "Jacob Friis.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11492669_P286_0", "order": "reversed", "n_facts": 3, "response": "Jacob Friis.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11492669_P286_0", "order": "shuffled", "n_facts": 3, "response": "Jacob Friis.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1341836_P54_7", "order": "sorted", "n_facts": 11, "response": "RC Strasbourg", "correct": false, "wrong_time": true}
+{"id": "L2_Q1341836_P54_7", "order": "reversed", "n_facts": 11, "response": "VfB Stuttgart.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1341836_P54_7", "order": "shuffled", "n_facts": 11, "response": "VfB Stuttgart.", "correct": true, "wrong_time": false}
+{"id": "L2_Q330026_P6_2", "order": "sorted", "n_facts": 3, "response": "Imre L\u00e1szl\u00f3", "correct": true, "wrong_time": false}
+{"id": "L2_Q330026_P6_2", "order": "reversed", "n_facts": 3, "response": "Imre L\u00e1szl\u00f3", "correct": true, "wrong_time": false}
+{"id": "L2_Q330026_P6_2", "order": "shuffled", "n_facts": 3, "response": "Imre L\u00e1szl\u00f3", "correct": true, "wrong_time": false}
+{"id": "L2_Q3874292_P54_6", "order": "sorted", "n_facts": 11, "response": "Bristol City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3874292_P54_6", "order": "reversed", "n_facts": 11, "response": "Bristol City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3874292_P54_6", "order": "shuffled", "n_facts": 11, "response": "Bristol City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1347192_P488_0", "order": "sorted", "n_facts": 3, "response": "Dagmar Navr\u00e1tilov\u00e1", "correct": false, "wrong_time": true}
+{"id": "L2_Q1347192_P488_0", "order": "reversed", "n_facts": 3, "response": "Dagmar Navr\u00e1tilov\u00e1.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1347192_P488_0", "order": "shuffled", "n_facts": 3, "response": "Karol\u00edna Peake.", "correct": true, "wrong_time": false}
+{"id": "L2_Q111996_P108_1", "order": "sorted", "n_facts": 4, "response": "University of Copenhagen.", "correct": true, "wrong_time": false}
+{"id": "L2_Q111996_P108_1", "order": "reversed", "n_facts": 4, "response": "University of Copenhagen", "correct": true, "wrong_time": false}
+{"id": "L2_Q111996_P108_1", "order": "shuffled", "n_facts": 4, "response": "University of Copenhagen", "correct": true, "wrong_time": false}
+{"id": "L2_Q120730_P6_21", "order": "sorted", "n_facts": 30, "response": "Shigeru Sugiyama was the head of Ky\u014dto Prefecture in Dec, 1942.", "correct": false, "wrong_time": false}
+{"id": "L2_Q120730_P6_21", "order": "reversed", "n_facts": 30, "response": "Yukio Hayashida was the head of Ky\u014dto Prefecture from Apr, 1978 to Apr, 1986.", "correct": false, "wrong_time": true}
+{"id": "L2_Q120730_P6_21", "order": "shuffled", "n_facts": 30, "response": "Chiyoji Yukisawa", "correct": false, "wrong_time": true}
+{"id": "L2_Q193749_P286_19", "order": "sorted", "n_facts": 40, "response": "Jerzy Kopa", "correct": true, "wrong_time": false}
+{"id": "L2_Q193749_P286_19", "order": "reversed", "n_facts": 40, "response": "Henning Berg.", "correct": false, "wrong_time": true}
+{"id": "L2_Q193749_P286_19", "order": "shuffled", "n_facts": 40, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q214_P35_4", "order": "sorted", "n_facts": 5, "response": "Zuzana \u010caputov\u00e1", "correct": true, "wrong_time": false}
+{"id": "L2_Q214_P35_4", "order": "reversed", "n_facts": 5, "response": "Zuzana \u010caputov\u00e1", "correct": true, "wrong_time": false}
+{"id": "L2_Q214_P35_4", "order": "shuffled", "n_facts": 5, "response": "Zuzana \u010caputov\u00e1", "correct": true, "wrong_time": false}
+{"id": "L2_Q6229339_P39_2", "order": "sorted", "n_facts": 8, "response": "Chief Secretary to the Treasury.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6229339_P39_2", "order": "reversed", "n_facts": 8, "response": "Member of the 41st Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6229339_P39_2", "order": "shuffled", "n_facts": 8, "response": "Member of the 41st Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q218_P6_43", "order": "sorted", "n_facts": 54, "response": "Adrian N\u0103stase.", "correct": false, "wrong_time": true}
+{"id": "L2_Q218_P6_43", "order": "reversed", "n_facts": 54, "response": "Emil Boc was the head of Romania in Apr, 2007.", "correct": false, "wrong_time": true}
+{"id": "L2_Q218_P6_43", "order": "shuffled", "n_facts": 54, "response": "The head of Romania in April 2007 was Emil Boc.", "correct": false, "wrong_time": true}
+{"id": "L2_Q3948320_P54_6", "order": "sorted", "n_facts": 7, "response": "SV Heimstetten", "correct": false, "wrong_time": true}
+{"id": "L2_Q3948320_P54_6", "order": "reversed", "n_facts": 7, "response": "BCF Wolfratshausen.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3948320_P54_6", "order": "shuffled", "n_facts": 7, "response": "SV Heimstetten", "correct": false, "wrong_time": true}
+{"id": "L2_Q40_P35_10", "order": "sorted", "n_facts": 11, "response": "Alexander Van der Bellen", "correct": true, "wrong_time": false}
+{"id": "L2_Q40_P35_10", "order": "reversed", "n_facts": 11, "response": "Alexander Van der Bellen.", "correct": true, "wrong_time": false}
+{"id": "L2_Q40_P35_10", "order": "shuffled", "n_facts": 11, "response": "Alexander Van der Bellen", "correct": true, "wrong_time": false}
+{"id": "L2_Q620027_P488_0", "order": "sorted", "n_facts": 5, "response": "Pietro Blayer.", "correct": true, "wrong_time": false}
+{"id": "L2_Q620027_P488_0", "order": "reversed", "n_facts": 5, "response": "Pietro Blayer.", "correct": true, "wrong_time": false}
+{"id": "L2_Q620027_P488_0", "order": "shuffled", "n_facts": 5, "response": "Pietro Blayer", "correct": true, "wrong_time": false}
+{"id": "L2_Q200501_P69_1", "order": "sorted", "n_facts": 3, "response": "University of Hong Kong.", "correct": true, "wrong_time": false}
+{"id": "L2_Q200501_P69_1", "order": "reversed", "n_facts": 3, "response": "Shau Kei Wan Government Secondary School.", "correct": false, "wrong_time": true}
+{"id": "L2_Q200501_P69_1", "order": "shuffled", "n_facts": 3, "response": "University of Hong Kong.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3108606_P39_6", "order": "sorted", "n_facts": 7, "response": "President of the general council.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3108606_P39_6", "order": "reversed", "n_facts": 7, "response": "President of the general council.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3108606_P39_6", "order": "shuffled", "n_facts": 7, "response": "President of the general council.", "correct": true, "wrong_time": false}
+{"id": "L2_Q10956804_P39_2", "order": "sorted", "n_facts": 4, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q10956804_P39_2", "order": "reversed", "n_facts": 4, "response": "Mayor of Valencia.", "correct": true, "wrong_time": false}
+{"id": "L2_Q10956804_P39_2", "order": "shuffled", "n_facts": 4, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q6743074_P54_3", "order": "sorted", "n_facts": 5, "response": "Bengaluru FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q6743074_P54_3", "order": "reversed", "n_facts": 5, "response": "Bengaluru FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q6743074_P54_3", "order": "shuffled", "n_facts": 5, "response": "Salgaocar F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5890965_P54_16", "order": "sorted", "n_facts": 20, "response": "Motherwell F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5890965_P54_16", "order": "reversed", "n_facts": 20, "response": "AFC Telford United.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5890965_P54_16", "order": "shuffled", "n_facts": 20, "response": "AFC Telford United.", "correct": true, "wrong_time": false}
+{"id": "L2_Q725661_P54_2", "order": "sorted", "n_facts": 6, "response": "FC H\u00e4meenlinna.", "correct": false, "wrong_time": true}
+{"id": "L2_Q725661_P54_2", "order": "reversed", "n_facts": 6, "response": "\u00d6rgryte IS", "correct": true, "wrong_time": false}
+{"id": "L2_Q725661_P54_2", "order": "shuffled", "n_facts": 6, "response": "\u00d6rgryte IS", "correct": true, "wrong_time": false}
+{"id": "L2_Q6290799_P108_2", "order": "sorted", "n_facts": 3, "response": "National Academy of Sciences of Ukraine", "correct": true, "wrong_time": false}
+{"id": "L2_Q6290799_P108_2", "order": "reversed", "n_facts": 3, "response": "National Academy of Sciences of Ukraine.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6290799_P108_2", "order": "shuffled", "n_facts": 3, "response": "National Academy of Sciences of Ukraine.", "correct": true, "wrong_time": false}
+{"id": "L2_Q179412_P488_9", "order": "sorted", "n_facts": 12, "response": "Max Mosley", "correct": true, "wrong_time": false}
+{"id": "L2_Q179412_P488_9", "order": "reversed", "n_facts": 12, "response": "Max Mosley.", "correct": true, "wrong_time": false}
+{"id": "L2_Q179412_P488_9", "order": "shuffled", "n_facts": 12, "response": "Jean-Marie Balestre.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5394763_P54_7", "order": "sorted", "n_facts": 9, "response": "Gateshead F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5394763_P54_7", "order": "reversed", "n_facts": 9, "response": "Gateshead F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5394763_P54_7", "order": "shuffled", "n_facts": 9, "response": "Gateshead F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2637561_P54_4", "order": "sorted", "n_facts": 10, "response": "Derby County F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2637561_P54_4", "order": "reversed", "n_facts": 10, "response": "Sheffield Wednesday F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2637561_P54_4", "order": "shuffled", "n_facts": 10, "response": "Sheffield Wednesday F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_1", "order": "sorted", "n_facts": 3, "response": "Member of the 36th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_1", "order": "reversed", "n_facts": 3, "response": "Member of the 36th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5236572_P39_1", "order": "shuffled", "n_facts": 3, "response": "Member of the 36th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q79854_P488_4", "order": "sorted", "n_facts": 7, "response": "Yuri Andropov.", "correct": false, "wrong_time": true}
+{"id": "L2_Q79854_P488_4", "order": "reversed", "n_facts": 7, "response": "Yuri Andropov.", "correct": false, "wrong_time": true}
+{"id": "L2_Q79854_P488_4", "order": "shuffled", "n_facts": 7, "response": "Yuri Andropov.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5081098_P39_1", "order": "sorted", "n_facts": 8, "response": "Member of the 43rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5081098_P39_1", "order": "reversed", "n_facts": 8, "response": "Member of the 43rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5081098_P39_1", "order": "shuffled", "n_facts": 8, "response": "Member of the 43rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q381902_P39_0", "order": "sorted", "n_facts": 8, "response": "Leader of the Government in the Senate.", "correct": false, "wrong_time": true}
+{"id": "L2_Q381902_P39_0", "order": "reversed", "n_facts": 8, "response": "Leader of the Government in the Senate.", "correct": false, "wrong_time": true}
+{"id": "L2_Q381902_P39_0", "order": "shuffled", "n_facts": 8, "response": "Leader of the Government in the Senate.", "correct": false, "wrong_time": true}
+{"id": "L2_Q336759_P69_1", "order": "sorted", "n_facts": 5, "response": "Royal College of Science.", "correct": false, "wrong_time": true}
+{"id": "L2_Q336759_P69_1", "order": "reversed", "n_facts": 5, "response": "Royal College of Science.", "correct": false, "wrong_time": true}
+{"id": "L2_Q336759_P69_1", "order": "shuffled", "n_facts": 5, "response": "Royal College of Science.", "correct": false, "wrong_time": true}
+{"id": "L2_Q193272_P488_24", "order": "sorted", "n_facts": 28, "response": "Muhammadu Buhari.", "correct": true, "wrong_time": false}
+{"id": "L2_Q193272_P488_24", "order": "reversed", "n_facts": 28, "response": "Faure Essozimna Gnassingb\u00e9 Eyad\u00e9ma.", "correct": true, "wrong_time": false}
+{"id": "L2_Q193272_P488_24", "order": "shuffled", "n_facts": 28, "response": "Faure Essozimna Gnassingb\u00e9 Eyad\u00e9ma", "correct": true, "wrong_time": false}
+{"id": "L2_Q15831560_P54_1", "order": "sorted", "n_facts": 9, "response": "Gulf Coast League Blue Jays.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15831560_P54_1", "order": "reversed", "n_facts": 9, "response": "Gulf Coast League Blue Jays.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15831560_P54_1", "order": "shuffled", "n_facts": 9, "response": "Vancouver Canadians.", "correct": false, "wrong_time": true}
+{"id": "L2_Q19958839_P108_1", "order": "sorted", "n_facts": 5, "response": "Gj\u00f8vik HK", "correct": true, "wrong_time": false}
+{"id": "L2_Q19958839_P108_1", "order": "reversed", "n_facts": 5, "response": "Gj\u00f8vik HK", "correct": true, "wrong_time": false}
+{"id": "L2_Q19958839_P108_1", "order": "shuffled", "n_facts": 5, "response": "Gj\u00f8vik HK", "correct": true, "wrong_time": false}
+{"id": "L2_Q5056459_P54_6", "order": "sorted", "n_facts": 7, "response": "Juventus F.C. Women.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5056459_P54_6", "order": "reversed", "n_facts": 7, "response": "Juventus F.C. Women.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5056459_P54_6", "order": "shuffled", "n_facts": 7, "response": "Juventus F.C. Women.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5498324_P108_2", "order": "sorted", "n_facts": 6, "response": "Howard Baker.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5498324_P108_2", "order": "reversed", "n_facts": 6, "response": "Michigan State University", "correct": false, "wrong_time": true}
+{"id": "L2_Q5498324_P108_2", "order": "shuffled", "n_facts": 6, "response": "Michigan State University.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15831560_P54_5", "order": "sorted", "n_facts": 9, "response": "Noah Syndergaard did not play for any team in Oct, 2019.", "correct": false, "wrong_time": false}
+{"id": "L2_Q15831560_P54_5", "order": "reversed", "n_facts": 9, "response": "New York Mets", "correct": true, "wrong_time": false}
+{"id": "L2_Q15831560_P54_5", "order": "shuffled", "n_facts": 9, "response": "New York Mets", "correct": true, "wrong_time": false}
+{"id": "L2_Q7151304_P54_3", "order": "sorted", "n_facts": 5, "response": "Millwall F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7151304_P54_3", "order": "reversed", "n_facts": 5, "response": "Millwall F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7151304_P54_3", "order": "shuffled", "n_facts": 5, "response": "Millwall F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1453032_P108_1", "order": "sorted", "n_facts": 6, "response": "Intelligence Corps.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1453032_P108_1", "order": "reversed", "n_facts": 6, "response": "Intelligence Corps.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1453032_P108_1", "order": "shuffled", "n_facts": 6, "response": "Intelligence Corps.", "correct": true, "wrong_time": false}
+{"id": "L2_Q55238558_P108_2", "order": "sorted", "n_facts": 3, "response": "University College London.", "correct": true, "wrong_time": false}
+{"id": "L2_Q55238558_P108_2", "order": "reversed", "n_facts": 3, "response": "University College London.", "correct": true, "wrong_time": false}
+{"id": "L2_Q55238558_P108_2", "order": "shuffled", "n_facts": 3, "response": "University College London.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11929074_P54_2", "order": "sorted", "n_facts": 7, "response": "Uni\u00f3n Deportiva Las Palmas.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11929074_P54_2", "order": "reversed", "n_facts": 7, "response": "Elche CF", "correct": true, "wrong_time": false}
+{"id": "L2_Q11929074_P54_2", "order": "shuffled", "n_facts": 7, "response": "Elche CF", "correct": true, "wrong_time": false}
+{"id": "L2_Q4665233_P39_0", "order": "sorted", "n_facts": 5, "response": "Member of the 4th Parliament of the 4th Republic of Ghana.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4665233_P39_0", "order": "reversed", "n_facts": 5, "response": "Member of the 4th Parliament of the 4th Republic of Ghana.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4665233_P39_0", "order": "shuffled", "n_facts": 5, "response": "Member of the 4th Parliament of the 4th Republic of Ghana.", "correct": true, "wrong_time": false}
+{"id": "L2_Q191772_P6_2", "order": "sorted", "n_facts": 4, "response": "Jean-Jacques Delmas", "correct": true, "wrong_time": false}
+{"id": "L2_Q191772_P6_2", "order": "reversed", "n_facts": 4, "response": "Jean-Jacques Delmas", "correct": true, "wrong_time": false}
+{"id": "L2_Q191772_P6_2", "order": "shuffled", "n_facts": 4, "response": "Jean-Jacques Delmas", "correct": true, "wrong_time": false}
+{"id": "L2_Q547007_P488_3", "order": "sorted", "n_facts": 5, "response": "Robert H. Storey", "correct": true, "wrong_time": false}
+{"id": "L2_Q547007_P488_3", "order": "reversed", "n_facts": 5, "response": "Robert H. Storey.", "correct": true, "wrong_time": false}
+{"id": "L2_Q547007_P488_3", "order": "shuffled", "n_facts": 5, "response": "Klaus Kotter", "correct": false, "wrong_time": true}
+{"id": "L2_Q4665233_P39_3", "order": "sorted", "n_facts": 5, "response": "Member of the 7th Parliament of the 4th Republic of Ghana.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4665233_P39_3", "order": "reversed", "n_facts": 5, "response": "Member of the 8th Parliament of the 4th Republic of Ghana.", "correct": false, "wrong_time": true}
+{"id": "L2_Q4665233_P39_3", "order": "shuffled", "n_facts": 5, "response": "Member of the 8th Parliament of the 4th Republic of Ghana.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1106299_P54_1", "order": "sorted", "n_facts": 6, "response": "Varese Calcio.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1106299_P54_1", "order": "reversed", "n_facts": 6, "response": "Juventus FC", "correct": false, "wrong_time": true}
+{"id": "L2_Q1106299_P54_1", "order": "shuffled", "n_facts": 6, "response": "A.S. Roma", "correct": false, "wrong_time": true}
+{"id": "L2_Q2894554_P54_4", "order": "sorted", "n_facts": 7, "response": "Amiens SC", "correct": false, "wrong_time": true}
+{"id": "L2_Q2894554_P54_4", "order": "reversed", "n_facts": 7, "response": "USL Dunkerque", "correct": true, "wrong_time": false}
+{"id": "L2_Q2894554_P54_4", "order": "shuffled", "n_facts": 7, "response": "AS Cannes", "correct": false, "wrong_time": true}
+{"id": "L2_Q16957_P35_6", "order": "sorted", "n_facts": 7, "response": "Sabine Bergmann-Pohl", "correct": true, "wrong_time": false}
+{"id": "L2_Q16957_P35_6", "order": "reversed", "n_facts": 7, "response": "Sabine Bergmann-Pohl.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16957_P35_6", "order": "shuffled", "n_facts": 7, "response": "Sabine Bergmann-Pohl.", "correct": true, "wrong_time": false}
+{"id": "L2_Q159_P6_0", "order": "sorted", "n_facts": 13, "response": "Yegor Gaidar.", "correct": false, "wrong_time": true}
+{"id": "L2_Q159_P6_0", "order": "reversed", "n_facts": 13, "response": "Yegor Gaidar.", "correct": false, "wrong_time": true}
+{"id": "L2_Q159_P6_0", "order": "shuffled", "n_facts": 13, "response": "Yegor Gaidar.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6313447_P54_4", "order": "sorted", "n_facts": 7, "response": "Jaguares de C\u00f3rdoba.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6313447_P54_4", "order": "reversed", "n_facts": 7, "response": "Jaguares de C\u00f3rdoba.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6313447_P54_4", "order": "shuffled", "n_facts": 7, "response": "Jaguares de C\u00f3rdoba.", "correct": true, "wrong_time": false}
+{"id": "L2_Q943238_P54_7", "order": "sorted", "n_facts": 10, "response": "VfL Bochum.", "correct": true, "wrong_time": false}
+{"id": "L2_Q943238_P54_7", "order": "reversed", "n_facts": 10, "response": "VfL Bochum II", "correct": true, "wrong_time": false}
+{"id": "L2_Q943238_P54_7", "order": "shuffled", "n_facts": 10, "response": "VfL Bochum.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6886529_P54_2", "order": "sorted", "n_facts": 5, "response": "Al Masry SC", "correct": true, "wrong_time": false}
+{"id": "L2_Q6886529_P54_2", "order": "reversed", "n_facts": 5, "response": "Al Masry SC", "correct": true, "wrong_time": false}
+{"id": "L2_Q6886529_P54_2", "order": "shuffled", "n_facts": 5, "response": "Al Masry SC", "correct": true, "wrong_time": false}
+{"id": "L2_Q461340_P488_5", "order": "sorted", "n_facts": 8, "response": "Daniel Egret", "correct": true, "wrong_time": false}
+{"id": "L2_Q461340_P488_5", "order": "reversed", "n_facts": 8, "response": "Daniel Egret", "correct": true, "wrong_time": false}
+{"id": "L2_Q461340_P488_5", "order": "shuffled", "n_facts": 8, "response": "Daniel Egret", "correct": true, "wrong_time": false}
+{"id": "L2_Q15646111_P488_5", "order": "sorted", "n_facts": 8, "response": "Konrad Wolf", "correct": true, "wrong_time": false}
+{"id": "L2_Q15646111_P488_5", "order": "reversed", "n_facts": 8, "response": "Willi Bredel", "correct": false, "wrong_time": true}
+{"id": "L2_Q15646111_P488_5", "order": "shuffled", "n_facts": 8, "response": "Willi Bredel", "correct": false, "wrong_time": true}
+{"id": "L2_Q18209599_P108_0", "order": "sorted", "n_facts": 3, "response": "Pierre and Marie Curie University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q18209599_P108_0", "order": "reversed", "n_facts": 3, "response": "Pierre and Marie Curie University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q18209599_P108_0", "order": "shuffled", "n_facts": 3, "response": "Pierre and Marie Curie University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7804228_P54_1", "order": "sorted", "n_facts": 11, "response": "Plymouth Argyle F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7804228_P54_1", "order": "reversed", "n_facts": 11, "response": "Plymouth Argyle F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7804228_P54_1", "order": "shuffled", "n_facts": 11, "response": "Plymouth Argyle F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1943651_P127_1", "order": "sorted", "n_facts": 3, "response": "JPIMedia", "correct": true, "wrong_time": false}
+{"id": "L2_Q1943651_P127_1", "order": "reversed", "n_facts": 3, "response": "JPIMedia", "correct": true, "wrong_time": false}
+{"id": "L2_Q1943651_P127_1", "order": "shuffled", "n_facts": 3, "response": "Johnston Press", "correct": false, "wrong_time": true}
+{"id": "L2_Q5619124_P39_2", "order": "sorted", "n_facts": 3, "response": "Substitute member of the Parliamentary Assembly of the Council of Europe.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5619124_P39_2", "order": "reversed", "n_facts": 3, "response": "Member of the Parliament of Norway.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5619124_P39_2", "order": "shuffled", "n_facts": 3, "response": "Substitute member of the Parliamentary Assembly of the Council of Europe.", "correct": false, "wrong_time": true}
+{"id": "L2_Q4588714_P39_1", "order": "sorted", "n_facts": 5, "response": "Member of the Committee on Health and Welfare.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4588714_P39_1", "order": "reversed", "n_facts": 5, "response": "Member of the Committee on the Labour Market.", "correct": false, "wrong_time": true}
+{"id": "L2_Q4588714_P39_1", "order": "shuffled", "n_facts": 5, "response": "Member of the Committee on Health and Welfare.", "correct": true, "wrong_time": false}
+{"id": "L2_Q156578_P488_2", "order": "sorted", "n_facts": 7, "response": "Klaus Liesen.", "correct": false, "wrong_time": true}
+{"id": "L2_Q156578_P488_2", "order": "reversed", "n_facts": 7, "response": "Klaus Liesen", "correct": false, "wrong_time": true}
+{"id": "L2_Q156578_P488_2", "order": "shuffled", "n_facts": 7, "response": "Karl Gustaf Ratjen.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7509394_P108_4", "order": "sorted", "n_facts": 5, "response": "University of Nevada, Reno.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7509394_P108_4", "order": "reversed", "n_facts": 5, "response": "University of Nevada, Reno.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7509394_P108_4", "order": "shuffled", "n_facts": 5, "response": "University of Nevada, Reno.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1608950_P54_5", "order": "sorted", "n_facts": 6, "response": "San Diego Sails", "correct": true, "wrong_time": false}
+{"id": "L2_Q1608950_P54_5", "order": "reversed", "n_facts": 6, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q1608950_P54_5", "order": "shuffled", "n_facts": 6, "response": "Denver Nuggets.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6182445_P54_4", "order": "sorted", "n_facts": 19, "response": "Rayo Vallecano", "correct": true, "wrong_time": false}
+{"id": "L2_Q6182445_P54_4", "order": "reversed", "n_facts": 19, "response": "Rayo Vallecano", "correct": true, "wrong_time": false}
+{"id": "L2_Q6182445_P54_4", "order": "shuffled", "n_facts": 19, "response": "Rayo Vallecano", "correct": true, "wrong_time": false}
+{"id": "L2_Q4886381_P54_6", "order": "sorted", "n_facts": 9, "response": "Real Balomp\u00e9dica Linense", "correct": false, "wrong_time": true}
+{"id": "L2_Q4886381_P54_6", "order": "reversed", "n_facts": 9, "response": "Gal\u00e1ctico Pegaso", "correct": true, "wrong_time": false}
+{"id": "L2_Q4886381_P54_6", "order": "shuffled", "n_facts": 9, "response": "Real Balomp\u00e9dica Linense", "correct": false, "wrong_time": true}
+{"id": "L2_Q5362024_P54_2", "order": "sorted", "n_facts": 5, "response": "FC Barcelona Femen\u00ed.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5362024_P54_2", "order": "reversed", "n_facts": 5, "response": "AFC Ajax Vrouwen.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5362024_P54_2", "order": "shuffled", "n_facts": 5, "response": "College of Charleston Cougars.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1296723_P54_0", "order": "sorted", "n_facts": 3, "response": "VfL Wolfsburg", "correct": true, "wrong_time": false}
+{"id": "L2_Q1296723_P54_0", "order": "reversed", "n_facts": 3, "response": "VfL Wolfsburg", "correct": true, "wrong_time": false}
+{"id": "L2_Q1296723_P54_0", "order": "shuffled", "n_facts": 3, "response": "VfL Wolfsburg", "correct": true, "wrong_time": false}
+{"id": "L2_Q13814_P6_0", "order": "sorted", "n_facts": 5, "response": "Ramon Vall i Ciur\u00f3.", "correct": true, "wrong_time": false}
+{"id": "L2_Q13814_P6_0", "order": "reversed", "n_facts": 5, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q13814_P6_0", "order": "shuffled", "n_facts": 5, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q6238920_P39_1", "order": "sorted", "n_facts": 4, "response": "Member of the 22nd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6238920_P39_1", "order": "reversed", "n_facts": 4, "response": "Member of the 24th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6238920_P39_1", "order": "shuffled", "n_facts": 4, "response": "Member of the 21st Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q188920_P488_1", "order": "sorted", "n_facts": 11, "response": "Carleton Putnam.", "correct": true, "wrong_time": false}
+{"id": "L2_Q188920_P488_1", "order": "reversed", "n_facts": 11, "response": "Carleton Putnam.", "correct": true, "wrong_time": false}
+{"id": "L2_Q188920_P488_1", "order": "shuffled", "n_facts": 11, "response": "Carleton Putnam.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1046445_P286_0", "order": "sorted", "n_facts": 6, "response": "Paul Dalglish.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1046445_P286_0", "order": "reversed", "n_facts": 6, "response": "Paul Dalglish", "correct": true, "wrong_time": false}
+{"id": "L2_Q1046445_P286_0", "order": "shuffled", "n_facts": 6, "response": "Paul Dalglish.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5394763_P54_8", "order": "sorted", "n_facts": 9, "response": "York City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5394763_P54_8", "order": "reversed", "n_facts": 9, "response": "York City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5394763_P54_8", "order": "shuffled", "n_facts": 9, "response": "York City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q19667244_P54_0", "order": "sorted", "n_facts": 7, "response": "Ternana Calcio", "correct": true, "wrong_time": false}
+{"id": "L2_Q19667244_P54_0", "order": "reversed", "n_facts": 7, "response": "Ascoli Calcio 1898 F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q19667244_P54_0", "order": "shuffled", "n_facts": 7, "response": "Ternana Calcio.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11641_P108_2", "order": "sorted", "n_facts": 7, "response": "Sperry Corporation", "correct": true, "wrong_time": false}
+{"id": "L2_Q11641_P108_2", "order": "reversed", "n_facts": 7, "response": "Naval Sea Systems Command.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11641_P108_2", "order": "shuffled", "n_facts": 7, "response": "Naval Sea Systems Command", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_33", "order": "sorted", "n_facts": 45, "response": "Anton Cermak.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_33", "order": "reversed", "n_facts": 45, "response": "William Hale Thompson", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_33", "order": "shuffled", "n_facts": 45, "response": "William Emmett Dever.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15682_P6_0", "order": "sorted", "n_facts": 16, "response": "Nicomedes Herrero y L\u00f3pez.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15682_P6_0", "order": "reversed", "n_facts": 16, "response": "Enrique D\u00edaz Rocafull.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15682_P6_0", "order": "shuffled", "n_facts": 16, "response": "Nicomedes Herrero y L\u00f3pez.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1573464_P39_2", "order": "sorted", "n_facts": 3, "response": "Member of the North Carolina Senate.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1573464_P39_2", "order": "reversed", "n_facts": 3, "response": "Member of the North Carolina Senate.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1573464_P39_2", "order": "shuffled", "n_facts": 3, "response": "Member of the North Carolina Senate.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15130563_P108_2", "order": "sorted", "n_facts": 4, "response": "National Museum of Natural History.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15130563_P108_2", "order": "reversed", "n_facts": 4, "response": "National Museum of Natural History.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15130563_P108_2", "order": "shuffled", "n_facts": 4, "response": "National Museum of Natural History.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131331_P39_4", "order": "sorted", "n_facts": 6, "response": "Member of the 27th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131331_P39_4", "order": "reversed", "n_facts": 6, "response": "Member of the 27th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131331_P39_4", "order": "shuffled", "n_facts": 6, "response": "Member of the 27th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16_P6_4", "order": "sorted", "n_facts": 5, "response": "Justin Trudeau", "correct": true, "wrong_time": false}
+{"id": "L2_Q16_P6_4", "order": "reversed", "n_facts": 5, "response": "Justin Trudeau", "correct": true, "wrong_time": false}
+{"id": "L2_Q16_P6_4", "order": "shuffled", "n_facts": 5, "response": "Justin Trudeau.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2986557_P488_3", "order": "sorted", "n_facts": 6, "response": "David E. Finley, Jr.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2986557_P488_3", "order": "reversed", "n_facts": 6, "response": "Gilmore David Clarke", "correct": false, "wrong_time": true}
+{"id": "L2_Q2986557_P488_3", "order": "shuffled", "n_facts": 6, "response": "Gilmore David Clarke", "correct": false, "wrong_time": true}
+{"id": "L2_Q5218279_P54_2", "order": "sorted", "n_facts": 10, "response": "FC Victoria Br\u0103ne\u0219ti", "correct": true, "wrong_time": false}
+{"id": "L2_Q5218279_P54_2", "order": "reversed", "n_facts": 10, "response": "FC Victoria Br\u0103ne\u0219ti.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5218279_P54_2", "order": "shuffled", "n_facts": 10, "response": "FC Victoria Br\u0103ne\u0219ti.", "correct": true, "wrong_time": false}
+{"id": "L2_Q12142700_P488_1", "order": "sorted", "n_facts": 6, "response": "Yuriy A. Sergeyev.", "correct": true, "wrong_time": false}
+{"id": "L2_Q12142700_P488_1", "order": "reversed", "n_facts": 6, "response": "Yuriy A. Sergeyev", "correct": true, "wrong_time": false}
+{"id": "L2_Q12142700_P488_1", "order": "shuffled", "n_facts": 6, "response": "Yuriy A. Sergeyev.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16120002_P54_1", "order": "sorted", "n_facts": 3, "response": "Luton Town F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16120002_P54_1", "order": "reversed", "n_facts": 3, "response": "Luton Town F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16120002_P54_1", "order": "shuffled", "n_facts": 3, "response": "Sunderland A.F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q18729_P286_0", "order": "sorted", "n_facts": 4, "response": "Jaap Stam", "correct": true, "wrong_time": false}
+{"id": "L2_Q18729_P286_0", "order": "reversed", "n_facts": 4, "response": "Jaap Stam", "correct": true, "wrong_time": false}
+{"id": "L2_Q18729_P286_0", "order": "shuffled", "n_facts": 4, "response": "Jaap Stam", "correct": true, "wrong_time": false}
+{"id": "L2_Q11801875_P39_0", "order": "sorted", "n_facts": 3, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11801875_P39_0", "order": "reversed", "n_facts": 3, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q11801875_P39_0", "order": "shuffled", "n_facts": 3, "response": "Member of the 11th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q93154_P108_0", "order": "sorted", "n_facts": 4, "response": "Carnegie Mellon University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q93154_P108_0", "order": "reversed", "n_facts": 4, "response": "Carnegie Mellon University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q93154_P108_0", "order": "shuffled", "n_facts": 4, "response": "Carnegie Mellon University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q879689_P54_2", "order": "sorted", "n_facts": 5, "response": "TSV 1860 M\u00fcnchen", "correct": true, "wrong_time": false}
+{"id": "L2_Q879689_P54_2", "order": "reversed", "n_facts": 5, "response": "ACF Fiorentina", "correct": false, "wrong_time": true}
+{"id": "L2_Q879689_P54_2", "order": "shuffled", "n_facts": 5, "response": "TSV 1860 M\u00fcnchen", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_23", "order": "sorted", "n_facts": 45, "response": "John A. Roche is the head of Chicago from Jan, 1887 to Jan, 1889. Therefore, in Jul,", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_23", "order": "reversed", "n_facts": 45, "response": "John A. Roche was the head of Chicago in Jul, 1889.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_23", "order": "shuffled", "n_facts": 45, "response": "John A. Roche", "correct": false, "wrong_time": true}
+{"id": "L2_Q457939_P108_1", "order": "sorted", "n_facts": 4, "response": "Concordia Seminary.", "correct": true, "wrong_time": false}
+{"id": "L2_Q457939_P108_1", "order": "reversed", "n_facts": 4, "response": "University of Chicago.", "correct": false, "wrong_time": true}
+{"id": "L2_Q457939_P108_1", "order": "shuffled", "n_facts": 4, "response": "University of Chicago.", "correct": false, "wrong_time": true}
+{"id": "L2_Q156469_P39_3", "order": "sorted", "n_facts": 6, "response": "European Commissioner for Economic and Monetary Affairs and the Euro.", "correct": true, "wrong_time": false}
+{"id": "L2_Q156469_P39_3", "order": "reversed", "n_facts": 6, "response": "Minister of Economic and Monetary Affairs and the Euro.", "correct": false, "wrong_time": false}
+{"id": "L2_Q156469_P39_3", "order": "shuffled", "n_facts": 6, "response": "European Commissioner for Economic and Monetary Affairs and the Euro.", "correct": true, "wrong_time": false}
+{"id": "L2_Q26415474_P39_3", "order": "sorted", "n_facts": 8, "response": "Member of the 14th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q26415474_P39_3", "order": "reversed", "n_facts": 8, "response": "Member of the 14th Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q26415474_P39_3", "order": "shuffled", "n_facts": 8, "response": "Member of the 15th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_16", "order": "sorted", "n_facts": 45, "response": "James Hutchinson Woodworth was the head of Chicago from Jan, 1848 to Jan, 1850. There is no record of him", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_16", "order": "reversed", "n_facts": 45, "response": "Julian Sidney Rumsey was the head of Chicago in Jun, 1865.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1297_P6_16", "order": "shuffled", "n_facts": 45, "response": "John Blake Rice.", "correct": true, "wrong_time": false}
+{"id": "L2_Q181383_P102_1", "order": "sorted", "n_facts": 3, "response": "The Malaysian United Indigenous Party.", "correct": false, "wrong_time": true}
+{"id": "L2_Q181383_P102_1", "order": "reversed", "n_facts": 3, "response": "The Malaysian United Indigenous Party.", "correct": false, "wrong_time": true}
+{"id": "L2_Q181383_P102_1", "order": "shuffled", "n_facts": 3, "response": "The Malaysian United Indigenous Party.", "correct": false, "wrong_time": true}
+{"id": "L2_Q2497232_P488_5", "order": "sorted", "n_facts": 15, "response": "\u00c1lvaro Alberto da Mota e Silva.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2497232_P488_5", "order": "reversed", "n_facts": 15, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q2497232_P488_5", "order": "shuffled", "n_facts": 15, "response": "\u00c1lvaro Alberto da Mota e Silva.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_3", "order": "sorted", "n_facts": 26, "response": "Dominique Stoffel.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_3", "order": "reversed", "n_facts": 26, "response": "Dominique-Joseph Hoferlin.", "correct": false, "wrong_time": true}
+{"id": "L2_Q16010_P6_3", "order": "shuffled", "n_facts": 26, "response": "Dominique-Joseph Hoferlin.", "correct": false, "wrong_time": true}
+{"id": "L2_Q7526182_P39_1", "order": "sorted", "n_facts": 16, "response": "Member of the 4th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7526182_P39_1", "order": "reversed", "n_facts": 16, "response": "Member of the 3rd Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q7526182_P39_1", "order": "shuffled", "n_facts": 16, "response": "Member of the 3rd Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q7599788_P39_0", "order": "sorted", "n_facts": 5, "response": "Member of the 42nd Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q7599788_P39_0", "order": "reversed", "n_facts": 5, "response": "Member of the 41st Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7599788_P39_0", "order": "shuffled", "n_facts": 5, "response": "Member of the 41st Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2497232_P488_8", "order": "sorted", "n_facts": 15, "response": "Carlos Chagas Filho", "correct": true, "wrong_time": false}
+{"id": "L2_Q2497232_P488_8", "order": "reversed", "n_facts": 15, "response": "Carlos Chagas Filho was the chair of Brazilian Academy of Sciences in Jul, 1965.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2497232_P488_8", "order": "shuffled", "n_facts": 15, "response": "Carlos Chagas Filho", "correct": true, "wrong_time": false}
+{"id": "L2_Q1572529_P35_0", "order": "sorted", "n_facts": 5, "response": "Wareru.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1572529_P35_0", "order": "reversed", "n_facts": 5, "response": "Wareru", "correct": true, "wrong_time": false}
+{"id": "L2_Q1572529_P35_0", "order": "shuffled", "n_facts": 5, "response": "Wareru.", "correct": true, "wrong_time": false}
+{"id": "L2_Q310700_P54_1", "order": "sorted", "n_facts": 5, "response": "Birmingham City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q310700_P54_1", "order": "reversed", "n_facts": 5, "response": "Birmingham City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q310700_P54_1", "order": "shuffled", "n_facts": 5, "response": "Birmingham City F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q81725_P6_0", "order": "sorted", "n_facts": 9, "response": "Frank Mdlalose.", "correct": true, "wrong_time": false}
+{"id": "L2_Q81725_P6_0", "order": "reversed", "n_facts": 9, "response": "Ben Ngubane.", "correct": false, "wrong_time": true}
+{"id": "L2_Q81725_P6_0", "order": "shuffled", "n_facts": 9, "response": "Ben Ngubane.", "correct": false, "wrong_time": true}
+{"id": "L2_Q5993097_P108_6", "order": "sorted", "n_facts": 7, "response": "Complutense University of Madrid", "correct": true, "wrong_time": false}
+{"id": "L2_Q5993097_P108_6", "order": "reversed", "n_facts": 7, "response": "Complutense University of Madrid.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5993097_P108_6", "order": "shuffled", "n_facts": 7, "response": "Complutense University of Madrid.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6229339_P39_5", "order": "sorted", "n_facts": 8, "response": "Chief Secretary to the Treasury.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6229339_P39_5", "order": "reversed", "n_facts": 8, "response": "Chief Secretary to the Treasury.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6229339_P39_5", "order": "shuffled", "n_facts": 8, "response": "Member of the 42nd Parliament of the United Kingdom.", "correct": false, "wrong_time": true}
+{"id": "L2_Q472272_P108_1", "order": "sorted", "n_facts": 4, "response": "University of Oxford", "correct": true, "wrong_time": false}
+{"id": "L2_Q472272_P108_1", "order": "reversed", "n_facts": 4, "response": "University of Oxford.", "correct": true, "wrong_time": false}
+{"id": "L2_Q472272_P108_1", "order": "shuffled", "n_facts": 4, "response": "University of Oxford.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1691426_P488_3", "order": "sorted", "n_facts": 7, "response": "Ove Rainer", "correct": true, "wrong_time": false}
+{"id": "L2_Q1691426_P488_3", "order": "reversed", "n_facts": 7, "response": "Ove Rainer.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1691426_P488_3", "order": "shuffled", "n_facts": 7, "response": "Helge Berglund", "correct": false, "wrong_time": true}
+{"id": "L2_Q11492669_P286_1", "order": "sorted", "n_facts": 3, "response": "Mart\u00ed Cifuentes.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11492669_P286_1", "order": "reversed", "n_facts": 3, "response": "Mart\u00ed Cifuentes.", "correct": true, "wrong_time": false}
+{"id": "L2_Q11492669_P286_1", "order": "shuffled", "n_facts": 3, "response": "Mart\u00ed Cifuentes.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4893128_P39_0", "order": "sorted", "n_facts": 6, "response": "Member of the Catalan Parliament.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4893128_P39_0", "order": "reversed", "n_facts": 6, "response": "Member of the Catalan Parliament.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4893128_P39_0", "order": "shuffled", "n_facts": 6, "response": "Member of the Catalan Parliament.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2094491_P39_3", "order": "sorted", "n_facts": 4, "response": "Speaker of the United States House of Representatives.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2094491_P39_3", "order": "reversed", "n_facts": 4, "response": "Speaker of the United States House of Representatives.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2094491_P39_3", "order": "shuffled", "n_facts": 4, "response": "Speaker of the United States House of Representatives.", "correct": true, "wrong_time": false}
+{"id": "L2_Q822781_P54_3", "order": "sorted", "n_facts": 7, "response": "1. FSV Mainz 05", "correct": false, "wrong_time": true}
+{"id": "L2_Q822781_P54_3", "order": "reversed", "n_facts": 7, "response": "Borussia M\u00f6nchengladbach", "correct": false, "wrong_time": true}
+{"id": "L2_Q822781_P54_3", "order": "shuffled", "n_facts": 7, "response": "1. FSV Mainz 05", "correct": false, "wrong_time": true}
+{"id": "L2_Q789233_P6_1", "order": "sorted", "n_facts": 3, "response": "Lajos Medv\u00e1cz", "correct": true, "wrong_time": false}
+{"id": "L2_Q789233_P6_1", "order": "reversed", "n_facts": 3, "response": "G\u00e1bor Csach", "correct": false, "wrong_time": true}
+{"id": "L2_Q789233_P6_1", "order": "shuffled", "n_facts": 3, "response": "G\u00e1bor Csach", "correct": false, "wrong_time": true}
+{"id": "L2_Q1753485_P69_0", "order": "sorted", "n_facts": 4, "response": "Argyle House School.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1753485_P69_0", "order": "reversed", "n_facts": 4, "response": "Shiplake College.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1753485_P69_0", "order": "shuffled", "n_facts": 4, "response": "Shiplake College.", "correct": false, "wrong_time": true}
+{"id": "L2_Q61043_P108_0", "order": "sorted", "n_facts": 5, "response": "German Army.", "correct": true, "wrong_time": false}
+{"id": "L2_Q61043_P108_0", "order": "reversed", "n_facts": 5, "response": "German Army", "correct": true, "wrong_time": false}
+{"id": "L2_Q61043_P108_0", "order": "shuffled", "n_facts": 5, "response": "German Army", "correct": true, "wrong_time": false}
+{"id": "L2_Q1205292_P488_3", "order": "sorted", "n_facts": 4, "response": "Rainer Kirsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q1205292_P488_3", "order": "reversed", "n_facts": 4, "response": "Rainer Kirsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q1205292_P488_3", "order": "shuffled", "n_facts": 4, "response": "Rainer Kirsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q16649745_P39_4", "order": "sorted", "n_facts": 5, "response": "Commandant General in Stockholm.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16649745_P39_4", "order": "reversed", "n_facts": 5, "response": "Commander East Military Area", "correct": true, "wrong_time": false}
+{"id": "L2_Q16649745_P39_4", "order": "shuffled", "n_facts": 5, "response": "Commander East Military Area", "correct": true, "wrong_time": false}
+{"id": "L2_Q6237389_P39_6", "order": "sorted", "n_facts": 7, "response": "Lord Chancellor", "correct": true, "wrong_time": false}
+{"id": "L2_Q6237389_P39_6", "order": "reversed", "n_facts": 7, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q6237389_P39_6", "order": "shuffled", "n_facts": 7, "response": "Lord Chancellor", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_22", "order": "sorted", "n_facts": 45, "response": "John A. Roche", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_22", "order": "reversed", "n_facts": 45, "response": "John A. Roche", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_22", "order": "shuffled", "n_facts": 45, "response": "John A. Roche", "correct": true, "wrong_time": false}
+{"id": "L2_Q1726_P6_6", "order": "sorted", "n_facts": 17, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q1726_P6_6", "order": "reversed", "n_facts": 17, "response": "Wilhelm Ritter von Borscht", "correct": false, "wrong_time": true}
+{"id": "L2_Q1726_P6_6", "order": "shuffled", "n_facts": 17, "response": "Johannes von Widenmayer.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6114253_P54_5", "order": "sorted", "n_facts": 8, "response": "Southend United F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6114253_P54_5", "order": "reversed", "n_facts": 8, "response": "Crewe Alexandra F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6114253_P54_5", "order": "shuffled", "n_facts": 8, "response": "New Brighton A.F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q517449_P488_22", "order": "sorted", "n_facts": 31, "response": "Jean-Pierre Urwald.", "correct": true, "wrong_time": false}
+{"id": "L2_Q517449_P488_22", "order": "reversed", "n_facts": 31, "response": "Jean-Pierre Urwald", "correct": true, "wrong_time": false}
+{"id": "L2_Q517449_P488_22", "order": "shuffled", "n_facts": 31, "response": "L\u00e9on Bollendorff.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4413438_P39_1", "order": "sorted", "n_facts": 3, "response": "Ambassador of the United Kingdom to Austria.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4413438_P39_1", "order": "reversed", "n_facts": 3, "response": "Ambassador of the United Kingdom to Austria.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4413438_P39_1", "order": "shuffled", "n_facts": 3, "response": "Ambassador of the United Kingdom to Austria.", "correct": true, "wrong_time": false}
+{"id": "L2_Q285975_P39_4", "order": "sorted", "n_facts": 11, "response": "Shadow Secretary of State for Defence.", "correct": false, "wrong_time": true}
+{"id": "L2_Q285975_P39_4", "order": "reversed", "n_facts": 11, "response": "Shadow Secretary of State for Defence.", "correct": false, "wrong_time": true}
+{"id": "L2_Q285975_P39_4", "order": "shuffled", "n_facts": 11, "response": "Shadow Secretary of State for Defence.", "correct": false, "wrong_time": true}
+{"id": "L2_Q218_P6_48", "order": "sorted", "n_facts": 54, "response": "Sorin Grindeanu.", "correct": true, "wrong_time": false}
+{"id": "L2_Q218_P6_48", "order": "reversed", "n_facts": 54, "response": "Mihai Tudose was the head of Romania in Apr, 2017.", "correct": false, "wrong_time": true}
+{"id": "L2_Q218_P6_48", "order": "shuffled", "n_facts": 54, "response": "Sorin Grindeanu was the head of Romania in Apr, 2017.", "correct": true, "wrong_time": false}
+{"id": "L2_Q212081_P108_4", "order": "sorted", "n_facts": 6, "response": "University of Paris.", "correct": false, "wrong_time": true}
+{"id": "L2_Q212081_P108_4", "order": "reversed", "n_facts": 6, "response": "\u00c9cole polytechnique.", "correct": true, "wrong_time": false}
+{"id": "L2_Q212081_P108_4", "order": "shuffled", "n_facts": 6, "response": "University of Paris.", "correct": false, "wrong_time": true}
+{"id": "L2_Q3511548_P286_2", "order": "sorted", "n_facts": 3, "response": "Michael Boris", "correct": true, "wrong_time": false}
+{"id": "L2_Q3511548_P286_2", "order": "reversed", "n_facts": 3, "response": "Michael Boris", "correct": true, "wrong_time": false}
+{"id": "L2_Q3511548_P286_2", "order": "shuffled", "n_facts": 3, "response": "Michael Boris", "correct": true, "wrong_time": false}
+{"id": "L2_Q334411_P39_3", "order": "sorted", "n_facts": 10, "response": "Member of the 49th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q334411_P39_3", "order": "reversed", "n_facts": 10, "response": "Member of the 49th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q334411_P39_3", "order": "shuffled", "n_facts": 10, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q7804228_P54_8", "order": "sorted", "n_facts": 11, "response": "Dorchester Town F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7804228_P54_8", "order": "reversed", "n_facts": 11, "response": "Bideford A.F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q7804228_P54_8", "order": "shuffled", "n_facts": 11, "response": "Bideford A.F.C. and Dorchester Town F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q157259_P39_10", "order": "sorted", "n_facts": 24, "response": "Secretary of State for War and the Colonies.", "correct": true, "wrong_time": false}
+{"id": "L2_Q157259_P39_10", "order": "reversed", "n_facts": 24, "response": "Secretary of State for War and the Colonies.", "correct": true, "wrong_time": false}
+{"id": "L2_Q157259_P39_10", "order": "shuffled", "n_facts": 24, "response": "Secretary of State for War and the Colonies.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_16", "order": "sorted", "n_facts": 26, "response": "Theodor Feldhege.", "correct": false, "wrong_time": true}
+{"id": "L2_Q16010_P6_16", "order": "reversed", "n_facts": 26, "response": "Theodor Feldhege.", "correct": false, "wrong_time": true}
+{"id": "L2_Q16010_P6_16", "order": "shuffled", "n_facts": 26, "response": "Theodor Feldhege.", "correct": false, "wrong_time": true}
+{"id": "L2_Q3511548_P286_1", "order": "sorted", "n_facts": 3, "response": "Glen Riddersholm.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3511548_P286_1", "order": "reversed", "n_facts": 3, "response": "Glen Riddersholm.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3511548_P286_1", "order": "shuffled", "n_facts": 3, "response": "Glen Riddersholm.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6788464_P54_7", "order": "sorted", "n_facts": 8, "response": "Orlando Sharks.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6788464_P54_7", "order": "reversed", "n_facts": 8, "response": "Orlando Sharks.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6788464_P54_7", "order": "shuffled", "n_facts": 8, "response": "California Cougars.", "correct": true, "wrong_time": false}
+{"id": "L2_Q27863139_P108_3", "order": "sorted", "n_facts": 6, "response": "Govans Presbyterian Church", "correct": true, "wrong_time": false}
+{"id": "L2_Q27863139_P108_3", "order": "reversed", "n_facts": 6, "response": "Govans Presbyterian Church.", "correct": true, "wrong_time": false}
+{"id": "L2_Q27863139_P108_3", "order": "shuffled", "n_facts": 6, "response": "Govans Presbyterian Church.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1459111_P54_6", "order": "sorted", "n_facts": 11, "response": "Atl\u00e9tico Venezuela", "correct": false, "wrong_time": true}
+{"id": "L2_Q1459111_P54_6", "order": "reversed", "n_facts": 11, "response": "Aragua FC", "correct": false, "wrong_time": true}
+{"id": "L2_Q1459111_P54_6", "order": "shuffled", "n_facts": 11, "response": "Estrella Roja FC.", "correct": true, "wrong_time": false}
+{"id": "L2_Q28819229_P39_2", "order": "sorted", "n_facts": 3, "response": "Permanent secretary of the French Foreign Affairs Ministry.", "correct": true, "wrong_time": false}
+{"id": "L2_Q28819229_P39_2", "order": "reversed", "n_facts": 3, "response": "Permanent secretary of the French Foreign Affairs Ministry.", "correct": true, "wrong_time": false}
+{"id": "L2_Q28819229_P39_2", "order": "shuffled", "n_facts": 3, "response": "Permanent secretary of the French Foreign Affairs Ministry.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15180_P6_10", "order": "sorted", "n_facts": 12, "response": "Valentin Pavlov.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15180_P6_10", "order": "reversed", "n_facts": 12, "response": "Ivan Silayev.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15180_P6_10", "order": "shuffled", "n_facts": 12, "response": "Valentin Pavlov", "correct": true, "wrong_time": false}
+{"id": "L2_Q462642_P39_5", "order": "sorted", "n_facts": 6, "response": "Member of the Chamber of Deputies of the Parliament of the Czech Republic.", "correct": true, "wrong_time": false}
+{"id": "L2_Q462642_P39_5", "order": "reversed", "n_facts": 6, "response": "Member of the Chamber of Deputies of the Parliament of the Czech Republic.", "correct": true, "wrong_time": false}
+{"id": "L2_Q462642_P39_5", "order": "shuffled", "n_facts": 6, "response": "Member of the Chamber of Deputies of the Parliament of the Czech Republic.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5081098_P39_7", "order": "sorted", "n_facts": 8, "response": "Member of the 48th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5081098_P39_7", "order": "reversed", "n_facts": 8, "response": "Member of the 48th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5081098_P39_7", "order": "shuffled", "n_facts": 8, "response": "Member of the 48th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1082440_P39_1", "order": "sorted", "n_facts": 6, "response": "deputy member of the Parliament of Norway", "correct": true, "wrong_time": false}
+{"id": "L2_Q1082440_P39_1", "order": "reversed", "n_facts": 6, "response": "deputy member of the Parliament of Norway", "correct": true, "wrong_time": false}
+{"id": "L2_Q1082440_P39_1", "order": "shuffled", "n_facts": 6, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q5295185_P39_2", "order": "sorted", "n_facts": 5, "response": "Member of the 47th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5295185_P39_2", "order": "reversed", "n_facts": 5, "response": "Member of the 47th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5295185_P39_2", "order": "shuffled", "n_facts": 5, "response": "Member of the 47th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q206171_P488_3", "order": "sorted", "n_facts": 6, "response": "Tricia Marwick", "correct": true, "wrong_time": false}
+{"id": "L2_Q206171_P488_3", "order": "reversed", "n_facts": 6, "response": "Tricia Marwick", "correct": true, "wrong_time": false}
+{"id": "L2_Q206171_P488_3", "order": "shuffled", "n_facts": 6, "response": "Tricia Marwick", "correct": true, "wrong_time": false}
+{"id": "L2_Q5240078_P54_0", "order": "sorted", "n_facts": 3, "response": "Bury F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5240078_P54_0", "order": "reversed", "n_facts": 3, "response": "Bury F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5240078_P54_0", "order": "shuffled", "n_facts": 3, "response": "Bury F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q171228_P102_0", "order": "sorted", "n_facts": 3, "response": "League of Communists of Slovenia.", "correct": true, "wrong_time": false}
+{"id": "L2_Q171228_P102_0", "order": "reversed", "n_facts": 3, "response": "League of Communists of Slovenia.", "correct": true, "wrong_time": false}
+{"id": "L2_Q171228_P102_0", "order": "shuffled", "n_facts": 3, "response": "League of Communists of Slovenia.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1342923_P54_1", "order": "sorted", "n_facts": 4, "response": "FC Metz.", "correct": false, "wrong_time": true}
+{"id": "L2_Q1342923_P54_1", "order": "reversed", "n_facts": 4, "response": "Atl\u00e9tico Petr\u00f3leos Luanda.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1342923_P54_1", "order": "shuffled", "n_facts": 4, "response": "Atl\u00e9tico Petr\u00f3leos Luanda.", "correct": true, "wrong_time": false}
+{"id": "L2_Q224372_P108_2", "order": "sorted", "n_facts": 6, "response": "Admiralty Research Laboratory.", "correct": true, "wrong_time": false}
+{"id": "L2_Q224372_P108_2", "order": "reversed", "n_facts": 6, "response": "Admiralty Research Laboratory.", "correct": true, "wrong_time": false}
+{"id": "L2_Q224372_P108_2", "order": "shuffled", "n_facts": 6, "response": "Admiralty Research Laboratory.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5295185_P39_4", "order": "sorted", "n_facts": 5, "response": "Member of the 49th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5295185_P39_4", "order": "reversed", "n_facts": 5, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q5295185_P39_4", "order": "shuffled", "n_facts": 5, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q2497232_P488_1", "order": "sorted", "n_facts": 15, "response": "Juliano Moreira.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2497232_P488_1", "order": "reversed", "n_facts": 15, "response": "Juliano Moreira", "correct": true, "wrong_time": false}
+{"id": "L2_Q2497232_P488_1", "order": "shuffled", "n_facts": 15, "response": "Henrique Charles Morize was the chair of Brazilian Academy of Sciences from Jan, 1916 to Jan, 1926. Therefore,", "correct": false, "wrong_time": true}
+{"id": "L2_Q727532_P54_0", "order": "sorted", "n_facts": 4, "response": "MTK Budapest FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q727532_P54_0", "order": "reversed", "n_facts": 4, "response": "MTK Budapest FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q727532_P54_0", "order": "shuffled", "n_facts": 4, "response": "MTK Budapest FC", "correct": true, "wrong_time": false}
+{"id": "L2_Q503677_P39_3", "order": "sorted", "n_facts": 4, "response": "minister of foreign trade", "correct": true, "wrong_time": false}
+{"id": "L2_Q503677_P39_3", "order": "reversed", "n_facts": 4, "response": "Italian Minister of Foreign Trade.", "correct": true, "wrong_time": false}
+{"id": "L2_Q503677_P39_3", "order": "shuffled", "n_facts": 4, "response": "Vito Lattanzio held the position of minister of foreign trade in Jan, 1992.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2505876_P108_0", "order": "sorted", "n_facts": 7, "response": "Office de Radiodiffusion T\u00e9l\u00e9vision Fran\u00e7aise.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2505876_P108_0", "order": "reversed", "n_facts": 7, "response": "Office de Radiodiffusion T\u00e9l\u00e9vision Fran\u00e7aise.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2505876_P108_0", "order": "shuffled", "n_facts": 7, "response": "Office de Radiodiffusion T\u00e9l\u00e9vision Fran\u00e7aise.", "correct": true, "wrong_time": false}
+{"id": "L2_Q384292_P54_4", "order": "sorted", "n_facts": 5, "response": "Club Deportivo Platense - Zacatecoluca.", "correct": true, "wrong_time": false}
+{"id": "L2_Q384292_P54_4", "order": "reversed", "n_facts": 5, "response": "Club Deportivo Platense - Zacatecoluca.", "correct": true, "wrong_time": false}
+{"id": "L2_Q384292_P54_4", "order": "shuffled", "n_facts": 5, "response": "Club Deportivo Platense - Zacatecoluca", "correct": true, "wrong_time": false}
+{"id": "L2_Q5541150_P39_5", "order": "sorted", "n_facts": 6, "response": "Member of the 37th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5541150_P39_5", "order": "reversed", "n_facts": 6, "response": "Member of the 37th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5541150_P39_5", "order": "shuffled", "n_facts": 6, "response": "Member of the 37th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15180_P6_4", "order": "sorted", "n_facts": 12, "response": "Georgy Malenkov.", "correct": true, "wrong_time": false}
+{"id": "L2_Q15180_P6_4", "order": "reversed", "n_facts": 12, "response": "Joseph Stalin", "correct": true, "wrong_time": false}
+{"id": "L2_Q15180_P6_4", "order": "shuffled", "n_facts": 12, "response": "Georgy Malenkov", "correct": true, "wrong_time": false}
+{"id": "L2_Q6867098_P488_5", "order": "sorted", "n_facts": 8, "response": "Boris Petrovsky.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6867098_P488_5", "order": "reversed", "n_facts": 8, "response": "Sergey Burenkov.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6867098_P488_5", "order": "shuffled", "n_facts": 8, "response": "Boris Petrovsky", "correct": false, "wrong_time": true}
+{"id": "L2_Q1082440_P39_0", "order": "sorted", "n_facts": 6, "response": "Mayor of Oslo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1082440_P39_0", "order": "reversed", "n_facts": 6, "response": "Mayor of Oslo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1082440_P39_0", "order": "shuffled", "n_facts": 6, "response": "Mayor of Oslo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q519395_P54_0", "order": "sorted", "n_facts": 7, "response": "Boca Juniors.", "correct": true, "wrong_time": false}
+{"id": "L2_Q519395_P54_0", "order": "reversed", "n_facts": 7, "response": "Boca Juniors.", "correct": true, "wrong_time": false}
+{"id": "L2_Q519395_P54_0", "order": "shuffled", "n_facts": 7, "response": "Boca Juniors.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_23", "order": "sorted", "n_facts": 26, "response": "Lydia Mutsch.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_23", "order": "reversed", "n_facts": 26, "response": "Lydia Mutsch.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_23", "order": "shuffled", "n_facts": 26, "response": "Lydia Mutsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q164389_P108_1", "order": "sorted", "n_facts": 3, "response": "University of Oslo", "correct": true, "wrong_time": false}
+{"id": "L2_Q164389_P108_1", "order": "reversed", "n_facts": 3, "response": "University of Oslo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q164389_P108_1", "order": "shuffled", "n_facts": 3, "response": "Stockholm University.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6131297_P39_2", "order": "sorted", "n_facts": 3, "response": "Member of the 33rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131297_P39_2", "order": "reversed", "n_facts": 3, "response": "Member of the 33rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6131297_P39_2", "order": "shuffled", "n_facts": 3, "response": "Member of the 33rd Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1310_P6_4", "order": "sorted", "n_facts": 7, "response": "Herman Kaiser", "correct": true, "wrong_time": false}
+{"id": "L2_Q1310_P6_4", "order": "reversed", "n_facts": 7, "response": "Herman Kaiser", "correct": true, "wrong_time": false}
+{"id": "L2_Q1310_P6_4", "order": "shuffled", "n_facts": 7, "response": "Herman Kaiser", "correct": true, "wrong_time": false}
+{"id": "L2_Q3858060_P54_0", "order": "sorted", "n_facts": 5, "response": "FC Slov\u00e1ck\u00e1 Slavia Uhersk\u00e9 Hradi\u0161t\u011b.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3858060_P54_0", "order": "reversed", "n_facts": 5, "response": "FC Slov\u00e1ck\u00e1 Slavia Uhersk\u00e9 Hradi\u0161t\u011b.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3858060_P54_0", "order": "shuffled", "n_facts": 5, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q17117406_P102_2", "order": "sorted", "n_facts": 3, "response": "Independent politician.", "correct": true, "wrong_time": false}
+{"id": "L2_Q17117406_P102_2", "order": "reversed", "n_facts": 3, "response": "Independent", "correct": false, "wrong_time": false}
+{"id": "L2_Q17117406_P102_2", "order": "shuffled", "n_facts": 3, "response": "Independent", "correct": false, "wrong_time": false}
+{"id": "L2_Q76641_P108_0", "order": "sorted", "n_facts": 4, "response": "University of Erlangen-Nuremberg", "correct": true, "wrong_time": false}
+{"id": "L2_Q76641_P108_0", "order": "reversed", "n_facts": 4, "response": "University of Erlangen-Nuremberg", "correct": true, "wrong_time": false}
+{"id": "L2_Q76641_P108_0", "order": "shuffled", "n_facts": 4, "response": "University of Erlangen-Nuremberg.", "correct": true, "wrong_time": false}
+{"id": "L2_Q497510_P488_1", "order": "sorted", "n_facts": 4, "response": "Fran\u00e7oise Barr\u00e9-Sinoussi", "correct": true, "wrong_time": false}
+{"id": "L2_Q497510_P488_1", "order": "reversed", "n_facts": 4, "response": "Fran\u00e7oise Barr\u00e9-Sinoussi", "correct": true, "wrong_time": false}
+{"id": "L2_Q497510_P488_1", "order": "shuffled", "n_facts": 4, "response": "Fran\u00e7oise Barr\u00e9-Sinoussi", "correct": true, "wrong_time": false}
+{"id": "L2_Q317280_P54_1", "order": "sorted", "n_facts": 3, "response": "Eintracht Frankfurt", "correct": true, "wrong_time": false}
+{"id": "L2_Q317280_P54_1", "order": "reversed", "n_facts": 3, "response": "\u00c7aykur Rizespor.", "correct": false, "wrong_time": true}
+{"id": "L2_Q317280_P54_1", "order": "shuffled", "n_facts": 3, "response": "Eintracht Frankfurt", "correct": true, "wrong_time": false}
+{"id": "L2_Q6268959_P69_0", "order": "sorted", "n_facts": 3, "response": "University of Tokyo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6268959_P69_0", "order": "reversed", "n_facts": 3, "response": "University of Tokyo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6268959_P69_0", "order": "shuffled", "n_facts": 3, "response": "University of Tokyo.", "correct": true, "wrong_time": false}
+{"id": "L2_Q79854_P488_3", "order": "sorted", "n_facts": 7, "response": "Yuri Andropov.", "correct": true, "wrong_time": false}
+{"id": "L2_Q79854_P488_3", "order": "reversed", "n_facts": 7, "response": "Yuri Andropov.", "correct": true, "wrong_time": false}
+{"id": "L2_Q79854_P488_3", "order": "shuffled", "n_facts": 7, "response": "Yuri Andropov.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2123321_P54_0", "order": "sorted", "n_facts": 3, "response": "Philadelphia Eagles.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2123321_P54_0", "order": "reversed", "n_facts": 3, "response": "Philadelphia Eagles.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2123321_P54_0", "order": "shuffled", "n_facts": 3, "response": "Philadelphia Eagles.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_21", "order": "sorted", "n_facts": 45, "response": "Monroe Heath.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_21", "order": "reversed", "n_facts": 45, "response": "Monroe Heath.", "correct": true, "wrong_time": false}
+{"id": "L2_Q1297_P6_21", "order": "shuffled", "n_facts": 45, "response": "Monroe Heath.", "correct": true, "wrong_time": false}
+{"id": "L2_Q55065540_P108_0", "order": "sorted", "n_facts": 3, "response": "University of Delaware", "correct": true, "wrong_time": false}
+{"id": "L2_Q55065540_P108_0", "order": "reversed", "n_facts": 3, "response": "University of Delaware", "correct": true, "wrong_time": false}
+{"id": "L2_Q55065540_P108_0", "order": "shuffled", "n_facts": 3, "response": "University of Delaware", "correct": true, "wrong_time": false}
+{"id": "L2_Q351366_P108_4", "order": "sorted", "n_facts": 5, "response": "City College of New York.", "correct": true, "wrong_time": false}
+{"id": "L2_Q351366_P108_4", "order": "reversed", "n_facts": 5, "response": "City College of New York.", "correct": true, "wrong_time": false}
+{"id": "L2_Q351366_P108_4", "order": "shuffled", "n_facts": 5, "response": "City College of New York.", "correct": true, "wrong_time": false}
+{"id": "L2_Q20480905_P108_2", "order": "sorted", "n_facts": 3, "response": "University of Poitiers.", "correct": true, "wrong_time": false}
+{"id": "L2_Q20480905_P108_2", "order": "reversed", "n_facts": 3, "response": "University of Poitiers.", "correct": true, "wrong_time": false}
+{"id": "L2_Q20480905_P108_2", "order": "shuffled", "n_facts": 3, "response": "University of Poitiers.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2032524_P127_1", "order": "sorted", "n_facts": 3, "response": "Adolphe de Riquet de Caraman.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2032524_P127_1", "order": "reversed", "n_facts": 3, "response": "Adolphe de Riquet de Caraman.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2032524_P127_1", "order": "shuffled", "n_facts": 3, "response": "Adolphe de Riquet de Caraman.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8074394_P54_2", "order": "sorted", "n_facts": 5, "response": "Paniliakos F.C.", "correct": true, "wrong_time": false}
+{"id": "L2_Q8074394_P54_2", "order": "reversed", "n_facts": 5, "response": "A.E.K. Athens F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q8074394_P54_2", "order": "shuffled", "n_facts": 5, "response": "A.E.K. Athens F.C.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15682_P6_9", "order": "sorted", "n_facts": 16, "response": "Alfonso Moreno Gallardo.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15682_P6_9", "order": "reversed", "n_facts": 16, "response": "Alfonso Moreno Gallardo was the head of C\u00e1diz in Nov, 1947.", "correct": false, "wrong_time": true}
+{"id": "L2_Q15682_P6_9", "order": "shuffled", "n_facts": 16, "response": "Alfonso Moreno Gallardo.", "correct": false, "wrong_time": true}
+{"id": "L2_Q337905_P39_3", "order": "sorted", "n_facts": 4, "response": "Member of the 24th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q337905_P39_3", "order": "reversed", "n_facts": 4, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q337905_P39_3", "order": "shuffled", "n_facts": 4, "response": "Member of the 24th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q156578_P488_6", "order": "sorted", "n_facts": 7, "response": "Hans Dieter P\u00f6tsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q156578_P488_6", "order": "reversed", "n_facts": 7, "response": "Hans Dieter P\u00f6tsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q156578_P488_6", "order": "shuffled", "n_facts": 7, "response": "Hans Dieter P\u00f6tsch", "correct": true, "wrong_time": false}
+{"id": "L2_Q96252_P108_3", "order": "sorted", "n_facts": 5, "response": "Heidelberg University.", "correct": false, "wrong_time": true}
+{"id": "L2_Q96252_P108_3", "order": "reversed", "n_facts": 5, "response": "Heidelberg University.", "correct": false, "wrong_time": true}
+{"id": "L2_Q96252_P108_3", "order": "shuffled", "n_facts": 5, "response": "Heidelberg University.", "correct": false, "wrong_time": true}
+{"id": "L2_Q517449_P488_29", "order": "sorted", "n_facts": 31, "response": "Mars Di Bartolomeo", "correct": true, "wrong_time": false}
+{"id": "L2_Q517449_P488_29", "order": "reversed", "n_facts": 31, "response": "Fernand Etgen", "correct": false, "wrong_time": true}
+{"id": "L2_Q517449_P488_29", "order": "shuffled", "n_facts": 31, "response": "Fernand Etgen", "correct": false, "wrong_time": true}
+{"id": "L2_Q6701695_P54_3", "order": "sorted", "n_facts": 11, "response": "SC Schwanenstadt", "correct": true, "wrong_time": false}
+{"id": "L2_Q6701695_P54_3", "order": "reversed", "n_facts": 11, "response": "SV Mattersburg", "correct": false, "wrong_time": true}
+{"id": "L2_Q6701695_P54_3", "order": "shuffled", "n_facts": 11, "response": "SC Freiburg", "correct": false, "wrong_time": true}
+{"id": "L2_Q3131500_P39_1", "order": "sorted", "n_facts": 3, "response": "Representative of the Parliamentary Assembly of the Council of Europe.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3131500_P39_1", "order": "reversed", "n_facts": 3, "response": "Representative of the Parliamentary Assembly of the Council of Europe.", "correct": true, "wrong_time": false}
+{"id": "L2_Q3131500_P39_1", "order": "shuffled", "n_facts": 3, "response": "Representative of the Parliamentary Assembly of the Council of Europe.", "correct": true, "wrong_time": false}
+{"id": "L2_Q27863139_P108_5", "order": "sorted", "n_facts": 6, "response": "Symphony Number One", "correct": true, "wrong_time": false}
+{"id": "L2_Q27863139_P108_5", "order": "reversed", "n_facts": 6, "response": "Symphony Number One", "correct": true, "wrong_time": false}
+{"id": "L2_Q27863139_P108_5", "order": "shuffled", "n_facts": 6, "response": "Symphony Number One", "correct": true, "wrong_time": false}
+{"id": "L2_Q639118_P488_3", "order": "sorted", "n_facts": 5, "response": "Shunji Yanai.", "correct": true, "wrong_time": false}
+{"id": "L2_Q639118_P488_3", "order": "reversed", "n_facts": 5, "response": "Jin-Hyun Paik", "correct": false, "wrong_time": true}
+{"id": "L2_Q639118_P488_3", "order": "shuffled", "n_facts": 5, "response": "Shunji Yanai.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5401145_P69_0", "order": "sorted", "n_facts": 3, "response": "Bennington College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5401145_P69_0", "order": "reversed", "n_facts": 3, "response": "Bennington College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5401145_P69_0", "order": "shuffled", "n_facts": 3, "response": "Bennington College.", "correct": true, "wrong_time": false}
+{"id": "L2_Q26213077_P39_7", "order": "sorted", "n_facts": 8, "response": "Member of the 9th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q26213077_P39_7", "order": "reversed", "n_facts": 8, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q26213077_P39_7", "order": "shuffled", "n_facts": 8, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q5541150_P39_0", "order": "sorted", "n_facts": 6, "response": "Member of the 31st Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q5541150_P39_0", "order": "reversed", "n_facts": 6, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q5541150_P39_0", "order": "shuffled", "n_facts": 6, "response": "No position.", "correct": false, "wrong_time": false}
+{"id": "L2_Q517449_P488_18", "order": "sorted", "n_facts": 31, "response": "None.", "correct": false, "wrong_time": false}
+{"id": "L2_Q517449_P488_18", "order": "reversed", "n_facts": 31, "response": "Lucien Weiler.", "correct": false, "wrong_time": true}
+{"id": "L2_Q517449_P488_18", "order": "shuffled", "n_facts": 31, "response": "Fran\u00e7ois Altwies was the chair of Chamber of Deputies from Jan, 1917 to Jan, 1925. However, the", "correct": false, "wrong_time": true}
+{"id": "L2_Q51083310_P108_2", "order": "sorted", "n_facts": 3, "response": "Pennsylvania State University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q51083310_P108_2", "order": "reversed", "n_facts": 3, "response": "Pennsylvania State University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q51083310_P108_2", "order": "shuffled", "n_facts": 3, "response": "Pennsylvania State University.", "correct": true, "wrong_time": false}
+{"id": "L2_Q931348_P108_2", "order": "sorted", "n_facts": 3, "response": "Institute for Advanced Study.", "correct": true, "wrong_time": false}
+{"id": "L2_Q931348_P108_2", "order": "reversed", "n_facts": 3, "response": "Institute for Advanced Study.", "correct": true, "wrong_time": false}
+{"id": "L2_Q931348_P108_2", "order": "shuffled", "n_facts": 3, "response": "Yale University.", "correct": false, "wrong_time": true}
+{"id": "L2_Q21146_P6_2", "order": "sorted", "n_facts": 5, "response": "Jan Boye", "correct": true, "wrong_time": false}
+{"id": "L2_Q21146_P6_2", "order": "reversed", "n_facts": 5, "response": "Jan Boye", "correct": true, "wrong_time": false}
+{"id": "L2_Q21146_P6_2", "order": "shuffled", "n_facts": 5, "response": "Jan Boye", "correct": true, "wrong_time": false}
+{"id": "L2_Q2706_P6_3", "order": "sorted", "n_facts": 8, "response": "Werner Lenz.", "correct": true, "wrong_time": false}
+{"id": "L2_Q2706_P6_3", "order": "reversed", "n_facts": 8, "response": "Karl Willms", "correct": false, "wrong_time": true}
+{"id": "L2_Q2706_P6_3", "order": "shuffled", "n_facts": 8, "response": "Karl Willms", "correct": false, "wrong_time": true}
+{"id": "L2_Q6236465_P39_3", "order": "sorted", "n_facts": 4, "response": "Member of the 57th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6236465_P39_3", "order": "reversed", "n_facts": 4, "response": "Member of the 57th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6236465_P39_3", "order": "shuffled", "n_facts": 4, "response": "Member of the 57th Parliament of the United Kingdom.", "correct": true, "wrong_time": false}
+{"id": "L2_Q202006_P39_0", "order": "sorted", "n_facts": 3, "response": "Vice President of Nigeria.", "correct": true, "wrong_time": false}
+{"id": "L2_Q202006_P39_0", "order": "reversed", "n_facts": 3, "response": "Vice President of Nigeria.", "correct": true, "wrong_time": false}
+{"id": "L2_Q202006_P39_0", "order": "shuffled", "n_facts": 3, "response": "Vice President of Nigeria.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6860668_P54_0", "order": "sorted", "n_facts": 5, "response": "\u0160K Slovan Bratislava.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6860668_P54_0", "order": "reversed", "n_facts": 5, "response": "\u0160K Slovan Bratislava.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6860668_P54_0", "order": "shuffled", "n_facts": 5, "response": "Bursaspor", "correct": false, "wrong_time": true}
+{"id": "L2_Q2505876_P108_6", "order": "sorted", "n_facts": 7, "response": "TF1", "correct": false, "wrong_time": true}
+{"id": "L2_Q2505876_P108_6", "order": "reversed", "n_facts": 7, "response": "M6", "correct": true, "wrong_time": false}
+{"id": "L2_Q2505876_P108_6", "order": "shuffled", "n_facts": 7, "response": "M6", "correct": true, "wrong_time": false}
+{"id": "L2_Q639118_P488_4", "order": "sorted", "n_facts": 5, "response": "Jin-Hyun Paik", "correct": true, "wrong_time": false}
+{"id": "L2_Q639118_P488_4", "order": "reversed", "n_facts": 5, "response": "Jin-Hyun Paik", "correct": true, "wrong_time": false}
+{"id": "L2_Q639118_P488_4", "order": "shuffled", "n_facts": 5, "response": "Jin-Hyun Paik", "correct": true, "wrong_time": false}
+{"id": "L2_Q16003990_P108_1", "order": "sorted", "n_facts": 3, "response": "Patna Science College", "correct": true, "wrong_time": false}
+{"id": "L2_Q16003990_P108_1", "order": "reversed", "n_facts": 3, "response": "Allahabad University", "correct": false, "wrong_time": true}
+{"id": "L2_Q16003990_P108_1", "order": "shuffled", "n_facts": 3, "response": "Allahabad University", "correct": false, "wrong_time": true}
+{"id": "L2_Q6255193_P39_3", "order": "sorted", "n_facts": 5, "response": "Chief of the Defence Staff.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6255193_P39_3", "order": "reversed", "n_facts": 5, "response": "Military Commander of Gotland.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6255193_P39_3", "order": "shuffled", "n_facts": 5, "response": "Chief of the Defence Staff.", "correct": false, "wrong_time": true}
+{"id": "L2_Q6182445_P54_16", "order": "sorted", "n_facts": 19, "response": "UD San Sebasti\u00e1n de los Reyes.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6182445_P54_16", "order": "reversed", "n_facts": 19, "response": "UD San Sebasti\u00e1n de los Reyes.", "correct": true, "wrong_time": false}
+{"id": "L2_Q6182445_P54_16", "order": "shuffled", "n_facts": 19, "response": "UD San Sebasti\u00e1n de los Reyes.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_20", "order": "sorted", "n_facts": 26, "response": "Arthur Useldinger.", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_20", "order": "reversed", "n_facts": 26, "response": "Arthur Useldinger", "correct": true, "wrong_time": false}
+{"id": "L2_Q16010_P6_20", "order": "shuffled", "n_facts": 26, "response": "Lydia Mutsch.", "correct": false, "wrong_time": true}
+{"id": "L2_Q4665233_P39_2", "order": "sorted", "n_facts": 5, "response": "Member of the 6th Parliament of the 4th Republic of Ghana.", "correct": true, "wrong_time": false}
+{"id": "L2_Q4665233_P39_2", "order": "reversed", "n_facts": 5, "response": "Member of the 5th Parliament of the 4th Republic of Ghana.", "correct": false, "wrong_time": true}
+{"id": "L2_Q4665233_P39_2", "order": "shuffled", "n_facts": 5, "response": "Member of the 6th Parliament of the 4th Republic of Ghana.", "correct": true, "wrong_time": false}
+{"id": "L2_Q378890_P286_1", "order": "sorted", "n_facts": 3, "response": "Kostas Kaiafas", "correct": true, "wrong_time": false}
+{"id": "L2_Q378890_P286_1", "order": "reversed", "n_facts": 3, "response": "Kostas Kaiafas", "correct": true, "wrong_time": false}
+{"id": "L2_Q378890_P286_1", "order": "shuffled", "n_facts": 3, "response": "Kostas Kaiafas.", "correct": true, "wrong_time": false}

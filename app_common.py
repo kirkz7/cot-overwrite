@@ -69,6 +69,14 @@ MODELS = {  # name -> (hf id, 4-bit)
     "Qwen3-1.7B": ("Qwen/Qwen3-1.7B", False),
     "Qwen3-8B": ("Qwen/Qwen3-8B", True),
     "OLMo-2-7B-Instruct": ("allenai/OLMo-2-1124-7B-Instruct", True),
+    "Qwen3-32B": ("Qwen/Qwen3-32B", False),   # cloud only, bf16 over two cards (COT_DEVICE_MAP=auto)
+    "Qwen3-14B-bf16": ("Qwen/Qwen3-14B", False),   # cloud reader (the judge stays "Qwen3-14B", 4-bit)
+    "Qwen3-8B-bf16": ("Qwen/Qwen3-8B", False),   # cloud reader (the desktop "Qwen3-8B" is 4-bit)
+    "Gemma-3-12B": ("google/gemma-3-12b-it", False),   # second family (cloud, user 10-07), bf16
+    "Gemma-3-27B": ("google/gemma-3-27b-it", False),
+    "Qwen3-8B-e181": ("/root/cot-overwrite/runs/e181-q8/merged", False),   # E18.1 recipe on 8B, LoRA merged for vLLM (cloud 10-07)
+    "Qwen3-4B-e181": ("/root/cot-overwrite/runs/e181-dec/merged", False),   # E18.1-4B, LoRA merged for vLLM (cloud 10-08)
+    "Qwen3-8B-e182": ("/root/cot-overwrite/runs/e182-q8/merged", False),   # E18.2 on 8B, LoRA merged for vLLM (cloud 10-08)
 }
 NUM = re.compile(r"-?\d+(?:\.\d+)?")
 
@@ -76,6 +84,11 @@ NUM = re.compile(r"-?\d+(?:\.\d+)?")
 def tag(name):
     """File-name tag of a reader: "Qwen3-4B" -> "Qwen3-4B"; "Qwen3-4B@runs/q4-dec/final" -> "Qwen3-4B+q4-dec"."""
     base, _, adapter = name.partition("@")
+    if os.environ.get("COT_ENGINE") == "vllm":   # cloud vLLM runs get their own result files
+        base += "~vllm"
+    if os.environ.get("COT_PRESENCE_PENALTY"):   # option C (cloud 10-08): thinking with presence_penalty, own files
+        assert os.environ.get("COT_ENGINE") == "vllm", "COT_PRESENCE_PENALTY needs the vLLM engine"
+        base += "~pp" + os.environ["COT_PRESENCE_PENALTY"]
     if not adapter:
         return base
     parts = [p for p in re.split(r"[\\/]", adapter) if p and p not in ("final", "ckpt", "runs", ".")]
@@ -86,6 +99,11 @@ def load_reader(name):
     """name = a MODELS key, or "<MODELS key>@<adapter dir>" for a LoRA-tuned reader (merged when the base is bf16)."""
     base, _, adapter = name.partition("@")
     hf, four = MODELS[base]
+    if os.environ.get("COT_ENGINE") == "vllm":   # cloud: forward passes on a vLLM server, see vllm_client.py
+        from transformers import AutoTokenizer
+        from vllm_client import VLLMReader
+        assert not adapter and not four, "the vLLM path is for bf16 base models only"
+        return AutoTokenizer.from_pretrained(hf), VLLMReader(hf)
     tok, model = load(hf, four)
     if adapter:
         from peft import PeftModel
@@ -154,7 +172,8 @@ def answer_fast(tok, model, prompt, max_new=24):
     """Same as answer(), caching the newline stop-set per tokenizer."""
     key = id(tok)
     if key not in _STOP_CACHE:
-        _STOP_CACHE[key] = {tok.eos_token_id} | {i for t, i in tok.get_vocab().items() if "\n" in tok.convert_tokens_to_string([t])}
+        _STOP_CACHE[key] = {tok.eos_token_id} | {i for t, i in tok.get_vocab().items() if "\n" in tok.convert_tokens_to_string([t])} \
+            | {tok.get_vocab()[t] for t in ("<end_of_turn>",) if t in tok.get_vocab()}   # Gemma 3 end of turn (cloud)
     ids = tok(prompt, return_tensors="pt", add_special_tokens=False).input_ids.cuda()
     out = tok.decode(greedy(model, ids, max_new, _STOP_CACHE[key]), skip_special_tokens=True)
     return out.strip().split("\n")[0]

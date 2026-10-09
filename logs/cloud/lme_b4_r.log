@@ -1,0 +1,4 @@
+[14:11:44] vllm :8001 down
+[14:11:44] vllm :8001 up Qwen/Qwen3-4B tp=1 gpus=1
+[14:12:34] vllm :8001 ready
+Qwen3-4B relevance  todo 500

@@ -1,0 +1,740 @@
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "S_chrono_dated", "n_tok": 7834, "skipped": false, "response": "Your personal best time in the charity 5K run was 25:50."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "S_rev_dated", "n_tok": 7834, "skipped": false, "response": "Your personal best time in the charity 5K run was 27:12."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "S_rev_dated_header", "n_tok": 7844, "skipped": false, "response": "Your personal best time in the charity 5K run was 27:12."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "S_chrono_nodate", "n_tok": 7762, "skipped": false, "response": "Your personal best time in the charity 5K run was 25:50."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "S_rev_nodate", "n_tok": 7762, "skipped": false, "response": "Your personal best time in the charity 5K run was 27:12."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "T_newlast_dated", "n_tok": 591, "skipped": false, "response": "Your personal best time in the charity 5K run was 27:12."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "T_oldlast_dated", "n_tok": 591, "skipped": false, "response": "Your personal best time in the charity 5K run was 27:12."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "T_oldlast_dated_header", "n_tok": 599, "skipped": false, "response": "Your personal best time in the charity 5K run was 27:12."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "T_newlast_nodate", "n_tok": 441, "skipped": false, "response": "Your personal best time in the charity 5K run was 25:50."}
+{"model": "Gemma-3-12B", "qid": "6a1eabeb", "cond": "T_oldlast_nodate", "n_tok": 441, "skipped": false, "response": "Your personal best time in the charity 5K run was 25:50, and you recently achieved a time of 27:12."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "S_chrono_dated", "n_tok": 5259, "skipped": false, "response": "You've tried four different Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "S_rev_dated", "n_tok": 5259, "skipped": false, "response": "You've tried three different Korean restaurants in your city recently."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "S_rev_dated_header", "n_tok": 5269, "skipped": false, "response": "You've tried three different Korean restaurants in your city recently."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "S_chrono_nodate", "n_tok": 5187, "skipped": false, "response": "You've tried four different Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "S_rev_nodate", "n_tok": 5187, "skipped": false, "response": "You've tried three different Korean restaurants in your city recently."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "T_newlast_dated", "n_tok": 527, "skipped": false, "response": "You've tried a total of seven Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "T_oldlast_dated", "n_tok": 527, "skipped": false, "response": "You've tried a total of seven Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "T_oldlast_dated_header", "n_tok": 535, "skipped": false, "response": "You've tried a total of seven Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "T_newlast_nodate", "n_tok": 377, "skipped": false, "response": "You've tried a total of seven Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375", "cond": "T_oldlast_nodate", "n_tok": 377, "skipped": false, "response": "You've tried a total of seven Korean restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "S_chrono_dated", "n_tok": 5368, "skipped": false, "response": "Rachel moved back to the suburbs."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "S_rev_dated", "n_tok": 5368, "skipped": false, "response": "Rachel moved to Chicago."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "S_rev_dated_header", "n_tok": 5378, "skipped": false, "response": "Rachel moved to Chicago."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "S_chrono_nodate", "n_tok": 5296, "skipped": false, "response": "Rachel moved back to the suburbs."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "S_rev_nodate", "n_tok": 5296, "skipped": false, "response": "The provided conversation doesn't state where Rachel moved to before Chicago; it only mentions she recently moved to a new apartment in Chicago."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "T_newlast_dated", "n_tok": 463, "skipped": false, "response": "Rachel recently moved back to the suburbs."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "T_oldlast_dated", "n_tok": 463, "skipped": false, "response": "Rachel recently moved to Chicago."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "T_oldlast_dated_header", "n_tok": 471, "skipped": false, "response": "Rachel recently moved to Chicago."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "T_newlast_nodate", "n_tok": 313, "skipped": false, "response": "Rachel recently moved back to the suburbs near a major city."}
+{"model": "Gemma-3-12B", "qid": "830ce83f", "cond": "T_oldlast_nodate", "n_tok": 313, "skipped": false, "response": "Rachel recently moved back to the suburbs and then to Chicago."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "S_chrono_dated", "n_tok": 6498, "skipped": false, "response": "You were pre-approved for $400,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "S_rev_dated", "n_tok": 6498, "skipped": false, "response": "You were pre-approved for $350,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "S_rev_dated_header", "n_tok": 6508, "skipped": false, "response": "You were pre-approved for $350,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "S_chrono_nodate", "n_tok": 6426, "skipped": false, "response": "You were pre-approved for $400,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "S_rev_nodate", "n_tok": 6426, "skipped": false, "response": "You were pre-approved for $350,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "T_newlast_dated", "n_tok": 538, "skipped": false, "response": "You were pre-approved for both $350,000 and later $400,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "T_oldlast_dated", "n_tok": 538, "skipped": false, "response": "You were pre-approved for both $350,000 and $400,000 from Wells Fargo, according to our past conversations."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "T_oldlast_dated_header", "n_tok": 546, "skipped": false, "response": "You were pre-approved for $350,000 and $400,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "T_newlast_nodate", "n_tok": 388, "skipped": false, "response": "You were pre-approved for both $350,000 and $400,000 from Wells Fargo."}
+{"model": "Gemma-3-12B", "qid": "852ce960", "cond": "T_oldlast_nodate", "n_tok": 388, "skipped": false, "response": "You were pre-approved for $400,000 from Wells Fargo, and later for $350,000."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "S_chrono_dated", "n_tok": 6547, "skipped": false, "response": "You attend yoga classes three times a week."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "S_rev_dated", "n_tok": 6547, "skipped": false, "response": "You attend yoga classes three times a week to help clear your head and manage anxiety."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "S_rev_dated_header", "n_tok": 6557, "skipped": false, "response": "You attend yoga classes three times a week to help clear your head and manage anxiety."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "S_chrono_nodate", "n_tok": 6475, "skipped": false, "response": "You attend yoga classes three times a week."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "S_rev_nodate", "n_tok": 6475, "skipped": false, "response": "You attend yoga classes three times a week."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "T_newlast_dated", "n_tok": 640, "skipped": false, "response": "You attend yoga classes three times a week to help clear your head and focus."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "T_oldlast_dated", "n_tok": 640, "skipped": false, "response": "You attend yoga classes three times a week to help clear your head and focus."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "T_oldlast_dated_header", "n_tok": 648, "skipped": false, "response": "You attend yoga classes three times a week to help clear your head and focus."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "T_newlast_nodate", "n_tok": 490, "skipped": false, "response": "You attend yoga classes three times a week to help you clear your head and focus."}
+{"model": "Gemma-3-12B", "qid": "945e3d21", "cond": "T_oldlast_nodate", "n_tok": 490, "skipped": false, "response": "You attend yoga classes three times a week to help clear your head and relax."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "S_chrono_dated", "n_tok": 5258, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "S_rev_dated", "n_tok": 5258, "skipped": false, "response": "No, your mom is still using a paper list."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "S_rev_dated_header", "n_tok": 5268, "skipped": false, "response": "No, your mom is still using a paper list."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "S_chrono_nodate", "n_tok": 5186, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "S_rev_nodate", "n_tok": 5186, "skipped": false, "response": "No, your mom is still using a paper list."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "T_newlast_dated", "n_tok": 532, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "T_oldlast_dated", "n_tok": 532, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "T_oldlast_dated_header", "n_tok": 540, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "T_newlast_nodate", "n_tok": 382, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "d7c942c3", "cond": "T_oldlast_nodate", "n_tok": 382, "skipped": false, "response": "Yes, your mom is now using the same grocery list app as you."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "S_chrono_dated", "n_tok": 7727, "skipped": false, "response": "You've spent 10-12 hours on your abstract ocean sculpture."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "S_rev_dated", "n_tok": 7727, "skipped": false, "response": "You've spent around 5-6 hours on your abstract ocean sculpture so far."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "S_rev_dated_header", "n_tok": 7737, "skipped": false, "response": "You've spent around 5-6 hours on your abstract ocean sculpture so far."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "S_chrono_nodate", "n_tok": 7655, "skipped": false, "response": "You've spent 10-12 hours on your abstract ocean sculpture."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "S_rev_nodate", "n_tok": 7655, "skipped": false, "response": "You've spent around 5-6 hours on your abstract ocean sculpture so far."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "T_newlast_dated", "n_tok": 585, "skipped": false, "response": "You've spent a total of 16-18 hours on your abstract ocean sculpture so far."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "T_oldlast_dated", "n_tok": 585, "skipped": false, "response": "You've spent a total of 16-18 hours on your abstract ocean sculpture, with 5-6 hours initially and then another 10-12 hours later."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "T_oldlast_dated_header", "n_tok": 593, "skipped": false, "response": "You've spent a total of 16-18 hours on your abstract ocean sculpture."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "T_newlast_nodate", "n_tok": 435, "skipped": false, "response": "You've spent a total of 16-18 hours on your abstract ocean sculpture so far."}
+{"model": "Gemma-3-12B", "qid": "71315a70", "cond": "T_oldlast_nodate", "n_tok": 435, "skipped": false, "response": "You've spent a total of 16-18 hours on your abstract ocean sculpture, with 5-6 hours initially and then another 10-12 hours later."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "S_chrono_dated", "n_tok": 7402, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "S_rev_dated", "n_tok": 7402, "skipped": false, "response": "You currently own three bikes: a road bike, a mountain bike, and a commuter bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "S_rev_dated_header", "n_tok": 7412, "skipped": false, "response": "You currently own three bikes: a road bike, a mountain bike, and a commuter bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "S_chrono_nodate", "n_tok": 7330, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "S_rev_nodate", "n_tok": 7330, "skipped": false, "response": "You currently own three bikes."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "T_newlast_dated", "n_tok": 634, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "T_oldlast_dated", "n_tok": 634, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "T_oldlast_dated_header", "n_tok": 642, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "T_newlast_nodate", "n_tok": 484, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a93", "cond": "T_oldlast_nodate", "n_tok": 484, "skipped": false, "response": "You currently own four bikes: a road bike, mountain bike, commuter bike, and a new hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "S_chrono_dated", "n_tok": 5485, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "S_rev_dated", "n_tok": 5485, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "S_rev_dated_header", "n_tok": 5495, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "S_chrono_nodate", "n_tok": 5413, "skipped": false, "response": "You take a cocktail-making class on Friday."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "S_rev_nodate", "n_tok": 5413, "skipped": false, "response": "You take a cocktail-making class on Friday."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "T_newlast_dated", "n_tok": 560, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "T_oldlast_dated", "n_tok": 560, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "T_oldlast_dated_header", "n_tok": 568, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "T_newlast_nodate", "n_tok": 410, "skipped": false, "response": "You take a cocktail-making class on Fridays."}
+{"model": "Gemma-3-12B", "qid": "ce6d2d27", "cond": "T_oldlast_nodate", "n_tok": 410, "skipped": false, "response": "You take a cocktail-making class on Thursdays and Fridays."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "S_chrono_dated", "n_tok": 7534, "skipped": false, "response": "You recently went on a family trip to Paris."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "S_rev_dated", "n_tok": 7534, "skipped": false, "response": "You went on your most recent family trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "S_rev_dated_header", "n_tok": 7544, "skipped": false, "response": "You went on your most recent family trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "S_chrono_nodate", "n_tok": 7462, "skipped": false, "response": "You went on your most recent family trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "S_rev_nodate", "n_tok": 7462, "skipped": false, "response": "You went to Hawaii on your most recent family trip."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "T_newlast_dated", "n_tok": 530, "skipped": false, "response": "Your most recent family trip was to Paris."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "T_oldlast_dated", "n_tok": 530, "skipped": false, "response": "Your most recent family trip was to Paris."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "T_oldlast_dated_header", "n_tok": 538, "skipped": false, "response": "Your most recent family trip was to Paris."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "T_newlast_nodate", "n_tok": 380, "skipped": false, "response": "Your most recent family trip was to Paris."}
+{"model": "Gemma-3-12B", "qid": "9ea5eabc", "cond": "T_oldlast_nodate", "n_tok": 380, "skipped": false, "response": "Your most recent family trip was to Paris."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "S_chrono_dated", "n_tok": 5908, "skipped": false, "response": "You should initially store your old sneakers in a shoe rack."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "S_rev_dated", "n_tok": 5908, "skipped": false, "response": "Initially, keep your old sneakers under your bed while you plan how to care for them."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "S_rev_dated_header", "n_tok": 5918, "skipped": false, "response": "Initially, keep your old sneakers under your bed while you plan how to care for them."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "S_chrono_nodate", "n_tok": 5836, "skipped": false, "response": "You're planning to store your old sneakers in a shoe rack."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "S_rev_nodate", "n_tok": 5836, "skipped": false, "response": "Initially, keep your old sneakers under your bed while you take inventory and decide what to do with them."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "T_newlast_dated", "n_tok": 582, "skipped": false, "response": "You've been keeping your old sneakers under your bed for storage."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "T_oldlast_dated", "n_tok": 582, "skipped": false, "response": "You've been keeping your old sneakers under your bed for storage."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "T_oldlast_dated_header", "n_tok": 590, "skipped": false, "response": "You've been keeping your old sneakers under your bed for storage."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "T_newlast_nodate", "n_tok": 432, "skipped": false, "response": "You've been keeping your old sneakers under your bed for storage."}
+{"model": "Gemma-3-12B", "qid": "07741c44", "cond": "T_oldlast_nodate", "n_tok": 432, "skipped": false, "response": "You've been keeping your old sneakers under your bed for storage."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "S_chrono_dated", "n_tok": 7267, "skipped": false, "response": "You've written seven short stories since you started writing regularly."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "S_rev_dated", "n_tok": 7267, "skipped": false, "response": "You've written four short stories since you started writing regularly."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "S_rev_dated_header", "n_tok": 7277, "skipped": false, "response": "You've written four short stories since you started writing regularly."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "S_chrono_nodate", "n_tok": 7195, "skipped": false, "response": "You've written seven short stories since you started writing regularly."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "S_rev_nodate", "n_tok": 7195, "skipped": false, "response": "You've written four short stories since you started writing regularly."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "T_newlast_dated", "n_tok": 618, "skipped": false, "response": "You've written 7 short stories since you started writing regularly."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "T_oldlast_dated", "n_tok": 618, "skipped": false, "response": "You've written a total of 11 short stories since you started writing regularly (7 recently mentioned plus the previous 4)."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "T_oldlast_dated_header", "n_tok": 626, "skipped": false, "response": "You've written a total of 11 short stories since you started writing regularly (7 recently mentioned, plus the previous 4)."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "T_newlast_nodate", "n_tok": 468, "skipped": false, "response": "You've written a total of 11 short stories since you started writing regularly (4 initially, then 7 more recently)."}
+{"model": "Gemma-3-12B", "qid": "a1eacc2a", "cond": "T_oldlast_nodate", "n_tok": 468, "skipped": false, "response": "You've written four short stories since you started writing regularly, and even managed to complete seven in total."}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "S_chrono_dated", "n_tok": 8594, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "S_rev_dated", "n_tok": 8594, "skipped": false, "response": "You've read up to page 200 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "S_rev_dated_header", "n_tok": 8604, "skipped": false, "response": "You've read up to page 200 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "S_chrono_nodate", "n_tok": 8522, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "S_rev_nodate", "n_tok": 8522, "skipped": false, "response": "You've read 200 pages of \"A Short History of Nearly Everything\" so far."}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "T_newlast_dated", "n_tok": 622, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "T_oldlast_dated", "n_tok": 622, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "T_oldlast_dated_header", "n_tok": 630, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "T_newlast_nodate", "n_tok": 472, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "184da446", "cond": "T_oldlast_nodate", "n_tok": 472, "skipped": false, "response": "You've read up to page 220 of \"A Short History of Nearly Everything.\""}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "S_chrono_dated", "n_tok": 5486, "skipped": false, "response": "You initially led no engineers, but now you lead a team of five engineers."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "S_rev_dated", "n_tok": 5486, "skipped": false, "response": "You lead a team of 4 engineers now, having started in your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "S_rev_dated_header", "n_tok": 5496, "skipped": false, "response": "You lead a team of 4 engineers now, having started in your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "S_chrono_nodate", "n_tok": 5414, "skipped": false, "response": "You initially led a team of five engineers and still lead a team of five engineers now."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "S_rev_nodate", "n_tok": 5414, "skipped": false, "response": "You initially lead a team of 4 engineers and still lead that same team now."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "T_newlast_dated", "n_tok": 563, "skipped": false, "response": "You initially led a team of 4 engineers and now lead a team of 5 engineers."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "T_oldlast_dated", "n_tok": 563, "skipped": false, "response": "You initially led a team of 4 engineers and now lead a team of 5."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "T_oldlast_dated_header", "n_tok": 571, "skipped": false, "response": "You initially led a team of 4 engineers and now lead a team of 5."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "T_newlast_nodate", "n_tok": 413, "skipped": false, "response": "You initially led a team of 4 engineers and now lead a team of 5 engineers."}
+{"model": "Gemma-3-12B", "qid": "031748ae", "cond": "T_oldlast_nodate", "n_tok": 413, "skipped": false, "response": "You initially led 4 engineers and now lead a team of 5."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "S_chrono_dated", "n_tok": 6515, "skipped": false, "response": "You currently have 25 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "S_rev_dated", "n_tok": 6515, "skipped": false, "response": "You currently have 25 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "S_rev_dated_header", "n_tok": 6525, "skipped": false, "response": "You currently have 25 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "S_chrono_nodate", "n_tok": 6443, "skipped": false, "response": "You currently have 25 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "S_rev_nodate", "n_tok": 6443, "skipped": false, "response": "You currently have 20 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "T_newlast_dated", "n_tok": 597, "skipped": false, "response": "You currently have 25 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "T_oldlast_dated", "n_tok": 597, "skipped": false, "response": "You currently have 25 titles on your to-watch list, though you previously mentioned having 20."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "T_oldlast_dated_header", "n_tok": 605, "skipped": false, "response": "You currently have 25 titles on your to-watch list, though it has previously been as high as 20."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "T_newlast_nodate", "n_tok": 447, "skipped": false, "response": "You currently have 25 titles on your to-watch list."}
+{"model": "Gemma-3-12B", "qid": "4d6b87c8", "cond": "T_oldlast_nodate", "n_tok": 447, "skipped": false, "response": "You currently have 20-25 titles on your to-watch list, depending on when you last updated it."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "S_chrono_dated", "n_tok": 4261, "skipped": false, "response": "You need 120 stars to reach the gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "S_rev_dated", "n_tok": 4261, "skipped": false, "response": "You need 125 stars to reach the Gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "S_rev_dated_header", "n_tok": 4271, "skipped": false, "response": "You need 125 stars to reach the Gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "S_chrono_nodate", "n_tok": 4189, "skipped": false, "response": "You need 120 stars to reach the gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "S_rev_nodate", "n_tok": 4189, "skipped": false, "response": "You need 125 stars to reach the Gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "T_newlast_dated", "n_tok": 526, "skipped": false, "response": "You need 120 stars to reach the Gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "T_oldlast_dated", "n_tok": 526, "skipped": false, "response": "You need 125 stars to reach the Gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "T_oldlast_dated_header", "n_tok": 534, "skipped": false, "response": "You need 125 stars to reach the Gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "T_newlast_nodate", "n_tok": 376, "skipped": false, "response": "You need 120 stars to reach the gold level on your Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "0f05491a", "cond": "T_oldlast_nodate", "n_tok": 376, "skipped": false, "response": "You need 125 stars to reach the Gold level on the Starbucks Rewards app."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "S_chrono_dated", "n_tok": 6533, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "S_rev_dated", "n_tok": 6533, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "S_rev_dated_header", "n_tok": 6543, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "S_chrono_nodate", "n_tok": 6461, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "S_rev_nodate", "n_tok": 6461, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "T_newlast_dated", "n_tok": 607, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months now."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "T_oldlast_dated", "n_tok": 607, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "T_oldlast_dated_header", "n_tok": 615, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "T_newlast_nodate", "n_tok": 457, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "08e075c7", "cond": "T_oldlast_nodate", "n_tok": 457, "skipped": false, "response": "You've been using your Fitbit Charge 3 for 9 months."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "S_chrono_dated", "n_tok": 7509, "skipped": false, "response": "You attended five sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "S_rev_dated", "n_tok": 7509, "skipped": false, "response": "You attended three sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "S_rev_dated_header", "n_tok": 7519, "skipped": false, "response": "You attended three sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "S_chrono_nodate", "n_tok": 7437, "skipped": false, "response": "You attended five sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "S_rev_nodate", "n_tok": 7437, "skipped": false, "response": "You attended three sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "T_newlast_dated", "n_tok": 583, "skipped": false, "response": "You attended five sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "T_oldlast_dated", "n_tok": 583, "skipped": false, "response": "You attended a total of eight sessions of the bereavement support group, with three initially, then five more later on."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "T_oldlast_dated_header", "n_tok": 591, "skipped": false, "response": "You attended a total of eight sessions of the bereavement support group, five last year and three previously."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "T_newlast_nodate", "n_tok": 433, "skipped": false, "response": "You attended a total of five sessions of the bereavement support group."}
+{"model": "Gemma-3-12B", "qid": "f9e8c073", "cond": "T_oldlast_nodate", "n_tok": 433, "skipped": false, "response": "You attended a total of eight sessions of the bereavement support group, five initially and then three more."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "S_chrono_dated", "n_tok": 7642, "skipped": false, "response": "You recently purchased a 70-200mm zoom lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "S_rev_dated", "n_tok": 7642, "skipped": false, "response": "You recently purchased a 50mm prime lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "S_rev_dated_header", "n_tok": 7652, "skipped": false, "response": "You recently purchased a 70-200mm zoom lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "S_chrono_nodate", "n_tok": 7570, "skipped": false, "response": "You recently purchased a 70-200mm zoom lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "S_rev_nodate", "n_tok": 7570, "skipped": false, "response": "You recently purchased a 50mm prime lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "T_newlast_dated", "n_tok": 690, "skipped": false, "response": "You most recently purchased a 70-200mm zoom lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "T_oldlast_dated", "n_tok": 690, "skipped": false, "response": "You most recently purchased a 70-200mm zoom lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "T_oldlast_dated_header", "n_tok": 698, "skipped": false, "response": "You most recently purchased a 70-200mm zoom lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "T_newlast_nodate", "n_tok": 540, "skipped": false, "response": "You most recently purchased a 50mm prime lens."}
+{"model": "Gemma-3-12B", "qid": "41698283", "cond": "T_oldlast_nodate", "n_tok": 540, "skipped": false, "response": "You most recently purchased a 50mm prime lens."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "S_chrono_dated", "n_tok": 6324, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "S_rev_dated", "n_tok": 6324, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "S_rev_dated_header", "n_tok": 6334, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "S_chrono_nodate", "n_tok": 6252, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "S_rev_nodate", "n_tok": 6252, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "T_newlast_dated", "n_tok": 604, "skipped": false, "response": "You see Dr. Smith weekly now, having previously seen her every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "T_oldlast_dated", "n_tok": 604, "skipped": false, "response": "You see Dr. Smith every week."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "T_oldlast_dated_header", "n_tok": 612, "skipped": false, "response": "You see Dr. Smith every week."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "T_newlast_nodate", "n_tok": 454, "skipped": false, "response": "You see Dr. Smith every week."}
+{"model": "Gemma-3-12B", "qid": "2698e78f", "cond": "T_oldlast_nodate", "n_tok": 454, "skipped": false, "response": "You see Dr. Smith every week, and occasionally every two weeks."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "S_chrono_dated", "n_tok": 5637, "skipped": false, "response": "You watched 5 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "S_rev_dated", "n_tok": 5637, "skipped": false, "response": "You watched 4 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "S_rev_dated_header", "n_tok": 5647, "skipped": false, "response": "You watched 4 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "S_chrono_nodate", "n_tok": 5565, "skipped": false, "response": "You watched 5 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "S_rev_nodate", "n_tok": 5565, "skipped": false, "response": "You watched 4 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "T_newlast_dated", "n_tok": 587, "skipped": false, "response": "You watched 5 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "T_oldlast_dated", "n_tok": 587, "skipped": false, "response": "You mentioned watching 4 MCU films in the last 3 months, and then later updated that to 5 MCU films."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "T_oldlast_dated_header", "n_tok": 595, "skipped": false, "response": "You mentioned watching 4 MCU films in the last 3 months, and then later updated that to 5 MCU films."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "T_newlast_nodate", "n_tok": 437, "skipped": false, "response": "You watched 5 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "b6019101", "cond": "T_oldlast_nodate", "n_tok": 437, "skipped": false, "response": "You watched 5 MCU films initially, but later clarified that you watched 4 MCU films in the last 3 months."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "S_chrono_dated", "n_tok": 6491, "skipped": false, "response": "You've tried out 3 of Emma's recipes so far."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "S_rev_dated", "n_tok": 6491, "skipped": false, "response": "You've tried out three of Emma's recipes."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "S_rev_dated_header", "n_tok": 6501, "skipped": false, "response": "You've tried out three of Emma's recipes."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "S_chrono_nodate", "n_tok": 6419, "skipped": false, "response": "You've tried out 3 of Emma's recipes so far."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "S_rev_nodate", "n_tok": 6419, "skipped": false, "response": "You've tried out two of Emma's recipes."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "T_newlast_dated", "n_tok": 560, "skipped": false, "response": "You've tried out a total of 5 of Emma's recipes so far."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "T_oldlast_dated", "n_tok": 560, "skipped": false, "response": "You've tried out a total of five of Emma's recipes."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "T_oldlast_dated_header", "n_tok": 568, "skipped": false, "response": "You've tried out a total of five of Emma's recipes."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "T_newlast_nodate", "n_tok": 410, "skipped": false, "response": "You've tried out a total of 5 of Emma's recipes so far."}
+{"model": "Gemma-3-12B", "qid": "45dc21b6", "cond": "T_oldlast_nodate", "n_tok": 410, "skipped": false, "response": "You've tried out a total of five of Emma's recipes so far."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "S_chrono_dated", "n_tok": 6342, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "S_rev_dated", "n_tok": 6342, "skipped": false, "response": "Rachel is currently working at her \"Old Company.\""}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "S_rev_dated_header", "n_tok": 6352, "skipped": false, "response": "Rachel is currently working at her \"Old Company.\""}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "S_chrono_nodate", "n_tok": 6270, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "S_rev_nodate", "n_tok": 6270, "skipped": false, "response": "Rachel is currently working at her \"Old Company.\""}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "T_newlast_dated", "n_tok": 614, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "T_oldlast_dated", "n_tok": 614, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "T_oldlast_dated_header", "n_tok": 622, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "T_newlast_nodate", "n_tok": 464, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "5a4f22c0", "cond": "T_oldlast_nodate", "n_tok": 464, "skipped": false, "response": "Rachel is currently working at TechCorp."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "S_chrono_dated", "n_tok": 5033, "skipped": false, "response": "You switched to using slightly more water per tablespoon of coffee, now using 5 ounces of water for every 1 tablespoon of coffee instead of 6."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "S_rev_dated", "n_tok": 5033, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, now using 6 ounces of water for every 1 tablespoon of coffee instead of 5."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "S_rev_dated_header", "n_tok": 5043, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, now using 6 ounces of water for every 1 tablespoon of coffee instead of 5."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "S_chrono_nodate", "n_tok": 4961, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, as you previously used 6 ounces of water per tablespoon, and now use 5 ounces."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "S_rev_nodate", "n_tok": 4961, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, now using 6 ounces of water for every 1 tablespoon of coffee."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "T_newlast_dated", "n_tok": 580, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, now using 5 ounces of water per tablespoon instead of 6."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "T_oldlast_dated", "n_tok": 580, "skipped": false, "response": "You initially used a ratio of 1 tablespoon of coffee for every 6 ounces of water, then later adjusted it to 1 tablespoon for every 5 ounces."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "T_oldlast_dated_header", "n_tok": 588, "skipped": false, "response": "You switched to using less water per tablespoon of coffee, going from 6 ounces to 5 ounces."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "T_newlast_nodate", "n_tok": 430, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, now using 6 ounces of water per tablespoon instead of 5."}
+{"model": "Gemma-3-12B", "qid": "6071bd76", "cond": "T_oldlast_nodate", "n_tok": 430, "skipped": false, "response": "You switched to using more water per tablespoon of coffee, going from 5 ounces to 6 ounces."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "S_chrono_dated", "n_tok": 6709, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently hanging in the user's bedroom."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "S_rev_dated", "n_tok": 6709, "skipped": false, "response": "According to the chat history, the \"Ethereal Dreams\" painting by Emma Taylor is currently hanging above the user's living room sofa."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "S_rev_dated_header", "n_tok": 6719, "skipped": false, "response": "According to the conversation, the \"Ethereal Dreams\" painting by Emma Taylor is currently hanging above the user's living room sofa."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "S_chrono_nodate", "n_tok": 6637, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently hanging in the user's bedroom."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "S_rev_nodate", "n_tok": 6637, "skipped": false, "response": "According to our conversation, the \"Ethereal Dreams\" painting by Emma Taylor is currently hanging above the user's living room sofa."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "T_newlast_dated", "n_tok": 704, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently hanging in your bedroom."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "T_oldlast_dated", "n_tok": 704, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently hanging above your bed."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "T_oldlast_dated_header", "n_tok": 712, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently hanging above your bed."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "T_newlast_nodate", "n_tok": 554, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently hanging above your bed in your bedroom."}
+{"model": "Gemma-3-12B", "qid": "e493bb7c", "cond": "T_oldlast_nodate", "n_tok": 554, "skipped": false, "response": "The \"Ethereal Dreams\" painting by Emma Taylor is currently above the user's bed."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "S_chrono_dated", "n_tok": 6089, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "S_rev_dated", "n_tok": 6089, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers four times already."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "S_rev_dated_header", "n_tok": 6099, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers four times already."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "S_chrono_nodate", "n_tok": 6017, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "S_rev_nodate", "n_tok": 6017, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers four times already."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "T_newlast_dated", "n_tok": 623, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "T_oldlast_dated", "n_tok": 623, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "T_oldlast_dated_header", "n_tok": 631, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "T_newlast_nodate", "n_tok": 473, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "618f13b2", "cond": "T_oldlast_nodate", "n_tok": 473, "skipped": false, "response": "You've worn your new black Converse Chuck Taylor All Star sneakers six times."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "S_chrono_dated", "n_tok": 6611, "skipped": false, "response": "You've completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "S_rev_dated", "n_tok": 6611, "skipped": false, "response": "You have completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "S_rev_dated_header", "n_tok": 6621, "skipped": false, "response": "You have completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "S_chrono_nodate", "n_tok": 6539, "skipped": false, "response": "You've completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "S_rev_nodate", "n_tok": 6539, "skipped": false, "response": "You've completed 50 episodes of the Crash Course Science series!"}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "T_newlast_dated", "n_tok": 612, "skipped": false, "response": "You have completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "T_oldlast_dated", "n_tok": 612, "skipped": false, "response": "You have completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "T_oldlast_dated_header", "n_tok": 620, "skipped": false, "response": "You have completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "T_newlast_nodate", "n_tok": 462, "skipped": false, "response": "You have completed 50 episodes of Crash Course's Science series."}
+{"model": "Gemma-3-12B", "qid": "72e3ee87", "cond": "T_oldlast_nodate", "n_tok": 462, "skipped": false, "response": "You have completed 50 episodes of the Crash Course Science series."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "S_chrono_dated", "n_tok": 5808, "skipped": false, "response": "Yes, you've been consistently going to the gym four times a week, demonstrating a significant increase in frequency compared to the initial plan."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "S_rev_dated", "n_tok": 5808, "skipped": false, "response": "Yes, you now go to the gym four times a week, a significant increase from the previous discussion."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "S_rev_dated_header", "n_tok": 5818, "skipped": false, "response": "Yes, you now go to the gym four times a week, a significant increase from the previous conversations."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "S_chrono_nodate", "n_tok": 5736, "skipped": false, "response": "Yes, using a habit tracker and designated gym days has likely increased your gym frequency."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "S_rev_nodate", "n_tok": 5736, "skipped": false, "response": "Yes, you now go to the gym three or four times a week, aligning with your schedule."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "T_newlast_dated", "n_tok": 541, "skipped": false, "response": "Yes, you've increased your gym frequency to four times a week."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "T_oldlast_dated", "n_tok": 541, "skipped": false, "response": "Yes, you've increased your gym frequency to four times a week."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "T_oldlast_dated_header", "n_tok": 549, "skipped": false, "response": "Yes, you've increased your gym frequency to four times a week."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "T_newlast_nodate", "n_tok": 391, "skipped": false, "response": "Yes, you've increased your gym frequency to four times a week."}
+{"model": "Gemma-3-12B", "qid": "c4ea545c", "cond": "T_oldlast_nodate", "n_tok": 391, "skipped": false, "response": "Yes, you now go to the gym four times a week (Tuesdays, Thursdays, and Saturdays) compared to an unspecified previous frequency."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "S_chrono_dated", "n_tok": 6668, "skipped": false, "response": "You've added 25 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "S_rev_dated", "n_tok": 6668, "skipped": false, "response": "You've added 17 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "S_rev_dated_header", "n_tok": 6678, "skipped": false, "response": "You've added 17 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "S_chrono_nodate", "n_tok": 6596, "skipped": false, "response": "You've added 25 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "S_rev_nodate", "n_tok": 6596, "skipped": false, "response": "You've added 17 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "T_newlast_dated", "n_tok": 625, "skipped": false, "response": "You've added a total of 42 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "T_oldlast_dated", "n_tok": 625, "skipped": false, "response": "You've added 25 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "T_oldlast_dated_header", "n_tok": 633, "skipped": false, "response": "You've added 25 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "T_newlast_nodate", "n_tok": 475, "skipped": false, "response": "You've added a total of 42 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "01493427", "cond": "T_oldlast_nodate", "n_tok": 475, "skipped": false, "response": "You've added a total of 25 new postcards to your collection since you started collecting again."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "S_chrono_dated", "n_tok": 9065, "skipped": false, "response": "You have completed 30 videos of Corey Schafer's Python programming series so far."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "S_rev_dated", "n_tok": 9065, "skipped": false, "response": "You have completed 30 videos of Corey Schafer's Python programming series so far."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "S_rev_dated_header", "n_tok": 9075, "skipped": false, "response": "You have completed 30 videos of Corey Schafer's Python programming series so far."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "S_chrono_nodate", "n_tok": 8993, "skipped": false, "response": "You've completed 30 videos of Corey Schafer's Python programming series so far."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "S_rev_nodate", "n_tok": 8993, "skipped": false, "response": "You've completed 30 videos of Corey Schafer's Python programming series so far."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "T_newlast_dated", "n_tok": 588, "skipped": false, "response": "You've completed 30 videos of Corey Schafer's Python programming series."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "T_oldlast_dated", "n_tok": 588, "skipped": false, "response": "You've completed 30 videos of Corey Schafer's Python programming series."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "T_oldlast_dated_header", "n_tok": 596, "skipped": false, "response": "You've completed 30 videos of Corey Schafer's Python programming series."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "T_newlast_nodate", "n_tok": 438, "skipped": false, "response": "You've completed 30 videos of Corey Schafer's Python programming series."}
+{"model": "Gemma-3-12B", "qid": "6a27ffc2", "cond": "T_oldlast_nodate", "n_tok": 438, "skipped": false, "response": "You've completed a total of 50 videos from Corey Schafer's Python programming series."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "S_chrono_dated", "n_tok": 5597, "skipped": false, "response": "You've been living in your Harajuku apartment for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "S_rev_dated", "n_tok": 5597, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "S_rev_dated_header", "n_tok": 5607, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "S_chrono_nodate", "n_tok": 5525, "skipped": false, "response": "You've been living in your current apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "S_rev_nodate", "n_tok": 5525, "skipped": false, "response": "You've been living in your current apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "T_newlast_dated", "n_tok": 586, "skipped": false, "response": "You've been living in your apartment in Harajuku for three months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "T_oldlast_dated", "n_tok": 586, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "T_oldlast_dated_header", "n_tok": 594, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "T_newlast_nodate", "n_tok": 436, "skipped": false, "response": "You've been living in your apartment in Harajuku for three months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5", "cond": "T_oldlast_nodate", "n_tok": 436, "skipped": false, "response": "You've been living in your studio apartment in Harajuku for three months."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "S_chrono_dated", "n_tok": 7669, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce on your ribs."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "S_rev_dated", "n_tok": 7669, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "S_rev_dated_header", "n_tok": 7679, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "S_chrono_nodate", "n_tok": 7597, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "S_rev_nodate", "n_tok": 7597, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "T_newlast_dated", "n_tok": 574, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce on your ribs."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "T_oldlast_dated", "n_tok": 574, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "T_oldlast_dated_header", "n_tok": 582, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "T_newlast_nodate", "n_tok": 424, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce on your ribs."}
+{"model": "Gemma-3-12B", "qid": "18bc8abd", "cond": "T_oldlast_nodate", "n_tok": 424, "skipped": false, "response": "You're currently obsessed with Kansas City Masterpiece BBQ sauce."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "S_chrono_dated", "n_tok": 7884, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "S_rev_dated", "n_tok": 7884, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "S_rev_dated_header", "n_tok": 7894, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "S_chrono_nodate", "n_tok": 7812, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "S_rev_nodate", "n_tok": 7812, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "T_newlast_dated", "n_tok": 556, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "T_oldlast_dated", "n_tok": 556, "skipped": false, "response": "Your parents have been staying with you in the US for nine months, and previously for six months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "T_oldlast_dated_header", "n_tok": 564, "skipped": false, "response": "Your parents have been staying with you in the US for nine months, having previously lived with you for six months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "T_newlast_nodate", "n_tok": 406, "skipped": false, "response": "Your parents have been staying with you in the US for nine months."}
+{"model": "Gemma-3-12B", "qid": "db467c8c", "cond": "T_oldlast_nodate", "n_tok": 406, "skipped": false, "response": "Your parents have been staying with you in the US for nine months, with mentions of six months as well."}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "S_chrono_dated", "n_tok": 6533, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks."}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "S_rev_dated", "n_tok": 6533, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks!"}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "S_rev_dated_header", "n_tok": 6543, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks."}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "S_chrono_nodate", "n_tok": 6461, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks!"}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "S_rev_nodate", "n_tok": 6461, "skipped": false, "response": "You've been sticking to your daily tidying routine for 3 weeks!"}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "T_newlast_dated", "n_tok": 626, "skipped": false, "response": "You've been sticking to your daily tidying routine for four weeks now."}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "T_oldlast_dated", "n_tok": 626, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks now!"}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "T_oldlast_dated_header", "n_tok": 634, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks now, and previously for 3 weeks."}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "T_newlast_nodate", "n_tok": 476, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks now!"}
+{"model": "Gemma-3-12B", "qid": "7a87bd0c", "cond": "T_oldlast_nodate", "n_tok": 476, "skipped": false, "response": "You've been sticking to your daily tidying routine for 4 weeks, with mentions of it being 3 weeks previously!"}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "S_chrono_dated", "n_tok": 5931, "skipped": false, "response": "You've had your cat, Luna, for about 9 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "S_rev_dated", "n_tok": 5931, "skipped": false, "response": "You've had Luna for about 6 months."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "S_rev_dated_header", "n_tok": 5941, "skipped": false, "response": "You've had Luna for about 6 months."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "S_chrono_nodate", "n_tok": 5859, "skipped": false, "response": "You've had your cat, Luna, for about 9 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "S_rev_nodate", "n_tok": 5859, "skipped": false, "response": "You've had Luna for about 6 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "T_newlast_dated", "n_tok": 559, "skipped": false, "response": "You've had your cat, Luna, for about 9 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "T_oldlast_dated", "n_tok": 559, "skipped": false, "response": "You've had your cat, Luna, for about 9 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "T_oldlast_dated_header", "n_tok": 567, "skipped": false, "response": "You've had your cat, Luna, for about 9 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "T_newlast_nodate", "n_tok": 409, "skipped": false, "response": "You've had Luna for about 9 months now."}
+{"model": "Gemma-3-12B", "qid": "e61a7584", "cond": "T_oldlast_nodate", "n_tok": 409, "skipped": false, "response": "You've had Luna for about 9 months, and previously for about 6 months."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "S_chrono_dated", "n_tok": 6974, "skipped": false, "response": "You currently have 600 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "S_rev_dated", "n_tok": 6974, "skipped": false, "response": "You currently have 500 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "S_rev_dated_header", "n_tok": 6984, "skipped": false, "response": "You currently have 500 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "S_chrono_nodate", "n_tok": 6902, "skipped": false, "response": "You currently have 600 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "S_rev_nodate", "n_tok": 6902, "skipped": false, "response": "You currently have 500 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "T_newlast_dated", "n_tok": 648, "skipped": false, "response": "You currently have 600 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "T_oldlast_dated", "n_tok": 648, "skipped": false, "response": "You currently have 600 Instagram followers, a milestone you recently reached!"}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "T_oldlast_dated_header", "n_tok": 656, "skipped": false, "response": "You currently have 600 Instagram followers, a milestone you recently reached!"}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "T_newlast_nodate", "n_tok": 498, "skipped": false, "response": "You currently have 600 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "1cea1afa", "cond": "T_oldlast_nodate", "n_tok": 498, "skipped": false, "response": "You currently have 600 Instagram followers."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "S_chrono_dated", "n_tok": 8035, "skipped": false, "response": "You currently have 20 dozen eggs stocked up in your refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "S_rev_dated", "n_tok": 8035, "skipped": false, "response": "You currently have 30 dozen eggs stocked up in your refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "S_rev_dated_header", "n_tok": 8045, "skipped": false, "response": "You currently have 30 dozen eggs stocked up in your refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "S_chrono_nodate", "n_tok": 7963, "skipped": false, "response": "You currently have 20 dozen eggs stocked up in your refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "S_rev_nodate", "n_tok": 7963, "skipped": false, "response": "You currently have 30 dozen eggs stocked up in your refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "T_newlast_dated", "n_tok": 546, "skipped": false, "response": "You currently have 20 dozen eggs stocked up in the fridge."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "T_oldlast_dated", "n_tok": 546, "skipped": false, "response": "You currently have 20 dozen eggs stocked up in the refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "T_oldlast_dated_header", "n_tok": 554, "skipped": false, "response": "You currently have 20 dozen eggs stocked up in the fridge."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "T_newlast_nodate", "n_tok": 396, "skipped": false, "response": "You currently have 20 dozen eggs stocked up in your refrigerator."}
+{"model": "Gemma-3-12B", "qid": "ed4ddc30", "cond": "T_oldlast_nodate", "n_tok": 396, "skipped": false, "response": "You currently have 30 dozen eggs stocked up in the fridge."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "S_chrono_dated", "n_tok": 5508, "skipped": false, "response": "You've finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "S_rev_dated", "n_tok": 5508, "skipped": false, "response": "You've finished reading three issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "S_rev_dated_header", "n_tok": 5518, "skipped": false, "response": "You've finished reading three issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "S_chrono_nodate", "n_tok": 5436, "skipped": false, "response": "You've finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "S_rev_nodate", "n_tok": 5436, "skipped": false, "response": "You've finished reading three issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "T_newlast_dated", "n_tok": 546, "skipped": false, "response": "You have finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "T_oldlast_dated", "n_tok": 546, "skipped": false, "response": "You've finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "T_oldlast_dated_header", "n_tok": 554, "skipped": false, "response": "You've finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "T_newlast_nodate", "n_tok": 396, "skipped": false, "response": "You have finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "8fb83627", "cond": "T_oldlast_nodate", "n_tok": 396, "skipped": false, "response": "You've finished reading five issues of National Geographic."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "S_chrono_dated", "n_tok": 5431, "skipped": false, "response": "Yes, you recently finished reading \"The Nightingale\" by Kristin Hannah and found it to be a powerful and emotional read."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "S_rev_dated", "n_tok": 5431, "skipped": false, "response": "No, you temporarily put \"The Nightingale\" down because it was getting too emotional."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "S_rev_dated_header", "n_tok": 5441, "skipped": false, "response": "No, you temporarily put \"The Nightingale\" down because it was getting too emotional."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "S_chrono_nodate", "n_tok": 5359, "skipped": false, "response": "Yes, you finished reading \"The Nightingale\" by Kristin Hannah and found it to be a powerful and emotional read."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "S_rev_nodate", "n_tok": 5359, "skipped": false, "response": "No, you put \"The Nightingale\" down temporarily because it was getting too emotional."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "T_newlast_dated", "n_tok": 670, "skipped": false, "response": "Based on our past conversations, you haven't finished \"The Nightingale\" yet, but were planning to dedicate your commute to finishing it before the book club discussion."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "T_oldlast_dated", "n_tok": 670, "skipped": false, "response": "Based on our past conversations, you mentioned putting \"The Nightingale\" down temporarily and were unsure if you'd finish it in time for your book club discussion."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "T_oldlast_dated_header", "n_tok": 678, "skipped": false, "response": "Based on our past conversations, you mentioned putting \"The Nightingale\" down temporarily and were considering finishing it for your book club."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "T_newlast_nodate", "n_tok": 520, "skipped": false, "response": "No, you previously mentioned putting \"The Nightingale\" down temporarily due to its emotional impact."}
+{"model": "Gemma-3-12B", "qid": "b01defab", "cond": "T_oldlast_nodate", "n_tok": 520, "skipped": false, "response": "No, you previously mentioned putting \"The Nightingale\" down temporarily and planning to return to it later."}
+{"model": "Gemma-3-12B", "qid": "22d2cb42", "cond": "S_chrono_dated", "n_tok": 5438, "skipped": false, "response": "You got your guitar serviced at Rhythm Central on Main St."}
+{"model": "Gemma-3-12B", "qid": "22d2cb42", "cond": "S_rev_dated", "n_tok": 5438, "skipped": false, "response": "You got your guitar serviced at a music shop on Main St."}
+{"model": "Gemma-3-12B", "qid": "22d2cb42", "cond": "S_rev_dated_header", "n_tok": 5448, "skipped": false, "response": "You got your guitar serviced at a music shop on Main St."}
+{"model": "Gemma-3-12B", "qid": "22d2cb42", "cond": "S_chrono_nodate", "n_tok": 5366, "skipped": false, "response": "You got your guitar serviced at the music shop on Main St."}
+{"model": "Gemma-3-12B", "qid": "22d2cb42", "cond": "S_rev_nodate", "n_tok": 5366, "skipped": false, "response": "You got your guitar serviced at a music shop on Main St called \"Rhythm Central.\""}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "S_chrono_dated", "n_tok": 6963, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "S_rev_dated", "n_tok": 6963, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "S_rev_dated_header", "n_tok": 6973, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "S_chrono_nodate", "n_tok": 6891, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "S_rev_nodate", "n_tok": 6891, "skipped": false, "response": "Your current highest score in Ticket to Ride is 124 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "T_newlast_dated", "n_tok": 581, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "T_oldlast_dated", "n_tok": 581, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "T_oldlast_dated_header", "n_tok": 589, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "T_newlast_nodate", "n_tok": 431, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "0e4e4c46", "cond": "T_oldlast_nodate", "n_tok": 431, "skipped": false, "response": "Your current highest score in Ticket to Ride is 132 points."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "S_chrono_dated", "n_tok": 4928, "skipped": false, "response": "You've bought five tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "S_rev_dated", "n_tok": 4928, "skipped": false, "response": "You've bought three tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "S_rev_dated_header", "n_tok": 4938, "skipped": false, "response": "You've bought three tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "S_chrono_nodate", "n_tok": 4856, "skipped": false, "response": "You've bought five tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "S_rev_nodate", "n_tok": 4856, "skipped": false, "response": "You've bought three tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "T_newlast_dated", "n_tok": 516, "skipped": false, "response": "You've bought a total of eight tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "T_oldlast_dated", "n_tok": 516, "skipped": false, "response": "You've bought a total of eight tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "T_oldlast_dated_header", "n_tok": 524, "skipped": false, "response": "You've bought a total of eight tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "T_newlast_nodate", "n_tok": 366, "skipped": false, "response": "You've bought a total of eight tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "4b24c848", "cond": "T_oldlast_nodate", "n_tok": 366, "skipped": false, "response": "You've bought a total of eight tops from H&M so far."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "S_chrono_dated", "n_tok": 4741, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "S_rev_dated", "n_tok": 4741, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "S_rev_dated_header", "n_tok": 4751, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "S_chrono_nodate", "n_tok": 4669, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "S_rev_nodate", "n_tok": 4669, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "T_newlast_dated", "n_tok": 574, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "T_oldlast_dated", "n_tok": 574, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "T_oldlast_dated_header", "n_tok": 582, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "T_newlast_nodate", "n_tok": 424, "skipped": false, "response": "You earned $420 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "7e974930", "cond": "T_oldlast_nodate", "n_tok": 424, "skipped": false, "response": "You earned $350 at the Downtown Farmers Market on your most recent visit."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "S_chrono_dated", "n_tok": 6766, "skipped": false, "response": "You've tried making a Negroni at home 10 times since your friend Emma showed you how."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "S_rev_dated", "n_tok": 6766, "skipped": false, "response": "You've tried making a Negroni at home 10 times."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "S_rev_dated_header", "n_tok": 6776, "skipped": false, "response": "You've tried making a Negroni at home 10 times."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "S_chrono_nodate", "n_tok": 6694, "skipped": false, "response": "You've tried making a Negroni at home 10 times since your friend Emma showed you how."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "S_rev_nodate", "n_tok": 6694, "skipped": false, "response": "You've tried making a Negroni at home 10 times."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "T_newlast_dated", "n_tok": 680, "skipped": false, "response": "You've tried making a Negroni at home 10 times since Emma showed you how."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "T_oldlast_dated", "n_tok": 680, "skipped": false, "response": "You've tried making a Negroni at home a total of 15 times since Emma showed you how."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "T_oldlast_dated_header", "n_tok": 688, "skipped": false, "response": "You've tried making a Negroni at home a total of 15 times since Emma showed you how."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "T_newlast_nodate", "n_tok": 530, "skipped": false, "response": "You've tried making a Negroni at home 10 times since your friend Emma showed you how."}
+{"model": "Gemma-3-12B", "qid": "603deb26", "cond": "T_oldlast_nodate", "n_tok": 530, "skipped": false, "response": "You've tried making a Negroni at home a total of 15 times since Emma taught you."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "S_chrono_dated", "n_tok": 5466, "skipped": false, "response": "You usually go to the gym at 6:00 pm."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "S_rev_dated", "n_tok": 5466, "skipped": false, "response": "You usually go to the gym at 6:00 pm."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "S_rev_dated_header", "n_tok": 5476, "skipped": false, "response": "You usually go to the gym at 6:00 pm."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "S_chrono_nodate", "n_tok": 5394, "skipped": false, "response": "You usually go to the gym at 6:00 pm."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "S_rev_nodate", "n_tok": 5394, "skipped": false, "response": "You usually go to the gym at 6:00 pm."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "T_newlast_dated", "n_tok": 503, "skipped": false, "response": "You usually go to the gym at 7:00 pm on Mondays, Wednesdays, and Fridays, and sometimes at 6:00 pm."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "T_oldlast_dated", "n_tok": 503, "skipped": false, "response": "You usually go to the gym at 7:00 pm on Mondays, Wednesdays, and Fridays."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "T_oldlast_dated_header", "n_tok": 511, "skipped": false, "response": "You usually go to the gym at 7:00 pm on Mondays, Wednesdays, and Fridays."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "T_newlast_nodate", "n_tok": 353, "skipped": false, "response": "You usually go to the gym at 7:00 pm on Mondays, Wednesdays, and Fridays, and sometimes at 6:00 pm on Tuesdays."}
+{"model": "Gemma-3-12B", "qid": "59524333", "cond": "T_oldlast_nodate", "n_tok": 353, "skipped": false, "response": "You usually go to the gym at 7:00 pm on Mondays, Wednesdays, and Fridays."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "S_chrono_dated", "n_tok": 6609, "skipped": false, "response": "You've watched 15 Crash Course videos in the past few weeks."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "S_rev_dated", "n_tok": 6609, "skipped": false, "response": "You've watched 12 Crash Course videos in the past few weeks."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "S_rev_dated_header", "n_tok": 6619, "skipped": false, "response": "You've watched 12 Crash Course videos in the past few weeks."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "S_chrono_nodate", "n_tok": 6537, "skipped": false, "response": "You've watched 15 Crash Course videos in the past few weeks."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "S_rev_nodate", "n_tok": 6537, "skipped": false, "response": "You've watched 12 Crash Course videos in the past few weeks."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "T_newlast_dated", "n_tok": 574, "skipped": false, "response": "You've watched 15 Crash Course videos in the past few weeks."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "T_oldlast_dated", "n_tok": 574, "skipped": false, "response": "You've watched a total of 15 Crash Course videos in the past few weeks, with a recent streak bringing you up to that number."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "T_oldlast_dated_header", "n_tok": 582, "skipped": false, "response": "You've watched at least 15 Crash Course videos in the past few weeks, with previous counts including 12, 10, and mentioning a recent streak of 15."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "T_newlast_nodate", "n_tok": 424, "skipped": false, "response": "You've watched a total of 15 Crash Course videos in the past few weeks, with that number increasing to 12 and then 15 across several mentions."}
+{"model": "Gemma-3-12B", "qid": "5831f84d", "cond": "T_oldlast_nodate", "n_tok": 424, "skipped": false, "response": "You've watched between 10 and 15 Crash Course videos in the past few weeks, demonstrating a consistent learning streak."}
+{"model": "Gemma-3-12B", "qid": "eace081b", "cond": "S_chrono_dated", "n_tok": 6659, "skipped": false, "response": "You're planning to stay on Oahu for your birthday trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "eace081b", "cond": "S_rev_dated", "n_tok": 6659, "skipped": false, "response": "You are planning to stay on Oahu for your birthday trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "eace081b", "cond": "S_rev_dated_header", "n_tok": 6669, "skipped": false, "response": "You are planning to stay on Oahu for your birthday trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "eace081b", "cond": "S_chrono_nodate", "n_tok": 6587, "skipped": false, "response": "You're planning to stay on Oahu for your birthday trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "eace081b", "cond": "S_rev_nodate", "n_tok": 6587, "skipped": false, "response": "You're planning to stay on Oahu for your birthday trip to Hawaii."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "S_chrono_dated", "n_tok": 6406, "skipped": false, "response": "You've seen 32 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "S_rev_dated", "n_tok": 6406, "skipped": false, "response": "You've seen 27 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "S_rev_dated_header", "n_tok": 6416, "skipped": false, "response": "You've seen 27 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "S_chrono_nodate", "n_tok": 6334, "skipped": false, "response": "You've seen 32 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "S_rev_nodate", "n_tok": 6334, "skipped": false, "response": "You've seen 27 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "T_newlast_dated", "n_tok": 556, "skipped": false, "response": "You've seen 32 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "T_oldlast_dated", "n_tok": 556, "skipped": false, "response": "You've seen 27 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "T_oldlast_dated_header", "n_tok": 564, "skipped": false, "response": "You've seen 27 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "T_newlast_nodate", "n_tok": 406, "skipped": false, "response": "You've seen 32 different species of birds in your local park so far."}
+{"model": "Gemma-3-12B", "qid": "affe2881", "cond": "T_oldlast_nodate", "n_tok": 406, "skipped": false, "response": "You've seen 27 different species of birds in your local park."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "S_chrono_dated", "n_tok": 6142, "skipped": false, "response": "According to the chat history, your previous frequent flyer status was unknown before you reached Premier Gold."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "S_rev_dated", "n_tok": 6142, "skipped": false, "response": "Your previous frequent flyer status on United Airlines was Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "S_rev_dated_header", "n_tok": 6152, "skipped": false, "response": "Your previous frequent flyer status on United Airlines was Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "S_chrono_nodate", "n_tok": 6070, "skipped": false, "response": "I don't have access to your past chat history, so I don't know your previous frequent flyer status."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "S_rev_nodate", "n_tok": 6070, "skipped": false, "response": "You hadn't mentioned a previous frequent flyer status before reaching Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "T_newlast_dated", "n_tok": 538, "skipped": false, "response": "Your previous frequent flyer status on United Airlines was Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "T_oldlast_dated", "n_tok": 538, "skipped": false, "response": "Your previous frequent flyer status on United Airlines was Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "T_oldlast_dated_header", "n_tok": 546, "skipped": false, "response": "Before reaching Premier Gold, your United Airlines frequent flyer status was Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "T_newlast_nodate", "n_tok": 388, "skipped": false, "response": "Before reaching Premier Gold, your United Airlines frequent flyer status was Premier Silver."}
+{"model": "Gemma-3-12B", "qid": "50635ada", "cond": "T_oldlast_nodate", "n_tok": 388, "skipped": false, "response": "Your previous frequent flyer status on United Airlines was Premier Gold."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "S_chrono_dated", "n_tok": 6963, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "S_rev_dated", "n_tok": 6963, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "S_rev_dated_header", "n_tok": 6973, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "S_chrono_nodate", "n_tok": 6891, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "S_rev_nodate", "n_tok": 6891, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "T_newlast_dated", "n_tok": 705, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "T_oldlast_dated", "n_tok": 705, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 27 minutes and 45 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "T_oldlast_dated_header", "n_tok": 713, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 27 minutes and 45 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "T_newlast_nodate", "n_tok": 555, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 26 minutes and 30 seconds."}
+{"model": "Gemma-3-12B", "qid": "e66b632c", "cond": "T_oldlast_nodate", "n_tok": 555, "skipped": false, "response": "Your previous personal best time for the charity 5K run was 27 minutes and 45 seconds."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "S_chrono_dated", "n_tok": 5743, "skipped": false, "response": "You added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "S_rev_dated", "n_tok": 5743, "skipped": false, "response": "You've added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "S_rev_dated_header", "n_tok": 5753, "skipped": false, "response": "You've added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "S_chrono_nodate", "n_tok": 5671, "skipped": false, "response": "You've added 20 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "S_rev_nodate", "n_tok": 5671, "skipped": false, "response": "You've added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "T_newlast_dated", "n_tok": 618, "skipped": false, "response": "You added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "T_oldlast_dated", "n_tok": 618, "skipped": false, "response": "You added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "T_oldlast_dated_header", "n_tok": 626, "skipped": false, "response": "You added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "T_newlast_nodate", "n_tok": 468, "skipped": false, "response": "You've added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37", "cond": "T_oldlast_nodate", "n_tok": 468, "skipped": false, "response": "You've added 15 autographed baseballs to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "S_chrono_dated", "n_tok": 5077, "skipped": false, "response": "You previously played tennis with your friends at the local park every other week, and you're planning to play again this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "S_rev_dated", "n_tok": 5077, "skipped": false, "response": "Previously, you played tennis with your friends at the local park every other week, and you're planning to play again this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "S_rev_dated_header", "n_tok": 5087, "skipped": false, "response": "You previously played tennis with your friends at the local park every other week, and you're planning to play this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "S_chrono_nodate", "n_tok": 5005, "skipped": false, "response": "Previously, you played tennis with your friends at the local park every other week, and you're planning to play again this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "S_rev_nodate", "n_tok": 5005, "skipped": false, "response": "You previously played tennis with your friends every other week, and now you're planning to play this Sunday at the local park."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "T_newlast_dated", "n_tok": 517, "skipped": false, "response": "You previously played tennis with your friends at the local park every other week, and you're planning to do so again this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "T_oldlast_dated", "n_tok": 517, "skipped": false, "response": "You previously played tennis with your friends at the local park every other week, and you're planning to do so again this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "T_oldlast_dated_header", "n_tok": 525, "skipped": false, "response": "You play tennis with your friends at the local park every other week, and you're planning to do so this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "T_newlast_nodate", "n_tok": 367, "skipped": false, "response": "You previously played tennis with your friends at the local park every other week, and you're planning to do so again this Sunday."}
+{"model": "Gemma-3-12B", "qid": "f685340e", "cond": "T_oldlast_nodate", "n_tok": 367, "skipped": false, "response": "You play tennis with your friends at the local park every other week."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "S_chrono_dated", "n_tok": 6461, "skipped": false, "response": "You dedicate about two hours each day to coding exercises."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "S_rev_dated", "n_tok": 6461, "skipped": false, "response": "You dedicate about two hours each day to coding exercises."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "S_rev_dated_header", "n_tok": 6471, "skipped": false, "response": "You dedicate about two hours each day to coding exercises."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "S_chrono_nodate", "n_tok": 6389, "skipped": false, "response": "You dedicate about two hours each day to coding exercises."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "S_rev_nodate", "n_tok": 6389, "skipped": false, "response": "You dedicate about an hour each day to coding exercises."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "T_newlast_dated", "n_tok": 551, "skipped": false, "response": "You've been dedicating about two hours each day to coding exercises recently, after previously dedicating about an hour."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "T_oldlast_dated", "n_tok": 551, "skipped": false, "response": "You've been dedicating about two hours each day to coding exercises, and previously about an hour."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "T_oldlast_dated_header", "n_tok": 559, "skipped": false, "response": "You've been dedicating about two hours each day to coding exercises, and previously about an hour."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "T_newlast_nodate", "n_tok": 401, "skipped": false, "response": "You dedicate about two hours each day to coding exercises."}
+{"model": "Gemma-3-12B", "qid": "cc5ded98", "cond": "T_oldlast_nodate", "n_tok": 401, "skipped": false, "response": "You've been dedicating about two hours each day to coding exercises, and previously about an hour each day."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "S_chrono_dated", "n_tok": 5018, "skipped": false, "response": "You met with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "S_rev_dated", "n_tok": 5018, "skipped": false, "response": "You meet with Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "S_rev_dated_header", "n_tok": 5028, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "S_chrono_nodate", "n_tok": 4946, "skipped": false, "response": "You met with your previous language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "S_rev_nodate", "n_tok": 4946, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "T_newlast_dated", "n_tok": 520, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "T_oldlast_dated", "n_tok": 520, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "T_oldlast_dated_header", "n_tok": 528, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "T_newlast_nodate", "n_tok": 370, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "dfde3500", "cond": "T_oldlast_nodate", "n_tok": 370, "skipped": false, "response": "You meet with your language exchange tutor Juan every Wednesday evening."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "S_chrono_dated", "n_tok": 6430, "skipped": false, "response": "You have 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "S_rev_dated", "n_tok": 6430, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "S_rev_dated_header", "n_tok": 6440, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "S_chrono_nodate", "n_tok": 6358, "skipped": false, "response": "You have 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "S_rev_nodate", "n_tok": 6358, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "T_newlast_dated", "n_tok": 582, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "T_oldlast_dated", "n_tok": 582, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "T_oldlast_dated_header", "n_tok": 590, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "T_newlast_nodate", "n_tok": 432, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "69fee5aa", "cond": "T_oldlast_nodate", "n_tok": 432, "skipped": false, "response": "You have a total of 37 pre-1920 American coins in your collection."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "S_chrono_dated", "n_tok": 6977, "skipped": false, "response": "You can redeem your points for a single free night's stay at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "S_rev_dated", "n_tok": 6977, "skipped": false, "response": "You can redeem your points for a single free night's stay at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "S_rev_dated_header", "n_tok": 6987, "skipped": false, "response": "You can redeem your points for a single free night's stay at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "S_chrono_nodate", "n_tok": 6905, "skipped": false, "response": "You can redeem your points for a single free night's stay at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "S_rev_nodate", "n_tok": 6905, "skipped": false, "response": "You can redeem your points for a single free night's stay at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "T_newlast_dated", "n_tok": 502, "skipped": false, "response": "You have accumulated enough points for a total of three free night's stays at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "T_oldlast_dated", "n_tok": 502, "skipped": false, "response": "You've accumulated enough points for two free night's stays at any Hilton property, and previously enough for a single free night."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "T_oldlast_dated_header", "n_tok": 510, "skipped": false, "response": "You've accumulated enough points for two free night's stays at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "T_newlast_nodate", "n_tok": 352, "skipped": false, "response": "You have accumulated enough points for a total of three free night's stays at any Hilton property."}
+{"model": "Gemma-3-12B", "qid": "7401057b", "cond": "T_oldlast_nodate", "n_tok": 352, "skipped": false, "response": "You've accumulated enough points for two free nights at any Hilton property and a single free night as well."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "S_chrono_dated", "n_tok": 7929, "skipped": false, "response": "You've lost 10 pounds since you started going to the gym consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "S_rev_dated", "n_tok": 7929, "skipped": false, "response": "You've lost 5 pounds in the past month, bringing your total loss to 10 pounds since starting consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "S_rev_dated_header", "n_tok": 7939, "skipped": false, "response": "You've lost 5 pounds in the past month, bringing your total loss to 10 pounds since starting consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "S_chrono_nodate", "n_tok": 7857, "skipped": false, "response": "You've lost 10 pounds since you started going to the gym consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "S_rev_nodate", "n_tok": 7857, "skipped": false, "response": "You've lost 5 pounds in the past month."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "T_newlast_dated", "n_tok": 660, "skipped": false, "response": "You've lost 10 pounds since you started going to the gym consistently three months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "T_oldlast_dated", "n_tok": 660, "skipped": false, "response": "You've lost a total of 10 pounds since you started going to the gym consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "T_oldlast_dated_header", "n_tok": 668, "skipped": false, "response": "You've lost 10 pounds since you started going to the gym consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "T_newlast_nodate", "n_tok": 510, "skipped": false, "response": "You've lost 10 pounds since you started going to the gym consistently three months ago."}
+{"model": "Gemma-3-12B", "qid": "cf22b7bf", "cond": "T_oldlast_nodate", "n_tok": 510, "skipped": false, "response": "You've lost a total of 10 pounds since you started going to the gym consistently 3 months ago."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "S_chrono_dated", "n_tok": 5636, "skipped": false, "response": "You currently have 1300 followers on Instagram."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "S_rev_dated", "n_tok": 5636, "skipped": false, "response": "You currently have 1250 followers on Instagram."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "S_rev_dated_header", "n_tok": 5646, "skipped": false, "response": "You currently have 1250 followers on Instagram."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "S_chrono_nodate", "n_tok": 5564, "skipped": false, "response": "You currently have 1300 followers on Instagram."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "S_rev_nodate", "n_tok": 5564, "skipped": false, "response": "You have 1250 followers on Instagram now!"}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "T_newlast_dated", "n_tok": 561, "skipped": false, "response": "You mentioned you were close to 1300 followers recently."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "T_oldlast_dated", "n_tok": 561, "skipped": false, "response": "You mentioned you were close to 1300 followers, and previously had 1250, so you likely have around 1300 followers now."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "T_oldlast_dated_header", "n_tok": 569, "skipped": false, "response": "You mentioned you were close to 1300 followers, and previously had 1250, so you likely have around 1300 followers now."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "T_newlast_nodate", "n_tok": 411, "skipped": false, "response": "You mentioned you think you're close to 1300 followers now."}
+{"model": "Gemma-3-12B", "qid": "a2f3aa27", "cond": "T_oldlast_nodate", "n_tok": 411, "skipped": false, "response": "You currently have 1250 followers on Instagram."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "S_chrono_dated", "n_tok": 7116, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "S_rev_dated", "n_tok": 7116, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "S_rev_dated_header", "n_tok": 7126, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "S_chrono_nodate", "n_tok": 7044, "skipped": false, "response": "Your current record in the recreational volleyball league is 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "S_rev_nodate", "n_tok": 7044, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "T_newlast_dated", "n_tok": 558, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "T_oldlast_dated", "n_tok": 558, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "T_oldlast_dated_header", "n_tok": 566, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "T_newlast_nodate", "n_tok": 408, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2."}
+{"model": "Gemma-3-12B", "qid": "c7dc5443", "cond": "T_oldlast_nodate", "n_tok": 408, "skipped": false, "response": "Your volleyball team, the Net Ninjas, currently has a record of 5-2, which later updated to 3-2."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "S_chrono_dated", "n_tok": 7313, "skipped": false, "response": "You've completed 5 projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "S_rev_dated", "n_tok": 7313, "skipped": false, "response": "You've completed 4 projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "S_rev_dated_header", "n_tok": 7323, "skipped": false, "response": "You've completed 4 projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "S_chrono_nodate", "n_tok": 7241, "skipped": false, "response": "You've completed 5 projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "S_rev_nodate", "n_tok": 7241, "skipped": false, "response": "You've completed 4 projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "T_newlast_dated", "n_tok": 597, "skipped": false, "response": "You've completed five projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "T_oldlast_dated", "n_tok": 597, "skipped": false, "response": "You've completed five projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "T_oldlast_dated_header", "n_tok": 605, "skipped": false, "response": "You've completed five projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "T_newlast_nodate", "n_tok": 447, "skipped": false, "response": "You've completed five projects since starting painting classes."}
+{"model": "Gemma-3-12B", "qid": "06db6396", "cond": "T_oldlast_nodate", "n_tok": 447, "skipped": false, "response": "You've completed five projects since starting painting classes, with mentions of having completed four projects on several occasions."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "S_chrono_dated", "n_tok": 9422, "skipped": false, "response": "You are currently working on a Ford F-150 pickup truck model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "S_rev_dated", "n_tok": 9422, "skipped": false, "response": "You are currently working on a Ford Mustang Shelby GT350R model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "S_rev_dated_header", "n_tok": 9432, "skipped": false, "response": "You are currently working on a Ford Mustang Shelby GT350R model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "S_chrono_nodate", "n_tok": 9350, "skipped": false, "response": "You are currently working on a Ford F-150 pickup truck model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "S_rev_nodate", "n_tok": 9350, "skipped": false, "response": "You are currently working on a Ford Mustang Shelby GT350R model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "T_newlast_dated", "n_tok": 564, "skipped": false, "response": "You are currently working on a Ford F-150 pickup truck model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "T_oldlast_dated", "n_tok": 564, "skipped": false, "response": "You are currently working on a Ford F-150 pickup truck model, having recently switched from a Ford Mustang Shelby GT350R."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "T_oldlast_dated_header", "n_tok": 572, "skipped": false, "response": "You are currently working on a Ford F-150 pickup truck model, having recently switched from a Ford Mustang Shelby GT350R."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "T_newlast_nodate", "n_tok": 414, "skipped": false, "response": "You are currently working on a Ford F-150 pickup truck model."}
+{"model": "Gemma-3-12B", "qid": "3ba21379", "cond": "T_oldlast_nodate", "n_tok": 414, "skipped": false, "response": "You are currently working on a Ford Mustang Shelby GT350R model, but you recently switched to a Ford F-150 pickup truck."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "S_chrono_dated", "n_tok": 6380, "skipped": false, "response": "Your previous goal was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "S_rev_dated", "n_tok": 6380, "skipped": false, "response": "Your previous goal was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "S_rev_dated_header", "n_tok": 6390, "skipped": false, "response": "Your previous goal was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "S_chrono_nodate", "n_tok": 6308, "skipped": false, "response": "Your previous goal was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "S_rev_nodate", "n_tok": 6308, "skipped": false, "response": "Your previous goal was to reach level 150."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "T_newlast_dated", "n_tok": 557, "skipped": false, "response": "Your previous goal for your Apex Legends level was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "T_oldlast_dated", "n_tok": 557, "skipped": false, "response": "Your previous goal for your Apex Legends level was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "T_oldlast_dated_header", "n_tok": 565, "skipped": false, "response": "Your previous goal for your Apex Legends level was to reach level 100 before the end of the year."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "T_newlast_nodate", "n_tok": 407, "skipped": false, "response": "Your previous goal for your Apex Legends level was to reach level 150."}
+{"model": "Gemma-3-12B", "qid": "9bbe84a2", "cond": "T_oldlast_nodate", "n_tok": 407, "skipped": false, "response": "Your previous goal for your Apex Legends level was to reach level 150."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "S_chrono_dated", "n_tok": 5635, "skipped": false, "response": "According to our records, you caught 7 largemouth bass with Alex on 7/10 during your earlier fishing trip to Lake Michigan."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "S_rev_dated", "n_tok": 5635, "skipped": false, "response": "You caught 7 largemouth bass with Alex on your earlier trip to Lake Michigan on 7/10."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "S_rev_dated_header", "n_tok": 5645, "skipped": false, "response": "You caught 7 largemouth bass with Alex on your earlier trip to Lake Michigan on 7/10."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "S_chrono_nodate", "n_tok": 5563, "skipped": false, "response": "According to our previous conversation, you caught 9 largemouth bass with Alex on 7/22."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "S_rev_nodate", "n_tok": 5563, "skipped": false, "response": "You caught 7 largemouth bass with Alex on your trip to Lake Michigan on 7/10."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "T_newlast_dated", "n_tok": 539, "skipped": false, "response": "You caught 7 largemouth bass with Alex on Lake Michigan on July 10th."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "T_oldlast_dated", "n_tok": 539, "skipped": false, "response": "You caught 7 largemouth bass with Alex on a previous Lake Michigan trip on 7/10."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "T_oldlast_dated_header", "n_tok": 547, "skipped": false, "response": "You caught 7 largemouth bass with Alex on a previous Lake Michigan trip on 7/10."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "T_newlast_nodate", "n_tok": 389, "skipped": false, "response": "You caught 7 largemouth bass with Alex on your earlier trip to Lake Michigan on 7/10."}
+{"model": "Gemma-3-12B", "qid": "10e09553", "cond": "T_oldlast_nodate", "n_tok": 389, "skipped": false, "response": "You caught 7 largemouth bass with Alex on your earlier Lake Michigan trip on 7/10."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "S_chrono_dated", "n_tok": 5972, "skipped": false, "response": "You wake up at 7:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "S_rev_dated", "n_tok": 5972, "skipped": false, "response": "You wake up around 8:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "S_rev_dated_header", "n_tok": 5982, "skipped": false, "response": "You wake up around 8:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "S_chrono_nodate", "n_tok": 5900, "skipped": false, "response": "You wake up at 7:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "S_rev_nodate", "n_tok": 5900, "skipped": false, "response": "You wake up around 7:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "T_newlast_dated", "n_tok": 666, "skipped": false, "response": "You wake up around 8:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "T_oldlast_dated", "n_tok": 666, "skipped": false, "response": "You typically wake up around 8:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "T_oldlast_dated_header", "n_tok": 674, "skipped": false, "response": "You typically wake up around 8:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "T_newlast_nodate", "n_tok": 516, "skipped": false, "response": "You wake up around 7:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "dad224aa", "cond": "T_oldlast_nodate", "n_tok": 516, "skipped": false, "response": "You typically wake up around 8:30 am on Saturday mornings."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "S_chrono_dated", "n_tok": 6480, "skipped": false, "response": "There are 6 women on the team led by Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "S_rev_dated", "n_tok": 6480, "skipped": false, "response": "There are 5 women on the team led by Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "S_rev_dated_header", "n_tok": 6490, "skipped": false, "response": "There are 5 women on the team led by Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "S_chrono_nodate", "n_tok": 6408, "skipped": false, "response": "There are 6 women on the team led by Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "S_rev_nodate", "n_tok": 6408, "skipped": false, "response": "There are 5 women on the team led by your former manager Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "T_newlast_dated", "n_tok": 572, "skipped": false, "response": "According to your past conversations, there are 6 women on the team led by your former manager Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "T_oldlast_dated", "n_tok": 572, "skipped": false, "response": "Rachel's team currently has 5 women out of 10 people."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "T_oldlast_dated_header", "n_tok": 580, "skipped": false, "response": "Rachel's team currently has 5 women out of 10 people."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "T_newlast_nodate", "n_tok": 422, "skipped": false, "response": "There are six women on the team led by your former manager Rachel."}
+{"model": "Gemma-3-12B", "qid": "ba61f0b9", "cond": "T_oldlast_nodate", "n_tok": 422, "skipped": false, "response": "Rachel's team currently has five women."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "S_chrono_dated", "n_tok": 6194, "skipped": false, "response": "Yes, you mentioned you have a spare screwdriver you picked up previously."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "S_rev_dated", "n_tok": 6194, "skipped": false, "response": "You mentioned you had a spare screwdriver you picked up previously."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "S_rev_dated_header", "n_tok": 6204, "skipped": false, "response": "You mentioned you misplaced the small screwdriver you were planning to use."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "S_chrono_nodate", "n_tok": 6122, "skipped": false, "response": "Yes, you mentioned you have a spare screwdriver you picked up previously."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "S_rev_nodate", "n_tok": 6122, "skipped": false, "response": "You actually do have a spare screwdriver!"}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "T_newlast_dated", "n_tok": 494, "skipped": false, "response": "Yes, you mentioned you picked up a spare screwdriver recently when organizing your computer desk."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "T_oldlast_dated", "n_tok": 494, "skipped": false, "response": "Yes, you mentioned you found a spare screwdriver when organizing your desk."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "T_oldlast_dated_header", "n_tok": 502, "skipped": false, "response": "Yes, you mentioned having a spare screwdriver after organizing your computer desk."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "T_newlast_nodate", "n_tok": 344, "skipped": false, "response": "Yes, you mentioned you picked up a spare screwdriver when you organized your computer desk."}
+{"model": "Gemma-3-12B", "qid": "42ec0761", "cond": "T_oldlast_nodate", "n_tok": 344, "skipped": false, "response": "You previously mentioned having a spare screwdriver, but then later realized you misplaced the small one needed for laptop work."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "S_chrono_dated", "n_tok": 5046, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "S_rev_dated", "n_tok": 5046, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "S_rev_dated_header", "n_tok": 5056, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "S_chrono_nodate", "n_tok": 4974, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "S_rev_nodate", "n_tok": 4974, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "T_newlast_dated", "n_tok": 532, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "T_oldlast_dated", "n_tok": 532, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "T_oldlast_dated_header", "n_tok": 540, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "T_newlast_nodate", "n_tok": 382, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "5c40ec5b", "cond": "T_oldlast_nodate", "n_tok": 382, "skipped": false, "response": "You've met up with Alex from Germany twice already."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "S_chrono_dated", "n_tok": 5728, "skipped": false, "response": "You mostly recently increased the limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "S_rev_dated", "n_tok": 5728, "skipped": false, "response": "You recently increased the limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "S_rev_dated_header", "n_tok": 5738, "skipped": false, "response": "You recently increased the limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "S_chrono_nodate", "n_tok": 5656, "skipped": false, "response": "You mostly recently increased the limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "S_rev_nodate", "n_tok": 5656, "skipped": false, "response": "You recently increased the limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "T_newlast_dated", "n_tok": 589, "skipped": false, "response": "You recently considered increasing your morning coffee limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "T_oldlast_dated", "n_tok": 589, "skipped": false, "response": "You recently decreased your morning coffee limit to one cup, then considered changing it to two."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "T_oldlast_dated_header", "n_tok": 597, "skipped": false, "response": "You recently decreased your morning coffee limit to one cup."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "T_newlast_nodate", "n_tok": 439, "skipped": false, "response": "You recently considered increasing your morning coffee limit to two cups."}
+{"model": "Gemma-3-12B", "qid": "c6853660", "cond": "T_oldlast_nodate", "n_tok": 439, "skipped": false, "response": "You recently decreased your morning coffee limit to one cup."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "S_chrono_dated", "n_tok": 6996, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "S_rev_dated", "n_tok": 6996, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "S_rev_dated_header", "n_tok": 7006, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "S_chrono_nodate", "n_tok": 6924, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "S_rev_nodate", "n_tok": 6924, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "T_newlast_dated", "n_tok": 590, "skipped": false, "response": "You've taken your Canon EOS 80D camera on a total of eight trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "T_oldlast_dated", "n_tok": 590, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "T_oldlast_dated_header", "n_tok": 598, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "T_newlast_nodate", "n_tok": 440, "skipped": false, "response": "You've taken your Canon EOS 80D camera on a total of eight trips."}
+{"model": "Gemma-3-12B", "qid": "26bdc477", "cond": "T_oldlast_nodate", "n_tok": 440, "skipped": false, "response": "You've taken your Canon EOS 80D camera on five trips."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "S_chrono_dated", "n_tok": 6104, "skipped": false, "response": "You invested in an Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "S_rev_dated", "n_tok": 6104, "skipped": false, "response": "You invested in an Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "S_rev_dated_header", "n_tok": 6114, "skipped": false, "response": "You invested in an Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "S_chrono_nodate", "n_tok": 6032, "skipped": false, "response": "You invested in an Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "S_rev_nodate", "n_tok": 6032, "skipped": false, "response": "You invested in an Instant Pot."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "T_newlast_dated", "n_tok": 463, "skipped": false, "response": "You recently invested in an Instant Pot."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "T_oldlast_dated", "n_tok": 463, "skipped": false, "response": "You invested in a new Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "T_oldlast_dated_header", "n_tok": 471, "skipped": false, "response": "You invested in a new Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "T_newlast_nodate", "n_tok": 313, "skipped": false, "response": "You invested in an Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "0977f2af", "cond": "T_oldlast_nodate", "n_tok": 313, "skipped": false, "response": "You invested in an Instant Pot before getting the Air Fryer."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375_abs", "cond": "S_chrono_dated", "n_tok": 5259, "skipped": false, "response": "You haven't mentioned trying any Italian restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375_abs", "cond": "S_rev_dated", "n_tok": 5259, "skipped": false, "response": "You haven't mentioned trying any Italian restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375_abs", "cond": "S_rev_dated_header", "n_tok": 5269, "skipped": false, "response": "You haven't mentioned trying any Italian restaurants in your city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375_abs", "cond": "S_chrono_nodate", "n_tok": 5187, "skipped": false, "response": "The user hasn't mentioned trying any Italian restaurants in their city."}
+{"model": "Gemma-3-12B", "qid": "6aeb4375_abs", "cond": "S_rev_nodate", "n_tok": 5187, "skipped": false, "response": "You haven't mentioned trying any Italian restaurants; you've only discussed your experiences with Korean restaurants."}
+{"model": "Gemma-3-12B", "qid": "031748ae_abs", "cond": "S_chrono_dated", "n_tok": 5478, "skipped": false, "response": "You lead a team of four engineers when you started your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "031748ae_abs", "cond": "S_rev_dated", "n_tok": 5478, "skipped": false, "response": "You lead a team of 4 engineers in your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "031748ae_abs", "cond": "S_rev_dated_header", "n_tok": 5488, "skipped": false, "response": "You lead a team of 4 engineers in your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "031748ae_abs", "cond": "S_chrono_nodate", "n_tok": 5406, "skipped": false, "response": "You lead a team of five engineers when you started your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "031748ae_abs", "cond": "S_rev_nodate", "n_tok": 5406, "skipped": false, "response": "You lead a team of 4 engineers in your new role as Senior Software Engineer."}
+{"model": "Gemma-3-12B", "qid": "2698e78f_abs", "cond": "S_chrono_dated", "n_tok": 6321, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f_abs", "cond": "S_rev_dated", "n_tok": 6321, "skipped": false, "response": "The provided chat history doesn't mention Dr. Johnson; you see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f_abs", "cond": "S_rev_dated_header", "n_tok": 6331, "skipped": false, "response": "The provided chat history doesn't mention Dr. Johnson; you see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f_abs", "cond": "S_chrono_nodate", "n_tok": 6249, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2698e78f_abs", "cond": "S_rev_nodate", "n_tok": 6249, "skipped": false, "response": "You see Dr. Smith every two weeks."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5_abs", "cond": "S_chrono_dated", "n_tok": 5597, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5_abs", "cond": "S_rev_dated", "n_tok": 5597, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5_abs", "cond": "S_rev_dated_header", "n_tok": 5607, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5_abs", "cond": "S_chrono_nodate", "n_tok": 5525, "skipped": false, "response": "You've been living in your apartment in Harajuku for 3 months."}
+{"model": "Gemma-3-12B", "qid": "2133c1b5_abs", "cond": "S_rev_nodate", "n_tok": 5525, "skipped": false, "response": "You've been living in your apartment in Harajuku for three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37_abs", "cond": "S_chrono_dated", "n_tok": 5742, "skipped": false, "response": "The user mentioned adding 20 autographed baseballs, not footballs, to their collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37_abs", "cond": "S_rev_dated", "n_tok": 5742, "skipped": false, "response": "The provided chat history doesn't mention any autographed footballs; it only states you added 15 autographed baseballs."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37_abs", "cond": "S_rev_dated_header", "n_tok": 5752, "skipped": false, "response": "The provided chat history mentions 15 autographed baseballs, not footballs, added to your collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37_abs", "cond": "S_chrono_nodate", "n_tok": 5670, "skipped": false, "response": "The user mentioned adding 20 autographed baseballs, not footballs, to their collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "0ddfec37_abs", "cond": "S_rev_nodate", "n_tok": 5670, "skipped": false, "response": "The user stated they've added 15 autographed baseballs to their collection in the first three months."}
+{"model": "Gemma-3-12B", "qid": "f685340e_abs", "cond": "S_chrono_dated", "n_tok": 5070, "skipped": false, "response": "You play tennis with your friends at the local park every other week."}
+{"model": "Gemma-3-12B", "qid": "f685340e_abs", "cond": "S_rev_dated", "n_tok": 5070, "skipped": false, "response": "You play tennis with your friends at the local park every other week."}
+{"model": "Gemma-3-12B", "qid": "f685340e_abs", "cond": "S_rev_dated_header", "n_tok": 5080, "skipped": false, "response": "You play tennis with your friends at the local park every other week."}
+{"model": "Gemma-3-12B", "qid": "f685340e_abs", "cond": "S_chrono_nodate", "n_tok": 4998, "skipped": false, "response": "You play table tennis with your friends at the local park every other week."}
+{"model": "Gemma-3-12B", "qid": "f685340e_abs", "cond": "S_rev_nodate", "n_tok": 4998, "skipped": false, "response": "The records indicate you play tennis with your friends at the local park every other week."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "S_chrono_dated", "n_tok": 7417, "skipped": false, "response": "Yes, based on previous conversations, you also have a road bike and a hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "S_rev_dated", "n_tok": 7417, "skipped": false, "response": "Yes, before purchasing the gravel bike, you mentioned having a road bike in addition to your mountain bike and commuter bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "S_rev_dated_header", "n_tok": 7427, "skipped": false, "response": "Yes, before purchasing the gravel bike, you mentioned having a road bike in addition to your mountain bike and commuter bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "S_chrono_nodate", "n_tok": 7345, "skipped": false, "response": "Yes, you also have a road bike and a hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "S_rev_nodate", "n_tok": 7345, "skipped": false, "response": "Yes, you mentioned you also have a road bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "T_newlast_dated", "n_tok": 681, "skipped": false, "response": "Yes, you also have a road bike and a hybrid bike in addition to your mountain bike and commuter bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "T_oldlast_dated", "n_tok": 681, "skipped": false, "response": "Yes, before purchasing the gravel bike, you also owned a road bike and a hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "T_oldlast_dated_header", "n_tok": 689, "skipped": false, "response": "Yes, you also have a road bike and a hybrid bike in addition to your mountain bike and commuter bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "T_newlast_nodate", "n_tok": 531, "skipped": false, "response": "Yes, before getting the gravel bike, you also owned a road bike and a hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "89941a94", "cond": "T_oldlast_nodate", "n_tok": 531, "skipped": false, "response": "Yes, before purchasing the gravel bike, you also owned a road bike and a hybrid bike."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "S_chrono_dated", "n_tok": 5908, "skipped": false, "response": "You currently keep your old sneakers in a shoe rack in your closet."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "S_rev_dated", "n_tok": 5908, "skipped": false, "response": "You're currently storing your old sneakers in a shoe rack in your closet."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "S_rev_dated_header", "n_tok": 5918, "skipped": false, "response": "You're currently storing your old sneakers in a shoe rack in your closet."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "S_chrono_nodate", "n_tok": 5836, "skipped": false, "response": "You're currently storing your old sneakers in a shoe rack in your closet."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "S_rev_nodate", "n_tok": 5836, "skipped": false, "response": "The user currently keeps their old sneakers under their bed."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "T_newlast_dated", "n_tok": 559, "skipped": false, "response": "You currently keep your old sneakers in a shoe rack in your closet."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "T_oldlast_dated", "n_tok": 559, "skipped": false, "response": "You're currently keeping your old sneakers under your bed."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "T_oldlast_dated_header", "n_tok": 567, "skipped": false, "response": "You're currently keeping your old sneakers under your bed."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "T_newlast_nodate", "n_tok": 409, "skipped": false, "response": "You currently keep your old sneakers in a shoe rack in your closet."}
+{"model": "Gemma-3-12B", "qid": "07741c45", "cond": "T_oldlast_nodate", "n_tok": 409, "skipped": false, "response": "You're currently keeping your old sneakers under your bed."}

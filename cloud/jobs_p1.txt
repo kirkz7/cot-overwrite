@@ -1,0 +1,17 @@
+# SUPERSEDED 10-06 by cloud/jobs_v32.txt (user: every generation job on vLLM); kept for the record.
+# P1: Qwen3-32B base (bf16, two cards). Order from CLOUD_PLAN.md section 5; start only after P0 passes.
+# First time 10 items per job and report the total ETA to the user before running the full list.
+# Generation first; the judge (Qwen3-14B 4-bit nf4) runs once at the end over everything generated.
+p1_ext_q32      COT_DEVICE_MAP=auto explore_extmem.py run --models Qwen3-32B
+p1_lc_q32       COT_DEVICE_MAP=auto explore_longconv.py run --models Qwen3-32B
+p1_mem_q32      COT_DEVICE_MAP=auto run_app_memory.py read --models Qwen3-32B
+p1_logs_q32     COT_DEVICE_MAP=auto run_app_logs.py --n 100 --models Qwen3-32B
+p1_agent_q32    COT_DEVICE_MAP=auto run_app_agent.py --n 150 --models Qwen3-32B
+p1_exteval_q32  COT_DEVICE_MAP=auto run_ext_eval.py run --models Qwen3-32B
+p1_e15_q32      COT_DEVICE_MAP=auto explore_order_rule.py run --models Qwen3-32B
+# judges (MemConflict / LoCoMo / ConvoMem-long / LongMemEval+ConvoMem); extmem with both parse rules as on the desktop
+p1_judge_ext    explore_extmem.py judge
+p1_judge_ext2   explore_extmem.py judge --parse v2
+p1_judge_lc     explore_longconv.py judge
+p1_judge_mem    run_app_memory.py judge
+# item 7 (thinking mode, optional, very slow): not queued; add the run_app_thinking.py jobs here if the user wants it

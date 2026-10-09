@@ -1,0 +1,900 @@
+{"id": "0", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 3657, "response": "61", "pos": "middle", "correct": false}
+{"id": "0", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 3657, "response": "43", "pos": "first", "correct": true}
+{"id": "0", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 3654, "response": "43", "pos": "first", "correct": true}
+{"id": "0", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 3657, "response": "43", "pos": "last", "correct": false}
+{"id": "0", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 3657, "response": "43", "pos": "last", "correct": true}
+{"id": "0", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 3654, "response": "61", "pos": "middle", "correct": false}
+{"id": "1", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 570, "response": "10", "pos": "last", "correct": true}
+{"id": "1", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 570, "response": "6", "pos": "first", "correct": true}
+{"id": "1", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 567, "response": "6", "pos": "first", "correct": true}
+{"id": "1", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 570, "response": "10", "pos": "first", "correct": true}
+{"id": "1", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 570, "response": "10", "pos": "first", "correct": false}
+{"id": "1", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 567, "response": "10", "pos": "first", "correct": false}
+{"id": "2", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 770, "response": "Sandria", "pos": "last", "correct": true}
+{"id": "2", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 770, "response": "Halden", "pos": "first", "correct": true}
+{"id": "2", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 767, "response": "Halden", "pos": "first", "correct": true}
+{"id": "2", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 770, "response": "Sandria", "pos": "first", "correct": true}
+{"id": "2", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 770, "response": "Halden", "pos": "last", "correct": true}
+{"id": "2", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 767, "response": "Corvex", "pos": "middle", "correct": false}
+{"id": "3", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1209, "response": "Hana", "pos": "last", "correct": true}
+{"id": "3", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1209, "response": "Tomas", "pos": "first", "correct": true}
+{"id": "3", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1206, "response": "Tomas", "pos": "first", "correct": true}
+{"id": "3", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1209, "response": "Hana", "pos": "first", "correct": true}
+{"id": "3", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1209, "response": "Tomas", "pos": "last", "correct": true}
+{"id": "3", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1206, "response": "Marta", "pos": "middle", "correct": false}
+{"id": "4", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1698, "response": "Oskar", "pos": "last", "correct": true}
+{"id": "4", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1698, "response": "Yusuf", "pos": "first", "correct": true}
+{"id": "4", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1695, "response": "Yusuf", "pos": "first", "correct": true}
+{"id": "4", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1698, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "4", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1698, "response": "Yusuf", "pos": "last", "correct": true}
+{"id": "4", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1695, "response": "Oskar", "pos": "first", "correct": false}
+{"id": "5", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 3467, "response": "3", "pos": "middle", "correct": false}
+{"id": "5", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 3467, "response": "39", "pos": "first", "correct": true}
+{"id": "5", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 3464, "response": "39", "pos": "first", "correct": true}
+{"id": "5", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 3467, "response": "10", "pos": "first", "correct": true}
+{"id": "5", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 3467, "response": "3", "pos": "middle", "correct": false}
+{"id": "5", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 3464, "response": "3", "pos": "middle", "correct": false}
+{"id": "6", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1091, "response": "-12 C", "pos": "last", "correct": true}
+{"id": "6", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1091, "response": "-30 C", "pos": "first", "correct": true}
+{"id": "6", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1088, "response": "-30 C", "pos": "first", "correct": true}
+{"id": "6", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1091, "response": "-12 C", "pos": "first", "correct": true}
+{"id": "6", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1091, "response": "-13 C", "pos": "middle", "correct": false}
+{"id": "6", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1088, "response": "-13 C", "pos": "middle", "correct": false}
+{"id": "7", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 2599, "response": "Hall 2", "pos": "last", "correct": true}
+{"id": "7", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 2599, "response": "Studio 5", "pos": "first", "correct": true}
+{"id": "7", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 2596, "response": "Studio 5", "pos": "first", "correct": true}
+{"id": "7", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 2599, "response": "Studio 5", "pos": "last", "correct": false}
+{"id": "7", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 2599, "response": "Hall 2", "pos": "first", "correct": false}
+{"id": "7", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 2596, "response": "Hall 2", "pos": "first", "correct": false}
+{"id": "8", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 574, "response": "31", "pos": "last", "correct": true}
+{"id": "8", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 574, "response": "14", "pos": "first", "correct": true}
+{"id": "8", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 571, "response": "14", "pos": "first", "correct": true}
+{"id": "8", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 574, "response": "31", "pos": "first", "correct": true}
+{"id": "8", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 574, "response": "6", "pos": "middle", "correct": false}
+{"id": "8", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 571, "response": "6", "pos": "middle", "correct": false}
+{"id": "9", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 563, "response": "Dmitri", "pos": "last", "correct": true}
+{"id": "9", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 563, "response": "Lena", "pos": "first", "correct": true}
+{"id": "9", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 560, "response": "Lena", "pos": "first", "correct": true}
+{"id": "9", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 563, "response": "Dmitri", "pos": "first", "correct": true}
+{"id": "9", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 563, "response": "Mei", "pos": "middle", "correct": false}
+{"id": "9", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 560, "response": "Dmitri", "pos": "first", "correct": false}
+{"id": "10", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5276, "response": "Hana", "pos": "first", "correct": false}
+{"id": "10", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5276, "response": "Hana", "pos": "first", "correct": true}
+{"id": "10", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5273, "response": "Hana", "pos": "first", "correct": true}
+{"id": "10", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5276, "response": "Tomas", "pos": "first", "correct": true}
+{"id": "10", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5276, "response": "Tomas", "pos": "first", "correct": false}
+{"id": "10", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5273, "response": "Tomas", "pos": "first", "correct": false}
+{"id": "11", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 2098, "response": "Rafael", "pos": "last", "correct": true}
+{"id": "11", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 2098, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "11", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 2095, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "11", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 2098, "response": "Rafael", "pos": "first", "correct": true}
+{"id": "11", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 2098, "response": "Kwame", "pos": "middle", "correct": false}
+{"id": "11", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 2095, "response": "Rafael", "pos": "first", "correct": false}
+{"id": "12", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 624, "response": "coral", "pos": "middle", "correct": false}
+{"id": "12", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 624, "response": "olive", "pos": "first", "correct": true}
+{"id": "12", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 621, "response": "olive", "pos": "first", "correct": true}
+{"id": "12", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 624, "response": "coral", "pos": "middle", "correct": false}
+{"id": "12", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 624, "response": "olive", "pos": "last", "correct": true}
+{"id": "12", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 621, "response": "coral", "pos": "middle", "correct": false}
+{"id": "13", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1083, "response": "-24 C", "pos": "last", "correct": true}
+{"id": "13", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1083, "response": "-28 C", "pos": "first", "correct": true}
+{"id": "13", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1080, "response": "-28 C", "pos": "first", "correct": true}
+{"id": "13", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1083, "response": "-24 C", "pos": "first", "correct": true}
+{"id": "13", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1083, "response": "-28 C", "pos": "last", "correct": true}
+{"id": "13", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1080, "response": "-28 C", "pos": "last", "correct": true}
+{"id": "14", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 7244, "response": "Pro Lite", "pos": "last", "correct": true}
+{"id": "14", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 7244, "response": "Plus", "pos": "first", "correct": true}
+{"id": "14", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 7241, "response": "Plus", "pos": "first", "correct": true}
+{"id": "14", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 7244, "response": "Pro Lite", "pos": "first", "correct": true}
+{"id": "14", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 7244, "response": "Plus", "pos": "last", "correct": true}
+{"id": "14", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 7241, "response": "Plus", "pos": "last", "correct": true}
+{"id": "15", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 435, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "15", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 435, "response": "Orbit Express", "pos": "first", "correct": true}
+{"id": "15", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 432, "response": "Orbit Express", "pos": "first", "correct": true}
+{"id": "15", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 435, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "15", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 435, "response": "Orbit Express", "pos": "last", "correct": true}
+{"id": "15", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 432, "response": "Orbit Express", "pos": "last", "correct": true}
+{"id": "16", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 308, "response": "Halden", "pos": "last", "correct": true}
+{"id": "16", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 308, "response": "Northwind", "pos": "first", "correct": true}
+{"id": "16", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 305, "response": "Northwind", "pos": "first", "correct": true}
+{"id": "16", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 308, "response": "Halden", "pos": "first", "correct": true}
+{"id": "16", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 308, "response": "Northwind", "pos": "last", "correct": true}
+{"id": "16", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 305, "response": "Northwind", "pos": "last", "correct": true}
+{"id": "17", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 560, "response": "SwiftPost", "pos": "last", "correct": true}
+{"id": "17", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 560, "response": "Zipline Freight", "pos": "first", "correct": true}
+{"id": "17", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 557, "response": "Zipline Freight", "pos": "first", "correct": true}
+{"id": "17", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 560, "response": "SwiftPost", "pos": "first", "correct": true}
+{"id": "17", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 560, "response": "Zipline Freight", "pos": "last", "correct": true}
+{"id": "17", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 557, "response": "Zipline Freight", "pos": "last", "correct": true}
+{"id": "18", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 557, "response": "60", "pos": "last", "correct": true}
+{"id": "18", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 557, "response": "37", "pos": "first", "correct": true}
+{"id": "18", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 554, "response": "37", "pos": "first", "correct": true}
+{"id": "18", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 557, "response": "60", "pos": "first", "correct": true}
+{"id": "18", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 557, "response": "37", "pos": "last", "correct": true}
+{"id": "18", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 554, "response": "37", "pos": "last", "correct": true}
+{"id": "19", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 434, "response": "26 GB", "pos": "last", "correct": true}
+{"id": "19", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 434, "response": "13 GB", "pos": "first", "correct": true}
+{"id": "19", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 431, "response": "13 GB", "pos": "first", "correct": true}
+{"id": "19", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 434, "response": "68 GB", "pos": "middle", "correct": false}
+{"id": "19", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 434, "response": "13 GB", "pos": "last", "correct": true}
+{"id": "19", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 431, "response": "10 GB", "pos": "middle", "correct": false}
+{"id": "20", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 399, "response": "Source Serif", "pos": "last", "correct": true}
+{"id": "20", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 399, "response": "Inter", "pos": "first", "correct": true}
+{"id": "20", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 396, "response": "Inter", "pos": "first", "correct": true}
+{"id": "20", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 399, "response": "Fira Sans", "pos": "middle", "correct": false}
+{"id": "20", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 399, "response": "Inter", "pos": "last", "correct": true}
+{"id": "20", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 396, "response": "Inter", "pos": "last", "correct": true}
+{"id": "21", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 5591, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "21", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 5591, "response": "Orbit Express", "pos": "first", "correct": true}
+{"id": "21", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 5588, "response": "Orbit Express", "pos": "first", "correct": true}
+{"id": "21", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 5591, "response": "Zipline Freight", "pos": "middle", "correct": false}
+{"id": "21", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 5591, "response": "Courant", "pos": "middle", "correct": false}
+{"id": "21", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 5588, "response": "Courant", "pos": "middle", "correct": false}
+{"id": "22", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 586, "response": "Marta", "pos": "last", "correct": true}
+{"id": "22", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 586, "response": "Yusuf", "pos": "first", "correct": true}
+{"id": "22", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 583, "response": "Yusuf", "pos": "first", "correct": true}
+{"id": "22", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 586, "response": "Marta", "pos": "first", "correct": true}
+{"id": "22", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 586, "response": "Yusuf", "pos": "last", "correct": true}
+{"id": "22", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 583, "response": "Yusuf", "pos": "last", "correct": true}
+{"id": "23", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 536, "response": "20", "pos": "last", "correct": true}
+{"id": "23", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 536, "response": "55", "pos": "first", "correct": true}
+{"id": "23", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 533, "response": "55", "pos": "first", "correct": true}
+{"id": "23", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 536, "response": "20", "pos": "first", "correct": true}
+{"id": "23", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 536, "response": "59", "pos": "middle", "correct": false}
+{"id": "23", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 533, "response": "59", "pos": "middle", "correct": false}
+{"id": "24", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 609, "response": "4100 requests per minute", "pos": "last", "correct": true}
+{"id": "24", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 609, "response": "2400 requests per minute", "pos": "first", "correct": true}
+{"id": "24", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 606, "response": "2400 requests per minute", "pos": "first", "correct": true}
+{"id": "24", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 609, "response": "4100 requests per minute", "pos": "first", "correct": true}
+{"id": "24", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 609, "response": "2600 requests per minute", "pos": "middle", "correct": false}
+{"id": "24", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 606, "response": "2600 requests per minute", "pos": "middle", "correct": false}
+{"id": "25", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1103, "response": "Oskar", "pos": "last", "correct": true}
+{"id": "25", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1103, "response": "Hana", "pos": "first", "correct": true}
+{"id": "25", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1100, "response": "Hana", "pos": "first", "correct": true}
+{"id": "25", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1103, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "25", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1103, "response": "Hana", "pos": "last", "correct": true}
+{"id": "25", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1100, "response": "Hana", "pos": "last", "correct": true}
+{"id": "26", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 510, "response": "30", "pos": "other", "correct": false}
+{"id": "26", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 510, "response": "78", "pos": "other", "correct": false}
+{"id": "26", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 507, "response": "78 GB", "pos": "first", "correct": true}
+{"id": "26", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 510, "response": "30", "pos": "other", "correct": false}
+{"id": "26", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 510, "response": "78", "pos": "other", "correct": false}
+{"id": "26", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 507, "response": "78 GB", "pos": "last", "correct": true}
+{"id": "27", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Oskar", "pos": "last", "correct": true}
+{"id": "27", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Kwame", "pos": "first", "correct": true}
+{"id": "27", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 573, "response": "Kwame", "pos": "first", "correct": true}
+{"id": "27", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "27", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Kwame", "pos": "last", "correct": true}
+{"id": "27", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 573, "response": "Kwame", "pos": "last", "correct": true}
+{"id": "28", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 393, "response": "2300", "pos": "other", "correct": false}
+{"id": "28", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 393, "response": "1600", "pos": "other", "correct": false}
+{"id": "28", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 390, "response": "1600", "pos": "other", "correct": false}
+{"id": "28", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 393, "response": "2300", "pos": "other", "correct": false}
+{"id": "28", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 393, "response": "1600", "pos": "other", "correct": false}
+{"id": "28", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 390, "response": "1600", "pos": "other", "correct": false}
+{"id": "29", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 422, "response": "Osaka", "pos": "last", "correct": true}
+{"id": "29", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 422, "response": "Lisbon", "pos": "first", "correct": true}
+{"id": "29", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 419, "response": "Lisbon", "pos": "first", "correct": true}
+{"id": "29", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 422, "response": "Nagpur", "pos": "middle", "correct": false}
+{"id": "29", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 422, "response": "Nagpur", "pos": "middle", "correct": false}
+{"id": "29", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 419, "response": "Nagpur", "pos": "middle", "correct": false}
+{"id": "30", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 518, "response": "Aisle 2D", "pos": "last", "correct": true}
+{"id": "30", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 518, "response": "Aisle 7A", "pos": "first", "correct": true}
+{"id": "30", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 515, "response": "Aisle 7A", "pos": "first", "correct": true}
+{"id": "30", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 518, "response": "Aisle 2D", "pos": "first", "correct": true}
+{"id": "30", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 518, "response": "Aisle 7A", "pos": "last", "correct": true}
+{"id": "30", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 515, "response": "Aisle 7A", "pos": "last", "correct": true}
+{"id": "31", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1133, "response": "Corvex", "pos": "last", "correct": true}
+{"id": "31", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1133, "response": "Sandria", "pos": "first", "correct": true}
+{"id": "31", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1130, "response": "Sandria", "pos": "first", "correct": true}
+{"id": "31", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1133, "response": "Sandria", "pos": "last", "correct": false}
+{"id": "31", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1133, "response": "Sandria", "pos": "last", "correct": true}
+{"id": "31", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1130, "response": "Sandria", "pos": "last", "correct": true}
+{"id": "32", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5789, "response": "-29 C", "pos": "last", "correct": true}
+{"id": "32", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5789, "response": "-24 C", "pos": "first", "correct": true}
+{"id": "32", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5786, "response": "-24 C", "pos": "first", "correct": true}
+{"id": "32", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5789, "response": "-21", "pos": "other", "correct": false}
+{"id": "32", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5789, "response": "-29", "pos": "other", "correct": false}
+{"id": "32", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5786, "response": "-24", "pos": "other", "correct": false}
+{"id": "33", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 538, "response": "Aisle 17B", "pos": "last", "correct": true}
+{"id": "33", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 538, "response": "Aisle 9D", "pos": "first", "correct": true}
+{"id": "33", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 535, "response": "Aisle 9D", "pos": "first", "correct": true}
+{"id": "33", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 538, "response": "Aisle 17B", "pos": "first", "correct": true}
+{"id": "33", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 538, "response": "Aisle 9D", "pos": "last", "correct": true}
+{"id": "33", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 535, "response": "Aisle 9D", "pos": "last", "correct": true}
+{"id": "34", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 618, "response": "Dmitri", "pos": "last", "correct": true}
+{"id": "34", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 618, "response": "Marta", "pos": "first", "correct": true}
+{"id": "34", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 615, "response": "Marta", "pos": "first", "correct": true}
+{"id": "34", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 618, "response": "Marta", "pos": "last", "correct": false}
+{"id": "34", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 618, "response": "Dmitri", "pos": "first", "correct": false}
+{"id": "34", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 615, "response": "Dmitri", "pos": "first", "correct": false}
+{"id": "35", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5198, "response": "4", "pos": "last", "correct": true}
+{"id": "35", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5198, "response": "12", "pos": "first", "correct": true}
+{"id": "35", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5195, "response": "12", "pos": "first", "correct": true}
+{"id": "35", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5198, "response": "12", "pos": "last", "correct": false}
+{"id": "35", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5198, "response": "12", "pos": "last", "correct": true}
+{"id": "35", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5195, "response": "4", "pos": "first", "correct": false}
+{"id": "36", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 775, "response": "49", "pos": "last", "correct": true}
+{"id": "36", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 775, "response": "72", "pos": "first", "correct": true}
+{"id": "36", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 772, "response": "72", "pos": "first", "correct": true}
+{"id": "36", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 775, "response": "49", "pos": "first", "correct": true}
+{"id": "36", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 775, "response": "72", "pos": "last", "correct": true}
+{"id": "36", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 772, "response": "11", "pos": "middle", "correct": false}
+{"id": "37", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 7163, "response": "Priya", "pos": "last", "correct": true}
+{"id": "37", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 7163, "response": "Lena", "pos": "first", "correct": true}
+{"id": "37", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 7160, "response": "Lena", "pos": "first", "correct": true}
+{"id": "37", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 7163, "response": "Lena", "pos": "last", "correct": false}
+{"id": "37", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 7163, "response": "Lena", "pos": "last", "correct": true}
+{"id": "37", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 7160, "response": "Dmitri", "pos": "middle", "correct": false}
+{"id": "38", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 354, "response": "Nagpur", "pos": "last", "correct": true}
+{"id": "38", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 354, "response": "Lisbon", "pos": "first", "correct": true}
+{"id": "38", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 351, "response": "Lisbon", "pos": "first", "correct": true}
+{"id": "38", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 354, "response": "Nagpur", "pos": "first", "correct": true}
+{"id": "38", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 354, "response": "Lisbon", "pos": "last", "correct": true}
+{"id": "38", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 351, "response": "Lisbon", "pos": "last", "correct": true}
+{"id": "39", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1355, "response": "107", "pos": "middle", "correct": false}
+{"id": "39", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1355, "response": "580", "pos": "first", "correct": true}
+{"id": "39", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1352, "response": "580", "pos": "first", "correct": true}
+{"id": "39", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1355, "response": "618", "pos": "first", "correct": true}
+{"id": "39", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1355, "response": "107", "pos": "middle", "correct": false}
+{"id": "39", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1352, "response": "107", "pos": "middle", "correct": false}
+{"id": "40", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 910, "response": "2800", "pos": "other", "correct": false}
+{"id": "40", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 910, "response": "2900", "pos": "other", "correct": false}
+{"id": "40", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 907, "response": "2900", "pos": "other", "correct": false}
+{"id": "40", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 910, "response": "2800", "pos": "other", "correct": false}
+{"id": "40", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 910, "response": "2900", "pos": "other", "correct": false}
+{"id": "40", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 907, "response": "2900", "pos": "other", "correct": false}
+{"id": "41", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 4365, "response": "20 GB", "pos": "last", "correct": true}
+{"id": "41", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 4365, "response": "11 GB", "pos": "first", "correct": true}
+{"id": "41", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 4362, "response": "11 GB", "pos": "first", "correct": true}
+{"id": "41", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 4365, "response": "20", "pos": "other", "correct": false}
+{"id": "41", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 4365, "response": "11 GB", "pos": "last", "correct": true}
+{"id": "41", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 4362, "response": "20 GB", "pos": "first", "correct": false}
+{"id": "42", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 827, "response": "Starter", "pos": "last", "correct": true}
+{"id": "42", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 827, "response": "Family", "pos": "first", "correct": true}
+{"id": "42", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 824, "response": "Family", "pos": "first", "correct": true}
+{"id": "42", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 827, "response": "Pro Lite", "pos": "middle", "correct": false}
+{"id": "42", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 827, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "42", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 824, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "43", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1254, "response": "22", "pos": "last", "correct": true}
+{"id": "43", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1254, "response": "185", "pos": "first", "correct": true}
+{"id": "43", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1251, "response": "185", "pos": "first", "correct": true}
+{"id": "43", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1254, "response": "22", "pos": "first", "correct": true}
+{"id": "43", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1254, "response": "22", "pos": "first", "correct": false}
+{"id": "43", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1251, "response": "22", "pos": "first", "correct": false}
+{"id": "44", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 377, "response": "Ines", "pos": "last", "correct": true}
+{"id": "44", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 377, "response": "Tomas", "pos": "first", "correct": true}
+{"id": "44", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 374, "response": "Tomas", "pos": "first", "correct": true}
+{"id": "44", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 377, "response": "Tomas", "pos": "last", "correct": false}
+{"id": "44", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 377, "response": "Tomas", "pos": "last", "correct": true}
+{"id": "44", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 374, "response": "Tomas", "pos": "last", "correct": true}
+{"id": "45", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 358, "response": "875", "pos": "last", "correct": true}
+{"id": "45", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 358, "response": "98", "pos": "first", "correct": true}
+{"id": "45", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 355, "response": "98", "pos": "first", "correct": true}
+{"id": "45", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 358, "response": "875", "pos": "first", "correct": true}
+{"id": "45", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 358, "response": "98", "pos": "last", "correct": true}
+{"id": "45", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 355, "response": "663", "pos": "middle", "correct": false}
+{"id": "46", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Quillon", "pos": "last", "correct": true}
+{"id": "46", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Halden", "pos": "first", "correct": true}
+{"id": "46", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 573, "response": "Halden", "pos": "first", "correct": true}
+{"id": "46", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Quillon", "pos": "first", "correct": true}
+{"id": "46", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 576, "response": "Halden", "pos": "last", "correct": true}
+{"id": "46", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 573, "response": "Halden", "pos": "last", "correct": true}
+{"id": "47", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5825, "response": "2660", "pos": "other", "correct": false}
+{"id": "47", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5825, "response": "$2360", "pos": "first", "correct": true}
+{"id": "47", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5822, "response": "$2360", "pos": "first", "correct": true}
+{"id": "47", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5825, "response": "2660", "pos": "other", "correct": false}
+{"id": "47", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5825, "response": "$2360", "pos": "last", "correct": true}
+{"id": "47", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5822, "response": "$2360", "pos": "last", "correct": true}
+{"id": "48", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 2783, "response": "SwiftPost", "pos": "last", "correct": true}
+{"id": "48", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 2783, "response": "Zipline Freight", "pos": "first", "correct": true}
+{"id": "48", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 2780, "response": "Zipline Freight", "pos": "first", "correct": true}
+{"id": "48", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 2783, "response": "Zipline Freight", "pos": "last", "correct": false}
+{"id": "48", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 2783, "response": "Zipline Freight", "pos": "last", "correct": true}
+{"id": "48", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 2780, "response": "SwiftPost", "pos": "first", "correct": false}
+{"id": "49", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1124, "response": "Courant", "pos": "last", "correct": true}
+{"id": "49", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1124, "response": "RedLine", "pos": "first", "correct": true}
+{"id": "49", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1121, "response": "RedLine", "pos": "first", "correct": true}
+{"id": "49", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1124, "response": "RedLine", "pos": "last", "correct": false}
+{"id": "49", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1124, "response": "RedLine", "pos": "last", "correct": true}
+{"id": "49", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1121, "response": "RedLine", "pos": "last", "correct": true}
+{"id": "50", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 5052, "response": "35", "pos": "middle", "correct": false}
+{"id": "50", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 5052, "response": "11", "pos": "first", "correct": true}
+{"id": "50", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 5049, "response": "11", "pos": "first", "correct": true}
+{"id": "50", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 5052, "response": "35", "pos": "middle", "correct": false}
+{"id": "50", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 5052, "response": "35", "pos": "middle", "correct": false}
+{"id": "50", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 5049, "response": "20", "pos": "first", "correct": false}
+{"id": "51", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 4335, "response": "Karla", "pos": "last", "correct": true}
+{"id": "51", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 4335, "response": "Lato", "pos": "first", "correct": true}
+{"id": "51", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 4332, "response": "Lato", "pos": "first", "correct": true}
+{"id": "51", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 4335, "response": "Lato", "pos": "last", "correct": false}
+{"id": "51", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 4335, "response": "Lato", "pos": "last", "correct": true}
+{"id": "51", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 4332, "response": "Lato", "pos": "last", "correct": true}
+{"id": "52", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 512, "response": "38", "pos": "last", "correct": true}
+{"id": "52", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 512, "response": "24", "pos": "first", "correct": true}
+{"id": "52", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 509, "response": "24", "pos": "first", "correct": true}
+{"id": "52", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 512, "response": "38", "pos": "first", "correct": true}
+{"id": "52", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 512, "response": "5", "pos": "middle", "correct": false}
+{"id": "52", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 509, "response": "5", "pos": "middle", "correct": false}
+{"id": "53", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1729, "response": "30", "pos": "last", "correct": true}
+{"id": "53", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1729, "response": "1", "pos": "other", "correct": false}
+{"id": "53", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1726, "response": "33", "pos": "first", "correct": true}
+{"id": "53", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1729, "response": "30", "pos": "first", "correct": true}
+{"id": "53", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1729, "response": "25", "pos": "middle", "correct": false}
+{"id": "53", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1726, "response": "25", "pos": "middle", "correct": false}
+{"id": "54", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 922, "response": "84", "pos": "last", "correct": true}
+{"id": "54", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 922, "response": "59", "pos": "first", "correct": true}
+{"id": "54", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 919, "response": "59", "pos": "first", "correct": true}
+{"id": "54", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 922, "response": "84", "pos": "first", "correct": true}
+{"id": "54", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 922, "response": "59", "pos": "last", "correct": true}
+{"id": "54", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 919, "response": "59", "pos": "last", "correct": true}
+{"id": "55", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 559, "response": "Source Serif", "pos": "last", "correct": true}
+{"id": "55", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 559, "response": "Nunito", "pos": "first", "correct": true}
+{"id": "55", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 556, "response": "Nunito", "pos": "first", "correct": true}
+{"id": "55", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 559, "response": "Nunito", "pos": "last", "correct": false}
+{"id": "55", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 559, "response": "Nunito", "pos": "last", "correct": true}
+{"id": "55", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 556, "response": "Nunito", "pos": "last", "correct": true}
+{"id": "56", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1591, "response": "Tomas", "pos": "last", "correct": true}
+{"id": "56", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1591, "response": "Priya", "pos": "first", "correct": true}
+{"id": "56", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1588, "response": "Priya", "pos": "first", "correct": true}
+{"id": "56", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1591, "response": "Tomas", "pos": "first", "correct": true}
+{"id": "56", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1591, "response": "Priya", "pos": "last", "correct": true}
+{"id": "56", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1588, "response": "Tomas", "pos": "first", "correct": false}
+{"id": "57", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 486, "response": "teal", "pos": "last", "correct": true}
+{"id": "57", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 486, "response": "coral", "pos": "middle", "correct": false}
+{"id": "57", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 483, "response": "coral", "pos": "middle", "correct": false}
+{"id": "57", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 486, "response": "teal", "pos": "first", "correct": true}
+{"id": "57", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 486, "response": "coral", "pos": "middle", "correct": false}
+{"id": "57", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 483, "response": "coral", "pos": "middle", "correct": false}
+{"id": "58", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 774, "response": "55 GB", "pos": "last", "correct": true}
+{"id": "58", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 774, "response": "78 GB", "pos": "first", "correct": true}
+{"id": "58", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 771, "response": "78 GB", "pos": "first", "correct": true}
+{"id": "58", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 774, "response": "55 GB", "pos": "first", "correct": true}
+{"id": "58", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 774, "response": "78 GB", "pos": "last", "correct": true}
+{"id": "58", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 771, "response": "55 GB", "pos": "first", "correct": false}
+{"id": "59", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1230, "response": "74 GB", "pos": "last", "correct": true}
+{"id": "59", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1230, "response": "32 GB", "pos": "first", "correct": true}
+{"id": "59", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1227, "response": "32 GB", "pos": "first", "correct": true}
+{"id": "59", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1230, "response": "74 GB", "pos": "first", "correct": true}
+{"id": "59", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1230, "response": "32 GB", "pos": "last", "correct": true}
+{"id": "59", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1227, "response": "74 GB", "pos": "first", "correct": false}
+{"id": "60", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1844, "response": "3400 requests per minute", "pos": "last", "correct": true}
+{"id": "60", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1844, "response": "2000 requests per minute", "pos": "first", "correct": true}
+{"id": "60", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1841, "response": "2000 requests per minute", "pos": "first", "correct": true}
+{"id": "60", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 1844, "response": "3400 requests per minute", "pos": "first", "correct": true}
+{"id": "60", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 1844, "response": "3400 requests per minute", "pos": "first", "correct": false}
+{"id": "60", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 1841, "response": "2000 requests per minute", "pos": "last", "correct": true}
+{"id": "61", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 560, "response": "Oskar", "pos": "last", "correct": true}
+{"id": "61", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 560, "response": "Kwame", "pos": "first", "correct": true}
+{"id": "61", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 557, "response": "Kwame", "pos": "first", "correct": true}
+{"id": "61", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 560, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "61", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 560, "response": "Kwame", "pos": "last", "correct": true}
+{"id": "61", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 557, "response": "Kwame", "pos": "last", "correct": true}
+{"id": "62", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1193, "response": "-21", "pos": "other", "correct": false}
+{"id": "62", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1193, "response": "-20", "pos": "other", "correct": false}
+{"id": "62", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1190, "response": "-20", "pos": "other", "correct": false}
+{"id": "62", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1193, "response": "-20 C", "pos": "last", "correct": false}
+{"id": "62", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1193, "response": "-24", "pos": "other", "correct": false}
+{"id": "62", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1190, "response": "-24 C", "pos": "middle", "correct": false}
+{"id": "63", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 722, "response": "47", "pos": "middle", "correct": false}
+{"id": "63", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 722, "response": "83", "pos": "first", "correct": true}
+{"id": "63", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 719, "response": "83", "pos": "first", "correct": true}
+{"id": "63", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 722, "response": "83", "pos": "last", "correct": false}
+{"id": "63", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 722, "response": "82", "pos": "middle", "correct": false}
+{"id": "63", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 719, "response": "47", "pos": "middle", "correct": false}
+{"id": "64", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 7173, "response": "Orbit Express", "pos": "last", "correct": true}
+{"id": "64", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 7173, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "64", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 7170, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "64", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 7173, "response": "BoxHop", "pos": "last", "correct": false}
+{"id": "64", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 7173, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "64", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 7170, "response": "RedLine", "pos": "middle", "correct": false}
+{"id": "65", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 374, "response": "81 GB", "pos": "last", "correct": true}
+{"id": "65", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 374, "response": "24 GB", "pos": "first", "correct": true}
+{"id": "65", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 371, "response": "24 GB", "pos": "first", "correct": true}
+{"id": "65", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 374, "response": "81 GB", "pos": "first", "correct": true}
+{"id": "65", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 374, "response": "81 GB", "pos": "first", "correct": false}
+{"id": "65", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 371, "response": "81 GB", "pos": "first", "correct": false}
+{"id": "66", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 4408, "response": "Hana", "pos": "last", "correct": true}
+{"id": "66", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 4408, "response": "Marta", "pos": "first", "correct": true}
+{"id": "66", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 4405, "response": "Marta", "pos": "first", "correct": true}
+{"id": "66", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 4408, "response": "Hana", "pos": "first", "correct": true}
+{"id": "66", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 4408, "response": "Lena", "pos": "middle", "correct": false}
+{"id": "66", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 4405, "response": "Priya", "pos": "middle", "correct": false}
+{"id": "67", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 5906, "response": "Suite 310", "pos": "last", "correct": true}
+{"id": "67", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 5906, "response": "Room 21A", "pos": "first", "correct": true}
+{"id": "67", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 5903, "response": "Room 21A", "pos": "first", "correct": true}
+{"id": "67", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 5906, "response": "Suite 310", "pos": "first", "correct": true}
+{"id": "67", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 5906, "response": "Room 21A", "pos": "last", "correct": true}
+{"id": "67", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 5903, "response": "Room 21A", "pos": "last", "correct": true}
+{"id": "68", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 345, "response": "Route 2", "pos": "last", "correct": true}
+{"id": "68", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 345, "response": "Route 5", "pos": "first", "correct": true}
+{"id": "68", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 342, "response": "Route 5", "pos": "first", "correct": true}
+{"id": "68", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 345, "response": "Route 2", "pos": "first", "correct": true}
+{"id": "68", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 345, "response": "Route 5", "pos": "last", "correct": true}
+{"id": "68", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 342, "response": "Route 5", "pos": "last", "correct": true}
+{"id": "69", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 418, "response": "37", "pos": "last", "correct": true}
+{"id": "69", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 418, "response": "5", "pos": "first", "correct": true}
+{"id": "69", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 415, "response": "5", "pos": "first", "correct": true}
+{"id": "69", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 418, "response": "37", "pos": "first", "correct": true}
+{"id": "69", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 418, "response": "3", "pos": "middle", "correct": false}
+{"id": "69", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 415, "response": "3", "pos": "middle", "correct": false}
+{"id": "70", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5754, "response": "Team", "pos": "middle", "correct": false}
+{"id": "70", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5754, "response": "Pro Lite", "pos": "first", "correct": true}
+{"id": "70", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5751, "response": "Pro Lite", "pos": "first", "correct": true}
+{"id": "70", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5754, "response": "Pro Lite", "pos": "last", "correct": false}
+{"id": "70", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5754, "response": "Basic", "pos": "first", "correct": false}
+{"id": "70", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5751, "response": "Basic", "pos": "first", "correct": false}
+{"id": "71", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1190, "response": "Route 18", "pos": "last", "correct": true}
+{"id": "71", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1190, "response": "Route 41", "pos": "first", "correct": true}
+{"id": "71", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1187, "response": "Route 41", "pos": "first", "correct": true}
+{"id": "71", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1190, "response": "Route 18", "pos": "first", "correct": true}
+{"id": "71", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1190, "response": "Route 41", "pos": "last", "correct": true}
+{"id": "71", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1187, "response": "Route 18", "pos": "first", "correct": false}
+{"id": "72", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 269, "response": "30", "pos": "last", "correct": true}
+{"id": "72", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 269, "response": "29", "pos": "first", "correct": true}
+{"id": "72", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 266, "response": "29", "pos": "first", "correct": true}
+{"id": "72", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 269, "response": "30", "pos": "first", "correct": true}
+{"id": "72", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 269, "response": "29", "pos": "last", "correct": true}
+{"id": "72", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 266, "response": "29", "pos": "last", "correct": true}
+{"id": "73", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 698, "response": "20", "pos": "last", "correct": true}
+{"id": "73", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 698, "response": "15", "pos": "first", "correct": true}
+{"id": "73", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 695, "response": "15", "pos": "first", "correct": true}
+{"id": "73", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 698, "response": "15", "pos": "last", "correct": false}
+{"id": "73", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 698, "response": "75", "pos": "middle", "correct": false}
+{"id": "73", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 695, "response": "75", "pos": "middle", "correct": false}
+{"id": "74", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1277, "response": "Starter", "pos": "last", "correct": true}
+{"id": "74", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1277, "response": "Starter", "pos": "last", "correct": false}
+{"id": "74", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1274, "response": "Team", "pos": "first", "correct": true}
+{"id": "74", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1277, "response": "Team", "pos": "last", "correct": false}
+{"id": "74", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1277, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "74", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1274, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "75", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 1535, "response": "8", "pos": "last", "correct": true}
+{"id": "75", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 1535, "response": "2", "pos": "first", "correct": true}
+{"id": "75", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 1532, "response": "2", "pos": "first", "correct": true}
+{"id": "75", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 1535, "response": "2", "pos": "last", "correct": false}
+{"id": "75", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 1535, "response": "2", "pos": "last", "correct": true}
+{"id": "75", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 1532, "response": "2", "pos": "last", "correct": true}
+{"id": "76", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 2081, "response": "12", "pos": "last", "correct": true}
+{"id": "76", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 2081, "response": "0", "pos": "other", "correct": false}
+{"id": "76", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 2078, "response": "13", "pos": "first", "correct": true}
+{"id": "76", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 2081, "response": "12", "pos": "first", "correct": true}
+{"id": "76", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 2081, "response": "12", "pos": "first", "correct": false}
+{"id": "76", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 2078, "response": "12", "pos": "first", "correct": false}
+{"id": "77", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 7688, "response": "8", "pos": "last", "correct": true}
+{"id": "77", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 7688, "response": "6", "pos": "first", "correct": true}
+{"id": "77", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 7685, "response": "6", "pos": "first", "correct": true}
+{"id": "77", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 7688, "response": "6", "pos": "last", "correct": false}
+{"id": "77", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 7688, "response": "6", "pos": "last", "correct": true}
+{"id": "77", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 7685, "response": "6", "pos": "last", "correct": true}
+{"id": "78", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5831, "response": "28", "pos": "last", "correct": true}
+{"id": "78", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5831, "response": "16", "pos": "first", "correct": true}
+{"id": "78", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5828, "response": "16", "pos": "first", "correct": true}
+{"id": "78", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5831, "response": "45", "pos": "middle", "correct": false}
+{"id": "78", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5831, "response": "16", "pos": "last", "correct": true}
+{"id": "78", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5828, "response": "16", "pos": "last", "correct": true}
+{"id": "79", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1562, "response": "Northwind", "pos": "last", "correct": true}
+{"id": "79", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1562, "response": "Corvex", "pos": "first", "correct": true}
+{"id": "79", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1559, "response": "Corvex", "pos": "first", "correct": true}
+{"id": "79", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1562, "response": "Tovar", "pos": "middle", "correct": false}
+{"id": "79", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1562, "response": "Corvex", "pos": "last", "correct": true}
+{"id": "79", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1559, "response": "Northwind", "pos": "first", "correct": false}
+{"id": "80", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 800, "response": "Room 4B", "pos": "last", "correct": true}
+{"id": "80", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 800, "response": "Room 21A", "pos": "first", "correct": true}
+{"id": "80", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 797, "response": "Room 21A", "pos": "first", "correct": true}
+{"id": "80", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 800, "response": "Room 4B", "pos": "first", "correct": true}
+{"id": "80", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 800, "response": "Room 21A", "pos": "last", "correct": true}
+{"id": "80", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 797, "response": "Room 21A", "pos": "last", "correct": true}
+{"id": "81", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 389, "response": "-25 C", "pos": "last", "correct": true}
+{"id": "81", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 389, "response": "-16 C", "pos": "first", "correct": true}
+{"id": "81", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 386, "response": "-16 C", "pos": "first", "correct": true}
+{"id": "81", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 389, "response": "-25 C", "pos": "first", "correct": true}
+{"id": "81", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 389, "response": "-16 C", "pos": "last", "correct": true}
+{"id": "81", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 386, "response": "-16 C", "pos": "last", "correct": true}
+{"id": "82", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2056, "response": "35", "pos": "last", "correct": true}
+{"id": "82", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2056, "response": "39", "pos": "first", "correct": true}
+{"id": "82", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2053, "response": "39", "pos": "first", "correct": true}
+{"id": "82", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2056, "response": "35", "pos": "first", "correct": true}
+{"id": "82", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2056, "response": "39", "pos": "last", "correct": true}
+{"id": "82", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2053, "response": "39", "pos": "last", "correct": true}
+{"id": "83", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 370, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "83", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 370, "response": "Courant", "pos": "first", "correct": true}
+{"id": "83", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 367, "response": "Courant", "pos": "first", "correct": true}
+{"id": "83", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 370, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "83", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 370, "response": "Courant", "pos": "last", "correct": true}
+{"id": "83", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 367, "response": "BoxHop", "pos": "first", "correct": false}
+{"id": "84", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 4944, "response": "Flex", "pos": "last", "correct": true}
+{"id": "84", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 4944, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "84", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 4941, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "84", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 4944, "response": "Flex", "pos": "first", "correct": true}
+{"id": "84", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 4944, "response": "Family", "pos": "last", "correct": true}
+{"id": "84", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 4941, "response": "Basic", "pos": "middle", "correct": false}
+{"id": "85", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 896, "response": "1500", "pos": "other", "correct": false}
+{"id": "85", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 896, "response": "3000", "pos": "other", "correct": false}
+{"id": "85", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 893, "response": "3000", "pos": "other", "correct": false}
+{"id": "85", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 896, "response": "3000", "pos": "other", "correct": false}
+{"id": "85", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 896, "response": "3000", "pos": "other", "correct": false}
+{"id": "85", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 893, "response": "3000", "pos": "other", "correct": false}
+{"id": "86", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 764, "response": "Parcelo", "pos": "last", "correct": true}
+{"id": "86", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 764, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "86", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 761, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "86", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 764, "response": "BoxHop", "pos": "last", "correct": false}
+{"id": "86", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 764, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "86", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 761, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "87", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 771, "response": "Route 24", "pos": "last", "correct": true}
+{"id": "87", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 771, "response": "Route 42", "pos": "first", "correct": true}
+{"id": "87", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 768, "response": "Route 42", "pos": "first", "correct": true}
+{"id": "87", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 771, "response": "Route 24", "pos": "first", "correct": true}
+{"id": "87", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 771, "response": "Route 42", "pos": "last", "correct": true}
+{"id": "87", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 768, "response": "Route 42", "pos": "last", "correct": true}
+{"id": "88", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 634, "response": "Roboto", "pos": "last", "correct": true}
+{"id": "88", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 634, "response": "Inter", "pos": "first", "correct": true}
+{"id": "88", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 631, "response": "Inter", "pos": "first", "correct": true}
+{"id": "88", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 634, "response": "Roboto", "pos": "first", "correct": true}
+{"id": "88", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 634, "response": "Inter", "pos": "last", "correct": true}
+{"id": "88", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 631, "response": "Inter", "pos": "last", "correct": true}
+{"id": "89", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5223, "response": "Aisle 23D", "pos": "last", "correct": true}
+{"id": "89", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5223, "response": "Aisle 40D", "pos": "first", "correct": true}
+{"id": "89", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5220, "response": "Aisle 40D", "pos": "first", "correct": true}
+{"id": "89", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5223, "response": "Aisle 40D", "pos": "last", "correct": false}
+{"id": "89", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5223, "response": "Aisle 40D", "pos": "last", "correct": true}
+{"id": "89", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5220, "response": "Aisle 23D", "pos": "first", "correct": false}
+{"id": "90", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2871, "response": "Mirabel", "pos": "last", "correct": true}
+{"id": "90", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2871, "response": "Northwind", "pos": "first", "correct": true}
+{"id": "90", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2868, "response": "Northwind", "pos": "first", "correct": true}
+{"id": "90", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2871, "response": "Northwind", "pos": "last", "correct": false}
+{"id": "90", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2871, "response": "Quillon", "pos": "middle", "correct": false}
+{"id": "90", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2868, "response": "Quillon", "pos": "middle", "correct": false}
+{"id": "91", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 4187, "response": "50", "pos": "last", "correct": true}
+{"id": "91", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 4187, "response": "16", "pos": "first", "correct": true}
+{"id": "91", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 4184, "response": "16", "pos": "first", "correct": true}
+{"id": "91", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 4187, "response": "50", "pos": "first", "correct": true}
+{"id": "91", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 4187, "response": "16", "pos": "last", "correct": true}
+{"id": "91", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 4184, "response": "43", "pos": "middle", "correct": false}
+{"id": "92", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1914, "response": "81", "pos": "other", "correct": false}
+{"id": "92", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1914, "response": "$95", "pos": "first", "correct": true}
+{"id": "92", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1911, "response": "$95", "pos": "first", "correct": true}
+{"id": "92", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1914, "response": "$81", "pos": "first", "correct": true}
+{"id": "92", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1914, "response": "$95", "pos": "last", "correct": true}
+{"id": "92", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1911, "response": "$71", "pos": "middle", "correct": false}
+{"id": "93", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1565, "response": "Lena", "pos": "last", "correct": true}
+{"id": "93", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1565, "response": "Ines", "pos": "first", "correct": true}
+{"id": "93", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1562, "response": "Ines", "pos": "first", "correct": true}
+{"id": "93", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1565, "response": "Ines", "pos": "last", "correct": false}
+{"id": "93", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1565, "response": "Hana", "pos": "middle", "correct": false}
+{"id": "93", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1562, "response": "Lena", "pos": "first", "correct": false}
+{"id": "94", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1602, "response": "60", "pos": "last", "correct": true}
+{"id": "94", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1602, "response": "52", "pos": "first", "correct": true}
+{"id": "94", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1599, "response": "52", "pos": "first", "correct": true}
+{"id": "94", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1602, "response": "60", "pos": "first", "correct": true}
+{"id": "94", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1602, "response": "52", "pos": "last", "correct": true}
+{"id": "94", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1599, "response": "52", "pos": "last", "correct": true}
+{"id": "95", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 550, "response": "Flex", "pos": "last", "correct": true}
+{"id": "95", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 550, "response": "Solo", "pos": "first", "correct": true}
+{"id": "95", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 547, "response": "Solo", "pos": "first", "correct": true}
+{"id": "95", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 550, "response": "Flex", "pos": "first", "correct": true}
+{"id": "95", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 550, "response": "Solo", "pos": "last", "correct": true}
+{"id": "95", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 547, "response": "Solo", "pos": "last", "correct": true}
+{"id": "96", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1112, "response": "Studio 5", "pos": "last", "correct": true}
+{"id": "96", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1112, "response": "Hall 2", "pos": "first", "correct": true}
+{"id": "96", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1109, "response": "Hall 2", "pos": "first", "correct": true}
+{"id": "96", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1112, "response": "Studio 5", "pos": "first", "correct": true}
+{"id": "96", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1112, "response": "Hall 2", "pos": "last", "correct": true}
+{"id": "96", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1109, "response": "Studio 5", "pos": "first", "correct": false}
+{"id": "97", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 5202, "response": "10 GB", "pos": "last", "correct": true}
+{"id": "97", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 5202, "response": "37 GB", "pos": "first", "correct": true}
+{"id": "97", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 5199, "response": "37 GB", "pos": "first", "correct": true}
+{"id": "97", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 5202, "response": "10 GB", "pos": "first", "correct": true}
+{"id": "97", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 5202, "response": "86 GB", "pos": "middle", "correct": false}
+{"id": "97", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 5199, "response": "37 GB", "pos": "last", "correct": true}
+{"id": "98", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 267, "response": "12", "pos": "last", "correct": true}
+{"id": "98", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 267, "response": "2", "pos": "middle", "correct": false}
+{"id": "98", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 264, "response": "7", "pos": "first", "correct": true}
+{"id": "98", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 267, "response": "12", "pos": "first", "correct": true}
+{"id": "98", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 267, "response": "1", "pos": "middle", "correct": false}
+{"id": "98", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 264, "response": "2", "pos": "middle", "correct": false}
+{"id": "99", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1749, "response": "Sandria", "pos": "last", "correct": true}
+{"id": "99", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1749, "response": "Quillon", "pos": "first", "correct": true}
+{"id": "99", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1746, "response": "Quillon", "pos": "first", "correct": true}
+{"id": "99", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1749, "response": "Sandria", "pos": "first", "correct": true}
+{"id": "99", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1749, "response": "Quillon", "pos": "last", "correct": true}
+{"id": "99", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1746, "response": "BoxHop", "pos": "other", "correct": false}
+{"id": "100", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 453, "response": "14", "pos": "last", "correct": true}
+{"id": "100", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 453, "response": "11", "pos": "first", "correct": true}
+{"id": "100", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 450, "response": "11", "pos": "first", "correct": true}
+{"id": "100", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 453, "response": "14", "pos": "first", "correct": true}
+{"id": "100", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 453, "response": "30", "pos": "middle", "correct": false}
+{"id": "100", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 450, "response": "11", "pos": "last", "correct": true}
+{"id": "101", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1336, "response": "Orbit Express", "pos": "last", "correct": true}
+{"id": "101", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1336, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "101", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1333, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "101", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1336, "response": "Orbit Express", "pos": "first", "correct": true}
+{"id": "101", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1336, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "101", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1333, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "102", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 650, "response": "745", "pos": "last", "correct": true}
+{"id": "102", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 650, "response": "363", "pos": "first", "correct": true}
+{"id": "102", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 647, "response": "363", "pos": "first", "correct": true}
+{"id": "102", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 650, "response": "745", "pos": "first", "correct": true}
+{"id": "102", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 650, "response": "363", "pos": "last", "correct": true}
+{"id": "102", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 647, "response": "363", "pos": "last", "correct": true}
+{"id": "103", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2015, "response": "Nunito", "pos": "last", "correct": true}
+{"id": "103", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2015, "response": "Source Serif", "pos": "first", "correct": true}
+{"id": "103", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2012, "response": "Source Serif", "pos": "first", "correct": true}
+{"id": "103", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2015, "response": "Nunito", "pos": "first", "correct": true}
+{"id": "103", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2015, "response": "Karla", "pos": "middle", "correct": false}
+{"id": "103", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2012, "response": "Karla", "pos": "middle", "correct": false}
+{"id": "104", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 441, "response": "$156.02", "pos": "last", "correct": true}
+{"id": "104", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 441, "response": "$170.46", "pos": "first", "correct": true}
+{"id": "104", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 438, "response": "$170.46", "pos": "first", "correct": true}
+{"id": "104", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 441, "response": "$170.46", "pos": "last", "correct": false}
+{"id": "104", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 441, "response": "$156.02", "pos": "first", "correct": false}
+{"id": "104", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 438, "response": "$156.02", "pos": "first", "correct": false}
+{"id": "105", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 7978, "response": "Hall 2", "pos": "last", "correct": true}
+{"id": "105", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 7978, "response": "Room 4B", "pos": "first", "correct": true}
+{"id": "105", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 7975, "response": "Room 4B", "pos": "first", "correct": true}
+{"id": "105", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 7978, "response": "Hall 2", "pos": "first", "correct": true}
+{"id": "105", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 7978, "response": "Room 4B", "pos": "last", "correct": true}
+{"id": "105", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 7975, "response": "Hall 2", "pos": "first", "correct": false}
+{"id": "106", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 671, "response": "slate", "pos": "last", "correct": true}
+{"id": "106", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 671, "response": "coral", "pos": "first", "correct": true}
+{"id": "106", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 668, "response": "coral", "pos": "first", "correct": true}
+{"id": "106", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 671, "response": "slate", "pos": "first", "correct": true}
+{"id": "106", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 671, "response": "coral", "pos": "last", "correct": true}
+{"id": "106", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 668, "response": "coral", "pos": "last", "correct": true}
+{"id": "107", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 534, "response": "770", "pos": "other", "correct": false}
+{"id": "107", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 534, "response": "$2880", "pos": "first", "correct": true}
+{"id": "107", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 531, "response": "$2880", "pos": "first", "correct": true}
+{"id": "107", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 534, "response": "$770", "pos": "first", "correct": true}
+{"id": "107", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 534, "response": "$2880", "pos": "last", "correct": true}
+{"id": "107", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 531, "response": "$2880", "pos": "last", "correct": true}
+{"id": "108", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 3145, "response": "Kwame", "pos": "last", "correct": true}
+{"id": "108", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 3145, "response": "Hana", "pos": "first", "correct": true}
+{"id": "108", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 3142, "response": "Hana", "pos": "first", "correct": true}
+{"id": "108", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 3145, "response": "Hana", "pos": "last", "correct": false}
+{"id": "108", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 3145, "response": "Hana", "pos": "last", "correct": true}
+{"id": "108", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 3142, "response": "Hana", "pos": "last", "correct": true}
+{"id": "109", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 4683, "response": "62", "pos": "last", "correct": true}
+{"id": "109", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 4683, "response": "51", "pos": "first", "correct": true}
+{"id": "109", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 4680, "response": "51", "pos": "first", "correct": true}
+{"id": "109", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 4683, "response": "62", "pos": "first", "correct": true}
+{"id": "109", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 4683, "response": "42", "pos": "middle", "correct": false}
+{"id": "109", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 4680, "response": "18", "pos": "middle", "correct": false}
+{"id": "110", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5792, "response": "5", "pos": "last", "correct": true}
+{"id": "110", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5792, "response": "9", "pos": "first", "correct": true}
+{"id": "110", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5789, "response": "9", "pos": "first", "correct": true}
+{"id": "110", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5792, "response": "9", "pos": "last", "correct": false}
+{"id": "110", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5792, "response": "5", "pos": "first", "correct": false}
+{"id": "110", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5789, "response": "5", "pos": "first", "correct": false}
+{"id": "111", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1987, "response": "28", "pos": "last", "correct": true}
+{"id": "111", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1987, "response": "16", "pos": "first", "correct": true}
+{"id": "111", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1984, "response": "16", "pos": "first", "correct": true}
+{"id": "111", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1987, "response": "28", "pos": "first", "correct": true}
+{"id": "111", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1987, "response": "16", "pos": "last", "correct": true}
+{"id": "111", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1984, "response": "16", "pos": "last", "correct": true}
+{"id": "112", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 634, "response": "53", "pos": "last", "correct": true}
+{"id": "112", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 634, "response": "29", "pos": "first", "correct": true}
+{"id": "112", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 631, "response": "29", "pos": "first", "correct": true}
+{"id": "112", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 634, "response": "53", "pos": "first", "correct": true}
+{"id": "112", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 634, "response": "55", "pos": "middle", "correct": false}
+{"id": "112", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 631, "response": "53", "pos": "first", "correct": false}
+{"id": "113", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 570, "response": "-16", "pos": "other", "correct": false}
+{"id": "113", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 570, "response": "-20", "pos": "other", "correct": false}
+{"id": "113", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 567, "response": "-20", "pos": "other", "correct": false}
+{"id": "113", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 570, "response": "-20", "pos": "other", "correct": false}
+{"id": "113", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 570, "response": "-20", "pos": "other", "correct": false}
+{"id": "113", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 567, "response": "-20", "pos": "other", "correct": false}
+{"id": "114", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 3581, "response": "Nunito", "pos": "last", "correct": true}
+{"id": "114", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 3581, "response": "Merriweather", "pos": "first", "correct": true}
+{"id": "114", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 3578, "response": "Merriweather", "pos": "first", "correct": true}
+{"id": "114", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 3581, "response": "Nunito", "pos": "first", "correct": true}
+{"id": "114", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 3581, "response": "Merriweather", "pos": "last", "correct": true}
+{"id": "114", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 3578, "response": "Merriweather", "pos": "last", "correct": true}
+{"id": "115", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 496, "response": "Solo", "pos": "last", "correct": true}
+{"id": "115", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 496, "response": "Family", "pos": "first", "correct": true}
+{"id": "115", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 493, "response": "Family", "pos": "first", "correct": true}
+{"id": "115", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 496, "response": "Family", "pos": "last", "correct": false}
+{"id": "115", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 496, "response": "Family", "pos": "last", "correct": true}
+{"id": "115", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 493, "response": "Family", "pos": "last", "correct": true}
+{"id": "116", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1850, "response": "45", "pos": "other", "correct": false}
+{"id": "116", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1850, "response": "$80", "pos": "first", "correct": true}
+{"id": "116", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1847, "response": "$80", "pos": "first", "correct": true}
+{"id": "116", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1850, "response": "$80", "pos": "last", "correct": false}
+{"id": "116", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1850, "response": "$45", "pos": "first", "correct": false}
+{"id": "116", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1847, "response": "$45", "pos": "first", "correct": false}
+{"id": "117", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 8036, "response": "$87", "pos": "last", "correct": true}
+{"id": "117", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 8036, "response": "$20", "pos": "first", "correct": true}
+{"id": "117", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 8033, "response": "$20", "pos": "first", "correct": true}
+{"id": "117", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 8036, "response": "$113", "pos": "other", "correct": false}
+{"id": "117", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 8036, "response": "$30", "pos": "middle", "correct": false}
+{"id": "117", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 8033, "response": "$30", "pos": "middle", "correct": false}
+{"id": "118", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1047, "response": "3400", "pos": "other", "correct": false}
+{"id": "118", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1047, "response": "400", "pos": "other", "correct": false}
+{"id": "118", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1044, "response": "400", "pos": "other", "correct": false}
+{"id": "118", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 1047, "response": "4100", "pos": "other", "correct": false}
+{"id": "118", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 1047, "response": "400", "pos": "other", "correct": false}
+{"id": "118", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 1044, "response": "400", "pos": "other", "correct": false}
+{"id": "119", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 521, "response": "6", "pos": "last", "correct": true}
+{"id": "119", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 521, "response": "20", "pos": "first", "correct": true}
+{"id": "119", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 518, "response": "20", "pos": "first", "correct": true}
+{"id": "119", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 521, "response": "32", "pos": "middle", "correct": false}
+{"id": "119", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 521, "response": "20", "pos": "last", "correct": true}
+{"id": "119", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 518, "response": "20", "pos": "last", "correct": true}
+{"id": "120", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 246, "response": "237", "pos": "last", "correct": true}
+{"id": "120", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 246, "response": "258", "pos": "first", "correct": true}
+{"id": "120", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 243, "response": "258", "pos": "first", "correct": true}
+{"id": "120", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 246, "response": "237", "pos": "first", "correct": true}
+{"id": "120", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 246, "response": "The earliest record for the stock of part X-17 is on **Aug 23, 201", "pos": "other", "correct": false}
+{"id": "120", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 243, "response": "101", "pos": "middle", "correct": false}
+{"id": "121", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 669, "response": "Studio 5", "pos": "last", "correct": true}
+{"id": "121", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 669, "response": "Room 21A", "pos": "first", "correct": true}
+{"id": "121", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 666, "response": "Room 21A", "pos": "first", "correct": true}
+{"id": "121", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 669, "response": "Studio 5", "pos": "first", "correct": true}
+{"id": "121", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 669, "response": "Room 21A", "pos": "last", "correct": true}
+{"id": "121", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 666, "response": "Room 21A", "pos": "last", "correct": true}
+{"id": "122", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 320, "response": "Aisle 8B", "pos": "last", "correct": true}
+{"id": "122", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 320, "response": "Aisle 22C", "pos": "first", "correct": true}
+{"id": "122", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 317, "response": "Aisle 22C", "pos": "first", "correct": true}
+{"id": "122", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 320, "response": "Aisle 25D", "pos": "middle", "correct": false}
+{"id": "122", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 320, "response": "Aisle 22C", "pos": "last", "correct": true}
+{"id": "122", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 317, "response": "Aisle 8B", "pos": "first", "correct": false}
+{"id": "123", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5403, "response": "Lyon", "pos": "middle", "correct": false}
+{"id": "123", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5403, "response": "Lyon", "pos": "middle", "correct": false}
+{"id": "123", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5400, "response": "Lyon", "pos": "middle", "correct": false}
+{"id": "123", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5403, "response": "Lisbon", "pos": "last", "correct": false}
+{"id": "123", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5403, "response": "Cork", "pos": "first", "correct": false}
+{"id": "123", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5400, "response": "Cork", "pos": "first", "correct": false}
+{"id": "124", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5482, "response": "81", "pos": "middle", "correct": false}
+{"id": "124", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5482, "response": "64", "pos": "first", "correct": true}
+{"id": "124", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5479, "response": "64", "pos": "first", "correct": true}
+{"id": "124", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 5482, "response": "79", "pos": "first", "correct": true}
+{"id": "124", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 5482, "response": "64", "pos": "last", "correct": true}
+{"id": "124", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 5479, "response": "79", "pos": "first", "correct": false}
+{"id": "125", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5088, "response": "8", "pos": "last", "correct": true}
+{"id": "125", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5088, "response": "60", "pos": "first", "correct": true}
+{"id": "125", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5085, "response": "60", "pos": "first", "correct": true}
+{"id": "125", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 5088, "response": "60", "pos": "last", "correct": false}
+{"id": "125", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 5088, "response": "60", "pos": "last", "correct": true}
+{"id": "125", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 5085, "response": "8", "pos": "first", "correct": false}
+{"id": "126", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 4622, "response": "26", "pos": "last", "correct": true}
+{"id": "126", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 4622, "response": "36", "pos": "first", "correct": true}
+{"id": "126", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 4619, "response": "36", "pos": "first", "correct": true}
+{"id": "126", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 4622, "response": "59", "pos": "middle", "correct": false}
+{"id": "126", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 4622, "response": "36", "pos": "last", "correct": true}
+{"id": "126", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 4619, "response": "59", "pos": "middle", "correct": false}
+{"id": "127", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 6243, "response": "26", "pos": "middle", "correct": false}
+{"id": "127", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 6243, "response": "36", "pos": "first", "correct": true}
+{"id": "127", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 6240, "response": "36", "pos": "first", "correct": true}
+{"id": "127", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 6243, "response": "26", "pos": "middle", "correct": false}
+{"id": "127", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 6243, "response": "8", "pos": "first", "correct": false}
+{"id": "127", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 6240, "response": "8", "pos": "first", "correct": false}
+{"id": "128", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 7079, "response": "Marta", "pos": "middle", "correct": false}
+{"id": "128", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 7079, "response": "Ines", "pos": "first", "correct": true}
+{"id": "128", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 7076, "response": "Ines", "pos": "first", "correct": true}
+{"id": "128", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 7079, "response": "Priya", "pos": "first", "correct": true}
+{"id": "128", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 7079, "response": "Marta", "pos": "middle", "correct": false}
+{"id": "128", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 7076, "response": "Marta", "pos": "middle", "correct": false}
+{"id": "129", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 517, "response": "monthly", "pos": "last", "correct": true}
+{"id": "129", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 517, "response": "twice a month", "pos": "first", "correct": true}
+{"id": "129", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 514, "response": "twice a month", "pos": "first", "correct": true}
+{"id": "129", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 517, "response": "monthly", "pos": "first", "correct": true}
+{"id": "129", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 517, "response": "biweekly", "pos": "middle", "correct": false}
+{"id": "129", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 514, "response": "biweekly", "pos": "middle", "correct": false}
+{"id": "130", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 933, "response": "Priya", "pos": "last", "correct": true}
+{"id": "130", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 933, "response": "Marta", "pos": "first", "correct": true}
+{"id": "130", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 930, "response": "Marta", "pos": "first", "correct": true}
+{"id": "130", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 933, "response": "Marta", "pos": "last", "correct": false}
+{"id": "130", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 933, "response": "Ines", "pos": "middle", "correct": false}
+{"id": "130", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 930, "response": "Ines", "pos": "middle", "correct": false}
+{"id": "131", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 3274, "response": "100", "pos": "other", "correct": false}
+{"id": "131", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 3274, "response": "1800", "pos": "other", "correct": false}
+{"id": "131", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 3271, "response": "1800", "pos": "other", "correct": false}
+{"id": "131", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 3274, "response": "3800", "pos": "other", "correct": false}
+{"id": "131", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 3274, "response": "1800", "pos": "other", "correct": false}
+{"id": "131", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 3271, "response": "1800", "pos": "other", "correct": false}
+{"id": "132", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 311, "response": "16 GB", "pos": "last", "correct": true}
+{"id": "132", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 311, "response": "$32 GB", "pos": "other", "correct": false}
+{"id": "132", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 308, "response": "32 GB", "pos": "first", "correct": true}
+{"id": "132", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 311, "response": "90 GB", "pos": "middle", "correct": false}
+{"id": "132", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 311, "response": "32 GB", "pos": "last", "correct": true}
+{"id": "132", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 308, "response": "32 GB", "pos": "last", "correct": true}
+{"id": "133", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 514, "response": "344", "pos": "last", "correct": true}
+{"id": "133", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 514, "response": "69", "pos": "first", "correct": true}
+{"id": "133", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 511, "response": "69", "pos": "first", "correct": true}
+{"id": "133", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 514, "response": "616", "pos": "middle", "correct": false}
+{"id": "133", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 514, "response": "69", "pos": "last", "correct": true}
+{"id": "133", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 511, "response": "69", "pos": "last", "correct": true}
+{"id": "134", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 540, "response": "Parcelo", "pos": "last", "correct": true}
+{"id": "134", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 540, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "134", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 537, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "134", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 540, "response": "BoxHop", "pos": "last", "correct": false}
+{"id": "134", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 540, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "134", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 537, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "135", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 676, "response": "Family", "pos": "last", "correct": true}
+{"id": "135", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 676, "response": "Flex", "pos": "first", "correct": true}
+{"id": "135", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 673, "response": "Flex", "pos": "first", "correct": true}
+{"id": "135", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 676, "response": "Solo", "pos": "middle", "correct": false}
+{"id": "135", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 676, "response": "Flex", "pos": "last", "correct": true}
+{"id": "135", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 673, "response": "Flex", "pos": "last", "correct": true}
+{"id": "136", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 411, "response": "Oskar", "pos": "last", "correct": true}
+{"id": "136", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 411, "response": "Rafael", "pos": "first", "correct": true}
+{"id": "136", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 408, "response": "Rafael", "pos": "first", "correct": true}
+{"id": "136", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 411, "response": "Oskar", "pos": "first", "correct": true}
+{"id": "136", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 411, "response": "Rafael", "pos": "last", "correct": true}
+{"id": "136", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 408, "response": "Tomas", "pos": "middle", "correct": false}
+{"id": "137", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2609, "response": "Tovar", "pos": "last", "correct": true}
+{"id": "137", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2609, "response": "Sandria", "pos": "first", "correct": true}
+{"id": "137", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2606, "response": "Sandria", "pos": "first", "correct": true}
+{"id": "137", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 2609, "response": "Sandria", "pos": "last", "correct": false}
+{"id": "137", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 2609, "response": "Sandria", "pos": "last", "correct": true}
+{"id": "137", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 2606, "response": "Sandria", "pos": "last", "correct": true}
+{"id": "138", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 4534, "response": "693", "pos": "last", "correct": true}
+{"id": "138", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 4534, "response": "59", "pos": "first", "correct": true}
+{"id": "138", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 4531, "response": "59", "pos": "first", "correct": true}
+{"id": "138", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 4534, "response": "693", "pos": "first", "correct": true}
+{"id": "138", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 4534, "response": "50", "pos": "middle", "correct": false}
+{"id": "138", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 4531, "response": "50", "pos": "middle", "correct": false}
+{"id": "139", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 2424, "response": "Mei", "pos": "last", "correct": true}
+{"id": "139", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 2424, "response": "Dmitri", "pos": "first", "correct": true}
+{"id": "139", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 2421, "response": "Dmitri", "pos": "first", "correct": true}
+{"id": "139", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 2424, "response": "Ines", "pos": "middle", "correct": false}
+{"id": "139", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 2424, "response": "Dmitri", "pos": "last", "correct": true}
+{"id": "139", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 2421, "response": "Ines", "pos": "middle", "correct": false}
+{"id": "140", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1241, "response": "54", "pos": "last", "correct": true}
+{"id": "140", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1241, "response": "45", "pos": "first", "correct": true}
+{"id": "140", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1238, "response": "45", "pos": "first", "correct": true}
+{"id": "140", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 1241, "response": "45", "pos": "last", "correct": false}
+{"id": "140", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 1241, "response": "84", "pos": "middle", "correct": false}
+{"id": "140", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 1238, "response": "45", "pos": "last", "correct": true}
+{"id": "141", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 4103, "response": "Aisle 32B", "pos": "last", "correct": true}
+{"id": "141", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 4103, "response": "Aisle 11B", "pos": "first", "correct": true}
+{"id": "141", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 4100, "response": "Aisle 11B", "pos": "first", "correct": true}
+{"id": "141", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 4103, "response": "Aisle 32B", "pos": "first", "correct": true}
+{"id": "141", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 4103, "response": "Aisle 11B", "pos": "last", "correct": true}
+{"id": "141", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 4100, "response": "Aisle 11B", "pos": "last", "correct": true}
+{"id": "142", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1212, "response": "Priya", "pos": "last", "correct": true}
+{"id": "142", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1212, "response": "Marta", "pos": "first", "correct": true}
+{"id": "142", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1209, "response": "Marta", "pos": "first", "correct": true}
+{"id": "142", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 2, "n_tok": 1212, "response": "Priya", "pos": "first", "correct": true}
+{"id": "142", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 2, "n_tok": 1212, "response": "Marta", "pos": "last", "correct": true}
+{"id": "142", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 2, "n_tok": 1209, "response": "Marta", "pos": "last", "correct": true}
+{"id": "143", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 446, "response": "Aisle 12B", "pos": "last", "correct": true}
+{"id": "143", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 446, "response": "Aisle 1B", "pos": "first", "correct": true}
+{"id": "143", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 443, "response": "Aisle 1B", "pos": "first", "correct": true}
+{"id": "143", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 2, "n_tok": 446, "response": "Aisle 3B", "pos": "middle", "correct": false}
+{"id": "143", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 2, "n_tok": 446, "response": "Aisle 1B", "pos": "last", "correct": true}
+{"id": "143", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 2, "n_tok": 443, "response": "Aisle 1B", "pos": "last", "correct": true}
+{"id": "144", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1385, "response": "20", "pos": "last", "correct": true}
+{"id": "144", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1385, "response": "21", "pos": "first", "correct": true}
+{"id": "144", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1382, "response": "21", "pos": "first", "correct": true}
+{"id": "144", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1385, "response": "21", "pos": "last", "correct": false}
+{"id": "144", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1385, "response": "21", "pos": "last", "correct": true}
+{"id": "144", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1382, "response": "20", "pos": "first", "correct": false}
+{"id": "145", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 3377, "response": "Medley\n\nCourant", "pos": "first", "correct": false}
+{"id": "145", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 3377, "response": "Medley", "pos": "first", "correct": true}
+{"id": "145", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 3374, "response": "Medley", "pos": "first", "correct": true}
+{"id": "145", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 3377, "response": "Medley", "pos": "last", "correct": false}
+{"id": "145", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 3377, "response": "Courant", "pos": "first", "correct": false}
+{"id": "145", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 3374, "response": "Courant", "pos": "first", "correct": false}
+{"id": "146", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 507, "response": "Fira Sans", "pos": "last", "correct": true}
+{"id": "146", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 507, "response": "Inter", "pos": "first", "correct": true}
+{"id": "146", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 504, "response": "Inter", "pos": "first", "correct": true}
+{"id": "146", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 1, "n_tok": 507, "response": "Fira Sans", "pos": "first", "correct": true}
+{"id": "146", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 1, "n_tok": 507, "response": "Inter", "pos": "last", "correct": true}
+{"id": "146", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 1, "n_tok": 504, "response": "Fira Sans", "pos": "first", "correct": false}
+{"id": "147", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 3783, "response": "51 GB", "pos": "last", "correct": true}
+{"id": "147", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 3783, "response": "40 GB", "pos": "first", "correct": true}
+{"id": "147", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 3780, "response": "40 GB", "pos": "first", "correct": true}
+{"id": "147", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 3, "n_tok": 3783, "response": "51", "pos": "other", "correct": false}
+{"id": "147", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 3, "n_tok": 3783, "response": "40", "pos": "other", "correct": false}
+{"id": "147", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 3, "n_tok": 3780, "response": "40 GB", "pos": "last", "correct": true}
+{"id": "148", "order": "chrono", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 320, "response": "RedLine", "pos": "last", "correct": true}
+{"id": "148", "order": "chrono", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 320, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "148", "order": "chrono", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 317, "response": "BoxHop", "pos": "first", "correct": true}
+{"id": "148", "order": "reverse", "qtype": "current", "fmt": "audit", "k": 3, "n_tok": 320, "response": "RedLine", "pos": "first", "correct": true}
+{"id": "148", "order": "reverse", "qtype": "earliest", "fmt": "audit", "k": 3, "n_tok": 320, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "148", "order": "reverse", "qtype": "earliest_first", "fmt": "audit", "k": 3, "n_tok": 317, "response": "BoxHop", "pos": "last", "correct": true}
+{"id": "149", "order": "chrono", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1231, "response": "Roboto", "pos": "last", "correct": true}
+{"id": "149", "order": "chrono", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1231, "response": "Lato", "pos": "first", "correct": true}
+{"id": "149", "order": "chrono", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1228, "response": "Lato", "pos": "first", "correct": true}
+{"id": "149", "order": "reverse", "qtype": "current", "fmt": "calendar", "k": 1, "n_tok": 1231, "response": "Roboto", "pos": "first", "correct": true}
+{"id": "149", "order": "reverse", "qtype": "earliest", "fmt": "calendar", "k": 1, "n_tok": 1231, "response": "Lato", "pos": "last", "correct": true}
+{"id": "149", "order": "reverse", "qtype": "earliest_first", "fmt": "calendar", "k": 1, "n_tok": 1228, "response": "Lato", "pos": "last", "correct": true}

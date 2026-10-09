@@ -7,6 +7,8 @@ import re
 import numpy as np
 import pandas as pd
 
+from paths import LONGMEMEVAL
+
 MODELS = ["Qwen3-4B", "Qwen3-14B", "OLMo-2-13B-Instruct", "Phi-4-mini"]
 RNG = np.random.default_rng(0)
 
@@ -65,8 +67,7 @@ def memory():
             rows += [json.loads(l) for l in open(p, encoding="utf-8")]
     if rows:
         items = {d["question_id"]: str(d["answer"]) for d in json.load(open(
-            r"D:\hf_cache\hub\datasets--xiaowu0162--longmemeval-cleaned\snapshots\98d7416c24c778c2fee6e6f3006e7a073259d48f\longmemeval_oracle.json",
-            encoding="utf-8")) if d["question_type"] == "knowledge-update"}
+            LONGMEMEVAL, encoding="utf-8")) if d["question_type"] == "knowledge-update"}
         norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower()).split()
         agree, n = 0, 0
         for r in rows:

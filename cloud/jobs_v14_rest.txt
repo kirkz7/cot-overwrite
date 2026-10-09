@@ -1,0 +1,7 @@
+# 10-07 04:55: the rest of the 14B bf16 suite on GPU0 :8000 (its own 14B server), side by side with jobs_v14_ext.txt on GPU1.
+v14_lc        CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 explore_longconv.py run --models Qwen3-14B-bf16
+v14_mem       CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 run_app_memory.py read --models Qwen3-14B-bf16
+v14_logs      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 run_app_logs.py --n 100 --models Qwen3-14B-bf16
+v14_agent     CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 run_app_agent.py --n 150 --models Qwen3-14B-bf16
+v14_e15       CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=Qwen/Qwen3-14B COT_VLLM_TP=1 explore_order_rule.py run --models Qwen3-14B-bf16
+v14_cot_hf    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 run_ext_eval.py run --benches cot --models Qwen3-14B-bf16

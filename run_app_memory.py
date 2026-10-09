@@ -26,9 +26,10 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
+from paths import LONGMEMEVAL
 from app_common import tag, JsonlAppender, answer_fast, chat_prompt, free_gpu, load_jsonl, load_reader
 
-DATA = r"D:\hf_cache\hub\datasets--xiaowu0162--longmemeval-cleaned\snapshots\98d7416c24c778c2fee6e6f3006e7a073259d48f\longmemeval_oracle.json"
+DATA = LONGMEMEVAL
 S_CONDS = ["S_chrono_dated", "S_rev_dated", "S_rev_dated_header", "S_chrono_nodate", "S_rev_nodate"]
 T_CONDS = ["T_newlast_dated", "T_oldlast_dated", "T_oldlast_dated_header", "T_newlast_nodate", "T_oldlast_nodate"]
 N_DISTRACT = 4

@@ -1,0 +1,16 @@
+[03:43:13] vllm :8001 down
+lme_official_Qwen3-4B-e181~vllm+think~date.jsonl todo 0
+lme_official_Qwen3-4B-e181~vllm+think~relevance.jsonl todo 0
+lme_official_Qwen3-4B-e181~vllm~date.jsonl todo 0
+lme_official_Qwen3-4B-e181~vllm~relevance.jsonl todo 0
+lme_official_Qwen3-4B~vllm+think~date.jsonl todo 0
+lme_official_Qwen3-4B~vllm+think~relevance.jsonl todo 0
+lme_official_Qwen3-4B~vllm~date.jsonl todo 0
+lme_official_Qwen3-4B~vllm~relevance.jsonl todo 0
+lme_official_Qwen3-8B-bf16~vllm+think~date.jsonl todo 500
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights:   0%|          | 1/443 [00:00<01:18,  5.65it/s]Loading weights:   0%|          | 2/443 [00:00<01:18,  5.63it/s]Loading weights:   3%|▎         | 12/443 [00:00<00:12, 35.33it/s]Loading weights:   6%|▌         | 26/443 [00:00<00:06, 67.07it/s]Loading weights:   9%|▊         | 38/443 [00:00<00:04, 82.53it/s]Loading weights:  11%|█▏        | 50/443 [00:00<00:04, 93.13it/s]Loading weights:  16%|█▌        | 70/443 [00:00<00:03, 117.96it/s]Loading weights:  19%|█▊        | 83/443 [00:01<00:03, 112.99it/s]Loading weights:  23%|██▎       | 103/443 [00:01<00:02, 130.38it/s]Loading weights:  26%|██▋       | 117/443 [00:01<00:02, 124.32it/s]Loading weights:  30%|███       | 134/443 [00:01<00:02, 136.32it/s]Loading weights:  33%|███▎      | 148/443 [00:01<00:02, 127.92it/s]Loading weights:  37%|███▋      | 162/443 [00:01<00:02, 129.89it/s]Loading weights:  41%|████      | 180/443 [00:01<00:01, 136.26it/s]Loading weights:  44%|████▍     | 194/443 [00:01<00:01, 128.55it/s]Loading weights:  48%|████▊     | 213/443 [00:01<00:01, 137.28it/s]Loading weights:  51%|█████     | 227/443 [00:02<00:01, 129.19it/s]Loading weights:  56%|█████▌    | 246/443 [00:02<00:01, 138.19it/s]Loading weights:  59%|█████▊    | 260/443 [00:02<00:01, 129.67it/s]Loading weights:  63%|██████▎   | 279/443 [00:02<00:01, 138.18it/s]Loading weights:  66%|██████▌   | 293/443 [00:02<00:01, 130.52it/s]Loading weights:  70%|███████   | 312/443 [00:02<00:00, 138.48it/s]Loading weights:  74%|███████▎  | 326/443 [00:02<00:00, 130.47it/s]Loading weights:  78%|███████▊  | 345/443 [00:02<00:00, 138.58it/s]Loading weights:  81%|████████  | 359/443 [00:03<00:00, 130.80it/s]Loading weights:  85%|████████▌ | 378/443 [00:03<00:00, 139.19it/s]Loading weights:  88%|████████▊ | 392/443 [00:03<00:00, 129.75it/s]Loading weights:  93%|█████████▎| 411/443 [00:03<00:00, 137.71it/s]Loading weights:  96%|█████████▌| 425/443 [00:03<00:00, 130.05it/s]Loading weights: 100%|██████████| 443/443 [00:03<00:00, 121.22it/s]
+lme_official_Qwen3-8B-bf16~vllm+think~relevance.jsonl todo 500
+lme_official_Qwen3-8B-bf16~vllm~date.jsonl todo 500
+lme_official_Qwen3-8B-bf16~vllm~relevance.jsonl todo 500
+lme_official_Qwen3-8B-e181~vllm~pp1.5+think~date.jsonl todo 500
+lme_official_Qwen3-8B-e181~vllm~pp1.5+think~relevance.jsonl todo 500

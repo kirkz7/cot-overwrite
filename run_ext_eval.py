@@ -46,7 +46,7 @@ def contains_any(resp, golds):
 
 def stop_ids(tok):
     vocab = tok.get_vocab()
-    return {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>") if t in vocab}
+    return {tok.eos_token_id} | {vocab[t] for t in ("<|im_end|>", "<|end|>", "<|eot_id|>", "<|endoftext|>", "<end_of_turn>") if t in vocab}   # last: Gemma 3 (cloud)
 
 
 def gen(tok, model, user, max_new=32):
@@ -142,6 +142,12 @@ def run_mab(tok, model, w):
         ctx = mab_context(group[0]["facts"], order, seed=zlib.crc32(src.encode()))   # same shuffle for every model / run
         marker = "\n\nQuestion: "
         full = lambda q: chat_prompt(tok, f"{ctx}{marker}{q}\nAnswer with the answer only.")
+        if getattr(model, "is_vllm", False):   # vLLM: full prompt each time (the server reuses the shared prefix itself)
+            for it in todo:
+                out = greedy(model, torch.tensor([tok(full(it["q"]), add_special_tokens=False).input_ids]), 32, stop_ids(tok))
+                resp = tok.decode(out, skip_special_tokens=True).strip().split("\n")[0]
+                w.write(dict(src=src, order=order, qi=it["qi"], response=resp, correct=contains_any(resp, it["golds"])))
+            continue
         prefix_text = full("X").split(marker)[0] + marker
         p_ids = tok(prefix_text, add_special_tokens=False).input_ids
         with sdpa_kernel(PREFILL, set_priority=True):
@@ -178,7 +184,12 @@ def tot_score(it, resp):
 
 
 def run_simple(tok, model, w, items, key, max_new, score):
+    limit = min(getattr(model.config, "max_position_embeddings", 10 ** 9), model.max_model_len) if getattr(model, "is_vllm", False) else 10 ** 9
     for it in tqdm([x for x in items if key(x) not in w.done]):
+        if len(tok(chat_prompt(tok, it["user"]), add_special_tokens=False).input_ids) + max_new > limit:
+            # vLLM cannot place tokens past the trained length (RoPE table; 4 ToT prompts reach 42k): recorded, not scored
+            w.write(dict(**{k: v for k, v in it.items() if k not in ("user", "facts")}, response="", correct=None, skipped=True))
+            continue
         resp = gen(tok, model, it["user"], max_new)
         w.write(dict(**{k: v for k, v in it.items() if k not in ("user", "facts")}, response=resp[-400:], **score(it, resp)))
 
@@ -196,6 +207,7 @@ def run_tempreason(tok, model, w):
 
 
 def run_cot(tok, model, w):
+    assert not getattr(model, "is_vllm", False), "cot scores candidate log-probs on the HF model: run --benches cot without COT_ENGINE=vllm"
     from probe import Scorer
     from tasks import make_example
     from tasks_cue import CONDS, build_cue_prompt
@@ -227,7 +239,7 @@ def run_gsm8k(tok, model, w, four_bit):
             pred = None
         return dict(pred=pred, correct=pred is not None and abs(pred - it["gold"]) < 1e-6)
     # CUDA-graph decoding only for architectures verified to be capturable (Phi-4-mini's LongRoPE length switch is not)
-    if four_bit or model.config.model_type not in ("qwen3", "qwen2"):
+    if four_bit or getattr(model, "is_vllm", False) or model.config.model_type not in ("qwen3", "qwen2"):
         for it in tqdm(items, desc="gsm8k"):
             text = gen(tok, model, it["user"], 400)
             w.write(dict(i=it["i"], response=text[-300:], **score(it, text)))
@@ -246,6 +258,8 @@ def run_gsm8k(tok, model, w, four_bit):
 
 def summarize(bench, rows):
     df = pd.DataFrame(rows)
+    if "skipped" in df:                                       # vLLM: prompts past the trained length, not scored
+        df = df[df.skipped != True].astype({"correct": bool})
     if df.empty:
         return ""
     by = {"mab": ["src", "order"], "tot": ["qtype", "order"], "tempreason": ["order"], "babilong": ["task"],

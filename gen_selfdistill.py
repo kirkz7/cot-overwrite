@@ -22,7 +22,9 @@ import re
 
 REPO, REV = "allenai/tulu-3-sft-mixture", "b14afda60f1bbebe55d5d2fa1e4df5042f97f8be"
 SHARDS = [f"data/train-0000{i}-of-00006.parquet" for i in range(6)]
-EXCLUDE = re.compile(r"instruction.?following|ifeval|\bif[_-]|gsm|mmlu|\barc\b|hellaswag|longbench|aya", re.I)
+# 10-07 (cloud, user-approved, before any generation): "ifdata" (personahub_ifdata = instruction following) and
+# "math-grade" (tulu-3-sft-personas-math-grade = grade-school math, GSM8K's domain) were not caught; added per the pre-registration text
+EXCLUDE = re.compile(r"instruction.?following|ifeval|\bif[_-]|ifdata|gsm|math-grade|mmlu|\barc\b|hellaswag|longbench|aya", re.I)
 THINK = dict(temperature=0.6, top_p=0.95, top_k=20, max_tokens=3072)
 DIRECT = dict(temperature=0.7, top_p=0.8, top_k=20, max_tokens=1024)
 MODEL = "Qwen/Qwen3-4B"
@@ -62,9 +64,10 @@ def main():
     ap.add_argument("--seed", type=int, default=1818)
     ap.add_argument("--engine", default="vllm", choices=["vllm", "hf"])
     ap.add_argument("--out", default="data_train/selfdistill_train.jsonl")
+    ap.add_argument("--model", default=MODEL, help="whose own replies (cloud 10-07: Qwen/Qwen3-8B for the 8B run)")
     args = ap.parse_args()
     from transformers import AutoTokenizer
-    tok = AutoTokenizer.from_pretrained(MODEL)
+    tok = AutoTokenizer.from_pretrained(args.model)
     items = load_prompts(args.n, args.seed)
     for i, it in enumerate(items):
         it["think"] = i % 2 == 0
@@ -73,7 +76,7 @@ def main():
     outs = []
     if args.engine == "vllm":
         from vllm import LLM, SamplingParams
-        llm = LLM(MODEL, dtype="bfloat16", max_model_len=8192, seed=args.seed)
+        llm = LLM(args.model, dtype="bfloat16", max_model_len=8192, seed=args.seed)
         for mode, kw in ((True, THINK), (False, DIRECT)):
             batch = [it for it in items if it["think"] == mode]
             res = llm.generate([it["text"] for it in batch], SamplingParams(seed=args.seed, **kw))
@@ -83,7 +86,7 @@ def main():
     else:
         import torch
         from transformers import AutoModelForCausalLM
-        model = AutoModelForCausalLM.from_pretrained(MODEL, dtype=torch.bfloat16, device_map="cuda").eval()
+        model = AutoModelForCausalLM.from_pretrained(args.model, dtype=torch.bfloat16, device_map="cuda").eval()
         for it in items:
             kw = THINK if it["think"] else DIRECT
             ids = tok(it["text"], return_tensors="pt", add_special_tokens=False).input_ids.cuda()

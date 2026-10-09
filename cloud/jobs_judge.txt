@@ -1,0 +1,5 @@
+# Judge everything generated so far (Qwen3-14B 4-bit nf4 on HF, as on the desktop); extmem with both parse rules.
+judge_ext      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge
+judge_ext2      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_extmem.py judge --parse v2
+judge_lc      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 explore_longconv.py judge
+judge_mem      CUDA_VISIBLE_DEVICES=1 COT_VLLM_URL=http://127.0.0.1:8001 run_app_memory.py judge

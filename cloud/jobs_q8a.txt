@@ -1,0 +1,11 @@
+# 8B E18.1 (user 10-07 21:40), GPU0: 8B self-distillation -> data -> training (E18.1 hyperparameters) -> merge -> PersonaMem / ConvoMem-long thinking on (vLLM) + judge
+q8_sd      CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 cloud/selfdistill_vllm.py --model Qwen/Qwen3-8B --out data_train/selfdistill8b_train.jsonl
+q8_data    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 gen_bind_data_v4.py --general data_train/selfdistill8b_train.jsonl --prefix data_train/bind4q8_decoupled
+q8_train   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 train_lora.py --model Qwen3-8B-bf16 --out runs/e181-q8 --data data_train/bind4q8_decoupled_train.jsonl --val data_train/bind4q8_decoupled_val.jsonl --dev data_train/bind4q8_decoupled_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0
+q8_merge   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 cloud/merge_lora.py Qwen3-8B-bf16 runs/e181-q8/final runs/e181-q8/merged
+e8_lc_t    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-q8/merged COT_VLLM_TP=1 explore_longconv.py run --think --budget 1024 --models Qwen3-8B-e181
+e8_lc_tj   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 explore_longconv.py judge
+# 10-08 04:15: E18.1-4B on the new clean held-out (vLLM, merged LoRA) + LoCoMo no-harm (thinking on), then judge the ConvoMem sets
+h4_merge    CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 cloud/merge_lora.py Qwen3-4B runs/e181-dec/final /root/cot-overwrite/runs/e181-dec/merged
+h4_e181_t   CUDA_VISIBLE_DEVICES=0 COT_VLLM_URL=http://127.0.0.1:8000 COT_ENGINE=vllm COT_VLLM_MODEL=/root/cot-overwrite/runs/e181-dec/merged COT_VLLM_TP=1 explore_convo_heldout.py run --think --budget 1024 --models Qwen3-4B-e181
+# 10-08 08:35: h4_e181_lt and b8_gen_t moved to jobs_q8b (GPU1); h4_judge dropped (the convoh judge ran early on GPU1). GPU0 runs E18.2 (jobs_diag).

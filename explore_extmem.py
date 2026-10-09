@@ -10,6 +10,7 @@ Sets:
            the update, up to ~20k source tokens; each session headed by its date. Judged by Qwen3-14B (A right direction,
            B reversed / old value as new, C neither).
   mabcr    MemoryAgentBench Conflict_Resolution, factconsolidation_sh_6k: numbered facts, larger number = newer.
+  mabcr32k the same, factconsolidation_sh_32k (~37k tokens; cloud P2, only when asked for with --tasks).
            NOT held-out: already a pre-registered LoRA test set and used in E7; the LoRA data has its format.
            Primary subset: the questions whose answer fact has exactly one older conflicting fact. String-matched.
            (sh_32k is 37.5k tokens: does not fit 16 GB; later.)
@@ -31,18 +32,19 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
+from paths import data, hub
 from app_common import tag, out_tag, strip_think, JsonlAppender, chat_prompt, free_gpu, load_jsonl, load_reader, answer_text
 import run_app_memory as mem
 from explore_probe import LONG_SDPA, sdpa_kernel
 from run_app_fix import generate, generate_think
 
 OUT = "results/extmem_{}.jsonl"
-MC_PATH = r"D:\datasets\memconflict\Step4_4.jsonl"
-LOCOMO_PATH = r"D:\datasets\locomo\locomo10.json"
-MAB_GLOB = r"D:\hf_cache\hub\datasets--ai-hyz--MemoryAgentBench\snapshots\*\data\Conflict_Resolution-*.parquet"
+MC_PATH = data("memconflict", "Step4_4.jsonl")
+LOCOMO_PATH = data("locomo", "locomo10.json")
+MAB_GLOB = hub("datasets--ai-hyz--MemoryAgentBench", "snapshots", "*", "data", "Conflict_Resolution-*.parquet")
 CONDS = ("chrono", "rev", "retr")
 JUDGED = {"v1": "_judged.jsonl", "v2": "_judged2.jsonl"}   # parse rule v1: first line after "Answer:"; v2: app_common.answer_text
-BUDGET = {"memconf": 64, "memconf_rs": 64, "mabcr": 24, "locomo": 32}
+BUDGET = {"memconf": 64, "memconf_rs": 64, "mabcr": 24, "mabcr32k": 24, "locomo": 32}
 
 
 def words(s):
@@ -155,7 +157,7 @@ def norm(s):
     return " ".join(words(s))
 
 
-def mabcr(source="factconsolidation_sh_6k"):
+def mabcr(source="factconsolidation_sh_6k", task="mabcr"):
     df = pd.read_parquet(glob.glob(MAB_GLOB)[0])
     r = df[df.metadata.apply(lambda m: m["source"]) == source].iloc[0]
     facts = [(int(n), f) for n, f in (re.match(r"(\d+)\. (.*)", l).groups() for l in r.context.split("\n") if re.match(r"\d+\. ", l))]
@@ -176,7 +178,7 @@ def mabcr(source="factconsolidation_sh_6k"):
             user = ("Here is a list of facts. Each fact starts with a serial number; a fact with a larger serial number is "
                     "newer and replaces any older fact it conflicts with.\n\n" + "\n".join(docs[i] for i in idx) +
                     f"\n\nAnswer the question using the newest facts. Reply with the answer entity only.\nQuestion: {q}")
-            out.append(dict(task="mabcr", id=f"{source}-{k}", cond=cond, user=user, q=q, gold=gold, old=old, conflict=conflict))
+            out.append(dict(task=task, id=f"{source}-{k}", cond=cond, user=user, q=q, gold=gold, old=old, conflict=conflict))
     return out
 
 
@@ -205,8 +207,10 @@ def locomo():
 
 
 def items(tasks=""):
-    """default: the three frozen sets; memconf_rs (restated-old-value control) only when asked for explicitly"""
+    """default: the three frozen sets; memconf_rs (restated-old-value control) and mabcr32k only when asked for explicitly"""
     out = mabcr() + memconf() + locomo()
+    if "mabcr32k" in tasks.split(","):
+        out += mabcr("factconsolidation_sh_32k", task="mabcr32k")
     if "memconf_rs" in tasks.split(","):
         out += memconf(restated=True, task="memconf_rs")
     return out
@@ -236,7 +240,7 @@ def run(args):
             resp = vis.rsplit("Answer:", 1)[1].strip().split("\n")[0] if "Answer:" in vis else vis.strip().split("\n")[0]
             rec = {k: v for k, v in x.items() if k != "user"}
             rec.update(n_tok=n, response=resp, full=text)
-            if x["task"] == "mabcr":
+            if x["task"] in ("mabcr", "mabcr32k"):
                 hit = any(norm(g) in norm(resp) for g in x["gold"])
                 rec.update(correct=hit, stale=bool(x["old"]) and not hit and norm(x["old"]) in norm(resp))
             w.write(rec)
@@ -306,7 +310,7 @@ def stats(args):
         name = os.path.basename(path)[len("extmem_"):-len(".jsonl")]
         raw = pd.DataFrame(load_jsonl(path))
         jp = path.replace(".jsonl", JUDGED[args.parse])
-        if os.path.exists(jp):
+        if os.path.exists(jp) and os.path.getsize(jp):   # empty when only string-scored tasks were judged
             j = pd.DataFrame(load_jsonl(jp)).set_index(["task", "id", "cond"])
             raw = raw.set_index(["task", "id", "cond"])
             for col in ("correct", "stale"):
@@ -316,7 +320,7 @@ def stats(args):
         print("=" * 10, name)
         for task, g in raw.groupby("task"):
             subsets = {"all": g}
-            if task == "mabcr":
+            if task in ("mabcr", "mabcr32k"):
                 subsets = {"conflict (primary)": g[g.conflict == True], "no conflict": g[g.conflict == False]}
             for sname, h in subsets.items():
                 h = h[h.correct.notna()]
@@ -353,7 +357,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["run", "judge", "stats", "check"])
     ap.add_argument("--models", default="Qwen3-4B,Phi-4-mini")
-    ap.add_argument("--tasks", default="", help="comma list of memconf,mabcr,locomo (default: all)")
+    ap.add_argument("--tasks", default="", help="comma list of memconf,mabcr,locomo (default: all three); also memconf_rs, mabcr32k")
     ap.add_argument("--think", action="store_true", help="Qwen3 thinking mode (E18); results go to <tag>+think")
     ap.add_argument("--parse", choices=["v1", "v2"], default="v1", help="judge / stats: answer parse rule (v2 from E17 on)")
     ap.add_argument("--budget", type=int, default=None, help="new tokens; default per task (64/24/32); E13 readers: 320")

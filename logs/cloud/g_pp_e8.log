@@ -1,0 +1,16 @@
+[22:35:57] vllm :8001 down
+[22:35:57] vllm :8001 up /root/cot-overwrite/runs/e181-q8/merged tp=1 gpus=1
+[22:36:52] vllm :8001 ready
+Using the latest cached version of the dataset since google/IFEval couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /data/hf_cache/datasets/google___if_eval/default/0.0.0/966cd89545d6b6acfd7638bc708b98261ca58e84 (last modified on Wed Oct  7 00:07:42 2026).
+Qwen3-8B-e181 todo 1582
+0 / 1582
+200 / 1582
+400 / 1582
+600 / 1582
+800 / 1582
+1000 / 1582
+1200 / 1582
+1400 / 1582
+Qwen3-8B-e181 pp=0.0: IFEval prompt-strict 84.3 loose 87.8 inst-strict 88.7 unfinished 2.4% | GSM8K 92.0 unfinished 6.0%
+Qwen3-8B-e181 pp=1.5: IFEval prompt-strict 87.2 loose 90.2 inst-strict 91.2 unfinished 0.7% | GSM8K 94.4 unfinished 4.0%
