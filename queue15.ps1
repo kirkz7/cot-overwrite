@@ -121,7 +121,6 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('gen_base_lb', 'explore_general.py run --models Qwen3-4B'))   # finish the desktop base (LongBench) = same-machine baseline
 [void]$jobs.Add(@('e181_gen', 'explore_general.py run --models Qwen3-4B@runs/e181-dec/final'))
 [void]$jobs.Add(@('e181_gsm8k', 'run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k'))
-[void]$jobs.Add(@('e181_gen_think', 'explore_general_think.py run --models Qwen3-4B@runs/e181-dec/final'))
 [void]$jobs.Add(@('e181_s1_lc',     'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s1/final'))
 [void]$jobs.Add(@('e181_s1_mc',     'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s1/final'))
 [void]$jobs.Add(@('e181_s2_lc',     'explore_longconv.py run --think --budget 1024 --models Qwen3-4B@runs/e181-dec-s2/final'))
@@ -144,6 +143,8 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('base_mc_think', 'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B'))
 [void]$jobs.Add(@('base_think_judge1', 'explore_longconv.py judge'))
 [void]$jobs.Add(@('base_think_judge2', 'explore_extmem.py judge --parse v2'))
+# 10-08 (cloud rental over): E18.1 thinking-on no-harm (not in the E18.1 pre-registration; ~12 min/item on 16 GB) moved last
+[void]$jobs.Add(@('e181_gen_think', 'explore_general_think.py run --models Qwen3-4B@runs/e181-dec/final'))
 # E18 design diagnostic (10-05 22:30): is writing the dated list needed? E13b (answer-only) vs E13 (list); E17 on the same sets
 [void]$jobs.Add(@('diag_e13b_lc',  'explore_longconv.py run --budget 320 --tasks convo_long --models Qwen3-4B@runs/e13b-dec/final'))
 [void]$jobs.Add(@('diag_reason',   'explore_reason_eval.py run --models Qwen3-4B@runs/e13b-dec/final,Qwen3-4B@runs/e17-dec/final'))
