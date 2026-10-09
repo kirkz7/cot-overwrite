@@ -128,6 +128,10 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('dlme_e181_date', 'explore_lme_official.py run --think --order date --qtypes knowledge-update --models Qwen3-4B@runs/e181-dec/final'))
 [void]$jobs.Add(@('dlme_base_rel', 'explore_lme_official.py run --think --order relevance --qtypes knowledge-update --models Qwen3-4B'))
 [void]$jobs.Add(@('dlme_judge', 'explore_lme_official.py judge'))
+# 10-09 09:45 test: does the list procedure help when it is triggered? E18 (no self-distillation) on the same KU items
+[void]$jobs.Add(@('dlme_e18_rel', 'explore_lme_official.py run --think --order relevance --qtypes knowledge-update --models Qwen3-4B@runs/e18-dec/final'))
+[void]$jobs.Add(@('dlme_e18_date', 'explore_lme_official.py run --think --order date --qtypes knowledge-update --models Qwen3-4B@runs/e18-dec/final'))
+[void]$jobs.Add(@('dlme_judge2', 'explore_lme_official.py judge'))
 [void]$jobs.Add(@('base_lc_think', 'explore_longconv.py run --think --budget 1024 --models Qwen3-4B'))
 [void]$jobs.Add(@('base_mc_think', 'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B'))
 [void]$jobs.Add(@('base_think_judge1', 'explore_longconv.py judge'))
