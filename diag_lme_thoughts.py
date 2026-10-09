@@ -14,7 +14,9 @@ from explore_lme_official import load_s
 
 FILES = {"E18.1 relevance": "results/lme_official_Qwen3-4B+e181-dec+think~relevance_judged.jsonl",
          "E18.1 date": "results/lme_official_Qwen3-4B+e181-dec+think~date_judged.jsonl",
-         "base relevance": "results/lme_official_Qwen3-4B+think~relevance_judged.jsonl"}
+         "base relevance": "results/lme_official_Qwen3-4B+think~relevance_judged.jsonl",
+         "E18 relevance": "results/lme_official_Qwen3-4B+e18-dec+think~relevance_judged.jsonl",   # 10-09 test
+         "E18 date": "results/lme_official_Qwen3-4B+e18-dec+think~date_judged.jsonl"}
 DATE = re.compile(r"(\d{4})[/-](\d{1,2})[/-](\d{1,2})")
 
 
@@ -28,6 +30,9 @@ def main():
     data = {e["question_id"]: e for e in load_s() if e["question_type"] == "knowledge-update"}
     ranks = pd.DataFrame(load_jsonl("results/diag_lme_rag_ranks.jsonl")).set_index("question_id")
     for name, path in FILES.items():
+        if not load_jsonl(path):
+            print(name, "- no results yet")
+            continue
         d = pd.DataFrame(load_jsonl(path)).set_index("question_id").join(ranks[["newest_pos"]], how="inner")
         rows = []
         for qid, r in d.iterrows():
