@@ -31,7 +31,7 @@ import zlib
 import numpy as np
 import pandas as pd
 
-LME = "/data/lme_official"
+LME = os.environ.get("COT_LME_OFFICIAL", r"D:\lme_official" if os.name == "nt" else "/data/lme_official")   # desktop clone 10-08, same commit
 S_FILE = None   # resolved in main (paths.hub)
 OUT = "results/lme_official_{}.jsonl"
 TOPK, GEN, MAXLEN = 5, 800, 32768   # top-5: no history is truncated (top-10 truncated 22%, see the notebook)
@@ -90,7 +90,42 @@ def load_s():
                               "longmemeval_s_cleaned.json"), encoding="utf-8"))
 
 
+def run_hf(args):
+    """desktop (no vLLM), 10-08 diagnosis (diag_lme_rag.py): same prompt building, HF generation, the full text kept.
+    Thinking: Qwen3 recommended sampling seeded per question (run_app_fix.generate_think); off: greedy."""
+    import torch
+    from app_common import JsonlAppender, load_reader, out_tag
+    from explore_probe import LONG_SDPA, sdpa_kernel
+    from run_app_fix import generate, generate_think
+    data = [e for e in load_s() if not args.qtypes or e["question_type"] in args.qtypes.split(",")]
+    for name in args.models.split(","):
+        w = JsonlAppender(OUT.format(out_tag(name, args.think) + f"~{args.order}"), key=lambda r: r["question_id"])
+        todo = [e for e in data if e["question_id"] not in w.done]
+        print(name, args.order, "think" if args.think else "", "todo", len(todo), flush=True)
+        if not todo:
+            w.close()
+            continue
+        tok, model = load_reader(name)
+        budget = 1024 + GEN if args.think else GEN
+        for e in todo:
+            p, rec, trunc = build(e, tok, args.order, GEN)
+            chat = tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False, add_generation_prompt=True,
+                                           enable_thinking=args.think)
+            with sdpa_kernel(LONG_SDPA, set_priority=True), torch.no_grad():
+                text = (generate_think(tok, model, chat, budget, ("lme-official", e["question_id"])) if args.think
+                        else generate(tok, model, chat, budget))
+            fin = ("</think>" in text) if args.think else True
+            hyp = (text.split("</think>", 1)[1] if fin else "").strip() if args.think else text.strip()
+            w.write(dict(question_id=e["question_id"], question_type=e["question_type"], n_tok=len(tok(chat).input_ids),
+                         truncated=trunc, finished=fin, hypothesis=hyp, full=text, **rec))
+            torch.cuda.empty_cache()
+        w.close()
+        del tok, model
+
+
 def run(args):
+    if os.environ.get("COT_ENGINE") != "vllm":
+        return run_hf(args)
     from concurrent.futures import ThreadPoolExecutor, as_completed
     from transformers import AutoTokenizer
     from app_common import JsonlAppender, MODELS, out_tag
@@ -140,8 +175,8 @@ def judge(args):
     import torch
     from app_common import JsonlAppender, chat_prompt, load_jsonl, load_reader
     from probe import greedy
-    ref = {e["question_id"]: e for e in json.load(open(glob.glob(
-        "/data/hf_cache/hub/datasets--xiaowu0162--longmemeval-cleaned/snapshots/98d7416c24c778c2fee6e6f3006e7a073259d48f/longmemeval_oracle.json")[0], encoding="utf-8"))}
+    from paths import LONGMEMEVAL   # desktop D:\hf_cache, cloud /data/hf_cache (same file)
+    ref = {e["question_id"]: e for e in json.load(open(LONGMEMEVAL, encoding="utf-8"))}
     tok = model = None
     for path in sorted(glob.glob(OUT.format("*"))):
         if path.endswith("_judged.jsonl"):
@@ -186,6 +221,7 @@ def main():
     ap.add_argument("--think", action="store_true")
     ap.add_argument("--order", default="date", choices=["date", "relevance"])
     ap.add_argument("--pairs", default="")
+    ap.add_argument("--qtypes", default="", help="desktop run only: comma list of question types (default all)")
     args = ap.parse_args()
     if args.stage == "check":   # counts only, no text
         from transformers import AutoTokenizer

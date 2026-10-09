@@ -123,6 +123,11 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('gen_base_lb', 'explore_general.py run --models Qwen3-4B'))   # finish the desktop base (LongBench) = same-machine baseline
 [void]$jobs.Add(@('e181_gen', 'explore_general.py run --models Qwen3-4B@runs/e181-dec/final'))
 [void]$jobs.Add(@('e181_gsm8k', 'run_ext_eval.py run --models Qwen3-4B@runs/e181-dec/final --benches gsm8k'))
+# 10-08 21:00 diagnosis: why E18.1 does not fix LongMemEval official RAG (relevance order); full thoughts kept
+[void]$jobs.Add(@('dlme_e181_rel', 'explore_lme_official.py run --think --order relevance --qtypes knowledge-update --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('dlme_e181_date', 'explore_lme_official.py run --think --order date --qtypes knowledge-update --models Qwen3-4B@runs/e181-dec/final'))
+[void]$jobs.Add(@('dlme_base_rel', 'explore_lme_official.py run --think --order relevance --qtypes knowledge-update --models Qwen3-4B'))
+[void]$jobs.Add(@('dlme_judge', 'explore_lme_official.py judge'))
 [void]$jobs.Add(@('base_lc_think', 'explore_longconv.py run --think --budget 1024 --models Qwen3-4B'))
 [void]$jobs.Add(@('base_mc_think', 'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B'))
 [void]$jobs.Add(@('base_think_judge1', 'explore_longconv.py judge'))
