@@ -233,6 +233,8 @@ def main():
             state["tokens"] += len(p) + len(a)
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step(); sched.step(); opt.zero_grad(set_to_none=True)
+        if not BWD_IN_CTX:   # 16 GB desktop (10-09): one long sample pushed the cache past VRAM into shared memory and the run
+            torch.cuda.empty_cache()   # stayed ~10x slower; releasing the cache each step lets it come back. Maths unchanged.
         state["seen"] += len(batch); state["step"] += 1
         if state["step"] % 10 == 0 or state["seen"] >= n_samples:
             el = time.time() - t0
