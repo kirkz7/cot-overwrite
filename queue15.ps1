@@ -170,7 +170,7 @@ $B = '--data data_train/bind_{0}_train.jsonl --val data_train/bind_{0}_val.jsonl
 [void]$jobs.Add(@('e191_gsm8k', 'run_ext_eval.py run --models Qwen3-4B@runs/e191-dec/final --benches gsm8k'))
 # 10-12 (user: "尝试 E19.2"): reason / absent thoughts = the base model's own thoughts; gates in EXPLORE_PLAN E19.2
 [void]$jobs.Add(@('e192_distill', 'gen_reason_distill.py run'))
-[void]$jobs.Add(@('e192_assemble', 'gen_reason_distill.py assemble'))
+[void]$jobs.Add(@('e192_assemble2', 'gen_reason_distill.py assemble'))
 [void]$jobs.Add(@('e192_train', 'train_lora.py --model Qwen3-4B --out runs/e192-dec --data data_train/bind7_train.jsonl --val data_train/bind7_val.jsonl --dev data_train/bind7_dev.jsonl --rank 16 --alpha 32 --lr 1e-4 --epochs 1 --accum 8 --max_len 8192 --eval_every 300 --save_every 50 --val_n 60 --dev_n 60 --seed 0'))
 [void]$jobs.Add(@('e192_mc_think', 'explore_extmem.py run --tasks memconf --think --budget 1024 --models Qwen3-4B@runs/e192-dec/final'))
 [void]$jobs.Add(@('e192_judge3', 'explore_extmem.py judge --parse v2'))

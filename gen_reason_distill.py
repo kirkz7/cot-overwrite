@@ -55,6 +55,7 @@ def correct(row, visible):
 def run():
     import torch
     from app_common import load_reader
+    from explore_probe import LONG_SDPA, sdpa_kernel      # memory-safe attention for long prompts (NOTEBOOK 10)
     from run_app_fix import generate_think
     rows = targets()
     w = JsonlAppender(RAW, key=lambda r: (r["id"], r["attempt"]))
@@ -68,7 +69,8 @@ def run():
             if (row["id"], a) in w.done:
                 continue
             p = chat_prompt(tok, row["prompt"], think=True)
-            text = generate_think(tok, model, p, MAX_NEW, f"{row['id']}#{a}")
+            with sdpa_kernel(LONG_SDPA, set_priority=True):   # 10-12: missing at first -> spilled into shared memory
+                text = generate_think(tok, model, p, MAX_NEW, f"{row['id']}#{a}")
             full = text if text.startswith("<think>") else "<think>\n" + text
             fin = "</think>" in full
             vis = strip_think(full) if fin else ""
@@ -89,12 +91,17 @@ def assemble():
         if r["ok"] and r["id"] not in first:
             first[r["id"]] = r
     want = {r["id"] for r in targets()}
+    # 10-12: refuse to assemble from an unfinished run (a crashed `run` once let the queue go on to training)
+    tried = collections.Counter(r["id"] for r in raw)
+    todo = [i for i in want if i not in first and tried[i] < ATTEMPTS]
+    assert not todo, f"distillation not finished: {len(todo)} of {len(want)} items still to try"
     stat = collections.Counter()
     for split in ("train", "val", "dev"):
         rows = load_jsonl(f"data_train/bind6_{split}.jsonl")
         if split == "train":
             for r in rows:
-                if r["id"] in want:
+                # ids repeat across the E12 rows and the bind rows: match the kind as well (10-12 fix)
+                if r["id"] in want and r["kind"] in KINDS and r["think"]:
                     if r["id"] in first:
                         r["answer"] = f"<think>\n{first[r['id']]['thought']}\n</think>\n\n{r['final']}"
                         stat[(r["kind"], "base thought")] += 1
