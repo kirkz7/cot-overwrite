@@ -94,7 +94,7 @@ for n, line in enumerate(blank_math_envs(body).split("\n"), 1):
             break
 
 # 7. ampersands outside tabular-like environments
-envs = re.split(r"(\\begin\{(?:tabular|align\*?|array|matrix)\}|\\end\{(?:tabular|align\*?|array|matrix)\})", body[preamble_end:])
+envs = re.split(r"(\\begin\{(?:tabular|longtable|align\*?|array|matrix)\}|\\end\{(?:tabular|longtable|align\*?|array|matrix)\})", body[preamble_end:])
 inside = False
 for chunk in envs:
     if chunk.startswith("\\begin{"):

@@ -5,7 +5,8 @@ copied from RESULTS.md / STAGE_REPORT_EN.md / CLOUD_NOTEBOOK.md (the section is 
 scale figure and the fix figure can be rebuilt on any machine. No conversation text is read or printed except our own
 synthetic data.
 usage: .venv\\Scripts\\python.exe paper/make_figures.py            (all figures; fig3 needs the desktop results)
-       python paper/make_figures.py fig_scale fig_fix              (only the named figures)
+       python paper/make_figures.py fig_scale fig_think fig_proc   (only the named figures)
+(10-13: fig_fix / fig5_fix removed with the analysis rewrite; its answer-only panel is Appendix D's table.)
 """
 import json
 import os
@@ -316,62 +317,94 @@ def fig_mech():
 
 
 # ------------------------------------------------------------------ Figure 5: fixes
-def fig_fix():
-    fig, (a, b) = plt.subplots(1, 2, figsize=(6.5, 2.5), gridspec_kw={"width_ratios": [1.42, 1.08]})
-    # (a) selection stage: answer-only LoRA, pre-registered, Qwen3-4B seed 0 (RESULTS.md "LoRA 修复"; E2 row from E2 table)
-    groups = [("logs\nnewest-first", [70.3, 89.3, 100.0]),
-              ("CoT rev.\n+ steps", [6.0, 2.0, 74.7]),
-              ("CoT shuf.\n+ steps", [34.7, 27.3, 45.7]),
-              ("list\nnew→old", [57.1, 51.4, 77.1]),
-              ("LongMem-\nEval rev.", [51.3, 44.9, 48.7]),
-              ("Temp-\nReason rev.", [70.3, 78.3, 71.3])]
-    w = 0.27
-    for gi, (g, v) in enumerate(groups):
-        for ci, (val, col, lab) in enumerate(zip(v, [GRAY, ORANGE, BLUE], ["base", "chronological-only LoRA", "decoupled LoRA"])):
-            a.bar(gi + (ci - 1) * w, val, w * 0.9, color=col, label=lab if gi == 0 else None)
-        a.text(gi, max(v) + 3, fmt_delta(v[2] - v[1]), ha="center", fontsize=6.8, color=INK)
-    a.set_xticks(range(len(groups)), [g for g, _ in groups]); a.tick_params(axis="x", labelsize=5.8)
-    a.set_ylim(0, 140); a.set_yticks(range(0, 101, 20)); a.set_ylabel("% correct")
-    a.set_title("(a) Selection: decoupled training (answer only)", loc="left")
-    a.legend(loc="upper center", fontsize=6.6, ncol=3, borderaxespad=0.2, handlelength=1.2, columnspacing=0.8)
-    # (b) dated list inside thinking (E18, E18.1), thinking on; base without thinking (desktop HF). E18: RESULTS.md
-    # "E18 · 清单放进思考模式：全部测试汇总"; E18.1 (cloud HF, seed 0): CLOUD_NOTEBOOK.md "P7 · E18.1 测试结果"
-    groups = [("newest first", [77.4, 96.8, 96.8]),
-              ("newest first", [36.2, 71.7, 77.5]),
-              ("retrieval", [56.2, 70.0, 77.9]),
-              ("newest first", [73.9, 56.7, 71.0])]
-    for xc, ds in ((0, "ConvoMem-long"), (1.5, "MemConflict"), (3, "PersonaMem")):
-        b.text(xc, -0.13, ds, transform=b.get_xaxis_transform(), ha="center", va="top", fontsize=6.4, color=INK)
-    for gi, (g, v) in enumerate(groups):
-        for ci, (val, col, lab) in enumerate(zip(v, [GRAY, AQUA, BLUE], ["base", "E18 (first version)", "E18.1 (final)"])):
-            b.bar(gi + (ci - 1) * w, val, w * 0.9, color=col, label=lab if gi == 0 else None)
-        b.text(gi, max(v) + 3, fmt_delta(v[2] - v[0]), ha="center", fontsize=6.8, color=INK)
-    b.legend(loc="upper center", fontsize=6.6, ncol=3, borderaxespad=0.2, handlelength=1.2, columnspacing=0.8)
-    b.set_xticks(range(len(groups)), [g for g, _ in groups]); b.tick_params(axis="x", labelsize=5.8)
-    b.set_ylim(0, 140); b.set_yticks(range(0, 101, 20))
-    b.set_title("(b) Dated list in thinking (held-out sets)", loc="left")
-    fig.tight_layout(w_pad=1.2)
-    save(fig, "fig5_fix")
+# ------------------------------------------------------------------ analysis paper (10-13): thinking mode, trained procedure
+# Order effect (pp) with Qwen3's thinking mode off and on. (a) ConvoMem-fresh, newest first minus chronological
+# (CLOUD_NOTEBOOK "新的干净留出集", vLLM); (b) MemConflict, newest first minus chronological (4B: desktop HF, NOTEBOOK 4i
+# and the 10-04 run, no interval for thinking on because the item-level file is not in git; 8B-32B: results/cloud,
+# diag_think_scale.py); (c) LongMemEval official retrieval + reading, knowledge-update questions, relevance order minus
+# date order (results/cloud; LongMemEval is seen). Values are (mean, (lo, hi)) or (mean, None).
+THINK = {
+    "a": [("4B\n2 upd.", (-20.7, (-25.7, -15.7)), (-6.7, (-10.0, -3.3))),
+          ("4B\n3-6 upd.", (-22.2, (-25.8, -18.7)), (-7.7, (-10.2, -5.3))),
+          ("8B\n2 upd.", (-15.7, (-20.3, -11.3)), (-2.7, (-4.7, -0.7))),
+          ("8B\n3-6 upd.", (-10.5, (-13.2, -7.8)), (-2.2, (-3.7, -0.8)))],
+    "b": [("4B*", (-39.2, (-46.2, -31.7)), (-31.7, None)),
+          ("8B", (-37.1, (-43.8, -30.4)), (-16.7, (-22.5, -10.8))),
+          ("14B", (-35.8, (-42.5, -29.2)), (-16.7, (-22.9, -10.4))),
+          ("32B", (-21.2, (-27.9, -14.6)), (-10.4, (-16.2, -4.6)))],
+    "c": [("4B", (-1.3, (-15.4, 11.5)), (-16.7, (-29.5, -3.8))),
+          ("8B", (-14.1, (-26.9, -1.3)), (-14.1, (-24.4, -5.1)))],
+}
 
 
-def reason_acc(tag):
-    rows = [r for r in jl(f"results/explore_reason_{tag}_judged.jsonl") if r["task"] == "lme" and r["cond"] == "S_rev_dated"]
-    return 100 * np.mean([r["correct"] for r in rows]) if rows else np.nan
+def fig_think():
+    fig, axes = plt.subplots(1, 3, figsize=(6.5, 2.75), sharey=True, gridspec_kw={"width_ratios": [4, 4, 2.3]})
+    titles = ["(a) Short conversations\nConvoMem-fresh (held out)", "(b) Long sessions\nMemConflict (held out)",
+              "(c) RAG pipeline\nLongMemEval official (seen)"]
+    w = 0.36
+    for ax, key, title in zip(axes, "abc", titles):
+        rows = THINK[key]
+        ax.axhline(0, color=INK2, lw=0.8)
+        ax.axhline(-10, color=GRAY, lw=0.8, ls=":")
+        for i, (_, off, on) in enumerate(rows):
+            for j, ((y, ci), col) in enumerate(((off, BLUE), (on, ORANGE))):
+                x = i + (j - 0.5) * (w + 0.05)
+                ax.bar(x, y, w, color=col, label=(("thinking off", "thinking on")[j] if i == 0 else None))
+                if ci:
+                    ax.errorbar(x, y, yerr=[[y - ci[0]], [ci[1] - y]], color=INK2, lw=0.8, capsize=0)
+            x_on, y_on, ci_on = i + 0.5 * (w + 0.05), on[0], on[1]
+            low = ci_on[0] if ci_on else y_on
+            ax.text(x_on, low - 1.5, f"{y_on:+.1f}".replace("-", "−"), ha="center", va="top", fontsize=6.2, color=INK)
+        ax.set_xticks(range(len(rows)), [r[0] for r in rows])
+        ax.tick_params(axis="x", labelsize=6.6)
+        ax.set_xlim(-0.6, len(rows) - 0.4)
+        ax.set_title(title, loc="left", fontsize=7.6)
+    axes[0].set_ylim(-52, 14)
+    axes[0].set_ylabel("order effect (pp)")
+    h, l = axes[0].get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=2, bbox_to_anchor=(0.5, -0.01), fontsize=7)
+    fig.tight_layout(rect=(0, 0.06, 1, 1), w_pad=0.8)
+    save(fig, "fig_think")
 
 
-def numbers():
-    """print the computed numbers (and paired CIs) used in the text"""
-    q4, lq4, lphi = extmem("Qwen3-4B"), longconv("Qwen3-4B"), longconv("Phi-4-mini")
-    for name, d, task in (("MemConflict 4B", q4, "memconf"), ("LoCoMo 4B", q4, "locomo"), ("MAB-CR 4B", q4, "mabcr"),
-                          ("ConvoMem-long 4B", lq4, "convo_long"), ("ConvoMem-long Phi", lphi, "convo_long"),
-                          ("PersonaMem 4B", lq4, "personamem"), ("PersonaMem Phi", lphi, "personamem"),
-                          ("MemConflict Phi", extmem("Phi-4-mini"), "memconf")):
-        line = f"{name:20s} " + " ".join(f"{c} {acc(d, task, c):5.1f}" for c in ("chrono", "rev", "retr"))
-        for c in ("rev", "retr"):
-            m, lo, hi, n = paired(d, task, c, "chrono")
-            if n:
-                line += f" | {c}-chrono {m:+.1f} [{lo:+.1f}, {hi:+.1f}] n={n}"
-        print(line)
+# Trained procedure (Qwen3-4B, thinking on; NOTEBOOK 4b, 4g-4i, CLOUD_NOTEBOOK "P7"). Base = horizontal line: MemConflict and
+# LongMemEval base with thinking on (desktop HF), PersonaMem base without thinking (HF; the thinking-on base run is not
+# complete) with the pre-registered 5-point limit dashed. E18.1 MemConflict: seed 0 (cloud HF) and seed 1 (desktop HF).
+PROC_VERSIONS = ["E18", "E18.1", "E19", "E19.1", "E19.2"]
+PROC = {
+    "MemConflict, newest first\n(held out; informed design)": ([71.7, 77.5, 70.4, 77.9, 74.2], {"E18.1": 62.1}, 50.0, None),
+    "LongMemEval RAG, newest evidence\nranked first, 37 items (seen)": ([73.0, 45.9, 67.6, 73.0, None], {}, 43.2, None),
+    "PersonaMem, newest first\n(held out; informed design)": ([56.7, 71.0, 71.0, 65.5, None], {}, 73.9, 68.9),
+}
+
+
+def fig_proc():
+    fig, axes = plt.subplots(1, 3, figsize=(6.5, 2.35), sharey=True)
+    x = np.arange(len(PROC_VERSIONS))
+    for ax, (title, (vals, second, base, limit)) in zip(axes, PROC.items()):
+        ax.axhline(base, color=GRAY, lw=1.0)
+        ax.text(-0.42, base + 1.0, "base", fontsize=6, color=INK2, ha="left", va="bottom")
+        if limit is not None:
+            ax.axhline(limit, color=GRAY, lw=0.8, ls="--")
+            ax.text(-0.42, limit - 1.0, "base − 5", fontsize=6, color=INK2, ha="left", va="top")
+        for xi, v in zip(x, vals):
+            if v is None:
+                ax.text(xi, 31, "n/a", ha="center", fontsize=6, color=INK2)
+                continue
+            ax.plot(xi, v, "o", ms=6, color=BLUE, mec="white", mew=0.8, zorder=3)
+            ax.text(xi + 0.16, v, f"{v:.1f}", fontsize=6, color=INK, va="center")
+        for name, v in second.items():
+            xi = PROC_VERSIONS.index(name)
+            ax.plot(xi, v, "o", ms=6, mfc="white", mec=BLUE, mew=1.2, zorder=3)
+            ax.text(xi + 0.16, v, f"{v:.1f} (seed 1)", fontsize=5.6, color=INK, va="center")
+        ax.set_xticks(x, PROC_VERSIONS)
+        ax.tick_params(axis="x", labelsize=6.8)
+        ax.set_xlim(-0.5, len(x) - 0.3)
+        ax.set_title(title, loc="left", fontsize=7.2)
+    axes[0].set_ylim(28, 90)
+    axes[0].set_ylabel("% correct (thinking on)")
+    fig.tight_layout(w_pad=0.8)
+    save(fig, "fig_proc")
 
 
 if __name__ == "__main__":
@@ -379,4 +412,4 @@ if __name__ == "__main__":
         for name in sys.argv[1:]:
             globals()[name]()
     else:
-        fig_concept(); fig_cot(); fig_apps(); fig_scale(); fig_mech(); fig_fix(); numbers()
+        fig_concept(); fig_cot(); fig_apps(); fig_scale(); fig_think(); fig_mech(); fig_proc(); numbers()

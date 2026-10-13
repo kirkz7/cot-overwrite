@@ -61,6 +61,10 @@ KEYS = {
     "zhou2023ifeval": "2311.07911",          # IFEval
     "bai2024longbench": "2308.14508",        # LongBench
     "beam2025": "2510.27246",                # BEAM (checked, not usable: updates within one session)
+    # added 10-13 (analysis paper; metadata checked on alphaXiv, the arXiv API is blocked from the cloud session)
+    "yang2026contextconflict": "2609.03148", # ContextConflict: bias toward earlier evidence in contextual conflicts
+    "fang2025recency": "2509.11353",         # LLM rerankers promote passages with injected recent dates
+    "haddadpajouh2026mutable": "2609.16073", # append-only RAG memory: stale chunks dominate retrieval
 }
 
 NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
