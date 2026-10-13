@@ -11,6 +11,8 @@ logs, markdown headings. The LongMemEval JSON history format is NOT used (kept a
 Questions: current value / first value / most recent change -> the thought lists the dated records (E18 target);
 reason for a change / attribute never mentioned -> short thought without a list. Thinking on / off 1/2 each.
 usage: python gen_chat_data.py   -> data_train/chat_{train,val,dev}.jsonl
+E19.1 (10-10): --list_first -> data_train/chat_lf_*: identical samples, but the reason / absent thoughts also start
+with the dated record list (E19's one-line thoughts taught a "decide without reading" shortcut, NOTEBOOK 4i).
 """
 import collections
 import datetime as dt
@@ -61,7 +63,7 @@ def render(fmt, sessions, order):
     return "\n\n".join(out)
 
 
-def make(rng, wiki, split):
+def make(rng, wiki, split, list_first=False):
     sp = "dev" if split == "dev" else "train"
     keys = rng.sample(sorted(g.ATTRS), 4)
     target, others = keys[0], keys[1:]
@@ -118,10 +120,11 @@ def make(rng, wiki, split):
     if kind == "absent":
         a_q = g.ATTRS[rng.choice(sorted(set(g.ATTRS) - set(keys)))][0]
         q = QS[sp]["absent"].format(a=a_q)
-        thought, final = f"No record mentions {a_q}.", ("Not mentioned" if "value only" in instr else f"Our chats do not mention {a_q}.")
+        thought = (f"Records about {a_q}, from oldest to newest:\n- none\n" if list_first else "") + f"No record mentions {a_q}."
+        final = ("Not mentioned" if "value only" in instr else f"Our chats do not mention {a_q}.")
     elif kind == "reason":
         q = QS[sp]["reason"].format(a=a, v=vals[k_reason])
-        thought = (f"The question asks for the reason behind a change, not for the current value.\n"
+        thought = ("\n".join(lst) + "\n" if list_first else "") + (f"The question asks for the reason behind a change, not for the current value.\n"
                    f"In the session of {chain[k_reason][0]}, {a} was set to {vals[k_reason]} because {reason}.")
         final = f"It was set to {vals[k_reason]} because {reason}."
         instr = rng.choice([x for x in INSTR[sp] if "value only" not in x] or INSTR[sp])
@@ -146,11 +149,15 @@ def make(rng, wiki, split):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--list_first", action="store_true")
+    args = ap.parse_args()
     wiki = g.load_wiki()
     for split, n, seed in (("train", 1000, 1919), ("val", 100, 1920), ("dev", 100, 1921)):
         rng = random.Random(seed)
-        rows = [dict(make(rng, wiki, split), id=f"chat-{split}-{i}") for i in range(n)]
-        path = f"data_train/chat_{split}.jsonl"
+        rows = [dict(make(rng, wiki, split, args.list_first), id=f"chat-{split}-{i}") for i in range(n)]
+        path = f"data_train/chat{'_lf' if args.list_first else ''}_{split}.jsonl"
         with open(path, "w", encoding="utf-8") as f:
             for r in rows:
                 f.write(json.dumps(r) + "\n")
