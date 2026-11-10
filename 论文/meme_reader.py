@@ -2,7 +2,9 @@
 answer Cascade / Absence / Deletion questions correctly? Design and thresholds: PREREG_MEME_READER.md (written first).
 Exploration episodes only. Answer prompt and judge prompts are MEME's own (code/agents/base.py, code/eval/judge.py);
 the judge model is local Qwen3-14B instead of gpt-4o. No conversation text is printed, aggregates only.
-usage: python 论文/meme_reader.py dry | answer [--think] | judge | stats
+usage: python 论文/meme_reader.py dry | answer [--think] [--prompt=g11|g12|smw|ctrl] [--conds=oracle] | judge | stats | table
+Prompt baselines (PREREG_MEME_PROMPTS.md): g11 / g12 are RAW-RAG's dependency-validity rule and task readout policy,
+smw / ctrl are StateMem's answer-time wrapper and its matched control (all verbatim, see below).
 """
 import json
 import os
@@ -17,7 +19,8 @@ sys.path.insert(0, os.path.dirname(HERE))
 import meme_pilot as M
 
 READER, JUDGE, GEN, THINK_EXTRA = "Qwen3-8B", "Qwen3-14B", 500, 1024
-ANS = os.path.join(M.OUT, "reader_{}.jsonl")          # tag: off | think
+ANS = os.path.join(M.OUT, "reader_{}.jsonl")          # tag: off | think (official prompt), <prompt>_off | <prompt>_think
+WRAP_GEN = 700                                        # smw / ctrl write a trace of up to 250 words before the answer
 CONDS = {"after": ("rag", "hop", "oracle"), "before": ("rag", "oracle")}
 
 # --- verbatim from MEME-public (MIT): code/agents/base.py and code/eval/judge.py ---
@@ -100,8 +103,103 @@ Output ONLY JSON: {{"correct": true/false, "reason": "one sentence"}}"""
 JUDGE_PROMPTS = {"Cas": CASCADE_D_PROMPT, "Abs": CASCADE_U_PROMPT, "Del": DELETION_PROMPT}
 # --- end of verbatim part ---
 
+# --- verbatim from RAW-RAG (github.com/Litmeb/RAW-RAG, methods/EverCore/evaluation/scripts):
+# build_meme_abs_dependency_oracle.py (paper Appendix G.11) and build_meme_continuity_oracle_runs.py (Appendix G.12) ---
+DEPENDENCY_VALIDITY_RULE = """<DEPENDENCY_VALIDITY_RULE>
+For a current-answer question, a fact explicitly stated to depend on another
+fact becomes stale if the context later says that dependency changed. Do not
+report that earlier dependent value as the current answer. If no explicit new
+value for the dependent fact is stated after the change, answer exactly: I
+don't have that information.
+</DEPENDENCY_VALIDITY_RULE>
+"""
 
-def render(ep, spans, keep):
+
+def task_readout_policy(phase, task_type, target_entities):
+    lines = [
+        "<MEME_READOUT_POLICY>",
+        f"Question phase: {phase}.",
+        f"Task type: {task_type}.",
+        f"Target entities only: {', '.join(target_entities)}.",
+        "Treat the evidence as a chronological state log. Later applicable state "
+        "updates override earlier values; do not combine superseded and current values.",
+    ]
+    if phase == "before" and task_type in {"Cas", "Abs"}:
+        lines.append("Before-phase rule: the upstream change has not happened yet. Any "
+                     "conditional replacement is hypothetical and must not be activated; "
+                     "return the current pre-change target value.")
+    elif phase == "after" and task_type == "Cas":
+        lines.append("Cascade rule: find the stated dependency between the target and its "
+                     "upstream entity, then apply it when the later upstream change occurs. "
+                     "Return only the resulting current target value.")
+    elif phase == "after" and task_type == "Abs":
+        lines.append("Absence rule: the upstream entity changed but no replacement target "
+                     "value was declared. State that the current target is uncertain; a "
+                     "previous value may be identified only as previous, never as current.")
+    elif phase == "after" and task_type == "Del":
+        lines.append("Deletion rule: a request to remove the target makes it unavailable as "
+                     "current memory. Say that it was explicitly removed and do not reveal "
+                     "the deleted value.")
+    elif task_type == "ER":
+        lines.append("Exact-recall rule: reproduce the target value verbatim, preserving its "
+                     "wording and order.")
+    else:
+        lines.append("Return the latest phase-visible value for the target entity.")
+    lines.extend(["Use only the evidence below. Do not infer a value that the evidence and "
+                  "the stated transition rule do not support.", "</MEME_READOUT_POLICY>", ""])
+    return "\n".join(lines)
+
+
+# --- verbatim from StateMem (arXiv 2608.19652, Appendix F.1), {system_prompt} empty ---
+SMW_PROMPT = """You are answering a question about a long conversation using state tracing.
+
+## Question: {question}
+
+## Conversation transcript: {transcript}
+
+Work in TWO sections, in order:
+
+## Section 1 -- State trace (under 250 words):
+List, in chronological order, every turn that establishes, updates, or supersedes the entities the question asks about ([turn N] speaker: what changed). Include standing rules that govern the decision AND the most recent stated value of every input those rules apply to (amounts, quantities, dates, thresholds) -- even if mentioned only once or in passing; scan for them before concluding an input is unknown. Note derived values whose inputs later changed. End with the current operative value of each relevant entity. Commit to the trace BEFORE answering.
+
+## Section 2 -- Resolution and answer:
+Apply, in order:
+(1) later supersedes earlier;
+(2) standing rules outrank past one-off instances -- apply the rule to CURRENT inputs;
+(3) recompute derived values from current inputs, never reuse stale cached numbers;
+(4) a fact is only retired if actually superseded or expired.
+
+End with exactly one final line:
+ANSWER: <the specific value or decision the question asks for>"""
+
+CTRL_PROMPT = """You are answering a question about a long conversation.
+
+## Question: {question}
+
+## Conversation transcript: {transcript}
+
+Work in TWO sections, in order:
+
+## Section 1 -- Relevant information (under 250 words):
+Summarize the information in the conversation that is relevant to the question. Commit to this summary BEFORE answering.
+
+## Section 2 -- Answer:
+End with exactly one final line:
+ANSWER: <the specific value or decision the question asks for>"""
+# --- end of verbatim part ---
+
+
+def build_prompt(prompt, phase, q, c):
+    if prompt == "g11":                                   # here on EVERY question (RAW-RAG: only on Abs, i.e. told the task)
+        c = DEPENDENCY_VALIDITY_RULE + "\n" + c
+    if prompt == "g12":                                   # told phase, task type and target entity: oracle information
+        c = c + "\n" + task_readout_policy(phase, q["task_type"], q["entity"])
+    if prompt in ("smw", "ctrl"):
+        return (SMW_PROMPT if prompt == "smw" else CTRL_PROMPT).format(question=q["question"], transcript=c)
+    return UNIFIED_ANSWER_PROMPT.format(context=c, question=q["question"])
+
+
+def render(ep, spans, keep, numbered=False):
     """the kept messages (indices into spans) as whole messages, chronological, under their session header"""
     out, cur = [], None
     for i in sorted(keep):
@@ -109,13 +207,15 @@ def render(ep, spans, keep):
         if si != cur:
             out.append(("\n" if out else "") + f"[Session {si + 1} | {ep['sessions'][si]['timestamp']}]")
             cur = si
-        out.append(f"{role}: {ep['sessions'][si]['conversation'][ti]['content']}")
+        out.append((f"[turn {i + 1}] " if numbered else "") + f"{role}: {ep['sessions'][si]['conversation'][ti]['content']}")
     return "\n".join(out)
 
 
-def contexts(ep):
+def contexts(ep, numbered=False):
     """{(phase, cond, entity): (question dict, context text)} for one episode"""
     text, spans = M.serialize(ep)
+    _render = globals()["render"]
+    render = lambda ep, spans, keep: _render(ep, spans, keep, numbered)
     d = json.load(open(os.path.join(M.OUT, f"dense_{ep['episode_id']}.json")))
     r = json.load(open(os.path.join(M.OUT, f"rerank_{ep['episode_id']}.json")))
     wins = d["windows"]
@@ -138,6 +238,10 @@ def contexts(ep):
         assert b["question"] == q["question"]
         out["before", "rag", e] = (b, render(ep, spans, msgs([w for w in order if wins[w][0] < bend][:M.FINAL_K], bpos)))
         out["before", "oracle", e] = (b, render(ep, spans, evid(bpos)))
+    for phase, pos in (("before", bpos), ("after", apos)):       # exact recall, oracle only: the does-not-hurt check
+        for q in ep[phase + "_questions"]["questions"]:
+            if q["task_type"] == "ER":
+                out[phase, "oracle", q["entity"][0]] = (q, render(ep, spans, evid(pos)))
     return out
 
 
@@ -156,27 +260,31 @@ def dry():
         print(k, "n", len(v), "tokens median", int(np.median(v)), "p90", int(np.percentile(v, 90)), "max", max(v))
 
 
-def answer(think):
+def answer(think, prompt="official"):
     import torch
     from app_common import JsonlAppender, load_reader
     from explore_probe import LONG_SDPA, sdpa_kernel
     from run_app_fix import generate, generate_think
     conds = [a.split("=")[1].split(",") for a in sys.argv if a.startswith("--conds=")]     # run order only; default all
-    w = JsonlAppender(ANS.format("think" if think else "off"), key=key)
+    wrap = prompt in ("smw", "ctrl")
+    w = JsonlAppender(ANS.format(("" if prompt == "official" else prompt + "_") + ("think" if think else "off")), key=key)
     tok, model = load_reader(READER)
     for ep in M.load():
-        for (phase, cond, e), (q, c) in contexts(ep).items():
+        for (phase, cond, e), (q, c) in contexts(ep, numbered=wrap).items():
             if conds and cond not in conds[0]:
                 continue
             row = dict(ep=ep["episode_id"], phase=phase, cond=cond, entity=e, task=q["task_type"], hop=q.get("hop", 0))
             if key(row) in w.done:
                 continue
-            p = UNIFIED_ANSWER_PROMPT.format(context=c, question=q["question"])
+            p = build_prompt(prompt, phase, q, c)
             chat = tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False, add_generation_prompt=True, enable_thinking=think)
             with sdpa_kernel(LONG_SDPA, set_priority=True), torch.no_grad():
-                full = generate_think(tok, model, chat, THINK_EXTRA + GEN, ("meme-reader", key(row))) if think else generate(tok, model, chat, GEN)
+                full = generate_think(tok, model, chat, THINK_EXTRA + GEN, ("meme-reader", key(row))) if think else generate(tok, model, chat, WRAP_GEN if wrap else GEN)
             fin = ("</think>" in full) if think else True
             hyp = (full.split("</think>", 1)[1] if fin else "").strip() if think else full.strip()
+            if wrap:                                     # the prediction is the final ANSWER: line; none = unfinished
+                fin = "ANSWER:" in hyp
+                hyp = hyp.rsplit("ANSWER:", 1)[1].strip() if fin else ""
             w.write(row | dict(question=q["question"], gold=q["entity_values"][e], n_tok=len(tok(chat).input_ids), finished=fin,
                                answer=hyp, n_out=len(tok(full, add_special_tokens=False).input_ids)))
             torch.cuda.empty_cache()
@@ -189,10 +297,9 @@ def judge():
     from app_common import JsonlAppender, chat_prompt, load_jsonl, load_reader
     from probe import greedy
     tok = model = None
-    for tag in ("off", "think"):
-        path = ANS.format(tag)
-        if not os.path.exists(path):
-            continue
+    import glob
+    for path in sorted(p for p in glob.glob(ANS.format("*")) if not p.endswith("_judged.jsonl")):
+        tag = os.path.basename(path)
         w = JsonlAppender(path.replace(".jsonl", "_judged.jsonl"), key=key)
         todo = [r for r in load_jsonl(path) if key(r) not in w.done]
         print(tag, "todo", len(todo), flush=True)
@@ -200,6 +307,9 @@ def judge():
             tok, model = load_reader(JUDGE)
             eos = {tok.convert_tokens_to_ids("<|im_end|>"), tok.eos_token_id}
         for r in todo:
+            if r["task"] == "ER":                            # MEME: deterministic substring match, no LLM call
+                w.write(r | dict(judge="substring", parsed=True, correct=norm(r["gold"]) in norm(r["answer"])))
+                continue
             tmpl = BEFORE_COMMON_PROMPT if r["phase"] == "before" else JUDGE_PROMPTS[r["task"]]
             p = tmpl.format(question=r["question"], gold=r["gold"], agent_answer=r["answer"])
             ids = torch.tensor([tok(chat_prompt(tok, p), add_special_tokens=False).input_ids], device="cuda")
@@ -224,6 +334,7 @@ def stats():
         if not os.path.exists(path):
             continue
         df = pd.DataFrame(load_jsonl(path))
+        df = df[df.task != "ER"]
         print(f"\n######## reader {READER}, thinking {tag}: rows {len(df)}, judge output unparsed {int((~df.parsed).sum())}, "
               f"unfinished thinking {int((~df.finished).sum())}, prompt tokens median {int(df.n_tok.median())} max {int(df.n_tok.max())}, "
               f"output tokens median {int(df.n_out.median())}")
@@ -275,9 +386,66 @@ def stats():
             os.path.join(M.OUT, f"reader_{tag}_per_question.json"), orient="records", indent=1)
 
 
+def table():
+    """one row per (prompt, decoding, context): real pass of Cas / Abs / Del with episode-bootstrap CI, raw pass,
+    before-phase accuracy, unfinished answers, and exact recall (oracle context only)"""
+    import glob
+    import pandas as pd
+    from app_common import load_jsonl
+    rng = np.random.default_rng(0)
+    rows, per_q = [], {}
+
+    def boot(t, col, eps):
+        s = t[col].astype(float).groupby(t.ep).agg(["sum", "count"]).reindex(eps, fill_value=0).values
+        idx = rng.integers(0, len(eps), (10000, len(eps)))
+        v = s[idx, 0].sum(1) / np.maximum(s[idx, 1].sum(1), 1) * 100
+        return f"{t[col].mean() * 100:+6.1f} [{np.percentile(v, 2.5):.0f}, {np.percentile(v, 97.5):.0f}]"
+
+    for path in sorted(glob.glob(ANS.format("*_judged"))):
+        tag = os.path.basename(path)[len("reader_"):-len("_judged.jsonl")]
+        df = pd.DataFrame(load_jsonl(path))
+        er = df[df.task == "ER"]
+        df = df[df.task != "ER"]
+        bef = df[df.phase == "before"].set_index(["ep", "entity", "cond"]).correct
+        aft = df[df.phase == "after"].copy()
+        aft["knew"] = [bool(bef.get((e, n, "rag" if c == "hop" else c), False)) for e, n, c in zip(aft.ep, aft.entity, aft.cond)]
+        aft["real"] = aft.correct & aft.knew
+        eps = sorted(df.ep.unique())
+        for cond in ("oracle", "rag"):
+            g = aft[aft.cond == cond]
+            if not len(g):
+                continue
+            per_q[tag, cond] = g.set_index(["ep", "entity"])[["task", "real"]]
+            row = dict(tag=tag, cond=cond)
+            for task in ("Cas", "Abs", "Del"):
+                t = g[g.task == task]
+                row[task] = boot(t, "real", eps)
+                row[task + "_raw"] = round(t.correct.mean() * 100, 1)
+                row[task + "_knew"] = round(t.knew.mean() * 100, 1)
+            row["n"] = len(g)
+            row["unfinished"] = int((~df[df.cond == cond].finished).sum())
+            row["ER"] = f"{er.correct.mean() * 100:.1f} (n={len(er)})" if cond == "oracle" and len(er) else ""
+            rows.append(row)
+    pd.set_option("display.width", 250)
+    print(pd.DataFrame(rows).to_string(index=False))
+    print("\npaired differences in real pass (episode bootstrap):")
+    pairs = [a.split("=")[1] for a in sys.argv if a.startswith("--pairs=")]
+    for pr in (pairs[0].split(",") if pairs else []):
+        a, b = pr.split(":")
+        for cond in ("oracle", "rag"):
+            if (a, cond) not in per_q or (b, cond) not in per_q:
+                continue
+            x, y = per_q[a, cond], per_q[b, cond].reindex(per_q[a, cond].index)
+            d = pd.DataFrame(dict(ep=[i[0] for i in x.index], task=x.task.values, d=x.real.astype(float).values - y.real.astype(float).values))
+            for task in ("Cas", "Abs", "Del"):
+                print(f"  {a} minus {b} | {cond:6s} | {task}: {boot(d[d.task == task], 'd', sorted(d.ep.unique()))}")
+
+
 if __name__ == "__main__":
     s = sys.argv[1]
     if s in ("answer", "judge") and os.name == "nt":     # process-scoped keep-awake, released on exit; no system setting changes
         import ctypes
         ctypes.windll.kernel32.SetThreadExecutionState(0x80000000 | 0x00000001)
-    dry() if s == "dry" else answer("--think" in sys.argv) if s == "answer" else judge() if s == "judge" else stats()
+    prompt = ([a.split("=")[1] for a in sys.argv if a.startswith("--prompt=")] or ["official"])[0]
+    assert prompt in ("official", "g11", "g12", "smw", "ctrl")
+    dry() if s == "dry" else answer("--think" in sys.argv, prompt) if s == "answer" else judge() if s == "judge" else table() if s == "table" else stats()
