@@ -176,7 +176,7 @@ def stats():
         hit = lambda sel, sp: any(wins[w][0] < sp[1] and sp[0] < wins[w][1] for w in sel)
         for q in questions(ep):
             need = required(ep, spans, q)
-            row = dict(ep=ep["episode_id"], task=q["task_type"], hop=q.get("hop", 0), located=all(v is not None for v in need.values()))
+            row = dict(ep=ep["episode_id"], entity=q["entity"][0], task=q["task_type"], hop=q.get("hop", 0), located=all(v is not None for v in need.values()))
             if row["located"]:
                 order = r[q["question"]]
                 base = order[:FINAL_K]
