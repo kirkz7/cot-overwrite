@@ -60,12 +60,13 @@
   <span class="chip no">现在做不了</span>
 </div>
 
-<h2>先说结论：和上一版相比，认识变了的五点</h2>
+<h2>先说结论：和上一版相比，认识变了的六点</h2>
 <ol>
   <li><b>"写入派对读取派没人直接比"这句话是错的。</b>RAW-RAG 表 4 已经把 7 个通用写入系统和自己放在 MEME 上、同一个读者下比了，两个读者都测了：全部级联 ≤ 9、失效 ≤ 20，没有交叉点。空白缩小为"依赖感知的写入系统"。</li>
   <li><b>四家依赖感知的写入系统都没上过 MEME，但只有一家有公开代码。</b>见下面"现在能不能做"一节。</li>
   <li><b>检索不是主要缺口。</b>我们量的：前 15 个窗口里证据已齐的题，级联 75.5%、失效 67.5%、删除 100%；用上游实体再检索一次补到 100%。把缺的证据补给读者，正确率没有变化。</li>
-  <li><b>读者是主要缺口，提示词只能解决一部分。</b>在 8B 读者上：删除题靠提示词能到 47–67；级联题最好到 31–35；失效题所有提示词都 ≤ 10，连告知题型也只有 10。</li>
+  <li><b>读者是主要缺口，提示词只能解决一部分。</b>在 8B 读者上，可部署的提示词里：删除题能到 67–83；级联题最好 31–35；失效题不思考时全部 ≤ 5，思考加依赖规则到 33，但级联同时掉到 22。没有一个提示词两项都过 35。</li>
+  <li><b>8B 不是不会算，是不知道该用哪条规则。</b>告知题型再加思考（诊断用，不可部署），级联 78、删除 93，接近 DeepSeek 的 82；失效仍只有 38。写入侧的标记正好能提供"这是哪类情况"这条信息，所以下一步先量标记对 8B 有没有用。</li>
   <li><b>写入有没有用，取决于写入者多强、写下来的是什么。</b>同一个文件式系统，写入模型换成 Opus 才从 0 升到 32。把正确答案直接写给读者，小读者级联 74、失效仍只有 37。</li>
 </ol>
 
@@ -82,7 +83,7 @@
       <li><span class="n">隐式传播</span>：依赖关系没写出来，靠常识。<span class="who">STALE 第二类、StateGraph 和 PACMI 的自建集。先不做。</span></li>
     </ul></li>
   <li><span class="b">D. 用户要求删除</span> <span class="chip weak">做了但没解决</span> <span class="chip ours">我们量过</span>
-    <span class="who">加一段说明就能解决大半：8B 上 7 → 47（依赖规则）/ 67（状态追踪包装）/ 80（告知题型）。当作"不伤害"检查带着，不是主战场。</span></li>
+    <span class="who">加一段说明就能解决大半：8B 上 7 → 67（状态追踪包装）/ 83（依赖规则加思考）/ 93（告知题型加思考）。当作"不伤害"检查带着，不是主战场。</span></li>
   <li><span class="b">E. 带限定条件的信息</span> <span class="chip gap">空白</span> <span class="who">例外、假设、别人的事。没有基准，先搁置。</span></li>
   <li><span class="b">F. 时间和顺序</span> <span class="chip done">已有人做</span> <span class="who">上一个项目 cot-overwrite。</span></li>
 </ul>
@@ -103,7 +104,8 @@
     <ul>
       <li><span class="n">官方提示词</span>：8B 级联 0、失效 0。<span class="who">答对前置题的读者，变更后没有一题从旧值改答新值。</span></li>
       <li><span class="n">打开思考</span>：级联 35、失效 5。</li>
-      <li><span class="n">已发表的提示词</span>：StateMem 的状态追踪包装级联 31、失效 5（比配对对照高 27 点，但 119 题里 38 题没答完，精确回忆 100 → 72）；RAW-RAG 的依赖规则级联 2、失效 0；告知题型级联 18、失效 10。</li>
+      <li><span class="n">已发表的提示词</span>：StateMem 的状态追踪包装级联 31、失效 5（比配对对照高 27 点，但 119 题里 38 题没答完，精确回忆 100 → 72）；RAW-RAG 的依赖规则不思考 2 / 0，思考后 22 / 33（失效涨了，级联比官方思考低 12 点）。</li>
+      <li><span class="n">告知题型</span>（诊断上限，不可部署）：不思考 18 / 10，思考 78 / 38。<span class="who">级联的差距主要是"不知道该用哪条规则"；失效题告知了也只有 38。</span></li>
       <li><span class="n">换强读者</span>：证据给全时 DeepSeek-V4-Flash 级联 82；走真实检索时仍 ≤ 9。</li>
       <li><span class="n">训练读者</span> <span class="chip gap">空白</span> <span class="who">唯一一次训练尝试是 StateAuditor 的 4B 审核器，没追上大模型。</span></li>
     </ul></li>
@@ -116,7 +118,7 @@
 <tr><th style="width:23%">读者拿到什么</th><th>本机 Qwen3-8B</th><th>小 API 模型<br><span class="who">gpt-4.1-mini / GPT-4o-mini</span></th><th>中等模型<br><span class="who">DeepSeek-V4-Flash / Qwen3.5-35B</span></th><th>强模型<br><span class="who">Sonnet / Opus</span></th></tr>
 <tr><td><b>不写入</b>：整段历史</td><td>没量</td><td class="y num">3 / –<br><span class="who">MEME，gpt-4.1-mini</span></td><td class="y num">48 / 24<br><span class="who">RAW-RAG，DeepSeek</span></td><td>没查</td></tr>
 <tr><td><b>不写入</b>：真实检索到的原文</td><td class="o num">2 / 3<br>思考 16 / 10</td><td class="y num" colspan="2">所有系统 ≤ 9 / ≤ 20<br><span class="who">RAW-RAG 表 4，含它自己</span></td><td>没有数</td></tr>
-<tr><td><b>不写入</b>：只给标注证据<br><span class="who">（检索完美）</span></td><td class="o num">官方 0 / 0<br>思考 35 / 5<br>状态追踪 31 / 5<br>依赖规则 2 / 0<br>告知题型 18 / 10</td><td class="y num">2 / 36*<br><span class="who">GPT-4o-mini</span></td><td class="y num">82 / 92*<br><span class="who">DeepSeek</span><br>40 / 94*<br><span class="who">Qwen3.5-35B</span></td><td>没有数</td></tr>
+<tr><td><b>不写入</b>：只给标注证据<br><span class="who">（检索完美）</span></td><td class="o num">官方 0 / 0<br>思考 35 / 5<br>状态追踪 31 / 5<br>依赖规则 2 / 0<br>依赖规则 + 思考 22 / 33<br><span class="who">诊断：</span>告知题型 18 / 10<br><span class="who">诊断：</span>告知题型 + 思考 78 / 38</td><td class="y num">2 / 36*<br><span class="who">GPT-4o-mini</span></td><td class="y num">82 / 92*<br><span class="who">DeepSeek</span><br>40 / 94*<br><span class="who">Qwen3.5-35B</span></td><td>没有数</td></tr>
 <tr><td><b>通用写入系统</b><br><span class="who">Mem0、图谱类等</span></td><td>没量，预期在地板</td><td class="y num">平均 3 / 1<br><span class="who">MEME，6 个系统</span><br>≤ 9 / ≤ 20<br><span class="who">RAW-RAG，7 个系统</span></td><td class="y num">≤ 9 / ≤ 20<br><span class="who">RAW-RAG，DeepSeek</span></td><td>没有数</td></tr>
 <tr><td><b>依赖感知写入系统</b><br><span class="who">CUPMem、StateMem、StateGraph、PACMI</span></td><td class="g">空白<br><span class="who">第 2 步，部分能做</span></td><td class="g">空白</td><td class="g">空白</td><td class="g">空白</td></tr>
 <tr><td><b>强模型当写入者</b><br><span class="who">文件式系统 + Opus 4.7 写</span></td><td class="g">空白<br><span class="who">最想要的格子，要 API</span></td><td class="g">空白</td><td class="g">空白</td><td class="y num">32 / 59<br><span class="who">MEME 表 4，Sonnet 4 作答，20 集。写入者换成 gpt-4.1-mini：0 / 7</span></td></tr>
@@ -124,11 +126,11 @@
 <tr><td><b>完美写入，值已算好</b><br><span class="who">MEME 的标准记忆</span></td><td class="g">空白<br><span class="who">第 1 步，现在能做</span></td><td class="y num">74 / 37<br><span class="who">MEME 表 19，gpt-4.1-mini</span></td><td>没有数</td><td class="y num">Sonnet 4：60 / 81<br>Sonnet 4.6：84 / 62<br>Opus 4.7：93 / 72</td></tr>
 </table>
 </div>
-<p class="sub">* RAW-RAG 这一行的失效题另加了一段"依赖变了又没有新值就答不知道"的规则，级联题没有加。我们把同一段规则给 8B（不思考），失效题是 0。<br>
-我们的数：级联 49 题、失效 40 题；失效题里有 2 集含 MEME 官方承认标错的题（<code>pl_009</code>、<code>sw_013</code>），还没剔除重算。带思考的依赖规则和告知题型两组、以及检索条件下的各提示词仍在跑。</p>
+<p class="sub">* RAW-RAG 这一行的失效题另加了一段"依赖变了又没有新值就答不知道"的规则，级联题没有加。我们把同一段规则给 8B，失效题不思考 0，思考 33。<br>
+我们的数：级联 49 题、失效 40 题；失效题里有 2 集含 MEME 官方承认标错的题（<code>pl_009</code>、<code>sw_013</code>），剔除后各行变化不到 1.1 个点。检索条件下的各提示词仍在跑。完整的表和区间在 <code>PREREG_MEME_PROMPTS.md</code> 第 5 节。</p>
 <p><b>这张表说明的三件事：</b></p>
 <ol>
-  <li>不写入这条路，在小读者上被读者卡住：证据给全，8B 最好 35 / 10，GPT-4o-mini 2 / 36。</li>
+  <li>不写入这条路，在小读者上被读者卡住：证据给全，8B 可部署的提示词里思考 35 / 5、依赖规则加思考 22 / 33，顾了一头丢一头；GPT-4o-mini 2 / 36。</li>
   <li>写入这条路的上限在小读者上并不低（74 / 37），但没有一个真实系统接近它，而且失效题上限本身就只有 37。</li>
   <li>绿色的三行都没人量过。最下面两行不需要任何真实系统，用数据自带的标注就能做，一小时出数，它决定了上面两行值不值得做。</li>
 </ol>
@@ -152,7 +154,7 @@
   <li><span class="chip gap">空白</span> <b>依赖感知系统在 MEME 上、同一读者下的分数，以及丢分的位置。</b>先 StateMem 复现，CUPMem 待许可。</li>
   <li><span class="chip gap">空白</span> <b>强写入者 + 弱读者。</b>图三里最想要的格子：便宜的读者能不能吃到贵的写入的好处。需要 API，第二轮。</li>
   <li><span class="chip gap">空白</span> <b>结合。</b>写入产物和原文证据一起给读者，或写入时只做便宜的依赖标记、读取时顺着标记取证据。没有人在依赖题上做过。</li>
-  <li><span class="chip gap">空白</span> <b>训练读者用写入的产物。</b>目标由第 1 条决定。失效题是最硬的：完美写入下小读者也只有 37，8B 上所有提示词 ≤ 10。</li>
+  <li><span class="chip gap">空白</span> <b>训练读者用写入的产物。</b>目标由第 1 条决定。失效题是最硬的：完美写入下小读者也只有 37，8B 上可部署的最好 33，告知题型也只有 38。</li>
 </ol>
 <p class="who">从上一版降级的两条："读取时顺着依赖取证据"（量过，是小部件）；"带限定条件的信息"（没有基准，搁置）。</p>
 
@@ -162,7 +164,8 @@
   <li>之前说"和 RAW-RAG 的失效题对不上（5% 对 94%）"：它在失效题上另加了规则，不是同一个条件。级联题两边对得上。</li>
   <li>上一版写 StateMem 的包装"6 个后端各涨 32–67 点"：那是它自己的基准。在 MEME、8B 上，级联 +27（对配对对照），失效 +2.5，区间含 0。</li>
   <li>MEME 官方已知问题：130 道失效题有 10 道标错，探索集里涉及 2 集。已报的失效题数字待剔除重算。</li>
-  <li>提示词基线的预测，目前看错了两条：依赖规则在失效题上预测 ≥ 40，实际 0；状态追踪包装预测不伤精确回忆，实际 100 → 72。完整对照等全部跑完再写进预注册文件。</li>
+  <li>提示词基线的预测错了三处：依赖规则不思考时，失效预测 ≥ 40、实际 0，删除预测 ≤ 15、实际 47；状态追踪包装级联预测 ≥ 35、实际 31，并且伤了精确回忆（100 → 72）。告知题型加思考级联到 78，事先没有想到。</li>
+  <li>今天下午这页的早先版本写过"失效题所有提示词都 ≤ 10"，那时带思考的两组还没跑完。思考加依赖规则是 33。</li>
 </ol>
 
 <h2>这些论文彼此重合在哪</h2>
