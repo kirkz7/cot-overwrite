@@ -3,219 +3,375 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>问题地图：依赖传播该在写入时做还是读取时做</title>
+<title>问题地图：对话记忆里的依赖更新</title>
 <style>
   :root { --ink:#1f2328; --mute:#5c6470; --line:#c9ced6; --bg:#ffffff; --panel:#f6f7f9;
           --done:#e3ecf7; --doneb:#8fb0d9; --weak:#fdf0d5; --weakb:#d9a441;
           --gap:#dff3e4; --gapb:#4f9d69; --ours:#ece6f7; --oursb:#8a6fc2;
           --no:#f3e1e1; --nob:#c98080; }
   * { box-sizing:border-box; }
-  body { margin:0; padding:20px 16px 48px; background:var(--bg); color:var(--ink);
-         font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
-  main { max-width:1020px; margin:0 auto; }
-  h1 { font-size:22px; margin:0 0 6px; }
-  h2 { font-size:17px; margin:34px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+  body { margin:0; padding:20px 16px 56px; background:var(--bg); color:var(--ink);
+         font:15px/1.65 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  main { max-width:1000px; margin:0 auto; }
+  h1 { font-size:23px; margin:0 0 6px; }
+  h2 { font-size:19px; margin:44px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--ink); }
+  h3 { font-size:16px; margin:24px 0 8px; }
   p { margin:8px 0; }
   .sub { color:var(--mute); font-size:13px; }
-  .root { background:#1f2328; color:#fff; padding:12px 14px; border-radius:8px; font-weight:600; }
-  .legend { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 4px; font-size:13px; }
+  .who { color:var(--mute); font-size:13px; }
+  .root { background:#1f2328; color:#fff; padding:12px 14px; border-radius:8px; font-weight:600; margin:12px 0; }
+  .toc { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 0; font-size:13px; }
+  .toc a { color:var(--ink); text-decoration:none; background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:3px 10px; }
   .chip { display:inline-block; padding:1px 8px; border-radius:10px; border:1px solid; font-size:12px; white-space:nowrap; }
   .done { background:var(--done); border-color:var(--doneb); }
   .weak { background:var(--weak); border-color:var(--weakb); }
   .gap  { background:var(--gap);  border-color:var(--gapb); font-weight:600; }
   .ours { background:var(--ours); border-color:var(--oursb); }
   .no   { background:var(--no);   border-color:var(--nob); }
-  ul.tree, ul.tree ul { list-style:none; margin:0; padding-left:20px; }
-  ul.tree { padding-left:4px; margin-top:10px; }
-  ul.tree li { position:relative; padding:5px 0 5px 16px; border-left:1px solid var(--line); }
-  ul.tree li:last-child { border-left-color:transparent; }
-  ul.tree li::before { content:""; position:absolute; left:-1px; top:0; width:14px; height:19px;
-                       border-left:1px solid var(--line); border-bottom:1px solid var(--line); border-bottom-left-radius:6px; }
-  .n { font-weight:600; }
-  .b { display:inline-block; background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:2px 8px; font-weight:600; }
-  .who { color:var(--mute); font-size:13px; }
-  .ex { background:var(--panel); border-left:3px solid var(--line); padding:8px 12px; margin:8px 0; border-radius:0 6px 6px 0; font-size:14px; }
+  .ex { background:var(--panel); border-left:3px solid var(--line); padding:9px 13px; margin:10px 0; border-radius:0 6px 6px 0; font-size:14px; }
+  .ex b.t { display:inline-block; min-width:5.2em; }
+  .key { background:var(--ours); border:1px solid var(--oursb); border-radius:8px; padding:10px 14px; margin:12px 0; }
   .wrap { overflow-x:auto; }
-  table { border-collapse:collapse; width:100%; min-width:760px; font-size:13px; }
+  table { border-collapse:collapse; width:100%; min-width:720px; font-size:13px; margin:8px 0; }
   th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
   th { background:var(--panel); }
   td.y { background:var(--done); } td.g { background:var(--gap); } td.o { background:var(--ours); } td.x { background:var(--no); }
-  td.num { font-variant-numeric:tabular-nums; }
-  ol { padding-left:20px; margin:6px 0; }
-  li { margin:3px 0; }
+  td.num, th.num { font-variant-numeric:tabular-nums; }
+  ol, ul { padding-left:22px; margin:6px 0; }
+  li { margin:4px 0; }
+  dl { margin:8px 0; display:grid; grid-template-columns:minmax(120px, 190px) 1fr; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  dt, dd { margin:0; padding:8px 12px; border-bottom:1px solid var(--line); }
+  dt { background:var(--panel); font-weight:600; }
+  dl > :nth-last-child(-n+2) { border-bottom:none; }
+  dd .who { display:block; margin-top:2px; }
+  /* pipeline */
+  .pipe { display:flex; flex-wrap:wrap; align-items:stretch; gap:6px; margin:12px 0; }
+  .pipe .st { flex:1 1 150px; border:1px solid var(--line); border-radius:8px; padding:8px 10px; background:var(--panel); font-size:13px; }
+  .pipe .st b { display:block; font-size:14px; margin-bottom:2px; }
+  .pipe .ar { align-self:center; color:var(--mute); font-size:18px; }
+  /* ladder */
+  .ladder { margin:10px 0; }
+  .rung { display:grid; grid-template-columns:minmax(200px, 44%) 1fr 48px; gap:8px; align-items:center; padding:4px 0; font-size:13px; }
+  .bar { height:16px; background:var(--panel); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+  .bar i { display:block; height:100%; background:var(--oursb); }
+  .rung .v { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; }
+  .rung.alt .bar i { background:var(--weakb); }
+  @media (max-width:640px) { dl { grid-template-columns:1fr; } dt { border-bottom:none; padding-bottom:2px; } .rung { grid-template-columns:1fr 70px 40px; } }
 </style>
 </head>
 <body>
 <main>
-<h1>问题地图：依赖传播该在写入时做，还是读取时做</h1>
-<p class="sub">2026-11-10 重写（上一版 11-09）。这一版精读了 MEME、RAW-RAG、CUPMem、StateMem、StateGraph、PACMI 六篇的正文、附录和能找到的代码；其余论文仍只读过相关页，带 † 的只看过摘要或别人的转述。我们自己的数都来自 MEME 探索集 30 集、本机 Qwen3-8B 读者、本机 14B 判分（不是官方的 gpt-4o），只能当探索用。</p>
+<h1>问题地图：对话记忆里的依赖更新</h1>
+<p class="sub">2026-11-11 整理，写给第一次听这个题的人。顺序：问题 → 术语 → 相关研究 → 我们已经量到的 → 我们能补什么。<br>
+我们自己的数全部来自 MEME 的 30 集探索集、本机 8B 模型当读者、本机 14B 模型判分（不是官方的 gpt-4o），都是摸底用的诊断数，不是任何方法有效的证据。</p>
 
-<div class="root">问题：上游信息变了，下游的值要跟着变（或者不能再信）。这一步该由写入时的系统做、读取时的读者做，还是两边一起做？对弱读者，写入到底帮不帮得上？</div>
+<div class="root">一句话：用户改了一件事，另一件依赖它的事也该跟着变，但没有人明说。现在的对话记忆系统在这类题上几乎是零分。我们想弄清分数丢在哪一步，以及便宜的小模型能不能靠"写入时整理得好"补回来。</div>
 
-<div class="legend">
-  <span class="chip done">已有人做，有数</span>
-  <span class="chip weak">做了但没解决</span>
-  <span class="chip gap">空白</span>
-  <span class="chip ours">我们量过</span>
-  <span class="chip no">现在做不了</span>
+<div class="toc">
+  <a href="#s1">一、问题</a><a href="#s2">二、术语</a><a href="#s3">三、相关研究</a><a href="#s4">四、我们已经量到的</a><a href="#s5">五、我们能补什么</a><a href="#s6">附：限制和猜错的地方</a>
 </div>
 
-<h2>先说结论：和上一版相比，认识变了的六点</h2>
-<ol>
-  <li><b>"写入派对读取派没人直接比"这句话是错的。</b>RAW-RAG 表 4 已经把 7 个通用写入系统和自己放在 MEME 上、同一个读者下比了，两个读者都测了：全部级联 ≤ 9、失效 ≤ 20，没有交叉点。空白缩小为"依赖感知的写入系统"。</li>
-  <li><b>四家依赖感知的写入系统都没上过 MEME，但只有一家有公开代码。</b>见下面"现在能不能做"一节。</li>
-  <li><b>检索不是主要缺口。</b>我们量的：前 15 个窗口里证据已齐的题，级联 75.5%、失效 67.5%、删除 100%；用上游实体再检索一次补到 100%。把缺的证据补给读者，正确率没有变化。</li>
-  <li><b>读者是主要缺口，提示词只能解决一部分。</b>在 8B 读者上，可部署的提示词里：删除题能到 67–83；级联题最好 31–35；失效题不思考时全部 ≤ 5，思考加依赖规则到 33，但级联同时掉到 22。没有一个提示词两项都过 35。以上是只给标注证据的数；上下文换成检索到的原文后，这些收益在级联和失效上都消失（最好 25 / 10），只有删除题的收益留下。</li>
-  <li><b>8B 不是不会算，是不知道该用哪条规则。</b>告知题型再加思考（诊断用，不可部署），级联 78、删除 93，接近 DeepSeek 的 82；失效仍只有 38。写入侧的标记正好能提供"这是哪类情况"这条信息，所以下一步先量标记对 8B 有没有用（已量，见下一节）。</li>
-  <li><b>写入有没有用，取决于写入者多强、写下来的是什么。</b>同一个文件式系统，写入模型换成 Opus 才从 0 升到 32。把正确答案直接写给读者，小读者级联 74、失效仍只有 37。</li>
-</ol>
+<!-- ====================================================================== -->
+<h2 id="s1">一、问题</h2>
 
-<h2>11-11 凌晨新增：写入上限量出来的五件事</h2>
-<p class="sub">读者 8B，探索集 30 集，全部条件都用了数据自带的标注，是诊断上限，不是方法。完整的表、区间、预测对照在 <code>PREREG_MEME_WRITE.md</code> D、F、H 节。带思考的对照、StateMem 试跑、"加检索原文"两组还在跑。</p>
-<ol>
-  <li><b>级联题对 8B 不是推理问题。</b>只给这条链的三四行整理过的事实，不思考就到 90–96；同样的信息放在证据会话里是 0。</li>
-  <li><b>光抽取不够，要整理状态。</b>把全部事实原话一行一条给读者（完美的"只抽取"写入者），级联 2，和直接给会话没有差别。</li>
-  <li><b>起作用的是把旧条目改写成"之前是"，不是加一行标记。</b>条目仍写"当前 X：旧值"时级联 31，后面加一行"需复查"37（差 6 点，区间含 0）；改写成"X 之前是 旧值"90（差 59 点）。这一条只在不思考时量了，标记是我们的一行式写法。</li>
-  <li><b>写入之后仍要挑选。</b>同样的"之前是"写法，把这一集其余事实也放进来，级联 90 → 69；StateMem 版式的整集状态块 61。</li>
-  <li><b>失效题两边都没解决。</b>不思考时所有写法都是 0–3，包括明说"旧值可能不再有效"。思考后明说 68、标记 28，标记不比最好的提示词（33）强。</li>
-</ol>
-<p class="who">我事先的预测错了六处，列在下面"更正"一节。最大的一处：预测"只打标记、不思考"级联 ≤ 40，实际 94；随后的对照说明这 94 不是标记带来的。</p>
+<h3>1. 场景</h3>
+<p>一个助手和同一个用户聊了几个月，对话太长，放不进模型一次能读的长度。于是需要"记忆系统"：把过去的对话存起来，用户提问时取出相关的部分，交给模型作答。</p>
 
-<h2>图一：问题有哪几种（现在只做 C 和 D）</h2>
-<ul class="tree">
-  <li><span class="b">A. 同一件事直接改口</span> <span class="chip done">已有人做</span>
-    <span class="who">强读者上接近做完（RAW-RAG + GPT-4.1-mini 91–95）。</span></li>
-  <li><span class="b">B. 没明说的更新</span> <span class="chip weak">做了但没解决</span>
-    <span class="who">STALE 第一类，最好的模型总分 55%。</span></li>
-  <li><span class="b">C. 上游变了，下游要跟着变</span> <span class="chip weak">做了但没解决</span> <b>← 现在的题</b>
-    <ul>
-      <li><span class="n">级联</span>：有规则给出下游的新值，要算出来。<span class="who">MEME 级联题、StateMemBench。</span></li>
-      <li><span class="n">失效</span>：没有规则给新值，旧值不能再信，应答"不确定"。<span class="who">MEME 失效题。</span></li>
-      <li><span class="n">隐式传播</span>：依赖关系没写出来，靠常识。<span class="who">STALE 第二类、StateGraph 和 PACMI 的自建集。先不做。</span></li>
-    </ul></li>
-  <li><span class="b">D. 用户要求删除</span> <span class="chip weak">做了但没解决</span> <span class="chip ours">我们量过</span>
-    <span class="who">加一段说明就能解决大半：8B 上 7 → 67（状态追踪包装）/ 83（依赖规则加思考）/ 93（告知题型加思考）。当作"不伤害"检查带着，不是主战场。</span></li>
-  <li><span class="b">E. 带限定条件的信息</span> <span class="chip gap">空白</span> <span class="who">例外、假设、别人的事。没有基准，先搁置。</span></li>
-  <li><span class="b">F. 时间和顺序</span> <span class="chip done">已有人做</span> <span class="who">上一个项目 cot-overwrite。</span></li>
+<h3>2. 容易的情况和难的情况</h3>
+<div class="ex"><b class="t">容易：</b>用户先说"我住北京"，后来说"我搬到上海了"。问"我住哪"。两句话说的是同一件事，取到后面那句就行。这类题现有系统已经做到 91–95%。</div>
+<div class="ex"><b class="t">难（级联）：</b>用户先说："我的锻炼安排是每周三次跑步，这取决于我的健康状况。如果肌腱炎好了，就改成每周两次瑜伽。"很多轮之后说："肌腱炎治好了。"<br>
+问："我现在的锻炼安排是什么？"正确答案是"每周两次瑜伽"。<br>
+<span class="who">没有任何一句话说"我现在练瑜伽"。要把"规则"和"后来发生的变化"合起来算。记忆里那条"每周三次跑步"没有人撤回，但已经过时了。</span></div>
+<div class="ex"><b class="t">难（失效）：</b>用户说："部署命令是 <code>nvx deploy</code>，它跟着部署平台走。"后来说："部署平台换成另一家了。"没有人说新命令是什么。<br>
+问："现在的部署命令是什么？"正确答案是"不确定，需要重新确认"，不能照报旧命令。</div>
+<p class="who">两个例子是按 MEME 的题改写的示意，具体措辞不是原文。</p>
+<p>这两种合起来叫<b>依赖更新</b>：上游的信息变了，下游的值要跟着变，或者不能再信。难点在于下游那条记忆本身没有被任何一句话改过。</p>
+
+<h3>3. 为什么值得做</h3>
+<ul>
+  <li><b>分数接近零。</b>MEME 基准（2026 年 5 月）测了 6 个记忆系统，级联题平均 3%，失效题平均 1%。之后的 RAW-RAG（2026 年 10 月）测了 7 个系统加它自己，级联都不超过 9%，失效都不超过 20%。</li>
+  <li><b>换贵的模型能解决一部分，但很贵。</b>让最强的模型来整理记忆，级联升到 32%，成本约 70 倍，而且别的题型变差。</li>
+  <li><b>同一个现象被独立发现了至少五次：</b>证据取到了，模型仍按旧值回答。我们上一个项目（cot-overwrite）看到的也是它的一个特例。</li>
 </ul>
 
-<h2>图二：一道依赖题要过四关，分数丢在哪一关</h2>
-<ul class="tree">
-  <li><span class="b">第 1 关 写入</span>：消息进来时要不要整理。
-    <ul>
-      <li><span class="n">不整理，只存原文</span>（读取派）。<span class="who">RAW-RAG。信息不丢，全部压力在读者。</span></li>
-      <li><span class="n">通用整理</span>（抽事实、合并、建图）<span class="chip weak">做了但没解决</span><br><span class="who">Mem0、图谱类等 7 个系统。RAW-RAG 把它们的整个记忆库都给读者，改写过的库比原文证据低 8–30 点：写入时就把触发事件或规则丢了。</span></li>
-      <li><span class="n">记依赖，上游变了给下游打标记</span> <span class="chip done">已有人做</span>，<span class="chip gap">没上过 MEME</span><br><span class="who">CUPMem、StateMem、StateGraph、PACMI。写下来的是"这个值需复查"，新值仍要读者自己算。</span></li>
-      <li><span class="n">写入时直接把新值算出来</span> <span class="chip weak">只有 Opus 做到</span><br><span class="who">MEME 表 4：文件式系统 + Opus 4.7 当写入者，级联 0 → 32、失效 7 → 59。代价：成本约 70 倍，精确回忆 95 → 60，追踪 80 → 20。</span></li>
-    </ul></li>
-  <li><span class="b">第 2 关 检索</span> <span class="chip ours">我们量过：不是主要缺口</span><br>
-    <span class="who">缺的全是触发事件（"肌腱炎好了"这类话和问题不像）。用上游实体再检索一次即可补齐。是方法里的小部件。</span></li>
-  <li><span class="b">第 3 关 摆放</span> <span class="chip done">已有人做</span> <span class="who">按时间排。LongMemEval 官方代码、RAW-RAG、我们的上一个项目。</span></li>
-  <li><span class="b">第 4 关 读者作答</span> <span class="chip weak">主要缺口</span> <span class="chip ours">我们量过</span>
-    <ul>
-      <li><span class="n">官方提示词</span>：8B 级联 0、失效 0。<span class="who">答对前置题的读者，变更后没有一题从旧值改答新值。</span></li>
-      <li><span class="n">打开思考</span>：级联 35、失效 5。</li>
-      <li><span class="n">已发表的提示词</span>：StateMem 的状态追踪包装级联 31、失效 5（比配对对照高 27 点，但 119 题里 38 题没答完，精确回忆 100 → 72）；RAW-RAG 的依赖规则不思考 2 / 0，思考后 22 / 33（失效涨了，级联比官方思考低 12 点）。</li>
-      <li><span class="n">告知题型</span>（诊断上限，不可部署）：不思考 18 / 10，思考 78 / 38。<span class="who">级联的差距主要是"不知道该用哪条规则"；失效题告知了也只有 38。</span></li>
-      <li><span class="n">同样的提示词，上下文换成检索到的原文</span>：收益消失。状态追踪 14 / 10，依赖规则加思考 25 / 8，官方思考 16 / 10；告知题型加思考 41 / 38（只给证据时 78 / 38）。</li>
-      <li><span class="n">换强读者</span>：证据给全时 DeepSeek-V4-Flash 级联 82；走真实检索时仍 ≤ 9。</li>
-      <li><span class="n">训练读者</span> <span class="chip gap">空白</span> <span class="who">唯一一次训练尝试是 StateAuditor 的 4B 审核器，没追上大模型。</span></li>
-    </ul></li>
+<h3>4. 它在"记忆更新"这个大问题里的位置</h3>
+<div class="wrap">
+<table>
+<tr><th style="width:26%">类型</th><th>例子</th><th style="width:30%">现状</th></tr>
+<tr><td>A. 同一件事直接改口</td><td>"住北京"→"搬到上海"</td><td><span class="chip done">基本做完</span> 强读者 91–95%</td></tr>
+<tr><td>B. 没明说的更新</td><td>"我刚领到新公司的工牌"（没说换了工作），之后问在哪上班</td><td><span class="chip weak">没解决</span> 最好的模型 55%</td></tr>
+<tr><td><b>C. 上游变了，下游跟着变</b><br><span class="who">级联、失效</span></td><td>上面两个例子</td><td><span class="chip weak">没解决</span> <b>← 我们的题</b></td></tr>
+<tr><td>D. 用户要求删除</td><td>"把我的住址忘掉"</td><td><span class="chip weak">没解决</span> 但加一段说明就能解决大半，我们当作附带检查</td></tr>
+<tr><td>E. 带条件的信息</td><td>例外、假设、别人的事</td><td><span class="chip gap">没有基准</span> 先搁置</td></tr>
+<tr><td>F. 时间和顺序</td><td>哪句话在后</td><td><span class="chip done">已有人做</span> 我们上一个项目</td></tr>
+</table>
+</div>
+
+<!-- ====================================================================== -->
+<h2 id="s2">二、术语</h2>
+
+<h3>1. 一道题要经过的四步</h3>
+<div class="pipe">
+  <div class="st"><b>① 写入</b>消息进来时，要不要先整理（抽事实、合并、记依赖）再存。</div><div class="ar">→</div>
+  <div class="st"><b>② 检索</b>提问时，从存下来的东西里取出相关的部分。</div><div class="ar">→</div>
+  <div class="st"><b>③ 摆放</b>取出的东西按什么顺序放进提示词。</div><div class="ar">→</div>
+  <div class="st"><b>④ 作答</b>模型读这些东西，写出答案。</div>
+</div>
+
+<h3>2. 名词表</h3>
+<dl>
+  <dt>读者</dt><dd>第 ④ 步作答的模型。<span class="who">我们用本机的 Qwen3-8B（80 亿参数的小模型），代表"便宜的读者"。</span></dd>
+  <dt>写入者</dt><dd>第 ① 步整理记忆的模型。可以和读者是同一个，也可以更强。</dd>
+  <dt>读取派</dt><dd>不整理，只存原文，把功夫花在检索和作答上。<span class="who">代表：RAW-RAG。好处是信息不会在写入时丢掉。</span></dd>
+  <dt>写入派</dt><dd>写入时就把对话整理成事实表、图或文件，读者读整理后的东西。<span class="who">代表：Mem0 和各种图谱类系统。</span></dd>
+  <dt>依赖感知的写入系统</dt><dd>写入派里的一小类：除了记事实，还记"谁依赖谁"，上游变了就给下游打一个"需复查"的标记。<span class="who">四家：CUPMem、StateMem、StateGraph、PACMI。</span></dd>
+  <dt>上游 / 下游 / 规则 / 触发事件</dt><dd>例子里"健康状况"是上游，"锻炼安排"是下游；"如果肌腱炎好了就改成瑜伽"是规则；"肌腱炎治好了"是触发事件。</dd>
+  <dt>级联题</dt><dd>有规则给出下游的新值，要算出来。</dd>
+  <dt>失效题</dt><dd>没有规则给新值，旧值不能再信，应答"不确定"。</dd>
+  <dt>删除题</dt><dd>用户要求忘掉某条信息，之后再问应当不说。</dd>
+  <dt>真通过率</dt><dd>变化之后的题答对，而且同一题在变化之前也答对，才算通过。<span class="who">只看变化之后，会把"从头到尾都答新值"的读者算成对的。本页的分数都是真通过率，写成"级联 / 失效"两个数。</span></dd>
+  <dt>标注证据</dt><dd>数据集自带的答案线索：哪几段对话里有回答这道题需要的话。只把这几段给读者，相当于"检索做到完美"。</dd>
+  <dt>完美写入（上限）</dt><dd>用标注直接造出"理想的记忆内容"交给读者，看读者能用上多少。<span class="who">它回答"写入做到最好时能到多少"，不是一个能用的方法。</span></dd>
+  <dt>写下来的东西的三种形态</dt><dd><b>标记</b>：旧条目不动，旁边加一句"需复查"。<b>改写</b>：把旧条目改成"X 之前是 …"。<b>值已算好</b>：直接写"当前 X：新值"。<span class="who">对写入者的要求依次变高。</span></dd>
+  <dt>思考 / 不思考</dt><dd>读者作答前是否先写一段推理。思考更准但更慢更贵，本页两种都报。</dd>
+  <dt>诊断 / 方法</dt><dd>用了标注或被告知答案在哪的实验只能用来解释和定位，叫诊断；不能当成方法的成绩。本页我们自己的数目前全是诊断。</dd>
+</dl>
+
+<h3>3. 用的基准：MEME</h3>
+<p>100 集多轮对话，每集约 3.2 万 token，分个人生活和软件开发两个领域。每集里埋了一条依赖链（上游、规则、触发事件），变化前后各问一轮。共六类题，我们关心级联、失效、删除三类，另用"精确回忆"检查有没有伤到普通题。我们只用 30 集做探索，其余 70 集封存，留作最后的测试。</p>
+
+<!-- ====================================================================== -->
+<h2 id="s3">三、相关研究</h2>
+
+<h3>1. 读取派：只存原文</h3>
+<p><b>RAW-RAG</b>（2610.30755）是读取派的代表：只存原文，检索后按时间摆放。它在 MEME 上的结果：</p>
+<ul>
+  <li>走完整流程，级联不超过 9%，失效不超过 20%，和它比的 7 个写入系统也一样。</li>
+  <li>只给标注证据（检索完美）时，分数由读者决定：小模型 GPT-4o-mini 级联 2%；中等模型 DeepSeek 级联 82%。<b>证据都在面前，小模型仍然不会用。</b></li>
+  <li>它把 7 个写入系统的整个记忆库直接交给读者，分数比给原文证据低 8–30 点：写入时就把规则或触发事件丢了。</li>
 </ul>
 
-<h2>图三：写入者 × 读者（核心的一张表）</h2>
-<p class="sub">格子里是 MEME 的"级联 / 失效"真通过率（%）。蓝 = 文献里的数；紫 = 我们量的；绿 = 没人量过；每行是"读者拿到的东西"，从不写入到完美写入。</p>
+<h3>2. 写入派：通用的整理</h3>
+<p><b>MEME</b>（2605.12477）自己测了 6 个系统，级联平均 3%，失效平均 1%。它另外做了两个关键实验：</p>
+<ul>
+  <li><b>换写入者。</b>同一个文件式系统，写入模型从 gpt-4.1-mini 换成 Opus 4.7，级联 0 → 32，失效 7 → 59。代价是成本约 70 倍，精确回忆 95 → 60。</li>
+  <li><b>完美写入。</b>把正确的记忆内容直接给读者：小模型级联 74、失效 37；最强的模型级联 93、失效 72。<b>写入做到完美，小读者的失效题也只有 37。</b></li>
+</ul>
+
+<h3>3. 写入派：依赖感知的四家</h3>
 <div class="wrap">
 <table>
-<tr><th style="width:23%">读者拿到什么</th><th>本机 Qwen3-8B</th><th>小 API 模型<br><span class="who">gpt-4.1-mini / GPT-4o-mini</span></th><th>中等模型<br><span class="who">DeepSeek-V4-Flash / Qwen3.5-35B</span></th><th>强模型<br><span class="who">Sonnet / Opus</span></th></tr>
-<tr><td><b>不写入</b>：整段历史</td><td>没量</td><td class="y num">3 / –<br><span class="who">MEME，gpt-4.1-mini</span></td><td class="y num">48 / 24<br><span class="who">RAW-RAG，DeepSeek</span></td><td>没查</td></tr>
-<tr><td><b>不写入</b>：真实检索到的原文</td><td class="o num">官方 2 / 3<br>思考 16 / 10<br>状态追踪 14 / 10<br>依赖规则 4 / 5<br>依赖规则 + 思考 25 / 8<br><span class="who">诊断：</span>告知题型 20 / 13<br><span class="who">诊断：</span>告知题型 + 思考 41 / 38</td><td class="y num" colspan="2">所有系统 ≤ 9 / ≤ 20<br><span class="who">RAW-RAG 表 4，含它自己</span></td><td>没有数</td></tr>
-<tr><td><b>不写入</b>：只给标注证据<br><span class="who">（检索完美）</span></td><td class="o num">官方 0 / 0<br>思考 35 / 5<br>状态追踪 31 / 5<br>依赖规则 2 / 0<br>依赖规则 + 思考 22 / 33<br><span class="who">诊断：</span>告知题型 18 / 10<br><span class="who">诊断：</span>告知题型 + 思考 78 / 38</td><td class="y num">2 / 36*<br><span class="who">GPT-4o-mini</span></td><td class="y num">82 / 92*<br><span class="who">DeepSeek</span><br>40 / 94*<br><span class="who">Qwen3.5-35B</span></td><td>没有数</td></tr>
-<tr><td><b>通用写入系统</b><br><span class="who">Mem0、图谱类等</span></td><td>没量，预期在地板</td><td class="y num">平均 3 / 1<br><span class="who">MEME，6 个系统</span><br>≤ 9 / ≤ 20<br><span class="who">RAW-RAG，7 个系统</span></td><td class="y num">≤ 9 / ≤ 20<br><span class="who">RAW-RAG，DeepSeek</span></td><td>没有数</td></tr>
-<tr><td><b>完美抽取，不整理状态</b><br><span class="who">全部事实原话，一行一条</span></td><td class="o num">2 / 0</td><td class="g">空白</td><td class="g">空白</td><td class="g">空白</td></tr>
-<tr><td><b>依赖感知写入系统</b><br><span class="who">CUPMem、StateMem、StateGraph、PACMI</span></td><td class="g">空白<br><span class="who">第 2 步，部分能做</span></td><td class="g">空白</td><td class="g">空白</td><td class="g">空白</td></tr>
-<tr><td><b>强模型当写入者</b><br><span class="who">文件式系统 + Opus 4.7 写</span></td><td class="g">空白<br><span class="who">最想要的格子，要 API</span></td><td class="g">空白</td><td class="g">空白</td><td class="y num">32 / 59<br><span class="who">MEME 表 4，Sonnet 4 作答，20 集。写入者换成 gpt-4.1-mini：0 / 7</span></td></tr>
-<tr><td><b>完美的依赖边，只打标记不算值</b></td><td class="o num"><span class="who">只给这条链，条目仍写"当前"：</span><br>31 / 0，加标记行 37 / 0<br><span class="who">条目改写成"之前是"：</span><br>90 / 0，加标记行 94 / 0<br>思考 100 / 28<br><span class="who">"之前是"，不挑选：</span>69 / 0<br><span class="who">整集状态块，StateMem 版式：</span><br>61 / 0，思考 90 / 28</td><td class="g">空白</td><td class="g">空白</td><td class="g">空白</td></tr>
-<tr><td><b>完美写入，值已算好</b><br><span class="who">MEME 的标准记忆</span></td><td class="o num">96 / 3<br>思考 100 / 68</td><td class="y num">74 / 37<br><span class="who">MEME 表 19，gpt-4.1-mini</span></td><td>没有数</td><td class="y num">Sonnet 4：60 / 81<br>Sonnet 4.6：84 / 62<br>Opus 4.7：93 / 72</td></tr>
+<tr><th>系统</th><th>做法</th><th>在哪测的</th><th>测过 MEME 吗</th><th>代码</th></tr>
+<tr><td><b>StateMem</b><br>2608.19652</td><td>每条消息调用一次模型，更新"状态单元"和依赖边；上游被取代时，程序自动给下游打"需复查"。</td><td>自建基准</td><td class="g">否</td><td>没有；提示词在附录，可以照着重写</td></tr>
+<tr><td><b>CUPMem</b><br>2605.06527</td><td>槽位表，冲突裁决，沿依赖传播。</td><td>STALE（它自己的基准）</td><td class="g">否</td><td>公开</td></tr>
+<tr><td><b>StateGraph</b><br>2611.02912</td><td>依赖图，用反事实提问来验证边。</td><td>自建 50 例</td><td class="g">否</td><td>没有</td></tr>
+<tr><td><b>PACMI</b><br>2610.05732</td><td>依赖图，边由标注给，不从原文建。</td><td>自建 100 例</td><td class="g">否</td><td>没有</td></tr>
 </table>
 </div>
-<p class="sub">* RAW-RAG 这一行的失效题另加了一段"依赖变了又没有新值就答不知道"的规则，级联题没有加。我们把同一段规则给 8B，失效题不思考 0，思考 33。<br>
-我们的数：级联 49 题、失效 40 题；失效题里有 2 集含 MEME 官方承认标错的题（<code>pl_009</code>、<code>sw_013</code>），剔除后各行变化不到 1.1 个点。完整的表和区间在 <code>PREREG_MEME_PROMPTS.md</code> 第 5、6 节。<br>
-<b>只给证据时的两个提示词收益，换成检索到的原文后都没了</b>：状态追踪包装对配对对照的级联优势 +27 → +4（区间含 0）；依赖规则加思考的失效 33 → 8。检索条件下，可部署的提示词在级联、失效上和"官方提示词加思考"都没有可分辨的差别。下降里多少来自检索漏掉触发事件、多少来自多出来的原文，还没有查。</p>
-<p><b>这张表说明的三件事：</b></p>
-<ol>
-  <li>不写入这条路，在小读者上被读者卡住：证据给全，8B 可部署的提示词里思考 35 / 5、依赖规则加思考 22 / 33，顾了一头丢一头；GPT-4o-mini 2 / 36。</li>
-  <li>写入这条路的上限在小读者上很高：8B 不思考级联 90–96（gpt-4.1-mini 74）。没有一个真实系统接近它。失效题的上限不思考是 0–3，思考后明说才到 68。</li>
-  <li>最下面三行（8B 一列）11-11 凌晨量了。从"完美抽取"的 2 到"改写旧条目"的 90，中间差的是写入时的状态整理；"依赖感知写入系统"和"强模型当写入者"两行仍是空白，它们要回答的是真实写入者能做到这条阶梯的哪一级。</li>
-</ol>
+<p>四家的共同点：写下来的是"标记"，新值仍留给读者算；每家只在自己的基准上报主结果，五个依赖基准互不通用。StateMem 自己的数据里，用 9B 小模型时写入系统得分 0.28，而只改作答提示词的做法得分 0.57 以上。</p>
 
-<h2>四家依赖感知系统，现在能不能上 MEME</h2>
+<h3>4. 读取侧的提示词</h3>
+<p>两篇论文各给了一段作答提示词：RAW-RAG 的"依赖规则"（依赖变了又没有新值就答不知道），StateMem 的"状态追踪包装"（先让模型列出状态变化再作答）。RAW-RAG 只在失效题上用了它的规则；StateMem 的包装没有在 MEME 上测过。唯一一次训练小模型的尝试（StateAuditor，训练 4B 的审核器）没有追上大模型。</p>
+
+<h3>5. 把已有的数放在一张表里</h3>
+<p class="sub">格子里是 MEME 的"级联 / 失效"（%）。蓝 = 文献里的数；绿 = 没有人量过。行是"读者拿到什么"，列是"读者多强"。</p>
 <div class="wrap">
 <table>
-<tr><th>系统</th><th>需要什么</th><th>现在的状态</th><th>30 集要多久（没实测）</th><th>出来的数该怎么称呼</th></tr>
-<tr><td><b>StateMem</b><br>2608.19652</td><td>附录 E 的提示词原文（已读）。不用下载。</td><td class="g"><b>能做。</b>代码要我们自己写。</td><td>6341 次写入调用，估 10–25 小时。先 6 集试跑量时间。</td><td>"我们按附录的复现"，不是官方实现。它原文就用 Qwen-9B，本机 8B 接近原设置。</td></tr>
-<tr><td><b>CUPMem</b><br>2605.06527</td><td>克隆官方仓库（MIT）；一个小检索模型；把它的 LLM 接口接到本机模型。</td><td class="y"><b>等许可后能试。</b>克隆和下载检索模型都要你同意。</td><td>未知。原文短实例每例约 9 万 token，MEME 每集长得多，可能几十小时。先 6 集计时。</td><td>官方代码换了模型。它的槽位表只覆盖个人生活，软件域要分开报，很可能不适用。</td></tr>
-<tr><td><b>StateGraph</b><br>2611.02912</td><td>没有公开代码，附录只有文件名。</td><td class="x"><b>做不了。</b>六类提示词照描述重写，算不上它的系统。</td><td>–</td><td>–</td></tr>
-<tr><td><b>PACMI</b><br>2610.05732</td><td>没有公开代码；依赖边靠标注给，不从原文建图。</td><td class="x"><b>原系统做不了。</b>能做的是"给定正确依赖边"的上限。</td><td>约 1 小时</td><td>"给定依赖边、只打标记的上限"，不能叫 PACMI。</td></tr>
-<tr><td><b>参照：文件式基线</b><br>MEME 自带</td><td>提示词在 MEME 代码里（已读）。</td><td class="g"><b>能做。</b></td><td>652 次调用，几小时。</td><td>MEME 官方基线换写入者。用来看写入者强弱的影响。</td></tr>
+<tr><th style="width:27%">读者拿到什么</th><th>小模型<br><span class="who">gpt-4.1-mini / GPT-4o-mini</span></th><th>中等模型<br><span class="who">DeepSeek / Qwen3.5-35B</span></th><th>强模型<br><span class="who">Sonnet / Opus</span></th></tr>
+<tr><td>检索到的原文（读取派完整流程）</td><td class="y num" colspan="2">≤ 9 / ≤ 20</td><td>没有数</td></tr>
+<tr><td>标注证据（检索完美）</td><td class="y num">2 / 36*</td><td class="y num">82 / 92*<br>40 / 94*</td><td>没有数</td></tr>
+<tr><td>通用写入系统的记忆库</td><td class="y num">平均 3 / 1</td><td class="y num">≤ 9 / ≤ 20</td><td>没有数</td></tr>
+<tr><td>依赖感知写入系统的记忆库</td><td class="g">空白</td><td class="g">空白</td><td class="g">空白</td></tr>
+<tr><td>强模型当写入者</td><td class="g">空白</td><td class="g">空白</td><td class="y num">32 / 59</td></tr>
+<tr><td>完美写入，值已算好</td><td class="y num">74 / 37</td><td>没有数</td><td class="y num">60–93 / 62–81</td></tr>
 </table>
 </div>
-<p><b>所以"四家上 MEME"现在的实际含义是：</b>一家复现（StateMem）、一家官方代码但换模型换域（CUPMem，待许可）、两家做不了。加上本机写入者只有 8B / 14B，最可能的结果是"都在地板"，和 MEME 用 gpt-4.1-mini 当写入者的结果一致。单靠这一步撑不起一篇论文，它的作用是配合"写入检查"说清楚分数丢在写入还是丢在读取。</p>
+<p class="sub">* 这一行的失效题，RAW-RAG 另加了"依赖规则"那段提示词，级联题没有加。</p>
 
-<h2>现在的空白（按先后顺序）</h2>
+<h3>6. 文献留下的三个问题</h3>
 <ol>
-  <li><span class="chip ours">量过（诊断）</span> <b>写给弱读者的东西，是"算好的值"有用，还是"打个标记"就够？</b>级联题：值不用算好（96 对 90–94），但一行标记不够（37），要把旧条目改写成"之前是"并挑出相关的几行。失效题：都不够。四家依赖感知系统写下来的是标记加原条目，按这个结果，它们帮不帮得上弱读者取决于标记怎么呈现，这正是 StateMem 试跑要看的。带思考的版本还没出。</li>
-  <li><span class="chip gap">空白</span> <b>依赖感知系统在 MEME 上、同一读者下的分数，以及丢分的位置。</b>先 StateMem 复现，CUPMem 待许可。</li>
-  <li><span class="chip gap">空白</span> <b>强写入者 + 弱读者。</b>图三里最想要的格子：便宜的读者能不能吃到贵的写入的好处。需要 API，第二轮。</li>
-  <li><span class="chip gap">空白</span> <b>结合。</b>写入产物和原文证据一起给读者，或写入时只做便宜的依赖标记、读取时顺着标记取证据。没有人在依赖题上做过。</li>
-  <li><span class="chip gap">空白</span> <b>训练读者用写入的产物。</b>目标由第 1 条决定。失效题是最硬的：完美写入下小读者也只有 37，8B 上可部署的最好 33，告知题型也只有 38。</li>
-</ol>
-<p class="who">从上一版降级的两条："读取时顺着依赖取证据"（量过，是小部件）；"带限定条件的信息"（没有基准，搁置）。</p>
-
-<h2>对上一版和之前汇报的更正</h2>
-<ol>
-  <li>上一版第 4 条空白"写入派和读取派放在同一基准、同一读者下比"：通用系统的部分 RAW-RAG 已经做了。</li>
-  <li>之前说"和 RAW-RAG 的失效题对不上（5% 对 94%）"：它在失效题上另加了规则，不是同一个条件。级联题两边对得上。</li>
-  <li>上一版写 StateMem 的包装"6 个后端各涨 32–67 点"：那是它自己的基准。在 MEME、8B 上，级联 +27（对配对对照），失效 +2.5，区间含 0。</li>
-  <li>MEME 官方已知问题：130 道失效题有 10 道标错，探索集里涉及 2 集。已报的失效题数字待剔除重算。</li>
-  <li>提示词基线的预测错了三处：依赖规则不思考时，失效预测 ≥ 40、实际 0，删除预测 ≤ 15、实际 47；状态追踪包装级联预测 ≥ 35、实际 31，并且伤了精确回忆（100 → 72）。告知题型加思考级联到 78，事先没有想到。</li>
-  <li>今天下午这页的早先版本写过"失效题所有提示词都 ≤ 10"，那时带思考的两组还没跑完。思考加依赖规则是 33。</li>
-  <li>预测"检索条件下各提示词的数都不高于只给证据"按字面错了：16 格里 11 格更高，都在接近地板的行，净多 1–3 题，区间含 0。只给证据时高于 30 的格子换成检索后明显下降（四个里降 16–37 点），例外是告知题型加思考的失效题（38 不变）。</li>
-  <li>写入上限的预测错了六处：只打标记、不思考的级联预测 ≤ 40，实际 94；值算好比只打标记预测高 40 点以上，实际 2 点；只打标记、思考后的失效预测 ≥ 40，实际 28；StateMem 版式和只打标记预测相差不超过 15 点，不思考的级联实际差 33；条目写"当前"加标记行预测 ≥ 60，实际 37；标记行的作用预测 ≥ 25 点，实际 6 点。</li>
-  <li>凌晨第一版汇报里"只打标记级联 94"容易读成"标记就够"。对照之后的结论是：94 来自把旧条目改写成"之前是"，标记行本身只值 4–6 点（区间含 0）。</li>
+  <li><b>依赖感知的写入系统在 MEME 上到底多少分？</b>四家都没测过。通用系统已经被比过了，剩下的就是这一类。</li>
+  <li><b>对便宜的读者，写入到底要做到哪一步才有用？</b>文献只有两头：什么都不整理（2%）和把答案算好（74%），而且是两个不同的小模型。中间的"只打标记""只抽事实"没有人量过。</li>
+  <li><b>失效题谁来解决？</b>完美写入下小读者也只有 37%，没有人给出办法。</li>
 </ol>
 
-<h2>这些论文彼此重合在哪</h2>
-<ol>
-  <li><b>同一个现象被发现了至少五次：证据取到了，模型仍按旧值答。</b>STALE、StateMem、MEME、MemConflict、2610.36308，加上我们的 cot-overwrite 和这次的 8B 试验。</li>
-  <li><b>依赖传播有五个基准，互不通用。</b>MEME、STALE、StateMemBench、StateChangeBench、PACMI 自建集。每家只在自己的基准上报主结果。</li>
-  <li><b>写入时"状态 + 依赖图"有四家，做法很像，写下来的都是标记而不是算好的值。</b>StateGraph 和 PACMI 是同一个第一作者。</li>
-  <li><b>写入派自己的数据也不支持"写入帮弱读者"。</b>StateMem 在自己的基准上、Qwen-9B：写入系统 0.283，读取时的提示词包装 ≥ 0.567。但它的写入者也是 9B，是"弱写入 + 弱读者"。</li>
-</ol>
+<!-- ====================================================================== -->
+<h2 id="s4">四、我们已经量到的</h2>
+<p class="sub">读者一律是本机 Qwen3-8B，MEME 官方的作答和判分提示词，30 集探索集（级联 49 题、失效 40 题、删除 30 题）。每个实验都先写下预测和判定线再跑。记录在 <code>PREREG_MEME_PILOT.md</code>、<code>PREREG_MEME_READER.md</code>、<code>PREREG_MEME_PROMPTS.md</code>、<code>PREREG_MEME_WRITE.md</code>。</p>
 
-<h2>论文对照表</h2>
+<h3>发现 1：检索不是主要问题</h3>
+<p>按 RAW-RAG 的方式检索，回答一道题所需的全部证据都被取到的比例：级联 76%，失效 68%，删除 100%。缺的全是触发事件（"肌腱炎治好了"这类话和问题长得不像）。用上游的名字再检索一次就能补到 100%。把缺的证据补给读者，正确率没有变化。</p>
+
+<h3>发现 2：证据都给了，小读者仍然不会用；现成的提示词只能补一部分</h3>
 <div class="wrap">
 <table>
-<tr><th>论文</th><th>管哪类问题</th><th>在哪一步</th><th>主要基准</th><th>测过 MEME 吗</th><th>代码</th></tr>
-<tr><td>RAW-RAG 2610.30755</td><td>A、C、D</td><td>读取：检索；另比了 7 个写入系统</td><td>LoCoMo、LongMemEval、MEME、MemoryAgentBench</td><td class="y">是，级联 ≤ 9</td><td>公开</td></tr>
-<tr><td>MEME 2605.12477</td><td>C、D（基准）</td><td>评测 6 个系统；写入者强弱；完美写入上限</td><td>MEME</td><td class="y">是，级联平均 3</td><td>公开，MIT</td></tr>
-<tr><td>STALE / CUPMem 2605.06527</td><td>B、C 隐式</td><td>写入：槽位表 + 裁决 + 传播；受控读出</td><td>STALE</td><td class="g">否</td><td>公开，MIT</td></tr>
-<tr><td>StateMem 2608.19652</td><td>A、C 写明</td><td>写入：状态单元 + 依赖边；另有作答提示词</td><td>StateMemBench、LongMemEval、LoCoMo</td><td class="g">否</td><td>没找到；提示词在附录</td></tr>
-<tr><td>StateGraph 2611.02912</td><td>C 隐式</td><td>写入：依赖图，反事实验证</td><td>StateChangeBench（50 例）</td><td class="g">否</td><td>没找到</td></tr>
-<tr><td>PACMI 2610.05732</td><td>C</td><td>写入：依赖图，边由标注给</td><td>自建 100 例</td><td class="g">否</td><td>没找到</td></tr>
-<tr><td>StateAuditor 2608.01619</td><td>B、C 隐式</td><td>答完再查；试过训练 4B，失败</td><td>STALE</td><td>否</td><td>没查</td></tr>
-<tr><td>QEMem / BFR / MERA</td><td>不针对更新</td><td>读取：多轮检索</td><td>LoCoMo、LongMemEval</td><td>否</td><td>没查</td></tr>
-<tr><td>TIDER 2610.23598</td><td>时间</td><td>读取：时间段检索</td><td>LifeBench、LoCoMo</td><td>否</td><td>没查</td></tr>
-<tr><td>cot-overwrite（我们）</td><td>F、A</td><td>读取：摆放 + 训练读者</td><td>MemConflict、LongMemEval、PersonaMem、ConvoMem</td><td class="o">11-10 起，探索集</td><td>–</td></tr>
+<tr><th style="width:36%">作答方式（只给标注证据）</th><th class="num">级联</th><th class="num">失效</th><th class="num">删除</th><th>备注</th></tr>
+<tr><td>官方提示词，不思考</td><td class="o num">0</td><td class="o num">0</td><td class="o num">7</td><td>没有一题在变化后从旧值改答新值</td></tr>
+<tr><td>官方提示词，思考</td><td class="o num">35</td><td class="o num">5</td><td class="o num">30</td><td></td></tr>
+<tr><td>StateMem 的状态追踪包装</td><td class="o num">31</td><td class="o num">5</td><td class="o num">67</td><td>三分之一的题没写出答案；精确回忆 100 → 72</td></tr>
+<tr><td>RAW-RAG 的依赖规则，思考</td><td class="o num">22</td><td class="o num">33</td><td class="o num">83</td><td>失效涨了，级联比官方思考低</td></tr>
+<tr><td>直接告诉读者这是哪类题，思考<br><span class="who">诊断，实际中做不到</span></td><td class="o num">78</td><td class="o num">38</td><td class="o num">93</td><td>级联接近中等模型的 82</td></tr>
+</table>
+</div>
+<p>没有一个能实际使用的提示词让级联和失效同时超过 35。告诉读者题型之后级联能到 78，说明 <b>8B 会算，差在不知道该用哪条规则</b>；失效题即使告知也只有 38。</p>
+
+<h3>发现 3：换成真实检索到的原文，提示词的收益在级联和失效上都消失</h3>
+<div class="wrap">
+<table>
+<tr><th style="width:36%">作答方式</th><th class="num">只给标注证据<br>级联 / 失效</th><th class="num">检索到的原文<br>级联 / 失效</th></tr>
+<tr><td>官方提示词，思考</td><td class="o num">35 / 5</td><td class="o num">16 / 10</td></tr>
+<tr><td>StateMem 的状态追踪包装</td><td class="o num">31 / 5</td><td class="o num">14 / 10</td></tr>
+<tr><td>RAW-RAG 的依赖规则，思考</td><td class="o num">22 / 33</td><td class="o num">25 / 8</td></tr>
+<tr><td>告知题型，思考（诊断）</td><td class="o num">78 / 38</td><td class="o num">41 / 38</td></tr>
+</table>
+</div>
+<p>在真实检索下，这些提示词和"官方提示词加思考"在级联、失效上没有可分辨的差别。只有删除题的收益保留下来。</p>
+
+<h3>发现 4：级联题对小读者不是推理问题，是"面前的东西有没有整理好"的问题</h3>
+<p>我们用标注造出几种"理想的记忆内容"，一级一级加东西，看不思考的 8B 级联题能到多少：</p>
+<div class="ladder">
+  <div class="rung"><span>证据所在的对话原文</span><div class="bar"><i style="width:0.5%"></i></div><span class="v">0</span></div>
+  <div class="rung"><span>把全部事实抽成一行一条（只抽取，不整理）</span><div class="bar"><i style="width:2%"></i></div><span class="v">2</span></div>
+  <div class="rung"><span>只挑出这条依赖链的几行，旧条目仍写"当前 X：旧值"</span><div class="bar"><i style="width:30.6%"></i></div><span class="v">31</span></div>
+  <div class="rung"><span>上一行 + 一句"需复查"的标记</span><div class="bar"><i style="width:36.7%"></i></div><span class="v">37</span></div>
+  <div class="rung"><span>把旧条目改写成"X 之前是 旧值"</span><div class="bar"><i style="width:89.8%"></i></div><span class="v">90</span></div>
+  <div class="rung"><span>上一行 + 标记</span><div class="bar"><i style="width:93.9%"></i></div><span class="v">94</span></div>
+  <div class="rung"><span>直接把新值算好写上</span><div class="bar"><i style="width:95.9%"></i></div><span class="v">96</span></div>
+  <div class="rung alt"><span>"之前是"的写法，但不挑选（整集的事实都放进来）</span><div class="bar"><i style="width:69.4%"></i></div><span class="v">69</span></div>
+  <div class="rung alt"><span>StateMem 的版式，整集的状态块，带标记</span><div class="bar"><i style="width:61.2%"></i></div><span class="v">61</span></div>
+</div>
+<div class="key">
+<b>读法：</b>
+<ul>
+  <li><b>不需要替读者把值算好。</b>改写旧条目（90）和算好新值（96）差不多。</li>
+  <li><b>光抽取没有用。</b>一行一条的事实（2）和原始对话（0）没有差别。</li>
+  <li><b>起作用的是"旧条目被标成旧的"。</b>改写比不改写高 59 点；在没改写的条目后面加一句标记只高 6 点，统计上分不出来。</li>
+  <li><b>写完之后还要挑。</b>不挑选掉 20 点。</li>
+</ul>
+</div>
+<p class="who">保留：这一组只量了不思考；"加一句标记"是我们自己的写法，StateMem 的版式（把待复查的条目单独放一节并附说明）在不挑选时是 61，和"之前是"不挑选的 69 没有可分辨的差别，所以不能说"标记都没用"，只能说"条目还写着'当前'时，在后面补一句不够"。</p>
+
+<h3>发现 5：失效题两边都没解决</h3>
+<div class="wrap">
+<table>
+<tr><th style="width:52%">给读者什么</th><th class="num">不思考</th><th class="num">思考</th></tr>
+<tr><td>标注证据 + 最好的提示词（依赖规则）</td><td class="o num">0</td><td class="o num">33</td></tr>
+<tr><td>完美写入：旧条目改写成"之前是" + 标记</td><td class="o num">0</td><td class="o num">28</td></tr>
+<tr><td>完美写入：明说"变化之后没有声明新值，旧值可能不再有效"</td><td class="o num">3</td><td class="o num">68</td></tr>
+<tr><td>告知题型（诊断）</td><td class="o num">10</td><td class="o num">38</td></tr>
+</table>
+</div>
+<p>不思考时，即使记忆里明说"旧值可能失效"，读者 40 题里仍有 39 题没有拒答。思考后明说能到 68，标记只有 28，不比提示词强。<b>小读者不会从"需复查"推出"现在不知道"。</b></p>
+
+<h3>发现 6：删除题写入时处理最省事</h3>
+<p>删除请求就放在值的旁边，不思考的读者仍然 90% 把值说出来（思考后 83% 不说）。写入时直接把这条移出记忆，两种情况都是 93–97%。</p>
+
+<h3>正在跑、还没有结果的</h3>
+<ul>
+  <li><b>StateMem 的复现试跑（6 集，8B 当写入者）。</b>目的是看真实的小写入者能做到上面阶梯的哪一级。写入还没跑完，已经知道的两点：8B 写 6 集用了约 10 小时，推算 30 集要 48 小时左右，超过我们事先定的 30 小时线；每集攒下 170–470 条状态单元（用标注造的理想状态约 20 条），输出格式解析失败约 5%。正确率还没有。</li>
+  <li><b>结合</b>：完美写入的内容和检索到的原文一起给读者，会不会被原文里的旧值拉回去。</li>
+  <li>发现 4 那几组的<b>思考版</b>。</li>
+</ul>
+
+<h3>加上我们的数之后的那张表（8B 一列）</h3>
+<div class="wrap">
+<table>
+<tr><th style="width:34%">读者拿到什么</th><th>本机 8B：不思考</th><th>本机 8B：思考</th><th>文献里的小模型</th></tr>
+<tr><td>检索到的原文</td><td class="o num">2 / 3</td><td class="o num">16 / 10</td><td class="y num">≤ 9 / ≤ 20</td></tr>
+<tr><td>标注证据</td><td class="o num">0 / 0</td><td class="o num">35 / 5</td><td class="y num">2 / 36*</td></tr>
+<tr><td>完美抽取，不整理</td><td class="o num">2 / 0</td><td>在跑</td><td class="g">空白</td></tr>
+<tr><td>依赖感知写入系统（真实写入者）</td><td>在跑（StateMem 6 集）</td><td>在跑</td><td class="g">空白</td></tr>
+<tr><td>完美的依赖标记（StateMem 版式，整集）</td><td class="o num">61 / 0</td><td class="o num">90 / 28</td><td class="g">空白</td></tr>
+<tr><td>完美改写 + 挑选</td><td class="o num">90–94 / 0</td><td class="o num">100 / 28</td><td class="g">空白</td></tr>
+<tr><td>完美写入，值已算好</td><td class="o num">96 / 3</td><td class="o num">100 / 68</td><td class="y num">74 / 37</td></tr>
 </table>
 </div>
 
-<h2>名词</h2>
-<div class="ex"><b>级联题（MEME 原例）。</b>用户先说："如果我的健康状况变了，锻炼就改成每周两次瑜伽。"很多轮之后说："肌腱炎治好了。"问：现在的锻炼安排是什么？正确答案是"每周两次瑜伽"。没有任何一句话直接说"我现在练瑜伽"，要把规则和变化合起来算。</div>
-<div class="ex"><b>失效题（MEME 原例）。</b>部署平台从 Narvex Cloud 换成 Thandrel Infra。部署命令原来跟着旧平台，没人说换平台后它变成什么。问：现在的部署命令是什么？正确答案是"不确定，需要重新确认"，不能照报旧命令。</div>
-<div class="ex"><b>真通过率。</b>变更之后的题答对，而且同一题在变更之前也答对，才算通过。只看变更之后会把"碰巧一直答新值"的读者算进去。</div>
-<div class="ex"><b>写入产物的两种形态。</b>"只打标记"：记忆里写"锻炼安排：〈旧的安排〉（需复查，因为健康状况变了）"，新值留给读者算。"值已算好"：记忆里直接写"当前锻炼安排：每周两次瑜伽"。前者是四家依赖感知系统的做法，后者只有 Opus 当写入者时出现过。</div>
-<div class="ex"><b>写入检查。</b>不看最终答案，只看记忆里有没有出现该有的东西（新值或失效标记）。有而答错是读者的问题，没有就是写入的问题。</div>
+<!-- ====================================================================== -->
+<h2 id="s5">五、我们能补什么</h2>
+
+<h3>1. 目前站得住的判断</h3>
+<ol>
+  <li><b>级联题：瓶颈在写入时的状态整理，上限很高。</b>读取派的路（只存原文加提示词）在小读者上最多 35，真实检索下 16–25。写入做对了，同一个读者不思考就能到 90 以上。</li>
+  <li><b>"做对"的含义比文献说的更具体：</b>不是抽事实，也不必算新值，而是把过时的下游条目标成旧的，并且只把相关的几行交给读者。</li>
+  <li><b>失效题是真正没人解决的部分。</b>写入、提示词、告知题型都在 40 以下，只有"明说 + 思考"到 68。</li>
+  <li><b>还不知道的：</b>真实的写入者（不靠标注）能做到哪一步。这是下面所有方向的前提。</li>
+</ol>
+
+<h3>2. 三个可以做的方向</h3>
+<div class="wrap">
+<table>
+<tr><th style="width:17%">方向</th><th>做什么</th><th>补的是哪个空白</th><th>手里的证据</th><th>风险</th></tr>
+<tr><td><b>甲. 测量</b><br><span class="who">最稳，贡献最小</span></td><td>把依赖感知的写入系统放到 MEME 上，同一个读者；同时做"写入检查"（不看答案，只看记忆里有没有该有的东西），说清每家的分数丢在写入还是丢在读取。</td><td>文献问题 1：四家都没上过 MEME。</td><td>阶梯（发现 4）已经给出了"记忆里该有什么"的标准。</td><td>四家里只有 StateMem 能复现、CUPMem 要等许可，另两家没有代码。本机写入太慢（6 集约 10 小时）。单独成文偏薄。</td></tr>
+<tr><td><b>乙. 给读取派加一本"依赖账"</b><br><span class="who">我的建议</span></td><td>以 RAW-RAG 为底：原文照存（不丢信息），写入时只多做一件便宜的事，识别"谁依赖谁、哪条是规则、什么变了"。提问时顺着这本账，把过时的下游条目改写成"之前是"，连同规则和变化一起，放在检索到的原文前面。</td><td>文献问题 2：写入要做到哪一步；以及"结合"没有人在依赖题上做过。它直接改进一个已发表系统的已知短板（RAW-RAG 在 MEME 上 ≤ 9）。</td><td>级联的上限 90 以上（发现 4）；起作用的成分已经分清（改写 + 挑选）；检索缺的正是触发事件，而账里有上游的名字可以补检索（发现 1）。</td><td>前提没验证：便宜的写入者能不能把依赖和规则认出来。原文和账一起给会不会互相干扰，在跑。失效题这个方向解决不了。</td></tr>
+<tr><td><b>丙. 训练读者</b><br><span class="who">最难，贡献最大</span></td><td>训练小读者学会两件事：读到"上游变了"时不再照报下游的旧值；没有新值时答"不确定"。训练数据自己合成，不碰 MEME。</td><td>文献问题 3：失效题没有人给出办法。也没有人训练过读者做这件事。</td><td>失效题所有免训练的办法都在 40 以下（发现 5）；告知题型后级联 78，说明能力在，缺的是触发它的习惯（发现 2）。上一个项目有完整的训练和评测流程。</td><td>容易学成"见到变化就拒答"，伤到普通题，必须带"不伤害"测试（MMLU、GSM8K、IFEval、LongBench 这一套）。MEME 的失效题有已知的标注错误（130 题里 10 题）。要在第二个基准上验证才算数。</td></tr>
+</table>
+</div>
+
+<div class="key">
+<b>我的建议：以乙为主线，甲作为它的第一章，丙留作失效题的后手。</b>
+<ul>
+  <li>乙符合"从一个已发表的方案出发、补它的短板"：RAW-RAG 自己承认 MEME 的依赖题没解决。</li>
+  <li>甲不用另起炉灶：要做乙，本来就得先知道现有写入系统把依赖认对了多少。</li>
+  <li>丙等乙的结果：如果账做对了失效题仍然不动，就有了训练读者的理由，而且训练目标很明确（读懂账里的"已失效"）。</li>
+</ul>
+</div>
+
+<h3>3. 接下来先回答的三个问题（都不需要新下载，除了第 3 条）</h3>
+<ol>
+  <li><b>便宜的写入者认不认得出依赖和规则？</b>不必像 StateMem 那样每条消息都更新整个状态。只做一件事：读一段对话，输出"X 取决于 Y""如果 Y 变成 …，X 就是 …"。在 30 集上用标注核对认出了多少。这决定乙能不能做。</li>
+  <li><b>账和原文一起给，会不会被原文拉回去？</b>已经在跑（用完美的账）。</li>
+  <li><b>换一个读者、换一个基准还成立吗？</b>现在只有一个 8B 读者、一个基准。需要你同意下载第二个基准（STALE 是公开的）和可能的 API 额度。</li>
+</ol>
+
+<h3>4. 需要你或导师定的事</h3>
+<ul>
+  <li>主线选甲、乙、丙里的哪个，或者别的组合。</li>
+  <li>能不能用 API。"强模型写入 + 小读者"那个格子、以及用官方的 gpt-4o 判分，都需要。</li>
+  <li>是否克隆 CUPMem 和 MEME 的官方仓库；是否写信向 StateMem、StateGraph 的作者要代码。</li>
+  <li>StateMem 全量 30 集按现在的速度要两天，超过了事先定的线。我的建议是不跑全量，改做上面第 1 条那个便宜得多的"只认依赖"的写入者。</li>
+</ul>
+
+<!-- ====================================================================== -->
+<h2 id="s6">附：限制和猜错的地方</h2>
+
+<h3>限制</h3>
+<ul>
+  <li>只有一个读者（8B，4-bit 量化），一个基准，30 集探索集。区间很宽，例如级联 31 的 95% 区间是 17–45。</li>
+  <li>判分用的是本机 14B，不是官方的 gpt-4o。级联题上和"答案字符串是否出现"核对过，49 题里 46–48 题一致；删除题和变化之前的题一致率低于 90%。</li>
+  <li>发现 4、5、6 全部用了标注，是上限，不是方法。其中几组对照是看到前一步结果之后才设计的，属于探索。</li>
+  <li>思考只采样了一次。</li>
+  <li>MEME 的失效题有已知的标注错误，探索集里涉及 2 题，剔除后各数变化不到 2 点。</li>
+  <li>四家依赖感知系统的做法是按论文正文和附录读的；StateGraph、PACMI 没有代码可以核对。</li>
+</ul>
+
+<h3>事先的预测，错了哪些</h3>
+<p>每个实验跑之前都写了预测。错的比对的更有信息，列在这里：</p>
+<ol>
+  <li>预测检索是主要问题（级联证据取全不到 60%）。实际 76%，问题在读者。</li>
+  <li>预测 RAW-RAG 的依赖规则不思考时失效题 ≥ 40。实际 0：不思考的 8B 基本不执行这条规则。</li>
+  <li>预测 StateMem 的包装不伤其他题。实际精确回忆从 100 掉到 72。</li>
+  <li>预测"只打标记、不思考"级联 ≤ 40。实际 94；随后的对照说明这 94 来自"改写成之前是"，不来自标记。</li>
+  <li>预测"值算好"比"只打标记"高 40 点以上。实际 2 点。</li>
+  <li>预测在仍写"当前"的条目后面加标记能到 60。实际 37。</li>
+  <li>预测标记在思考后能把失效题带到 40 以上。实际 28。</li>
+</ol>
+<p class="who">更早版本里说错、后来更正的两句话："写入派和读取派没有人直接比过"（通用系统的部分 RAW-RAG 已经比了）；"失效题所有提示词都不超过 10"（只对不思考成立，思考加依赖规则是 33）。</p>
+
+<h3>论文一览</h3>
+<div class="wrap">
+<table>
+<tr><th>论文</th><th>是什么</th><th>主要基准</th><th>测过 MEME 吗</th><th>代码</th></tr>
+<tr><td>MEME 2605.12477</td><td>基准；另做了换写入者、完美写入两个实验</td><td>MEME</td><td class="y">是</td><td>公开</td></tr>
+<tr><td>RAW-RAG 2610.30755</td><td>读取派最强系统；比了 7 个写入系统</td><td>LoCoMo、LongMemEval、MEME 等</td><td class="y">是，级联 ≤ 9</td><td>公开</td></tr>
+<tr><td>STALE / CUPMem 2605.06527</td><td>基准 + 依赖感知写入系统</td><td>STALE</td><td class="g">否</td><td>公开</td></tr>
+<tr><td>StateMem 2608.19652</td><td>依赖感知写入系统 + 作答提示词</td><td>自建、LongMemEval、LoCoMo</td><td class="g">否</td><td>没有，提示词在附录</td></tr>
+<tr><td>StateGraph 2611.02912</td><td>依赖感知写入系统</td><td>自建 50 例</td><td class="g">否</td><td>没有</td></tr>
+<tr><td>PACMI 2610.05732</td><td>依赖感知写入系统，边由标注给</td><td>自建 100 例</td><td class="g">否</td><td>没有</td></tr>
+<tr><td>StateAuditor 2608.01619</td><td>答完再审核；试过训练 4B，没成功</td><td>STALE</td><td>否</td><td>没查</td></tr>
+<tr><td>cot-overwrite（我们的上一个项目）</td><td>时间顺序；摆放 + 训练读者</td><td>MemConflict、LongMemEval 等</td><td class="o">这次开始</td><td>–</td></tr>
+</table>
+</div>
 </main>
 </body>
 </html>
