@@ -1,0 +1,31 @@
+t	repo	note	dates	cat	dep	why
+T018	R05	MEMORY.md	2026-03-29->2026-03-29	VAL	prop	host address changed; both lines naming it updated; test advice changed
+T025	R06	MEMORY.md	2026-02-25->2026-02-28	VAL	prop	agents 5->3, skills 3->4; count and table updated together
+T030	R09	MEMORY.md	2026-02-27->2026-02-28	ADD	-	tools added to list
+T039	R10	MEMORY.md	2026-04-03->2026-04-05	VAL	none	which port serves a path corrected; older routing line may remain
+T040	R12	MEMORY.md	2026-03-26->2026-04-02	VAL	none	deploy pipeline skips a stage; other deploy notes may still describe it
+T054	R24	project_acceptance_assessment.md	2026-04-11->2026-04-17	STAT	unk	assessment replaced by newer estimate
+T059	R24	project_experiment_status.md	2026-03-30->2026-03-30	STAT	unk	inventory rewritten
+T060	R24	project_experiment_status.md	2026-03-30->2026-03-31	STAT	unk	headline result replaces inventory
+T063	R24	project_experiment_status.md	2026-04-09->2026-04-09	STAT	unk	tiers progress
+T065	R24	project_experiment_status.md	2026-04-09->2026-04-15	STAT	unk	all experiments complete
+T066	R24	project_neurips26_idea.md	2026-03-30->2026-03-30	VAL	unk	paper direction rewritten; other notes describe the method
+T069	R24	project_neurips26_idea.md	2026-04-09->2026-04-14	VAL	unk	contributions reordered
+T072	R24	project_reviewer_critique.md	2026-04-09->2026-04-09	STAT	unk	resolution table updated
+T087	R31	MEMORY.md	2026-02-28->2026-03-02	STAT	prop	list of docs left stale by an earlier architecture change replaced by cleanup-done
+T090	R31	MEMORY.md	2026-03-05->2026-03-08	STAT	unk	cleanup status and phase numbers advanced
+T093	R31	MEMORY.md	2026-03-10->2026-03-28	VAL	prop	schema version changed; both lines stating it updated
+T103	R34	MEMORY.md	2026-03-04->2026-03-04	REW	-	status line replaced by pointer
+T104	R34	tgip-todo.md	2026-03-04->2026-03-05	STAT	unk	todo note: two phases done; index line still names phase 1; index not observed afterwards
+T109	R36	MEMORY.md	2026-03-28->2026-03-28	STAT	unk	gap closed; open-work list added
+T111	R36	MEMORY.md	2026-03-29->2026-03-29	STAT	unk	progress log dropped; open items added
+T112	R36	MEMORY.md	2026-03-29->2026-03-29	STAT	prop	three issues done; order of remaining issues re-derived
+T117	R36	MEMORY.md	2026-03-30->2026-03-30	REW	-	rule extended
+T122	R36	MEMORY.md	2026-04-02->2026-04-02	STAT	unk	checkpoint split in two
+T127	R36	MEMORY.md	2026-04-04->2026-04-04	STAT	unk	issue complete
+T132	R36	feedback_do_not_push_without_permission.md	2026-03-30->2026-03-30	ADD	-	extra step added to a rule
+T135	R36	feedback_research_before_building_transparency.md	2026-03-29->2026-04-14	REW	-	reworded
+T142	R36	project_047_session_checkpoint.md	2026-04-02->2026-04-02	STAT	unk	checkpoint progress
+T143	R36	project_052_review_time_session.md	2026-04-06->2026-04-06	STAT	unk	branch progress
+T146	R39	MEMORY.md	2026-02-24->2026-02-26	STAT	unk	pending fix section replaced by notes
+T159	R47	MEMORY.md	2026-02-26->2026-02-27	VAL	none	user profile corrected
