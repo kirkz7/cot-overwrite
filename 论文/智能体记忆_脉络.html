@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>智能体记忆：按时间排的脉络</title>
+<style>
+  :root { --ink:#1f2430; --mute:#667085; --line:#d9dee7; --bg:#ffffff; --soft:#f5f7fa;
+          --done:#e6eefb; --doneb:#4a78c2; --gap:#dff3e4; --gapb:#4f9d69; --ours:#ece6f7; --oursb:#8a6fc2; --warn:#fdf0d5; --warnb:#c98a1b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.7 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  main { max-width:1040px; margin:0 auto; padding:28px 20px 60px; }
+  h1 { font-size:24px; margin:0 0 6px; }
+  h2 { font-size:19px; margin:34px 0 10px; padding-top:14px; border-top:2px solid var(--line); }
+  h3 { font-size:16px; margin:20px 0 6px; }
+  p { margin:8px 0; } ul, ol { margin:6px 0 10px; padding-left:22px; } li { margin:3px 0; }
+  .sub, .who { color:var(--mute); font-size:13px; }
+  .root { background:var(--soft); border-left:4px solid var(--doneb); padding:10px 14px; margin:12px 0; border-radius:4px; }
+  .key { background:var(--ours); border:1px solid var(--oursb); border-radius:8px; padding:10px 14px; margin:12px 0; }
+  .wrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:8px 0; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:6px 9px; vertical-align:top; text-align:left; }
+  th { background:var(--soft); }
+  td.g { background:var(--gap); } td.o { background:var(--ours); } td.y { background:var(--done); } td.w { background:var(--warn); }
+  .tl { position:relative; margin:14px 0 6px 8px; padding-left:22px; border-left:3px solid var(--line); }
+  .era { position:relative; margin:0 0 18px; }
+  .era::before { content:""; position:absolute; left:-30px; top:5px; width:13px; height:13px; border-radius:50%; background:var(--doneb); border:2px solid #fff; box-shadow:0 0 0 2px var(--doneb); }
+  .era.now::before { background:var(--oursb); box-shadow:0 0 0 2px var(--oursb); }
+  .era h3 { margin:0 0 4px; }
+  .cols { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:6px; }
+  .box { border:1px solid var(--line); border-radius:6px; padding:8px 10px; background:#fff; }
+  .box b.t { display:block; font-size:13px; color:var(--mute); margin-bottom:2px; }
+  .box.p { background:var(--warn); border-color:var(--warnb); }
+  .box.f { background:var(--done); border-color:var(--doneb); }
+  .box.r { background:var(--gap); border-color:var(--gapb); }
+  code { background:var(--soft); padding:1px 5px; border-radius:3px; font-size:13px; }
+  @media (max-width:760px) { .cols { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+<h1>智能体记忆：按时间排的脉络</h1>
+<p class="sub">2026-11-12 第一版。按导师的建议整理：每个阶段当时的问题是什么、怎么修的、修完又留下什么问题。重点是编程智能体。<br>
+年份和月份按 arXiv 编号。2026 年 6 月以后的论文都读过（深浅见 <code>阅读笔记_智能体记忆.md</code>）；2025 年以前的几篇是凭已有了解写的，这一轮没有重新核对，标了 †。</p>
+
+<div class="root">一条线贯穿下来：每一轮修法都解决了"记不住"或者"装不下"，同时制造了一份新的、会过时的东西。先是外存的记忆，然后是指令文件和压缩摘要，现在是从这些东西再派生出来的索引、计划和结论。</div>
+
+<h2>一、时间线</h2>
+<div class="tl">
+
+<div class="era">
+<h3>第一阶段（2023–2024）：先解决"装不下"</h3>
+<div class="cols">
+<div class="box p"><b class="t">当时的问题</b>对话和任务历史超过上下文窗口。编程智能体每个任务从零开始。</div>
+<div class="box f"><b class="t">怎么修的</b>把历史放到上下文外面，用的时候取回来：分页式的虚拟上下文（MemGPT †）、记忆流加反思（Generative Agents †、Reflexion †）、技能库（Voyager †）。编程智能体这边是单任务内的工具循环（SWE-agent †、OpenHands †）。</div>
+<div class="box r"><b class="t">留下的问题</b>记忆被当成"存进去、取出来"。存进去的东西以后还对不对，没有人管。</div>
+</div>
+</div>
+
+<div class="era">
+<h3>第二阶段（2025）：记忆变成产品，指令文件成为标准</h3>
+<div class="cols">
+<div class="box p"><b class="t">当时的问题</b>原始历史太长太乱，取回来的东西质量差；每次会话都要重新告诉智能体项目的规矩。</div>
+<div class="box f"><b class="t">怎么修的</b>写入时整理：抽事实并做增删改（Mem0 †）、时间知识图谱（Zep / Graphiti †）、互相链接的笔记（A-Mem †）、记忆操作系统（MemOS †）。编程智能体这边出现两样东西：仓库里的指令文件（<code>CLAUDE.md</code>、<code>AGENTS.md</code>），每次会话自动载入；上下文快满时自动压缩成摘要。年底有了对指令文件的实证研究（2511.12884）。</div>
+<div class="box r"><b class="t">留下的问题</b>现在有三份会过时的东西：整理过的记忆、指令文件、压缩摘要。它们都是从原始信息改写来的，改写时会丢东西，原始信息变了它们也不会自己跟着变。</div>
+</div>
+</div>
+
+<div class="era">
+<h3>第三阶段（2026 年 1–6 月）：开始量，发现问题</h3>
+<div class="cols">
+<div class="box p"><b class="t">当时的问题</b>这些记忆到底有没有用、什么时候会坏，没有数据。</div>
+<div class="box f"><b class="t">量了什么</b>
+<ul style="margin:0;padding-left:18px">
+<li>指令文件对任务成功率的帮助不稳定，但智能体会照着做（2601.20404、2602.11988）。</li>
+<li>SWE-chat（2604）：第一份真实开发者使用编程智能体的会话数据。用户在 46% 的轮次里反驳智能体。</li>
+<li>STALE、MEME（2605）：把"记忆过时"和"依赖更新"做成基准，现有系统接近零分。</li>
+<li>Context Rot（2606）：356 个仓库里 23% 的指令文件有过时的代码引用。</li>
+<li>把智能体记忆当数据管理系统来评测（2606.24775）。</li>
+</ul></div>
+<div class="box r"><b class="t">留下的问题</b>问题被命名了：过时、失效传播、压缩丢信息。但都只是诊断，没有修法；而且多数数据是合成的。</div>
+</div>
+</div>
+
+<div class="era now">
+<h3>第四阶段（2026 年 7–11 月）：一批修法，按"在哪一步修"分成四类</h3>
+<div class="wrap">
+<table>
+<tr><th style="width:17%">在哪一步修</th><th style="width:27%">代表工作</th><th>做法</th><th>修好了什么</th><th>没修的</th></tr>
+<tr><td><b>写入时</b><br>记下来历和依赖</td><td>MemTX（2607）、StateMem（2608）、Stashbird（2609）、Tether、PACMI（2610）、StateGraph（2611）</td><td>每条记忆记下它依据什么；上游失效时由程序撤回或标记下游</td><td class="y">依赖明说、或由智能体声明时，传播可以不靠模型（Tether：62% → 0.3%）</td><td class="g">没有明说、要推断的依赖；写入者弱时漏记变化</td></tr>
+<tr><td><b>运行时</b><br>把上下文和来源挂钩</td><td>Invalidation Contracts（2609）、Concord、MemTrace（2610）</td><td>工具读到的内容登记来源；来源一变（哈希、版本戳），原地改掉或拿掉</td><td class="y">文件、接口这类可以机器观察的直接过时（Concord：40/40）</td><td class="g">由这些内容派生出来的摘要、计划、决定</td></tr>
+<tr><td><b>使用前</b><br>核查再行动</td><td>Stale Constraints（2608，诊断）、TRACE、PLANFENCE（2609）、StateWise（2610）</td><td>动作或回归之前，找出依据的记录，核实，修好再做</td><td class="y">单条记录被改坏时的恢复（StateWise：39% → 93%）</td><td class="g">每次都要用强模型核查，成本高；互相影响的多条记录</td></tr>
+<tr><td><b>训练</b></td><td>AutoCompact、Accept Changes（2610）</td><td>训练智能体何时压缩、保留什么；微调小的记忆管理器</td><td class="y">压缩时机；事实本身的变化（含暗示的）</td><td class="g">依赖传播；派生内容</td></tr>
+</table>
+</div>
+<p><b>同一时期的诊断</b>，说明问题比想的更深：</p>
+<ul>
+<li>顶级模型从长历史里重建状态很差，把算好的状态给它就全对（When Context Changes，2609：18/40 对 40/40）。</li>
+<li>记忆系统在"派生状态"上全部低于关键词检索，隐式变化只刷新 41%（MemDerive，2610）。</li>
+<li>真实仓库历史上，记忆能救回一些任务，也让 5–10% 原本能做的任务变坏（MemDev-Bench，2610）。</li>
+<li>过时的指令被照做，成功率看不出来，智能体从不去修（2610.30571、2611.09802）。</li>
+<li>压缩之后规则还在，违规却多了 2.6 倍（ARCBench，2611）。</li>
+<li>接手真实项目时，六种顶级配置还原需求状态 0/312（Take It From Here，2611）。</li>
+<li>删除：没有系统端到端通过超过 1.5% 的遗忘请求（Bemula，2610）；删了原始记录，派生的摘要里还问得出来（AfterDeleteBench，2610）。</li>
+</ul>
+</div>
+
+</div>
+
+<h2>二、把修法和问题对起来看</h2>
+<div class="wrap">
+<table>
+<tr><th style="width:24%">会过时的东西</th><th>它从哪来</th><th>现有的修法</th><th>还缺什么</th></tr>
+<tr><td>上下文里的工具观察</td><td>读文件、查接口</td><td class="y">Concord、MemTrace：挂钩来源，原地改</td><td>基本有解（来源可观察时）</td></tr>
+<tr><td>缓存的结论和核验结果</td><td>智能体自己算的</td><td class="y">Tether、Invalidation Contracts：记依据，程序撤回</td><td class="g">依据没明说时</td></tr>
+<tr><td>指令文件（<code>CLAUDE.md</code> 等）</td><td>人写，或智能体写</td><td class="y">检测过时的代码引用；加一句"以代码为准"</td><td class="g">只能查路径、命令这类可机器核对的；规矩和约定查不了；没人自动修</td></tr>
+<tr><td>压缩摘要</td><td>从对话历史压缩</td><td class="y">AutoCompact：训练压缩策略</td><td class="g">摘要里的内容之后过时了怎么办，没人做</td></tr>
+<tr><td>智能体自己写的记忆笔记</td><td>从会话里提炼</td><td class="y">StateWise：用之前核查</td><td class="g">笔记之间的依赖；便宜的维护办法</td></tr>
+<tr><td class="o"><b>从记忆再派生出来的东西</b><br>索引、摘要的摘要、计划、任务优先级</td><td class="o">从上面几样再加工</td><td class="o">Concord 明说留作以后；AfterDeleteBench 只管删除</td><td class="g"><b>几乎空白。</b>连它有多常过时都没人量过</td></tr>
+</table>
+</div>
+
+<h2>三、现在的问题，归成五条</h2>
+<ol>
+<li><b>派生内容过时。</b>修法都停在"第一层"：原始信息变了，直接依赖它的那条能被处理；再往下派生一层的东西（索引里的一句描述、压缩摘要里的一个结论、据此定的计划）没人管。</li>
+<li><b>没有明说的依赖。</b>现有修法要求依赖被说出来或被声明。真实笔记里的依赖多数不明说。</li>
+<li><b>瓶颈是"发现"，不是"推理"。</b>该查的不去查；提醒了也不重读；顺口提到的变化被漏记。</li>
+<li><b>维护的成本。</b>用强模型逐次核查很贵；让模型维护完整状态又做不对（0/312）。便宜的、只做一小件事的维护没人系统试过。</li>
+<li><b>真实数据太少。</b>修法几乎都在合成数据上验证。真实数据上只有三个数字：23% 的仓库（指令文件）、100 段会话里 40 条失效链（StateWise）、我们数的笔记变化里 17% 是依赖事件。</li>
+</ol>
+
+<h2>四、可能的新点（我的想法，待讨论）</h2>
+<div class="key">
+<b>候选：真实智能体记忆里的"派生内容过时"。</b>
+<ul>
+<li><b>为什么可能是新的：</b>第二部分那张表的最后一行。四类修法都没有覆盖，Concord 把它写进了"以后的工作"。</li>
+<li><b>为什么能做：</b>Claude Code 的记忆天然有派生结构（<code>MEMORY.md</code> 的每一行是对一条笔记的描述），而且有真实数据。手头 53 个仓库里已经能配出 236 组"索引行对笔记"；SWE-chat 全量有约 1.8 万段会话。</li>
+<li><b>已有的苗头：</b>我们确认的三例"下游留旧"里，有一例就是笔记写了"已发布"、索引还写"进行中"，之后被读了两次。</li>
+<li><b>可以怎么展开：</b>先量（多常见、哪类笔记、过多久），再看后果（智能体读到过时索引后有没有照做，用户有没有纠正），最后才是修法。这个顺序本身回应了"工程思维太重"的意见。</li>
+<li><b>风险：</b>还没数，可能很罕见；样本是早期用户；只有 Claude Code 一种记忆结构。</li>
+</ul>
+</div>
+<p class="who">这只是按目前读到的文献排出来的一个候选。导师说的"把现有的办法和问题列出来，可能出一个新的点"，这一页的第二、三部分就是为这个准备的，欢迎从别的行里挑。</p>
+
+</main>
+</body>
+</html>
